@@ -37,8 +37,10 @@ Configurations that I ""learned"" from:
 == Hosts & users
 Hosts:
 
-- `dorothy`: main workstation (laptop)
+[horizontal]
+dorothy:: main device (laptop)
 
-Users:
+Users (home-manager configurations):
 
-- `chtc`: main user
+[horizontal]
+chtc:: main user
