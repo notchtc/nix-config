@@ -22,6 +22,7 @@ As this is my personal configuration, not everything may work for you. You proba
 NixOS configuration using https://nixos.wiki/wiki/Flakes[flakes] and https://github.com/nix-community/home-manager[home-manager].
 
 Other things used:
+
 - https://github.com/kamadorueda/alejandra[alejandra]
 - https://github.com/dwarfmaster/arkenfox-nixos[arkenfox-nixos]
 - https://flake.parts/[flake-parts]
@@ -29,12 +30,15 @@ Other things used:
 - https://github.com/chaotic-cx/nyx[nyx]
 
 Configurations that I ""learned"" from:
+
 - https://github.com/javacafe01/dotfiles[javacafe01/dotfiles]
 - https://github.com/moni-dz/nix-config[moni-dz/nix-config]
 
 == Hosts & users
 Hosts:
+
 - `dorothy`: main workstation (laptop)
 
 Users:
+
 - `chtc`: main user
