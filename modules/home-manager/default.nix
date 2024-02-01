@@ -1,6 +1,7 @@
 {
   config,
   inputs,
+  lib,
   pkgs,
   ...
 }: let
@@ -12,6 +13,21 @@ in {
   };
 
   programs = {
+    gh = {
+      enable = true;
+
+      settings = {
+        git_protocol = "ssh";
+      };
+
+      extensions = lib.attrValues {
+        inherit (pkgs)
+          gh-cal
+          gh-dash
+          gh-eco;
+      };
+    };
+
     git = {
       enable = true;
       userName = "chtc";
