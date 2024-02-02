@@ -68,12 +68,13 @@ in {
         document-font-name = "Iosevka Nerd Font 11";
         font-name = "Iosevka Nerd Font 10";
         font-antialiasing = "rgba";
-        enable-animations = "false";
+        enable-animations = false;
       };
       "org/gnome/desktop/wm/preferences".titlebar-font = "Iosevka Nerd Font Ultra-Bold 11";
       "org/gnome/desktop/background".picture-uri = "file://${wallpaperImg}";
       "org/gnome/desktop/background".picture-uri-dark = "file://${wallpaperImg}";
       "org/gnome/desktop/screensaver".picture-uri = "file://${wallpaperImg}";
+      "org/gnome/desktop/sound".event-sounds = false;
       "org/gnome/settings-daemon/plugins/color".night-light-enabled = true;
     };
   };
