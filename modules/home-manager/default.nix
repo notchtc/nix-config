@@ -21,10 +21,12 @@ in {
       };
 
       extensions = lib.attrValues {
-        inherit (pkgs)
+        inherit
+          (pkgs)
           gh-cal
           gh-dash
-          gh-eco;
+          gh-eco
+          ;
       };
     };
 
