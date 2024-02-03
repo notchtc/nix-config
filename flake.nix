@@ -16,6 +16,16 @@
     parts.url = "github:hercules-ci/flake-parts";
     nur.url = "github:nix-community/NUR";
 
+    f-sy-h = {
+      url = "github:z-shell/F-Sy-H";
+      flake = false;
+    };
+
+    zsh-autosuggestions = {
+      url = "github:zsh-users/zsh-autosuggestions";
+      flake = false;
+    }; 
+
     master.url = "github:nixos/nixpkgs/master";
     stable.url = "github:nixos/nixpkgs/release-23.11";
     unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
