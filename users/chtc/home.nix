@@ -116,7 +116,7 @@
       _JAVA_OPTIONS = "-Djava.util.prefs.userRoot=${config.xdg.configHome}/java";
       LESSHISTFILE = "-";
       BROWSER = "firefox";
-      EDITOR = "vim";
+      EDITOR = "hx";
       PAGER = "less";
       TERMINAL = "konsole";
     };

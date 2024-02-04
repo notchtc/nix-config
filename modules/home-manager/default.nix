@@ -41,6 +41,22 @@ in {
       path = "${inputs.home}";
     };
 
+    helix = {
+      enable = true;
+
+      settings = {
+        theme = "adwaita-dark";
+
+        editor = {
+          cursor-shape = {
+            insert = "bar";
+            normal = "block";
+            select = "underline";
+          };
+        };
+      };
+    };
+
     zsh = {
       enable = true;
       shellAliases = import ./config/shell-aliases.nix;
@@ -52,7 +68,7 @@ in {
       plugins = [
         {
           name = "F-Sy-H";
-          src = inputs.f-sy-h; 
+          src = inputs.f-sy-h;
         }
         {
           name = "zsh-autosuggestions";
