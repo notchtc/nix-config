@@ -50,6 +50,7 @@ in {
           "AlphabeticalAppGrid@stuarthayhurst"
           "appindicatorsupport@rgcjonas.gmail.com"
           "drive-menu@gnome-shell-extensions.gcampax.github.com"
+          "native-window-placement@gnome-shell-extensions.gcampax.github.com"
         ];
 
         favorite-apps = [
@@ -69,6 +70,19 @@ in {
         font-name = "Iosevka Nerd Font 10";
         font-antialiasing = "rgba";
         enable-animations = false;
+        show-battery-percentage = true;
+      };
+      "org/gnome/mutter" = {
+        edge-tiling = true;
+        dynamic-workspaces = true;
+      };
+      "org/gnome/desktop/wm/keybindings" = {
+        switch-windows = ["<Alt>Tab"];
+        switch-windows-backward = ["<Shift><Alt>Tab"];
+        switch-applications = [];
+        switch-applications-backward = [];
+        switch-group = [];
+        switch-group-backward = [];
       };
       "org/gnome/desktop/wm/preferences".titlebar-font = "Iosevka Nerd Font Ultra-Bold 11";
       "org/gnome/desktop/background".picture-uri = "file://${wallpaperImg}";
@@ -76,6 +90,7 @@ in {
       "org/gnome/desktop/screensaver".picture-uri = "file://${wallpaperImg}";
       "org/gnome/desktop/sound".event-sounds = false;
       "org/gnome/settings-daemon/plugins/color".night-light-enabled = true;
+      "org/gnome/nautilus/preferences".click-policy = "single";
     };
   };
 }
