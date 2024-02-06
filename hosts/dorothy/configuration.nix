@@ -7,7 +7,7 @@
 }: {
   imports = [
     # Include the results of the hardware scan.
-    ../../modules/nixos/desktops/gnome.nix
+    ../../modules/nixos/desktops/plasma.nix
     ../../modules/nixos/programs/steam.nix
     ./hardware-configuration.nix
   ];
@@ -41,6 +41,4 @@
       };
     };
   };
-
-  services.xserver.videoDrivers = ["amdgpu"];
 }

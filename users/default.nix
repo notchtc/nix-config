@@ -5,7 +5,7 @@
       stateVersion = "23.11";
 
       modules = [
-        inputs.arkenfox.hmModules.default
+        inputs.plasma-manager.homeManagerModules.plasma-manager
         ./chtc/home.nix
       ];
     };

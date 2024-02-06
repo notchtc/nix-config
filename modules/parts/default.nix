@@ -62,6 +62,7 @@
             man-pages-posix
             wget
             git
+            ffmpeg
             ;
 
           home-manager = inputs'.home.packages.home-manager.override {path = "${inputs.home}";};

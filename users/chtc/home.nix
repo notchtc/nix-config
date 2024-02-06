@@ -5,7 +5,7 @@
   ...
 }: {
   imports = [
-    ./desktops/gnome.nix
+    ./desktops/plasma.nix
     ../../modules/home-manager/programs/mpv
 
     (import ../../modules/home-manager/programs/firefox {
@@ -21,12 +21,16 @@
               skip-redirect
               enhanced-h264ify
               multi-account-containers
+              plasma-integration
               ;
           };
 
           id = 0;
 
-          search.default = "DuckDuckGo";
+          search = {
+            default = "DuckDuckGo";
+            force = true;
+          };
 
           userChrome = ''
             #webrtcIndicator {
@@ -45,7 +49,7 @@
       inherit
         (pkgs)
         armcord
-        quodlibet
+        strawberry
         qbittorrent
         gimp
         keepassxc
@@ -55,22 +59,27 @@
         telegram-desktop
         picard
         sd-switch
+        materia-kde-theme
         ;
       inherit
-        (pkgs.gnome)
-        gnome-tweaks
+        (pkgs.libsForQt5)
+        qtstyleplugin-kvantum
         ;
-      inherit
-        (pkgs.gnomeExtensions)
-        alphabetical-app-grid
-        appindicator
-        ;
+      # inherit
+      #   (pkgs.gnome)
+      #   gnome-tweaks
+      #   ;
+      # inherit
+      #   (pkgs.gnomeExtensions)
+      #   alphabetical-app-grid
+      #   appindicator
+      #   ;
     };
 
     sessionVariables = {
       NIXOS_OZONE_WL = "1";
       GNUPGHOME = "${config.xdg.dataHome}/gnupg";
-      GTK2_RC_FILES = lib.mkDefault "${config.xdg.configHome}/gtk-2.0/gtkrc";
+      GTK2_RC_FILES = lib.mkForce "${config.xdg.configHome}/gtk-2.0/gtkrc";
       WINEPREFIX = "${config.xdg.dataHome}/wine";
       _JAVA_OPTIONS = "-Djava.util.prefs.userRoot=${config.xdg.configHome}/java";
       LESSHISTFILE = "-";

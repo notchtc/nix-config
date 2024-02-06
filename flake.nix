@@ -13,6 +13,7 @@
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     home.url = "github:nix-community/home-manager";
     parts.url = "github:hercules-ci/flake-parts";
+    plasma-manager.url = "github:pjones/plasma-manager";
     nur.url = "github:nix-community/NUR";
 
     f-sy-h = {
@@ -32,5 +33,7 @@
     nixpkgs.follows = "unstable";
     alejandra.inputs.nixpkgs.follows = "nixpkgs";
     home.inputs.nixpkgs.follows = "nixpkgs";
+    plasma-manager.inputs.nixpkgs.follows = "nixpkgs";
+    plasma-manager.inputs.home-manager.follows = "home";
   };
 }

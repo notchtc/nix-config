@@ -45,7 +45,7 @@ in {
       enable = true;
 
       settings = {
-        theme = "adwaita-dark";
+        theme = "base16_terminal";
 
         editor = {
           cursor-shape = {
