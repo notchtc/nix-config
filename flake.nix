@@ -9,8 +9,7 @@
     };
 
   inputs = {
-    alejandra.url = "github:kamadorueda/alejandra";
-    arkenfox.url = "github:dwarfmaster/arkenfox-nixos";
+    alejandra.url = "github:kamadorueda/alejandra/3.0.0";
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     home.url = "github:nix-community/home-manager";
     parts.url = "github:hercules-ci/flake-parts";

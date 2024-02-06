@@ -12,11 +12,6 @@
       inherit config pkgs;
       package = pkgs.firefox;
 
-      arkenfox = {
-        enable = true;
-        version = "119.0";
-      };
-
       profiles = {
         Default = {
           extensions = lib.attrValues {
@@ -31,51 +26,15 @@
 
           id = 0;
 
+          search.default = "DuckDuckGo";
+
           userChrome = ''
             #webrtcIndicator {
               display: none;
             }
           '';
 
-          arkenfox = {
-            enable = true;
-            "0000".enable = true;
-            "0100".enable = true;
-            "0200".enable = true;
-            "0300".enable = true;
-            "0400" = {
-              enable = true;
-              "0401" = {
-                "browser.safebrowsing.malware.enabled".value = false;
-                "browser.safebrowsing.phishing.enabled".value = false;
-              };
-              "0402"."browser.safebrowsing.downloads.enabled".value = false;
-            };
-            "0600".enable = true;
-            "0700".enable = true;
-            "0800" = {
-              enable = true;
-              "0803" = {
-                "browser.search.suggest.enabled".value = true;
-                "browser.urlbar.suggest.searches".value = true;
-              };
-            };
-            "0900".enable = true;
-            "1000".enable = true;
-            "1200".enable = true;
-            "1600".enable = true;
-            "1700".enable = true;
-            "2000".enable = true;
-            "2400".enable = true;
-            "2600".enable = true;
-            "2700".enable = true;
-            "2800".enable = true;
-            "4500" = {
-              enable = true;
-              "4504"."privacy.resistFingerprinting.letterboxing".value = false;
-            };
-            "6000".enable = true;
-          };
+          extraConfig = __readFile ./programs/firefox/user.js;
         };
       };
     })
