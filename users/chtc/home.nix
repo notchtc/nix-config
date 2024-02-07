@@ -48,7 +48,7 @@
     packages = lib.attrValues {
       inherit
         (pkgs)
-        armcord
+        vesktop
         strawberry
         qbittorrent
         gimp
@@ -109,6 +109,17 @@
       publicShare = "${config.home.homeDirectory}/Public";
       templates = "${config.home.homeDirectory}/Templates";
       videos = "${config.home.homeDirectory}/Videos";
+    };
+
+    desktopEntries = {
+      vesktop = {
+        name = "Vesktop";
+        genericName = "Internet Messenger";
+        exec = "vesktop --enable-features=VaapiIgnoreDriverChecks,VaapiVideoEncoder,VaapiVideoDecoder,CanvasOopRasterization,UseMultiPlaneFormatForHardwareVideo";
+        terminal = false;
+        categories = ["Network" "InstantMessaging" "Chat"];
+        icon = "vesktop";
+      };
     };
   };
 

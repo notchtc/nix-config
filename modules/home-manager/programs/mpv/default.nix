@@ -5,9 +5,9 @@
       save-position-on-quit = true;
       hwdec = "auto-copy";
       hwdec-codecs = "all";
-      hr-seek-framedrop="no";
-      gpu-api="vulkan";
-      vulkan-swap-mode="mailbox";
+      hr-seek-framedrop = "no";
+      gpu-api = "vulkan";
+      vulkan-swap-mode = "mailbox";
       deband = "yes";
       deband-iterations = 3;
       deband-threshhold = 45;

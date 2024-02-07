@@ -62,7 +62,7 @@ in {
                 "applications:firefox.desktop"
                 "applications:org.strawberrymusicplayer.strawberry.desktop"
                 "applications:org.telegram.desktop.desktop"
-                "applications:armcord.desktop"
+                "applications:vesktop.desktop"
                 "applications:steam.desktop"
               ];
             };
