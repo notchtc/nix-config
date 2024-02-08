@@ -21,7 +21,7 @@
               skip-redirect
               enhanced-h264ify
               multi-account-containers
-              plasma-integration
+              sponsorblock
               ;
           };
 
@@ -60,6 +60,7 @@
         picard
         sd-switch
         materia-kde-theme
+        wl-clipboard
         ;
       inherit
         (pkgs.libsForQt5)

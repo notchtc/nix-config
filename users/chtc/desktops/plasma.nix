@@ -44,7 +44,7 @@ in {
       cursorTheme = "phinger-cursors";
       iconTheme = "Papirus-Dark";
       lookAndFeel = "com.github.varlesh.materia-dark";
-      wallpaper = "${wallpaperImg}";
+      wallpaper = wallpaperImg;
     };
 
     panels = [
