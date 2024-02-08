@@ -80,7 +80,6 @@
     sessionVariables = {
       NIXOS_OZONE_WL = "1";
       GNUPGHOME = "${config.xdg.dataHome}/gnupg";
-      GTK2_RC_FILES = lib.mkForce "${config.xdg.configHome}/gtk-2.0/gtkrc";
       WINEPREFIX = "${config.xdg.dataHome}/wine";
       _JAVA_OPTIONS = "-Djava.util.prefs.userRoot=${config.xdg.configHome}/java";
       LESSHISTFILE = "-";
@@ -123,6 +122,8 @@
       };
     };
   };
+
+  gtk.gtk2.configLocation = lib.mkForce "${config.xdg.configHome}/gtk-2.0/gtkrc";
 
   programs = {
     yt-dlp.enable = true;
