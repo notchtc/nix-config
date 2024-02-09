@@ -79,13 +79,11 @@
 
     sessionVariables = {
       NIXOS_OZONE_WL = "1";
-      GNUPGHOME = "${config.xdg.dataHome}/gnupg";
       VDPAU_DRIVER = "va_gl";
       WINEPREFIX = "${config.xdg.dataHome}/wine";
       _JAVA_OPTIONS = "-Djava.util.prefs.userRoot=${config.xdg.configHome}/java";
       LESSHISTFILE = "-";
       BROWSER = "firefox";
-      EDITOR = "hx";
       PAGER = "less";
       TERMINAL = "konsole";
     };
@@ -124,10 +122,12 @@
     };
   };
 
-  gtk.gtk2.configLocation = lib.mkForce "${config.xdg.configHome}/gtk-2.0/gtkrc";
+  gtk.gtk2.configLocation = "${config.xdg.configHome}/gtk-2.0/gtkrc";
 
   programs = {
     yt-dlp.enable = true;
+    gpg.homedir = "${config.xdg.dataHome}/gnupg";
+    bash.historyFile = "${config.xdg.stateHome}/bash/history";
   };
 
   systemd.user.startServices = "sd-switch";

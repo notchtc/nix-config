@@ -43,6 +43,7 @@ in {
 
     helix = {
       enable = true;
+      defaultEditor = true;
 
       settings = {
         theme = "base16_terminal";
