@@ -1,6 +1,7 @@
 {pkgs, ...}: let
   wallpaperImg = pkgs.fetchurl {
-    url = "https://unsplash.com/photos/fdiXdOdYtLE/download?ixid=M3wxMjA3fDB8MXxhbGx8Mjg4fHx8fHx8Mnx8MTcwNzI0MDg3Nnw&force=true";
+    url = "https://unsplash.com/photos/fdiXdOdYtLE/download?ixid=M3wxMjA3fDB8MXxhbGx8Mjg4fHx8fHx8Mnx8MTcwNzI0MDg3Nnw";
+    name = "wall.jpg";
     hash = "sha256-uN8LwLPB8GJ3MmkbgjociePtPNImcbq3VSpmTpW91wc=";
   };
 in {
@@ -44,7 +45,7 @@ in {
       cursorTheme = "phinger-cursors";
       iconTheme = "Papirus-Dark";
       lookAndFeel = "com.github.varlesh.materia-dark";
-      wallpaper = wallpaperImg;
+      wallpaper = "${wallpaperImg}";
     };
 
     panels = [
