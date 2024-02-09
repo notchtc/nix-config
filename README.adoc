@@ -32,7 +32,7 @@ Other things used:
 Configurations that I ""learned"" from:
 
 - https://github.com/Misterio77/nix-starter-configs[Mistero77/nix-starter-configs]
-- https://github.com/javacafe01/dotfiles[javacafe01/dotfiles]
+- https://github.com/javacafe01/nix-config[javacafe01/nix-config]
 - https://github.com/moni-dz/nix-config[moni-dz/nix-config]
 
 == Hosts & users
