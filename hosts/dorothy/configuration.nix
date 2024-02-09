@@ -14,7 +14,7 @@
 
   boot = {
     kernelParams = ["radeon.si_support=0" "radeon.cik_support=0" "amdgpu.si_support=1" "amdgpu.cik_support=1"];
-    kernelModules = ["amdgpu"];
+    kernelModules = ["i915" "amdgpu"];
   };
 
   networking = {
@@ -34,8 +34,13 @@
         inherit
           (pkgs)
           intel-media-driver
-          vaapiIntel
-          vaapiVdpau
+          libvdpau-va-gl
+          ;
+      };
+      extraPackages32 = lib.attrValues {
+        inherit
+          (pkgs.pkgsi686Linux)
+          intel-media-driver
           libvdpau-va-gl
           ;
       };

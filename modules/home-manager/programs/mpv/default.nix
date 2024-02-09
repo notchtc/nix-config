@@ -3,11 +3,10 @@
     enable = true;
     config = {
       save-position-on-quit = true;
-      hwdec = "auto-copy";
-      hwdec-codecs = "all";
+      hwdec = "auto-safe";
+      vo = "gpu";
       hr-seek-framedrop = "no";
-      gpu-api = "vulkan";
-      vulkan-swap-mode = "mailbox";
+      gpu-context = "wayland";
       deband = "yes";
       deband-iterations = 3;
       deband-threshhold = 45;

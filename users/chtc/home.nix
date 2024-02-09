@@ -80,6 +80,7 @@
     sessionVariables = {
       NIXOS_OZONE_WL = "1";
       GNUPGHOME = "${config.xdg.dataHome}/gnupg";
+      VDPAU_DRIVER = "va_gl";
       WINEPREFIX = "${config.xdg.dataHome}/wine";
       _JAVA_OPTIONS = "-Djava.util.prefs.userRoot=${config.xdg.configHome}/java";
       LESSHISTFILE = "-";
