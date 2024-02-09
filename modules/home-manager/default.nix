@@ -66,6 +66,10 @@ in {
       dotDir = ".config/zsh";
       history.path = "${config.xdg.stateHome}/zsh/history";
 
+      dirHashes = {
+        nix-config = "${config.xdg.configHome}/nix-config";
+      };
+
       plugins = [
         {
           name = "F-Sy-H";
