@@ -110,11 +110,18 @@
 
   environment.localBinInPath = true;
 
-  users.users.chtc = {
-    isNormalUser = true;
-    home = "/home/chtc";
-    shell = pkgs.zsh;
+  users = {
+    mutableUsers = true;
+    defaultUserShell = pkgs.zsh;
 
-    extraGroups = ["wheel" "networkmanager" "audio" "video"];
+    users.chtc = {
+      isNormalUser = true;
+      initialPassword = "changeme";
+      home = "/home/chtc";
+
+      extraGroups = ["wheel" "networkmanager" "audio" "video"];
+    };
+
+    users.root.hashedPassword = "!";
   };
 }
