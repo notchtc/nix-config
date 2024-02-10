@@ -58,9 +58,26 @@ in {
       };
     };
 
+    bat = {
+      enable = true;
+      config = {
+        style = "plain";
+        theme = "base16";
+      };
+    };
+
+    eza = {
+      enable = true;
+      enableAliases = true;
+    };
+
     starship = {
       enable = true;
       settings = import ./config/starship.nix;
+    };
+
+    zoxide = {
+      enable = true;
     };
 
     zsh = {
@@ -70,10 +87,6 @@ in {
       autocd = true;
       dotDir = ".config/zsh";
       history.path = "${config.xdg.stateHome}/zsh/history";
-
-      dirHashes = {
-        nix-config = "${config.xdg.configHome}/nix-config";
-      };
 
       plugins = [
         {

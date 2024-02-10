@@ -2,8 +2,7 @@
   sudo = "doas";
   e = "$EDITOR";
   se = "doas $EDITOR";
-  ls = "ls --color=auto --group-directories-first";
-  lsa = "l -lha";
+  cat = "bat --color always";
   rm = "trash-put";
   rme = "trash-empty";
   rml = "trash-list";
