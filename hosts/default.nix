@@ -6,6 +6,7 @@
 
       modules = [
         inputs.chaotic.nixosModules.default
+        inputs.disko.nixosModules.disko
         ./dorothy/configuration.nix
       ];
     };

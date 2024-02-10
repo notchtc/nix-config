@@ -10,6 +10,7 @@
 
   inputs = {
     alejandra.url = "github:kamadorueda/alejandra/3.0.0";
+    disko.url = "github:nix-community/disko";
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     home.url = "github:nix-community/home-manager";
     parts.url = "github:hercules-ci/flake-parts";
@@ -37,6 +38,7 @@
 
     nixpkgs.follows = "unstable";
     alejandra.inputs.nixpkgs.follows = "nixpkgs";
+    disko.inputs.nixpkgs.follows = "nixpkgs";
     home.inputs.nixpkgs.follows = "nixpkgs";
     plasma-manager.inputs.nixpkgs.follows = "nixpkgs";
     plasma-manager.inputs.home-manager.follows = "home";

@@ -10,6 +10,7 @@
     ../../modules/nixos/desktops/plasma.nix
     ../../modules/nixos/programs/steam.nix
     ./hardware-configuration.nix
+    ./disko.nix
   ];
 
   boot = {
