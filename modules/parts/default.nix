@@ -63,6 +63,7 @@
             wget
             git
             ffmpeg
+            doas-sudo-shim
             ;
 
           home-manager = inputs'.home.packages.home-manager.override {path = "${inputs.home}";};

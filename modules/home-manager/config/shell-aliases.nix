@@ -1,5 +1,4 @@
 {
-  sudo = "doas";
   e = "$EDITOR";
   se = "doas $EDITOR";
   cat = "bat --color always";
