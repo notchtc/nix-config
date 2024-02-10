@@ -26,6 +26,11 @@
       flake = false;
     };
 
+    zsh-nix-shell = {
+      url = "github:chisui/zsh-nix-shell";
+      flake = false;
+    };
+    
     master.url = "github:nixos/nixpkgs/master";
     stable.url = "github:nixos/nixpkgs/release-23.11";
     unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";

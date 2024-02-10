@@ -58,6 +58,11 @@ in {
       };
     };
 
+    starship = {
+      enable = true;
+      settings = import ./config/starship.nix;
+    };
+
     zsh = {
       enable = true;
       shellAliases = import ./config/shell-aliases.nix;
@@ -78,6 +83,11 @@ in {
         {
           name = "zsh-autosuggestions";
           src = inputs.zsh-autosuggestions;
+        }
+        {
+          name = "zsh-nix-shell";
+          src = inputs.zsh-nix-shell;
+          file = "nix-shell.plugin.zsh";
         }
       ];
 
@@ -102,7 +112,6 @@ in {
 
       initExtra = ''
         bindkey -v
-        PROMPT='%{%(?.%F{green}.%F{red})%}%~ %F{reset}'
       '';
     };
   };
