@@ -170,6 +170,26 @@
         "url": "https://flakehub.com/f/ipetkov/crane/%2A.tar.gz"
       }
     },
+    "disko": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1707524024,
+        "narHash": "sha256-HmumZ8FuWAAYZrWUKm3N4G4h8nmZ5VUVX+vXLmCJNKM=",
+        "owner": "nix-community",
+        "repo": "disko",
+        "rev": "d07de570ba05cec2807d058daaa044f6955720c7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "disko",
+        "type": "github"
+      }
+    },
     "f-sy-h": {
       "flake": false,
       "locked": {
@@ -581,6 +601,7 @@
       "inputs": {
         "alejandra": "alejandra",
         "chaotic": "chaotic",
+        "disko": "disko",
         "f-sy-h": "f-sy-h",
         "home": "home",
         "master": "master",
