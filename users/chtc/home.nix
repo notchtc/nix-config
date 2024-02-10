@@ -82,6 +82,7 @@
       VDPAU_DRIVER = "va_gl";
       WINEPREFIX = "${config.xdg.dataHome}/wine";
       _JAVA_OPTIONS = "-Djava.util.prefs.userRoot=${config.xdg.configHome}/java";
+      GNUPGHOME = "${config.programs.gpg.homedir}";
       LESSHISTFILE = "-";
       BROWSER = "firefox";
       PAGER = "less";
