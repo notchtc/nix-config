@@ -4,8 +4,7 @@
   lib,
   pkgs,
   ...
-}:
-{
+}: {
   nix = {
     package = pkgs.nix;
     settings.use-xdg-base-directories = true;

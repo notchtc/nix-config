@@ -112,8 +112,8 @@
     localBinInPath = true;
 
     binsh = "${pkgs.zsh}/bin/zsh";
-    pathsToLink = [ "/share/zsh" ];
-    shells = with pkgs; [ zsh ];
+    pathsToLink = ["/share/zsh"];
+    shells = with pkgs; [zsh];
   };
 
   users = {
