@@ -1,9 +1,14 @@
 {
-  e = "$EDITOR";
-  se = "doas $EDITOR";
+  sudo = "doas";
+  e = "hx";
+  se = "doas hx";
   cat = "bat --color always";
   mv = "mv -i";
   cp = "cp -i";
+  ls = "eza";
+  ll = "eza -l";
+  la = "eza -a";
+  lla = "eza -la";
   rm = "trash-put -i";
   rme = "trash-empty -i";
   rml = "trash-list";

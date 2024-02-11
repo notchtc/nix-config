@@ -66,7 +66,7 @@
 
     eza = {
       enable = true;
-      enableAliases = true;
+      enableAliases = false;
     };
 
     starship = {
