@@ -190,22 +190,6 @@
         "type": "github"
       }
     },
-    "f-sy-h": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1702802089,
-        "narHash": "sha256-AEeGEx2vyyHVS92Nla7XoqSx3rTpQHYwPMrK1jFH1Mg=",
-        "owner": "z-shell",
-        "repo": "F-Sy-H",
-        "rev": "3dea11a9018061e6e3a77e529b79e5654679d3a0",
-        "type": "github"
-      },
-      "original": {
-        "owner": "z-shell",
-        "repo": "F-Sy-H",
-        "type": "github"
-      }
-    },
     "fenix": {
       "inputs": {
         "nixpkgs": [
@@ -321,11 +305,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1707467182,
-        "narHash": "sha256-/Bw/xgCXfj4nXDd8Xq+r1kaorfsYkkomMf5w5MpsDyA=",
+        "lastModified": 1707607386,
+        "narHash": "sha256-hj/RgQMTvCWQVInkZwiMMieumkfOjHXhtWhfuXHop/8=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "5b9156fa9a8b8beba917b8f9adbfd27bf63e16af",
+        "rev": "bfd0ae29a86eff4603098683b516c67e22184511",
         "type": "github"
       },
       "original": {
@@ -404,11 +388,11 @@
     },
     "master": {
       "locked": {
-        "lastModified": 1707484796,
-        "narHash": "sha256-1g8vzy7vxwvvgI4xva5Vst5ei4oc3iuZ8GpnpuTofbk=",
+        "lastModified": 1707653317,
+        "narHash": "sha256-GscSoXEGt+CCeeKx8yptqClvysvN8i3bUrIpt7VV/Bs=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "f27ffb035ce4754ea714dbab8b009f0bf253e460",
+        "rev": "80e187287de0e1c7307cd3df4708a227425030b1",
         "type": "github"
       },
       "original": {
@@ -543,11 +527,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1707484745,
-        "narHash": "sha256-Lga8ehiL4girIGkkFeoaxIQkRMcsl7wvM6bhJzTkeek=",
+        "lastModified": 1707651883,
+        "narHash": "sha256-h+RjXq/yNRedLplWEyfNEuza3jklWLq/jZ/N+I2hEAo=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "fa5f11396cf60d1f091336f344987539b46870cd",
+        "rev": "24c4260f6f0e43244e2a35773d88c5d708ae2d95",
         "type": "github"
       },
       "original": {
@@ -584,11 +568,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1707045317,
-        "narHash": "sha256-o2NZJcNu2/M3qycZ2Z9sgIESQEBFmihbbA7//sp7yVA=",
+        "lastModified": 1707590627,
+        "narHash": "sha256-LJ/lFEupLSi7xtUps234hhMk7ZdVLRoYeU7KiCFaoGw=",
         "owner": "pjones",
         "repo": "plasma-manager",
-        "rev": "290cd65b65e2da11ca9fda69781ea9beb8a6f6ac",
+        "rev": "4e56cfeb95081a43cb49487d0996dc936d6201e5",
         "type": "github"
       },
       "original": {
@@ -602,7 +586,6 @@
         "alejandra": "alejandra",
         "chaotic": "chaotic",
         "disko": "disko",
-        "f-sy-h": "f-sy-h",
         "home": "home",
         "master": "master",
         "nixpkgs": [
@@ -612,9 +595,7 @@
         "parts": "parts",
         "plasma-manager": "plasma-manager",
         "stable": "stable",
-        "unstable": "unstable",
-        "zsh-autosuggestions": "zsh-autosuggestions",
-        "zsh-nix-shell": "zsh-nix-shell"
+        "unstable": "unstable"
       }
     },
     "rust-analyzer-src": {
@@ -680,11 +661,11 @@
     },
     "stable": {
       "locked": {
-        "lastModified": 1707479090,
-        "narHash": "sha256-bu7KtDaTLL67VsYOJmIcPkERCnecxCeg3NwsLOxMGeU=",
+        "lastModified": 1707650010,
+        "narHash": "sha256-dOhphIA4MGrH4ElNCy/OlwmN24MsnEqFjRR6+RY7jZw=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "c1a3b4e3ddda756916b9bd86f55557c07f476911",
+        "rev": "809cca784b9f72a5ad4b991e0e7bcf8890f9c3a6",
         "type": "github"
       },
       "original": {
@@ -711,11 +692,11 @@
     },
     "unstable": {
       "locked": {
-        "lastModified": 1707451808,
-        "narHash": "sha256-UwDBUNHNRsYKFJzyTMVMTF5qS4xeJlWoeyJf+6vvamU=",
+        "lastModified": 1707588924,
+        "narHash": "sha256-0e1ce6X5ghapv6cAF9rxLZKeNyFHHXsLbGxN2cQQE8U=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "442d407992384ed9c0e6d352de75b69079904e4e",
+        "rev": "10b813040df67c4039086db0f6eaf65c536886c6",
         "type": "github"
       },
       "original": {
@@ -747,38 +728,6 @@
       "original": {
         "type": "tarball",
         "url": "https://flakehub.com/f/UbiqueLambda/yafas/0.1.%2A.tar.gz"
-      }
-    },
-    "zsh-autosuggestions": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1694098728,
-        "narHash": "sha256-B+Kz3B7d97CM/3ztpQyVkE6EfMipVF8Y4HJNfSRXHtU=",
-        "owner": "zsh-users",
-        "repo": "zsh-autosuggestions",
-        "rev": "c3d4e576c9c86eac62884bd47c01f6faed043fc5",
-        "type": "github"
-      },
-      "original": {
-        "owner": "zsh-users",
-        "repo": "zsh-autosuggestions",
-        "type": "github"
-      }
-    },
-    "zsh-nix-shell": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1704028593,
-        "narHash": "sha256-Rtg8kWVLhXRuD2/Ctbtgz9MQCtKZOLpAIdommZhXKdE=",
-        "owner": "chisui",
-        "repo": "zsh-nix-shell",
-        "rev": "82ca15e638cc208e6d8368e34a1625ed75e08f90",
-        "type": "github"
-      },
-      "original": {
-        "owner": "chisui",
-        "repo": "zsh-nix-shell",
-        "type": "github"
       }
     }
   },
