@@ -84,10 +84,7 @@
       enableSSHSupport = true;
     };
     dconf.enable = true;
-    zsh = {
-      enable = true;
-      enableCompletion = false;
-    };
+    fish.enable = true;
   };
 
   services = {
@@ -111,16 +108,22 @@
 
   zramSwap.enable = true;
 
-  environment.localBinInPath = true;
+  environment = {
+    localBinInPath = true;
+
+    binsh = "${pkgs.zsh}/bin/zsh";
+    pathsToLink = [ "/share/zsh" ];
+    shells = with pkgs; [ zsh ];
+  };
 
   users = {
     mutableUsers = true;
-    defaultUserShell = pkgs.zsh;
 
     users.chtc = {
       isNormalUser = true;
       initialPassword = "changeme";
       home = "/home/chtc";
+      shell = pkgs.fish;
 
       extraGroups = ["wheel" "networkmanager" "audio" "video"];
     };

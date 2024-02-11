@@ -2,14 +2,11 @@
   e = "$EDITOR";
   se = "doas $EDITOR";
   cat = "bat --color always";
-  rm = "trash-put";
-  rme = "trash-empty";
+  mv = "mv -i";
+  cp = "cp -i";
+  rm = "trash-put -i";
+  rme = "trash-empty -i";
   rml = "trash-list";
   rmr = "trash-restore";
-  ".." = "cd ..";
-  "..2" = "cd ../../";
-  "..3" = "cd ../../../";
-  "..4" = "cd ../../../../";
-  "..5" = "cd ../../../../";
   buildsite = "command rm -f docs/.files && ssg src docs \"chtc's site\" \"https://notchtc.github.io\"";
 }

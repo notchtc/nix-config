@@ -16,7 +16,7 @@
   line_break.disabled = true;
 
   directory = {
-    read_only = "(ro)";
+    read_only = " (ro)";
   };
 
   git_commit.format = ''( [\($hash$tag\)]($style))'';
