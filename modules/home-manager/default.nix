@@ -85,6 +85,7 @@ in {
       shellAliases = import ./config/shell-aliases.nix;
 
       autocd = true;
+      enableCompletion = true;
       dotDir = ".config/zsh";
       history.path = "${config.xdg.stateHome}/zsh/history";
 
