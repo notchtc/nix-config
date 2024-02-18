@@ -124,6 +124,8 @@ in {
       "kwinrc"."NightColor"."Active" = true;
       "kwinrc"."NightColor"."NightTemperature" = 3000;
       "kwinrc"."org.kde.kdecoration2"."BorderSizeAuto" = false;
+      "kwinrc"."ModifierOnlyShortcuts"."Meta" = "org.kde.krunner,/App,,toggleDisplay";
+      "krunnerrc"."General"."FreeFloating" = true;
       "systemsettingsrc"."KFileDialog Settings"."detailViewIconSize" = 16;
       "systemsettingsrc"."Main"."ActiveView" = "systemsettings_icon_mode";
     };
