@@ -1,4 +1,4 @@
-= NixOS Config
+= https://nixos.org[NixOS] config
 chtc <chtc@tuta.io>
 {docdate}
 ifndef::env-github[:icons: font]
@@ -10,6 +10,10 @@ ifdef::env-github[]
 :tip-caption: :bulb:
 :warning-caption: :warning:
 endif::[]
+
+image::https://img.shields.io/badge/NixOS-unstable-informational?style=flat.svg[link="https://github.com/nixos/nixpkgs"]
+
+image:https://github.com/notchtc/nix-config/actions/workflows/check.yml/badge.svg[link="https://github.com/notchtc/nix-config/actions/workflows/check.yml"] image:https://github.com/notchtc/nix-config/actions/workflows/format.yml/badge.svg[link="https://github.com/notchtc/nix-config/actions/workflows/format.yml"] image:https://github.com/notchtc/nix-config/actions/workflows/statix.yml/badge.svg[link="https://github.com/notchtc/nix-config/actions/workflows/statix.yml"]
 
 This repository contains my configuration for https://nixos.org[NixOS] and other programs that I use.
 
@@ -23,8 +27,7 @@ NixOS configuration using https://nixos.wiki/wiki/Flakes[flakes] and https://git
 
 Other things used:
 
-- https://github.com/kamadorueda/alejandra[alejandra]
-- https://github.com/dwarfmaster/arkenfox-nixos[arkenfox-nixos]
+- https://github.com/nix-communtiy/disko[disko]
 - https://flake.parts/[flake-parts]
 - https://github.com/nix-community/NUR[nur]
 - https://github.com/chaotic-cx/nyx[nyx]
