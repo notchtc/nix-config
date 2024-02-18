@@ -59,6 +59,7 @@
             curl
             fd
             ripgrep
+            man-pages
             man-pages-posix
             wget
             git
@@ -68,11 +69,9 @@
 
           home-manager = inputs'.home.packages.home-manager.override {path = "${inputs.home}";};
 
-          man-pages = pkgs.man-pages;
-
           gnu-coreutils = pkgs.coreutils;
         };
     };
-    formatter = inputs.alejandra.defaultPackage.${system};
+    formatter = pkgs.alejandra;
   };
 }

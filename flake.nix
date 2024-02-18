@@ -9,7 +9,6 @@
     };
 
   inputs = {
-    alejandra.url = "github:kamadorueda/alejandra/3.0.0";
     disko.url = "github:nix-community/disko";
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     home.url = "github:nix-community/home-manager";
@@ -31,16 +30,17 @@
       url = "github:chisui/zsh-nix-shell";
       flake = false;
     };
-    
+
     master.url = "github:nixos/nixpkgs/master";
     stable.url = "github:nixos/nixpkgs/release-23.11";
     unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
 
     nixpkgs.follows = "unstable";
-    alejandra.inputs.nixpkgs.follows = "nixpkgs";
     disko.inputs.nixpkgs.follows = "nixpkgs";
     home.inputs.nixpkgs.follows = "nixpkgs";
-    plasma-manager.inputs.nixpkgs.follows = "nixpkgs";
-    plasma-manager.inputs.home-manager.follows = "home";
+    plasma-manager.inputs = {
+      nixpkgs.follows = "nixpkgs";
+      home-manager.follows = "home";
+    };
   };
 }
