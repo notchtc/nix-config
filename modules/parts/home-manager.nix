@@ -52,6 +52,8 @@
           modules =
             config.modules
             ++ [
+              inputs.nix-index-database.hmModules.nix-index
+
               # Shared configuration across all users
               ../home-manager
 

@@ -14,6 +14,7 @@
     home.url = "github:nix-community/home-manager";
     parts.url = "github:hercules-ci/flake-parts";
     plasma-manager.url = "github:pjones/plasma-manager";
+    nix-index-database.url = "github:Mic92/nix-index-database";
     nur.url = "github:nix-community/NUR";
 
     f-sy-h = {
@@ -38,6 +39,7 @@
     nixpkgs.follows = "unstable";
     disko.inputs.nixpkgs.follows = "nixpkgs";
     home.inputs.nixpkgs.follows = "nixpkgs";
+    nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
     plasma-manager.inputs = {
       nixpkgs.follows = "nixpkgs";
       home-manager.follows = "home";

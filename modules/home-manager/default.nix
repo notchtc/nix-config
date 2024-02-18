@@ -58,6 +58,8 @@ in {
       };
     };
 
+    nix-index-database.comma.enable = true;
+
     bat = {
       enable = true;
       config = {
