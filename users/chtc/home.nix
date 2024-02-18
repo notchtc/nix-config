@@ -61,6 +61,7 @@
         sd-switch
         materia-kde-theme
         wl-clipboard
+        nil
         ;
       inherit
         (pkgs.libsForQt5)
