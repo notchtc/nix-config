@@ -11,18 +11,18 @@ ifdef::env-github[]
 :warning-caption: :warning:
 endif::[]
 
-image::https://img.shields.io/badge/NixOS-unstable-informational?style=flat.svg[link="https://github.com/nixos/nixpkgs"]
+[.text-center]
+====
+image:https://nixos.org/logo/nixos-hires.png[link="https://nixos.org"]
 
-image:https://github.com/notchtc/nix-config/actions/workflows/check.yml/badge.svg[link="https://github.com/notchtc/nix-config/actions/workflows/check.yml"] image:https://github.com/notchtc/nix-config/actions/workflows/format.yml/badge.svg[link="https://github.com/notchtc/nix-config/actions/workflows/format.yml"] image:https://github.com/notchtc/nix-config/actions/workflows/statix.yml/badge.svg[link="https://github.com/notchtc/nix-config/actions/workflows/statix.yml"]
+image:https://img.shields.io/badge/NixOS-unstable-informational?style=plastic.svg[link="https://github.com/nixos/nixpkgs"] image:https://github.com/notchtc/nix-config/actions/workflows/check.yml/badge.svg[link="https://github.com/notchtc/nix-config/actions/workflows/check.yml"] image:https://github.com/notchtc/nix-config/actions/workflows/format.yml/badge.svg[link="https://github.com/notchtc/nix-config/actions/workflows/format.yml"] image:https://github.com/notchtc/nix-config/actions/workflows/statix.yml/badge.svg[link="https://github.com/notchtc/nix-config/actions/workflows/statix.yml"]
 
 This repository contains my configuration for https://nixos.org[NixOS] and other programs that I use.
-
-[IMPORTANT]
-====
-As this is my personal configuration, not everything may work for you. You probably also want to change some things around. You're better off creating your own configuration.
 ====
 
 == Description
+IMPORTANT: As this is my personal configuration, not everything may work for you. You probably also want to change some things around. You're better off creating your own configuration.
+
 NixOS configuration using https://nixos.wiki/wiki/Flakes[flakes] and https://github.com/nix-community/home-manager[home-manager].
 
 Other things used:
@@ -39,12 +39,12 @@ Configurations that I ""learned"" from:
 - https://github.com/moni-dz/nix-config[moni-dz/nix-config]
 
 == Hosts & users
-Hosts:
+|===
+|Host|Purpose|User|Purpose
 
-[horizontal]
-dorothy:: main device (laptop)
+|dorothy
+|main device (laptop)
+|chtc
+|main user
 
-Users (home-manager configurations):
-
-[horizontal]
-chtc:: main user
+|===
