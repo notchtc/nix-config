@@ -54,7 +54,6 @@
         gimp
         keepassxc
         easyeffects
-        pfetch
         trash-cli
         telegram-desktop
         picard
