@@ -123,6 +123,7 @@ in {
       "kwinrc"."Compositing"."LatencyPolicy" = "Low";
       "kwinrc"."NightColor"."Active" = true;
       "kwinrc"."NightColor"."NightTemperature" = 3000;
+      "kwinrc"."org.kde.kdecoration2"."BorderSize" = "None";
       "kwinrc"."org.kde.kdecoration2"."BorderSizeAuto" = false;
       "kwinrc"."ModifierOnlyShortcuts"."Meta" = "org.kde.krunner,/App,,toggleDisplay";
       "krunnerrc"."General"."FreeFloating" = true;
