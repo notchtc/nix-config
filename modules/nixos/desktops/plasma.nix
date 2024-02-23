@@ -34,6 +34,7 @@
     inherit
       (pkgs.libsForQt5)
       elisa
+      konsole
       ;
   };
 }
