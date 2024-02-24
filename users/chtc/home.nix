@@ -62,10 +62,6 @@
         wl-clipboard
         nil
         ;
-      inherit
-        (pkgs.libsForQt5)
-        qtstyleplugin-kvantum
-        ;
       # inherit
       #   (pkgs.gnome)
       #   gnome-tweaks
@@ -86,7 +82,7 @@
       LESSHISTFILE = "-";
       BROWSER = "firefox";
       PAGER = "less";
-      TERMINAL = "konsole";
+      TERMINAL = "foot";
     };
 
     stateVersion = "23.11";
