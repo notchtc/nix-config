@@ -57,6 +57,7 @@
             (pkgs)
             vim
             curl
+            difftastic
             fd
             ripgrep
             man-pages

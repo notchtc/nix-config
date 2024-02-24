@@ -34,6 +34,30 @@ in {
       enable = true;
       userName = "chtc";
       userEmail = "chtc@tuta.io";
+
+      aliases = {
+        df = "difftool";
+        a = "add";
+        p = "push";
+        r = "rebase";
+        ri = "rebase -i";
+        cm = "commit";
+        pl = "pull";
+        s = "status";
+        st = "stash";
+        ck = "checkout";
+        rl = "reflog";
+      };
+
+      extraConfig = {
+        diff.tool = "difftastic";
+        pager.difftool = true;
+
+        difftool = {
+          prompt = false;
+          difftastic.cmd = ''${lib.getExe pkgs.difftastic} "$LOCAL" "$REMOTE"'';
+        };
+      };
     };
 
     home-manager = {
