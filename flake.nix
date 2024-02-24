@@ -22,13 +22,8 @@
       flake = false;
     };
 
-    zsh-autosuggestions = {
-      url = "github:zsh-users/zsh-autosuggestions";
-      flake = false;
-    };
-
-    zsh-history-substring-search = {
-      url = "github:zsh-users/zsh-history-substring-search";
+    zsh-autocomplete = {
+      url = "github:marlonrichert/zsh-autocomplete";
       flake = false;
     };
 

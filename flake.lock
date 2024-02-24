@@ -571,8 +571,7 @@
         "plasma-manager": "plasma-manager",
         "stable": "stable",
         "unstable": "unstable",
-        "zsh-autosuggestions": "zsh-autosuggestions",
-        "zsh-history-substring-search": "zsh-history-substring-search",
+        "zsh-autocomplete": "zsh-autocomplete",
         "zsh-nix-shell": "zsh-nix-shell"
       }
     },
@@ -691,35 +690,19 @@
         "url": "https://flakehub.com/f/UbiqueLambda/yafas/0.1.%2A.tar.gz"
       }
     },
-    "zsh-autosuggestions": {
+    "zsh-autocomplete": {
       "flake": false,
       "locked": {
-        "lastModified": 1694098728,
-        "narHash": "sha256-B+Kz3B7d97CM/3ztpQyVkE6EfMipVF8Y4HJNfSRXHtU=",
-        "owner": "zsh-users",
-        "repo": "zsh-autosuggestions",
-        "rev": "c3d4e576c9c86eac62884bd47c01f6faed043fc5",
+        "lastModified": 1702543845,
+        "narHash": "sha256-u2BnkHZOSGVhcJvhGwHBdeAOVdszye7QZ324xinbELE=",
+        "owner": "marlonrichert",
+        "repo": "zsh-autocomplete",
+        "rev": "c7b65508fd3a016dc9cdb410af9ee7806b3f9be1",
         "type": "github"
       },
       "original": {
-        "owner": "zsh-users",
-        "repo": "zsh-autosuggestions",
-        "type": "github"
-      }
-    },
-    "zsh-history-substring-search": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1700734334,
-        "narHash": "sha256-houujb1CrRTjhCc+dp3PRHALvres1YylgxXwjjK6VZA=",
-        "owner": "zsh-users",
-        "repo": "zsh-history-substring-search",
-        "rev": "8dd05bfcc12b0cd1ee9ea64be725b3d9f713cf64",
-        "type": "github"
-      },
-      "original": {
-        "owner": "zsh-users",
-        "repo": "zsh-history-substring-search",
+        "owner": "marlonrichert",
+        "repo": "zsh-autocomplete",
         "type": "github"
       }
     },

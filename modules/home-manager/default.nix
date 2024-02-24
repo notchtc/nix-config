@@ -70,7 +70,7 @@ in {
 
       extraConfig = builtins.readFile (pkgs.fetchurl {
         url = "https://raw.githubusercontent.com/trapd00r/LS_COLORS/master/LS_COLORS";
-        hash = "sha256:1a9pvv8kgy7cx0vkxyr7lvq2hs04pkg9nql73za9y39s2w8gyj3d";
+        hash = "sha256-1a9pvv8kgy7cx0vkxyr7lvq2hs04pkg9nql73za9y39s2w8gyj3d";
       });
     };
 
@@ -121,8 +121,10 @@ in {
       shellAliases = import ./config/shell-aliases.nix;
 
       autocd = true;
-      enableCompletion = true;
+      enableCompletion = false;
+      enableAutosuggestions = true;
       dotDir = ".config/zsh";
+
       history = {
         path = "${config.xdg.stateHome}/zsh/history";
 
@@ -132,16 +134,12 @@ in {
 
       plugins = [
         {
-          name = "zsh-history-substring-search";
-          src = inputs.zsh-history-substring-search;
-        }
-        {
           name = "F-Sy-H";
           src = inputs.f-sy-h;
         }
         {
-          name = "zsh-autosuggestions";
-          src = inputs.zsh-autosuggestions;
+          name = "zsh-autocomplete";
+          src = inputs.zsh-autocomplete;
         }
         {
           name = "zsh-nix-shell";
@@ -172,10 +170,21 @@ in {
       initExtra = ''
         bindkey -v
 
-        bindkey '^[[A' history-substring-search-up
-        bindkey '^[[B' history-substring-search-down
-        bindkey '^[OA' history-substring-search-up
-        bindkey '^[OB' history-substring-search-down
+        bindkey '\t' menu-select "$terminfo[kcbt]" menu-select
+        bindkey -M menuselect '\t' menu-complete "$terminfo[kcbt]" reverse-menu-complete
+
+        # all Tab widgets
+        zstyle ':autocomplete:*complete*:*' insert-unambiguous yes
+
+        # all history widgets
+        zstyle ':autocomplete:*history*:*' insert-unambiguous yes
+
+        # ^S
+        zstyle ':autocomplete:menu-search:*' insert-unambiguous yes
+
+        +autocomplete:recent-directories() {
+          typeset -ga reply=( ''${(f)"$(zoxide query -l)"})
+        }
       '';
     };
   };
