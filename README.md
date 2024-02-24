@@ -4,6 +4,7 @@
 
 ![NixOS](https://nixos.org/logo/nixos-hires.png)
 
+[![NixOS unstable](https://img.shields.io/badge/NixOS-unstable-informational?style=plastic.svg)](https://github.com/nixos/nixpkgs)
 [![nix-config flake check](https://github.com/notchtc/nix-config/workflows/nix-config%20flake%20check/badge.svg)](https://github.com/notchtc/nix-config/actions?query=workflow:"nix-config+flake+check")
 [![nix-config statix check](https://github.com/notchtc/nix-config/workflows/nix-config%20statix%20check/badge.svg)](https://github.com/notchtc/nix-config/actions?query=workflow:"nix-config+statix+check")
 [![nix-config format check](https://github.com/notchtc/nix-config/workflows/nix-config%20format%20check/badge.svg)](https://github.com/notchtc/nix-config/actions?query=workflow:"nix-config+format+check")
