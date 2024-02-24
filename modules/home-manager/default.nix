@@ -26,6 +26,7 @@ in {
           gh-cal
           gh-dash
           gh-eco
+          gh-markdown-preview
           ;
       };
     };

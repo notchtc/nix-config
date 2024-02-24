@@ -61,6 +61,7 @@
         materia-kde-theme
         wl-clipboard
         nil
+        marksman
         ;
       # inherit
       #   (pkgs.gnome)
