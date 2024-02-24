@@ -38,7 +38,7 @@
             }
           '';
 
-          extraConfig = __readFile ./programs/firefox/user.js;
+          extraConfig = builtins.readFile ./programs/firefox/user.js;
         };
       };
     })
@@ -132,12 +132,12 @@
 
     foot = {
       enable = true;
-      server.enable = true;
 
       settings = {
         main = {
           font = "monospace:size=10";
           dpi-aware = "yes";
+          pad = "3x3 center";
         };
 
         cursor = {

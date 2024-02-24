@@ -83,7 +83,7 @@ in {
     ];
 
     shortcuts = {
-      "org.codeberg.dnkl.footclient.desktop"."_launch" = "Ctrl+Alt+T";
+      "org.codeberg.dnkl.foot.desktop"."_launch" = "Ctrl+Alt+T";
     };
 
     configFile = {
@@ -133,7 +133,6 @@ in {
       "krunnerrc"."General"."FreeFloating" = true;
       "systemsettingsrc"."KFileDialog Settings"."detailViewIconSize" = 16;
       "systemsettingsrc"."Main"."ActiveView" = "systemsettings_icon_mode";
-      "kglobalshortcutsrc"."org.codeberg.dnkl.footclient.desktop"."_k_friendly_name" = "Foot Client";
     };
   };
 }
