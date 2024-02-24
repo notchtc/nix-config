@@ -89,9 +89,18 @@ in {
       autocd = true;
       enableCompletion = true;
       dotDir = ".config/zsh";
-      history.path = "${config.xdg.stateHome}/zsh/history";
+      history = {
+        path = "${config.xdg.stateHome}/zsh/history";
+
+        expireDuplicatesFirst = true;
+        extended = true;
+      };
 
       plugins = [
+        {
+          name = "zsh-history-substring-search";
+          src = inputs.zsh-history-substring-search;
+        }
         {
           name = "F-Sy-H";
           src = inputs.f-sy-h;
@@ -128,6 +137,11 @@ in {
 
       initExtra = ''
         bindkey -v
+
+        bindkey '^[[A' history-substring-search-up
+        bindkey '^[[B' history-substring-search-down
+        bindkey '^[OA' history-substring-search-up
+        bindkey '^[OB' history-substring-search-down
       '';
     };
   };
