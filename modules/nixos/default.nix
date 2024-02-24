@@ -79,7 +79,6 @@
   };
 
   programs = {
-    command-not-found.enable = false;
     gnupg.agent = {
       enable = true;
       enableSSHSupport = true;

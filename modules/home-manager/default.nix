@@ -65,6 +65,15 @@ in {
       path = "${inputs.home}";
     };
 
+    dircolors = {
+      enable = true;
+
+      extraConfig = builtins.readFile (pkgs.fetchurl {
+        url = "https://raw.githubusercontent.com/trapd00r/LS_COLORS/master/LS_COLORS";
+        hash = "sha256:1a9pvv8kgy7cx0vkxyr7lvq2hs04pkg9nql73za9y39s2w8gyj3d";
+      });
+    };
+
     helix = {
       enable = true;
       defaultEditor = true;
@@ -82,6 +91,7 @@ in {
       };
     };
 
+    nix-index.enable = true;
     nix-index-database.comma.enable = true;
 
     bat = {
