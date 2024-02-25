@@ -133,6 +133,9 @@ in {
       "krunnerrc"."General"."FreeFloating" = true;
       "systemsettingsrc"."KFileDialog Settings"."detailViewIconSize" = 16;
       "systemsettingsrc"."Main"."ActiveView" = "systemsettings_icon_mode";
+      "baloofilerc"."Basic Settings"."Indexing-Enabled" = false;
+      "krunnerrc"."Plugins"."baloosearchEnabled" = false;
+      "plasmanotifyrc"."Notifications"."PopupPosition" = "TopRight";
     };
   };
 }
