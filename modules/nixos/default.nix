@@ -7,9 +7,38 @@
     tmp.cleanOnBoot = true;
     kernelPackages = pkgs.linuxPackages_xanmod_latest;
 
+    initrd = {
+      systemd.enable = true;
+      verbose = false;
+    };
+
+    consoleLogLevel = 3;
+    kernelParams = [
+      "quiet"
+      "udev.log_level=3"
+    ];
+
     kernel.sysctl = {
       "vm.swappiness" = 10;
       "vm.max_map_count" = 1048576;
+      "net.ipv4.icmp_ignore_bogus_error_responses" = 1;
+      "net.ipv4.conf.default.rp_filter" = 1;
+      "net.ipv4.conf.all.rp_filter" = 1;
+      "net.ipv4.conf.all.accept_source_route" = 0;
+      "net.ipv6.conf.all.accept_source_route" = 0;
+      "net.ipv4.conf.all.send_redirects" = 0;
+      "net.ipv4.conf.default.send_redirects" = 0;
+      "net.ipv4.conf.all.accept_redirects" = 0;
+      "net.ipv4.conf.default.accept_redirects" = 0;
+      "net.ipv4.conf.all.secure_redirects" = 0;
+      "net.ipv4.conf.default.secure_redirects" = 0;
+      "net.ipv6.conf.all.accept_redirects" = 0;
+      "net.ipv6.conf.default.accept_redirects" = 0;
+      "net.ipv4.tcp_syncookies" = 1;
+      "net.ipv4.tcp_rfc1337" = 1;
+      "net.ipv4.tcp_fastopen" = 3;
+      "net.ipv4.tcp_congestion_control" = "bbr2";
+      "net.core.default_qdisc" = "cake";
     };
 
     loader = {
@@ -18,6 +47,7 @@
       systemd-boot = {
         enable = true;
         configurationLimit = 3;
+        consoleMode = "auto";
         editor = false;
       };
     };

@@ -26,6 +26,8 @@
     };
   };
 
+  systemd.services.ModemManager.enable = false;
+
   hardware = {
     opengl = {
       enable = true;
