@@ -1,6 +1,15 @@
 {pkgs, ...}: {
   programs = {
-    gamemode.enable = true;
+    gamemode = {
+      enable = true;
+      settings = {
+        general = {
+          softrealtime = "auto";
+          renice = 15;
+        };
+      };
+    };
+
     steam = {
       enable = true;
       remotePlay.openFirewall = true;
