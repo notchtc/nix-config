@@ -131,6 +131,7 @@
   };
 
   hardware = {
+    enableAllFirmware = true;
     pulseaudio.enable = false;
   };
 

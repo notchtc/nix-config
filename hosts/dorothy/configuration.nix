@@ -28,6 +28,10 @@
 
   systemd.services.ModemManager.enable = false;
 
+  services = {
+    thermald.enable = true;
+  };
+
   hardware = {
     opengl = {
       enable = true;
