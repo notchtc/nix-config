@@ -49,7 +49,7 @@
       inherit
         (pkgs)
         vesktop
-        strawberry
+        strawberry-qt6
         qbittorrent
         gimp
         keepassxc
@@ -58,7 +58,6 @@
         telegram-desktop
         picard
         sd-switch
-        materia-kde-theme
         wl-clipboard
         nil
         marksman

@@ -14,8 +14,8 @@ in {
     };
 
     theme = {
-      name = "Materia-dark";
-      package = pkgs.materia-theme;
+      name = "Breeze-Dark";
+      package = pkgs.kdePackages.breeze-gtk;
     };
 
     cursorTheme = {
@@ -40,17 +40,15 @@ in {
     enable = true;
 
     workspace = {
-      theme = "Materia";
-      colorScheme = "MateriaDark";
       cursorTheme = "phinger-cursors";
       iconTheme = "Papirus-Dark";
-      lookAndFeel = "com.github.varlesh.materia-dark";
+      lookAndFeel = "com.kde.breezedark.desktop";
       wallpaper = "${wallpaperImg}";
     };
 
     panels = [
       {
-        location = "top";
+        location = "bottom";
         height = 30;
         widgets = [
           "org.kde.plasma.kickoff"
@@ -95,44 +93,14 @@ in {
       "kdeglobals"."General"."smallestReadableFont" = "Iosevka Nerd Font,8,-1,5,50,0,0,0,0,0";
       "kdeglobals"."General"."toolBarFont" = "Iosevka Nerd Font,10,-1,5,50,0,0,0,0,0";
       "kdeglobals"."KDE"."AnimationDurationFactor" = 0;
-      "kdeglobals"."KFileDialog Settings"."Allow Expansion" = false;
-      "kdeglobals"."KFileDialog Settings"."Automatically select filename extension" = true;
-      "kdeglobals"."KFileDialog Settings"."Breadcrumb Navigation" = true;
-      "kdeglobals"."KFileDialog Settings"."Decoration position" = 2;
-      "kdeglobals"."KFileDialog Settings"."LocationCombo Completionmode" = 5;
-      "kdeglobals"."KFileDialog Settings"."PathCombo Completionmode" = 5;
-      "kdeglobals"."KFileDialog Settings"."Show Bookmarks" = false;
-      "kdeglobals"."KFileDialog Settings"."Show Full Path" = false;
-      "kdeglobals"."KFileDialog Settings"."Show Inline Previews" = true;
-      "kdeglobals"."KFileDialog Settings"."Show Preview" = false;
-      "kdeglobals"."KFileDialog Settings"."Show Speedbar" = true;
-      "kdeglobals"."KFileDialog Settings"."Show hidden files" = false;
-      "kdeglobals"."KFileDialog Settings"."Sort by" = "Name";
-      "kdeglobals"."KFileDialog Settings"."Sort directories first" = true;
-      "kdeglobals"."KFileDialog Settings"."Sort hidden files last" = false;
-      "kdeglobals"."KFileDialog Settings"."Sort reversed" = false;
-      "kdeglobals"."KFileDialog Settings"."Speedbar Width" = 147;
-      "kdeglobals"."KFileDialog Settings"."View Style" = "DetailTree";
-      "kdeglobals"."MainToolbarIcons"."Size" = 16;
-      "kdeglobals"."ToolbarIcons"."Size" = 16;
-      "kdeglobals"."WM"."activeBackground" = "39,39,39";
-      "kdeglobals"."WM"."activeBlend" = "39,39,39";
       "kdeglobals"."WM"."activeFont" = "Iosevka Nerd Font,10,-1,5,50,0,0,0,0,0";
-      "kdeglobals"."WM"."activeForeground" = "223,223,223";
-      "kdeglobals"."WM"."inactiveBackground" = "30,30,30";
-      "kdeglobals"."WM"."inactiveBlend" = "30,30,30";
-      "kdeglobals"."WM"."inactiveForeground" = "139,139,139";
       "kscreenlockerrc"."Greeter.Wallpaper.org.kde.image.General"."Image" = "${wallpaperImg}";
       "kscreenlockerrc"."Greeter.Wallpaper.org.kde.image.General"."PreviewImage" = "${wallpaperImg}";
       "kwinrc"."Compositing"."LatencyPolicy" = "Low";
       "kwinrc"."NightColor"."Active" = true;
       "kwinrc"."NightColor"."NightTemperature" = 3000;
-      "kwinrc"."org.kde.kdecoration2"."BorderSize" = "None";
-      "kwinrc"."org.kde.kdecoration2"."BorderSizeAuto" = false;
       "kwinrc"."ModifierOnlyShortcuts"."Meta" = "org.kde.krunner,/App,,toggleDisplay";
       "krunnerrc"."General"."FreeFloating" = true;
-      "systemsettingsrc"."KFileDialog Settings"."detailViewIconSize" = 16;
-      "systemsettingsrc"."Main"."ActiveView" = "systemsettings_icon_mode";
       "baloofilerc"."Basic Settings"."Indexing-Enabled" = false;
       "krunnerrc"."Plugins"."baloosearchEnabled" = false;
       "plasmanotifyrc"."Notifications"."PopupPosition" = "TopRight";
