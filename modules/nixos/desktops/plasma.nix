@@ -12,14 +12,14 @@
           enable = true;
           wayland.enable = true;
         };
-        defaultSession = "plasmawayland";
+        defaultSession = "plasma";
         autoLogin = {
           enable = true;
           user = "chtc";
         };
       };
 
-      desktopManager.plasma5.enable = true;
+      desktopManager.plasma6.enable = true;
 
       xkb = {
         layout = "pl";
@@ -30,9 +30,9 @@
     };
   };
 
-  environment.plasma5.excludePackages = lib.attrValues {
+  environment.plasma6.excludePackages = lib.attrValues {
     inherit
-      (pkgs.libsForQt5)
+      (pkgs.kdePackages)
       elisa
       konsole
       ;
