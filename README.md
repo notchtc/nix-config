@@ -29,6 +29,7 @@ Configurations that I ""learned"" from:
 + [Misterio77/nix-starter-configs](https://github.com/Misterio77/nix-starter-configs)
 + [javacafe01/nix-config](https://github.com/javacafe01/nix-config)
 + [moni-dz/nix-config](https://github.com/moni-dz/nix-config)
++ [fufexan/dotfiles](https://github.com/fufexan/dotfiles)
 
 ## Hosts & users
 | Host    | Purpose              | User | Purpose   |
