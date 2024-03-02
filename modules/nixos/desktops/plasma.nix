@@ -34,6 +34,7 @@
     inherit
       (pkgs.kdePackages)
       elisa
+      kate
       konsole
       ;
   };
