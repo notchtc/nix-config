@@ -51,8 +51,14 @@ in {
         location = "bottom";
         height = 30;
         widgets = [
-          "org.kde.plasma.kickoff"
+          {
+            name = "org.kde.plasma.kickoff";
+            config = {
+              General.icon = "distributor-logo-nixos";
+            };
+          }
           "org.kde.plasma.pager"
+          "org.kde.plasma.marginsseparator"
           {
             name = "org.kde.plasma.icontasks";
             config = {
@@ -66,7 +72,6 @@ in {
               ];
             };
           }
-          "org.kde.plasma.marginseparator"
           "org.kde.plasma.panelspacer"
           {
             name = "org.kde.plasma.digitalclock";
