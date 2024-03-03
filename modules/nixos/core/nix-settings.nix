@@ -1,15 +1,11 @@
 {
+  config,
   lib,
   inputs,
-  inputs',
 }: {
-  registry = {
-    system.flake = inputs.self;
-    default.flake = inputs.nixpkgs;
-    home-manager.flake = inputs.home;
-  };
+  registry = lib.mapAttrs (_: v: {flake = v;}) inputs;
 
-  nixPath = ["nixpkgs=${inputs.nixpkgs}"];
+  nixPath = lib.mapAttrsToList (key: _: "${key}=flake:${key}") config.nix.registry;
 
   optimise.automatic = true;
   gc = {

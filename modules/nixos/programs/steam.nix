@@ -1,15 +1,5 @@
-{pkgs, ...}: {
+{config, ...}: {
   programs = {
-    gamemode = {
-      enable = true;
-      settings = {
-        general = {
-          softrealtime = "auto";
-          renice = 15;
-        };
-      };
-    };
-
     steam = {
       enable = true;
       remotePlay.openFirewall = true;
@@ -17,5 +7,5 @@
     };
   };
 
-  chaotic.steam.extraCompatPackages = with pkgs.nur.repos.ataraxiasjel; [proton-ge];
+  chaotic.steam.extraCompatPackages = with config.nur.repos.ataraxiasjel; [proton-ge];
 }

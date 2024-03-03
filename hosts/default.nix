@@ -1,14 +1,25 @@
-{inputs, ...}: {
-  parts.nixosConfigurations = {
-    dorothy = {
-      system = "x86_64-linux";
-      stateVersion = "23.11";
+{
+  self,
+  inputs,
+  ...
+}: let
+  defaultModules = [
+    inputs.nur.nixosModules.nur
+    ../modules/nixos
+  ];
 
-      modules = [
-        inputs.chaotic.nixosModules.default
-        inputs.disko.nixosModules.disko
-        ./dorothy/configuration.nix
-      ];
+  specialArgs = {inherit inputs self;};
+in {
+  flake.nixosConfigurations = {
+    dorothy = inputs.nixpkgs.lib.nixosSystem {
+      inherit specialArgs;
+      modules =
+        defaultModules
+        ++ [
+          inputs.chaotic.nixosModules.default
+          inputs.disko.nixosModules.disko
+          ./dorothy/configuration.nix
+        ];
     };
   };
 }

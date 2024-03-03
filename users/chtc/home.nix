@@ -6,9 +6,11 @@
 }: {
   imports = [
     ./desktops/plasma.nix
+    ../../modules/home-manager/xdg.nix
+    ../../modules/home-manager/programs/terminals/foot.nix
     ../../modules/home-manager/programs/mpv
 
-    (import ../../modules/home-manager/programs/firefox {
+    (import ../../modules/home-manager/programs/browsers/firefox {
       inherit config pkgs;
       package = pkgs.firefox;
 
@@ -16,7 +18,7 @@
         Default = {
           extensions = lib.attrValues {
             inherit
-              (pkgs.nur.repos.rycee.firefox-addons)
+              (config.nur.repos.rycee.firefox-addons)
               ublock-origin
               skip-redirect
               enhanced-h264ify
@@ -85,28 +87,12 @@
       TERMINAL = "foot";
     };
 
+    username = "chtc";
+    homeDirectory = "/home/${config.home.username}";
     stateVersion = "23.11";
   };
 
   xdg = {
-    enable = true;
-    cacheHome = "${config.home.homeDirectory}/.cache";
-    configHome = "${config.home.homeDirectory}/.config";
-    dataHome = "${config.home.homeDirectory}/.local/share";
-    stateHome = "${config.home.homeDirectory}/.local/state";
-    userDirs = {
-      enable = true;
-      createDirectories = true;
-      desktop = "${config.home.homeDirectory}/Desktop";
-      documents = "${config.home.homeDirectory}/Documents";
-      download = "${config.home.homeDirectory}/Downloads";
-      music = "${config.home.homeDirectory}/Music";
-      pictures = "${config.home.homeDirectory}/Pictures";
-      publicShare = "${config.home.homeDirectory}/Public";
-      templates = "${config.home.homeDirectory}/Templates";
-      videos = "${config.home.homeDirectory}/Videos";
-    };
-
     desktopEntries = {
       vesktop = {
         name = "Vesktop";
@@ -125,44 +111,6 @@
     yt-dlp.enable = true;
     gpg.homedir = "${config.xdg.dataHome}/gnupg";
     bash.historyFile = "${config.xdg.stateHome}/bash/history";
-
-    foot = {
-      enable = true;
-
-      settings = {
-        main = {
-          font = "monospace:size=10";
-          dpi-aware = "yes";
-          pad = "3x3 center";
-        };
-
-        cursor = {
-          style = "beam";
-          blink = "yes";
-        };
-
-        colors = {
-          background = "1d2021";
-          foreground = "d4be98";
-          regular0 = "32302f";
-          regular1 = "ea6962";
-          regular2 = "a9b665";
-          regular3 = "d8a657";
-          regular4 = "7daea3";
-          regular5 = "d3869b";
-          regular6 = "89b482";
-          regular7 = "d4be98";
-          bright0 = "32302f";
-          bright1 = "ea6962";
-          bright2 = "a9b665";
-          bright3 = "d8a657";
-          bright4 = "7daea3";
-          bright5 = "d3869b";
-          bright6 = "89b482";
-          bright7 = "d4be98";
-        };
-      };
-    };
   };
 
   systemd.user.startServices = "sd-switch";

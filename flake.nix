@@ -5,7 +5,11 @@
   outputs = inputs:
     inputs.parts.lib.mkFlake {inherit inputs;} {
       systems = ["x86_64-linux"];
-      imports = [./modules/parts ./overlays ./hosts ./users];
+      imports = [./overlays ./hosts ./users];
+
+      perSystem = {pkgs, ...}: {
+        formatter = pkgs.alejandra;
+      };
     };
 
   inputs = {
