@@ -1,8 +1,7 @@
 {pkgs, ...}: let
   wallpaperImg = pkgs.fetchurl {
-    url = "https://unsplash.com/photos/fdiXdOdYtLE/download?ixid=M3wxMjA3fDB8MXxhbGx8Mjg4fHx8fHx8Mnx8MTcwNzI0MDg3Nnw";
-    name = "wall.jpg";
-    hash = "sha256-uN8LwLPB8GJ3MmkbgjociePtPNImcbq3VSpmTpW91wc=";
+    url = "https://simonstalenhag.se/bilderbig/by_housevisit_2560.jpg";
+    hash = "sha256-qFRL7znRvKWLpEriE4JlFT2MZR25uV7SKdpxy8Jlyww=";
   };
 in {
   gtk = {
