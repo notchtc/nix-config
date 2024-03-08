@@ -38,6 +38,10 @@
             #webrtcIndicator {
               display: none;
             }
+
+            .tab-label-container {
+              mask-image: none !important;
+            }
           '';
 
           extraConfig = builtins.readFile ./programs/firefox/user.js;
