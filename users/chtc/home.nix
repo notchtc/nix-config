@@ -60,13 +60,8 @@
         gimp
         keepassxc
         easyeffects
-        trash-cli
         telegram-desktop
         picard
-        sd-switch
-        wl-clipboard
-        nil
-        marksman
         ;
       # inherit
       #   (pkgs.gnome)
@@ -116,6 +111,4 @@
     gpg.homedir = "${config.xdg.dataHome}/gnupg";
     bash.historyFile = "${config.xdg.stateHome}/bash/history";
   };
-
-  systemd.user.startServices = "sd-switch";
 }

@@ -1,8 +1,5 @@
 {
-  self,
-  config,
   lib,
-  inputs,
   pkgs,
   ...
 }: {
@@ -11,23 +8,10 @@
     ./core/security.nix
     ./core/users.nix
     ./networking
+    ./nix
     ./programs
     ./services
   ];
-
-  nix = import ./core/nix-settings.nix {
-    inherit config lib inputs;
-  };
-
-  nixpkgs = {
-    config = lib.mkForce {
-      allowUnfree = true;
-    };
-
-    overlays = lib.mkForce [
-      self.overlays.default
-    ];
-  };
 
   environment = {
     localBinInPath = true;

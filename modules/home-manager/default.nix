@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  lib,
+  pkgs,
+  ...
+}: {
   imports = [
     ./programs/editors/helix.nix
     ./programs/nix-index.nix
@@ -11,10 +15,23 @@
     ./programs/shell/zsh.nix
   ];
 
+  programs.home-manager.enable = true;
+
+  home.packages = lib.attrValues {
+    inherit
+      (pkgs)
+      trash-cli
+      sd-switch
+      wl-clipboard
+      nil
+      marksman
+      ;
+  };
+
   nix = {
     package = pkgs.nix;
     settings.use-xdg-base-directories = true;
   };
 
-  programs.home-manager.enable = true;
+  systemd.user.startServices = "sd-switch";
 }
