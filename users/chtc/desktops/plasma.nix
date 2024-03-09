@@ -39,6 +39,7 @@ in {
     enable = true;
 
     workspace = {
+      clickItemTo = "open";
       cursorTheme = "phinger-cursors";
       iconTheme = "Papirus-Dark";
       lookAndFeel = "com.kde.breezedark.desktop";
@@ -49,6 +50,7 @@ in {
       {
         location = "bottom";
         height = 30;
+        floating = true;
         widgets = [
           {
             name = "org.kde.plasma.kickoff";
@@ -56,7 +58,6 @@ in {
               General.icon = "distributor-logo-nixos";
             };
           }
-          "org.kde.plasma.pager"
           "org.kde.plasma.marginsseparator"
           {
             name = "org.kde.plasma.icontasks";
@@ -80,6 +81,8 @@ in {
           }
           "org.kde.plasma.panelspacer"
           "org.kde.plasma.systemtray"
+          "org.kde.plasma.marginsseparator"
+          "org.kde.plasma.pager"
         ];
       }
     ];
@@ -98,12 +101,14 @@ in {
       "kdeglobals"."General"."toolBarFont" = "Iosevka Nerd Font,10,-1,5,50,0,0,0,0,0";
       "kdeglobals"."KDE"."AnimationDurationFactor" = 0;
       "kdeglobals"."WM"."activeFont" = "Iosevka Nerd Font,10,-1,5,50,0,0,0,0,0";
-      "kscreenlockerrc"."Greeter.Wallpaper.org.kde.image.General"."Image" = "${wallpaperImg}";
-      "kscreenlockerrc"."Greeter.Wallpaper.org.kde.image.General"."PreviewImage" = "${wallpaperImg}";
+      "kscreenlockerrc"."Greeter.Wallpaper.org\\.kde\\.image.General"."Image" = "${wallpaperImg}";
+      "kscreenlockerrc"."Greeter.Wallpaper.org\\.kde\\.image.General"."PreviewImage" = "${wallpaperImg}";
       "kwinrc"."Compositing"."LatencyPolicy" = "Low";
       "kwinrc"."NightColor"."Active" = true;
       "kwinrc"."NightColor"."NightTemperature" = 3000;
       "kwinrc"."ModifierOnlyShortcuts"."Meta" = "org.kde.krunner,/App,,toggleDisplay";
+      "kwinrc"."Desktops"."Number" = 4;
+      "kwinrc"."Desktops"."Rows" = 2;
       "krunnerrc"."General"."FreeFloating" = true;
       "baloofilerc"."Basic Settings"."Indexing-Enabled" = false;
       "krunnerrc"."Plugins"."baloosearchEnabled" = false;
