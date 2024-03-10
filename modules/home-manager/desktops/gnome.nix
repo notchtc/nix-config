@@ -1,9 +1,25 @@
-{pkgs, ...}: let
+{
+  lib,
+  pkgs,
+  ...
+}: let
   wallpaperImg = pkgs.fetchurl {
     url = "https://simonstalenhag.se/bilderbig/by_housevisit_2560.jpg";
     hash = "sha256-qFRL7znRvKWLpEriE4JlFT2MZR25uV7SKdpxy8Jlyww=";
   };
 in {
+  home.packages = lib.attrValues {
+    inherit
+      (pkgs.gnome)
+      gnome-tweaks
+      ;
+    inherit
+      (pkgs.gnomeExtensions)
+      alphabetical-app-grid
+      appindicator
+      ;
+  };
+
   gtk = {
     enable = true;
 

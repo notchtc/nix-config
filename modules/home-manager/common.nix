@@ -1,4 +1,47 @@
-{config, ...}: {
+{
+  self,
+  config,
+  lib,
+  inputs,
+  pkgs,
+  ...
+}: {
+  imports = [
+    self.homeModules.helix
+    self.homeModules.bat
+    self.homeModules.dircolors
+    self.homeModules.eza
+    self.homeModules.git
+    self.homeModules.starship
+    self.homeModules.zoxide
+    self.homeModules.zsh
+
+    inputs.nix-index-database.hmModules.nix-index
+  ];
+
+  programs.home-manager.enable = true;
+
+  home.packages = lib.attrValues {
+    inherit
+      (pkgs)
+      trash-cli
+      sd-switch
+      wl-clipboard
+      nil
+      marksman
+      ;
+  };
+
+  nix = {
+    package = pkgs.nix;
+    settings.use-xdg-base-directories = true;
+  };
+
+  programs = {
+    nix-index.enable = true;
+    nix-index-database.comma.enable = true;
+  };
+
   xdg = {
     enable = true;
     cacheHome = "${config.home.homeDirectory}/.cache";
@@ -18,4 +61,6 @@
       videos = "${config.home.homeDirectory}/Videos";
     };
   };
+
+  systemd.user.startServices = "sd-switch";
 }

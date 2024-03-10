@@ -24,8 +24,6 @@
 
     git = {
       enable = true;
-      userName = "chtc";
-      userEmail = "chtc@tuta.io";
 
       aliases = {
         df = "difftool";
@@ -41,14 +39,10 @@
         rl = "reflog";
       };
 
-      extraConfig = {
-        diff.tool = "difftastic";
-        pager.difftool = true;
+      difftastic.enable = true;
 
-        difftool = {
-          prompt = false;
-          difftastic.cmd = ''${lib.getExe pkgs.difftastic} "$LOCAL" "$REMOTE"'';
-        };
+      extraConfig = {
+        pager.difftool = true;
       };
     };
   };

@@ -1,6 +1,6 @@
-{
+{self, ...}: {
   imports = [
-    ./fonts.nix
+    self.nixosModules.fonts
   ];
 
   programs = {

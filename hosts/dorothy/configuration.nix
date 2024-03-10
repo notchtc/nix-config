@@ -1,11 +1,5 @@
 {lib, ...}: {
   imports = [
-    ../../modules/nixos/desktops/plasma.nix
-    ../../modules/nixos/hardware/opengl.nix
-    ../../modules/nixos/programs/gamemode.nix
-    ../../modules/nixos/programs/steam.nix
-    ../../modules/nixos/services/pipewire.nix
-    ../../modules/nixos/services/power.nix
     ./hardware-configuration.nix
     ./disko.nix
   ];

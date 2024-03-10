@@ -3,28 +3,13 @@
   pkgs,
   ...
 }: {
-  services = {
-    xserver = {
-      enable = true;
-
-      displayManager = {
-        gdm.enable = true;
-        defaultSession = "gnome";
-        autoLogin = {
-          enable = true;
-          user = "chtc";
-        };
-      };
-
-      desktopManager.gnome.enable = true;
-
-      xkb = {
-        layout = "pl";
-        options = "caps:swapescape";
-      };
-
-      excludePackages = [pkgs.xterm];
+  services.xserver = {
+    displayManager = {
+      gdm.enable = true;
+      defaultSession = "gnome";
     };
+
+    desktopManager.gnome.enable = true;
   };
 
   environment.gnome.excludePackages = lib.attrValues {

@@ -23,7 +23,7 @@
         experimental-features = ["nix-command" "flakes" "ca-derivations" "auto-allocate-uids"];
         max-jobs = "auto";
 
-        trusted-users = ["chtc"];
+        trusted-users = ["@wheel"];
       }
     ];
   };

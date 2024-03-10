@@ -4,52 +4,6 @@
   pkgs,
   ...
 }: {
-  imports = [
-    ./desktops/plasma.nix
-    ../../modules/home-manager/xdg.nix
-    ../../modules/home-manager/programs/terminals/foot.nix
-    ../../modules/home-manager/programs/mpv
-
-    (import ../../modules/home-manager/programs/browsers/firefox {
-      inherit config pkgs;
-      package = pkgs.firefox;
-
-      profiles = {
-        Default = {
-          extensions = lib.attrValues {
-            inherit
-              (config.nur.repos.rycee.firefox-addons)
-              ublock-origin
-              skip-redirect
-              enhanced-h264ify
-              multi-account-containers
-              sponsorblock
-              ;
-          };
-
-          id = 0;
-
-          search = {
-            default = "DuckDuckGo";
-            force = true;
-          };
-
-          userChrome = ''
-            #webrtcIndicator {
-              display: none;
-            }
-
-            .tab-label-container {
-              mask-image: none !important;
-            }
-          '';
-
-          extraConfig = builtins.readFile ./programs/firefox/user.js;
-        };
-      };
-    })
-  ];
-
   home = {
     packages = lib.attrValues {
       inherit
@@ -63,15 +17,6 @@
         telegram-desktop
         picard
         ;
-      # inherit
-      #   (pkgs.gnome)
-      #   gnome-tweaks
-      #   ;
-      # inherit
-      #   (pkgs.gnomeExtensions)
-      #   alphabetical-app-grid
-      #   appindicator
-      #   ;
     };
 
     sessionVariables = {
@@ -88,7 +33,7 @@
 
     username = "chtc";
     homeDirectory = "/home/${config.home.username}";
-    stateVersion = "23.11";
+    stateVersion = lib.mkDefault "23.11";
   };
 
   xdg = {
@@ -107,6 +52,11 @@
   gtk.gtk2.configLocation = "${config.xdg.configHome}/gtk-2.0/gtkrc";
 
   programs = {
+    git = {
+      userName = "chtc";
+      userEmail = "chtc@tuta.io";
+    };
+
     yt-dlp.enable = true;
     gpg.homedir = "${config.xdg.dataHome}/gnupg";
     bash.historyFile = "${config.xdg.stateHome}/bash/history";

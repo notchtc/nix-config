@@ -1,37 +1,19 @@
 {
-  lib,
-  pkgs,
-  ...
-}: {
-  imports = [
-    ./programs/editors/helix.nix
-    ./programs/nix-index.nix
-    ./programs/shell/bat.nix
-    ./programs/shell/dircolors.nix
-    ./programs/shell/eza.nix
-    ./programs/shell/git.nix
-    ./programs/shell/starship.nix
-    ./programs/shell/zoxide.nix
-    ./programs/shell/zsh.nix
-  ];
-
-  programs.home-manager.enable = true;
-
-  home.packages = lib.attrValues {
-    inherit
-      (pkgs)
-      trash-cli
-      sd-switch
-      wl-clipboard
-      nil
-      marksman
-      ;
+  flake.homeModules = {
+    common = import ./common.nix;
+    gnome = import ./desktops/gnome.nix;
+    plasma5 = import ./desktops/plasma5.nix;
+    plasma6 = import ./desktops/plasma6.nix;
+    firefox = import ./programs/browsers/firefox;
+    helix = import ./programs/editors/helix.nix;
+    mpv = import ./programs/mpv;
+    bat = import ./programs/shell/bat.nix;
+    dircolors = import ./programs/shell/dircolors.nix;
+    eza = import ./programs/shell/eza.nix;
+    git = import ./programs/shell/git.nix;
+    starship = import ./programs/shell/starship.nix;
+    zoxide = import ./programs/shell/zoxide.nix;
+    zsh = import ./programs/shell/zsh.nix;
+    foot = import ./programs/terminals/foot.nix;
   };
-
-  nix = {
-    package = pkgs.nix;
-    settings.use-xdg-base-directories = true;
-  };
-
-  systemd.user.startServices = "sd-switch";
 }

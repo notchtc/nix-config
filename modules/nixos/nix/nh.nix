@@ -3,13 +3,11 @@
     inputs.nh.nixosModules.default
   ];
 
-  environment.sessionVariables.FLAKE = "/home/chtc/.config/nix-config";
-
   nh = {
     enable = true;
     clean = {
       enable = true;
-      extraArgs = "--keep 3";
+      extraArgs = "--keep 3 --keep-since 1w";
     };
   };
 }

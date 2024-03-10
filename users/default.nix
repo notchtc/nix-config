@@ -5,8 +5,7 @@
 }: let
   defaultModules = [
     inputs.nur.hmModules.nur
-    inputs.nix-index-database.hmModules.nix-index
-    ../modules/home-manager
+    self.homeModules.common
   ];
 
   extraSpecialArgs = {inherit inputs self;};
@@ -21,6 +20,12 @@ in {
           defaultModules
           ++ [
             inputs.plasma-manager.homeManagerModules.plasma-manager
+
+            self.homeModules.plasma6
+            self.homeModules.foot
+            self.homeModules.mpv
+            self.homeModules.firefox
+
             ./chtc/home.nix
           ];
       };
