@@ -26,7 +26,7 @@
       enable = true;
 
       aliases = {
-        df = "difftool";
+        d = "diff";
         a = "add";
         p = "push";
         r = "rebase";
@@ -39,10 +39,9 @@
         rl = "reflog";
       };
 
-      difftastic.enable = true;
-
-      extraConfig = {
-        pager.difftool = true;
+      difftastic = {
+        enable = true;
+        background = "dark";
       };
     };
   };

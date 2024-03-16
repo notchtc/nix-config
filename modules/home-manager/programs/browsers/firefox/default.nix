@@ -37,6 +37,10 @@
           .tab-label-container {
             mask-image: none !important;
           }
+
+          .titlebar-spacer[type="pre-tabs"] {
+           display: none !important;
+          }
         '';
 
         extraConfig = builtins.readFile ./user.js;
