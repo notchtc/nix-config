@@ -1,23 +1,14 @@
-{
-  lib,
-  pkgs,
-  ...
-}: let
+{ lib, pkgs, ... }:
+let
   wallpaperImg = pkgs.fetchurl {
     url = "https://simonstalenhag.se/bilderbig/by_housevisit_2560.jpg";
     hash = "sha256-qFRL7znRvKWLpEriE4JlFT2MZR25uV7SKdpxy8Jlyww=";
   };
-in {
+in
+{
   home.packages = lib.attrValues {
-    inherit
-      (pkgs.gnome)
-      gnome-tweaks
-      ;
-    inherit
-      (pkgs.gnomeExtensions)
-      alphabetical-app-grid
-      appindicator
-      ;
+    inherit (pkgs.gnome) gnome-tweaks;
+    inherit (pkgs.gnomeExtensions) alphabetical-app-grid appindicator;
   };
 
   gtk = {
@@ -93,12 +84,12 @@ in {
         dynamic-workspaces = true;
       };
       "org/gnome/desktop/wm/keybindings" = {
-        switch-windows = ["<Alt>Tab"];
-        switch-windows-backward = ["<Shift><Alt>Tab"];
-        switch-applications = [];
-        switch-applications-backward = [];
-        switch-group = [];
-        switch-group-backward = [];
+        switch-windows = [ "<Alt>Tab" ];
+        switch-windows-backward = [ "<Shift><Alt>Tab" ];
+        switch-applications = [ ];
+        switch-applications-backward = [ ];
+        switch-group = [ ];
+        switch-group-backward = [ ];
       };
       "org/gnome/desktop/wm/preferences".titlebar-font = "Iosevka Nerd Font Ultra-Bold 11";
       "org/gnome/desktop/background".picture-uri = "file://${wallpaperImg}";

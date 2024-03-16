@@ -2,14 +2,22 @@
   description = "chtc's NixOS and Home Manager configuration";
   nixConfig.commit-lockfile-summary = "chore: bump flakes";
 
-  outputs = inputs:
-    inputs.parts.lib.mkFlake {inherit inputs;} {
-      systems = ["x86_64-linux"];
-      imports = [./modules ./overlays ./hosts ./users];
+  outputs =
+    inputs:
+    inputs.parts.lib.mkFlake { inherit inputs; } {
+      systems = [ "x86_64-linux" ];
+      imports = [
+        ./modules
+        ./overlays
+        ./hosts
+        ./users
+      ];
 
-      perSystem = {pkgs, ...}: {
-        formatter = pkgs.alejandra;
-      };
+      perSystem =
+        { pkgs, ... }:
+        {
+          formatter = pkgs.nixfmt-rfc-style;
+        };
     };
 
   inputs = {

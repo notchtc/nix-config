@@ -1,14 +1,6 @@
+{ lib, pkgs, ... }:
 {
-  lib,
-  pkgs,
-  ...
-}: {
-  environment.systemPackages = lib.attrValues {
-    inherit
-      (pkgs.kdePackages)
-      sddm-kcm
-      ;
-  };
+  environment.systemPackages = lib.attrValues { inherit (pkgs.kdePackages) sddm-kcm; };
 
   services.xserver = {
     displayManager = {
@@ -23,11 +15,6 @@
   };
 
   environment.plasma6.excludePackages = lib.attrValues {
-    inherit
-      (pkgs.kdePackages)
-      elisa
-      kate
-      konsole
-      ;
+    inherit (pkgs.kdePackages) elisa kate konsole;
   };
 }

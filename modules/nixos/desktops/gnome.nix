@@ -1,8 +1,5 @@
+{ lib, pkgs, ... }:
 {
-  lib,
-  pkgs,
-  ...
-}: {
   services.xserver = {
     displayManager = {
       gdm.enable = true;
@@ -13,14 +10,8 @@
   };
 
   environment.gnome.excludePackages = lib.attrValues {
-    inherit
-      (pkgs)
-      gnome-photos
-      gnome-tour
-      snapshot
-      ;
-    inherit
-      (pkgs.gnome)
+    inherit (pkgs) gnome-photos gnome-tour snapshot;
+    inherit (pkgs.gnome)
       cheese
       gnome-music
       gnome-terminal

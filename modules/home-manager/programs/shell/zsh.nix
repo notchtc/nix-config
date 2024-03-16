@@ -1,10 +1,8 @@
-{
-  inputs,
-  config,
-  ...
-}: let
+{ inputs, config, ... }:
+let
   zcompdump = "$HOME/" + config.programs.zsh.dotDir + ".zcompdump";
-in {
+in
+{
   programs = {
     zsh = {
       enable = true;

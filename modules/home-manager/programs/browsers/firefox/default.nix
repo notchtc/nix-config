@@ -3,7 +3,8 @@
   pkgs,
   lib,
   ...
-}: {
+}:
+{
   programs.firefox = {
     enable = true;
 
@@ -12,8 +13,7 @@
     profiles = {
       Default = {
         extensions = lib.attrValues {
-          inherit
-            (config.nur.repos.rycee.firefox-addons)
+          inherit (config.nur.repos.rycee.firefox-addons)
             ublock-origin
             skip-redirect
             enhanced-h264ify

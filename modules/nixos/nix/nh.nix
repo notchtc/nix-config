@@ -1,7 +1,6 @@
-{inputs, ...}: {
-  imports = [
-    inputs.nh.nixosModules.default
-  ];
+{ inputs, ... }:
+{
+  imports = [ inputs.nh.nixosModules.default ];
 
   nh = {
     enable = true;

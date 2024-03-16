@@ -5,7 +5,8 @@
   inputs,
   pkgs,
   ...
-}: {
+}:
+{
   imports = [
     self.homeModules.helix
     self.homeModules.bat
@@ -22,8 +23,7 @@
   programs.home-manager.enable = true;
 
   home.packages = lib.attrValues {
-    inherit
-      (pkgs)
+    inherit (pkgs)
       trash-cli
       sd-switch
       wl-clipboard

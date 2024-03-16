@@ -3,11 +3,11 @@
   config,
   pkgs,
   ...
-}: {
+}:
+{
   home = {
     packages = lib.attrValues {
-      inherit
-        (pkgs)
+      inherit (pkgs)
         vesktop
         strawberry-qt6
         qbittorrent
@@ -43,7 +43,11 @@
         genericName = "Internet Messenger";
         exec = "vesktop --enable-features=VaapiIgnoreDriverChecks,VaapiVideoEncoder,VaapiVideoDecoder,CanvasOopRasterization,UseMultiPlaneFormatForHardwareVideo";
         terminal = false;
-        categories = ["Network" "InstantMessaging" "Chat"];
+        categories = [
+          "Network"
+          "InstantMessaging"
+          "Chat"
+        ];
         icon = "vesktop";
       };
     };

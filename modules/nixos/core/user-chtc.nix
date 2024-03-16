@@ -1,6 +1,8 @@
-{pkgs, ...}: let
+{ pkgs, ... }:
+let
   name = "chtc";
-in {
+in
+{
   users = {
     mutableUsers = true;
     defaultUserShell = pkgs.zsh;
@@ -10,7 +12,12 @@ in {
       initialPassword = "changeme";
       home = "/home/${name}";
 
-      extraGroups = ["wheel" "networkmanager" "audio" "video"];
+      extraGroups = [
+        "wheel"
+        "networkmanager"
+        "audio"
+        "video"
+      ];
     };
 
     users.root.hashedPassword = "!";

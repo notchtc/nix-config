@@ -3,7 +3,8 @@
   lib,
   pkgs,
   ...
-}: {
+}:
+{
   imports = [
     self.nixosModules.boot
     self.nixosModules.security
@@ -14,8 +15,7 @@
     localBinInPath = true;
 
     systemPackages = lib.attrValues {
-      inherit
-        (pkgs)
+      inherit (pkgs)
         coreutils
         curl
         doas-sudo-shim
@@ -34,7 +34,7 @@
   console = {
     earlySetup = true;
     font = "${pkgs.terminus_font}/share/consolefonts/ter-116n.psf.gz";
-    packages = with pkgs; [terminus_font];
+    packages = with pkgs; [ terminus_font ];
     useXkbConfig = true;
   };
 
@@ -80,7 +80,7 @@
         options = "caps:swapescape";
       };
 
-      excludePackages = [pkgs.xterm];
+      excludePackages = [ pkgs.xterm ];
     };
   };
 
@@ -89,7 +89,10 @@
       enable = true;
       dns = "systemd-resolved";
       wifi.backend = "iwd";
-      insertNameservers = ["45.90.28.26" "45.90.30.26"];
+      insertNameservers = [
+        "45.90.28.26"
+        "45.90.30.26"
+      ];
     };
 
     nftables.enable = true;
@@ -97,8 +100,7 @@
 
   fonts = {
     packages = lib.attrValues {
-      inherit
-        (pkgs)
+      inherit (pkgs)
         cantarell-fonts
         liberation_ttf
         iosevka
@@ -107,17 +109,17 @@
         noto-fonts-emoji
         ;
 
-      nerdfonts = pkgs.nerdfonts.override {fonts = ["Iosevka"];};
+      nerdfonts = pkgs.nerdfonts.override { fonts = [ "Iosevka" ]; };
     };
 
     fontconfig = {
       enable = true;
 
       defaultFonts = {
-        serif = ["DejaVu Serif"];
-        sansSerif = ["Iosevka Aile"];
-        monospace = ["Iosevka Nerd Font Mono"];
-        emoji = ["Noto Color Emoji"];
+        serif = [ "DejaVu Serif" ];
+        sansSerif = [ "Iosevka Aile" ];
+        monospace = [ "Iosevka Nerd Font Mono" ];
+        emoji = [ "Noto Color Emoji" ];
       };
     };
   };
