@@ -2,13 +2,15 @@
 {
   environment.systemPackages = lib.attrValues { inherit (pkgs.kdePackages) sddm-kcm; };
 
-  services.xserver = {
-    displayManager = {
-      sddm = {
-        enable = true;
-        wayland.enable = true;
+  services = {
+    xserver = {
+      displayManager = {
+        sddm = {
+          enable = true;
+          wayland.enable = true;
+        };
+        defaultSession = "plasma";
       };
-      defaultSession = "plasma";
     };
 
     desktopManager.plasma6.enable = true;
