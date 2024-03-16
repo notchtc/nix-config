@@ -1,16 +1,13 @@
 {
+  self,
   lib,
   pkgs,
   ...
 }: {
   imports = [
-    ./core/boot.nix
-    ./core/security.nix
-    ./desktops
-    ./networking
-    ./nix
-    ./programs
-    ./services
+    self.nixosModules.boot
+    self.nixosModules.security
+    self.nixosModules.nix
   ];
 
   environment = {
@@ -57,6 +54,75 @@
     hardwareClockInLocalTime = true;
     timeZone = "Europe/Warsaw";
   };
+
+  programs = {
+    gnupg.agent = {
+      enable = true;
+      enableSSHSupport = true;
+    };
+    dconf.enable = true;
+    zsh = {
+      enable = true;
+      enableCompletion = false;
+    };
+  };
+
+  services = {
+    dbus.implementation = "broker";
+    openssh.enable = true;
+    resolved.enable = true;
+
+    xserver = {
+      enable = true;
+
+      xkb = {
+        layout = "pl";
+        options = "caps:swapescape";
+      };
+
+      excludePackages = [pkgs.xterm];
+    };
+  };
+
+  networking = {
+    networkmanager = {
+      enable = true;
+      dns = "systemd-resolved";
+      wifi.backend = "iwd";
+      insertNameservers = ["45.90.28.26" "45.90.30.26"];
+    };
+
+    nftables.enable = true;
+  };
+
+  fonts = {
+    packages = lib.attrValues {
+      inherit
+        (pkgs)
+        cantarell-fonts
+        liberation_ttf
+        iosevka
+        noto-fonts
+        noto-fonts-cjk
+        noto-fonts-emoji
+        ;
+
+      nerdfonts = pkgs.nerdfonts.override {fonts = ["Iosevka"];};
+    };
+
+    fontconfig = {
+      enable = true;
+
+      defaultFonts = {
+        serif = ["DejaVu Serif"];
+        sansSerif = ["Iosevka Aile"];
+        monospace = ["Iosevka Nerd Font Mono"];
+        emoji = ["Noto Color Emoji"];
+      };
+    };
+  };
+
+  systemd.services.NetworkManager-wait-online.enable = lib.mkForce false;
 
   zramSwap.enable = true;
 }
