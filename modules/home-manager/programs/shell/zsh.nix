@@ -10,7 +10,7 @@ in
 
       autocd = true;
       enableCompletion = false;
-      enableAutosuggestions = true;
+      autosuggestion.enable = true;
       dotDir = ".config/zsh";
 
       history = {
