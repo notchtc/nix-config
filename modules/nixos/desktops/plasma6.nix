@@ -7,7 +7,10 @@
       displayManager = {
         sddm = {
           enable = true;
-          wayland.enable = true;
+          wayland = {
+            enable = true;
+            compositor = "kwin";
+          };
         };
         defaultSession = "plasma";
       };
@@ -15,8 +18,6 @@
 
     desktopManager.plasma6.enable = true;
   };
-
-  programs.gnupg.agent.pinentryPackage = lib.mkForce pkgs.pinentry-qt;
 
   environment.plasma6.excludePackages = lib.attrValues {
     inherit (pkgs.kdePackages) elisa kate konsole;
