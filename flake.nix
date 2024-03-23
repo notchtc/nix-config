@@ -46,8 +46,8 @@
     };
 
     master.url = "github:nixos/nixpkgs/master";
-    stable.url = "github:nixos/nixpkgs/release-23.11";
-    unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    stable.url = "github:nixos/nixpkgs/nixos-23.11";
+    unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
     nixpkgs.follows = "unstable";
     disko.inputs.nixpkgs.follows = "nixpkgs";
