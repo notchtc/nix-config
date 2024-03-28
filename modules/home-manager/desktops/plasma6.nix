@@ -94,27 +94,29 @@ in
     };
 
     configFile = {
-      "kdeglobals"."General"."XftHintStyle" = "hintslight";
-      "kdeglobals"."General"."XftSubPixel" = "rgb";
-      "kdeglobals"."General"."fixed" = "Iosevka Nerd Font Mono,10,-1,5,50,0,0,0,0,0";
-      "kdeglobals"."General"."font" = "Iosevka Nerd Font,10,-1,5,50,0,0,0,0,0";
-      "kdeglobals"."General"."menuFont" = "Iosevka Nerd Font,10,-1,5,50,0,0,0,0,0";
-      "kdeglobals"."General"."smallestReadableFont" = "Iosevka Nerd Font,8,-1,5,50,0,0,0,0,0";
-      "kdeglobals"."General"."toolBarFont" = "Iosevka Nerd Font,10,-1,5,50,0,0,0,0,0";
-      "kdeglobals"."KDE"."AnimationDurationFactor" = 0;
-      "kdeglobals"."WM"."activeFont" = "Iosevka Nerd Font,10,-1,5,50,0,0,0,0,0";
-      "kscreenlockerrc"."Greeter.Wallpaper.org\\.kde\\.image.General"."Image" = "${wallpaperImg}";
-      "kscreenlockerrc"."Greeter.Wallpaper.org\\.kde\\.image.General"."PreviewImage" = "${wallpaperImg}";
-      "kwinrc"."Compositing"."LatencyPolicy" = "Low";
-      "kwinrc"."NightColor"."Active" = true;
-      "kwinrc"."NightColor"."NightTemperature" = 3000;
-      "kwinrc"."ModifierOnlyShortcuts"."Meta" = "org.kde.krunner,/App,,toggleDisplay";
-      "kwinrc"."Desktops"."Number" = 4;
-      "kwinrc"."Desktops"."Rows" = 2;
-      "krunnerrc"."General"."FreeFloating" = true;
-      "baloofilerc"."Basic Settings"."Indexing-Enabled" = false;
-      "krunnerrc"."Plugins"."baloosearchEnabled" = false;
-      "plasmanotifyrc"."Notifications"."PopupPosition" = "TopRight";
+      "kdeglobals"."General"."XftHintStyle".value = "hintslight";
+      "kdeglobals"."General"."XftSubPixel".value = "rgb";
+      "kdeglobals"."General"."fixed".value = "Iosevka Nerd Font Mono,10,-1,5,50,0,0,0,0,0";
+      "kdeglobals"."General"."font".value = "Iosevka Nerd Font,10,-1,5,50,0,0,0,0,0";
+      "kdeglobals"."General"."menuFont".value = "Iosevka Nerd Font,10,-1,5,50,0,0,0,0,0";
+      "kdeglobals"."General"."smallestReadableFont".value = "Iosevka Nerd Font,8,-1,5,50,0,0,0,0,0";
+      "kdeglobals"."General"."toolBarFont".value = "Iosevka Nerd Font,10,-1,5,50,0,0,0,0,0";
+      "kdeglobals"."KDE"."AnimationDurationFactor".value = 0;
+      "kdeglobals"."WM"."activeFont".value = "Iosevka Nerd Font,10,-1,5,50,0,0,0,0,0";
+      "kscreenlockerrc"."Greeter/Wallpaper/org.kde.image/General"."Image".value = "${wallpaperImg}";
+      "kscreenlockerrc"."Greeter/Wallpaper/org.kde.image/General"."PreviewImage".value = "${
+        wallpaperImg
+      }";
+      "kwinrc"."Compositing"."LatencyPolicy".value = "Low";
+      "kwinrc"."NightColor"."Active".value = true;
+      "kwinrc"."NightColor"."NightTemperature".value = 3000;
+      "kwinrc"."ModifierOnlyShortcuts"."Meta".value = "org.kde.krunner,/App,,toggleDisplay";
+      "kwinrc"."Desktops"."Number".value = 4;
+      "kwinrc"."Desktops"."Rows".value = 2;
+      "krunnerrc"."General"."FreeFloating".value = true;
+      "baloofilerc"."Basic Settings"."Indexing-Enabled".value = false;
+      "krunnerrc"."Plugins"."baloosearchEnabled".value = false;
+      "plasmanotifyrc"."Notifications"."PopupPosition".value = "TopRight";
     };
   };
 }
