@@ -1,4 +1,4 @@
-{ config, ... }:
+{ pkgs, ... }:
 {
   programs = {
     steam = {
@@ -8,5 +8,5 @@
     };
   };
 
-  chaotic.steam.extraCompatPackages = with config.nur.repos.ataraxiasjel; [ proton-ge ];
+  chaotic.steam.extraCompatPackages = with pkgs; [ proton-ge-custom ];
 }
