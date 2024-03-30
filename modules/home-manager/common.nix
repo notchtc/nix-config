@@ -20,8 +20,6 @@
     inputs.nix-index-database.hmModules.nix-index
   ];
 
-  programs.home-manager.enable = true;
-
   home.packages = lib.attrValues {
     inherit (pkgs)
       trash-cli
@@ -38,6 +36,7 @@
   };
 
   programs = {
+    home-manager.enable = true;
     nix-index.enable = true;
     nix-index-database.comma.enable = true;
   };
