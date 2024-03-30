@@ -22,7 +22,7 @@ in
         self.nixosModules.user-chtc
         self.nixosModules.plasma6
         self.nixosModules.opengl
-        self.nixosModules.gamemode
+        self.nixosModules.ananicy
         self.nixosModules.steam
         self.nixosModules.pipewire
         self.nixosModules.power

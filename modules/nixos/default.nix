@@ -9,6 +9,7 @@
     plasma6 = import ./desktops/plasma6.nix;
     opengl = import ./hardware/opengl.nix;
     nix = import ./nix;
+    ananicy = import ./programs/ananicy.nix;
     gamemode = import ./programs/gamemode.nix;
     steam = import ./programs/steam.nix;
     pipewire = import ./services/pipewire.nix;
