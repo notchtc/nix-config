@@ -17,7 +17,6 @@ in
         path = "${config.xdg.stateHome}/zsh/history";
 
         expireDuplicatesFirst = true;
-        extended = true;
       };
 
       plugins = [
@@ -71,7 +70,7 @@ in
         zstyle ':autocomplete:menu-search:*' insert-unambiguous yes
 
         +autocomplete:recent-directories() {
-          typeset -ga reply=( ''${(f)"$(zoxide query -l)"})
+          typeset -ga reply=( ''${(f)"$( zoxide query -l )"} )
         }
       '';
     };
