@@ -24,6 +24,11 @@
 
   systemd.services.ModemManager.enable = lib.mkForce false;
 
+  services.undervolt = {
+    enable = true;
+    coreOffset = -100;
+  };
+
   fonts.fontconfig = {
     antialias = true;
     cache32Bit = true;
