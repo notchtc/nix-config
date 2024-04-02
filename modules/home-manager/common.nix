@@ -17,6 +17,8 @@
     self.homeModules.zoxide
     self.homeModules.zsh
 
+    ../nixos/nix/nixpkgs.nix
+
     inputs.nix-index-database.hmModules.nix-index
   ];
 
