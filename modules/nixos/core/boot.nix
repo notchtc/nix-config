@@ -30,5 +30,11 @@
         editor = false;
       };
     };
+
+    plymouth = {
+      enable = true;
+      theme = "breeze";
+      font = "${pkgs.iosevka}/share/fonts/truetype/Iosevka-Regular.ttf";
+    };
   };
 }
