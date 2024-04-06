@@ -9,10 +9,14 @@
       verbose = false;
     };
 
-    consoleLogLevel = 3;
+    consoleLogLevel = 0;
     kernelParams = [
       "quiet"
-      "udev.log_level=3"
+      "splash"
+      "loglevel=3"
+      "rd.systemd.show_status=auto"
+      "rd.udev.log_level=3"
+      "udev.log_priority=3"
     ];
 
     kernel.sysctl = {
@@ -21,6 +25,7 @@
     };
 
     loader = {
+      timeout = 0;
       efi.canTouchEfiVariables = true;
 
       systemd-boot = {
