@@ -2,6 +2,7 @@
   flake.nixosModules = {
     common = import ./common.nix;
     boot = import ./core/boot.nix;
+    networking = import ./networking;
     security = import ./core/security.nix;
     user-chtc = import ./core/user-chtc.nix;
     gnome = import ./desktops/gnome.nix;

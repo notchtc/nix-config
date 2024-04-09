@@ -7,6 +7,7 @@
 {
   imports = [
     self.nixosModules.boot
+    self.nixosModules.networking
     self.nixosModules.security
     self.nixosModules.nix
   ];
@@ -70,8 +71,6 @@
 
   services = {
     dbus.implementation = "broker";
-    openssh.enable = true;
-    resolved.enable = true;
 
     xserver = {
       enable = true;
@@ -83,20 +82,6 @@
 
       excludePackages = [ pkgs.xterm ];
     };
-  };
-
-  networking = {
-    networkmanager = {
-      enable = true;
-      dns = "systemd-resolved";
-      wifi.backend = "iwd";
-      insertNameservers = [
-        "45.90.28.26"
-        "45.90.30.26"
-      ];
-    };
-
-    nftables.enable = true;
   };
 
   fonts = {
@@ -125,7 +110,7 @@
     };
   };
 
-  systemd.services.NetworkManager-wait-online.enable = lib.mkForce false;
+  systemd.services.zram-reloader.restartIfChanged = lib.mkForce false;
 
   zramSwap.enable = true;
 }
