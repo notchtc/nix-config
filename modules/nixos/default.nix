@@ -6,8 +6,7 @@
     security = import ./core/security.nix;
     user-chtc = import ./core/user-chtc.nix;
     gnome = import ./desktops/gnome.nix;
-    plasma5 = import ./desktops/plasma5.nix;
-    plasma6 = import ./desktops/plasma6.nix;
+    plasma = import ./desktops/plasma.nix;
     opengl = import ./hardware/opengl.nix;
     nix = import ./nix;
     ananicy = import ./programs/ananicy.nix;

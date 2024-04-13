@@ -6,8 +6,6 @@ let
   };
 in
 {
-  home.packages = [ pkgs.materia-kde-theme ];
-
   gtk = {
     enable = true;
 
@@ -17,8 +15,8 @@ in
     };
 
     theme = {
-      name = "Materia-dark";
-      package = pkgs.materia-theme;
+      name = "Breeze-Dark";
+      package = pkgs.kdePackages.breeze-gtk;
     };
 
     cursorTheme = {
@@ -46,14 +44,15 @@ in
       clickItemTo = "open";
       cursorTheme = "phinger-cursors";
       iconTheme = "Papirus-Dark";
-      lookAndFeel = "com.github.varlesh.materia-dark";
+      lookAndFeel = "com.kde.breezedark.desktop";
       wallpaper = "${wallpaperImg}";
     };
 
     panels = [
       {
-        location = "top";
+        location = "bottom";
         height = 30;
+        floating = true;
         widgets = [
           {
             name = "org.kde.plasma.kickoff";
@@ -104,21 +103,53 @@ in
       "kdeglobals"."General"."toolBarFont".value = "Iosevka Nerd Font,10,-1,5,50,0,0,0,0,0";
       "kdeglobals"."KDE"."AnimationDurationFactor".value = 0;
       "kdeglobals"."WM"."activeFont".value = "Iosevka Nerd Font,10,-1,5,50,0,0,0,0,0";
+
+      "kxkbrc"."Layout"."Options".value = "caps:swapescape";
+
       "kscreenlockerrc"."Greeter/Wallpaper/org.kde.image/General"."Image".value = "${wallpaperImg}";
       "kscreenlockerrc"."Greeter/Wallpaper/org.kde.image/General"."PreviewImage".value = "${
         wallpaperImg
       }";
+
       "kwinrc"."Compositing"."LatencyPolicy".value = "Low";
       "kwinrc"."NightColor"."Active".value = true;
       "kwinrc"."NightColor"."NightTemperature".value = 3000;
-      "kwinrc"."org.kde.kdecoration2"."BorderSize".value = "None";
-      "kwinrc"."org.kde.kdecoration2"."BorderSizeAuto".value = false;
       "kwinrc"."ModifierOnlyShortcuts"."Meta".value = "org.kde.krunner,/App,,toggleDisplay";
       "kwinrc"."Desktops"."Number".value = 4;
       "kwinrc"."Desktops"."Rows".value = 2;
+      "kwinrc"."Plugins"."blurEnabled".value = false;
+
       "krunnerrc"."General"."FreeFloating".value = true;
-      "baloofilerc"."Basic Settings"."Indexing-Enabled".value = false;
       "krunnerrc"."Plugins"."baloosearchEnabled".value = false;
+      "krunnerrc"."Plugins"."browserhistoryEnabled".value = false;
+      "krunnerrc"."Plugins"."browsertabsEnabled".value = false;
+      "krunnerrc"."Plugins"."krunner_appstreamEnabled".value = false;
+      "krunnerrc"."Plugins"."krunner_bookmarksrunnerEnabled".value = false;
+      "krunnerrc"."Plugins"."krunner_charrunnerENabled".value = false;
+      "krunnerrc"."Plugins"."krunner_dictionaryEnabled".value = false;
+      "krunnerrc"."Plugins"."krunner_katesessionsEnabled".value = false;
+      "krunnerrc"."Plugins"."krunner_konsoleprofilesEnabled".value = false;
+      "krunnerrc"."Plugins"."krunner_sessionsEnabled".value = false;
+      "krunnerrc"."Plugins"."krunner_spellcheckEnabled".value = false;
+      "krunnerrc"."Plugins"."krunner_webshortcutsEnabled".value = false;
+      "krunnerrc"."Plugins"."org.kde.activities2Enabled".value = false;
+      "krunnerrc"."Plugins/Favorites"."plugins".value = "krunner_services";
+
+      "kwalletrc"."Wallet"."Close When Idle".value = true;
+      "kwalletrc"."Wallet"."Close on Screensaver".value = false;
+      "kwalletrc"."Wallet"."Default Wallet".value = "kdewallet";
+      "kwalletrc"."Wallet"."Enabled".value = true;
+      "kwalletrc"."Wallet"."First Use".value = false;
+      "kwalletrc"."Wallet"."Idle Timeout".value = 5;
+      "kwalletrc"."Wallet"."Launch Manager".value = false;
+      "kwalletrc"."Wallet"."Leave Manager Open".value = false;
+      "kwalletrc"."Wallet"."Leave Open".value = false;
+      "kwalletrc"."Wallet"."Prompt on Open".value = false;
+      "kwalletrc"."Wallet"."Use One Wallet".value = true;
+      "kwalletrc"."org.freedesktop.secrets"."apiEnabled".value = true;
+
+      "baloofilerc"."Basic Settings"."Indexing-Enabled".value = false;
+
       "plasmanotifyrc"."Notifications"."PopupPosition".value = "TopRight";
     };
   };

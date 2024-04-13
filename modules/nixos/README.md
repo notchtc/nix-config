@@ -8,8 +8,7 @@ Every module in this list can be used as a nixosModule.
   - [user-chtc](core/user-chtc.nix) - creating an user called `chtc`
 - desktops
   - [gnome](desktops/gnome.nix) - gnome environment
-  - [plasma5](desktops/plasma5.nix) - plasma 5 environment
-  - [plasma6](desktops/plasma6.nix) - plasma 6 environment
+  - [plasma](desktops/plasma.nix) - plasma environment
 - hardware
   - [opengl](hardware/opengl.nix) - graphics & hardware acceleration related configuration
 - [nix](nix/default.nix)

@@ -20,7 +20,7 @@ in
         { services.xserver.displayManager.autoLogin.user = "chtc"; }
 
         self.nixosModules.user-chtc
-        self.nixosModules.plasma6
+        self.nixosModules.plasma
         self.nixosModules.opengl
         self.nixosModules.ananicy
         self.nixosModules.steam

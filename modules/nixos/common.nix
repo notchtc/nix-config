@@ -35,8 +35,8 @@
   console = {
     earlySetup = true;
     font = "${pkgs.terminus_font}/share/consolefonts/ter-116n.psf.gz";
+    keyMap = "pl";
     packages = with pkgs; [ terminus_font ];
-    useXkbConfig = true;
   };
 
   i18n = {
@@ -69,20 +69,7 @@
     };
   };
 
-  services = {
-    dbus.implementation = "broker";
-
-    xserver = {
-      enable = true;
-
-      xkb = {
-        layout = "pl";
-        options = "caps:swapescape";
-      };
-
-      excludePackages = [ pkgs.xterm ];
-    };
-  };
+  services.dbus.implementation = "broker";
 
   fonts = {
     packages = lib.attrValues {

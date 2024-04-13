@@ -19,7 +19,7 @@ in
         modules = defaultModules ++ [
           inputs.plasma-manager.homeManagerModules.plasma-manager
 
-          self.homeModules.plasma6
+          self.homeModules.plasma
           self.homeModules.foot
           self.homeModules.mpv
           self.homeModules.firefox
