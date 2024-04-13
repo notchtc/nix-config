@@ -20,7 +20,7 @@ in
     };
 
     cursorTheme = {
-      name = "phinger-cursors";
+      name = "phinger-cursors-dark";
       package = pkgs.phinger-cursors;
     };
 
