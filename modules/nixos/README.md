@@ -11,11 +11,11 @@ Every module in this list can be used as a nixosModule.
   - [plasma](desktops/plasma.nix) - plasma environment
 - hardware
   - [opengl](hardware/opengl.nix) - graphics & hardware acceleration related configuration
+- [networking](networking/default.nix)
 - [nix](nix/default.nix)
   - [nh](nix/nh.nix) - configuration for [nh](https://github.com/viperML/nh)
   - [nixpkgs](nix/nixpkgs.nix) - nixpkgs configuration
   - [substituters](nix/substituters.nix) - binary cache
-- [networking](networking/default.nix)
 - programs
   - [gamemode](programs/gamemode.nix) - configuration for gamemode
   - [steam](programs/steam.nix) - steam + proton-ge

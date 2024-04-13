@@ -97,7 +97,7 @@
     };
   };
 
-  systemd.services.zram-reloader.restartIfChanged = lib.mkForce false;
+  systemd.services.NetworkManager-wait-online.enable = lib.mkForce false;
 
   zramSwap.enable = true;
 }

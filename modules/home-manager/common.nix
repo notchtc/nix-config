@@ -24,7 +24,6 @@
 
   home.packages = lib.attrValues {
     inherit (pkgs)
-      cmst
       trash-cli
       sd-switch
       wl-clipboard
