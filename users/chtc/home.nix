@@ -16,7 +16,6 @@
         easyeffects
         telegram-desktop
         picard
-        vcv-rack
         ;
     };
 
