@@ -69,8 +69,6 @@
     };
   };
 
-  services.dbus.implementation = "broker";
-
   fonts = {
     packages = lib.attrValues {
       inherit (pkgs)
