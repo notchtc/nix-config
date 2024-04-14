@@ -17,7 +17,7 @@ in
         inputs.chaotic.nixosModules.default
         inputs.disko.nixosModules.disko
 
-        { services.xserver.displayManager.autoLogin.user = "chtc"; }
+        { services.displayManager.autoLogin.user = "chtc"; }
 
         self.nixosModules.user-chtc
         self.nixosModules.plasma
