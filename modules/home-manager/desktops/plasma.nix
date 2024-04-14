@@ -104,6 +104,7 @@ in
       "kdeglobals"."KDE"."AnimationDurationFactor".value = 0;
       "kdeglobals"."WM"."activeFont".value = "Iosevka Nerd Font,10,-1,5,50,0,0,0,0,0";
 
+      "kxkbrc"."Layout"."LayoutList".value = "pl";
       "kxkbrc"."Layout"."Options".value = "caps:swapescape";
 
       "kscreenlockerrc"."Greeter/Wallpaper/org.kde.image/General"."Image".value = "${wallpaperImg}";
