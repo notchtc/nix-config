@@ -95,6 +95,10 @@
     };
   };
 
+  services.journald.extraConfig = ''
+    SystemMaxUse=50M
+  '';
+
   systemd.services.NetworkManager-wait-online.enable = lib.mkForce false;
 
   zramSwap.enable = true;
