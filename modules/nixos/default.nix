@@ -6,6 +6,7 @@
     user-chtc = import ./core/user-chtc.nix;
     gnome = import ./desktops/gnome.nix;
     plasma = import ./desktops/plasma.nix;
+    amdgpu = import ./hardware/amdgpu.nix;
     opengl = import ./hardware/opengl.nix;
     networking = import ./networking;
     nix = import ./nix;
