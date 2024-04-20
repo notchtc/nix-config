@@ -343,37 +343,17 @@
     },
     "master": {
       "locked": {
-        "lastModified": 1713619526,
-        "narHash": "sha256-knQ8FwivlEWaVAxmauagXKq5pg7/LQ4JyTpfOoCDw5Y=",
+        "lastModified": 1713621534,
+        "narHash": "sha256-SyL/2IaGTPDW0vYn+euLQnhVuGuuPDmL/UE55Iu4UVU=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "3582d852c1a76870ba3a44178ba1fbb4079daf84",
+        "rev": "ae2e299fab06eea66abd6e1bdcc9ecf1c9262b63",
         "type": "github"
       },
       "original": {
         "owner": "nixos",
         "ref": "master",
         "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nh": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1713512227,
-        "narHash": "sha256-mEA/kGnd/vxvqm80f2eOO35cKOPP1gDnOc7AFVPg9wU=",
-        "owner": "viperML",
-        "repo": "nh",
-        "rev": "131a40278054d597fea8825d6555b959006c4033",
-        "type": "github"
-      },
-      "original": {
-        "owner": "viperML",
-        "repo": "nh",
         "type": "github"
       }
     },
@@ -583,7 +563,6 @@
         "f-sy-h": "f-sy-h",
         "home": "home",
         "master": "master",
-        "nh": "nh",
         "nix-index-database": "nix-index-database",
         "nixpkgs": [
           "unstable"
