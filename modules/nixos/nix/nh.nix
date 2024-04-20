@@ -1,8 +1,5 @@
-{ inputs, ... }:
 {
-  imports = [ inputs.nh.nixosModules.default ];
-
-  nh = {
+  programs.nh = {
     enable = true;
     clean = {
       enable = true;

@@ -23,5 +23,5 @@ in
     users.root.hashedPassword = "!";
   };
 
-  environment.sessionVariables.FLAKE = "/home/${name}/.config/nix-config";
+  programs.nh.flake = "/home/${name}/.config/nix-config";
 }
