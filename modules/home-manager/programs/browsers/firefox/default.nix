@@ -41,6 +41,10 @@
           .titlebar-spacer[type="pre-tabs"] {
            display: none !important;
           }
+
+          .tabbrowser-tab .tab-close-button {
+            visibility: collapse !important;
+          }
         '';
 
         extraConfig = builtins.readFile ./user.js;
