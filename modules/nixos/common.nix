@@ -100,6 +100,7 @@
   '';
 
   systemd.services.NetworkManager-wait-online.enable = lib.mkForce false;
+  systemd.services."getty@tty1".enable = lib.mkForce false;
 
   zramSwap.enable = true;
 }
