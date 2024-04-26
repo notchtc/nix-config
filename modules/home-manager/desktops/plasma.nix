@@ -101,6 +101,8 @@ in
       "kdeglobals"."General"."menuFont".value = "Iosevka Nerd Font,10,-1,5,50,0,0,0,0,0";
       "kdeglobals"."General"."smallestReadableFont".value = "Iosevka Nerd Font,8,-1,5,50,0,0,0,0,0";
       "kdeglobals"."General"."toolBarFont".value = "Iosevka Nerd Font,10,-1,5,50,0,0,0,0,0";
+      "kdeglobals"."General"."TerminalApplication".value = "foot";
+      "kdeglobals"."General"."TerminalService".value = "org.codeberg.dnkl.foot.desktop";
       "kdeglobals"."KDE"."AnimationDurationFactor".value = 0;
       "kdeglobals"."WM"."activeFont".value = "Iosevka Nerd Font,10,-1,5,50,0,0,0,0,0";
 
