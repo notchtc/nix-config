@@ -1,5 +1,7 @@
 { pkgs, ... }:
 {
+  environment.systemPackages = with pkgs; [ wineWowPackages.stagingFull ];
+
   programs = {
     steam = {
       enable = true;

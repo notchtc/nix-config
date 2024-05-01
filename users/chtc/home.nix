@@ -8,14 +8,15 @@
   home = {
     packages = lib.attrValues {
       inherit (pkgs)
-        vesktop
-        strawberry-qt6
-        qbittorrent
+        easyeffects
         gimp
         keepassxc
-        easyeffects
-        telegram-desktop
+        lutris
         picard
+        qbittorrent
+        strawberry-qt6
+        telegram-desktop
+        vesktop
         ;
     };
 
