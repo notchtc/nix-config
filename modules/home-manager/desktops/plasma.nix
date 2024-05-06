@@ -76,9 +76,8 @@ in
           }
           "org.kde.plasma.panelspacer"
           {
-            name = "org.kde.plasma.digitalclock";
-            config = {
-              Appearance.showDate = "false";
+            digitalClock = {
+              date.enable = false;
             };
           }
           "org.kde.plasma.panelspacer"
