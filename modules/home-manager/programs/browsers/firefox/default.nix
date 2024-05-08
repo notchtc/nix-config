@@ -7,17 +7,17 @@
 {
   programs.firefox = {
     enable = true;
-
-    package = pkgs.firefox;
+    nativeMessagingHosts = [ pkgs.kdePackages.plasma-browser-integration ];
 
     profiles = {
       Default = {
         extensions = lib.attrValues {
           inherit (config.nur.repos.rycee.firefox-addons)
-            ublock-origin
-            skip-redirect
             enhanced-h264ify
             multi-account-containers
+            plasma-integration
+            ublock-origin
+            skip-redirect
             sponsorblock
             ;
         };
