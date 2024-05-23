@@ -16,9 +16,8 @@
             enhanced-h264ify
             multi-account-containers
             plasma-integration
-            ublock-origin
-            skip-redirect
             sponsorblock
+            ublock-origin
             ;
         };
 

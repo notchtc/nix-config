@@ -58,11 +58,12 @@
 
   programs = {
     command-not-found.enable = false;
+    dconf.enable = true;
+    nano.enable = false;
     gnupg.agent = {
       enable = true;
       enableSSHSupport = true;
     };
-    dconf.enable = true;
     zsh = {
       enable = true;
       enableCompletion = false;

@@ -12,6 +12,7 @@
         gimp
         keepassxc
         lutris
+        nicotine-plus
         picard
         qbittorrent
         strawberry-qt6
