@@ -31,7 +31,9 @@ in
 
   dconf = {
     enable = true;
-    "org/gnome/desktop/interface".color-scheme = "prefer-dark";
+    settings = {
+      "org/gnome/desktop/interface".color-scheme = "prefer-dark";
+    };
   };
 
   programs.plasma = {
