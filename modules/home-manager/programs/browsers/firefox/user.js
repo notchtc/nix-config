@@ -1223,6 +1223,7 @@ user_pref("browser.urlbar.suggest.searches", true);
 user_pref("privacy.resistFingerprinting.letterboxing", false);
 user_pref("general.autoScroll", true);
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
-user_pref("browser.cache.memory.capacity", 4000000)
+user_pref("browser.cache.memory.capacity", -1)
 user_pref("browser.low_commit_space_threshold_mb", 5155)
 user_pref("javascript.options.wasm", false);
+user_pref("extensions.pocket.enabled", false);
