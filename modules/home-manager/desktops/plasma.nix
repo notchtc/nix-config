@@ -112,7 +112,7 @@ in
 
       "kwinrc"."Compositing"."LatencyPolicy" = "Low";
       "kwinrc"."NightColor"."Active" = true;
-      "kwinrc"."NightColor"."NightTemperature" = 3000;
+      "kwinrc"."NightColor"."NightTemperature" = 2500;
       "kwinrc"."ModifierOnlyShortcuts"."Meta" = "org.kde.krunner,/App,,toggleDisplay";
       "kwinrc"."Desktops"."Number" = 4;
       "kwinrc"."Desktops"."Rows" = 2;
