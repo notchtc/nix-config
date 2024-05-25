@@ -67,4 +67,6 @@
     gpg.homedir = "${config.xdg.dataHome}/gnupg";
     bash.historyFile = "${config.xdg.stateHome}/bash/history";
   };
+
+  systemd.user.tmpfiles.rules = [ "L+ ${config.home.homeDirectory}/.cache/kwin - - - - /tmp" ];
 }

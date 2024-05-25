@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   boot = {
-    tmp.cleanOnBoot = true;
+    tmp.useTmpfs = true;
     kernelPackages = pkgs.linuxPackages_cachyos-lto;
 
     initrd = {
