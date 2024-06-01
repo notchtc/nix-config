@@ -15,6 +15,7 @@
           inherit (config.nur.repos.rycee.firefox-addons)
             enhanced-h264ify
             multi-account-containers
+            nighttab
             plasma-integration
             sponsorblock
             ublock-origin
@@ -47,6 +48,10 @@
         '';
 
         extraConfig = builtins.readFile ./user.js;
+      };
+
+      Clean = {
+        id = 1;
       };
     };
   };

@@ -10,3 +10,4 @@ user_pref("browser.cache.memory.capacity", -1)
 user_pref("browser.low_commit_space_threshold_mb", 5155)
 user_pref("javascript.options.wasm", false);
 user_pref("extensions.pocket.enabled", false);
+user_pref("browser.startup.page", 1);
