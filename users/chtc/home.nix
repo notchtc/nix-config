@@ -10,6 +10,7 @@
       inherit (pkgs)
         easyeffects
         gimp
+        jdk
         keepassxc
         lutris
         nicotine-plus
