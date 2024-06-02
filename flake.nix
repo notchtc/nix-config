@@ -21,12 +21,39 @@
     };
 
   inputs = {
-    disko.url = "github:nix-community/disko";
+    master.url = "github:nixos/nixpkgs/master";
+    stable.url = "github:nixos/nixpkgs/nixos-24.05";
+    unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.follows = "unstable";
+
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
-    home.url = "github:nix-community/home-manager";
-    parts.url = "github:hercules-ci/flake-parts";
-    plasma-manager.url = "github:pjones/plasma-manager";
-    nix-index-database.url = "github:Mic92/nix-index-database";
+
+    home = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    parts = {
+      url = "github:hercules-ci/flake-parts";
+      inputs.nixpkgs-lib.follows = "nixpkgs";
+    };
+
+    plasma-manager = {
+      url = "github:pjones/plasma-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home";
+    };
+
+    nix-index-database = {
+      url = "github:Mic92/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nur.url = "github:nix-community/NUR";
 
     f-sy-h = {
@@ -42,19 +69,6 @@
     zsh-nix-shell = {
       url = "github:chisui/zsh-nix-shell";
       flake = false;
-    };
-
-    master.url = "github:nixos/nixpkgs/master";
-    stable.url = "github:nixos/nixpkgs/nixos-23.11";
-    unstable.url = "github:nixos/nixpkgs/nixos-unstable";
-
-    nixpkgs.follows = "unstable";
-    disko.inputs.nixpkgs.follows = "nixpkgs";
-    home.inputs.nixpkgs.follows = "nixpkgs";
-    nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
-    plasma-manager.inputs = {
-      nixpkgs.follows = "nixpkgs";
-      home-manager.follows = "home";
     };
   };
 }
