@@ -41,9 +41,9 @@ in
 
     workspace = {
       clickItemTo = "open";
-      cursorTheme = "phinger-cursors";
+      cursorTheme = "phinger-cursors-dark";
       iconTheme = "Papirus-Dark";
-      lookAndFeel = "com.kde.breezedark.desktop";
+      lookAndFeel = "org.kde.breezedark.desktop";
       wallpaper = "${wallpaperImg}";
     };
 
