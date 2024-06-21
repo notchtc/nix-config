@@ -87,36 +87,71 @@ in
       }
     ];
 
+    kwin = {
+      blur.enable = false;
+
+      virtualDesktops = {
+        rows = 2;
+        number = 4;
+      };
+    };
+
+    kscreenlocker.wallpaper = "${wallpaperImg}";
+
     shortcuts = {
+      "services/org.kde.krunner.desktop"."_launch" = [
+        "Meta"
+        "Search"
+      ];
+
       "org.codeberg.dnkl.foot.desktop"."_launch" = "Ctrl+Alt+T";
+    };
+
+    fonts = {
+      general = {
+        family = "Iosevka Nerd Font";
+        pointSize = 10;
+      };
+
+      fixedWidth = {
+        family = "Iosevka Nerd Font Mono";
+        pointSize = 10;
+      };
+
+      small = {
+        family = "Iosevka Nerd Font";
+        pointSize = 8;
+      };
+
+      toolbar = {
+        family = "Iosevka Nerd Font";
+        pointSize = 10;
+      };
+
+      menu = {
+        family = "Iosevka Nerd Font";
+        pointSize = 10;
+      };
+
+      windowTitle = {
+        family = "Iosevka Nerd Font";
+        pointSize = 10;
+      };
     };
 
     configFile = {
       "kdeglobals"."General"."XftHintStyle" = "hintslight";
       "kdeglobals"."General"."XftSubPixel" = "rgb";
-      "kdeglobals"."General"."fixed" = "Iosevka Nerd Font Mono,10,-1,5,50,0,0,0,0,0";
-      "kdeglobals"."General"."font" = "Iosevka Nerd Font,10,-1,5,50,0,0,0,0,0";
-      "kdeglobals"."General"."menuFont" = "Iosevka Nerd Font,10,-1,5,50,0,0,0,0,0";
-      "kdeglobals"."General"."smallestReadableFont" = "Iosevka Nerd Font,8,-1,5,50,0,0,0,0,0";
-      "kdeglobals"."General"."toolBarFont" = "Iosevka Nerd Font,10,-1,5,50,0,0,0,0,0";
       "kdeglobals"."General"."TerminalApplication" = "foot";
       "kdeglobals"."General"."TerminalService" = "org.codeberg.dnkl.foot.desktop";
       "kdeglobals"."KDE"."AnimationDurationFactor" = 0;
-      "kdeglobals"."WM"."activeFont" = "Iosevka Nerd Font,10,-1,5,50,0,0,0,0,0";
 
       "kxkbrc"."Layout"."LayoutList" = "pl";
       "kxkbrc"."Layout"."Options" = "caps:swapescape";
 
-      "kscreenlockerrc"."Greeter/Wallpaper/org.kde.image/General"."Image" = "${wallpaperImg}";
-      "kscreenlockerrc"."Greeter/Wallpaper/org.kde.image/General"."PreviewImage" = "${wallpaperImg}";
-
       "kwinrc"."Compositing"."LatencyPolicy" = "Low";
       "kwinrc"."NightColor"."Active" = true;
       "kwinrc"."NightColor"."NightTemperature" = 2500;
-      "kwinrc"."ModifierOnlyShortcuts"."Meta" = "org.kde.krunner,/App,,toggleDisplay";
-      "kwinrc"."Desktops"."Number" = 4;
-      "kwinrc"."Desktops"."Rows" = 2;
-      "kwinrc"."Plugins"."blurEnabled" = false;
 
       "krunnerrc"."General"."FreeFloating" = true;
       "krunnerrc"."Plugins"."baloosearchEnabled" = false;
