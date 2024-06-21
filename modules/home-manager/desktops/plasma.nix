@@ -88,7 +88,7 @@ in
     ];
 
     kwin = {
-      blur.enable = false;
+      effects.blur.enable = false;
 
       virtualDesktops = {
         rows = 2;
