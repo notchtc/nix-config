@@ -11,7 +11,7 @@ Every module in this list can be used as a nixosModule.
   - [plasma](desktops/plasma.nix) - plasma environment
 - hardware
   - [amdgpu](hardware/amdgpu.nix) - use amdgpu driver on all amd gpus
-  - [opengl](hardware/opengl.nix) - graphics & hardware acceleration related configuration
+  - [graphics](hardware/graphics.nix) - graphics & hardware acceleration related configuration
 - [networking](networking/default.nix)
 - [nix](nix/default.nix)
   - [nh](nix/nh.nix) - configuration for [nh](https://github.com/viperML/nh)

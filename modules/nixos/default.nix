@@ -7,7 +7,7 @@
     gnome = import ./desktops/gnome.nix;
     plasma = import ./desktops/plasma.nix;
     amdgpu = import ./hardware/amdgpu.nix;
-    opengl = import ./hardware/opengl.nix;
+    graphics = import ./hardware/graphics.nix;
     networking = import ./networking;
     nix = import ./nix;
     ananicy = import ./programs/ananicy.nix;

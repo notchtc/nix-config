@@ -22,7 +22,7 @@ in
         self.nixosModules.user-chtc
         self.nixosModules.plasma
         self.nixosModules.amdgpu
-        self.nixosModules.opengl
+        self.nixosModules.graphics
         self.nixosModules.ananicy
         self.nixosModules.steam
         self.nixosModules.pipewire
