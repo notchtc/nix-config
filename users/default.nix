@@ -2,6 +2,7 @@
 let
   defaultModules = [
     inputs.nur.hmModules.nur
+    inputs.chaotic.homeManagerModules.default
     self.homeModules.common
   ];
 

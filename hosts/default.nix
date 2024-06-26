@@ -2,6 +2,7 @@
 let
   defaultModules = [
     inputs.nur.nixosModules.nur
+    inputs.chaotic.nixosModules.default
     self.nixosModules.common
   ];
 
@@ -14,7 +15,6 @@ in
     dorothy = inputs.nixpkgs.lib.nixosSystem {
       inherit specialArgs;
       modules = defaultModules ++ [
-        inputs.chaotic.nixosModules.default
         inputs.disko.nixosModules.disko
 
         { services.displayManager.autoLogin.user = "chtc"; }
