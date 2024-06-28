@@ -8,13 +8,13 @@
   home = {
     packages = lib.attrValues {
       inherit (pkgs)
-        easyeffects
         gimp
-        jdk
+        jamesdsp
         keepassxc
         lutris
         nicotine-plus
         picard
+        plugdata
         qbittorrent
         strawberry-qt6
         telegram-desktop
@@ -23,15 +23,16 @@
     };
 
     sessionVariables = {
-      NIXOS_OZONE_WL = "1";
-      VDPAU_DRIVER = "va_gl";
-      WINEPREFIX = "${config.xdg.dataHome}/wine";
       _JAVA_OPTIONS = "-Djava.util.prefs.userRoot=${config.xdg.configHome}/java";
+      BROWSER = "firefox";
       GNUPGHOME = "${config.programs.gpg.homedir}";
       LESSHISTFILE = "-";
-      BROWSER = "firefox";
+      NIXOS_OZONE_WL = "1";
       PAGER = "less";
       TERMINAL = "foot";
+      VDPAU_DRIVER = "va_gl";
+      WGETRC = "${config.xdg.configHome}/wgetrc";
+      WINEPREFIX = "${config.xdg.dataHome}/wine";
     };
 
     username = "chtc";
@@ -40,6 +41,15 @@
   };
 
   xdg = {
+    configFile = {
+      "wgetrc" = {
+        enable = true;
+        text = ''
+          hsts-file \= ${config.xdg.cacheHome}/wget-hsts
+        '';
+      };
+    };
+
     desktopEntries = {
       vesktop = {
         name = "Vesktop";
