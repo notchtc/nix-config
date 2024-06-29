@@ -17,26 +17,18 @@
 
     systemPackages = lib.attrValues {
       inherit (pkgs)
-        coreutils
-        curl
         doas-sudo-shim
         fd
-        ffmpeg
         git
-        man-pages
-        man-pages-posix
         ripgrep
         vim
-        wget
         ;
     };
   };
 
   console = {
     earlySetup = true;
-    font = "${pkgs.terminus_font}/share/consolefonts/ter-116n.psf.gz";
     keyMap = "pl";
-    packages = with pkgs; [ terminus_font ];
   };
 
   i18n = {

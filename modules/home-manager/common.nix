@@ -22,15 +22,7 @@
     inputs.nix-index-database.hmModules.nix-index
   ];
 
-  home.packages = lib.attrValues {
-    inherit (pkgs)
-      trash-cli
-      sd-switch
-      wl-clipboard
-      nil
-      marksman
-      ;
-  };
+  home.packages = lib.attrValues { inherit (pkgs) trash-cli wl-clipboard; };
 
   nix = {
     package = pkgs.nix;

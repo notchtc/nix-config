@@ -1,4 +1,7 @@
+{ lib, pkgs, ... }:
 {
+  home.packages = lib.attrValues { inherit (pkgs) marksman nil; };
+
   programs = {
     helix = {
       enable = true;
