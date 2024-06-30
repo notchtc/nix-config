@@ -1,7 +1,5 @@
 { lib, pkgs, ... }:
 {
-  environment.systemPackages = lib.attrValues { inherit (pkgs.kdePackages) sddm-kcm; };
-
   services = {
     displayManager = {
       sddm = {
