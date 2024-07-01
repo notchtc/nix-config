@@ -7,7 +7,6 @@ Every module in this list can be used as a nixosModule.
   - [security](core/security.nix) - security related configuration
   - [user-chtc](core/user-chtc.nix) - creating an user called `chtc`
 - desktops
-  - [gnome](desktops/gnome.nix) - gnome environment
   - [plasma](desktops/plasma.nix) - plasma environment
 - hardware
   - [amdgpu](hardware/amdgpu.nix) - use amdgpu driver on all amd gpus
@@ -15,8 +14,6 @@ Every module in this list can be used as a nixosModule.
 - [networking](networking/default.nix)
 - [nix](nix/default.nix)
   - [nh](nix/nh.nix) - configuration for [nh](https://github.com/viperML/nh)
-  - [nixpkgs](nix/nixpkgs.nix) - nixpkgs configuration
-  - [substituters](nix/substituters.nix) - binary cache
 - programs
   - [gamemode](programs/gamemode.nix) - configuration for gamemode
   - [steam](programs/steam.nix) - steam + proton-ge

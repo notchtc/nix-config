@@ -24,7 +24,7 @@
 
     sessionVariables = {
       _JAVA_OPTIONS = "-Djava.util.prefs.userRoot=${config.xdg.configHome}/java";
-      BROWSER = "firefox";
+      BROWSER = "schizofox";
       GNUPGHOME = "${config.programs.gpg.homedir}";
       LESSHISTFILE = "-";
       NIXOS_OZONE_WL = "1";

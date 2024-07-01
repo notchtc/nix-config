@@ -4,7 +4,6 @@
     boot = import ./core/boot.nix;
     security = import ./core/security.nix;
     user-chtc = import ./core/user-chtc.nix;
-    gnome = import ./desktops/gnome.nix;
     plasma = import ./desktops/plasma.nix;
     amdgpu = import ./hardware/amdgpu.nix;
     graphics = import ./hardware/graphics.nix;

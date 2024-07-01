@@ -1,9 +1,8 @@
 {
   flake.homeModules = {
     common = import ./common.nix;
-    gnome = import ./desktops/gnome.nix;
     plasma = import ./desktops/plasma.nix;
-    firefox = import ./programs/browsers/firefox;
+    schizofox = import ./programs/browsers/schizofox;
     helix = import ./programs/editors/helix.nix;
     mpv = import ./programs/mpv;
     bat = import ./programs/shell/bat.nix;

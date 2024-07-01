@@ -3,12 +3,10 @@ Every module in this list can be used as a homeModule.
 
 - [common](common.nix) - base configuration
 - desktops
-  - [gnome](desktops/gnome.nix)
-  - [plasma5](desktops/plasma5.nix)
-  - [plasma6](desktops/plasma6.nix)
+  - [plasma](desktops/plasma.nix)
 - programs
   - browsers
-    - [firefox](programs/browsers/firefox/default.nix)
+    - [schizofox](programs/browsers/schizofox/default.nix)
   - editors
     - [helix](programs/editors/helix.nix)
   - shell

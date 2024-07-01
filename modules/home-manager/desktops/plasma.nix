@@ -65,7 +65,7 @@ in
             config = {
               General.launchers = [
                 "applications:org.kde.dolphin.desktop"
-                "applications:firefox.desktop"
+                "applications:Schizofox.desktop"
                 "applications:org.strawberrymusicplayer.strawberry.desktop"
                 "applications:org.telegram.desktop.desktop"
                 "applications:vesktop.desktop"
