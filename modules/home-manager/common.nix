@@ -17,8 +17,6 @@
     self.homeModules.zoxide
     self.homeModules.zsh
 
-    ../nixos/nix/nixpkgs.nix
-
     inputs.nix-index-database.hmModules.nix-index
   ];
 
@@ -29,10 +27,17 @@
     settings.use-xdg-base-directories = true;
   };
 
+  nixpkgs = {
+    config.allowUnfree = true;
+
+    overlays = [ self.overlays.default ];
+  };
+
   programs = {
     home-manager.enable = true;
     nix-index.enable = true;
     nix-index-database.comma.enable = true;
+    command-not-found.enable = false;
   };
 
   xdg = {

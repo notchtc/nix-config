@@ -1,8 +1,8 @@
 { self, inputs, ... }:
 let
   defaultModules = [
-    inputs.nur.nixosModules.nur
     inputs.chaotic.nixosModules.default
+    inputs.nur.nixosModules.nur
     self.nixosModules.common
   ];
 
@@ -20,13 +20,14 @@ in
         { services.displayManager.autoLogin.user = "chtc"; }
 
         self.nixosModules.user-chtc
-        self.nixosModules.plasma
         self.nixosModules.amdgpu
-        self.nixosModules.graphics
         self.nixosModules.ananicy
-        self.nixosModules.steam
+        self.nixosModules.graphics
+        self.nixosModules.nh
         self.nixosModules.pipewire
+        self.nixosModules.plasma
         self.nixosModules.power
+        self.nixosModules.steam
 
         ./dorothy/configuration.nix
       ];

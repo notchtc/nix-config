@@ -10,6 +10,7 @@
     graphics = import ./hardware/graphics.nix;
     networking = import ./networking;
     nix = import ./nix;
+    nh = import ./nix/nh.nix;
     ananicy = import ./programs/ananicy.nix;
     gamemode = import ./programs/gamemode.nix;
     steam = import ./programs/steam.nix;
