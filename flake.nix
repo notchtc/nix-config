@@ -36,12 +36,12 @@
     };
 
     lix = {
-      url = "https://git.lix.systems/lix-project/lix/archive/main.tar.gz";
+      url = "git+https://git.lix.systems/lix-project/lix";
       flake = false;
     };
 
     lix-module = {
-      url = "https://git.lix.systems/lix-project/nixos-module/archive/main.tar.gz";
+      url = "git+https://git.lix.systems/lix-project/nixos-module";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.lix.follows = "lix";
     };
@@ -58,6 +58,12 @@
 
     plasma-manager = {
       url = "github:nix-community/plasma-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home";
+    };
+
+    schizofox = {
+      url = "github:schizofox/schizofox";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home";
     };
