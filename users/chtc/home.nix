@@ -20,6 +20,7 @@
         strawberry-qt6
         telegram-desktop
         vesktop
+        xonotic
         ;
     };
 
