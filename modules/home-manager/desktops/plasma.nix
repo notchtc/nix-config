@@ -54,16 +54,14 @@ in
         floating = true;
         widgets = [
           {
-            name = "org.kde.plasma.kickoff";
-            config = {
-              General.icon = "distributor-logo-nixos";
+            kickoff = {
+              icon = "distributor-logo-nixos";
             };
           }
           "org.kde.plasma.marginsseparator"
           {
-            name = "org.kde.plasma.icontasks";
-            config = {
-              General.launchers = [
+            iconTasks = {
+              launchers = [
                 "applications:org.kde.dolphin.desktop"
                 "applications:Schizofox.desktop"
                 "applications:org.strawberrymusicplayer.strawberry.desktop"
