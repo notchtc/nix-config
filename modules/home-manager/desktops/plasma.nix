@@ -1,10 +1,4 @@
 { pkgs, ... }:
-let
-  wallpaperImg = pkgs.fetchurl {
-    url = "https://simonstalenhag.se/bilderbig/by_housevisit_2560.jpg";
-    hash = "sha256-qFRL7znRvKWLpEriE4JlFT2MZR25uV7SKdpxy8Jlyww=";
-  };
-in
 {
   gtk = {
     enable = true;
@@ -44,7 +38,9 @@ in
       cursor.theme = "phinger-cursors-dark";
       iconTheme = "Papirus-Dark";
       lookAndFeel = "org.kde.breezedark.desktop";
-      wallpaper = "${wallpaperImg}";
+      wallpaperPictureOfTheDay = {
+        provider = "simonstalenhag";
+      };
     };
 
     panels = [
@@ -94,7 +90,9 @@ in
       };
     };
 
-    kscreenlocker.wallpaper = "${wallpaperImg}";
+    kscreenlocker.wallpaperPictureOfTheDay = {
+      provider = "simonstalenhag";
+    };
 
     shortcuts = {
       "services/org.kde.krunner.desktop"."_launch" = [

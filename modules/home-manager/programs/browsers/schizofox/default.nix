@@ -1,8 +1,6 @@
 { inputs, ... }:
 {
-  imports = [
-    inputs.schizofox.homeManagerModule
-  ];
+  imports = [ inputs.schizofox.homeManagerModule ];
 
   programs.schizofox = {
     enable = true;
@@ -45,9 +43,9 @@
       extraExtensions = {
         "{c607c8df-14a7-4f28-894f-29e8722976af}".install_url = "https://addons.mozilla.org/firefox/downloads/latest/temporary-containers/latest.xpi";
         "@testpilot-containers".install_url = "https://addons.mozilla.org/firefox/download/latest/multi-account-containers/latest.xpi";
-        "sponsorBlocker@ajay.app".install_url = "https://addons.mozilla.org/firefox/downloads/latest/sponsorblock/latest.xpi";       
+        "sponsorBlocker@ajay.app".install_url = "https://addons.mozilla.org/firefox/downloads/latest/sponsorblock/latest.xpi";
       };
-      
+
       darkreader.enable = false;
       simplefox.enable = false;
     };
