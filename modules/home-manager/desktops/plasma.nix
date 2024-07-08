@@ -51,10 +51,13 @@
         widgets = [
           {
             kickoff = {
-              icon = "distributor-logo-nixos";
+              icon = "nix-snowflake-white";
+
+              compactDisplayStyle = true;
+              favoritesDisplayMode = "list";
+              applicationsDisplayMode = "list";
             };
           }
-          "org.kde.plasma.marginsseparator"
           {
             iconTasks = {
               launchers = [
@@ -74,7 +77,19 @@
             };
           }
           "org.kde.plasma.panelspacer"
-          "org.kde.plasma.systemtray"
+          "org.kde.plasma.marginsseparator"
+          {
+            systemTray = {
+              icons = {
+                spacing = "small";
+                scaleToFit = true;
+              };
+
+              items = {
+                hidden = [ "org.kde.plasma.addons.katesessions" ];
+              };
+            };
+          }
           "org.kde.plasma.marginsseparator"
           "org.kde.plasma.pager"
         ];
