@@ -16,6 +16,7 @@ Every module in this list can be used as a nixosModule.
   - [nh](nix/nh.nix) - configuration for [nh](https://github.com/viperML/nh)
 - programs
   - [gamemode](programs/gamemode.nix) - configuration for gamemode
+  - [run-ext-binaries](programs/run-ext-binaries.nix) - run appimages and unpatched dynamic binaries
   - [steam](programs/steam.nix) - steam + proton-ge
 - services
   - [pipewire](programs/pipewire.nix) - enable pipewire

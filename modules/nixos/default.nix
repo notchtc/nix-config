@@ -12,6 +12,7 @@
     nh = import ./nix/nh.nix;
     ananicy = import ./programs/ananicy.nix;
     gamemode = import ./programs/gamemode.nix;
+    run-ext-binaries = import ./programs/run-ext-binaries.nix;
     steam = import ./programs/steam.nix;
     pipewire = import ./services/pipewire.nix;
     power = import ./services/power.nix;

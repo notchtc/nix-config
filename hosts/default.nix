@@ -24,6 +24,7 @@ in
         self.nixosModules.ananicy
         self.nixosModules.graphics
         self.nixosModules.nh
+        self.nixosModules.run-ext-binaries
         self.nixosModules.pipewire
         self.nixosModules.plasma
         self.nixosModules.power
