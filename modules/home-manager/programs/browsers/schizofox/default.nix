@@ -1,9 +1,10 @@
-{ inputs, ... }:
+{ inputs, pkgs, ... }:
 {
   imports = [ inputs.schizofox.homeManagerModule ];
 
   programs.schizofox = {
     enable = true;
+    package = pkgs.firefox-esr-128-unwrapped;
 
     settings = {
       "dom.event.clipboardevents.enabled" = true;

@@ -21,7 +21,8 @@ in
 
         self.nixosModules.user-chtc
         self.nixosModules.amdgpu
-        self.nixosModules.ananicy
+        #        self.nixosModules.ananicy
+        self.nixosModules.gamemode
         self.nixosModules.graphics
         self.nixosModules.nh
         self.nixosModules.run-ext-binaries
