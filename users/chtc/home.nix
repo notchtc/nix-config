@@ -9,7 +9,6 @@
     packages = lib.attrValues {
       inherit (pkgs)
         gimp
-        heroic
         jamesdsp
         keepassxc
         lutris
