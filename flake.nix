@@ -35,15 +35,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    lix = {
-      url = "git+https://git.lix.systems/lix-project/lix";
-      flake = false;
-    };
-
     lix-module = {
-      url = "git+https://git.lix.systems/lix-project/nixos-module";
+      url = "https://git.lix.systems/lix-project/nixos-module/archive/2.90.0.tar.gz";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.lix.follows = "lix";
     };
 
     nix-index-database = {

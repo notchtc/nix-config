@@ -1,9 +1,6 @@
 { self, inputs, ... }:
 {
-  imports = [
-    inputs.lix-module.nixosModules.default
-    ./nh.nix
-  ];
+  imports = [ inputs.lix-module.nixosModules.default ];
 
   nixpkgs = {
     config.allowUnfree = true;
@@ -20,6 +17,8 @@
     nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 
     optimise.automatic = true;
+
+    channel.enable = false;
 
     settings = {
       use-xdg-base-directories = true;
