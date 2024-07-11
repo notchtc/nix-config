@@ -14,13 +14,11 @@
         keepassxc
         lutris
         nicotine-plus
-        picard
         plugdata
         qbittorrent
         strawberry-qt6
         telegram-desktop
         vesktop
-        xonotic
         ;
     };
 
