@@ -14,7 +14,6 @@
       nixpkgs.flake = inputs.nixpkgs;
       self.flake = inputs.self;
     };
-    nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 
     optimise.automatic = true;
 
@@ -22,6 +21,8 @@
 
     settings = {
       use-xdg-base-directories = true;
+
+      nix-path = "nixpkgs=flake:nixpkgs";
 
       experimental-features = [
         "auto-allocate-uids"
