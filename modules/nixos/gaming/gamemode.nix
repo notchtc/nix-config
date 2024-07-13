@@ -1,12 +1,10 @@
 {
-  programs = {
-    gamemode = {
-      enable = true;
-      settings = {
-        general = {
-          softrealtime = "auto";
-          renice = 15;
-        };
+  programs.gamemode = {
+    enable = true;
+    settings = {
+      general = {
+        softrealtime = "auto";
+        renice = 15;
       };
     };
   };

@@ -18,13 +18,6 @@
 
   networking.hostName = "dorothy";
 
-  systemd.services.ModemManager.enable = lib.mkForce false;
-
-  services.undervolt = {
-    enable = true;
-    coreOffset = -100;
-  };
-
   fonts.fontconfig = {
     antialias = true;
     cache32Bit = true;
@@ -35,5 +28,12 @@
     subpixel.rgba = "rgb";
   };
 
-  services.displayManager.autoLogin.user = "chtc";
+  services = {
+    undervolt = {
+      enable = true;
+      coreOffset = -100;
+    };
+    displayManager.autoLogin.user = "chtc";
+  };
+  systemd.services.ModemManager.enable = lib.mkForce false;
 }

@@ -1,11 +1,9 @@
 {
-  programs = {
-    bat = {
-      enable = true;
-      config = {
-        style = "plain";
-        theme = "base16";
-      };
+  programs.bat = {
+    enable = true;
+    config = {
+      style = "plain";
+      theme = "base16";
     };
   };
 }

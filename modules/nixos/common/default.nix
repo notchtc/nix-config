@@ -30,12 +30,24 @@
         ;
     };
   };
-
   users.defaultUserShell = pkgs.zsh;
 
   console = {
     earlySetup = true;
     keyMap = "pl";
+  };
+
+  programs = {
+    command-not-found.enable = false;
+    nano.enable = false;
+    gnupg.agent = {
+      enable = true;
+      enableSSHSupport = true;
+    };
+    zsh = {
+      enable = true;
+      enableCompletion = false;
+    };
   };
 
   i18n = {
@@ -55,18 +67,7 @@
     timeZone = "Europe/Warsaw";
   };
 
-  programs = {
-    command-not-found.enable = false;
-    nano.enable = false;
-    gnupg.agent = {
-      enable = true;
-      enableSSHSupport = true;
-    };
-    zsh = {
-      enable = true;
-      enableCompletion = false;
-    };
-  };
+  hardware.amdgpu.legacySupport.enable = true;
 
   systemd.services.NetworkManager-wait-online.enable = lib.mkForce false;
 
