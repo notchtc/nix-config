@@ -1,0 +1,27 @@
+{ config, pkgs, ... }:
+{
+  gtk = {
+    enable = true;
+
+    iconTheme = {
+      name = "Papirus-Dark";
+      package = pkgs.papirus-icon-theme;
+    };
+
+    theme = {
+      name = "Breeze-Dark";
+      package = pkgs.kdePackages.breeze-gtk;
+    };
+
+    cursorTheme = {
+      name = "phinger-cursors-dark";
+      package = pkgs.phinger-cursors;
+    };
+
+    gtk2.configLocation = "${config.xdg.configHome}/gtk-2.0/gtkrc";
+
+    gtk3.extraConfig = {
+      gtk-application-prefer-dark-theme = 1;
+    };
+  };
+}

@@ -1,6 +1,17 @@
-{ lib, ... }:
+{
+  inputs,
+  flake,
+  lib,
+  ...
+}:
 {
   imports = [
+    inputs.disko.nixosModules.disko
+    flake.nixosModules.desktop
+    flake.nixosModules.laptop
+    flake.nixosModules.vaapi
+    flake.nixosModules.gaming
+    flake.nixosModules.user-chtc
     ./hardware-configuration.nix
     ./disko.nix
   ];
@@ -24,9 +35,5 @@
     subpixel.rgba = "rgb";
   };
 
-  environment.sessionVariables = {
-    FREETYPE_PROPERTIES = "cff:no-stem-darkening=0 autofitter:no-stem-darkening=0";
-  };
-
-  system.stateVersion = "23.11";
+  services.displayManager.autoLogin.user = "chtc";
 }

@@ -15,19 +15,15 @@ This repository contains my configuration for NixOS and other software that I us
 NixOS configuration using [flakes](https://nixos.wiki/wiki/Flakes) and [home-manager](https://github.com/nix-community/home-manager).
 
 Flakes used:
+- [blueprint](https://github.com/numtide/blueprint)
 - [disko](https://github.com/nix-community/disko)
-- [flake-parts](https://flake.parts)
+- [lix](https://git.lix.systems/lix-project/nixos-module)
 - [plasma-manager](https://github.com/pjones/plasma-manager)
 - [nh](https://github.com/viperML/nh)
 - [nix-index-database](https://github.com/Mic92/nix-index-database)
 - [nur](https://github.com/nix-community/NUR)
 - [nyx](https://github.com/chaotic-cx/nyx)
-
-## Structure
-- [modules](modules) - common parts of NixOS and home-manager configuration
-- [hosts](hosts) - NixOS configurations
-- [users](users) - home-manager configurations
-- [overlays](overlays) - packages
+- [schizofox](https://github.com/schizofox/schizofox)
 
 ## Resources
 Other configurations from where I learned and copied:
@@ -36,3 +32,4 @@ Other configurations from where I learned and copied:
 - [moni-dz/nix-config](https://github.com/moni-dz/nix-config)
 - [fufexan/dotfiles](https://github.com/fufexan/dotfiles)
 - [viperML/dotfiles](https://github.com/viperML/dotfiles)
+- [surfaceflinger/flake](https://github.com/surfaceflinger/flake)
