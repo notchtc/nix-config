@@ -58,6 +58,8 @@
       url = "github:chisui/zsh-nix-shell";
       flake = false;
     };
+
+    nixos-hardware.url = "github:NixOS/nixos-hardware";
   };
 
   outputs = inputs: inputs.blueprint { inherit inputs; };

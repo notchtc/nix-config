@@ -67,10 +67,6 @@
     timeZone = "Europe/Warsaw";
   };
 
-  hardware.amdgpu.legacySupport.enable = true;
-
-  systemd.services.NetworkManager-wait-online.enable = lib.mkForce false;
-
   system.stateVersion = "24.05";
 
   home-manager = {

@@ -7,31 +7,34 @@
 {
   imports = [
     inputs.disko.nixosModules.disko
-    flake.nixosModules.desktop
+    inputs.nixos-hardware.nixosModules.common-cpu-intel
+    flake.nixosModules.amdgpu
     flake.nixosModules.laptop
-    flake.nixosModules.vaapi
     flake.nixosModules.gaming
     flake.nixosModules.user-chtc
-    ./hardware-configuration.nix
     ./disko.nix
   ];
 
-  networking.hostName = "dorothy";
-
-  fonts.fontconfig = {
-    antialias = true;
-    cache32Bit = true;
-    hinting = {
-      enable = true;
-      autohint = true;
+  boot = {
+    initrd = {
+      availableKernelModules = [
+        "xhci_pci"
+        "ahci"
+        "usb_storage"
+        "sd_mod"
+      ];
+      kernelModules = [ "dm-snapshot" ];
     };
-    subpixel.rgba = "rgb";
+    kernelModules = [ "kvm-intel" ];
   };
+
+  networking.hostName = "dorothy";
+  nixpkgs.hostPlatform = "x86_64-linux";
 
   services = {
     undervolt = {
       enable = true;
-      coreOffset = -100;
+      coreOffset = -135;
     };
     displayManager.autoLogin.user = "chtc";
   };

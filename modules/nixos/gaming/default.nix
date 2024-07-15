@@ -1,8 +1,6 @@
 {
   imports = [
-    ./gamemode.nix
+    ./ananicy.nix
     ./steam.nix
   ];
-
-  hardware.graphics.enable32Bit = true;
 }
