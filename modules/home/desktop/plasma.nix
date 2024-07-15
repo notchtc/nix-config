@@ -1,6 +1,8 @@
-{ inputs, ... }:
+{ inputs, pkgs, ... }:
 {
   imports = [ inputs.plasma-manager.homeManagerModules.plasma-manager ];
+
+  home.packages = [ inputs.self.packages.${pkgs.system}.split-clock ];
 
   dconf = {
     enable = true;
@@ -24,7 +26,7 @@
 
     panels = [
       {
-        location = "bottom";
+        location = "left";
         height = 30;
         floating = true;
         widgets = [
@@ -49,14 +51,6 @@
               ];
             };
           }
-          "org.kde.plasma.panelspacer"
-          {
-            digitalClock = {
-              date.enable = false;
-            };
-          }
-          "org.kde.plasma.panelspacer"
-          "org.kde.plasma.marginsseparator"
           {
             systemTray = {
               icons = {
@@ -65,12 +59,25 @@
               };
 
               items = {
-                hidden = [ "org.kde.plasma.addons.katesessions" ];
+                hidden = [
+                  "org.kde.plasma.addons.katesessions"
+                  "org.kde.plasma.clipboard"
+                ];
               };
             };
           }
-          "org.kde.plasma.marginsseparator"
-          "org.kde.plasma.pager"
+          {
+            name = "split-clock";
+            config = {
+              Appearance = {
+                autoFontAndSize = false;
+                fontFamily = "Iosevka Nerd Font";
+                fontSize = 14;
+                fontStyleName = "Regular";
+                fontWeight = 400;
+              };
+            };
+          }
         ];
       }
     ];
