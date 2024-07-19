@@ -3,8 +3,6 @@
   fonts = {
     packages = lib.attrValues {
       inherit (pkgs)
-        cantarell-fonts
-        liberation_ttf
         iosevka
         noto-fonts
         noto-fonts-cjk

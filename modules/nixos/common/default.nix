@@ -40,10 +40,7 @@
   programs = {
     command-not-found.enable = false;
     nano.enable = false;
-    gnupg.agent = {
-      enable = true;
-      enableSSHSupport = true;
-    };
+    gnupg.agent.enable = true;
     zsh = {
       enable = true;
       enableCompletion = false;

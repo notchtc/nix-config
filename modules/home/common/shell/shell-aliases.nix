@@ -2,14 +2,12 @@
   sudo = "doas";
   e = "hx";
   se = "doas hx";
-  cat = "bat --color always";
-  mv = "mv -i";
-  cp = "cp -i";
+  cat = "bat";
   ls = "eza";
   ll = "eza -l";
   la = "eza -a";
   lla = "eza -la";
-  rm = "trash-put -i";
+  rm = "trash-put";
   rme = "trash-empty -i";
   rml = "trash-list";
   rmr = "trash-restore";

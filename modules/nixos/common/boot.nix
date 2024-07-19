@@ -6,8 +6,6 @@
     consoleLogLevel = 0;
     kernelParams = [
       "quiet"
-      "nowatchdog"
-      "modprobe.blacklist=iTCO_wdt"
       "rd.systemd.show_status=auto"
       "rd.udev.log_level=3"
       "udev.log_priority=3"

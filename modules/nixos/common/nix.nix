@@ -20,8 +20,6 @@
     channel.enable = false;
 
     settings = {
-      use-xdg-base-directories = true;
-
       nix-path = "nixpkgs=flake:nixpkgs";
 
       experimental-features = [
@@ -32,11 +30,6 @@
       ];
 
       max-jobs = "auto";
-
-      trusted-users = [
-        "root"
-        "chtc"
-      ];
 
       substituters = [
         "https://cache.lix.systems"

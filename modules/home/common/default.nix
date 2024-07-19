@@ -18,6 +18,4 @@
     nix-index-database.comma.enable = true;
     command-not-found.enable = false;
   };
-
-  systemd.user.startServices = "sd-switch";
 }

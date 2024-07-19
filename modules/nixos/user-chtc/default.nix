@@ -33,6 +33,7 @@
 
   users.users.root.hashedPassword = "!";
 
+  nix.settings.trusted-users = [ "chtc" ];
   programs.nh.flake = "/home/chtc/.config/nix-config";
 
   home-manager.users.chtc = {
