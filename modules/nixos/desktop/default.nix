@@ -15,8 +15,6 @@
   boot = {
     plymouth = {
       enable = true;
-      theme = "nixos-bgrt";
-      themePackages = [ pkgs.nixos-bgrt-plymouth ];
       font = "${pkgs.iosevka}/share/fonts/truetype/Iosevka-Regular.ttf";
     };
   };

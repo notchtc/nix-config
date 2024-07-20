@@ -34,7 +34,7 @@
   services = {
     undervolt = {
       enable = true;
-      coreOffset = -120;
+      coreOffset = -118;
     };
     displayManager.autoLogin.user = "chtc";
   };
