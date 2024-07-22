@@ -19,9 +19,7 @@
       cursor.theme = "phinger-cursors-dark";
       iconTheme = "Papirus-Dark";
       lookAndFeel = "org.kde.breezedark.desktop";
-      wallpaperPictureOfTheDay = {
-        provider = "simonstalenhag";
-      };
+      wallpaperPictureOfTheDay.provider = "simonstalenhag";
     };
 
     panels = [
@@ -85,15 +83,25 @@
     kwin = {
       effects.blur.enable = false;
 
+      nightLight = {
+        enable = true;
+        mode = "times";
+
+        time = {
+          morning = "06:00";
+          evening = "19:50";
+        };
+
+        temperature.night = 2500;
+      };
+
       virtualDesktops = {
         rows = 2;
         number = 4;
       };
     };
 
-    kscreenlocker.wallpaperPictureOfTheDay = {
-      provider = "simonstalenhag";
-    };
+    kscreenlocker.wallpaperPictureOfTheDay.provider = "simonstalenhag";
 
     shortcuts = {
       "services/org.kde.krunner.desktop"."_launch" = [
@@ -137,8 +145,6 @@
     };
 
     configFile = {
-      "kdeglobals"."General"."XftHintStyle" = "hintslight";
-      "kdeglobals"."General"."XftSubPixel" = "rgb";
       "kdeglobals"."General"."TerminalApplication" = "foot";
       "kdeglobals"."General"."TerminalService" = "org.codeberg.dnkl.foot.desktop";
       "kdeglobals"."KDE"."AnimationDurationFactor" = 0;
@@ -147,8 +153,6 @@
       "kxkbrc"."Layout"."Options" = "caps:swapescape";
 
       "kwinrc"."Compositing"."LatencyPolicy" = "Low";
-      "kwinrc"."NightColor"."Active" = true;
-      "kwinrc"."NightColor"."NightTemperature" = 2500;
 
       "krunnerrc"."General"."FreeFloating" = true;
       "krunnerrc"."Plugins"."baloosearchEnabled" = false;
