@@ -109,7 +109,7 @@
         "Search"
       ];
 
-      "Alacritty.desktop"."_launch" = "Ctrl+Alt+T";
+      "services/Alacritty.desktop"."New" = "Ctrl+Return";
     };
 
     fonts = {
