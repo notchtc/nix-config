@@ -109,7 +109,7 @@
         "Search"
       ];
 
-      "org.codeberg.dnkl.foot.desktop"."_launch" = "Ctrl+Alt+T";
+      "Alacritty.desktop"."_launch" = "Ctrl+Alt+T";
     };
 
     fonts = {
@@ -145,8 +145,8 @@
     };
 
     configFile = {
-      "kdeglobals"."General"."TerminalApplication" = "foot";
-      "kdeglobals"."General"."TerminalService" = "org.codeberg.dnkl.foot.desktop";
+      "kdeglobals"."General"."TerminalApplication" = "alacritty";
+      "kdeglobals"."General"."TerminalService" = "Alacritty.desktop";
       "kdeglobals"."KDE"."AnimationDurationFactor" = 0;
 
       "kxkbrc"."Layout"."LayoutList" = "pl";

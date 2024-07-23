@@ -102,22 +102,6 @@
         "type": "github"
       }
     },
-    "f-sy-h": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1702802089,
-        "narHash": "sha256-AEeGEx2vyyHVS92Nla7XoqSx3rTpQHYwPMrK1jFH1Mg=",
-        "owner": "z-shell",
-        "repo": "F-Sy-H",
-        "rev": "3dea11a9018061e6e3a77e529b79e5654679d3a0",
-        "type": "github"
-      },
-      "original": {
-        "owner": "z-shell",
-        "repo": "F-Sy-H",
-        "type": "github"
-      }
-    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -522,7 +506,6 @@
         "blueprint": "blueprint",
         "chaotic": "chaotic",
         "disko": "disko",
-        "f-sy-h": "f-sy-h",
         "home-manager": "home-manager_2",
         "lix-module": "lix-module",
         "nix-index-database": "nix-index-database",
@@ -530,9 +513,7 @@
         "nixpkgs": "nixpkgs_2",
         "nur": "nur",
         "plasma-manager": "plasma-manager",
-        "schizofox": "schizofox",
-        "zsh-autocomplete": "zsh-autocomplete",
-        "zsh-nix-shell": "zsh-nix-shell"
+        "schizofox": "schizofox"
       }
     },
     "schizofox": {
@@ -668,38 +649,6 @@
       "original": {
         "owner": "UbiqueLambda",
         "repo": "yafas",
-        "type": "github"
-      }
-    },
-    "zsh-autocomplete": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1717594845,
-        "narHash": "sha256-QcPNXpTFRI59Oi59WP4XlC+xMyN6aHRPF4UpJ6E1vok=",
-        "owner": "marlonrichert",
-        "repo": "zsh-autocomplete",
-        "rev": "cfc3fd9a75d0577aa9d65e35849f2d8c2719b873",
-        "type": "github"
-      },
-      "original": {
-        "owner": "marlonrichert",
-        "repo": "zsh-autocomplete",
-        "type": "github"
-      }
-    },
-    "zsh-nix-shell": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1704028593,
-        "narHash": "sha256-Rtg8kWVLhXRuD2/Ctbtgz9MQCtKZOLpAIdommZhXKdE=",
-        "owner": "chisui",
-        "repo": "zsh-nix-shell",
-        "rev": "82ca15e638cc208e6d8368e34a1625ed75e08f90",
-        "type": "github"
-      },
-      "original": {
-        "owner": "chisui",
-        "repo": "zsh-nix-shell",
         "type": "github"
       }
     }

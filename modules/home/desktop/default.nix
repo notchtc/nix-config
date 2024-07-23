@@ -1,7 +1,7 @@
 { lib, pkgs, ... }:
 {
   imports = [
-    ./foot.nix
+    ./alacritty.nix
     ./gtk.nix
     ./mpv.nix
     ./plasma.nix

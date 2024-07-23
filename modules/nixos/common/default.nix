@@ -15,6 +15,7 @@
     ./nix.nix
     ./run-ext-binaries.nix
     ./zram.nix
+    ./zsh.nix
   ];
 
   environment = {
@@ -23,10 +24,12 @@
 
     systemPackages = lib.attrValues {
       inherit (pkgs)
+        bat
+        eza
         fd
-        git
         ripgrep
         vim
+        zoxide
         ;
     };
   };
@@ -39,12 +42,9 @@
 
   programs = {
     command-not-found.enable = false;
-    nano.enable = false;
+    git.enable = true;
     gnupg.agent.enable = true;
-    zsh = {
-      enable = true;
-      enableCompletion = false;
-    };
+    nano.enable = false;
   };
 
   i18n = {

@@ -22,14 +22,16 @@
     settings = {
       nix-path = "nixpkgs=flake:nixpkgs";
 
+      max-jobs = "auto";
+
+      use-xdg-base-directories = true;
+
       experimental-features = [
         "auto-allocate-uids"
         "ca-derivations"
         "flakes"
         "nix-command"
       ];
-
-      max-jobs = "auto";
 
       substituters = [
         "https://cache.lix.systems"
