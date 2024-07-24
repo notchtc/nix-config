@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 {
   gtk = {
     enable = true;
@@ -17,8 +17,6 @@
       name = "phinger-cursors-dark";
       package = pkgs.phinger-cursors;
     };
-
-    gtk2.configLocation = "${config.xdg.configHome}/gtk-2.0/gtkrc";
 
     gtk3.extraConfig = {
       gtk-application-prefer-dark-theme = 1;

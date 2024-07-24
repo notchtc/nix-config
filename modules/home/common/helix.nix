@@ -1,10 +1,10 @@
 { lib, pkgs, ... }:
 {
-  home.packages = lib.attrValues { inherit (pkgs) marksman nil wl-clipboard; };
 
   programs.helix = {
     enable = true;
     defaultEditor = true;
+    extraPackages = lib.attrValues { inherit (pkgs) marksman nil wl-clipboard; };
 
     settings = {
       theme = "base16_transparent";

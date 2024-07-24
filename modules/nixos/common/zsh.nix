@@ -1,4 +1,8 @@
+{ pkgs, ... }:
 {
+  environment.shells = [ pkgs.zsh ];
+  users.defaultUserShell = pkgs.zsh;
+
   programs = {
     zsh = {
       enable = true;
@@ -95,9 +99,5 @@
     bash.shellInit = ''
       export HISTFILE="$XDG_STATE_HOME"/bash/history
     '';
-
-    less.envVariables = {
-      LESSHISTFILE = "$XDG_STATE_HOME/lesshst";
-    };
   };
 }

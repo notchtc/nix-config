@@ -20,7 +20,6 @@
 
   environment = {
     localBinInPath = true;
-    shells = [ pkgs.zsh ];
 
     systemPackages = lib.attrValues {
       inherit (pkgs)
@@ -33,7 +32,6 @@
         ;
     };
   };
-  users.defaultUserShell = pkgs.zsh;
 
   console = {
     earlySetup = true;
@@ -45,6 +43,7 @@
     git.enable = true;
     gnupg.agent.enable = true;
     nano.enable = false;
+    vim.defaultEditor = true;
   };
 
   i18n = {

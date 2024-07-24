@@ -18,5 +18,35 @@
       templates = "${config.home.homeDirectory}/Templates";
       videos = "${config.home.homeDirectory}/Videos";
     };
+
+    configFile = {
+      "wgetrc" = {
+        enable = true;
+        text = ''
+          hsts-file="${config.xdg.cacheHome}/wget-hsts"
+        '';
+      };
+    };
   };
+
+  home = {
+    file.".zshenv".enable = false;
+
+    sessionVariables = {
+      _JAVA_OPTIONS = "-Djava.util.prefs.userRoot=${config.xdg.configHome}/java";
+      LESSHISTFILE = "${config.xdg.dataHome}/lesshst";
+      WGETRC = "${config.xdg.configHome}/wgetrc";
+      WINEPREFIX = "${config.xdg.dataHome}/wine";
+    };
+  };
+
+  programs = {
+    gpg.homedir = "${config.xdg.dataHome}/gnupg";
+    zsh = {
+      dotDir = ".config/zsh";
+      history.path = "${config.xdg.stateHome}/zsh/history";
+    };
+  };
+
+  gtk.gtk2.configLocation = "${config.xdg.configHome}/gtk-2.0/gtkrc";
 }
