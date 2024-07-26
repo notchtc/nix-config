@@ -24,6 +24,7 @@
         keepassxc
         lutris
         nicotine-plus
+        picard
         plugdata
         qbittorrent
         telegram-desktop
