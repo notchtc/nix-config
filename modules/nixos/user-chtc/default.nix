@@ -22,10 +22,8 @@
       lib.optionals config.services.desktopManager.plasma6.enable [
         gimp
         keepassxc
-        lutris
         nicotine-plus
         picard
-        plugdata
         qbittorrent
         telegram-desktop
         vesktop
