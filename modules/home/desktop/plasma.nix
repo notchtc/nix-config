@@ -109,7 +109,7 @@
         "Search"
       ];
 
-      "services/Alacritty.desktop"."New" = "Ctrl+Return";
+      "services/Alacritty.desktop"."New" = "Meta+Return";
     };
 
     fonts = {
@@ -151,6 +151,8 @@
 
       "kxkbrc"."Layout"."LayoutList" = "pl";
       "kxkbrc"."Layout"."Options" = "caps:swapescape";
+
+      "breezerc"."Common"."ShadowSize" = "ShadowNone";
 
       "kwinrc"."Compositing"."LatencyPolicy" = "Low";
 

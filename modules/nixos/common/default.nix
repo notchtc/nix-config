@@ -27,7 +27,6 @@
         eza
         fd
         ripgrep
-        vim
         zoxide
         ;
     };
@@ -43,7 +42,10 @@
     git.enable = true;
     gnupg.agent.enable = true;
     nano.enable = false;
-    vim.defaultEditor = true;
+    vim = {
+      enable = true;
+      defaultEditor = true;
+    };
   };
 
   i18n = {
