@@ -6,6 +6,7 @@
   ];
 
   environment.systemPackages = with pkgs; [
+    lime3ds
     melonDS
     ppsspp-sdl-wayland
   ];
