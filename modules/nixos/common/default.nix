@@ -24,9 +24,12 @@
     systemPackages = lib.attrValues {
       inherit (pkgs)
         bat
+        deadnix
         eza
         fd
+        nixfmt-rfc-style
         ripgrep
+        statix
         zoxide
         ;
     };

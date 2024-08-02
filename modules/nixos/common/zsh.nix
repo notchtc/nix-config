@@ -50,19 +50,19 @@
         add_newline = false;
 
         username = {
-          format = "[$user]($style)";
+          format = "[$user]($style) ";
         };
 
         hostname = {
           ssh_only = true;
           ssh_symbol = "";
-          format = "@[$hostname]($style) ";
+          format = "at [$hostname]($style) ";
         };
 
         line_break.disabled = true;
 
         directory = {
-          read_only = "(ro)";
+          read_only = " ";
         };
 
         git_commit.format = ''( [\($hash$tag\)]($style))'';
