@@ -1,11 +1,10 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
-  environment.systemPackages = with pkgs; [
-    lime3ds
-    melonDS
-    ppsspp-sdl-wayland
-    wineWowPackages.stagingFull
-  ];
+  environment.systemPackages = lib.attrValues {
+    inherit (pkgs) lime3ds melonDS ppsspp-sdl-wayland;
+
+    wine = pkgs.wineWowPackages.stagingFull;
+  };
 
   programs = {
     gamemode = {
@@ -26,11 +25,7 @@
       extest.enable = true;
 
       extraCompatPackages = [ pkgs.proton-ge-custom ];
-      extraPackages = with pkgs; [
-        protontricks
-        steamtinkerlaunch
-        winetricks
-      ];
+      extraPackages = lib.attrValues { inherit (pkgs) protontricks steamtinkerlaunch winetricks; };
     };
   };
 }

@@ -17,9 +17,8 @@
       "video"
     ];
 
-    packages =
-      with pkgs;
-      lib.optionals config.services.desktopManager.plasma6.enable [
+    packages = lib.optionals config.services.desktopManager.plasma6.enable lib.attrValues {
+      inherit (pkgs)
         gimp
         keepassxc
         nicotine-plus
@@ -27,7 +26,8 @@
         qbittorrent
         telegram-desktop
         vesktop
-      ];
+        ;
+    };
   };
 
   users.users.root.hashedPassword = "!";

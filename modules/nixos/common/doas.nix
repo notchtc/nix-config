@@ -14,5 +14,5 @@
     };
   };
 
-  environment.systemPackages = with pkgs; [ doas-sudo-shim ];
+  environment.systemPackages = [ pkgs.doas-sudo-shim ];
 }

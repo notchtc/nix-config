@@ -17,11 +17,11 @@ pkgs.stdenvNoCC.mkDerivation (finalAttrs: {
     runHook postInstall
   '';
 
-  meta = with pkgs.lib; {
+  meta = {
     description = "A fork of stock Digital Clock widget with extra option to split text in vertical panel.";
     homepage = "https://github.com/baionline/split-clock";
-    license = licenses.gpl3Only;
-    maintainers = with maintainers; [ notchtc ];
+    license = pkgs.lib.licenses.gpl3Only;
+    maintainers = with pkgs.lib.maintainers; [ notchtc ];
     inherit (pkgs.kdePackages.kwindowsystem.meta) platforms;
   };
 })
