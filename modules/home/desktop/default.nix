@@ -9,7 +9,7 @@
   ];
 
   home = {
-    packages = lib.attrValues { inherit (pkgs) jamesdsp tauon; };
+    packages = lib.attrValues { inherit (pkgs) jamesdsp strawberry-qt6; };
 
     sessionVariables = {
       NIXOS_OZONE_WL = "1";

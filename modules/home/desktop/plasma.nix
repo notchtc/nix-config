@@ -42,7 +42,7 @@
               launchers = [
                 "applications:org.kde.dolphin.desktop"
                 "applications:Schizofox.desktop"
-                "applications:com.github.taiko2k.tauonmb.desktop"
+                "applications:org.strawberrymusicplayer.strawberry.desktop"
                 "applications:org.telegram.desktop.desktop"
                 "applications:vesktop.desktop"
                 "applications:steam.desktop"
