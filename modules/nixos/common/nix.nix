@@ -20,8 +20,6 @@
     channel.enable = false;
 
     settings = {
-      nix-path = "nixpkgs=flake:nixpkgs";
-
       max-jobs = "auto";
 
       use-xdg-base-directories = true;

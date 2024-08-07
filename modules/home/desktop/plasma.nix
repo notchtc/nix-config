@@ -101,7 +101,7 @@
       };
     };
 
-    kscreenlocker.wallpaperPictureOfTheDay.provider = "simonstalenhag";
+    kscreenlocker.appearance.wallpaperPictureOfTheDay.provider = "simonstalenhag";
 
     shortcuts = {
       "services/org.kde.krunner.desktop"."_launch" = [

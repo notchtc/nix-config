@@ -1,4 +1,10 @@
-{ lib, pkgs, ... }:
+{
+  inputs,
+  lib,
+  pkgs,
+  osConfig,
+  ...
+}:
 {
   programs.helix = {
     enable = true;
@@ -22,7 +28,9 @@
         nixd = {
           command = "${pkgs.nixd}/bin/nixd";
           config = {
+            nixpkgs.expr = "import (builtins.getFlake \"${inputs.self}\").inputs.nixpkgs {}";
             formatting.command = [ "nixfmt" ];
+            options.nixos.expr = "(builtins.getFlake \"${inputs.self}\").nixosConfigurations.${osConfig.networking.hostName}.options";
           };
         };
       };
