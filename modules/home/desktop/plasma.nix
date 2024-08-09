@@ -60,7 +60,7 @@
     };
 
     kwin = {
-      borderlessMaximizedWindows = true;
+      borderlessMaximizedWindows = false;
 
       titlebarButtons = {
         left = [
