@@ -14,18 +14,94 @@
   programs.plasma = {
     enable = true;
 
-    workspace = {
-      clickItemTo = "open";
-      cursor.theme = "phinger-cursors-dark";
-      iconTheme = "Papirus-Dark";
-      lookAndFeel = "org.kde.breezedark.desktop";
-      wallpaperPictureOfTheDay.provider = "simonstalenhag";
+    fonts = {
+      general = {
+        family = "sans-serif";
+        pointSize = 10;
+      };
+
+      fixedWidth = {
+        family = "monospace";
+        pointSize = 10;
+      };
+
+      small = {
+        family = "sans-serif";
+        pointSize = 8;
+      };
+
+      toolbar = {
+        family = "sans-serif";
+        pointSize = 10;
+      };
+
+      menu = {
+        family = "sans-serif";
+        pointSize = 10;
+      };
+
+      windowTitle = {
+        family = "sans-serif";
+        pointSize = 10;
+      };
+    };
+
+    kscreenlocker = {
+      autoLock = true;
+      lockOnResume = true;
+      timeout = 3;
+      passwordRequired = true;
+      passwordRequiredDelay = 10;
+      appearance = {
+        alwaysShowClock = true;
+        showMediaControls = true;
+        wallpaperPictureOfTheDay.provider = "simonstalenhag";
+      };
+    };
+
+    kwin = {
+      borderlessMaximizedWindows = true;
+
+      titlebarButtons = {
+        left = [
+          "more-window-actions"
+          "help"
+        ];
+        right = [
+          "minimize"
+          "maximize"
+          "close"
+        ];
+      };
+
+      effects = {
+        shakeCursor.enable = true;
+        translucency.enable = false;
+        blur.enable = false;
+      };
+
+      nightLight = {
+        enable = true;
+        mode = "times";
+
+        time = {
+          morning = "06:00";
+          evening = "19:50";
+        };
+
+        temperature.night = 2500;
+      };
+
+      virtualDesktops = {
+        rows = 2;
+        number = 4;
+      };
     };
 
     panels = [
       {
-        location = "left";
-        height = 30;
+        location = "right";
+        height = 29;
         floating = true;
         widgets = [
           {
@@ -37,6 +113,7 @@
               applicationsDisplayMode = "list";
             };
           }
+          "org.kde.plasma.marginsseparator"
           {
             iconTasks = {
               launchers = [
@@ -64,44 +141,18 @@
               };
             };
           }
+          "org.kde.plasma.marginsseparator"
           {
             name = "split-clock";
             config = {
               Appearance = {
-                autoFontAndSize = false;
-                fontFamily = "Iosevka Nerd Font";
-                fontSize = 14;
-                fontStyleName = "Regular";
-                fontWeight = 400;
+                autoFontAndSize = true;
               };
             };
           }
         ];
       }
     ];
-
-    kwin = {
-      effects.blur.enable = false;
-
-      nightLight = {
-        enable = true;
-        mode = "times";
-
-        time = {
-          morning = "06:00";
-          evening = "19:50";
-        };
-
-        temperature.night = 2500;
-      };
-
-      virtualDesktops = {
-        rows = 2;
-        number = 4;
-      };
-    };
-
-    kscreenlocker.appearance.wallpaperPictureOfTheDay.provider = "simonstalenhag";
 
     shortcuts = {
       "services/org.kde.krunner.desktop"."_launch" = [
@@ -112,36 +163,12 @@
       "services/Alacritty.desktop"."New" = "Meta+Return";
     };
 
-    fonts = {
-      general = {
-        family = "Iosevka Nerd Font";
-        pointSize = 10;
-      };
-
-      fixedWidth = {
-        family = "Iosevka Nerd Font Mono";
-        pointSize = 10;
-      };
-
-      small = {
-        family = "Iosevka Nerd Font";
-        pointSize = 8;
-      };
-
-      toolbar = {
-        family = "Iosevka Nerd Font";
-        pointSize = 10;
-      };
-
-      menu = {
-        family = "Iosevka Nerd Font";
-        pointSize = 10;
-      };
-
-      windowTitle = {
-        family = "Iosevka Nerd Font";
-        pointSize = 10;
-      };
+    workspace = {
+      clickItemTo = "open";
+      cursor.theme = "phinger-cursors-dark";
+      iconTheme = "Papirus-Dark";
+      lookAndFeel = "org.kde.breezedark.desktop";
+      wallpaperPictureOfTheDay.provider = "simonstalenhag";
     };
 
     configFile = {

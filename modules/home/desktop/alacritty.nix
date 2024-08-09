@@ -16,6 +16,8 @@
       };
 
       font = {
+        normal.family = "monospace";
+
         size = 10;
       };
 

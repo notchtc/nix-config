@@ -2,12 +2,7 @@
 {
   fonts = {
     packages = lib.attrValues {
-      inherit (pkgs)
-        iosevka
-        noto-fonts
-        noto-fonts-cjk
-        noto-fonts-emoji
-        ;
+      inherit (pkgs) sarasa-gothic inter;
 
       nerdfonts = pkgs.nerdfonts.override { fonts = [ "Iosevka" ]; };
     };
@@ -18,8 +13,18 @@
 
       defaultFonts = {
         serif = [ "DejaVu Serif" ];
-        sansSerif = [ "Iosevka Aile" ];
-        monospace = [ "Iosevka Nerd Font Mono" ];
+        sansSerif = [
+          "Inter"
+          "Sarasa Gothic J"
+          "Sarasa Gothic K"
+          "Sarasa Gothic SC"
+        ];
+        monospace = [
+          "Sarasa Mono J"
+          "Sarasa Mono K"
+          "Sarasa Mono SC"
+          "Iosevka Nerd Font Mono"
+        ];
         emoji = [ "Noto Color Emoji" ];
       };
     };

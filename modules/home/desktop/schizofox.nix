@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{ inputs, ... }:
 {
   imports = [ inputs.schizofox.homeManagerModule ];
 
@@ -8,17 +8,15 @@
 
   programs.schizofox = {
     enable = true;
-    package = pkgs.firefox-esr-128-unwrapped;
 
     settings = {
-      "dom.private-attribution.submission.enabled" = false;
       "dom.event.clipboardevents.enabled" = true;
       "media.ffmpeg.vaapi.enabled" = true;
       "general.autoScroll" = true;
     };
 
     theme = {
-      font = "Iosevka Aile";
+      font = "Inter";
 
       defaultUserChrome.enable = false;
       defaultUserContent.enable = false;
