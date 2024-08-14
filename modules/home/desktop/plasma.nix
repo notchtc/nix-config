@@ -39,6 +39,13 @@
       };
     };
 
+    input.keyboard = {
+      layouts = [ { layout = "pl"; } ];
+      repeatDelay = 485;
+      repeatRate = 37;
+      options = [ "caps:swapescape" ];
+    };
+
     kscreenlocker = {
       autoLock = true;
       lockOnResume = true;
@@ -94,7 +101,7 @@
     panels = [
       {
         location = "right";
-        height = 29;
+        height = 28;
         floating = true;
         widgets = [
           {
@@ -162,15 +169,17 @@
       iconTheme = "Papirus-Dark";
       lookAndFeel = "org.kde.breezedark.desktop";
       wallpaperPictureOfTheDay.provider = "simonstalenhag";
+
+      desktop.mouseActions = {
+        leftClick = "applicationLauncher";
+        middleClick = "switchWindow";
+      };
     };
 
     configFile = {
       "kdeglobals"."General"."TerminalApplication" = "alacritty";
       "kdeglobals"."General"."TerminalService" = "Alacritty.desktop";
       "kdeglobals"."KDE"."AnimationDurationFactor" = 0;
-
-      "kxkbrc"."Layout"."LayoutList" = "pl";
-      "kxkbrc"."Layout"."Options" = "caps:swapescape";
 
       "breezerc"."Common"."ShadowSize" = "ShadowNone";
 

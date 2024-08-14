@@ -20,8 +20,6 @@
     channel.enable = false;
 
     settings = {
-      max-jobs = "auto";
-
       use-xdg-base-directories = true;
 
       experimental-features = [

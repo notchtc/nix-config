@@ -39,4 +39,6 @@
     displayManager.autoLogin.user = "chtc";
   };
   systemd.services.ModemManager.enable = lib.mkForce false;
+
+  nix.settings.max-jobs = 4;
 }
