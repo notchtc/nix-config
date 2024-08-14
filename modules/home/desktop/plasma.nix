@@ -4,13 +4,6 @@
 
   home.packages = [ inputs.self.packages.${pkgs.system}.split-clock ];
 
-  dconf = {
-    enable = true;
-    settings = {
-      "org/gnome/desktop/interface".color-scheme = "prefer-dark";
-    };
-  };
-
   programs.plasma = {
     enable = true;
 
