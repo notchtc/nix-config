@@ -9,10 +9,19 @@
   ];
 
   home = {
-    packages = lib.attrValues { inherit (pkgs) jamesdsp strawberry-qt6; };
+    packages = lib.attrValues { inherit (pkgs) strawberry-qt6; };
 
     sessionVariables = {
       NIXOS_OZONE_WL = "1";
+    };
+  };
+
+  services = {
+    easyeffects.enable = true;
+
+    remmina = {
+      enable = true;
+      systemdService.enable = false;
     };
   };
 }
