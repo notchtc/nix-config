@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   boot = {
-    kernelPackages = pkgs.linuxPackages_cachyos-lto;
+    kernelPackages = pkgs.linuxPackages_zen;
 
     consoleLogLevel = 0;
     kernelParams = [
