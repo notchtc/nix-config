@@ -1,14 +1,15 @@
-{ inputs, pkgs, ... }:
+{ inputs, ... }:
 {
-  imports = [ ./nh.nix ];
+  imports = [
+    inputs.lix.nixosModules.lixFromNixpkgs
+    ./nh.nix
+  ];
 
   nixpkgs = {
     config.allowUnfree = true;
   };
 
   nix = {
-    package = pkgs.lix;
-
     registry = {
       home-manager.flake = inputs.home-manager;
       nixpkgs.flake = inputs.nixpkgs;

@@ -7,6 +7,13 @@
   programs.plasma = {
     enable = true;
 
+    desktop = {
+      mouseActions = {
+        leftClick = "applicationLauncher";
+        middleClick = "switchWindow";
+      };
+    };
+
     fonts = {
       general = {
         family = "sans-serif";
@@ -169,11 +176,7 @@
       iconTheme = "Papirus-Dark";
       lookAndFeel = "org.kde.breezedark.desktop";
       wallpaperPictureOfTheDay.provider = "simonstalenhag";
-
-      desktop.mouseActions = {
-        leftClick = "applicationLauncher";
-        middleClick = "switchWindow";
-      };
+      wallpaperFillMode = "preserveAspectCrop";
     };
 
     configFile = {
