@@ -1,7 +1,12 @@
 { pkgs, lib, ... }:
 {
   environment.systemPackages = lib.attrValues {
-    inherit (pkgs) lime3ds melonDS ppsspp-sdl-wayland;
+    inherit (pkgs)
+      lime3ds
+      lutris
+      melonDS
+      ppsspp-sdl-wayland
+      ;
 
     wine = pkgs.wineWowPackages.stagingFull;
   };
