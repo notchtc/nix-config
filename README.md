@@ -21,7 +21,6 @@ Flakes used:
 - [plasma-manager](https://github.com/pjones/plasma-manager)
 - [nh](https://github.com/viperML/nh)
 - [nix-index-database](https://github.com/Mic92/nix-index-database)
-- [nur](https://github.com/nix-community/NUR)
 - [nyx](https://github.com/chaotic-cx/nyx)
 - [schizofox](https://github.com/schizofox/schizofox)
 

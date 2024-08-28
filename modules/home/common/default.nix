@@ -1,7 +1,6 @@
 { inputs, ... }:
 {
   imports = [
-    inputs.nur.hmModules.nur
     inputs.chaotic.homeManagerModules.default
     inputs.nix-index-database.hmModules.nix-index
     ./git.nix

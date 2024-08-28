@@ -7,7 +7,6 @@
 {
   imports = [
     inputs.chaotic.nixosModules.default
-    inputs.nur.nixosModules.nur
     inputs.home-manager.nixosModules.default
     ./boot.nix
     ./doas.nix

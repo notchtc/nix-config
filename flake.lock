@@ -486,21 +486,6 @@
         "type": "github"
       }
     },
-    "nur": {
-      "locked": {
-        "lastModified": 1724694491,
-        "narHash": "sha256-3cHutbd/e39nQzZDsPzDJdT+f6pDW+hPWJHBVZoFH2E=",
-        "owner": "nix-community",
-        "repo": "NUR",
-        "rev": "e55b96ceba3d72682bafd7d8dd291600192675ec",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-community",
-        "repo": "NUR",
-        "type": "github"
-      }
-    },
     "plasma-manager": {
       "inputs": {
         "home-manager": [
@@ -534,7 +519,6 @@
         "nix-index-database": "nix-index-database",
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs_2",
-        "nur": "nur",
         "plasma-manager": "plasma-manager",
         "schizofox": "schizofox"
       }
