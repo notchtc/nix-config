@@ -17,7 +17,7 @@
       settings = {
         general = {
           softrealtime = "auto";
-          renice = 15;
+          renice = 17;
         };
       };
     };
@@ -29,7 +29,10 @@
       localNetworkGameTransfers.openFirewall = true;
       extest.enable = true;
 
-      extraCompatPackages = [ pkgs.proton-ge-custom ];
+      extraCompatPackages = [
+        pkgs.luxtorpeda
+        pkgs.proton-ge-custom
+      ];
       extraPackages = lib.attrValues { inherit (pkgs) protontricks steamtinkerlaunch winetricks; };
     };
   };

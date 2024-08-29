@@ -11,9 +11,10 @@
     initialPassword = "changeme";
 
     extraGroups = [
-      "wheel"
-      "networkmanager"
       "audio"
+      "gamemode"
+      "networkmanager"
+      "wheel"
       "video"
     ];
 
@@ -22,6 +23,7 @@
         gimp
         keepassxc
         nicotine-plus
+        parsec-bin
         picard
         qbittorrent
         telegram-desktop
