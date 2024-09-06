@@ -66,6 +66,12 @@
       };
     };
 
+    krunner = {
+      position = "center";
+      activateWhenTypingOnDesktop = false;
+      historyBehavior = "enableSuggestions";
+    };
+
     kwin = {
       borderlessMaximizedWindows = false;
 
@@ -188,7 +194,6 @@
 
       "kwinrc"."Compositing"."LatencyPolicy" = "Low";
 
-      "krunnerrc"."General"."FreeFloating" = true;
       "krunnerrc"."Plugins"."baloosearchEnabled" = false;
       "krunnerrc"."Plugins"."browserhistoryEnabled" = false;
       "krunnerrc"."Plugins"."browsertabsEnabled" = false;
