@@ -8,16 +8,17 @@
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1726234697,
-        "narHash": "sha256-K9nPyLT0oFN7dbWNmM8dD3rxhfJ65AZnR3xCMlIPmZQ=",
+        "lastModified": 1725462867,
+        "narHash": "sha256-REr+2NbwtTZNGzg1WQVZAmUCdBlkKmvWMhgmD64c8dc=",
         "owner": "numtide",
         "repo": "blueprint",
-        "rev": "23943e679928b555fdc6bf62edaa032165027f14",
+        "rev": "c31c9d42b75316cc9abfd35e2070b5fd49bce9b5",
         "type": "github"
       },
       "original": {
         "owner": "numtide",
         "repo": "blueprint",
+        "rev": "c31c9d42b75316cc9abfd35e2070b5fd49bce9b5",
         "type": "github"
       }
     },
