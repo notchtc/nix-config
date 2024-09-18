@@ -8,7 +8,7 @@
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
 
     blueprint = {
-      url = "github:numtide/blueprint/c31c9d42b75316cc9abfd35e2070b5fd49bce9b5";
+      url = "github:numtide/blueprint";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
