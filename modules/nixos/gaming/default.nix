@@ -28,12 +28,12 @@
       dedicatedServer.openFirewall = true;
       localNetworkGameTransfers.openFirewall = true;
       extest.enable = true;
+      protontricks.enable = true;
 
       extraCompatPackages = [
         pkgs.luxtorpeda
         pkgs.proton-ge-custom
       ];
-      extraPackages = lib.attrValues { inherit (pkgs) protontricks steamtinkerlaunch winetricks; };
     };
   };
 }
