@@ -11,6 +11,7 @@
     ./panels.nix
     ./shortcuts.nix
     ./theme.nix
+    ./window-rules.nix
   ];
 
   programs.plasma = {
