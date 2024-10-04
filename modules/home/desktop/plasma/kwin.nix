@@ -1,7 +1,7 @@
 {
   programs.plasma = {
     kwin = {
-      borderlessMaximizedWindows = true;
+      borderlessMaximizedWindows = false;
 
       effects = {
         desktopSwitching.animation = "off";
