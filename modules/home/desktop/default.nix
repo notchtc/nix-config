@@ -4,7 +4,7 @@
     ./alacritty.nix
     ./gtk.nix
     ./mpv.nix
-    ./plasma.nix
+    ./plasma
     ./schizofox.nix
   ];
 
