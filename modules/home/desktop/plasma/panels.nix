@@ -10,11 +10,13 @@
       widgets = [
         {
           kickoff = {
-            icon = "nix-snowflake-white";
-
             compactDisplayStyle = true;
-            favoritesDisplayMode = "list";
+            showActionButtonCaptions = false;
+            sortAlphabetically = true;
             applicationsDisplayMode = "list";
+            favoritesDisplayMode = "list";
+            icon = "nix-snowflake-white";
+            showButtonsFor = "session";
           };
         }
         {
@@ -45,6 +47,14 @@
           };
         }
         {
+          name = "org.kde.plasma.pager";
+          config = {
+            General = {
+              currentDesktopSelected = "ShowDesktop";
+            };
+          };
+        }
+        {
           name = "split-clock";
           config = {
             Appearance = {
@@ -52,7 +62,6 @@
             };
           };
         }
-        "org.kde.plasma.pager"
       ];
     }
   ];
