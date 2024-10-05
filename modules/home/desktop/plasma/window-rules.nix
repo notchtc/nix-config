@@ -5,7 +5,7 @@
       match = {
         window-class = {
           value = "firefox";
-          type = "exact";
+          type = "substring";
         };
       };
       apply = {
