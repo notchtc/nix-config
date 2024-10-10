@@ -46,6 +46,7 @@
       wireplumber = {
         format = "vol: {volume}%";
         format-muted = "muted";
+        on-click = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
         rotate = 270;
       };
 
@@ -66,11 +67,9 @@
         rotate = 270;
       };
 
-      "custom/separator" = {
-        format = "/";
-        interval = "once";
-        tooltip = false;
-        rotate = 270;
+      tray = {
+        icon-size = 16;
+        spacing = 3;
       };
 
       "custom/swaync" = {
@@ -92,6 +91,13 @@
         on-click = "swaync-client -t -sw";
         on-click-right = "swaync-client -d -sw";
         escape = true;
+      };
+
+      "custom/separator" = {
+        format = "/";
+        interval = "once";
+        tooltip = false;
+        rotate = 270;
       };
     };
 
