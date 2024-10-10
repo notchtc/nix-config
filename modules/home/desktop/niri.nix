@@ -71,7 +71,8 @@
           spawn "sh" "-c"
             "alacritty msg create-window --working-directory ~ || alacritty";
         "Mod+D".action = spawn "fuzzel";
-        "Super+Alt+L".action = spawn "swaylock";
+        "Mod+Alt+L".action = spawn "swaylock";
+        "Mod+Alt+E".action = spawn "shutdown" "-h" "now";
 
         "XF86AudioRaiseVolume" = {
           action = spawn "wpctl" "set-volume" "-l" "1.0" "@DEFAULT_AUDIO_SINK@" "0.1+";
