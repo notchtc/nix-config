@@ -1,28 +1,20 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 {
-  dconf = {
-    enable = true;
-    settings = {
-      "org/gnome/desktop/interface".color-scheme = "prefer-dark";
-    };
-  };
+  stylix.targets.gtk.extraCss = ''
+    window.background { border-radius: 0; }
+  '';
 
   gtk = {
     enable = true;
 
     iconTheme = {
-      name = "Papirus-Dark";
-      package = pkgs.papirus-icon-theme;
-    };
-
-    theme = {
-      name = "Breeze-Dark";
-      package = pkgs.kdePackages.breeze-gtk;
+      name = "MoreWaita";
+      package = pkgs.morewaita-icon-theme;
     };
 
     cursorTheme = {
-      name = "phinger-cursors-dark";
-      package = pkgs.phinger-cursors;
+      name = "${config.stylix.cursor.name}";
+      package = "${config.stylix.cursor.package}";
     };
 
     gtk3.extraConfig = {

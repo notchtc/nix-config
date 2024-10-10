@@ -1,15 +1,13 @@
 {
   flake,
-  lib,
   ...
 }:
 {
   imports = [
     flake.nixosModules.common
-    ./plasma.nix
+    ./niri.nix
     ./pipewire.nix
-    ./fonts.nix
+    #    ./plasma.nix
+    ./stylix.nix
   ];
-
-  systemd.services.NetworkManager-wait-online.enable = lib.mkForce false;
 }

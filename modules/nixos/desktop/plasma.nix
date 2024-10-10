@@ -20,7 +20,6 @@
       elisa
       kate
       konsole
-      krdp
       ;
   };
 }

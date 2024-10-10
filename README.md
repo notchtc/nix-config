@@ -20,9 +20,11 @@ Flakes used:
 - [lix](https://git.lix.systems/lix-project/nixos-module)
 - [plasma-manager](https://github.com/pjones/plasma-manager)
 - [nh](https://github.com/viperML/nh)
+- [niri-flake](https://github.com/sodiboo/niri-flake)
 - [nix-index-database](https://github.com/Mic92/nix-index-database)
 - [nyx](https://github.com/chaotic-cx/nyx)
 - [schizofox](https://github.com/schizofox/schizofox)
+- [stylix](https://github.com/danth/stylix)
 
 ## Resources
 Other configurations from where I learned and copied:

@@ -88,7 +88,7 @@
         character = {
           success_symbol = "[λ](bold green)";
           error_symbol = "[λ](bold red)";
-          vimcmd_symbol = "[Λ](bold green)";
+          vimcmd_symbol = "[Λ](bold white)";
           vimcmd_replace_one_symbol = "[Λ](bold purple)";
           vimcmd_replace_symbol = "[Λ](bold_purple)";
           vimcmd_visual_symbol = "[Λ](bold_yellow)";

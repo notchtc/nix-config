@@ -2,6 +2,8 @@
   programs = {
     git = {
       enable = true;
+      userName = "chtc";
+      userEmail = "chtc@tuta.io";
 
       aliases = {
         d = "diff";

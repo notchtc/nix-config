@@ -41,4 +41,8 @@
   systemd.services.ModemManager.enable = lib.mkForce false;
 
   nix.settings.max-jobs = 4;
+
+  home-manager.users.chtc = {
+    imports = [ flake.homeModules.desktop ];
+  };
 }
