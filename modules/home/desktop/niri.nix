@@ -34,9 +34,7 @@
           enable = false;
         };
 
-        default-column-width = {
-          proportion = 0.5;
-        };
+        default-column-width = { };
 
         focus-ring = with config.lib.stylix.colors.withHashtag; {
           enable = true;
@@ -78,6 +76,12 @@
               bottom-right = r;
             };
           clip-to-geometry = true;
+        }
+        {
+          matches = [ { app-id = "^foot$"; } ];
+          default-column-width = {
+            proportion = 0.5;
+          };
         }
       ];
 
