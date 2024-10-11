@@ -8,7 +8,6 @@
 
     settings = {
       main = {
-        dpi-aware = "yes";
         pad = "3x3 center";
       };
 

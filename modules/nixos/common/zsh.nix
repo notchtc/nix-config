@@ -25,7 +25,6 @@
         ll = "eza -l";
         la = "eza -a";
         lla = "eza -la";
-        buildsite = "command rm -f docs/.files && ssg src docs \"chtc's site\" \"https://notchtc.github.io\"";
       };
 
       shellInit = ''
@@ -35,8 +34,6 @@
 
       interactiveShellInit = ''
         bindkey -v
-
-        preexec() { print -Pn "\e]0;$1 %~\a" }
 
         eval "$(zoxide init zsh)"
       '';
@@ -62,7 +59,7 @@
         line_break.disabled = true;
 
         directory = {
-          read_only = " ";
+          read_only = " (r)";
         };
 
         git_commit.format = ''( [\($hash$tag\)]($style))'';

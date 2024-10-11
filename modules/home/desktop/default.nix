@@ -6,8 +6,8 @@
 {
   imports = [
     ../common
-
-    ./alacritty.nix
+    #    ./alacritty.nix
+    ./foot.nix
     ./gtk.nix
     ./niri.nix
     ./mpv.nix
@@ -19,15 +19,19 @@
   home = {
     packages = lib.attrValues {
       inherit (pkgs)
+        _64gram
         gimp
         keepassxc
         nicotine-plus
+        pcmanfm
         picard
         qbittorrent
-        strawberry-qt6
-        telegram-desktop
+        quodlibet-full
         vesktop
+        xarchiver
         ;
+
+      papers = pkgs.papers.override { supportNautilus = false; };
     };
 
     sessionVariables = {

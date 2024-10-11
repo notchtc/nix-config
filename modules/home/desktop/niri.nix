@@ -1,4 +1,8 @@
-{ config, ... }:
+{
+  config,
+  pkgs,
+  ...
+}:
 {
   imports = [
     ./waybar.nix
@@ -28,6 +32,9 @@
       };
 
       layout = {
+        default-column-width = {
+          proportion = 0.5;
+        };
         gaps = 6;
 
         focus-ring = {
@@ -67,9 +74,7 @@
       binds = with config.lib.niri.actions; {
         "Mod+Shift+Slash".action = show-hotkey-overlay;
 
-        "Mod+Return".action =
-          spawn "sh" "-c"
-            "alacritty msg create-window --working-directory ~ || alacritty";
+        "Mod+Return".action = spawn "foot";
         "Mod+D".action = spawn "fuzzel";
         "Mod+Alt+L".action = spawn "swaylock";
         "Mod+Alt+E".action = spawn "shutdown" "-h" "now";
@@ -206,7 +211,7 @@
         "Shift+Print".action = screenshot;
         "Ctrl+Print".action = screenshot-window;
 
-        "Mod+Shift+E".action = quit;
+        "Mod+Shift+E".action = spawn "sh" "${./powermenu.sh}";
 
         "Mod+Shift+P".action = power-off-monitors;
       };
@@ -241,19 +246,68 @@
       ];
     };
 
-    fuzzel.enable = true;
+    fuzzel = {
+      enable = true;
+      settings = {
+        main = {
+          icon-theme = "MoreWaita";
+          horizontal-pad = 6;
+          prompt = "\"λ \"";
+          vertical-pad = 6;
+        };
+        border = {
+          width = 3;
+          radius = 6;
+        };
+      };
+    };
     swaylock.enable = true;
   };
 
-  services.swaync = {
-    enable = true;
+  services = {
+    swaync = {
+      enable = true;
 
-    settings = {
-      positionX = "left";
-      positionY = "top";
-      notification-icon-size = 32;
-      notification-body-image-height = 50;
-      notification-body-image-width = 100;
+      settings = {
+        positionX = "right";
+        positionY = "top";
+        notification-icon-size = 32;
+        notification-body-image-height = 50;
+        notification-body-image-width = 100;
+      };
     };
+
+    swayidle =
+      let
+        systemctl = "${pkgs.systemd}/bin/systemctl";
+        niri = "${pkgs.niri}/bin/niri";
+        swaylock = "${pkgs.swaylock}/bin/swaylock";
+      in
+      {
+        enable = true;
+
+        timeouts = [
+          {
+            timeout = 60;
+            command = "${niri} msg action power-off-monitors";
+          }
+          {
+            timeout = 120;
+            command = "${swaylock}";
+          }
+          {
+            timeout = 240;
+            command = "${systemctl} suspend";
+          }
+        ];
+
+        events = [
+          {
+            event = "before-sleep";
+            command = "${swaylock}";
+          }
+        ];
+      };
   };
+
 }

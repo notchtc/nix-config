@@ -9,7 +9,7 @@
       reload_style_on_change = true;
 
       layer = "top";
-      position = "left";
+      position = "right";
       width = 21;
 
       modules-left = [
@@ -40,14 +40,14 @@
         format = "{:%H:%M}";
         format-alt = "{:%d %B %Y %H:%M}";
         tooltip = false;
-        rotate = 270;
+        rotate = 90;
       };
 
       wireplumber = {
         format = "vol: {volume}%";
         format-muted = "muted";
         on-click = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
-        rotate = 270;
+        rotate = 90;
       };
 
       network = {
@@ -58,13 +58,13 @@
         tooltip-format = "{ifname} via {gwaddr}";
         tooltip-format-ethernet = "{ipaddr}/{cidr} ({ifname})";
         tooltip-format-wifi = "{essid} ({signalStrength}%)";
-        on-click = "alacritty -e nmtui";
-        rotate = 270;
+        on-click = "foot -e nmtui";
+        rotate = 90;
       };
 
       battery = {
         format = "bat: {capacity}%";
-        rotate = 270;
+        rotate = 90;
       };
 
       tray = {
@@ -97,13 +97,13 @@
         format = "/";
         interval = "once";
         tooltip = false;
-        rotate = 270;
+        rotate = 90;
       };
     };
 
     style =
       let
-        colors = config.lib.stylix.colors;
+        inherit (config.lib.stylix) colors;
       in
       ''
         * {
@@ -127,14 +127,12 @@
         }
 
         #battery,
+        #custom-separator,
         #clock,
         #network,
         #tray,
-        #wireplumber {
-          padding: 3px 0px 3px 0px;
-        }
-
-        #custom-separator {
+        #wireplumber,
+        #workspaces {
           padding: 3px 0px 3px 0px;
         }
 
@@ -149,16 +147,20 @@
           color: shade(#${colors.base07}, 1.25);
         }
 
-        #workspaces {
-          padding: 6px 0px 6px 0px;
-        }
-
         #workspaces button.focused, #workspaces button.active {
           color: #${colors.base0D};
         }
 
+        #workspaces button.focused:hover, #workspaces button.active:hover {
+          color: shade(#${colors.base0D}, 1.25);
+        }
+
         #workspaces button.urgent {
           color: #${colors.base08};
+        }
+
+        #workspaces button.urgent:hover {
+          color: shade(#${colors.base08}, 1.25);
         }
 
         #battery.warning:not(.charging) {
@@ -169,26 +171,5 @@
           color: #${colors.base08};
         }
       '';
-  };
-
-  services.swayidle = {
-    enable = true;
-    timeouts = [
-      {
-        timeout = 120;
-        command = "swaylock";
-      }
-      {
-        timeout = 240;
-        command = "niri msg action power-off-monitors";
-      }
-    ];
-
-    events = [
-      {
-        event = "before-sleep";
-        command = "swaylock";
-      }
-    ];
   };
 }
