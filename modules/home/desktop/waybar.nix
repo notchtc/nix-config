@@ -103,7 +103,7 @@
 
     style =
       let
-        inherit (config.lib.stylix) colors;
+        colors = config.lib.stylix.colors.withHashtag;
       in
       ''
         * {
@@ -117,12 +117,12 @@
         }
 
         window#waybar, tooltip {
-          background: #${colors.base00};
-          color: #${colors.base07};
+          background: ${colors.base00};
+          color: ${colors.base07};
         }
 
         tooltip {
-          border: 3px solid #${colors.base0D};
+          border: 3px solid ${colors.base0D};
           border-radius: 6px;
         }
 
@@ -137,38 +137,38 @@
         }
 
         #wireplumber.muted {
-          color: #${colors.base04};
+          color: ${colors.base04};
         }
 
         #workspaces button:hover {
           box-shadow: inherit;
           text-shadow: inherit;
           background: transparent;
-          color: shade(#${colors.base07}, 1.25);
+          color: shade(${colors.base07}, 1.25);
         }
 
         #workspaces button.focused, #workspaces button.active {
-          color: #${colors.base0D};
+          color: ${colors.base0D};
         }
 
         #workspaces button.focused:hover, #workspaces button.active:hover {
-          color: shade(#${colors.base0D}, 1.25);
+          color: shade(${colors.base0D}, 1.25);
         }
 
         #workspaces button.urgent {
-          color: #${colors.base08};
+          color: ${colors.base08};
         }
 
         #workspaces button.urgent:hover {
-          color: shade(#${colors.base08}, 1.25);
+          color: shade(${colors.base08}, 1.25);
         }
 
         #battery.warning:not(.charging) {
-          color: #${colors.base0A};
+          color: ${colors.base0A};
         }
 
         #battery.critical:not(.charging) {
-          color: #${colors.base08};
+          color: ${colors.base08};
         }
       '';
   };

@@ -17,11 +17,6 @@
         DISPLAY = ":0";
       };
 
-      cursor = {
-        size = 24;
-        theme = "phinger-cursors-dark";
-      };
-
       input.keyboard = {
         xkb = {
           layout = "pl";
@@ -32,19 +27,34 @@
       };
 
       layout = {
-        default-column-width = {
-          proportion = 0.5;
-        };
-        gaps = 6;
+        center-focused-column = "always";
+        gaps = 9;
 
-        focus-ring = {
+        border = {
           enable = false;
         };
 
-        border = {
+        default-column-width = {
+          proportion = 0.5;
+        };
+
+        focus-ring = with config.lib.stylix.colors.withHashtag; {
           enable = true;
           width = 3;
+
+          active = {
+            color = base0D;
+          };
+          inactive = {
+            color = base03;
+          };
         };
+
+        preset-column-widths = [
+          { proportion = 0.25; }
+          { proportion = 0.5; }
+          { proportion = 0.75; }
+        ];
 
         struts = {
           left = 3;
@@ -224,20 +234,6 @@
             "fill"
             "-i"
             "${config.stylix.image}"
-          ];
-        }
-        {
-          command = [
-            "sh"
-            "-c"
-            "pidof waybar || waybar"
-          ];
-        }
-        {
-          command = [
-            "sh"
-            "-c"
-            "pidof swaync || swaync"
           ];
         }
         {
