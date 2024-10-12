@@ -83,6 +83,12 @@
             proportion = 0.5;
           };
         }
+        {
+          matches = [ { title = "^Pathologic$"; } ];
+          open-fullscreen = true;
+          min-width = 1366;
+          min-height = 768;
+        }
       ];
 
       binds = with config.lib.niri.actions; {
@@ -238,6 +244,20 @@
             "fill"
             "-i"
             "${config.stylix.image}"
+          ];
+        }
+        {
+          command = [
+            "sh"
+            "-c"
+            "pidof waybar || waybar"
+          ];
+        }
+        {
+          command = [
+            "sh"
+            "-c"
+            "pidof swaync || swaync"
           ];
         }
         {
