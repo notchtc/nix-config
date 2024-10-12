@@ -84,6 +84,10 @@
           };
         }
         {
+          matches = [ { app-id = "^org.keepassxc.KeePassXC$"; } ];
+          block-out-from = "screencast";
+        }
+        {
           matches = [ { title = "^Pathologic$"; } ];
           open-fullscreen = true;
           min-width = 1366;
