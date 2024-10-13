@@ -290,6 +290,7 @@
       let
         systemctl = "${pkgs.systemd}/bin/systemctl";
         niri = "${pkgs.niri}/bin/niri";
+        pidof = "${pkgs.procps}/bin/pidof";
         swaylock = "${pkgs.swaylock}/bin/swaylock";
       in
       {
@@ -302,7 +303,7 @@
           }
           {
             timeout = 120;
-            command = "${swaylock}";
+            command = "${pidof} swaylock || ${swaylock}";
           }
           {
             timeout = 240;
@@ -313,7 +314,7 @@
         events = [
           {
             event = "before-sleep";
-            command = "${swaylock}";
+            command = "${pidof} swaylock || ${swaylock}";
           }
         ];
       };
