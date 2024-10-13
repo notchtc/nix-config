@@ -341,7 +341,7 @@
         Type = "notify";
         NotifyAccess = "all";
         ExecStart = "${pkgs.xwayland-satellite}/bin/xwayland-satellite";
-        StandardOutput = "journal";
+        Restart = "on-failure";
       };
     };
 

@@ -15,8 +15,11 @@
       brightnessctl
       playerctl
       swaybg
-      xwayland-satellite
       ;
+
+    xwayland-satellite = pkgs.xwayland-satellite.overrideAttrs (oldAttrs: {
+      buildFeatures = [ "systemd" ];
+    });
   };
 
   nixpkgs.overlays = [ inputs.niri.overlays.niri ];
