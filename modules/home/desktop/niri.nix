@@ -247,6 +247,12 @@
 
         "Mod+Shift+P".action = power-off-monitors;
       };
+
+      spawn-at-startup = [
+        {
+          command = [ "xwayland-satellite" ];
+        }
+      ];
     };
 
     fuzzel = {
@@ -324,23 +330,6 @@
       Install.WantedBy = [ "graphical-session.target" ];
       Service = {
         ExecStart = "${pkgs.swaybg}/bin/swaybg -m fill -i ${config.stylix.image}";
-        Restart = "on-failure";
-      };
-    };
-
-    xwayland-satellite = {
-      Unit = {
-        Description = "Xwayland outside your Wayland";
-        BindsTo = [ "graphical-session.target" ];
-        PartOf = [ "graphical-session.target" ];
-        After = [ "graphical-session.target" ];
-        Requisite = [ "graphical-session.target" ];
-      };
-      Install.WantedBy = [ "graphical-session.target" ];
-      Service = {
-        Type = "notify";
-        NotifyAccess = "all";
-        ExecStart = "${pkgs.xwayland-satellite}/bin/xwayland-satellite";
         Restart = "on-failure";
       };
     };
