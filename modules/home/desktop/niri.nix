@@ -1,5 +1,6 @@
 {
   config,
+  lib,
   pkgs,
   ...
 }:
@@ -17,13 +18,20 @@
         DISPLAY = ":0";
       };
 
-      input.keyboard = {
-        xkb = {
-          layout = "pl";
-          options = "caps:swapescape";
+      input = {
+        keyboard = {
+          xkb = {
+            layout = "pl";
+            options = "caps:swapescape";
+          };
+          repeat-delay = 480;
+          repeat-rate = 40;
         };
-        repeat-delay = 485;
-        repeat-rate = 37;
+
+        focus-follows-mouse = {
+          enable = true;
+          max-scroll-amount = "20%";
+        };
       };
 
       layout = {
@@ -239,35 +247,6 @@
 
         "Mod+Shift+P".action = power-off-monitors;
       };
-
-      spawn-at-startup = [
-        {
-          command = [
-            "swaybg"
-            "-m"
-            "fill"
-            "-i"
-            "${config.stylix.image}"
-          ];
-        }
-        {
-          command = [
-            "sh"
-            "-c"
-            "pidof waybar || waybar"
-          ];
-        }
-        {
-          command = [
-            "sh"
-            "-c"
-            "pidof swaync || swaync"
-          ];
-        }
-        {
-          command = [ "xwayland-satellite" ];
-        }
-      ];
     };
 
     fuzzel = {
@@ -334,4 +313,51 @@
       };
   };
 
+  systemd.user.services = {
+    swaybg = {
+      Unit = {
+        Description = "Set wallpaper";
+        PartOf = [ "graphical-session.target" ];
+        After = [ "graphical-session.target" ];
+        Requisite = [ "graphical-session.target" ];
+      };
+      Install.WantedBy = [ "graphical-session.target" ];
+      Service = {
+        ExecStart = "${pkgs.swaybg}/bin/swaybg -m fill -i ${config.stylix.image}";
+        Restart = "on-failure";
+      };
+    };
+
+    xwayland-satellite = {
+      Unit = {
+        Description = "Xwayland outside your Wayland";
+        BindsTo = [ "graphical-session.target" ];
+        PartOf = [ "graphical-session.target" ];
+        After = [ "graphical-session.target" ];
+        Requisite = [ "graphical-session.target" ];
+      };
+      Install.WantedBy = [ "graphical-session.target" ];
+      Service = {
+        Type = "notify";
+        NotifyAccess = "all";
+        ExecStart = "${pkgs.xwayland-satellite}/bin/xwayland-satellite";
+        StandardOutput = "journal";
+      };
+    };
+
+    swayidle.Unit = {
+      After = lib.mkForce [ "graphical-session.target" ];
+      Requisite = [ "graphical-session.target" ];
+    };
+
+    swaync.Unit = {
+      After = lib.mkForce [ "graphical-session.target" ];
+      Requisite = [ "graphical-session.target" ];
+    };
+
+    waybar.Unit = {
+      After = lib.mkForce [ "graphical-session.target" ];
+      Requisite = [ "graphical-session.target" ];
+    };
+  };
 }
