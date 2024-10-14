@@ -298,16 +298,16 @@
 
         timeouts = [
           {
-            timeout = 60;
-            command = "${niri} msg action power-off-monitors";
-          }
-          {
-            timeout = 120;
+            timeout = 90;
             command = "${pidof} swaylock || ${swaylock}";
           }
           {
+            timeout = 150;
+            command = "${pidof} swaylock && ${niri} msg action power-off-monitors";
+          }
+          {
             timeout = 240;
-            command = "${systemctl} suspend";
+            command = "${pidof} swaylock && ${systemctl} suspend";
           }
         ];
 
