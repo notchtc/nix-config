@@ -18,6 +18,8 @@
         DISPLAY = ":0";
       };
 
+      cursor.hide-after-inactive-ms = 3500;
+
       input = {
         keyboard = {
           xkb = {

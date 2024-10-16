@@ -19,7 +19,6 @@
   home = {
     packages = lib.attrValues {
       inherit (pkgs)
-        _64gram
         gimp
         keepassxc
         nicotine-plus
@@ -27,6 +26,7 @@
         picard
         qbittorrent
         quodlibet-full
+        telegram-desktop
         vesktop
         xarchiver
         ;

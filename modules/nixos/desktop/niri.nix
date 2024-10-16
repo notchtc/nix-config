@@ -15,14 +15,14 @@
       brightnessctl
       playerctl
       swaybg
-      xwayland-satellite
+      xwayland-satellite-unstable
       ;
   };
 
   nixpkgs.overlays = [ inputs.niri.overlays.niri ];
   programs.niri = {
     enable = true;
-    package = pkgs.niri;
+    package = pkgs.niri-unstable;
   };
 
   services.greetd =
