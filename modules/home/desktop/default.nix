@@ -19,19 +19,18 @@
   home = {
     packages = lib.attrValues {
       inherit (pkgs)
+        file-roller
         gimp
         keepassxc
+        nautilus
         nicotine-plus
-        pcmanfm
+        papers
         picard
         qbittorrent
         quodlibet-full
         telegram-desktop
         vesktop
-        xarchiver
         ;
-
-      papers = pkgs.papers.override { supportNautilus = false; };
     };
 
     sessionVariables = {

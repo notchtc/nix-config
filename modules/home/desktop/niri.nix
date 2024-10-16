@@ -320,6 +320,13 @@
           }
         ];
       };
+
+    wlsunset = {
+      enable = true;
+      sunrise = "06:00";
+      sunset = "19:30";
+      temperature.night = 2500;
+    };
   };
 
   systemd.user.services = {
