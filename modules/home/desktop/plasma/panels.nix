@@ -1,6 +1,6 @@
-{ inputs, pkgs, ... }:
+{ perSystem, ... }:
 {
-  home.packages = [ inputs.self.packages.${pkgs.system}.split-clock ];
+  home.packages = [ perSystem.self.split-clock ];
 
   programs.plasma.panels = [
     {

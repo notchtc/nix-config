@@ -1,5 +1,6 @@
 {
   inputs,
+  perSystem,
   lib,
   pkgs,
   ...
@@ -71,6 +72,7 @@
 
   home-manager = {
     extraSpecialArgs.inputs = inputs;
+    extraSpecialArgs.perSystem = perSystem;
     useGlobalPkgs = true;
     useUserPackages = true;
   };
