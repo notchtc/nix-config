@@ -8,18 +8,29 @@
 {
   imports = [
     inputs.chaotic.nixosModules.default
+    inputs.nix-index-database.nixosModules.nix-index
     inputs.home-manager.nixosModules.default
     ./boot.nix
     ./doas.nix
+    ./fish.nix
     ./networking.nix
     ./nix.nix
     ./run-ext-binaries.nix
     ./zram.nix
-    ./zsh.nix
   ];
 
   environment = {
     localBinInPath = true;
+
+    shellAliases = {
+      e = "$EDITOR";
+      se = "doas $EDITOR";
+      cat = "bat";
+      ls = "eza";
+      ll = "eza -l";
+      la = "eza -a";
+      lla = "eza -la";
+    };
 
     systemPackages = lib.attrValues {
       inherit (pkgs)
@@ -27,7 +38,9 @@
         deadnix
         eza
         fd
+        ffmpeg
         nixfmt-rfc-style
+        p7zip
         ripgrep
         statix
         zoxide
@@ -43,8 +56,15 @@
   programs = {
     command-not-found.enable = false;
     git.enable = true;
+    htop.enable = true;
     gnupg.agent.enable = true;
     nano.enable = false;
+    nix-index-database.comma.enable = true;
+
+    bash.shellInit = ''
+      export HISTFILE="$XDG_STATE_HOME"/bash/history
+    '';
+
     vim = {
       enable = true;
       defaultEditor = true;

@@ -2,7 +2,6 @@
 {
   imports = [
     inputs.chaotic.homeManagerModules.default
-    inputs.nix-index-database.hmModules.nix-index
     ./git.nix
     ./helix.nix
     ./xdg.nix
@@ -14,9 +13,7 @@
 
   programs = {
     command-not-found.enable = false;
-    nix-index.enable = true;
-    nix-index-database.comma.enable = true;
+    fish.enable = true;
     gpg.enable = true;
-    zsh.enable = true;
   };
 }

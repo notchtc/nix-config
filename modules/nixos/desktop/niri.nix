@@ -13,8 +13,12 @@
   environment.systemPackages = lib.attrValues {
     inherit (pkgs)
       brightnessctl
+      libnotify
+      loupe
       playerctl
       swaybg
+      wl-clipboard
+      wayland-utils
       xwayland-satellite-unstable
       ;
   };
