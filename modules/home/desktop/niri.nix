@@ -358,5 +358,10 @@
       After = lib.mkForce [ "graphical-session.target" ];
       Requisite = [ "graphical-session.target" ];
     };
+
+    wlsunset.Unit = {
+      After = lib.mkForce [ "graphical-session.target" ];
+      Requisite = [ "graphical-session.target" ];
+    };
   };
 }
