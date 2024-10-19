@@ -27,9 +27,6 @@
       se = "doas $EDITOR";
       cat = "bat";
       ls = "eza";
-      ll = "eza -l";
-      la = "eza -a";
-      lla = "eza -la";
     };
 
     systemPackages = lib.attrValues {
