@@ -50,4 +50,5 @@
   };
 
   gtk.gtk2.configLocation = "${config.xdg.configHome}/gtk-2.0/gtkrc";
+  xresources.path = "${config.xdg.configHome}/X11/Xresources";
 }
