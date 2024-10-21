@@ -32,6 +32,7 @@
     systemPackages = lib.attrValues {
       inherit (pkgs)
         bat
+        btop
         deadnix
         eza
         fd
@@ -53,7 +54,6 @@
   programs = {
     command-not-found.enable = false;
     git.enable = true;
-    htop.enable = true;
     gnupg.agent.enable = true;
     nano.enable = false;
     nix-index-database.comma.enable = true;
