@@ -19,7 +19,6 @@
       swaybg
       wl-clipboard
       wayland-utils
-      xwayland-satellite-unstable
       ;
   };
 

@@ -9,6 +9,8 @@
     ./waybar.nix
   ];
 
+  home.packages = [ pkgs.xwayland-satellite-unstable ];
+
   programs = {
     niri.settings = {
       hotkey-overlay.skip-at-startup = true;
@@ -249,12 +251,6 @@
 
         "Mod+Shift+P".action = power-off-monitors;
       };
-
-      spawn-at-startup = [
-        {
-          command = [ "xwayland-satellite" ];
-        }
-      ];
     };
 
     fuzzel = {
