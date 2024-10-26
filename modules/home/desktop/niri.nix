@@ -326,6 +326,8 @@
   };
 
   systemd.user.services = {
+    xwayland.Install.WantedBy = [ "graphical-session.target" ];
+
     swaybg = {
       Unit = {
         Description = "Set wallpaper";
