@@ -326,8 +326,6 @@
   };
 
   systemd.user.services = {
-    xwayland.Install.WantedBy = [ "graphical-session.target" ];
-
     swaybg = {
       Unit = {
         Description = "Set wallpaper";
@@ -339,6 +337,24 @@
       Service = {
         ExecStart = "${pkgs.swaybg}/bin/swaybg -m fill -i ${config.stylix.image}";
         Restart = "on-failure";
+      };
+    };
+
+    xwayland = {
+      Unit = {
+        Description = "Xwayland outside your Wayland";
+        BindsTo = [ "graphical-session.target" ];
+        PartOf = [ "graphical-session.target" ];
+        After = [ "graphical-session.target" ];
+        Requisite = [ "graphical-session.target" ];
+      };
+      Install.WantedBy = [ "graphical-session.target" ];
+      Service = {
+        ExecStart = "${pkgs.xwayland-satellite}/bin/xwayland-satellite";
+        NotifyAccess = "all";
+        Restart = "on-failure";
+        StandardOutput = "journal";
+        Type = "notify";
       };
     };
 
