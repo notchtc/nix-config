@@ -15,7 +15,6 @@
       systemd.enable = true;
       verbose = false;
     };
-    tmp.useTmpfs = true;
 
     loader = {
       timeout = 0;
