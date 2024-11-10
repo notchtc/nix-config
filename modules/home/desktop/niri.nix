@@ -278,9 +278,29 @@
       settings = {
         positionX = "right";
         positionY = "top";
+
         notification-icon-size = 32;
         notification-body-image-height = 50;
         notification-body-image-width = 100;
+
+        control-center-margin-top = 9;
+        control-center-margin-bottom = 9;
+        control-center-margin-right = 9;
+        control-center-margin-left = 9;
+
+        widgets = [
+          "title"
+          "dnd"
+          "notifications"
+          "mpris"
+        ];
+
+        widget-config = {
+          mpris = {
+            image-size = 64;
+            image-radius = 3;
+          };
+        };
       };
     };
 
