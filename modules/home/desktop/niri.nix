@@ -40,7 +40,7 @@
 
       layout = {
         center-focused-column = "always";
-        gaps = 9;
+        gaps = 6;
 
         border = {
           enable = false;
@@ -50,7 +50,7 @@
 
         focus-ring = with config.lib.stylix.colors.withHashtag; {
           enable = true;
-          width = 3;
+          width = 2;
 
           active = {
             color = base0D;
@@ -276,17 +276,17 @@
       enable = true;
 
       settings = {
-        positionX = "right";
+        positionX = "left";
         positionY = "top";
 
         notification-icon-size = 32;
         notification-body-image-height = 50;
         notification-body-image-width = 100;
 
-        control-center-margin-top = 9;
-        control-center-margin-bottom = 9;
-        control-center-margin-right = 9;
-        control-center-margin-left = 9;
+        control-center-margin-top = 6;
+        control-center-margin-bottom = 6;
+        control-center-margin-right = 6;
+        control-center-margin-left = 6;
 
         widgets = [
           "title"

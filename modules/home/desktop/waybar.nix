@@ -12,8 +12,9 @@ in
       reload_style_on_change = true;
 
       layer = "top";
-      position = "right";
-      width = 21;
+      position = "left";
+      spacing = 6;
+      width = 20;
 
       modules-left = [
         "niri/workspaces"
@@ -21,11 +22,8 @@ in
       ];
       modules-right = [
         "wireplumber"
-        "custom/separator"
         "battery"
-        "custom/separator"
         "network"
-        "custom/separator"
         "tray"
         "custom/swaync"
       ];
@@ -61,31 +59,31 @@ in
           on-scroll-up = "shift_up";
           on-scroll-down = "shift_down";
         };
-        rotate = 90;
+        rotate = 270;
       };
 
       wireplumber = {
-        format = "vol: {volume}%";
+        format = "v: {volume}%";
         format-muted = "muted";
         on-click = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
-        rotate = 90;
+        rotate = 270;
       };
 
       network = {
         format = "{ifname}";
-        format-ethernet = "ethernet";
+        format-ethernet = "eth";
         format-wifi = "wi-fi";
         format-disconnected = "disconnected";
         tooltip-format = "{ifname} via {gwaddr}";
         tooltip-format-ethernet = "{ipaddr}/{cidr} ({ifname})";
         tooltip-format-wifi = "{essid} ({signalStrength}%)";
         on-click = "foot -e nmtui";
-        rotate = 90;
+        rotate = 270;
       };
 
       battery = {
-        format = "bat: {capacity}%";
-        rotate = 90;
+        format = "b: {capacity}%";
+        rotate = 270;
       };
 
       tray = {
@@ -113,13 +111,6 @@ in
         on-click-right = "swaync-client -d -sw";
         escape = true;
       };
-
-      "custom/separator" = {
-        format = "/";
-        interval = "once";
-        tooltip = false;
-        rotate = 90;
-      };
     };
 
     style = ''
@@ -131,16 +122,21 @@ in
         font-family: ${config.stylix.fonts.sansSerif.name};
         font-size: ${toString config.stylix.fonts.sizes.desktop}pt; 
         min-height: 0;
-      }
-
-      window#waybar, tooltip {
-        background: ${colors.base00};
         color: ${colors.base07};
       }
 
+      #waybar { background: transparent; }
+
       tooltip {
+        background: ${colors.base00};
         border: 3px solid ${colors.base0D};
         border-radius: 6px;
+      }
+
+      .modules-left, .modules-right {
+        background: ${colors.base00};
+        border-radius: 6px;
+        margin: 3px 0px 3px 3px;
       }
 
       #battery,
@@ -150,7 +146,7 @@ in
       #tray,
       #wireplumber,
       #workspaces {
-        padding: 3px 0px 3px 0px;
+        padding: 3px 0px;
       }
 
       #wireplumber.muted {
