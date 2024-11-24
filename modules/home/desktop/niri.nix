@@ -275,14 +275,16 @@
     hypridle = {
       enable = true;
       settings = {
-        after_sleep_cmd = "niri msg action power-on-monitors";
-        before_sleep-cmd = "pidof hyprlock || hyprlock";
-        lock_cmd = "pidof hyprlock || hyprlock";
+        general = {
+          after_sleep_cmd = "niri msg action power-on-monitors";
+          before_sleep_cmd = "loginctl lock-session";
+          lock_cmd = "pidof hyprlock || hyprlock";
+        };
 
         listener = [
           {
             timeout = 200;
-            on-timeout = "pidof hyprlock || hyprlock";
+            on-timeout = "loginctl lock-session";
           }
           {
             timeout = 250;
