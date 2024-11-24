@@ -112,7 +112,7 @@
 
         "Mod+Return".action = spawn "foot";
         "Mod+D".action = spawn "fuzzel";
-        "Mod+Alt+L".action = spawn "swaylock";
+        "Mod+Alt+L".action = spawn "hyprlock";
         "Mod+Alt+E".action = spawn "shutdown" "-h" "now";
 
         "XF86AudioRaiseVolume" = {
@@ -268,10 +268,35 @@
         };
       };
     };
-    swaylock.enable = true;
+    hyprlock.enable = true;
   };
 
   services = {
+    hypridle = {
+      enable = true;
+      settings = {
+        after_sleep_cmd = "niri msg action power-on-monitors";
+        before_sleep-cmd = "pidof hyprlock || hyprlock";
+        lock_cmd = "pidof hyprlock || hyprlock";
+
+        listener = [
+          {
+            timeout = 200;
+            on-timeout = "pidof hyprlock || hyprlock";
+          }
+          {
+            timeout = 250;
+            on-timeout = "niri msg action power-off-monitors";
+            on-resume = "niri msg action power-on-monitors";
+          }
+          {
+            timeout = 400;
+            on-timeout = "systemctl suspend";
+          }
+        ];
+      };
+    };
+
     swaync = {
       enable = true;
 
@@ -303,39 +328,6 @@
         };
       };
     };
-
-    swayidle =
-      let
-        systemctl = "${pkgs.systemd}/bin/systemctl";
-        niri = "${pkgs.niri}/bin/niri";
-        pidof = "${pkgs.procps}/bin/pidof";
-        swaylock = "${pkgs.swaylock}/bin/swaylock";
-      in
-      {
-        enable = true;
-
-        timeouts = [
-          {
-            timeout = 90;
-            command = "${pidof} swaylock || ${swaylock}";
-          }
-          {
-            timeout = 150;
-            command = "${pidof} swaylock && ${niri} msg action power-off-monitors";
-          }
-          {
-            timeout = 240;
-            command = "${pidof} swaylock && ${systemctl} suspend";
-          }
-        ];
-
-        events = [
-          {
-            event = "before-sleep";
-            command = "${pidof} swaylock || ${swaylock}";
-          }
-        ];
-      };
 
     wlsunset = {
       enable = true;
@@ -378,7 +370,7 @@
       };
     };
 
-    swayidle.Unit = {
+    hypridle.Unit = {
       After = lib.mkForce [ "graphical-session.target" ];
       Requisite = [ "graphical-session.target" ];
     };

@@ -4,7 +4,7 @@ SELECTION="$(printf "Lock\nSuspend\nLog out\nShutdown\nReboot\nReboot to UEFI\n"
 
 case $SELECTION in
 	"Lock")
-		swaylock;;
+		hyprlock;;
 	"Suspend")
 		systemctl suspend;;
 	"Log out")
