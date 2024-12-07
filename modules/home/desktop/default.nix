@@ -8,12 +8,11 @@
     ../common
     #    ./alacritty.nix
     ./foot.nix
-    ./gtk.nix
     ./niri.nix
     ./mpv.nix
     #    ./plasma
-    ./qt.nix
     ./schizofox.nix
+    ./theme.nix
   ];
 
   home = {
