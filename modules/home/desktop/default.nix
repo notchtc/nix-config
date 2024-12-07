@@ -19,6 +19,7 @@
     packages = lib.attrValues {
       inherit (pkgs)
         file-roller
+        foliate
         gimp
         keepassxc
         nautilus
