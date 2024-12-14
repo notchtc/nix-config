@@ -1,5 +1,8 @@
 {
-  zramSwap.enable = true;
+  zramSwap = {
+    enable = true;
+    memoryPercent = 150;
+  };
 
   boot.kernel.sysctl = {
     "vm.swappiness" = 180;

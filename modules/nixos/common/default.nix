@@ -69,6 +69,7 @@
   };
 
   security.pam.services.hyprlock = { };
+  services.dbus.implementation = "broker";
 
   i18n = {
     defaultLocale = "en_US.UTF-8";

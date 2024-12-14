@@ -32,6 +32,7 @@
   home = {
     file.".zshenv".enable = false;
     file.".gtkrc-2.0".enable = false;
+    file.".icons".enable = false;
 
     sessionVariables = {
       _JAVA_OPTIONS = "-Djava.util.prefs.userRoot=${config.xdg.configHome}/java";

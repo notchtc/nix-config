@@ -10,7 +10,6 @@
     ./foot.nix
     ./niri.nix
     ./mpv.nix
-    #    ./plasma
     ./schizofox.nix
     ./theme.nix
   ];
@@ -40,5 +39,6 @@
 
   services = {
     easyeffects.enable = true;
+    udiskie.enable = true;
   };
 }
