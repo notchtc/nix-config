@@ -9,8 +9,9 @@
     inputs.disko.nixosModules.disko
     inputs.nixos-hardware.nixosModules.common-cpu-intel
     flake.nixosModules.amdgpu
-    flake.nixosModules.laptop
     flake.nixosModules.gaming
+    flake.nixosModules.laptop
+    flake.nixosModules.perlless
     flake.nixosModules.user-chtc
     ./disko.nix
   ];
