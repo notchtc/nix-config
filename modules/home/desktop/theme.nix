@@ -1,5 +1,7 @@
 { config, pkgs, ... }:
 {
+  home.packages = [ pkgs.adwaita-icon-theme ];
+
   stylix.targets.gtk.extraCss = ''
     window.background { border-radius: 0; }
   '';
