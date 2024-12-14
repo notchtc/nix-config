@@ -9,8 +9,6 @@
     pulse.enable = true;
   };
 
-  hardware.pulseaudio = {
-    enable = lib.mkForce false;
-    extraClientConf = "cookie-file = ~/.config/pulse/cookie";
-  };
+  hardware.pulseaudio.enable = lib.mkForce false;
+  environment.etc."pulse/client.conf".text = "cookie-file = ~/.config/pulse/cookie";
 }
