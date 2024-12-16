@@ -2,12 +2,9 @@
 {
   imports = [
     inputs.lix.nixosModules.lixFromNixpkgs
-    ./nh.nix
   ];
 
-  nixpkgs = {
-    config.allowUnfree = true;
-  };
+  nixpkgs.config.allowUnfree = true;
 
   nix = {
     registry = {
@@ -16,7 +13,6 @@
     };
 
     optimise.automatic = true;
-
     channel.enable = false;
 
     settings = {
@@ -39,6 +35,14 @@
         "cache.lix.systems:aBnZUw8zA7H35Cz2RyKFVs3H4PlGTLawyY5KRbvJR8o="
         "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
       ];
+    };
+  };
+
+  programs.nh = {
+    enable = true;
+    clean = {
+      enable = true;
+      extraArgs = "--keep 3 --keep-since 1w";
     };
   };
 }

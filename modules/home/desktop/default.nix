@@ -6,7 +6,6 @@
 {
   imports = [
     ../common
-    #    ./alacritty.nix
     ./foot.nix
     ./niri.nix
     ./mpv.nix

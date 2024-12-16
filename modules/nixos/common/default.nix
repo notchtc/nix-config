@@ -11,66 +11,36 @@
     inputs.nix-index-database.nixosModules.nix-index
     inputs.home-manager.nixosModules.default
     ./boot.nix
-    ./doas.nix
-    ./fish.nix
+    ./memory.nix
     ./networking.nix
     ./nix.nix
     ./run-ext-binaries.nix
-    ./zram.nix
+    ./security.nix
+    ./shell.nix
   ];
 
-  environment = {
-    localBinInPath = true;
-
-    shellAliases = {
-      e = "$EDITOR";
-      se = "doas $EDITOR";
-      cat = "bat";
-      ls = "eza";
-    };
-
-    systemPackages = lib.attrValues {
-      inherit (pkgs)
-        bat
-        btop
-        deadnix
-        eza
-        fd
-        ffmpeg
-        nixfmt-rfc-style
-        p7zip
-        ripgrep
-        statix
-        zoxide
-        ;
-    };
+  environment.systemPackages = lib.attrValues {
+    inherit (pkgs)
+      bat
+      btop
+      deadnix
+      eza
+      fd
+      ffmpeg
+      nixfmt-rfc-style
+      p7zip
+      ripgrep
+      statix
+      zoxide
+      ;
   };
 
-  console = {
-    earlySetup = true;
-    keyMap = "pl";
+  services = {
+    dbus.implementation = "broker";
+    openssh.enable = true;
   };
 
-  programs = {
-    command-not-found.enable = false;
-    git.enable = true;
-    gnupg.agent.enable = true;
-    nano.enable = false;
-    nix-index-database.comma.enable = true;
-
-    bash.shellInit = ''
-      export HISTFILE="$XDG_STATE_HOME"/bash/history
-    '';
-
-    vim = {
-      enable = true;
-      defaultEditor = true;
-    };
-  };
-
-  security.pam.services.hyprlock = { };
-  services.dbus.implementation = "broker";
-
+  console.keyMap = "pl";
   i18n = {
     defaultLocale = "en_US.UTF-8";
     supportedLocales = [
@@ -88,7 +58,10 @@
     timeZone = "Europe/Warsaw";
   };
 
-  system.stateVersion = "24.11";
+  system = {
+    rebuild.enableNg = true;
+    stateVersion = "24.11";
+  };
 
   home-manager = {
     extraSpecialArgs.inputs = inputs;

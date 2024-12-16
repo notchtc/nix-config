@@ -9,4 +9,6 @@
     ./pipewire.nix
     ./stylix.nix
   ];
+
+  nix.daemonCPUSchedPolicy = "idle";
 }
