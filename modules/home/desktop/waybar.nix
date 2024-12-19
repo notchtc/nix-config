@@ -13,7 +13,7 @@ in
 
       layer = "top";
       position = "left";
-      spacing = 6;
+      spacing = 8;
       width = 20;
 
       modules-left = [
@@ -88,7 +88,7 @@ in
 
       tray = {
         icon-size = 16;
-        spacing = 3;
+        spacing = 4;
       };
 
       "custom/swaync" = {
@@ -122,31 +122,17 @@ in
         font-family: ${config.stylix.fonts.sansSerif.name};
         font-size: ${toString config.stylix.fonts.sizes.desktop}pt; 
         min-height: 0;
+        background: ${colors.base01};
         color: ${colors.base07};
       }
 
-      #waybar { background: transparent; }
-
       tooltip {
-        background: ${colors.base00};
-        border: 3px solid ${colors.base0D};
-        border-radius: 6px;
+        border: 2px solid ${colors.base0D};
+        border-radius: 4px;
       }
 
       .modules-left, .modules-right {
-        background: ${colors.base00};
-        border-radius: 6px;
-        margin: 3px 0px 3px 3px;
-      }
-
-      #battery,
-      #custom-separator,
-      #clock,
-      #network,
-      #tray,
-      #wireplumber,
-      #workspaces {
-        padding: 3px 0px;
+        padding: 8px 0px;
       }
 
       #wireplumber.muted {

@@ -13,13 +13,13 @@
       settings = {
         main = {
           icon-theme = "MoreWaita";
-          horizontal-pad = 6;
+          horizontal-pad = 4;
           prompt = "\"λ \"";
-          vertical-pad = 6;
+          vertical-pad = 4;
         };
         border = {
-          width = 3;
-          radius = 6;
+          width = 2;
+          radius = 4;
         };
       };
     };
@@ -38,10 +38,10 @@
         notification-body-image-height = 50;
         notification-body-image-width = 100;
 
-        control-center-margin-top = 6;
-        control-center-margin-bottom = 6;
-        control-center-margin-right = 6;
-        control-center-margin-left = 6;
+        control-center-margin-top = 4;
+        control-center-margin-bottom = 4;
+        control-center-margin-right = 4;
+        control-center-margin-left = 4;
 
         widgets = [
           "title"
@@ -53,7 +53,7 @@
         widget-config = {
           mpris = {
             image-size = 64;
-            image-radius = 3;
+            image-radius = 4;
           };
         };
       };

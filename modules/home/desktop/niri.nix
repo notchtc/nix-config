@@ -7,7 +7,7 @@
   home.packages = [ pkgs.xwayland-satellite-unstable ];
 
   programs.niri.settings = {
-    cursor.hide-after-inactive-ms = 3500;
+    cursor.hide-after-inactive-ms = 5000;
     hotkey-overlay.skip-at-startup = true;
     prefer-no-csd = true;
 
@@ -27,13 +27,13 @@
 
       focus-follows-mouse = {
         enable = true;
-        max-scroll-amount = "20%";
+        max-scroll-amount = "25%";
       };
     };
 
     layout = {
       center-focused-column = "always";
-      gaps = 6;
+      gaps = 4;
 
       border = {
         enable = false;
@@ -60,10 +60,10 @@
       ];
 
       struts = {
-        left = 3;
-        right = 3;
-        top = 3;
-        bottom = 3;
+        left = 4;
+        right = 4;
+        top = 4;
+        bottom = 4;
       };
     };
 
@@ -72,7 +72,7 @@
         draw-border-with-background = false;
         geometry-corner-radius =
           let
-            r = 6.0;
+            r = 4.0;
           in
           {
             top-left = r;
