@@ -11,17 +11,15 @@
     inputs.nix-index-database.nixosModules.nix-index
     inputs.home-manager.nixosModules.default
     ./boot.nix
+    ./fish.nix
     ./memory.nix
     ./networking.nix
     ./nix.nix
-    ./run-ext-binaries.nix
     ./security.nix
-    ./shell.nix
   ];
 
   environment.systemPackages = lib.attrValues {
     inherit (pkgs)
-      bat
       btop
       deadnix
       eza
