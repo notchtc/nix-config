@@ -16,13 +16,11 @@
   home = {
     packages = lib.attrValues {
       inherit (pkgs)
-        file-roller
         foliate
         gimp
+        imv
         keepassxc
-        nautilus
         nicotine-plus
-        papers
         picard
         qbittorrent
         quodlibet-full
@@ -38,6 +36,5 @@
 
   services = {
     easyeffects.enable = true;
-    udiskie.enable = true;
   };
 }

@@ -16,18 +16,7 @@
     ./disko.nix
   ];
 
-  boot = {
-    initrd = {
-      availableKernelModules = [
-        "xhci_pci"
-        "ahci"
-        "usb_storage"
-        "sd_mod"
-      ];
-      kernelModules = [ "dm-snapshot" ];
-    };
-    kernelModules = [ "kvm-intel" ];
-  };
+  boot.initrd.kernelModules = [ "dm-snapshot" ];
 
   networking.hostName = "dorothy";
   nixpkgs.hostPlatform = "x86_64-linux";

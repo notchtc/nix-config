@@ -1,5 +1,6 @@
 {
   flake,
+  pkgs,
   ...
 }:
 {
@@ -10,5 +11,16 @@
     ./stylix.nix
   ];
 
+  boot.initrd = {
+    availableKernelModules = [
+      "xhci_pci"
+      "ahci"
+      "usbhid"
+      "usb_storage"
+      "sd_mod"
+    ];
+  };
+
+  fonts.packages = [ pkgs.nerd-fonts.symbols-only ];
   nix.daemonCPUSchedPolicy = "idle";
 }

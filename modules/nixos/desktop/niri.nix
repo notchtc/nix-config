@@ -14,7 +14,6 @@
     inherit (pkgs)
       brightnessctl
       libnotify
-      loupe
       playerctl
       swaybg
       wl-clipboard
