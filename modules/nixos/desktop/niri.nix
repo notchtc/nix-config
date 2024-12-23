@@ -29,23 +29,18 @@
 
   services = {
     udisks2.enable = true;
-    greetd =
-      let
-        tuigreet = "${pkgs.greetd.tuigreet}/bin/tuigreet";
-        session = "${pkgs.niri}/bin/niri-session";
-      in
-      {
-        enable = true;
-        settings = {
-          initial_session = {
-            command = "${session}";
-            user = "${config.services.displayManager.autoLogin.user}";
-          };
-          default_session = {
-            command = "${tuigreet} -c ${session} -g 'Welcome to NixOS!' -t -r --remember-user-session --user-menu";
-            user = "greeter";
-          };
+    greetd = {
+      enable = true;
+      settings = {
+        initial_session = lib.mkIf config.services.displayManager.autoLogin.enable {
+          command = "${pkgs.niri-unstable}/bin/niri-session";
+          user = "${config.services.displayManager.autoLogin.user}";
+        };
+        default_session = {
+          command = "${pkgs.cage}/bin/cage -s -m last -- ${pkgs.greetd.gtkgreet}/bin/gtkgreet -c=niri-session";
+          user = "greeter";
         };
       };
+    };
   };
 }
