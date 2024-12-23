@@ -131,17 +131,17 @@
       "XF86MonBrightnessUp".action = spawn "brightnessctl" "set" "10%+";
       "XF86MonBrightnessDown".action = spawn "brightnessctl" "set" "10%-";
 
-      "XF86AudioPrev".action = {
+      "XF86AudioPrev" = {
         action = spawn "playerctl" "previous";
         allow-when-locked = true;
       };
 
-      "XF86AudioNext".action = {
+      "XF86AudioNext" = {
         action = spawn "playerctl" "next";
         allow-when-locked = true;
       };
 
-      "XF86AudioPlay".action = {
+      "XF86AudioPlay" = {
         action = spawn "playerctl" "play-pause";
         allow-when-locked = true;
       };

@@ -12,11 +12,11 @@
   ];
 
   boot = {
+    blacklistedKernelModules = [
+      "iTCO_wdt"
+      "sp5100_tco"
+    ];
     initrd = {
-      blacklistedKernelModules = [
-        "iTCO_wdt"
-        "sp5100_tco"
-      ];
       availableKernelModules = [
         "xhci_pci"
         "ahci"
