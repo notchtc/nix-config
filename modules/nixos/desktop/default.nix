@@ -11,14 +11,21 @@
     ./stylix.nix
   ];
 
-  boot.initrd = {
-    availableKernelModules = [
-      "xhci_pci"
-      "ahci"
-      "usbhid"
-      "usb_storage"
-      "sd_mod"
-    ];
+  boot = {
+    initrd = {
+      blacklistedKernelModules = [
+        "iTCO_wdt"
+        "sp5100_tco"
+      ];
+      availableKernelModules = [
+        "xhci_pci"
+        "ahci"
+        "usbhid"
+        "usb_storage"
+        "sd_mod"
+      ];
+    };
+    kernelParams = [ "nowatchdog" ];
   };
 
   fonts.packages = [ pkgs.nerd-fonts.symbols-only ];
