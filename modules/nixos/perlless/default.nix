@@ -1,4 +1,9 @@
-{ lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 {
   boot = {
     initrd.systemd.enable = lib.mkDefault true;
@@ -8,7 +13,10 @@
 
   environment = {
     defaultPackages = lib.mkDefault [ ];
-    systemPackages = [ pkgs.nixos-rebuild ];
+    systemPackages = [
+      (lib.mkIf config.system.rebuild.enableNg pkgs.nixos-rebuild-ng)
+      (lib.mkIf (!config.system.rebuild.enableNg) pkgs.nixos-rebuild)
+    ];
   };
 
   system = {
