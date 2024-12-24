@@ -143,7 +143,7 @@ in
         box-shadow: inherit;
         text-shadow: inherit;
         background: transparent;
-        color: shade(${colors.base07}, 1.25);
+        color: shade(${colors.base07}, 1.5);
       }
 
       #workspaces button.focused, #workspaces button.active {
@@ -151,7 +151,7 @@ in
       }
 
       #workspaces button.focused:hover, #workspaces button.active:hover {
-        color: shade(${colors.base0D}, 1.25);
+        color: shade(${colors.base0D}, 1.5);
       }
 
       #workspaces button.urgent {
@@ -159,7 +159,7 @@ in
       }
 
       #workspaces button.urgent:hover {
-        color: shade(${colors.base08}, 1.25);
+        color: shade(${colors.base08}, 1.5);
       }
 
       #battery.warning:not(.charging) {
@@ -168,6 +168,12 @@ in
 
       #battery.critical:not(.charging) {
         color: ${colors.base08};
+      }
+
+      #tray menu * { background: transparent; }
+      #tray menu *:hover {
+        background: ${colors.base02};
+        color: shade(${colors.base07}, 1.5);
       }
     '';
   };
