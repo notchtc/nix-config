@@ -23,7 +23,7 @@
         nicotine-plus
         picard
         qbittorrent
-        quodlibet-full
+        strawberry-qt6
         telegram-desktop
         vesktop
         ;
