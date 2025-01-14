@@ -98,6 +98,16 @@
         min-width = 1366;
         min-height = 768;
       }
+      {
+        matches = [
+          {
+            app-id = "firefox$";
+            title = "^Picture-in-Picture$";
+          }
+        ];
+        open-floating = true;
+        open-focused = false;
+      }
     ];
 
     binds = with config.lib.niri.actions; {
@@ -105,8 +115,8 @@
 
       "Mod+Return".action = spawn "foot";
       "Mod+D".action = spawn "fuzzel";
+      "Mod+Alt+E".action = spawn "sh" "${./powermenu.sh}";
       "Mod+Alt+L".action = spawn "hyprlock";
-      "Mod+Alt+E".action = spawn "shutdown" "-h" "now";
 
       "XF86AudioRaiseVolume" = {
         action = spawn "wpctl" "set-volume" "-l" "1.0" "@DEFAULT_AUDIO_SINK@" "0.1+";
@@ -239,6 +249,7 @@
       "Mod+Ctrl+R".action = reset-window-height;
       "Mod+F".action = maximize-column;
       "Mod+Shift+F".action = fullscreen-window;
+      "Mod+Ctrl+F".action = toggle-window-floating;
       "Mod+C".action = center-column;
 
       "Mod+Minus".action = set-column-width "-10%";
@@ -250,8 +261,6 @@
       "Print".action = screenshot-screen;
       "Shift+Print".action = screenshot;
       "Ctrl+Print".action = screenshot-window;
-
-      "Mod+Shift+E".action = spawn "sh" "${./powermenu.sh}";
 
       "Mod+Shift+P".action = power-off-monitors;
     };
