@@ -1,11 +1,5 @@
 { config, pkgs, ... }:
 {
-  home.packages = [ pkgs.adwaita-icon-theme ];
-
-  stylix.targets.gtk.extraCss = ''
-    window.background { border-radius: 0; }
-  '';
-
   gtk = {
     enable = true;
 
@@ -21,14 +15,14 @@
 
   qt = {
     enable = true;
-    platformTheme.name = "adwaita";
-    style.name = "adwaita-dark";
+    platformTheme.name = "kde";
+    style.name = "breeze-dark";
   };
 
   stylix.iconTheme = {
     enable = true;
-    package = pkgs.morewaita-icon-theme;
-    light = "MoreWaita";
-    dark = "MoreWaita";
+    package = pkgs.papirus-icon-theme;
+    light = "Papirus-Light";
+    dark = "Papirus-Dark";
   };
 }

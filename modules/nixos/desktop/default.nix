@@ -7,8 +7,8 @@
   imports = [
     flake.nixosModules.common
     ./boot.nix
-    ./niri.nix
     ./pipewire.nix
+    ./plasma.nix
     ./stylix.nix
   ];
 
