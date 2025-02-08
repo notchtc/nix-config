@@ -8,7 +8,6 @@
     flake.nixosModules.common
     ./boot.nix
     ./pipewire.nix
-    ./plasma.nix
     ./stylix.nix
   ];
 

@@ -27,11 +27,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    niri = {
-      url = "github:sodiboo/niri-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     nix-index-database = {
       url = "github:Mic92/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -53,11 +48,6 @@
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
-    };
-
-    yazi-plugins = {
-      url = "github:yazi-rs/plugins";
-      flake = false;
     };
   };
 

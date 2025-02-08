@@ -4,6 +4,7 @@
     mouseActions = {
       leftClick = "applicationLauncher";
       middleClick = "switchWindow";
+      rightClick = "contextMenu";
     };
   };
 }

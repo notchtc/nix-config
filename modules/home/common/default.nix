@@ -5,7 +5,6 @@
     ./git.nix
     ./helix.nix
     ./xdg.nix
-    ./yazi.nix
   ];
 
   home = {

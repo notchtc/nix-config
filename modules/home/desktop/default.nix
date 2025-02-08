@@ -8,7 +8,6 @@
     ../common
     ./foot.nix
     ./mpv.nix
-    ./plasma
     ./schizofox.nix
     ./theme.nix
   ];
@@ -26,6 +25,11 @@
         telegram-desktop
         vesktop
         ;
+    };
+
+    sessionVariables = {
+      NIXOS_OZONE_WL = 1;
+      QT_QPA_PLATFORM = "wayland";
     };
   };
 

@@ -4,10 +4,6 @@
       borderlessMaximizedWindows = false;
 
       effects = {
-        desktopSwitching.animation = "slide";
-        minimization.animation = "magiclamp";
-        windowOpenClose.animation = "glide";
-
         blur.enable = false;
         dimAdminMode.enable = true;
         shakeCursor.enable = true;

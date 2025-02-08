@@ -2,8 +2,6 @@
   programs.plasma.configFile = {
     "baloofilerc"."Basic Settings"."Indexing-Enabled" = false;
 
-    "breezerc"."Common"."ShadowSize" = "ShadowNone";
-
     "kdeglobals"."General"."TerminalApplication" = "foot";
     "kdeglobals"."General"."TerminalService" = "org.codeberg.dnkl.foot.desktop";
 

@@ -13,12 +13,6 @@
     };
   };
 
-  qt = {
-    enable = true;
-    platformTheme.name = "kde";
-    style.name = "breeze-dark";
-  };
-
   stylix.iconTheme = {
     enable = true;
     package = pkgs.papirus-icon-theme;

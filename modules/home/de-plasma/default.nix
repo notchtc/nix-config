@@ -2,14 +2,15 @@
 {
   imports = [
     inputs.plasma-manager.homeManagerModules.plasma-manager
+    ../desktop
     ./configFile.nix
     ./desktop.nix
     ./input.nix
+    ./keybinds.nix
     ./krunner.nix
     ./kscreenlocker.nix
     ./kwin.nix
     ./panels.nix
-    ./shortcuts.nix
     ./theme.nix
     ./window-rules.nix
   ];
