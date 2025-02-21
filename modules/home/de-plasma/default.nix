@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs, lib, ... }:
 {
   imports = [
     inputs.plasma-manager.homeManagerModules.plasma-manager
@@ -23,4 +23,7 @@
       allowWindowsToRememberPositions = true;
     };
   };
+
+  qt.enable = lib.mkForce false;
+  stylix.targets.qt.enable = lib.mkForce false;
 }

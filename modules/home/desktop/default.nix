@@ -20,6 +20,7 @@
         keepassxc
         nicotine-plus
         picard
+        plugdata
         qbittorrent
         strawberry-qt6
         telegram-desktop
