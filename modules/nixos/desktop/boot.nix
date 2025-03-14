@@ -16,6 +16,5 @@
     kernelParams = [
       "nowatchdog"
     ];
-    plymouth.enable = true;
   };
 }
