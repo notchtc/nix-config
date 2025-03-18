@@ -6,7 +6,7 @@
 {
   imports = [
     ../common
-    ./foot.nix
+    ./ghostty.nix
     ./mpv.nix
     ./schizofox.nix
     ./theme.nix

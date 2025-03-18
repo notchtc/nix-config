@@ -15,8 +15,8 @@
 
   stylix.iconTheme = {
     enable = true;
-    package = pkgs.papirus-icon-theme;
-    light = "Papirus-Light";
-    dark = "Papirus-Dark";
+    package = pkgs.morewaita-icon-theme;
+    light = "MoreWaita";
+    dark = "MoreWaita";
   };
 }

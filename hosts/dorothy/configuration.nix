@@ -9,7 +9,7 @@
     inputs.disko.nixosModules.disko
     inputs.nixos-hardware.nixosModules.common-cpu-intel
     flake.nixosModules.amdgpu
-    flake.nixosModules.de-plasma
+    flake.nixosModules.de-gnome
     flake.nixosModules.gaming
     flake.nixosModules.laptop
     flake.nixosModules.perlless
@@ -33,5 +33,5 @@
 
   nix.settings.max-jobs = 4;
 
-  home-manager.users.chtc.imports = [ flake.homeModules.de-plasma ];
+  home-manager.users.chtc.imports = [ flake.homeModules.de-gnome ];
 }

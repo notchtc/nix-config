@@ -1,9 +1,7 @@
+{ lib, pkgs, ... }:
 {
   boot = {
-    blacklistedKernelModules = [
-      "iTCO_wdt"
-      "sp5100_tco"
-    ];
+    kernelPackages = lib.mkForce pkgs.linuxPackages_xanmod;
     initrd = {
       availableKernelModules = [
         "xhci_pci"
@@ -13,8 +11,5 @@
         "sd_mod"
       ];
     };
-    kernelParams = [
-      "nowatchdog"
-    ];
   };
 }

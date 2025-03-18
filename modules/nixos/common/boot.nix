@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   boot = {
-    kernelPackages = pkgs.linuxPackages_lqx;
+    kernelPackages = pkgs.linuxPackages_hardened;
 
     consoleLogLevel = 0;
     kernelParams = [
@@ -30,6 +30,5 @@
     };
   };
 
-  console.earlySetup = true;
   hardware.enableRedistributableFirmware = true;
 }
