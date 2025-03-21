@@ -4,6 +4,8 @@
     inputs.lix.nixosModules.lixFromNixpkgs
   ];
 
+  nixpkgs.config.allowUnfree = true;
+
   nix = {
     registry = {
       home-manager.flake = inputs.home-manager;

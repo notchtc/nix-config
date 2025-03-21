@@ -15,6 +15,7 @@
   home = {
     packages = lib.attrValues {
       inherit (pkgs)
+        easyeffects
         foliate
         gimp
         keepassxc
@@ -32,9 +33,5 @@
       NIXOS_OZONE_WL = 1;
       QT_QPA_PLATFORM = "wayland";
     };
-  };
-
-  services = {
-    easyeffects.enable = true;
   };
 }
