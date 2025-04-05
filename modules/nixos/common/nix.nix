@@ -1,9 +1,5 @@
-{ inputs, ... }:
+{ inputs, pkgs, ... }:
 {
-  imports = [
-    inputs.lix.nixosModules.lixFromNixpkgs
-  ];
-
   nixpkgs.config.allowUnfree = true;
 
   nix = {
@@ -11,6 +7,8 @@
       home-manager.flake = inputs.home-manager;
       nixpkgs.flake = inputs.nixpkgs;
     };
+
+    package = pkgs.lixPackageSets.stable.lix;
 
     optimise.automatic = true;
     channel.enable = false;

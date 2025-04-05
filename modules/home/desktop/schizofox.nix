@@ -9,6 +9,8 @@
   programs.schizofox = {
     enable = true;
 
+    security.sandbox.enable = false;
+
     settings = {
       "dom.event.clipboardevents.enabled" = true;
       "general.autoScroll" = true;
