@@ -23,7 +23,7 @@
         picard
         plugdata
         qbittorrent
-        quodlibet
+        quodlibet-full
         telegram-desktop
         vesktop
         ;
