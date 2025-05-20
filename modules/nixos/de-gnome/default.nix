@@ -14,6 +14,7 @@
   environment.gnome.excludePackages = lib.attrValues {
     inherit (pkgs)
       baobab
+      decibels
       epiphany
       geary
       gnome-console
@@ -23,6 +24,7 @@
       gnome-music
       gnome-shell-extensions
       gnome-software
+      gnome-text-editor
       gnome-tour
       gnome-user-docs
       orca
@@ -31,5 +33,8 @@
       ;
   };
 
-  services.udev.packages = [ pkgs.gnome-settings-daemon ];
+  services = {
+    gnome.gnome-initial-setup.enable = lib.mkForce false;
+    udev.packages = [ pkgs.gnome-settings-daemon ];
+  };
 }
