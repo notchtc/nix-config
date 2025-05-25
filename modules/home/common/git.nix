@@ -12,7 +12,7 @@
       };
 
       extraConfig = {
-        branch.sort = "-comitterdate";
+        branch.sort = "-committerdate";
         column.ui = "auto";
         commit.verbose = true;
         help.autocorrect = "prompt";
