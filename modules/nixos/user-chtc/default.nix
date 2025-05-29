@@ -1,3 +1,4 @@
+{ config, lib, ... }:
 {
   users.users.chtc = {
     isNormalUser = true;
@@ -12,8 +13,17 @@
     ];
   };
 
-  users.users.root.hashedPassword = "!";
+  home-manager.users.chtc =
+    { ... }:
+    {
+      imports =
+        [
+          ../../home/common
+        ]
+        ++ lib.optionals config.isDesktop [
+          ../../home/desktop
+        ];
+    };
 
-  nix.settings.trusted-users = [ "chtc" ];
-  programs.nh.flake = "/home/chtc/.config/nix-config";
+  users.users.root.hashedPassword = "!";
 }

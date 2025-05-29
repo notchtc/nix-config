@@ -1,20 +1,20 @@
-{ inputs, pkgs, ... }:
 {
-  nixpkgs.config.allowUnfree = true;
-
+  project,
+  lib,
+  pkgs,
+  ...
+}:
+{
   nix = {
-    registry = {
-      home-manager.flake = inputs.home-manager;
-      nixpkgs.flake = inputs.nixpkgs;
-    };
-
     package = pkgs.lixPackageSets.stable.lix;
 
-    optimise.automatic = true;
     channel.enable = false;
+    optimise.automatic = true;
+    nixPath = [ "/etc/nix/inputs" ];
 
     settings = {
       use-xdg-base-directories = true;
+      trusted-users = [ "@wheel" ];
 
       experimental-features = [
         "auto-allocate-uids"
@@ -34,13 +34,32 @@
         "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
       ];
     };
+
+    gc = {
+      automatic = true;
+      options = "--delete-older-than 7d";
+    };
   };
 
-  programs.nh = {
-    enable = true;
-    clean = {
-      enable = true;
-      extraArgs = "--keep 3 --keep-since 1w";
-    };
+  environment = {
+    etc = lib.mapAttrs' (name: value: {
+      name = "nix/inputs/${name}";
+      value.source =
+        if
+          (lib.strings.isStringLike value.result)
+          && (lib.strings.hasPrefix builtins.storeDir (builtins.toString value.result))
+        then
+          builtins.storePath value.result
+        else
+          builtins.storePath value.src;
+    }) project.inputs;
+    systemPackages = [
+      project.inputs.nilla-cli.result.packages.nilla-cli.result.${pkgs.system}
+      project.inputs.nilla-nixos.result.packages.nilla-nixos.result.${pkgs.system}
+    ];
+  };
+
+  system = {
+    stateVersion = "24.11";
   };
 }

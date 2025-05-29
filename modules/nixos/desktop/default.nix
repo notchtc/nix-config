@@ -1,16 +1,18 @@
-{
-  flake,
-  pkgs,
-  ...
-}:
+{ pkgs, ... }:
 {
   imports = [
-    flake.nixosModules.common
-    ./boot.nix
+    ../common
+    ./gnome.nix
     ./pipewire.nix
     ./stylix.nix
   ];
 
+  isDesktop = true;
   fonts.packages = [ pkgs.nerd-fonts.symbols-only ];
-  nix.daemonCPUSchedPolicy = "idle";
+  time.timeZone = "Europe/Warsaw";
+
+  programs.appimage = {
+    enable = true;
+    binfmt = true;
+  };
 }

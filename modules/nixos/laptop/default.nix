@@ -1,8 +1,8 @@
-{ inputs, flake, ... }:
+{ project, ... }:
 {
   imports = [
-    inputs.nixos-hardware.nixosModules.common-pc-laptop
-    flake.nixosModules.desktop
+    ../desktop
+    project.inputs.nixos-hardware.result.nixosModules.common-pc-laptop
   ];
 
   services = {

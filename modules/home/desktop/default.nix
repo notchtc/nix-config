@@ -5,8 +5,8 @@
 }:
 {
   imports = [
-    ../common
     ./ghostty.nix
+    ./gnome.nix
     ./mpv.nix
     ./schizofox.nix
     ./theme.nix

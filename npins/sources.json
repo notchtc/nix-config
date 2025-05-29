@@ -1,5 +1,63 @@
 {
   "pins": {
+    "chaotic": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "chaotic-cx",
+        "repo": "nyx"
+      },
+      "branch": "nyxpkgs-unstable",
+      "submodules": false,
+      "revision": "93883dc0391cbc2e32579bdfb64f22b2fe2bfc65",
+      "url": "https://github.com/chaotic-cx/nyx/archive/93883dc0391cbc2e32579bdfb64f22b2fe2bfc65.tar.gz",
+      "hash": "1m21q69msbql98pyqfcyx03mhby1cqkmm1v97lxa2acxancypr7d"
+    },
+    "disko": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "nix-community",
+        "repo": "disko"
+      },
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": false,
+      "version": "v1.12.0",
+      "revision": "7121f74b976481bc36877abaf52adab2a178fcbe",
+      "url": "https://api.github.com/repos/nix-community/disko/tarball/v1.12.0",
+      "hash": "0wbx518d2x54yn4xh98cgm65wvj0gpy6nia6ra7ns4j63hx14fkq"
+    },
+    "flake-compat": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "nilla-nix",
+        "repo": "flake-compat"
+      },
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": false,
+      "version": "v0.0.2",
+      "revision": "2653659fb5d86f2853caae1b6475e63e8c23439c",
+      "url": "https://api.github.com/repos/nilla-nix/flake-compat/tarball/v0.0.2",
+      "hash": "165xl96d5f2xaawyiaj3cl8ccisrjvx5b1db8nfh18swaxyzdckn"
+    },
+    "home-manager": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "nix-community",
+        "repo": "home-manager"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "02077149e2921014511dac2729ae6dadb4ec50e2",
+      "url": "https://github.com/nix-community/home-manager/archive/02077149e2921014511dac2729ae6dadb4ec50e2.tar.gz",
+      "hash": "1zqvh1r93jfc5kpy3pi6plv1dmv992zdmc8g1nnnaszb6cvy43wr"
+    },
     "nilla": {
       "type": "GitRelease",
       "repository": {
@@ -16,11 +74,108 @@
       "url": "https://api.github.com/repos/nilla-nix/nilla/tarball/v0.0.0-alpha.12",
       "hash": "0y70c9p4ln0jd673k2ifi28s92pgphjdykgar71s20bv2qzg8naz"
     },
-    "nixos-unstable": {
+    "nilla-cli": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "nilla-nix",
+        "repo": "cli"
+      },
+      "pre_releases": true,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": false,
+      "version": "v0.0.0-alpha.8",
+      "revision": "e0a987e7fbb4307d103ec10d44b31a92e36c775e",
+      "url": "https://api.github.com/repos/nilla-nix/cli/tarball/v0.0.0-alpha.8",
+      "hash": "0gvy0ypmbyphrcxqmavy488nc299s4zb43sj0nz0qzcgcrw1b1az"
+    },
+    "nilla-home": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "nilla-nix",
+        "repo": "home"
+      },
+      "pre_releases": true,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": false,
+      "version": "v0.0.1-alpha",
+      "revision": "712fa53d332f4915b33a199e801993b5a42de62f",
+      "url": "https://api.github.com/repos/nilla-nix/home/tarball/v0.0.1-alpha",
+      "hash": "10wb4b1zlbniifzrxcfalbkrsgbww0jqncxjvz33js8njvr1z98p"
+    },
+    "nilla-nixos": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "nilla-nix",
+        "repo": "nixos"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "6e13605fbc1cbfd3ee4b474c01d93a7f2942c61d",
+      "url": "https://github.com/nilla-nix/nixos/archive/6e13605fbc1cbfd3ee4b474c01d93a7f2942c61d.tar.gz",
+      "hash": "1dwkilaz8324rp3kcxnx5r2jjsx0lavm7xhg5xwrklawlyvk5r7q"
+    },
+    "nix-index-database": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "nix-community",
+        "repo": "nix-index-database"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "a98adbf54d663395df0b9929f6481d4d80fc8927",
+      "url": "https://github.com/nix-community/nix-index-database/archive/a98adbf54d663395df0b9929f6481d4d80fc8927.tar.gz",
+      "hash": "17581iw2kyv42gnx05yc8pzqcasrrxasmhhmbdnyqn5mbv9g3mxp"
+    },
+    "nixos-hardware": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "nixos",
+        "repo": "nixos-hardware"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "11f2d9ea49c3e964315215d6baa73a8d42672f06",
+      "url": "https://github.com/nixos/nixos-hardware/archive/11f2d9ea49c3e964315215d6baa73a8d42672f06.tar.gz",
+      "hash": "166nv0i8p4lsmyjxx99ldy6srx5v5v8v66awdvil8b3i1wzbhzkn"
+    },
+    "nixpkgs": {
       "type": "Channel",
       "name": "nixos-unstable",
-      "url": "https://releases.nixos.org/nixos/unstable/nixos-25.11pre804993.063f43f2dbde/nixexprs.tar.xz",
-      "hash": "0hly1w4dwmj2i017966jy97mmffkcx4a802h8dibs3w727pgwvfx"
+      "url": "https://releases.nixos.org/nixos/unstable/nixos-25.11pre806853.4faa5f532132/nixexprs.tar.xz",
+      "hash": "1qasxq6163yn8x6cq1ph6x4z28kzan6gb0d25j7zihg7qajhf30m"
+    },
+    "schizofox": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "schizofox",
+        "repo": "schizofox"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "e2702bd7a09fc9d6089901adb4e7ae4a9aeef5ef",
+      "url": "https://github.com/schizofox/schizofox/archive/e2702bd7a09fc9d6089901adb4e7ae4a9aeef5ef.tar.gz",
+      "hash": "0hmxw1f41kc2nqqvaiakwc7nwi5mi0bcfy04blhj8qajaqm640jb"
+    },
+    "stylix": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "nix-community",
+        "repo": "stylix"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "257939576384a9057a8259e76689090643f5a127",
+      "url": "https://github.com/nix-community/stylix/archive/257939576384a9057a8259e76689090643f5a127.tar.gz",
+      "hash": "1jqm8vv85ij700q6qj70r2klz3n2gh7d70bn5sl31ninn08yv1xg"
     }
   },
   "version": 5

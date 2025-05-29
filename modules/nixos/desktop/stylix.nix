@@ -1,10 +1,6 @@
+{ project, pkgs, ... }:
 {
-  inputs,
-  pkgs,
-  ...
-}:
-{
-  imports = [ inputs.stylix.nixosModules.stylix ];
+  imports = [ project.inputs.stylix.result.nixosModules.stylix ];
 
   stylix = {
     enable = true;
