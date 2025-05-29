@@ -12,14 +12,11 @@ This repository contains my configuration for NixOS and other software that I us
 > [!IMPORTANT]
 > As this is my personal configuration, not everything may work for you. You probably also want to change some things around. You're better off creating your own configuration.
 
-NixOS configuration using [flakes](https://nixos.wiki/wiki/Flakes) and [home-manager](https://github.com/nix-community/home-manager).
+NixOS configuration using [nilla](https://github.com/nilla-nix/nilla) and [home-manager](https://github.com/nix-community/home-manager).
 
-Flakes used:
-- [blueprint](https://github.com/numtide/blueprint)
+Other projects used:
 - [disko](https://github.com/nix-community/disko)
 - [lix](https://git.lix.systems/lix-project/nixos-module)
-- [plasma-manager](https://github.com/pjones/plasma-manager)
-- [nh](https://github.com/viperML/nh)
 - [nix-index-database](https://github.com/Mic92/nix-index-database)
 - [nyx](https://github.com/chaotic-cx/nyx)
 - [schizofox](https://github.com/schizofox/schizofox)
