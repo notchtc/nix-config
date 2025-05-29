@@ -2,8 +2,6 @@
 
 # [NixOS](https://nixos.org) config
 
-![NixOS](https://nixos.org/logo/nixos-hires.png)
-
 This repository contains my configuration for NixOS and other software that I use.
 
 </div>
