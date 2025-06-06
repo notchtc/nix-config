@@ -17,7 +17,7 @@
       inherit (pkgs)
         easyeffects
         foliate
-        gimp
+        gimp3
         keepassxc
         nicotine-plus
         picard
