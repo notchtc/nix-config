@@ -8,6 +8,7 @@
   ];
 
   isDesktop = true;
+  hardware.amdgpu.legacySupport.enable = true;
   fonts.packages = [ pkgs.nerd-fonts.symbols-only ];
   time.timeZone = "Europe/Warsaw";
 

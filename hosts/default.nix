@@ -7,7 +7,7 @@
       modules = [
         config.inputs.disko.result.nixosModules.disko
         config.inputs.nixos-hardware.result.nixosModules.common-cpu-intel
-        config.inputs.nixos-hardware.result.nixosModules.common-gpu-amd-southern-islands
+        config.inputs.nixos-hardware.result.nixosModules.common-gpu-amd
 
         ../modules/nixos/gaming
         ../modules/nixos/laptop
