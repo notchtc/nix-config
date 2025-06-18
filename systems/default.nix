@@ -9,9 +9,9 @@
         config.inputs.nixos-hardware.result.nixosModules.common-cpu-intel
         config.inputs.nixos-hardware.result.nixosModules.common-gpu-amd
 
-        ../modules/nixos/gaming
-        ../modules/nixos/laptop
-        ../modules/nixos/user-chtc
+        ./modules/gaming
+        ./modules/laptop
+        ./modules/user-chtc
         ./dorothy
       ];
 
@@ -19,6 +19,8 @@
         project = config;
         host = "dorothy";
       };
+
+      homes = { inherit (config.homes) "chtc:x86_64-linux"; };
     };
   };
 }

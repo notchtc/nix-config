@@ -1,14 +1,13 @@
-{ project, osConfig, ... }:
+{ osConfig, ... }:
 {
   imports = [
-    project.inputs.chaotic.result.homeManagerModules.default
     ./git.nix
     ./helix.nix
     ./xdg.nix
   ];
 
   home = {
-    stateVersion = osConfig.system.stateVersion;
+    inherit (osConfig.system) stateVersion;
   };
 
   programs = {

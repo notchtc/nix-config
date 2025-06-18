@@ -9,7 +9,6 @@
   imports = [
     project.inputs.chaotic.result.nixosModules.default
     project.inputs.nix-index-database.result.nixosModules.nix-index
-    project.inputs.home-manager.result.nixosModules.default
     ./boot.nix
     ./conditions.nix
     ./doas.nix
@@ -17,7 +16,6 @@
     ./memory.nix
     ./networking.nix
     ./nix.nix
-    ./perlless.nix
   ];
 
   environment.systemPackages = lib.attrValues {
@@ -39,6 +37,7 @@
   services = {
     dbus.implementation = "broker";
     openssh.enable = true;
+    userborn.enable = true;
   };
 
   programs = {
@@ -57,13 +56,7 @@
     };
   };
 
+  home-manager.backupFileExtension = "backup";
   networking.hostName = host;
-
-  home-manager = {
-    useGlobalPkgs = true;
-    useUserPackages = true;
-    extraSpecialArgs = {
-      inherit project;
-    };
-  };
+  system.etc.overlay.enable = true;
 }

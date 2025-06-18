@@ -1,6 +1,7 @@
+{ schizofox }:
 { project, ... }:
 {
-  imports = [ project.inputs.schizofox.result.homeManagerModule ];
+  imports = [ schizofox.result.homeManagerModules.default ];
 
   home.sessionVariables = {
     BROWSER = "schizofox";
