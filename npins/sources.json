@@ -9,9 +9,9 @@
       },
       "branch": "nyxpkgs-unstable",
       "submodules": false,
-      "revision": "cfe6d82c1c57685d12792a752dd7d28450b300c5",
-      "url": "https://github.com/chaotic-cx/nyx/archive/cfe6d82c1c57685d12792a752dd7d28450b300c5.tar.gz",
-      "hash": "13gghxg0bzrqpl6c4xxqs561c363ihnkxd45cqgzmwnzf1v7yap2"
+      "revision": "419a1cfaf34100008ff5fa97ce9ef3b194472f71",
+      "url": "https://github.com/chaotic-cx/nyx/archive/419a1cfaf34100008ff5fa97ce9ef3b194472f71.tar.gz",
+      "hash": "175mz25wk17vr4rzasqiqmagcp71zdakcrq1m35dgiifvkzry1p6"
     },
     "disko": {
       "type": "GitRelease",
@@ -54,9 +54,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "faeab32528a9360e9577ff4082de2d35c6bbe1ce",
-      "url": "https://github.com/nix-community/home-manager/archive/faeab32528a9360e9577ff4082de2d35c6bbe1ce.tar.gz",
-      "hash": "0bpi9mm38sjlyvz9w4hxl9q0bn4g29hhs7h7hsq1h6x1gdlabf20"
+      "revision": "f754e377dc2da5d34dfea6a5215c21741eaf8930",
+      "url": "https://github.com/nix-community/home-manager/archive/f754e377dc2da5d34dfea6a5215c21741eaf8930.tar.gz",
+      "hash": "1hhzgqihrzn21k76p6gvnxg0ccqgl8gf1yg9nj0qgj1v06vgiwf4"
     },
     "nilla": {
       "type": "GitRelease",
@@ -101,10 +101,10 @@
       "version_upper_bound": null,
       "release_prefix": null,
       "submodules": false,
-      "version": "v0.1.0-alpha",
-      "revision": "1fa4188436530df61344c0f260a046be574ece0b",
-      "url": "https://api.github.com/repos/nilla-nix/home/tarball/v0.1.0-alpha",
-      "hash": "054ghmb7wl9sbhwm40x8m96qm1ms5i7d1ixlcsr6l2v610nqg11h"
+      "version": "v0.1.1-alpha",
+      "revision": "8d8d783cd3ebe38246f66c027a312e5ec0914c58",
+      "url": "https://api.github.com/repos/nilla-nix/home/tarball/v0.1.1-alpha",
+      "hash": "127giwgxrwrfy5id3ng92spk36gbd0pvwf8ammxg50l9mbcqz2nz"
     },
     "nilla-nixos": {
       "type": "Git",
@@ -128,9 +128,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "40a6e15e44b11fbf8f2b1df9d64dbfc117625e94",
-      "url": "https://github.com/nix-community/nix-index-database/archive/40a6e15e44b11fbf8f2b1df9d64dbfc117625e94.tar.gz",
-      "hash": "15y2ibnnxhg9gpgvipnw95avddsx1d249qz10i1g3yq3jdsc4pig"
+      "revision": "424a40050cdc5f494ec45e46462d288f08c64475",
+      "url": "https://github.com/nix-community/nix-index-database/archive/424a40050cdc5f494ec45e46462d288f08c64475.tar.gz",
+      "hash": "0a61nsmsf1bksdc786hg6ilg58nd0c5y2hfn3alf2xs3qvs6ns8i"
     },
     "nixos-hardware": {
       "type": "Git",
@@ -141,15 +141,15 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "4602f7e1d3f197b3cb540d5accf5669121629628",
-      "url": "https://github.com/nixos/nixos-hardware/archive/4602f7e1d3f197b3cb540d5accf5669121629628.tar.gz",
-      "hash": "1qq9gb0rxw43l2hhdnbf6c24r6051nhnqv7z72zxd79fg108m4av"
+      "revision": "61837d2a33ccc1582c5fabb7bf9130d39fee59ad",
+      "url": "https://github.com/nixos/nixos-hardware/archive/61837d2a33ccc1582c5fabb7bf9130d39fee59ad.tar.gz",
+      "hash": "0bpwvpzh06nn3gcd0w2100n25wzw13psk602gksv70rbhs09nyna"
     },
     "nixpkgs": {
       "type": "Channel",
       "name": "nixos-unstable",
-      "url": "https://releases.nixos.org/nixos/unstable/nixos-25.11pre811950.3e3afe5174c5/nixexprs.tar.xz",
-      "hash": "0pfy3xklhz1jcg4ap0vnckash9l0shqfk619sv2bn9lx8rxr9359"
+      "url": "https://releases.nixos.org/nixos/unstable/nixos-25.11pre816272.9e83b64f727c/nixexprs.tar.xz",
+      "hash": "0rh2y234j9cj3nh3pp46xhpp7a5ihxjg70kd9ks090ys552dq9r8"
     },
     "schizofox": {
       "type": "Git",
@@ -173,9 +173,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "e7fa0e5cc2336b6b25310d5e49c149f14fdbc1bb",
-      "url": "https://github.com/nix-community/stylix/archive/e7fa0e5cc2336b6b25310d5e49c149f14fdbc1bb.tar.gz",
-      "hash": "1gdm5dki5fzylfx2c6rcyq63b6rfa9rcxmbk5dcypybjad47xq4n"
+      "revision": "82323751bcd45579c8d3a5dd05531c3c2a78e347",
+      "url": "https://github.com/nix-community/stylix/archive/82323751bcd45579c8d3a5dd05531c3c2a78e347.tar.gz",
+      "hash": "1h1khbaswqc8rz634jdhh39404y3w1vk8mrdjg4p33kmb3ribp73"
     }
   },
   "version": 5
