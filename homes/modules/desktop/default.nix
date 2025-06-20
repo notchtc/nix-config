@@ -15,7 +15,6 @@
   home = {
     packages = lib.attrValues {
       inherit (pkgs)
-        easyeffects
         foliate
         gimp3
         keepassxc

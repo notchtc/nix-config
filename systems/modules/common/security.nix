@@ -1,7 +1,6 @@
 { pkgs, ... }:
 {
   security = {
-    pam.services.hyprlock = { };
     rtkit.enable = true;
     sudo.enable = false;
 

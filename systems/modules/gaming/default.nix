@@ -9,6 +9,7 @@
       ;
   };
 
+  environment.sessionVariables.PROTON_ENABLE_WAYLAND = 1;
   programs = {
     gamemode = {
       enable = true;

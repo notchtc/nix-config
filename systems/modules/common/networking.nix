@@ -1,15 +1,24 @@
 {
   networking = {
+    nameservers = [
+      "45.90.28.0#311cdf.dns.nextdns.io"
+      "2a07:a8c0::#311cdf.dns.nextdns.io"
+      "45.90.30.0#311cdf.dns.nextdns.io"
+      "2a07:a8c1::#311cdf.dns.nextdns.io"
+    ];
+
     networkmanager = {
       enable = true;
+      dns = "systemd-resolved";
       wifi.backend = "iwd";
-      insertNameservers = [
-        "45.90.28.26"
-        "45.90.30.26"
-      ];
     };
 
     nftables.enable = true;
+  };
+
+  services.resolved = {
+    enable = true;
+    dnsovertls = "true";
   };
 
   boot.kernel.sysctl = {

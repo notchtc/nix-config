@@ -19,6 +19,7 @@
 
   environment.systemPackages = lib.attrValues {
     inherit (pkgs)
+      _7zz
       bottom
       deadnix
       eza
@@ -26,7 +27,6 @@
       ffmpeg
       nixfmt-rfc-style
       npins
-      p7zip
       ripgrep
       statix
       zoxide
