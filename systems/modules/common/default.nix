@@ -7,7 +7,6 @@
 }:
 {
   imports = [
-    project.inputs.chaotic.result.nixosModules.default
     project.inputs.nix-index-database.result.nixosModules.nix-index
     ./boot.nix
     ./conditions.nix

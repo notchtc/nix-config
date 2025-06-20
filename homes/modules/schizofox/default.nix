@@ -1,5 +1,4 @@
 { schizofox }:
-{ project, ... }:
 {
   imports = [ schizofox.result.homeManagerModules.default ];
 

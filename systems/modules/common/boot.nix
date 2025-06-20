@@ -19,14 +19,10 @@
     };
 
     loader = {
-      timeout = 0;
-      efi.canTouchEfiVariables = true;
-
-      systemd-boot = {
+      limine = {
         enable = true;
-        configurationLimit = 3;
-        consoleMode = "auto";
-        editor = false;
+        efiSupport = true;
+        enableEditor = true;
       };
     };
   };

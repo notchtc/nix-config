@@ -16,7 +16,6 @@ Other projects used:
 - [disko](https://github.com/nix-community/disko)
 - [lix](https://git.lix.systems/lix-project/nixos-module)
 - [nix-index-database](https://github.com/Mic92/nix-index-database)
-- [nyx](https://github.com/chaotic-cx/nyx)
 - [schizofox](https://github.com/schizofox/schizofox)
 - [stylix](https://github.com/danth/stylix)
 

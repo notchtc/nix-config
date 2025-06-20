@@ -2,13 +2,11 @@
 {
   environment.systemPackages = lib.attrValues {
     inherit (pkgs)
-      #      lime3ds
+      #azahar
       lutris
-      #      melonDS
-      #      ppsspp-sdl-wayland
+      #melonDS
+      #ppsspp-sdl-wayland
       ;
-
-    wine = pkgs.wineWowPackages.stagingFull;
   };
 
   programs = {
@@ -22,18 +20,21 @@
       };
     };
 
+    gamescope = {
+      enable = true;
+      capSysNice = true;
+    };
+
     steam = {
       enable = true;
-      remotePlay.openFirewall = true;
       dedicatedServer.openFirewall = true;
-      localNetworkGameTransfers.openFirewall = true;
       extest.enable = true;
+      gamescopeSession.enable = true;
+      localNetworkGameTransfers.openFirewall = true;
       protontricks.enable = true;
+      remotePlay.openFirewall = true;
 
-      extraCompatPackages = [
-        pkgs.luxtorpeda
-        pkgs.proton-ge-custom
-      ];
+      extraCompatPackages = [ pkgs.proton-ge-bin ];
     };
   };
 }
