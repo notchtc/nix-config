@@ -1,4 +1,5 @@
 {
+  config,
   project,
   lib,
   pkgs,
@@ -53,9 +54,9 @@
           builtins.storePath value.src;
     }) project.inputs;
     systemPackages = [
-      project.inputs.nilla-cli.result.packages.nilla-cli.result.${pkgs.system}
-      project.inputs.nilla-home.result.packages.nilla-home.result.${pkgs.system}
-      project.inputs.nilla-nixos.result.packages.nilla-nixos.result.${pkgs.system}
+      project.inputs.nilla-cli.result.packages.nilla-cli.result.${config.nixpkgs.hostPlatform.system}
+      project.inputs.nilla-home.result.packages.nilla-home.result.${config.nixpkgs.hostPlatform.system}
+      project.inputs.nilla-nixos.result.packages.nilla-nixos.result.${config.nixpkgs.hostPlatform.system}
     ];
   };
 

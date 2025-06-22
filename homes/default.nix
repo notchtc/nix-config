@@ -2,8 +2,8 @@
 {
   config.homes."chtc:x86_64-linux" = {
     modules = [
-      ./modules/desktop
-      (import ./modules/schizofox { inherit (config.inputs) schizofox; })
+      config.modules.home.common
+      (import config.modules.home.desktop { inherit (config) inputs; })
     ];
 
     args = {

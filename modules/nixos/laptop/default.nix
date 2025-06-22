@@ -1,8 +1,7 @@
 { project, ... }:
 {
   imports = [
-    ../desktop
-    project.inputs.nixos-hardware.result.nixosModules.common-pc-laptop
+    "${project.inputs.nixos-hardware.result}/common/pc/laptop"
   ];
 
   services = {

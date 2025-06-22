@@ -1,6 +1,6 @@
-{ schizofox }:
+{ inputs }:
 {
-  imports = [ schizofox.result.homeManagerModules.default ];
+  imports = [ inputs.schizofox.result.homeManagerModules.default ];
 
   home.sessionVariables = {
     BROWSER = "schizofox";

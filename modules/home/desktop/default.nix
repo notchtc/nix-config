@@ -1,3 +1,4 @@
+{ inputs }:
 {
   lib,
   pkgs,
@@ -5,10 +6,10 @@
 }:
 {
   imports = [
-    ../common
     ./ghostty.nix
     ./gnome.nix
     ./mpv.nix
+    (import ./schizofox.nix { inherit inputs; })
     ./theme.nix
   ];
 

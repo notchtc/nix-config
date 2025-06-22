@@ -6,6 +6,10 @@ let
     inherit (config.inputs.nixpkgs) src;
   };
 
+  loaders = {
+    nixos-hardware = "raw";
+  };
+
   settings = {
     nixpkgs = {
       configuration = {
@@ -49,6 +53,7 @@ in
     inputs = builtins.mapAttrs (name: pin: {
       src = pin;
 
+      loader = loaders.${name} or (config.lib.modules.never { });
       settings = settings.${name} or (config.lib.modules.never { });
     }) pins;
   };

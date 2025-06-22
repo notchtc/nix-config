@@ -6,12 +6,15 @@
 
       modules = [
         config.inputs.disko.result.nixosModules.disko
-        config.inputs.nixos-hardware.result.nixosModules.common-cpu-intel
-        config.inputs.nixos-hardware.result.nixosModules.common-gpu-amd
+        "${config.inputs.nixos-hardware.result}/common/cpu/intel/skylake"
+        "${config.inputs.nixos-hardware.result}/common/gpu/amd"
 
-        ./modules/gaming
-        ./modules/laptop
-        ./modules/user-chtc
+        config.modules.nixos.common
+        config.modules.nixos.desktop
+        config.modules.nixos.gaming
+        config.modules.nixos.laptop
+        config.modules.nixos.user-chtc
+
         ./dorothy
       ];
 

@@ -1,7 +1,6 @@
 { pkgs, ... }:
 {
   imports = [
-    ../common
     ./gnome.nix
     ./pipewire.nix
     ./stylix.nix
