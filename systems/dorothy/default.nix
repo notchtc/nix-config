@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ lib, system, ... }:
 {
   imports = [
     ./disko.nix
@@ -15,7 +15,7 @@
     kernelModules = [ "kvm-intel" ];
   };
 
-  nixpkgs.hostPlatform = "x86_64-linux";
+  nixpkgs.hostPlatform = "${system}";
 
   services = {
     undervolt = {

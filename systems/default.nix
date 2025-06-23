@@ -21,6 +21,7 @@
       args = {
         project = config;
         host = "dorothy";
+        system = "x86_64-linux";
       };
 
       homes = { inherit (config.homes) "chtc:x86_64-linux"; };

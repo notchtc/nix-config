@@ -44,14 +44,15 @@ nilla.create (
 
         shell =
           {
-            npins,
             mkShell,
+            npins,
+            system,
           }:
           mkShell {
             packages = [
-              config.inputs.nilla-cli.result.packages.nilla-cli.result.${config.nixpkgs.hostPlatform.system}
-              config.inputs.nilla-home.result.packages.nilla-home.result.${config.nixpkgs.hostPlatform.system}
-              config.inputs.nilla-nixos.result.packages.nilla-nixos.result.${config.nixpkgs.hostPlatform.system}
+              config.inputs.nilla-cli.result.packages.nilla-cli.result.${system}
+              config.inputs.nilla-home.result.packages.nilla-home.result.${system}
+              config.inputs.nilla-nixos.result.packages.nilla-nixos.result.${system}
               npins
             ];
           };
