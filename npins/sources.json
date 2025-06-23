@@ -119,6 +119,12 @@
       "url": "https://github.com/nix-community/nix-index-database/archive/78cd697acc2e492b4e92822a4913ffad279c20e6.tar.gz",
       "hash": "0cw4amqhpbnq1z62zh4kwwy9r60hf2nbjjjw44rzjg0si2h4i9h3"
     },
+    "nixos-25.05": {
+      "type": "Channel",
+      "name": "nixos-25.05",
+      "url": "https://releases.nixos.org/nixos/25.05/nixos-25.05.804391.b2485d569675/nixexprs.tar.xz",
+      "hash": "164slyywrzfkia5bh5jjqnnbj3x37bwv6hd2kahrwdaksf98hhl8"
+    },
     "nixos-hardware": {
       "type": "Git",
       "repository": {

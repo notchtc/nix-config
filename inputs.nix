@@ -8,6 +8,7 @@ let
 
   loaders = {
     nixos-hardware = "raw";
+    "nixos-25.05" = "flake";
   };
 
   settings = {

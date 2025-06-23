@@ -1,4 +1,4 @@
-{ inputs }:
+{ osConfig, inputs }:
 {
   imports = [ inputs.schizofox.result.homeManagerModules.default ];
 
@@ -8,6 +8,10 @@
 
   programs.schizofox = {
     enable = true;
+
+    package =
+      inputs."nixos-25.05".result.legacyPackages."${osConfig.nixpkgs.hostPlatform.system
+      }".firefox-esr-128-unwrapped;
 
     security.sandbox.enable = false;
 

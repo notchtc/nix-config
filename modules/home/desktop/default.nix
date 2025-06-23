@@ -1,5 +1,6 @@
 { inputs }:
 {
+  osConfig,
   lib,
   pkgs,
   ...
@@ -9,7 +10,10 @@
     ./ghostty.nix
     ./gnome.nix
     ./mpv.nix
-    (import ./schizofox.nix { inherit inputs; })
+    (import ./schizofox.nix {
+      inherit inputs;
+      inherit osConfig;
+    })
     ./theme.nix
   ];
 
