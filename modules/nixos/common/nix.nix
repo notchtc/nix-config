@@ -1,13 +1,15 @@
 {
   project,
   lib,
-  pkgs,
   system,
   ...
 }:
 {
+  imports = [
+    (import "${project.inputs.lix-module.result}/module.nix" { lix = project.inputs.lix.src; })
+  ];
+
   nix = {
-    package = pkgs.lixPackageSets.stable.lix;
 
     channel.enable = false;
     optimise.automatic = true;

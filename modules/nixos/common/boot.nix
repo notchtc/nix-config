@@ -11,7 +11,7 @@
       "rd.udev.log_level=3"
       "udev.log_priority=3"
     ];
-    tmp.cleanOnBoot = true;
+    tmp.useTmpfs = true;
 
     initrd = {
       systemd.enable = true;
