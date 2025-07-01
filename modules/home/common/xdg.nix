@@ -39,14 +39,16 @@
 
     sessionVariables = {
       _JAVA_OPTIONS = "-Djava.util.prefs.userRoot=${config.xdg.configHome}/java";
+      DVDCSS_CACHE = "${config.xdg.dataHome}/dvdcss";
+      GNUPGHOME = "${config.xdg.dataHome}/gnupg";
       LESSHISTFILE = "${config.xdg.dataHome}/lesshst";
+      PULSECOOKIE = "${config.xdg.configHome}/pulse/cookie";
       WGETRC = "${config.xdg.configHome}/wgetrc";
       WINEPREFIX = "${config.xdg.dataHome}/wine";
     };
   };
 
   programs = {
-    gpg.homedir = "${config.xdg.dataHome}/gnupg";
     zsh = {
       dotDir = ".config/zsh";
       history.path = "${config.xdg.stateHome}/zsh/history";

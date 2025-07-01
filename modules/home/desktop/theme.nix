@@ -19,4 +19,6 @@
     light = "MoreWaita";
     dark = "MoreWaita";
   };
+
+  stylix.targets.gtk.flatpakSupport.enable = false;
 }

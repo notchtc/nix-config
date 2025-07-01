@@ -8,5 +8,4 @@
   };
 
   services.pulseaudio.enable = lib.mkForce false;
-  environment.etc."pulse/client.conf".text = "cookie-file = ~/.config/pulse/cookie";
 }
