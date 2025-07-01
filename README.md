@@ -26,4 +26,6 @@ Other configurations from where I learned and copied:
 - [moni-dz/nix-config](https://github.com/moni-dz/nix-config)
 - [fufexan/dotfiles](https://github.com/fufexan/dotfiles)
 - [viperML/dotfiles](https://github.com/viperML/dotfiles)
-- [surfaceflinger/flake](https://github.com/surfaceflinger/flake)
+- [surfaceflinger/notflake](https://github.com/surfaceflinger/notflake)
+- [FreshlyBakedCake/PacketMix](https://github.com/FreshlyBakedCake/PacketMix)
+- [jakehamilton/config](https://github.com/jakehamilton/config)

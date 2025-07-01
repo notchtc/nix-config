@@ -16,11 +16,10 @@
   programs.fish = {
     enable = true;
 
-    shellAliases = {
+    shellAliases = with pkgs; {
       e = "$EDITOR";
-      se = "doas $EDITOR";
-      cat = "bat";
-      ls = "eza --classify=auto --group-directories-first";
+      cat = "${lib.getExe bat} -Pp";
+      ls = "${lib.getExe eza} --classify=auto --group-directories-first";
     };
 
     promptInit = ''

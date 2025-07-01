@@ -6,9 +6,9 @@
     ./stylix.nix
   ];
 
-  isDesktop = true;
-  hardware.amdgpu.legacySupport.enable = true;
+  boot.kernelPackages = pkgs.linuxPackages_xanmod;
   fonts.packages = [ pkgs.nerd-fonts.symbols-only ];
+  hardware.amdgpu.legacySupport.enable = true;
   time.timeZone = "Europe/Warsaw";
 
   programs.appimage = {

@@ -9,7 +9,6 @@
   imports = [
     project.inputs.nix-index-database.result.nixosModules.nix-index
     ./boot.nix
-    ./conditions.nix
     ./doas.nix
     ./fish.nix
     ./memory.nix

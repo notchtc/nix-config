@@ -1,8 +1,7 @@
-{ config, pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   boot = {
-    kernelPackages =
-      if config.isDesktop then pkgs.linuxPackages_xanmod else pkgs.linuxPackages_hardened;
+    kernelPackages = lib.mkDefault pkgs.linuxPackages_hardened;
 
     consoleLogLevel = 0;
     kernelParams = [
