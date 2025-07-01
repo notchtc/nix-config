@@ -170,14 +170,14 @@
       "type": "Git",
       "repository": {
         "type": "GitHub",
-        "owner": "schizofox",
+        "owner": "surfaceflinger",
         "repo": "schizofox"
       },
-      "branch": "main",
+      "branch": "ff-esr-140",
       "submodules": false,
-      "revision": "e2702bd7a09fc9d6089901adb4e7ae4a9aeef5ef",
-      "url": "https://github.com/schizofox/schizofox/archive/e2702bd7a09fc9d6089901adb4e7ae4a9aeef5ef.tar.gz",
-      "hash": "0hmxw1f41kc2nqqvaiakwc7nwi5mi0bcfy04blhj8qajaqm640jb"
+      "revision": "4e05a542d2b6220423213b41416baba55e9389fb",
+      "url": "https://github.com/surfaceflinger/schizofox/archive/4e05a542d2b6220423213b41416baba55e9389fb.tar.gz",
+      "hash": "175fjd7lmshidhydb7c78i0mqmvrz70jdsh1wramx7w4x7x4hjql"
     },
     "stylix": {
       "type": "Git",
