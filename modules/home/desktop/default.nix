@@ -29,6 +29,7 @@
         qbittorrent
         strawberry
         telegram-desktop
+        vcv-rack
         vesktop
         ;
     };
