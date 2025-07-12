@@ -2,9 +2,7 @@
 let
   pins = import ./npins;
 
-  nixpkgs-flake = config.inputs.flake-compat.result.load {
-    inherit (config.inputs.nixpkgs) src;
-  };
+  nixpkgs-flake = config.inputs.flake-compat.result.load { inherit (config.inputs.nixpkgs) src; };
 
   loaders = {
     nixos-hardware = "raw";

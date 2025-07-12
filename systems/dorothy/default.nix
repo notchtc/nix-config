@@ -1,8 +1,6 @@
 { lib, system, ... }:
 {
-  imports = [
-    ./disko.nix
-  ];
+  imports = [ ./disko.nix ];
 
   boot = {
     initrd.availableKernelModules = [

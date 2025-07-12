@@ -5,11 +5,7 @@
 
     shells = [ pkgs.fish ];
 
-    systemPackages = lib.attrValues {
-      inherit (pkgs.fishPlugins)
-        tide
-        ;
-    };
+    systemPackages = lib.attrValues { inherit (pkgs.fishPlugins) tide; };
   };
   users.defaultUserShell = pkgs.fish;
 

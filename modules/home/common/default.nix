@@ -6,9 +6,7 @@
     ./xdg.nix
   ];
 
-  home = {
-    inherit (osConfig.system) stateVersion;
-  };
+  home = { inherit (osConfig.system) stateVersion; };
 
   programs = {
     command-not-found.enable = false;
