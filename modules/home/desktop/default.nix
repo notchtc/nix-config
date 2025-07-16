@@ -1,6 +1,6 @@
 { inputs }:
 {
-  osConfig,
+  config,
   lib,
   pkgs,
   ...
@@ -8,12 +8,9 @@
 {
   imports = [
     ./ghostty.nix
-    ./gnome.nix
     ./mpv.nix
-    (import ./schizofox.nix {
-      inherit inputs;
-      inherit osConfig;
-    })
+    ./niri
+    (import ./schizofox.nix { inherit inputs; })
     ./theme.nix
   ];
 
@@ -21,17 +18,22 @@
     packages = lib.attrValues {
       inherit (pkgs)
         foliate
+        fooyin
         gimp3
         keepassxc
+        nautilus
         nicotine-plus
+        papers
         picard
         plugdata
         qbittorrent
-        strawberry
+        swayimg
         telegram-desktop
         vesktop
         ;
     };
+
+    file."${config.xdg.configHome}/fooyin/layout.fyl".source = ./layout.fyl;
 
     sessionVariables = {
       NIXOS_OZONE_WL = 1;

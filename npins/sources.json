@@ -41,9 +41,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "392ddb642abec771d63688c49fa7bcbb9d2a5717",
-      "url": "https://github.com/nix-community/home-manager/archive/392ddb642abec771d63688c49fa7bcbb9d2a5717.tar.gz",
-      "hash": "0rnawaz7ia38f0749sai4zmvyyp07nk6rx0wib6ndkwdm2vdz283"
+      "revision": "e8c19a3cec2814c754f031ab3ae7316b64da085b",
+      "url": "https://github.com/nix-community/home-manager/archive/e8c19a3cec2814c754f031ab3ae7316b64da085b.tar.gz",
+      "hash": "0k7sa69yqdizk3yxjlsyrzm86lwzpimxhjygxdp98hqd3hg2dv2b"
     },
     "lix": {
       "type": "Git",
@@ -55,9 +55,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "65ef28df6dac2b5fe3b405a534515567a2f60b6f",
-      "url": "https://git.lix.systems/lix-project/lix/archive/65ef28df6dac2b5fe3b405a534515567a2f60b6f.tar.gz",
-      "hash": "0598m807ngn9x17jij7v55j03mjynbsii7zmz57zk6yndr7p7vyl"
+      "revision": "8f325fe436d890c5c88a7206301ab61ef0071c62",
+      "url": "https://git.lix.systems/lix-project/lix/archive/8f325fe436d890c5c88a7206301ab61ef0071c62.tar.gz",
+      "hash": "1lr47g8qn7m57svnhwy66brw9gadprz9jqr2m43b84hb3bq5gx99"
     },
     "lix-module": {
       "type": "Git",
@@ -134,6 +134,19 @@
       "url": "https://github.com/nilla-nix/nixos/archive/52c623ae89fe77de669a981c7e92b1504cd99eac.tar.gz",
       "hash": "0bjbkyd7c1cp7daf8j4h7x339ngrghnjq5wgqq0fbk269rhrvmpf"
     },
+    "niri": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "sodiboo",
+        "repo": "niri-flake"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "6ceffce7c024e186f8501bb067abc4df2937598c",
+      "url": "https://github.com/sodiboo/niri-flake/archive/6ceffce7c024e186f8501bb067abc4df2937598c.tar.gz",
+      "hash": "0kflip9ax2v1456zf64z9m1q4kda5blfs9qmrm0mzjpiw151p8cf"
+    },
     "nix-index-database": {
       "type": "Git",
       "repository": {
@@ -143,9 +156,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "ad29e2961dd0d58372384563bf00d510fc9f2e15",
-      "url": "https://github.com/nix-community/nix-index-database/archive/ad29e2961dd0d58372384563bf00d510fc9f2e15.tar.gz",
-      "hash": "1ap3q8s4jlcsak9bnl7hsdkhd22i95wrggkdsrm37hxvq7mi0bpa"
+      "revision": "839e02dece5845be3a322e507a79712b73a96ba2",
+      "url": "https://github.com/nix-community/nix-index-database/archive/839e02dece5845be3a322e507a79712b73a96ba2.tar.gz",
+      "hash": "1rcxjvyxw1yhchnwlm57n0cljk3ji8z5yiy6y2qw19w94hwzbh8l"
     },
     "nixos-hardware": {
       "type": "Git",
@@ -163,8 +176,8 @@
     "nixpkgs": {
       "type": "Channel",
       "name": "nixos-unstable",
-      "url": "https://releases.nixos.org/nixos/unstable/nixos-25.11pre826938.9807714d6944/nixexprs.tar.xz",
-      "hash": "0ypbzi9n23bm8g6ayfjx4qzniq5vajf5rkb504hbmbg0jxp0mqs4"
+      "url": "https://releases.nixos.org/nixos/unstable/nixos-25.11pre830073.62e0f05ede1d/nixexprs.tar.xz",
+      "hash": "1i1502nalwcb4l7ihjxpy0mxva3j0ky9cz4psimar48x6ljff109"
     },
     "schizofox": {
       "type": "Git",
@@ -188,9 +201,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "0da583a359fd911d5cbfd2c789424b888b777a4b",
-      "url": "https://github.com/nix-community/stylix/archive/0da583a359fd911d5cbfd2c789424b888b777a4b.tar.gz",
-      "hash": "1r9fvw1g6a0nahcmp68cjxgkf042h03463p9wrki9xihmzaxa8yc"
+      "revision": "a92b0ac9da273fa484136283d4ef54ca19eacc4f",
+      "url": "https://github.com/nix-community/stylix/archive/a92b0ac9da273fa484136283d4ef54ca19eacc4f.tar.gz",
+      "hash": "0k7qx0wx1rcyl7ry3w9slmvs07d8q3jy33n72vzrfczl4q9ndx1k"
     }
   },
   "version": 5

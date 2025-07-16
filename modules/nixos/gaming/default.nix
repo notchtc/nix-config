@@ -1,5 +1,9 @@
 { pkgs, lib, ... }:
 {
+  boot.kernel.sysctl = {
+    "kernel.split_lock_mitigate" = 0;
+  };
+
   environment.systemPackages = lib.attrValues {
     inherit (pkgs)
       #azahar
@@ -9,7 +13,10 @@
       ;
   };
 
-  environment.sessionVariables.PROTON_ENABLE_WAYLAND = 1;
+  environment.sessionVariables = {
+    PROTON_ENABLE_WAYLAND = 1;
+    PROTON_USE_NTSYNC = 1;
+  };
   programs = {
     gamemode = {
       enable = true;
@@ -23,7 +30,7 @@
 
     gamescope = {
       enable = true;
-      capSysNice = true;
+      capSysNice = false;
     };
 
     steam = {
@@ -38,4 +45,7 @@
       extraCompatPackages = [ pkgs.proton-ge-bin ];
     };
   };
+
+  hardware.steam-hardware.enable = true;
+  services.udev.packages = [ pkgs.game-devices-udev-rules ];
 }
