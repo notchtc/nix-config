@@ -15,6 +15,8 @@
 
   nixpkgs.hostPlatform = "${system}";
 
+  hardware.enableRedistributableFirmware = true;
+
   services = {
     undervolt = {
       enable = true;
