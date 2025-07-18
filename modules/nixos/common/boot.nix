@@ -22,6 +22,7 @@
         enable = true;
         efiSupport = true;
         enableEditor = true;
+        maxGenerations = 10;
       };
     };
   };
