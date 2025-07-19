@@ -13,11 +13,13 @@
 
     settings = {
       "dom.event.clipboardevents.enabled" = true;
-      "general.autoScroll" = true;
+      "privacy.resistFingerprinting.letterboxing" = false;
+
+      "browser.uidensity" = 1;
+      "toolkit.tabbox.switchByScrolling" = true;
+
       "layers.acceleration.force-enabled" = true;
       "media.ffmpeg.vaapi.enabled" = true;
-      "privacy.resistFingerprinting.letterboxing" = false;
-      "svg.context-properties.content.enabled" = true;
     };
 
     theme = {
@@ -44,19 +46,18 @@
 
     search = {
       defaultSearchEngine = "DuckDuckGo";
-      searxUrl = "https://search.rhscz.eu";
     };
 
     extensions = {
       enableDefaultExtensions = true;
       enableExtraExtensions = true;
       extraExtensions = {
-        "{c607c8df-14a7-4f28-894f-29e8722976af}".install_url =
-          "https://addons.mozilla.org/firefox/downloads/latest/temporary-containers/latest.xpi";
         "{9a41dee2-b924-4161-a971-7fb35c053a4a}".install_url =
           "https://addons.mozilla.org/firefox/downloads/latest/enhanced-h264ify/latest.xpi";
-        "@testpilot-containers".install_url =
-          "https://addons.mozilla.org/firefox/download/latest/multi-account-containers/latest.xpi";
+        "{cb31ec5d-c49a-4e5a-b240-16c767444f62}".install_url =
+          "https://addons.mozilla.org/firefox/downloads/latest/indie-wiki-buddy/latest.xpi";
+        "skipredirect@sblask".install_url =
+          "https://addons.mozilla.org/firefox/downloads/latest/skip-redirect/latest.xpi";
         "sponsorBlocker@ajay.app".install_url =
           "https://addons.mozilla.org/firefox/downloads/latest/sponsorblock/latest.xpi";
         "{aecec67f-0d10-4fa7-b7c7-609a2db280cf}".install_url =

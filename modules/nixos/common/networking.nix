@@ -1,10 +1,10 @@
 {
   networking = {
     nameservers = [
-      "45.90.28.0#311cdf.dns.nextdns.io"
-      "2a07:a8c0::#311cdf.dns.nextdns.io"
-      "45.90.30.0#311cdf.dns.nextdns.io"
-      "2a07:a8c1::#311cdf.dns.nextdns.io"
+      "9.9.9.9#dns.quad9.net"
+      "2620:fe::fe#dns.quad9.net"
+      "149.112.112.112#dns.quad9.net"
+      "2620:fe::9#dns.quad9.net"
     ];
 
     networkmanager = {
