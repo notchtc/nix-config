@@ -1,4 +1,4 @@
-{ lib, system, ... }:
+{ lib, ... }:
 {
   imports = [ ./disko.nix ];
 
@@ -12,8 +12,6 @@
     initrd.kernelModules = [ "dm-snapshot" ];
     kernelModules = [ "kvm-intel" ];
   };
-
-  nixpkgs.hostPlatform = "${system}";
 
   hardware.enableRedistributableFirmware = true;
 

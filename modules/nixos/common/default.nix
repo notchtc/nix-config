@@ -3,6 +3,7 @@
   lib,
   pkgs,
   host ? builtins.throw "No host name provided",
+  system ? builtins.throw "No platform provided",
   ...
 }:
 {
@@ -56,5 +57,6 @@
 
   home-manager.backupFileExtension = "backup";
   networking.hostName = host;
+  nixpkgs.hostPlatform = "${system}";
   system.etc.overlay.enable = true;
 }
