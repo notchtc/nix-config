@@ -32,7 +32,6 @@
       set fish_cursor_external line blink
       set fish_cursor_visual block blink
       fish_vi_key_bindings
-      zoxide init fish | source
     '';
   };
 }

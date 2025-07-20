@@ -10,7 +10,6 @@
   ];
 
   nix = {
-
     channel.enable = false;
     optimise.automatic = true;
     nixPath = [ "/etc/nix/inputs" ];

@@ -29,7 +29,6 @@
       npins
       ripgrep
       statix
-      zoxide
       ;
   };
 
@@ -41,10 +40,11 @@
 
   programs = {
     bat.enable = true;
-    command-not-found.enable = false;
     git.enable = true;
     nano.enable = false;
     nix-index-database.comma.enable = true;
+    zoxide.enable = true;
+
     bash.shellInit = ''
       export HISTFILE="$XDG_STATE_HOME"/bash/history
     '';

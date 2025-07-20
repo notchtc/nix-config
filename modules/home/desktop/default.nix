@@ -17,19 +17,15 @@
   home = {
     packages = lib.attrValues {
       inherit (pkgs)
-        foliate
         fooyin
         gimp3
-        keepassxc
         nautilus
         nicotine-plus
         papers
         picard
         plugdata
         qbittorrent
-        swayimg
         telegram-desktop
-        vesktop
         ;
     };
 
@@ -39,5 +35,12 @@
       NIXOS_OZONE_WL = 1;
       QT_QPA_PLATFORM = "wayland";
     };
+  };
+
+  programs = {
+    foliate.enable = true;
+    keepassxc.enable = true;
+    swayimg.enable = true;
+    vesktop.enable = true;
   };
 }
