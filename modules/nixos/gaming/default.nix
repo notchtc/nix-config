@@ -7,6 +7,7 @@
   environment.systemPackages = lib.attrValues {
     inherit (pkgs)
       #azahar
+      duckstation
       lutris
       #melonDS
       #ppsspp-sdl-wayland
