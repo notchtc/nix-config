@@ -41,9 +41,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "e8c19a3cec2814c754f031ab3ae7316b64da085b",
-      "url": "https://github.com/nix-community/home-manager/archive/e8c19a3cec2814c754f031ab3ae7316b64da085b.tar.gz",
-      "hash": "0k7sa69yqdizk3yxjlsyrzm86lwzpimxhjygxdp98hqd3hg2dv2b"
+      "revision": "0cdfcdbb525b77b951c889b6131047bc374f48fe",
+      "url": "https://github.com/nix-community/home-manager/archive/0cdfcdbb525b77b951c889b6131047bc374f48fe.tar.gz",
+      "hash": "116mzvnqrrx3kml6dcjswdwhzgmw3d3gw5la95av72iaslv1zd08"
     },
     "lix": {
       "type": "Git",
@@ -55,9 +55,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "8f325fe436d890c5c88a7206301ab61ef0071c62",
-      "url": "https://git.lix.systems/lix-project/lix/archive/8f325fe436d890c5c88a7206301ab61ef0071c62.tar.gz",
-      "hash": "1lr47g8qn7m57svnhwy66brw9gadprz9jqr2m43b84hb3bq5gx99"
+      "revision": "8a2d25054ddff44dd8878154b702365eb1966a78",
+      "url": "https://git.lix.systems/lix-project/lix/archive/8a2d25054ddff44dd8878154b702365eb1966a78.tar.gz",
+      "hash": "0qfn2y9sa3zh57jf69zcs1rv91qky096rins03bszz68h77hvabg"
     },
     "lix-module": {
       "type": "Git",
@@ -143,9 +143,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "6ceffce7c024e186f8501bb067abc4df2937598c",
-      "url": "https://github.com/sodiboo/niri-flake/archive/6ceffce7c024e186f8501bb067abc4df2937598c.tar.gz",
-      "hash": "0kflip9ax2v1456zf64z9m1q4kda5blfs9qmrm0mzjpiw151p8cf"
+      "revision": "fdeb0c5367f6e183f19ee1521644cb0440582bde",
+      "url": "https://github.com/sodiboo/niri-flake/archive/fdeb0c5367f6e183f19ee1521644cb0440582bde.tar.gz",
+      "hash": "0x4ncrcfhda4dgz2p6scy1dr30d11f8qfp3gfdv3738f6r98pq31"
     },
     "nix-index-database": {
       "type": "Git",
@@ -156,9 +156,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "839e02dece5845be3a322e507a79712b73a96ba2",
-      "url": "https://github.com/nix-community/nix-index-database/archive/839e02dece5845be3a322e507a79712b73a96ba2.tar.gz",
-      "hash": "1rcxjvyxw1yhchnwlm57n0cljk3ji8z5yiy6y2qw19w94hwzbh8l"
+      "revision": "fafdcb505ba605157ff7a7eeea452bc6d6cbc23c",
+      "url": "https://github.com/nix-community/nix-index-database/archive/fafdcb505ba605157ff7a7eeea452bc6d6cbc23c.tar.gz",
+      "hash": "07sxsm80nxmyvlbh9c8xqc7l1gifl04yk8kn139rv5pwyxwhszxi"
     },
     "nixos-hardware": {
       "type": "Git",
@@ -169,15 +169,15 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "7ced9122cff2163c6a0212b8d1ec8c33a1660806",
-      "url": "https://github.com/nixos/nixos-hardware/archive/7ced9122cff2163c6a0212b8d1ec8c33a1660806.tar.gz",
-      "hash": "13rcibb0mmiw2ycvp60c9s0vcx1szv10m652q2aygvdpwy8ff140"
+      "revision": "cc66fddc6cb04ab479a1bb062f4d4da27c936a22",
+      "url": "https://github.com/nixos/nixos-hardware/archive/cc66fddc6cb04ab479a1bb062f4d4da27c936a22.tar.gz",
+      "hash": "10xfsi90sy0kflswv7dhg9nfv1r55rn0m98hjygg29ixb7r48p4w"
     },
     "nixpkgs": {
       "type": "Channel",
       "name": "nixos-unstable",
-      "url": "https://releases.nixos.org/nixos/unstable/nixos-25.11pre830073.62e0f05ede1d/nixexprs.tar.xz",
-      "hash": "1i1502nalwcb4l7ihjxpy0mxva3j0ky9cz4psimar48x6ljff109"
+      "url": "https://releases.nixos.org/nixos/unstable/nixos-25.11pre832220.c87b95e25065/nixexprs.tar.xz",
+      "hash": "1r0wjvzzf1gw8k5slfmbbd57yr6mw3jh6b4fs1df8jpcfifyk0ii"
     },
     "schizofox": {
       "type": "Git",
@@ -201,9 +201,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "a92b0ac9da273fa484136283d4ef54ca19eacc4f",
-      "url": "https://github.com/nix-community/stylix/archive/a92b0ac9da273fa484136283d4ef54ca19eacc4f.tar.gz",
-      "hash": "0k7qx0wx1rcyl7ry3w9slmvs07d8q3jy33n72vzrfczl4q9ndx1k"
+      "revision": "37673b1de0703a637f3a8abe8da8a097d076a377",
+      "url": "https://github.com/nix-community/stylix/archive/37673b1de0703a637f3a8abe8da8a097d076a377.tar.gz",
+      "hash": "0pjzxcdhs5myli3c5zqk2v2nw5k1m2y0h3994mhzgllji08v16g1"
     }
   },
   "version": 5
