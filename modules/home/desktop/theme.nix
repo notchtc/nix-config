@@ -13,7 +13,7 @@
     };
   };
 
-  stylix.iconTheme = {
+  stylix.icons = {
     enable = true;
     package = pkgs.morewaita-icon-theme;
     light = "MoreWaita";

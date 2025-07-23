@@ -1,9 +1,4 @@
 { config }:
-let
-  inherit (config) lib;
-in
 {
-  config.lib.modules = {
-    never = _: lib.modules.when false { };
-  };
+  config.lib.constants.never = config.lib.modules.when false { };
 }

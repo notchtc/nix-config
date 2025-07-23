@@ -1,6 +1,22 @@
 let
   pins = import ./npins;
   nilla = import pins.nilla;
+  compat = import pins.flake-compat;
+  nixpkgs-flake = compat.load { src = pins.nixpkgs; };
+
+  loaders = {
+    nixos-hardware = "raw";
+    lix = "raw";
+  };
+
+  settings = {
+    nixpkgs.configuration.allowUnfree = true;
+    disko.inputs.nixpkgs = nixpkgs-flake;
+    home-manager.inputs.nixpkgs = nixpkgs-flake;
+    nix-index-database.inputs.nixpkgs = nixpkgs-flake;
+    schizofox.inputs.nixpkgs = nixpkgs-flake;
+    stylix.inputs.nixpkgs = nixpkgs-flake;
+  };
 in
 nilla.create (
   { config }:
@@ -10,7 +26,6 @@ nilla.create (
       ./homes
       ./lib
       ./systems
-      ./inputs.nix
 
       "${pins.nilla-home}/modules/home.nix"
       "${pins.nilla-home}/modules/nixos.nix"
@@ -18,6 +33,13 @@ nilla.create (
     ];
 
     config = {
+      inputs = builtins.mapAttrs (name: pin: {
+        src = pin;
+
+        loader = loaders.${name} or config.lib.constants.never;
+        settings = settings.${name} or config.lib.constants.never;
+      }) pins;
+
       modules = {
         nilla = {
           homes = ./homes;
