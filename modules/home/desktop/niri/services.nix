@@ -1,8 +1,11 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 let
+  brightnessctl = "${pkgs.brightnessctl}/bin/brightnessctl";
   hyprlock = "${pkgs.hyprlock}/bin/hyprlock";
+  loginctl = "${pkgs.systemd}/bin/loginctl";
   niri = "${pkgs.niri-unstable}/bin/niri";
-  systemctl = config.systemd.user.systemctlPath;
+  pidof = "${pkgs.procps}/bin/pidof";
+  systemctl = "${pkgs.systemd}/bin/systemctl";
 in
 {
   services = {
@@ -10,7 +13,15 @@ in
       enable = true;
       timeouts = [
         {
+          timeout = 180;
+          command = "${brightnessctl} -s set 10";
+        }
+        {
           timeout = 300;
+          command = "${loginctl} lock-session";
+        }
+        {
+          timeout = 360;
           command = "${niri} msg action power-off-monitors";
         }
         {
@@ -20,12 +31,16 @@ in
       ];
       events = [
         {
+          event = "lock";
+          command = "${pidof} hyprlock || ${hyprlock}";
+        }
+        {
           event = "before-sleep";
-          command = "${hyprlock}";
+          command = "${loginctl} lock-session";
         }
         {
           event = "after-resume";
-          command = "${niri} msg action power-on-monitors";
+          command = "${niri} msg action power-on-monitors && ${brightnessctl} -r";
         }
       ];
     };
@@ -38,8 +53,6 @@ in
         control-center-margin-right = 6;
       };
     };
-
-    swayosd.enable = true;
 
     wlsunset = {
       enable = true;

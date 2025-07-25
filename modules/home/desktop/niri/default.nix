@@ -108,40 +108,40 @@
       };
 
       "XF86AudioRaiseVolume" = {
-        action = spawn "swayosd-client" "--output-volume" "raise";
+        action = spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "5%+";
         allow-when-locked = true;
       };
 
       "XF86AudioLowerVolume" = {
-        action = spawn "swayosd-client" "--output-volume" "lower";
+        action = spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "5%-";
         allow-when-locked = true;
       };
 
       "XF86AudioMute" = {
-        action = spawn "swayosd-client" "--output-volume" "mute-toggle";
+        action = spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle";
         allow-when-locked = true;
       };
 
       "XF86AudioMicMute" = {
-        action = spawn "swayosd-client" "--input-volume" "mute-toggle";
+        action = spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle";
         allow-when-locked = true;
       };
 
-      "XF86MonBrightnessUp".action = spawn "swayosd-client" "--brightness" "raise";
-      "XF86MonBrightnessDown".action = spawn "swayosd-client" "--brightness" "lower";
+      "XF86MonBrightnessUp".action = spawn "brightnessctl" "set" "+5%";
+      "XF86MonBrightnessDown".action = spawn "brightnessctl" "set" "5%-";
 
       "XF86AudioPrev" = {
-        action = spawn "swayosd-client" "--playerctl" "prev";
+        action = spawn "playerctl" "prev";
         allow-when-locked = true;
       };
 
       "XF86AudioNext" = {
-        action = spawn "swayosd-client" "--playerctl" "next";
+        action = spawn "playerctl" "next";
         allow-when-locked = true;
       };
 
       "XF86AudioPlay" = {
-        action = spawn "swayosd-client" "--playerctl" "play-pause";
+        action = spawn "playerctl" "play-pause";
         allow-when-locked = true;
       };
 

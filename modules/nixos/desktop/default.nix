@@ -1,4 +1,4 @@
-{ lib, pkgs, ... }:
+{ pkgs, ... }:
 {
   imports = [
     ./niri.nix
@@ -11,7 +11,10 @@
   time.timeZone = "Europe/Warsaw";
 
   fonts = {
-    packages = lib.attrValues { inherit (pkgs) corefonts sarasa-gothic; };
+    packages = [
+      pkgs.corefonts
+      pkgs.nerd-fonts.symbols-only
+    ];
     enableDefaultPackages = true;
   };
 

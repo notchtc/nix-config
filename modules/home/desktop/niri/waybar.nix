@@ -64,56 +64,31 @@ in
       };
 
       wireplumber = {
-        format = "{icon}  {volume}%";
-        format-muted = "󰝟";
-        format-icons = [
-          ""
-          ""
-          ""
-        ];
+        format = "vol: {volume}%";
+        format-muted = "vol: muted";
         on-click = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
         rotate = 270;
       };
 
       network = {
         format = "{ifname}";
-        format-ethernet = "󰈀";
-        format-wifi = "{icon}";
+        format-ethernet = "ethernet";
+        format-wifi = "wi-fi";
         format-disconnected = "disconnected";
-        format-icons = [
-          "󰤯"
-          "󰤟"
-          "󰤢"
-          "󰤥"
-          "󰤨"
-        ];
         tooltip-format = "{ifname} via {gwaddr}";
-        tooltip-format-ethernet = "󰈀 {ipaddr}/{cidr} ({ifname})";
-        tooltip-format-wifi = "{icon} {essid} ({signalStrength}%)";
+        tooltip-format-ethernet = "{ipaddr}/{cidr} ({ifname})";
+        tooltip-format-wifi = "{essid} ({signalStrength}%)";
         on-click = "$TERMINAL -e nmtui";
         rotate = 270;
       };
 
       battery = {
-        format = "{icon} {capacity}%";
-        format-warning = "{icon}  {capacity}%";
-        format-critical = "{icon} {capacity}%";
-        format-charging = "󰂄 {capacity}%";
-        format-plugged = "{icon}";
-        format-alt = "{icon} {time}";
-        format-icons = [
-          "󰂎"
-          "󰁺"
-          "󰁻"
-          "󰁼"
-          "󰁽"
-          "󰁾"
-          "󰁾"
-          "󰂀"
-          "󰂁"
-          "󰂂"
-          "󰁹"
-        ];
+        format = "bat: {capacity}%";
+        format-warning = "bat(w): {capacity}%";
+        format-critical = "bat(!): {capacity}%";
+        format-charging = "bat(↑): {capacity}%";
+        format-plugged = "plugged";
+        format-alt = "bat: {time}";
         rotate = 270;
 
         states = {
@@ -155,7 +130,7 @@ in
       }
 
       * {
-          font-family: ${config.stylix.fonts.monospace.name};
+          font-family: ${config.stylix.fonts.sansSerif.name};
           font-size: ${toString config.stylix.fonts.sizes.desktop}pt;
           padding: 0;
       }

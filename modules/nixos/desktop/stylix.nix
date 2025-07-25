@@ -5,7 +5,7 @@
   stylix = {
     enable = true;
 
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/everforest-dark-hard.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/selenized-dark.yaml";
     image = ./wallpaper.jpg;
 
     cursor = {
@@ -21,13 +21,13 @@
       };
 
       sansSerif = {
-        package = pkgs.inter;
-        name = "Inter";
+        package = pkgs.sarasa-gothic;
+        name = "Sarasa UI J";
       };
 
       monospace = {
-        package = pkgs.nerd-fonts.iosevka;
-        name = "Iosevka Nerd Font";
+        package = pkgs.sarasa-gothic;
+        name = "Sarasa Term J";
       };
 
       emoji = {
