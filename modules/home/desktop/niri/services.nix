@@ -1,8 +1,6 @@
 { pkgs, ... }:
 let
-  brightnessctl = "${pkgs.brightnessctl}/bin/brightnessctl";
   hyprlock = "${pkgs.hyprlock}/bin/hyprlock";
-  loginctl = "${pkgs.systemd}/bin/loginctl";
   niri = "${pkgs.niri-unstable}/bin/niri";
   pidof = "${pkgs.procps}/bin/pidof";
   systemctl = "${pkgs.systemd}/bin/systemctl";
@@ -13,12 +11,8 @@ in
       enable = true;
       timeouts = [
         {
-          timeout = 180;
-          command = "${brightnessctl} -s set 10";
-        }
-        {
           timeout = 300;
-          command = "${loginctl} lock-session";
+          command = "${pidof} hyprlock || ${hyprlock}";
         }
         {
           timeout = 360;
@@ -36,11 +30,11 @@ in
         }
         {
           event = "before-sleep";
-          command = "${loginctl} lock-session";
+          command = "${pidof} hyprlock || ${hyprlock}";
         }
         {
           event = "after-resume";
-          command = "${niri} msg action power-on-monitors && ${brightnessctl} -r";
+          command = "${niri} msg action power-on-monitors";
         }
       ];
     };
