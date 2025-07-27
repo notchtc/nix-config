@@ -2,7 +2,6 @@
 let
   hyprlock = "${pkgs.hyprlock}/bin/hyprlock";
   niri = "${pkgs.niri-unstable}/bin/niri";
-  systemctl = "${pkgs.systemd}/bin/systemctl";
 in
 {
   services = {
@@ -16,10 +15,6 @@ in
         {
           timeout = 400;
           command = "${niri} msg action power-off-monitors";
-        }
-        {
-          timeout = 600;
-          command = "${systemctl} suspend";
         }
       ];
       events = [
