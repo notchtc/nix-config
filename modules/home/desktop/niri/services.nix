@@ -2,7 +2,6 @@
 let
   hyprlock = "${pkgs.hyprlock}/bin/hyprlock";
   niri = "${pkgs.niri-unstable}/bin/niri";
-  pidof = "${pkgs.procps}/bin/pidof";
   systemctl = "${pkgs.systemd}/bin/systemctl";
 in
 {
@@ -12,10 +11,10 @@ in
       timeouts = [
         {
           timeout = 300;
-          command = "${pidof} hyprlock || ${hyprlock}";
+          command = "loginctl lock-session";
         }
         {
-          timeout = 360;
+          timeout = 400;
           command = "${niri} msg action power-off-monitors";
         }
         {
@@ -26,11 +25,11 @@ in
       events = [
         {
           event = "lock";
-          command = "${pidof} hyprlock || ${hyprlock}";
+          command = "${hyprlock}";
         }
         {
           event = "before-sleep";
-          command = "${pidof} hyprlock || ${hyprlock}";
+          command = "loginctl lock-session";
         }
         {
           event = "after-resume";
