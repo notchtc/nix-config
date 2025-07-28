@@ -22,8 +22,7 @@
         correct-downscaling = "yes";
         linear-downscaling = "yes";
 
-        tone-mapping = "bt.2466a";
-        tone-mapping-mode = "luma";
+        tone-mapping = "bt.2446a";
 
         deband = "yes";
         deband-iterations = 4;
