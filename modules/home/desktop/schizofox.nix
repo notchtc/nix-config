@@ -9,7 +9,7 @@
   programs.schizofox = {
     enable = true;
 
-    security.sandbox.enable = true;
+    security.sandbox.enable = false;
 
     settings = {
       "dom.event.clipboardevents.enabled" = true;
@@ -69,7 +69,6 @@
 
     misc = {
       contextMenu.enable = true;
-      customMozillaFolder.path = "/.local/share/schizofox/mozilla";
       disableWebgl = false;
       displayBookmarksInToolbar = "newtab";
       drm.enable = true;
