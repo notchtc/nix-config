@@ -1,4 +1,4 @@
-{ inputs, config, ... }:
+{ inputs, ... }:
 {
   imports = [ inputs.schizofox.result.homeManagerModules.default ];
 
@@ -15,7 +15,6 @@
       "dom.event.clipboardevents.enabled" = true;
       "privacy.resistFingerprinting.letterboxing" = false;
 
-      "browser.uidensity" = 1;
       "toolkit.tabbox.switchByScrolling" = true;
 
       "layers.acceleration.force-enabled" = true;
