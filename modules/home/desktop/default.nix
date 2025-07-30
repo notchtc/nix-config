@@ -10,7 +10,7 @@
     ./ghostty.nix
     ./mpv.nix
     ./niri
-    (import ./schizofox.nix { inherit inputs; })
+    (import ./schizofox.nix { inherit inputs config; })
     ./theme.nix
   ];
 

@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs, config, ... }:
 {
   imports = [ inputs.schizofox.result.homeManagerModules.default ];
 
@@ -9,7 +9,7 @@
   programs.schizofox = {
     enable = true;
 
-    security.sandbox.enable = false;
+    security.sandbox.enable = true;
 
     settings = {
       "dom.event.clipboardevents.enabled" = true;
@@ -70,6 +70,7 @@
 
     misc = {
       contextMenu.enable = true;
+      customMozillaFolder.path = "/.local/share/schizofox/mozilla";
       disableWebgl = false;
       displayBookmarksInToolbar = "newtab";
       drm.enable = true;
