@@ -37,8 +37,7 @@
         volume = 100;
         volume-max = 100;
 
-        osd = "no";
-        osd-bar = "no";
+        osc = "no";
         border = "no";
 
         save-position-on-quit = true;
