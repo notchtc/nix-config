@@ -3,7 +3,7 @@
   programs.helix = {
     enable = true;
     defaultEditor = true;
-    extraPackages = lib.attrValues { inherit (pkgs) marksman nil wl-clipboard; };
+    extraPackages = lib.attrValues { inherit (pkgs) markdown-oxide nixd wl-clipboard; };
 
     settings = {
       editor = {
@@ -20,7 +20,10 @@
         {
           name = "nix";
           auto-format = true;
-          formatter.command = "${pkgs.nixfmt-rfc-style}/bin/nixfmt";
+          formatter = {
+            command = "${pkgs.nixfmt-rfc-style}/bin/nixfmt";
+            args = [ "-s" ];
+          };
         }
       ];
     };
