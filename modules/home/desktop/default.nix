@@ -17,6 +17,7 @@
   home = {
     packages = lib.attrValues {
       inherit (pkgs)
+        cardinal
         fooyin
         gimp3
         nautilus
@@ -25,6 +26,7 @@
         picard
         plugdata
         qbittorrent
+        qpwgraph
         telegram-desktop
         ;
     };
