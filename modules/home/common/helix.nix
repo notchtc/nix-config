@@ -3,7 +3,15 @@
   programs.helix = {
     enable = true;
     defaultEditor = true;
-    extraPackages = lib.attrValues { inherit (pkgs) markdown-oxide nixd wl-clipboard; };
+    extraPackages = lib.attrValues {
+      inherit (pkgs)
+        markdown-oxide
+        nixd
+        tinymist
+        typstyle
+        wl-clipboard
+        ;
+    };
 
     settings = {
       editor = {
@@ -24,6 +32,11 @@
             command = "${pkgs.nixfmt-rfc-style}/bin/nixfmt";
             args = [ "-s" ];
           };
+        }
+        {
+          name = "typst";
+          auto-format = true;
+          formatter.command = "${pkgs.typstyle}/bin/typstyle";
         }
       ];
     };
