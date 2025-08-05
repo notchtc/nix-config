@@ -20,6 +20,40 @@
           normal = "block";
           select = "underline";
         };
+
+        indent-guides = {
+          character = "╎";
+          render = true;
+        };
+
+        statusline = {
+          left = [
+            "mode"
+            "spinner"
+            "version-control"
+            "file-name"
+            "read-only-indicator"
+            "file-modification-indicator"
+          ];
+        };
+
+        bufferline = "multiple";
+        cursorline = true;
+        line-number = "relative";
+        soft-wrap.enable = true;
+      };
+
+      keys = {
+        normal = {
+          "A-x" = "extend_to_line_bounds";
+          "X" = "select_line_above";
+          "A-l" = ":lsp-workspace-command";
+        };
+
+        select = {
+          "A-x" = "extend_to_line_bounds";
+          "X" = "select_line_above";
+        };
       };
     };
 
