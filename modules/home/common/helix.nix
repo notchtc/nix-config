@@ -1,16 +1,18 @@
 { lib, pkgs, ... }:
 {
+  home.packages = lib.attrValues {
+    inherit (pkgs)
+      markdown-oxide
+      nixd
+      tinymist
+      typst
+      typstyle
+      ;
+  };
+
   programs.helix = {
     enable = true;
     defaultEditor = true;
-    extraPackages = lib.attrValues {
-      inherit (pkgs)
-        markdown-oxide
-        nixd
-        tinymist
-        typstyle
-        ;
-    };
 
     settings = {
       editor = {
