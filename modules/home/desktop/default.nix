@@ -7,7 +7,7 @@
 }:
 {
   imports = [
-    ./ghostty.nix
+    ./foot.nix
     ./mpv.nix
     ./niri
     (import ./schizofox.nix { inherit inputs; })
@@ -20,6 +20,7 @@
         cardinal
         fooyin
         gimp3
+        gpu-screen-recorder-gtk
         nautilus
         nicotine-plus
         papers

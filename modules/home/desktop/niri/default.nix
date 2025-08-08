@@ -90,7 +90,7 @@
       "Mod+Shift+Slash".action = show-hotkey-overlay;
 
       "Mod+Return" = {
-        action = spawn "ghostty";
+        action = spawn "${config.home.sessionVariables.TERMINAL}";
         hotkey-overlay.title = "Open Terminal";
       };
       "Mod+D" = {
