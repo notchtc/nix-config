@@ -39,6 +39,8 @@
     };
   };
 
+  services.playerctld.enable = true;
+
   programs = {
     foliate.enable = true;
     keepassxc.enable = true;

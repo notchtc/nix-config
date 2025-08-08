@@ -13,7 +13,7 @@ in
           command = "loginctl lock-session";
         }
         {
-          timeout = 400;
+          timeout = 600;
           command = "${niri} msg action power-off-monitors";
         }
       ];

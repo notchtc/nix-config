@@ -9,9 +9,20 @@
   imports = [ project.inputs.niri.result.nixosModules.niri ];
   nixpkgs.overlays = [ project.inputs.niri.result.overlays.niri ];
 
-  programs.niri = {
-    enable = true;
-    package = pkgs.niri-unstable;
+  programs = {
+    niri = {
+      enable = true;
+      package = pkgs.niri-unstable;
+    };
+
+    regreet = {
+      enable = true;
+      cageArgs = [
+        "-s"
+        "-m"
+        "last"
+      ];
+    };
   };
 
   environment.systemPackages = lib.attrValues {
@@ -26,10 +37,6 @@
         initial_session = lib.mkIf config.services.displayManager.autoLogin.enable {
           command = "${pkgs.niri-unstable}/bin/niri-session";
           user = "${config.services.displayManager.autoLogin.user}";
-        };
-        default_session = {
-          command = "${pkgs.cage}/bin/cage -s -m last -- ${pkgs.greetd.gtkgreet}/bin/gtkgreet -c=niri-session";
-          user = "greeter";
         };
       };
     };

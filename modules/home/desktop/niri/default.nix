@@ -14,10 +14,9 @@
   home.packages = lib.attrValues {
     inherit (pkgs)
       brightnessctl
-      playerctl
       libnotify
       libsecret
-      swaybg
+      wbg
       ;
   };
 
@@ -108,12 +107,12 @@
       };
 
       "XF86AudioRaiseVolume" = {
-        action = spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "5%+";
+        action = spawn "wpctl" "set-volume" "-l" "1.0" "@DEFAULT_AUDIO_SINK@" "5%+";
         allow-when-locked = true;
       };
 
       "XF86AudioLowerVolume" = {
-        action = spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "5%-";
+        action = spawn "wpctl" "set-volume" "-l" "1.0" "@DEFAULT_AUDIO_SINK@" "5%-";
         allow-when-locked = true;
       };
 
@@ -127,8 +126,15 @@
         allow-when-locked = true;
       };
 
-      "XF86MonBrightnessUp".action = spawn "brightnessctl" "set" "+5%";
-      "XF86MonBrightnessDown".action = spawn "brightnessctl" "set" "5%-";
+      "XF86MonBrightnessUp" = {
+        action = spawn "brightnessctl" "set" "+5%";
+        allow-when-locked = true;
+      };
+
+      "XF86MonBrightnessDown" = {
+        action = spawn "brightnessctl" "set" "5%-";
+        allow-when-locked = true;
+      };
 
       "XF86AudioPrev" = {
         action = spawn "playerctl" "prev";
@@ -297,10 +303,7 @@
     spawn-at-startup = [
       {
         command = [
-          "${pkgs.swaybg}/bin/swaybg"
-          "-m"
-          "fill"
-          "-i"
+          "${pkgs.wbg}/bin/wbg"
           "${config.stylix.image}"
         ];
       }

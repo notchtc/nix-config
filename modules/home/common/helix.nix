@@ -9,7 +9,6 @@
         nixd
         tinymist
         typstyle
-        wl-clipboard
         ;
     };
 
