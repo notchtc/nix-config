@@ -2,21 +2,13 @@
 {
   environment = {
     localBinInPath = true;
-
     shells = [ pkgs.fish ];
-
     systemPackages = lib.attrValues { inherit (pkgs.fishPlugins) tide; };
   };
   users.defaultUserShell = pkgs.fish;
 
   programs.fish = {
     enable = true;
-
-    shellAliases = with pkgs; {
-      e = "$EDITOR";
-      cat = "${lib.getExe bat} -Pp";
-      ls = "${lib.getExe eza} --classify=auto --group-directories-first";
-    };
 
     promptInit = ''
       set --universal tide_character_icon λ

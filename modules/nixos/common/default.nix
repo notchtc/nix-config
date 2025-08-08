@@ -11,25 +11,32 @@
     project.inputs.nix-index-database.result.nixosModules.nix-index
     ./boot.nix
     ./doas.nix
-    ./fish.nix
     ./memory.nix
     ./networking.nix
     ./nix.nix
+    ./zsh.nix
   ];
 
-  environment.systemPackages = lib.attrValues {
-    inherit (pkgs)
-      _7zz
-      bottom
-      deadnix
-      eza
-      fd
-      ffmpeg
-      nixfmt-rfc-style
-      npins
-      ripgrep
-      statix
-      ;
+  environment = {
+    shellAliases = with pkgs; {
+      e = "$EDITOR";
+      cat = "${lib.getExe bat} -Pp";
+      ls = "${lib.getExe eza} --classify=auto --group-directories-first";
+    };
+    systemPackages = lib.attrValues {
+      inherit (pkgs)
+        _7zz
+        bottom
+        deadnix
+        eza
+        fd
+        ffmpeg
+        nixfmt-rfc-style
+        npins
+        ripgrep
+        statix
+        ;
+    };
   };
 
   services = {

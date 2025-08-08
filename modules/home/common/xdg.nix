@@ -48,9 +48,11 @@
     };
   };
 
+  nix.settings.use-xdg-base-directories = true;
+
   programs = {
     zsh = {
-      dotDir = ".config/zsh";
+      dotDir = "${config.xdg.configHome}/zsh";
       history.path = "${config.xdg.stateHome}/zsh/history";
     };
   };
