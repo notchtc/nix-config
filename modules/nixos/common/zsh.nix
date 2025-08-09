@@ -28,9 +28,27 @@
 
     interactiveShellInit = ''
       bindkey -v
-      zstyle ':completion:*' menu select  
+      export KEYTIMEOUT=1
       stty stop undef
 
+      zstyle ':completion:*' menu select  
+      zmodload zsh/complist
+      bindkey -M menuselect 'h' vi-backward-char
+      bindkey -M menuselect 'k' vi-up-line-or-history
+      bindkey -M menuselect 'l' vi-forward-char
+      bindkey -M menuselect 'j' vi-down-line-or-history
+
+      function zle-keymap-select () {
+        case $KEYMAP in
+          vicmd) echo -ne '\e[1 q';;      # block
+          viins|main) echo -ne '\e[5 q';; # beam
+        esac
+      }
+      zle -N zle-keymap-select
+      zle-line-init() {
+        echo -ne "\e[5 q"
+      }
+      zle -N zle-line-init
       echo -ne '\e[5 q'
       preexec() { echo -ne '\e[5 q' ;}
     '';
@@ -44,7 +62,7 @@
       }
 
       zstyle ":vcs_info:git:*" formats "%F{green}%b%f"
-      PROMPT='%F{blue}%3~%f %(?.%F{green}λ.%F{red}λ%f) '
+      PROMPT='%F{blue}%3~%f %(?.%F{green}λ.%F{red}λ)%f '
       RPROMPT=' ''${vcs_info_msg_0_}'
     '';
   };
