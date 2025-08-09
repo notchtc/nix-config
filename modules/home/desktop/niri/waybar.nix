@@ -16,27 +16,16 @@ in
       spacing = 6;
       width = 24;
 
-      modules-left = [
-        "niri/workspaces"
-        "clock"
-      ];
+      modules-left = [ "clock" ];
 
       modules-right = [
-        "wireplumber"
         "battery"
+        "backlight"
+        "wireplumber"
         "network"
         "tray"
         "custom/swaync"
       ];
-
-      "niri/workspaces" = {
-        format = "{icon}";
-        format-icons = {
-          "active" = "◍";
-          "default" = "○";
-          "focused" = "●";
-        };
-      };
 
       clock = {
         format = "{:%H:%M}";
@@ -71,7 +60,6 @@ in
       };
 
       network = {
-        format = "{ifname}";
         format-ethernet = "ethernet";
         format-wifi = "wi-fi";
         format-disconnected = "disconnected";
@@ -79,6 +67,13 @@ in
         tooltip-format-ethernet = "{ipaddr}/{cidr} ({ifname})";
         tooltip-format-wifi = "{essid} ({signalStrength}%)";
         on-click = "$TERMINAL -e nmtui";
+        rotate = 270;
+      };
+
+      backlight = {
+        format = "lit: {percent}%";
+        on-scroll-up = "brightnessctl set +1%";
+        on-scroll-down = "brightnessctl set 1%-";
         rotate = 270;
       };
 
