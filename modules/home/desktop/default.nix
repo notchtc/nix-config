@@ -21,7 +21,7 @@
         fooyin
         gimp3
         gpu-screen-recorder-gtk
-        nautilus
+        nemo
         nicotine-plus
         papers
         picard
