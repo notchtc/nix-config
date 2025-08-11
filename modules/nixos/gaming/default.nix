@@ -32,7 +32,7 @@
 
     gamescope = {
       enable = true;
-      capSysNice = true;
+      capSysNice = false;
     };
 
     steam = {
