@@ -6,9 +6,10 @@
 
   environment.systemPackages = lib.attrValues {
     inherit (pkgs)
-      #azahar
-      duckstation
       lutris
+      protonup-qt
+      #azahar
+      #duckstation
       #melonDS
       #ppsspp-sdl-wayland
       ;
@@ -31,7 +32,7 @@
 
     gamescope = {
       enable = true;
-      capSysNice = false;
+      capSysNice = true;
     };
 
     steam = {
@@ -42,8 +43,6 @@
       localNetworkGameTransfers.openFirewall = true;
       protontricks.enable = true;
       remotePlay.openFirewall = true;
-
-      extraCompatPackages = [ pkgs.proton-ge-bin ];
     };
   };
 
