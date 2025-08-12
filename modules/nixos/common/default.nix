@@ -8,6 +8,7 @@
 }:
 {
   imports = [
+    "${project.inputs.agenix.result}/modules/age.nix"
     project.inputs.nix-index-database.result.nixosModules.nix-index
     ./boot.nix
     ./doas.nix
@@ -26,12 +27,14 @@
     systemPackages = lib.attrValues {
       inherit (pkgs)
         _7zz
+        agenix-cli
         bottom
         deadnix
         eza
         fd
+        file
         ffmpeg
-        nixfmt-rfc-style
+        nixfmt
         npins
         ripgrep
         statix
@@ -47,7 +50,6 @@
 
   programs = {
     bat.enable = true;
-    git.enable = true;
     nano.enable = false;
     nix-index-database.comma.enable = true;
     zoxide.enable = true;

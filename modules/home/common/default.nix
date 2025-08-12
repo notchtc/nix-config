@@ -1,8 +1,8 @@
 { osConfig, ... }:
 {
   imports = [
-    ./git.nix
     ./helix.nix
+    ./vcs.nix
     ./xdg.nix
   ];
 

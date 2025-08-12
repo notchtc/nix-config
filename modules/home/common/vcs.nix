@@ -1,4 +1,12 @@
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+{
+  home.packages = [ pkgs.watchman ];
+
   programs = {
     git = {
       enable = true;
@@ -7,7 +15,7 @@
 
       signing = {
         format = "ssh";
-        key = "~/.ssh/id_ed25519";
+        key = "~/.ssh/id_ed25519.pub";
         signByDefault = true;
       };
 
@@ -64,6 +72,53 @@
       difftastic = {
         enable = true;
         background = "dark";
+      };
+    };
+
+    jujutsu = {
+      inherit (config.programs.git) enable;
+
+      settings = {
+        core.fsmonitor = "watchman";
+
+        user = {
+          name = config.programs.git.userName;
+          email = config.programs.git.userEmail;
+        };
+
+        aliases = {
+          d = [ "diff" ];
+          l = [ "log" ];
+          gp = [
+            "git"
+            "push"
+          ];
+        };
+
+        git = {
+          fetch = [
+            "upstream"
+            "origin"
+          ];
+          push = "origin";
+        };
+
+        signing = {
+          behavior = "own";
+          backend = "ssh";
+          inherit (config.programs.git.signing) key;
+        };
+
+        ui = {
+          default-command = "status";
+          editor = config.home.sessionVariables.EDITOR;
+          diff-formatter = [
+            "${lib.getExe pkgs.difftastic}"
+            "--color=always"
+            "$left"
+            "$right"
+          ];
+        };
       };
     };
   };

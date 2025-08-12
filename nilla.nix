@@ -5,6 +5,7 @@ let
   nixpkgs-flake = compat.load { src = pins.nixpkgs; };
 
   loaders = {
+    agenix = "raw";
     nixos-hardware = "raw";
     lix = "raw";
   };
