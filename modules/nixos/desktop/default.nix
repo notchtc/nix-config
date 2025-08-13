@@ -18,8 +18,11 @@
     enableDefaultPackages = true;
   };
 
-  programs.appimage = {
-    enable = true;
-    binfmt = true;
+  programs = {
+    nix-ld.enable = true;
+    appimage = {
+      enable = true;
+      binfmt = true;
+    };
   };
 }
