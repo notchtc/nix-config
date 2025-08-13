@@ -27,17 +27,19 @@
     systemPackages = lib.attrValues {
       inherit (pkgs)
         _7zz
-        agenix-cli
         bottom
         deadnix
+        dua
         eza
         fd
         file
         ffmpeg
         nixfmt
         npins
+        ragenix
         ripgrep
         statix
+        uutils-coreutils-noprefix
         ;
     };
   };
@@ -50,6 +52,7 @@
 
   programs = {
     bat.enable = true;
+    git.enable = true;
     nano.enable = false;
     nix-index-database.comma.enable = true;
     zoxide.enable = true;
