@@ -38,6 +38,23 @@
       bindkey -M menuselect 'l' vi-forward-char
       bindkey -M menuselect 'j' vi-down-line-or-history
 
+      function osc7-pwd() {
+        emulate -L zsh # also sets localoptions for us
+        setopt extendedglob
+        local LC_ALL=C
+        printf '\e]7;file://%s%s\e\' $HOST ''${PWD//(#m)([^@-Za-z&-;_~])/%''${(l:2::0:)$(([##16]#MATCH))}}
+        }
+
+      function chpwd-osc7-pwd() {
+        (( ZSH_SUBSHELL )) || osc7-pwd
+      }
+      add-zsh-hook -Uz chpwd chpwd-osc7-pwd
+    '';
+
+    promptInit = ''
+      autoload -U colors && colors
+      autoload -Uz vcs_info
+
       function zle-keymap-select () {
         case $KEYMAP in
           vicmd) echo -ne '\e[1 q';;      # block
@@ -51,11 +68,6 @@
       zle -N zle-line-init
       echo -ne '\e[5 q'
       preexec() { echo -ne '\e[5 q' ;}
-    '';
-
-    promptInit = ''
-      autoload -U colors && colors
-      autoload -Uz vcs_info
 
       precmd() {
         vcs_info
