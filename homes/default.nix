@@ -8,6 +8,7 @@
 
     args = {
       project = config;
+      system = "x86_64-linux";
     };
   };
 }

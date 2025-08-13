@@ -26,7 +26,7 @@
     };
     systemPackages = lib.attrValues {
       inherit (pkgs)
-        _7zz
+        _7zz-rar
         bottom
         deadnix
         dua
