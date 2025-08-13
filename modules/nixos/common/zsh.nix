@@ -27,6 +27,8 @@
     '';
 
     interactiveShellInit = ''
+      autoload -Uz add-zsh-hook
+
       bindkey -v
       export KEYTIMEOUT=1
       stty stop undef
@@ -43,7 +45,7 @@
         setopt extendedglob
         local LC_ALL=C
         printf '\e]7;file://%s%s\e\' $HOST ''${PWD//(#m)([^@-Za-z&-;_~])/%''${(l:2::0:)$(([##16]#MATCH))}}
-        }
+      }
 
       function chpwd-osc7-pwd() {
         (( ZSH_SUBSHELL )) || osc7-pwd
@@ -54,6 +56,12 @@
     promptInit = ''
       autoload -U colors && colors
       autoload -Uz vcs_info
+
+      add-zsh-hook precmd vcs_info
+
+      zstyle ":vcs_info:git:*" formats "%F{green}%b%f"
+      PROMPT='%F{blue}%3~%f %(?.%F{green}λ.%F{red}λ)%f '
+      RPROMPT=' ''${vcs_info_msg_0_}'
 
       function zle-keymap-select () {
         case $KEYMAP in
@@ -68,14 +76,6 @@
       zle -N zle-line-init
       echo -ne '\e[5 q'
       preexec() { echo -ne '\e[5 q' ;}
-
-      precmd() {
-        vcs_info
-      }
-
-      zstyle ":vcs_info:git:*" formats "%F{green}%b%f"
-      PROMPT='%F{blue}%3~%f %(?.%F{green}λ.%F{red}λ)%f '
-      RPROMPT=' ''${vcs_info_msg_0_}'
     '';
   };
 }
