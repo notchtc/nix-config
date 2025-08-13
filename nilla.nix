@@ -7,7 +7,6 @@ let
   loaders = {
     agenix = "raw";
     nixos-hardware = "raw";
-    lix = "raw";
   };
 
   settings = {
