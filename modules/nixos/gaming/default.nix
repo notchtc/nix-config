@@ -1,17 +1,23 @@
-{ pkgs, lib, ... }:
+{
+  project,
+  system,
+  pkgs,
+  lib,
+  ...
+}:
 {
   boot.kernel.sysctl = {
     "kernel.split_lock_mitigate" = 0;
   };
 
   environment.systemPackages = lib.attrValues {
-    inherit (pkgs)
-      lutris
-      protonup-qt
-      #azahar
-      #duckstation
-      #melonDS
-      #ppsspp-sdl-wayland
+    inherit (pkgs) lutris protonup-qt;
+
+    inherit (project.inputs.openmw-nix.result.packages.${system})
+      momw-configurator
+      openmw-dev
+      openmw-validator
+      s3lightfixes
       ;
   };
 

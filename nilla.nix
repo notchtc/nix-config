@@ -15,6 +15,7 @@ let
     disko.inputs.nixpkgs = nixpkgs-flake;
     home-manager.inputs.nixpkgs = nixpkgs-flake;
     nix-index-database.inputs.nixpkgs = nixpkgs-flake;
+    openmw-nix.inputs.nixpkgs = nixpkgs-flake;
     schizofox.inputs.nixpkgs = nixpkgs-flake;
     stylix.inputs.nixpkgs = nixpkgs-flake;
   };

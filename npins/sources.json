@@ -192,6 +192,20 @@
       "url": "https://releases.nixos.org/nixos/unstable/nixos-25.11pre838708.5b09dc45f24c/nixexprs.tar.xz",
       "hash": "1hwmjph2sch0hvdzssqxss8lvc0v9qwpw8xdll2sia0crw1i42b9"
     },
+    "openmw-nix": {
+      "type": "Git",
+      "repository": {
+        "type": "Forgejo",
+        "server": "https://codeberg.org/",
+        "owner": "PopeRigby",
+        "repo": "openmw-nix"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "83cecbd60085db6fca028dc562b1861bb4e3044d",
+      "url": "https://codeberg.org/PopeRigby/openmw-nix/archive/83cecbd60085db6fca028dc562b1861bb4e3044d.tar.gz",
+      "hash": "11v7n01j6nszcy65zr7dic6xkbl45w144cpd2sh02zb5ymkf8kpq"
+    },
     "schizofox": {
       "type": "Git",
       "repository": {
