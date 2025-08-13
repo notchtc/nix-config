@@ -39,8 +39,9 @@
         ragenix
         ripgrep
         statix
-        uutils-coreutils-noprefix
         ;
+
+      uutils = pkgs.hiPrio pkgs.uutils-coreutils-noprefix;
     };
   };
 
@@ -67,6 +68,10 @@
     };
   };
 
+  documentation = {
+    info.enable = false;
+    nixos.enable = false;
+  };
   home-manager.backupFileExtension = "backup";
   networking.hostName = host;
   nixpkgs.hostPlatform = "${system}";
