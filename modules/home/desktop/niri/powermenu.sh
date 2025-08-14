@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 SELECTION="$(printf "Lock\nSuspend\nLog out\nShutdown\nReboot\nReboot to UEFI\n" | fuzzel --dmenu -l 6)"
 

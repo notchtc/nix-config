@@ -1,5 +1,6 @@
 { config, ... }:
 {
+  nix.settings.use-xdg-base-directories = true;
   xdg = {
     enable = true;
     cacheHome = "${config.home.homeDirectory}/.cache";
@@ -39,6 +40,7 @@
 
     sessionVariables = {
       _JAVA_OPTIONS = "-Djava.util.prefs.userRoot=${config.xdg.configHome}/java";
+      ANDROID_USER_HOME = "${config.xdg.dataHome}/android";
       DVDCSS_CACHE = "${config.xdg.dataHome}/dvdcss";
       GNUPGHOME = "${config.xdg.dataHome}/gnupg";
       LESSHISTFILE = "${config.xdg.dataHome}/lesshst";
@@ -47,8 +49,6 @@
       WINEPREFIX = "${config.xdg.dataHome}/wine";
     };
   };
-
-  nix.settings.use-xdg-base-directories = true;
 
   programs = {
     zsh = {

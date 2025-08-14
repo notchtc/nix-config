@@ -82,7 +82,8 @@
         };
 
         aliases = {
-          d = [ "diff" ];
+          d = [ "describe" ];
+          df = [ "diff" ];
           l = [ "log" ];
           gp = [
             "git"

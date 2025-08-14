@@ -19,10 +19,14 @@
   ];
 
   environment = {
+    binsh = "${pkgs.dash}/bin/dash";
     shellAliases = with pkgs; {
       e = "$EDITOR";
+      se = "doas $EDITOR";
       cat = "${lib.getExe bat} -Pp";
       ls = "${lib.getExe eza} --classify=auto --group-directories-first";
+      man = "${lib.getExe pkgs.bat-extras.batman}";
+      tree = "ls --tree";
     };
     systemPackages = lib.attrValues {
       inherit (pkgs)
@@ -52,7 +56,6 @@
   };
 
   programs = {
-    bat.enable = true;
     git.enable = true;
     nano.enable = false;
     nix-index-database.comma.enable = true;
@@ -61,6 +64,11 @@
     bash.shellInit = ''
       export HISTFILE="$XDG_STATE_HOME"/bash/history
     '';
+
+    bat = {
+      enable = true;
+      extraPackages = lib.attrValues { inherit (pkgs.bat-extras) batman; };
+    };
 
     vim = {
       enable = true;
