@@ -95,6 +95,7 @@
         }
       ''
     );
+    prefersNonDefaultGPU = true;
     icon = "openmw";
     type = "Application";
     categories = [

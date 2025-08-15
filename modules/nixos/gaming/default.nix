@@ -6,10 +6,6 @@
   ...
 }:
 {
-  boot.kernel.sysctl = {
-    "kernel.split_lock_mitigate" = 0;
-  };
-
   environment.systemPackages = lib.attrValues {
     inherit (pkgs) lutris protonup-qt;
 
@@ -32,6 +28,10 @@
         general = {
           softrealtime = "auto";
           renice = 17;
+        };
+        gpu = {
+          apply_gpu_optimizations = "accept-responsibility";
+          gpu_device = 0;
         };
       };
     };
