@@ -1,5 +1,6 @@
 {
   home.sessionVariables.TERMINAL = "footclient";
+  xdg.terminal-exec.settings.default = [ "footclient.desktop" ];
   programs.foot = {
     enable = true;
     server.enable = true;

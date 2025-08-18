@@ -14,6 +14,7 @@
     ./niri
     (import ./schizofox.nix { inherit inputs; })
     ./theme.nix
+    ./xdg.nix
   ];
 
   home = {

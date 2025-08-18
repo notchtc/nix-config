@@ -1,7 +1,5 @@
-{ config, pkgs, ... }:
+{ config, ... }:
 {
-  home.packages = [ pkgs.watchman ];
-
   programs = {
     git = {
       enable = true;
@@ -74,8 +72,6 @@
       inherit (config.programs.git) enable;
 
       settings = {
-        core.fsmonitor = "watchman";
-
         user = {
           name = config.programs.git.userName;
           email = config.programs.git.userEmail;
