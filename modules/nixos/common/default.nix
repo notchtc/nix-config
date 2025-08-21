@@ -11,7 +11,7 @@
     "${project.inputs.agenix.result}/modules/age.nix"
     project.inputs.nix-index-database.result.nixosModules.nix-index
     ./boot.nix
-    ./doas.nix
+    ./hardening.nix
     ./memory.nix
     ./networking.nix
     ./nix.nix
@@ -39,6 +39,7 @@
         eza
         fd
         ffmpeg
+        git
         lshw
         nixfmt
         npins
@@ -59,7 +60,6 @@
   };
 
   programs = {
-    git.enable = true;
     nano.enable = false;
     nix-index-database.comma.enable = true;
     zoxide.enable = true;

@@ -145,6 +145,19 @@
       "url": "https://github.com/nix-community/nix-index-database/archive/ebbc1c05f786ae39bb5e04e57bf2c10c44a649e3.tar.gz",
       "hash": "156fri66yn0zmx0s0f19l8w73j1mzwg6yqy2ydyz03v661j739j3"
     },
+    "nix-mineral": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "cynicsketch",
+        "repo": "nix-mineral"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "54d7a32a39062ae322d05dd76cee552f3576fdca",
+      "url": "https://github.com/cynicsketch/nix-mineral/archive/54d7a32a39062ae322d05dd76cee552f3576fdca.tar.gz",
+      "hash": "0igafnfgmy6z6wqyh8r931gp4v4w2q3lnymr40illsq5ikv89zns"
+    },
     "nixos-hardware": {
       "type": "Git",
       "repository": {

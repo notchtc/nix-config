@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
   imports = [
+    ./hardening.nix
     ./niri.nix
     ./pipewire.nix
     ./stylix.nix
@@ -26,4 +27,10 @@
       binfmt = true;
     };
   };
+
+  services.journald.extraConfig = ''
+    SystemMaxUse=100M
+    RuntimeMaxUse=50M
+    SystemMaxFileUse=50M
+  '';
 }
