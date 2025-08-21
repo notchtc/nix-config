@@ -10,6 +10,9 @@
 
   programs = {
     command-not-found.enable = false;
-    zsh.enable = true;
+    zsh = {
+      enable = true;
+      enableCompletion = true;
+    };
   };
 }

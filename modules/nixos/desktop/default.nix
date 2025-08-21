@@ -18,6 +18,7 @@
     enableDefaultPackages = true;
   };
 
+  nix.daemonCPUSchedPolicy = "idle";
   programs = {
     nix-ld.enable = true;
     appimage = {

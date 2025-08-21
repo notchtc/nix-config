@@ -28,6 +28,8 @@
       man = "${lib.getExe pkgs.bat-extras.batman}";
       tree = "ls --tree";
     };
+
+    defaultPackages = lib.mkForce [ ];
     systemPackages = lib.attrValues {
       inherit (pkgs)
         _7zz-rar
@@ -36,10 +38,11 @@
         dua
         eza
         fd
-        file
         ffmpeg
+        lshw
         nixfmt
         npins
+        pciutils
         ragenix
         ripgrep
         statix
@@ -80,8 +83,13 @@
     info.enable = false;
     nixos.enable = false;
   };
+
+  system = {
+    etc.overlay.enable = true;
+    tools.nixos-generate-config.enable = false;
+  };
+
   home-manager.backupFileExtension = "backup";
   networking.hostName = host;
   nixpkgs.hostPlatform = "${system}";
-  system.etc.overlay.enable = true;
 }
