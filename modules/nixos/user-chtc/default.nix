@@ -1,4 +1,9 @@
-{ config, ... }:
+{
+  config,
+  homeModules,
+  lib,
+  ...
+}:
 {
   age.secrets.chtc-password.file = ../../../secrets/chtc-password.age;
   users = {
@@ -14,6 +19,15 @@
         "wheel"
         "video"
       ];
+    };
+  };
+
+  home-manager.users.chtc = {
+    imports = [ homeModules.common ] ++ lib.optionals config.xdg.portal.enable [ homeModules.desktop ];
+
+    programs.git = {
+      userName = "chtc";
+      userEmail = "chtc@tuta.io";
     };
   };
 }

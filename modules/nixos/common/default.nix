@@ -1,15 +1,14 @@
 {
-  project,
+  inputs,
   lib,
   pkgs,
-  host ? builtins.throw "No host name provided",
-  system ? builtins.throw "No platform provided",
   ...
 }:
 {
   imports = [
-    "${project.inputs.agenix.result}/modules/age.nix"
-    project.inputs.nix-index-database.result.nixosModules.nix-index
+    "${inputs.agenix.result}/modules/age.nix"
+    inputs.home-manager.result.nixosModules.default
+    inputs.nix-index-database.result.nixosModules.nix-index
     ./boot.nix
     ./hardening.nix
     ./memory.nix
@@ -22,7 +21,6 @@
     binsh = "${pkgs.dash}/bin/dash";
     shellAliases = with pkgs; {
       e = "$EDITOR";
-      se = "doas $EDITOR";
       cat = "${lib.getExe bat} -Pp";
       ls = "${lib.getExe eza} --classify=auto --group-directories-first";
       man = "${lib.getExe pkgs.bat-extras.batman}";
@@ -35,7 +33,6 @@
         _7zz-rar
         bottom
         deadnix
-        dua
         eza
         fd
         ffmpeg
@@ -48,8 +45,6 @@
         ripgrep
         statix
         ;
-
-      uutils = pkgs.hiPrio pkgs.uutils-coreutils-noprefix;
     };
   };
 
@@ -89,7 +84,10 @@
     tools.nixos-generate-config.enable = false;
   };
 
-  home-manager.backupFileExtension = "backup";
-  networking.hostName = host;
-  nixpkgs.hostPlatform = "${system}";
+  home-manager = {
+    backupFileExtension = "backup";
+    useGlobalPkgs = true;
+    useUserPackages = true;
+    extraSpecialArgs = { inherit inputs; };
+  };
 }

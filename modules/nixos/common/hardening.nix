@@ -1,6 +1,6 @@
-{ project, ... }:
+{ inputs, lib, ... }:
 {
-  imports = [ "${project.inputs.nix-mineral.result}/nix-mineral.nix" ];
+  imports = [ "${inputs.nix-mineral.result}/nix-mineral.nix" ];
 
   nix-mineral = {
     enable = true;
@@ -24,6 +24,5 @@
     };
   };
 
-  boot.kernel.sysctl."kernel.unprivileged_userns_clone" = 0;
   boot.kernel.sysctl."kernel.unprivileged_userns_clone" = lib.mkDefault 0;
 }

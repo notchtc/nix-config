@@ -7,7 +7,6 @@ let
   vids = [ "mpv.desktop" ];
 
   associations = {
-    # misc
     "application/json" = browser;
     "application/x-extension-htm" = browser;
     "application/x-extension-html" = browser;
@@ -21,6 +20,12 @@ let
     "x-scheme-handler/http" = browser;
     "x-scheme-handler/https" = browser;
     "x-scheme-handler/unknown" = browser;
+
+    "x-scheme-handler/discord" = [ "vesktop.desktop" ];
+    "x-scheme-handler/magnet" = [ "org.qbittorrent.qBittorrent.desktop" ];
+    "x-scheme-handler/steam" = [ "steam.desktop" ];
+    "x-scheme-handler/tg" = [ "org.telegram.desktop.desktop" ];
+    "x-scheme-handler/x-bittorrent" = [ "org.qbittorrent.qBittorrent.desktop" ];
 
     "audio/aac" = music;
     "audio/flac" = music;
@@ -51,6 +56,7 @@ let
 
     "application/pdf" = docs;
     "text/csv" = text;
+    "text/plain" = text;
   };
 in
 {

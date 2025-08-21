@@ -1,10 +1,8 @@
-{ inputs }:
 {
   config,
-  project,
+  inputs,
   lib,
   pkgs,
-  system,
   ...
 }:
 {
@@ -12,7 +10,7 @@
     ./foot.nix
     ./mpv.nix
     ./niri
-    (import ./schizofox.nix { inherit inputs; })
+    ./schizofox.nix
     ./theme.nix
     ./xdg.nix
   ];
@@ -20,17 +18,14 @@
   home = {
     packages = lib.attrValues {
       inherit (pkgs)
-        cardinal
         fooyin
         gimp3
-        gpu-screen-recorder-gtk
         nautilus
         nicotine-plus
         papers
         picard
         plugdata
         qbittorrent
-        qpwgraph
         telegram-desktop
         ;
     };
@@ -92,7 +87,7 @@
         export OSG_VERTEX_BUFFER_HINT="VERTEX_BUFFER_OBJECT"
 
         ${lib.getExe' pkgs.gamemode "gamemoderun"} ${
-          lib.getExe' project.inputs.openmw-nix.result.packages.${system}.openmw-dev "openmw-launcher"
+          lib.getExe' inputs.openmw-nix.result.packages.${pkgs.system}.openmw-dev "openmw-launcher"
         }
       ''
     );

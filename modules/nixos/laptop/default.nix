@@ -1,6 +1,6 @@
-{ project, ... }:
+{ inputs, ... }:
 {
-  imports = [ "${project.inputs.nixos-hardware.result}/common/pc/laptop" ];
+  imports = [ "${inputs.nixos-hardware.result}/common/pc/laptop" ];
 
   services = {
     power-profiles-daemon.enable = false;

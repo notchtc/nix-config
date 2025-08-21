@@ -3,8 +3,6 @@
   programs = {
     git = {
       enable = true;
-      userName = "chtc";
-      userEmail = "chtc@tuta.io";
 
       signing = {
         format = "ssh";

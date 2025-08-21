@@ -1,13 +1,13 @@
 {
-  project,
+  inputs,
   pkgs,
   lib,
   config,
   ...
 }:
 {
-  imports = [ project.inputs.niri.result.nixosModules.niri ];
-  nixpkgs.overlays = [ project.inputs.niri.result.overlays.niri ];
+  imports = [ inputs.niri.result.nixosModules.niri ];
+  nixpkgs.overlays = [ inputs.niri.result.overlays.niri ];
 
   programs = {
     niri = {

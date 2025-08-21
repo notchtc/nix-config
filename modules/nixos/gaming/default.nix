@@ -1,6 +1,5 @@
 {
-  project,
-  system,
+  inputs,
   pkgs,
   lib,
   ...
@@ -9,7 +8,7 @@
   environment.systemPackages = lib.attrValues {
     inherit (pkgs) lutris protonup-qt;
 
-    inherit (project.inputs.openmw-nix.result.packages.${system})
+    inherit (inputs.openmw-nix.result.packages.${pkgs.system})
       momw-configurator
       openmw-dev
       openmw-validator

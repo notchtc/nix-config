@@ -1,8 +1,7 @@
 {
-  project,
+  inputs,
   lib,
   pkgs,
-  system,
   ...
 }:
 {
@@ -52,11 +51,10 @@
           builtins.storePath value.result
         else
           builtins.storePath value.src;
-    }) project.inputs;
+    }) inputs;
     systemPackages = [
-      project.inputs.nilla-cli.result.packages.nilla-cli.result.${system}
-      project.inputs.nilla-home.result.packages.nilla-home.result.${system}
-      project.inputs.nilla-nixos.result.packages.nilla-nixos.result.${system}
+      inputs.nilla-cli.result.packages.default.result.${pkgs.system}
+      inputs.nilla-utils.result.packages.default.result.${pkgs.system}
     ];
   };
 

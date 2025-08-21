@@ -90,34 +90,18 @@
       "url": "https://api.github.com/repos/nilla-nix/cli/tarball/v0.0.0-alpha.10",
       "hash": "09v9qia2y3s7864w7kgm11rb439nbb0narzcw2z12z78jwnpmryk"
     },
-    "nilla-home": {
-      "type": "GitRelease",
-      "repository": {
-        "type": "GitHub",
-        "owner": "nilla-nix",
-        "repo": "home"
-      },
-      "pre_releases": true,
-      "version_upper_bound": null,
-      "release_prefix": null,
-      "submodules": false,
-      "version": "v0.1.1-alpha",
-      "revision": "8d8d783cd3ebe38246f66c027a312e5ec0914c58",
-      "url": "https://api.github.com/repos/nilla-nix/home/tarball/v0.1.1-alpha",
-      "hash": "127giwgxrwrfy5id3ng92spk36gbd0pvwf8ammxg50l9mbcqz2nz"
-    },
-    "nilla-nixos": {
+    "nilla-utils": {
       "type": "Git",
       "repository": {
         "type": "GitHub",
-        "owner": "nilla-nix",
-        "repo": "nixos"
+        "owner": "arnarg",
+        "repo": "nilla-utils"
       },
       "branch": "main",
       "submodules": false,
-      "revision": "52c623ae89fe77de669a981c7e92b1504cd99eac",
-      "url": "https://github.com/nilla-nix/nixos/archive/52c623ae89fe77de669a981c7e92b1504cd99eac.tar.gz",
-      "hash": "0bjbkyd7c1cp7daf8j4h7x339ngrghnjq5wgqq0fbk269rhrvmpf"
+      "revision": "df0904d10e26778b5936c4f29652777e795e2938",
+      "url": "https://github.com/arnarg/nilla-utils/archive/df0904d10e26778b5936c4f29652777e795e2938.tar.gz",
+      "hash": "0hrk3d3v4fjrn4ipa8dii82qxr3gchgvvhb2yc99dgf3rkrzq29z"
     },
     "niri": {
       "type": "Git",
