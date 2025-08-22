@@ -29,22 +29,6 @@
       "url": "https://api.github.com/repos/nix-community/disko/tarball/v1.12.0",
       "hash": "0wbx518d2x54yn4xh98cgm65wvj0gpy6nia6ra7ns4j63hx14fkq"
     },
-    "flake-compat": {
-      "type": "GitRelease",
-      "repository": {
-        "type": "GitHub",
-        "owner": "nilla-nix",
-        "repo": "flake-compat"
-      },
-      "pre_releases": false,
-      "version_upper_bound": null,
-      "release_prefix": null,
-      "submodules": false,
-      "version": "v0.0.2",
-      "revision": "2653659fb5d86f2853caae1b6475e63e8c23439c",
-      "url": "https://api.github.com/repos/nilla-nix/flake-compat/tarball/v0.0.2",
-      "hash": "165xl96d5f2xaawyiaj3cl8ccisrjvx5b1db8nfh18swaxyzdckn"
-    },
     "home-manager": {
       "type": "Git",
       "repository": {
