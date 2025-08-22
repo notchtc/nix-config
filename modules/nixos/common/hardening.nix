@@ -1,6 +1,12 @@
-{ inputs, lib, ... }:
+{
+  inputs,
+  lib,
+  pkgs,
+  ...
+}:
 {
   imports = [ "${inputs.nix-mineral.result}/nix-mineral.nix" ];
+  environment.systemPackages = [ pkgs.doas-sudo-shim ];
 
   nix-mineral = {
     enable = true;
@@ -10,7 +16,6 @@
         allow-ip-forward = true;
         no-lockdown = true;
       };
-      desktop.doas-sudo-wrapper = true;
       performance.allow-smt = true;
       security = {
         disable-bluetooth-kmodules = true;

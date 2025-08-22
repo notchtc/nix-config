@@ -1,12 +1,9 @@
-{ osConfig, ... }:
 {
   imports = [
     ./helix.nix
     ./vcs.nix
     ./xdg.nix
   ];
-
-  home = { inherit (osConfig.system) stateVersion; };
 
   programs = {
     command-not-found.enable = false;
@@ -15,4 +12,12 @@
       enableCompletion = true;
     };
   };
+
+  nix.gc = {
+    automatic = true;
+    randomizedDelaySec = "15min";
+    options = "--delete-older-than 7d";
+  };
+
+  home.stateVersion = "24.11";
 }

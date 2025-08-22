@@ -26,6 +26,7 @@
       man = "${lib.getExe pkgs.bat-extras.batman}";
       tree = "ls --tree";
     };
+    shellInit = "umask 0077";
 
     defaultPackages = lib.mkForce [ ];
     systemPackages = lib.attrValues {

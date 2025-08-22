@@ -8,11 +8,8 @@ nilla.create (
     includes = [ "${pins.nilla-utils}/modules" ];
 
     config = {
-      generators.inputs.pins = pins;
       inputs = {
-        nixpkgs.settings = {
-          configuration.allowUnfree = true;
-        };
+        nixpkgs.settings.configuration.allowUnfree = true;
 
         nixpkgs-flake = {
           inherit (config.inputs.nixpkgs) src;
@@ -30,8 +27,11 @@ nilla.create (
         stylix.settings.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
       };
 
-      generators.project.folder = ./.;
-      generators.nixos.args.homeModules = config.modules.home;
+      generators = {
+        inputs.pins = pins;
+        project.folder = ./.;
+        nixos.args.homeModules = config.modules.home;
+      };
     };
   }
 )
