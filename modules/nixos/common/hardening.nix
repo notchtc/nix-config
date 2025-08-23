@@ -6,7 +6,6 @@
 }:
 {
   imports = [ "${inputs.nix-mineral.result}/nix-mineral.nix" ];
-  environment.systemPackages = [ pkgs.doas-sudo-shim ];
 
   nix-mineral = {
     enable = true;
@@ -22,12 +21,23 @@
         disable-intelme-kmodules = true;
         lock-root = true;
       };
-      software-choice = {
-        doas-no-sudo = true;
-        secure-chrony = true;
-      };
+      software-choice.secure-chrony = true;
     };
   };
 
   boot.kernel.sysctl."kernel.unprivileged_userns_clone" = lib.mkDefault 0;
+  environment.systemPackages = [ pkgs.doas-sudo-shim ];
+  security = {
+    sudo.enable = lib.mkForce false;
+    doas = {
+      enable = true;
+      extraRules = [
+        {
+          groups = [ "wheel" ];
+          keepEnv = true;
+          persist = true;
+        }
+      ];
+    };
+  };
 }
