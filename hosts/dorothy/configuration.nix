@@ -43,9 +43,9 @@
   nixpkgs.hostPlatform = "x86_64-linux";
 
   fileSystems."/home" = {
-    device = lib.mkForce "/dev/mapper/pool-root";
+    device = lib.mkForce "/dev/pool/root";
     options = lib.mkForce [
-      "subvol=home"
+      "subvol=/home"
       "compress=zstd"
       "noatime"
       "exec"

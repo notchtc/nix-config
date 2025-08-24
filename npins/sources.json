@@ -42,6 +42,19 @@
       "url": "https://github.com/nix-community/home-manager/archive/f8af2cbe386f9b96dd9efa57ab15a09377f38f4d.tar.gz",
       "hash": "0hypv3v4n4ndmf85nd60hdlbmgxij73is0542rmsj4fdbn5mggc9"
     },
+    "impermanence": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "nix-community",
+        "repo": "impermanence"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "4b3e914cdf97a5b536a889e939fb2fd2b043a170",
+      "url": "https://github.com/nix-community/impermanence/archive/4b3e914cdf97a5b536a889e939fb2fd2b043a170.tar.gz",
+      "hash": "04l16szln2x0ajq2x799krb53ykvc6vm44x86ppy1jg9fr82161c"
+    },
     "nilla": {
       "type": "GitRelease",
       "repository": {

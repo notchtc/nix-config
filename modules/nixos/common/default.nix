@@ -11,6 +11,7 @@
     inputs.nix-index-database.result.nixosModules.nix-index
     ./boot.nix
     ./hardening.nix
+    ./impermanence.nix
     ./memory.nix
     ./networking.nix
     ./nix.nix
@@ -52,7 +53,10 @@
   services = {
     dbus.implementation = "broker";
     openssh.enable = true;
-    userborn.enable = true;
+    userborn = {
+      enable = true;
+      passwordFilesLocation = "/var/lib/nixos";
+    };
   };
 
   programs = {

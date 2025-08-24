@@ -17,6 +17,7 @@ nilla.create (
         };
 
         agenix.loader = "raw";
+        impermanence.loader = "raw";
         nixos-hardware.loader = "raw";
 
         disko.settings.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
