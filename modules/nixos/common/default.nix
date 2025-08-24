@@ -53,10 +53,6 @@
   services = {
     dbus.implementation = "broker";
     openssh.enable = true;
-    userborn = {
-      enable = true;
-      passwordFilesLocation = "/var/lib/nixos";
-    };
   };
 
   programs = {
@@ -84,10 +80,7 @@
     nixos.enable = false;
   };
 
-  system = {
-    etc.overlay.enable = true;
-    tools.nixos-generate-config.enable = false;
-  };
+  system.tools.nixos-generate-config.enable = false;
 
   home-manager = {
     backupFileExtension = "backup";

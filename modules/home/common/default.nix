@@ -19,5 +19,5 @@
     options = "--delete-older-than 7d";
   };
 
-  home.stateVersion = "24.11";
+  home.stateVersion = "25.11";
 }

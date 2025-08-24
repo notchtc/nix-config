@@ -12,13 +12,11 @@
     hideMounts = true;
     directories = [
       "/etc/NetworkManager/system-connections"
-      "/etc/nixos"
       "/var/lib/bluetooth"
       "/var/lib/nixos"
     ];
 
     files = [
-      "/etc/machine-id"
       "/etc/ssh/ssh_host_ed25519_key"
       "/etc/ssh/ssh_host_ed25519_key.pub"
       "/etc/ssh/ssh_host_rsa_key"
@@ -35,21 +33,21 @@
     description = "Rollback BTRFS root subvolume to a pristine state";
     wantedBy = [ "initrd.target" ];
 
-    after = [ "dev-mapper-pool\\x2droot.device" ];
     requires = [ "dev-mapper-pool\\x2droot.device" ];
+    after = [ "dev-mapper-pool\\x2droot.device" ];
 
     before = [ "sysroot.mount" ];
 
     unitConfig.DefaultDependencies = "no";
     serviceConfig.Type = "oneshot";
     script = ''
-      mkdir -p /mnt
+      MNTPOINT=$(mktemp -d)
 
-      mount -t btrfs -o subvol=/root /dev/mapper/pool-root /mnt 
-      trap 'umount /mnt; rm -rf /mnt' EXIT
+      mount -t btrfs -o subvol=/ /dev/mapper/pool-root "$MNTPOINT"
+      trap 'umount "$MNTPOINT"; rm -rf "$MNTPOINT"' EXIT
 
-      btrfs subvolume delete -R /mnt/root
-      btrfs subvolume create /mnt/root
+      btrfs subvolume delete -R "$MNTPOINT/root"
+      btrfs subvolume snapshot "$MNTPOINT/root-blank" "$MNTPOINT/root"
     '';
   };
 }
