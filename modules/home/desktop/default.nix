@@ -1,10 +1,4 @@
-{
-  config,
-  inputs,
-  lib,
-  pkgs,
-  ...
-}:
+{ lib, pkgs, ... }:
 {
   imports = [
     ./foot.nix
@@ -18,7 +12,6 @@
   home = {
     packages = lib.attrValues {
       inherit (pkgs)
-        fooyin
         gimp3
         nautilus
         nicotine-plus
@@ -26,11 +19,10 @@
         picard
         plugdata
         qbittorrent
+        strawberry
         telegram-desktop
         ;
     };
-
-    file."${config.xdg.configHome}/fooyin/layout.fyl".source = ./layout.fyl;
 
     sessionVariables = {
       NIXOS_OZONE_WL = 1;
@@ -86,9 +78,7 @@
       pkgs.writeShellScriptBin "openmw-launcher-wrapper" ''
         export OSG_VERTEX_BUFFER_HINT="VERTEX_BUFFER_OBJECT"
 
-        ${lib.getExe' pkgs.gamemode "gamemoderun"} ${
-          lib.getExe' inputs.openmw-nix.result.packages.${pkgs.system}.openmw-dev "openmw-launcher"
-        }
+        ${lib.getExe pkgs.steam-run} ${lib.getExe' pkgs.gamemode "gamemoderun"} "$HOME/.local/bin/openmw/openmw-launcher"
       ''
     );
     prefersNonDefaultGPU = true;

@@ -1,7 +1,7 @@
 let
   browser = [ "Schizofox.desktop" ];
   docs = [ "org.gnome.Papers.desktop" ];
-  music = [ "org.fooyin.fooyin.desktop" ];
+  music = [ "org.strawberrymusicplayer.strawberry.desktop" ];
   photos = [ "swayimg.desktop" ];
   text = [ "Helix.desktop" ];
   vids = [ "mpv.desktop" ];

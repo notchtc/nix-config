@@ -9,10 +9,11 @@
     inherit (pkgs) lutris protonup-qt;
 
     inherit (inputs.openmw-nix.result.packages.${pkgs.system})
+      delta-plugin
       momw-configurator
-      openmw-dev
       openmw-validator
       s3lightfixes
+      umo
       ;
   };
 

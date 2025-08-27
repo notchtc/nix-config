@@ -1,16 +1,11 @@
-{
-  inputs,
-  lib,
-  pkgs,
-  ...
-}:
+{ inputs, pkgs, ... }:
 {
   nix = {
-    package = pkgs.lixPackageSets.latest.lix;
+    package = pkgs.lixPackageSets.stable.lix;
 
     channel.enable = false;
     optimise.automatic = true;
-    nixPath = [ "/etc/nix/inputs" ];
+    generateNixPathFromInputs = true;
 
     settings = {
       use-xdg-base-directories = true;
@@ -40,25 +35,10 @@
     };
   };
 
-  environment = {
-    etc = lib.mapAttrs' (name: value: {
-      name = "nix/inputs/${name}";
-      value.source =
-        if
-          (lib.strings.isStringLike value.result)
-          && (lib.strings.hasPrefix builtins.storeDir (builtins.toString value.result))
-        then
-          builtins.storePath value.result
-        else
-          builtins.storePath value.src;
-    }) inputs;
-    systemPackages = [
-      inputs.nilla-cli.result.packages.default.result.${pkgs.system}
-      inputs.nilla-utils.result.packages.default.result.${pkgs.system}
-    ];
-  };
+  environment.systemPackages = [
+    inputs.nilla-cli.result.packages.default.result.${pkgs.system}
+    inputs.nilla-utils.result.packages.default.result.${pkgs.system}
+  ];
 
-  system = {
-    stateVersion = "25.11";
-  };
+  system.stateVersion = "25.11";
 }
