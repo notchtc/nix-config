@@ -176,13 +176,13 @@
       "type": "Git",
       "repository": {
         "type": "GitHub",
-        "owner": "notchtc",
+        "owner": "schizofox",
         "repo": "schizofox"
       },
-      "branch": "bump-inputs",
+      "branch": "main",
       "submodules": false,
-      "revision": "bce78d20e41be518673abded8dbc85c398e989de",
-      "url": "https://github.com/notchtc/schizofox/archive/bce78d20e41be518673abded8dbc85c398e989de.tar.gz",
+      "revision": "428833d6a0fbc577b05de130a9bc3c99b027d8da",
+      "url": "https://github.com/schizofox/schizofox/archive/428833d6a0fbc577b05de130a9bc3c99b027d8da.tar.gz",
       "hash": "0xz41811mmwdy1fjdm71a35awrz6w48xqj8qpd3cj06h8j5daq84"
     },
     "stylix": {
