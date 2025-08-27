@@ -152,19 +152,6 @@
       "url": "https://github.com/nixos/nixos-hardware/archive/a65b650d6981e23edd1afa1f01eb942f19cdcbb7.tar.gz",
       "hash": "1hh2734hgilys0rzpmdpm46j8las860vvf6a7ddyf0p3asnz7cgm"
     },
-    "nixpak": {
-      "type": "Git",
-      "repository": {
-        "type": "GitHub",
-        "owner": "nixpak",
-        "repo": "nixpak"
-      },
-      "branch": "master",
-      "submodules": false,
-      "revision": "52c4b650843c3aec1ca3a4200c6b7bb7ed0faaed",
-      "url": "https://github.com/nixpak/nixpak/archive/52c4b650843c3aec1ca3a4200c6b7bb7ed0faaed.tar.gz",
-      "hash": "1c92zyjfbxa66yjk0pq4y5llvi4j2a1wflqmp7gdxkwkhjabmsqr"
-    },
     "nixpkgs": {
       "type": "Channel",
       "name": "nixos-unstable",
@@ -189,14 +176,14 @@
       "type": "Git",
       "repository": {
         "type": "GitHub",
-        "owner": "schizofox",
+        "owner": "notchtc",
         "repo": "schizofox"
       },
-      "branch": "main",
+      "branch": "bump-inputs",
       "submodules": false,
-      "revision": "05e7a9f99d59e519527f65b42cdcf2c691a17675",
-      "url": "https://github.com/schizofox/schizofox/archive/05e7a9f99d59e519527f65b42cdcf2c691a17675.tar.gz",
-      "hash": "0x275628wxdghqjzbabmph2l6dwc9a44qkycps4m1s0jzs3gg7iy"
+      "revision": "bce78d20e41be518673abded8dbc85c398e989de",
+      "url": "https://github.com/notchtc/schizofox/archive/bce78d20e41be518673abded8dbc85c398e989de.tar.gz",
+      "hash": "0xz41811mmwdy1fjdm71a35awrz6w48xqj8qpd3cj06h8j5daq84"
     },
     "stylix": {
       "type": "Git",

@@ -9,8 +9,6 @@
   programs.schizofox = {
     enable = true;
 
-    security.sandbox.enable = false;
-
     settings = {
       "dom.event.clipboardevents.enabled" = true;
       "privacy.resistFingerprinting.letterboxing" = false;
@@ -73,6 +71,10 @@
       displayBookmarksInToolbar = "newtab";
       drm.enable = true;
       firefoxSync = false;
+      customMozillaFolder = {
+        enable = true;
+        path = "/.local/share/mozilla";
+      };
     };
   };
 }
