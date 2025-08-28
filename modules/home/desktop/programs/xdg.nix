@@ -1,3 +1,4 @@
+{ lib, pkgs, ... }:
 let
   browser = [ "Schizofox.desktop" ];
   docs = [ "org.gnome.Papers.desktop" ];
@@ -66,6 +67,27 @@ in
       enable = true;
       associations.added = associations;
       defaultApplications = associations;
+    };
+
+    desktopEntries."org.openmw.launcher" = {
+      name = "OpenMW Launcher";
+      genericName = "Role Playing Game";
+      comment = "An engine replacement for The Elder Scrolls III: Morrowind";
+      exec = lib.getExe (
+        pkgs.writeShellScriptBin "openmw-launcher-wrapper" ''
+          export OSG_VERTEX_BUFFER_HINT="VERTEX_BUFFER_OBJECT"
+
+          ${lib.getExe pkgs.steam-run} ${lib.getExe' pkgs.gamemode "gamemoderun"} "$HOME/.local/bin/openmw/openmw-launcher"
+        ''
+      );
+      prefersNonDefaultGPU = true;
+      icon = "openmw";
+      type = "Application";
+      categories = [
+        "Game"
+        "RolePlaying"
+      ];
+      settings.Keywords = "Morrowind;Reimplementation;Mods;esm;bsa";
     };
   };
 }

@@ -26,7 +26,14 @@
   };
 
   environment.systemPackages = lib.attrValues {
-    inherit (pkgs) cage wl-clipboard xwayland-satellite-unstable;
+    inherit (pkgs)
+      cage
+      libnotify
+      libsecret
+      wl-clipboard
+      xdg-desktop-portal-gtk
+      xwayland-satellite-unstable
+      ;
   };
 
   services = {

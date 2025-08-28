@@ -7,6 +7,7 @@
 
     base16Scheme = "${pkgs.base16-schemes}/share/themes/selenized-dark.yaml";
     image = ./wallpaper.jpg;
+    polarity = "dark";
 
     cursor = {
       package = pkgs.phinger-cursors;
@@ -44,7 +45,5 @@
     };
   };
 
-  environment.sessionVariables = {
-    FREETYPE_PROPERTIES = "cff:no-stem-darkening=0 autofitter:no-stem-darkening=0";
-  };
+  environment.sessionVariables.FREETYPE_PROPERTIES = "cff:no-stem-darkening=0 autofitter:no-stem-darkening=0";
 }

@@ -66,7 +66,7 @@ in
         tooltip-format = "{ifname} via {gwaddr}";
         tooltip-format-ethernet = "{ipaddr}/{cidr} ({ifname})";
         tooltip-format-wifi = "{essid} ({signalStrength}%)";
-        on-click = "$TERMINAL -e nmtui";
+        on-click = "${config.home.sessionVariables.TERMINAL} -e nmtui";
         rotate = 270;
       };
 

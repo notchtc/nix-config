@@ -21,10 +21,27 @@
     nftables.enable = true;
   };
 
-  services.resolved = {
-    enable = true;
-    dnsovertls = "true";
-    dnssec = "false";
+  services = {
+    openssh = {
+      enable = true;
+      hostKeys = [
+        {
+          bits = 4096;
+          path = "/persist/etc/ssh/ssh_host_rsa_key";
+          type = "rsa";
+        }
+        {
+          bits = 4096;
+          path = "/persist/etc/ssh/ssh_host_ed25519_key";
+          type = "ed25519";
+        }
+      ];
+    };
+    resolved = {
+      enable = true;
+      dnsovertls = "true";
+      dnssec = "false";
+    };
   };
 
   boot.kernel.sysctl = {
@@ -38,12 +55,14 @@
     "net.ipv4.tcp_congestion_control" = "bbr";
     "net.ipv4.tcp_synack_retries" = 5;
     "net.ipv4.ip_local_port_range" = "1024 65535";
-    "net.ipv4.tcp_slow_start_after_idle" = 0;
-    "net.ipv4.tcp_mtu_probing" = 1;
-    "net.ipv4.tcp_base_mss" = 1024;
-    "net.ipv4.tcp_rmem" = "8192 262144 536870912";
-    "net.ipv4.tcp_wmem" = "4096 16384 536870912";
     "net.ipv4.tcp_adv_win_scale" = "-2";
+    "net.ipv4.tcp_base_mss" = 1024;
+    "net.ipv4.tcp_fastopen" = 3;
+    "net.ipv4.tcp_mtu_probing" = 1;
     "net.ipv4.tcp_notsent_lowat" = 131072;
+    "net.ipv4.tcp_rmem" = "8192 262144 536870912";
+    "net.ipv4.tcp_slow_start_after_idle" = 0;
+    "net.ipv4.tcp_tcp_tw_reuse" = 1;
+    "net.ipv4.tcp_wmem" = "4096 16384 536870912";
   };
 }

@@ -50,11 +50,9 @@
     };
   };
 
-  programs = {
-    zsh = {
-      dotDir = "${config.xdg.configHome}/zsh";
-      history.path = "${config.xdg.stateHome}/zsh/history";
-    };
+  programs.zsh = {
+    dotDir = "${config.xdg.configHome}/zsh";
+    history.path = "${config.xdg.stateHome}/zsh/history";
   };
 
   gtk.gtk2.configLocation = "${config.xdg.configHome}/gtk-2.0/gtkrc";

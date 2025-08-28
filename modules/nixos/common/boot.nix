@@ -13,10 +13,16 @@
     initrd = {
       systemd.enable = true;
       verbose = false;
+      availableKernelModules = [
+        "ahci"
+        "sd_mod"
+        "usbhid"
+        "xhci_pci"
+      ];
     };
 
     loader = {
-      timeout = 5;
+      timeout = 2;
       limine = {
         enable = true;
         efiSupport = true;

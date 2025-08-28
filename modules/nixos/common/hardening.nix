@@ -40,4 +40,16 @@
       ];
     };
   };
+  fileSystems."/home" = {
+    device = lib.mkForce "/dev/pool/root";
+    options = lib.mkForce [
+      "subvol=/home"
+      "compress=zstd"
+      "noatime"
+      "exec"
+      "nosuid"
+      "nodev"
+    ];
+  };
+
 }

@@ -2,6 +2,7 @@
   config,
   pkgs,
   lib,
+  osConfig,
   ...
 }:
 {
@@ -11,32 +12,21 @@
     ./waybar.nix
   ];
 
-  home.packages = lib.attrValues {
-    inherit (pkgs)
-      brightnessctl
-      libnotify
-      libsecret
-      wbg
-      ;
-  };
+  home.packages = lib.attrValues { inherit (pkgs) brightnessctl wbg; };
 
   programs.niri.settings = {
     cursor.hide-after-inactive-ms = 5000;
     hotkey-overlay.skip-at-startup = true;
     prefer-no-csd = true;
 
-    environment = {
-      _JAVA_AWT_WM_NONREPARENTING = "1";
-    };
-
     input = {
       keyboard = {
         xkb = {
-          layout = "pl";
-          options = "caps:swapescape";
+          inherit (osConfig.services.xserver.xkb) options;
+          layout = osConfig.console.keyMap;
         };
-        repeat-delay = 480;
-        repeat-rate = 40;
+        repeat-delay = osConfig.services.xserver.autoRepeatDelay;
+        repeat-rate = osConfig.services.xserver.autoRepeatInterval;
       };
     };
 
@@ -62,12 +52,8 @@
         enable = true;
         width = 1;
 
-        active = {
-          color = base0D;
-        };
-        inactive = {
-          color = base03;
-        };
+        active.color = base0D;
+        inactive.color = base03;
       };
 
       tab-indicator = {
@@ -326,5 +312,16 @@
       }
     ];
     xwayland-satellite.path = "${lib.getExe pkgs.xwayland-satellite-unstable}";
+  };
+
+  xdg.portal.config.niri = {
+    default = [
+      "gnome"
+      "gtk"
+    ];
+    "org.freedesktop.impl.portal.Access" = "gtk";
+    "org.freedesktop.impl.portal.Notification" = "gtk";
+    "org.freedesktop.impl.portal.Secret" = "gnome-keyring";
+    "org.freedesktop.impl.portal.FileChooser" = "gtk";
   };
 }

@@ -15,34 +15,23 @@
     ./memory.nix
     ./networking.nix
     ./nix.nix
-    ./zsh.nix
+    ./shell.nix
   ];
 
   environment = {
-    binsh = "${pkgs.dash}/bin/dash";
-    shellAliases = with pkgs; {
-      e = "$EDITOR";
-      cat = "${lib.getExe bat} -Pp";
-      ls = "${lib.getExe eza} --classify=auto --group-directories-first";
-      man = "${lib.getExe pkgs.bat-extras.batman}";
-      tree = "ls --tree";
-    };
-    shellInit = "umask 0077";
-
     defaultPackages = lib.mkForce [ ];
     systemPackages = lib.attrValues {
       inherit (pkgs)
         _7zz-rar
         bottom
+        busybox
         deadnix
         eza
         fd
         ffmpeg
         git
-        lshw
         nixfmt
         npins
-        pciutils
         ragenix
         ripgrep
         statix
@@ -50,37 +39,13 @@
     };
   };
 
-  services = {
-    dbus.implementation = "broker";
-    openssh.enable = true;
-  };
-
-  programs = {
-    nano.enable = false;
-    nix-index-database.comma.enable = true;
-    zoxide.enable = true;
-
-    bash.shellInit = ''
-      export HISTFILE="$XDG_STATE_HOME"/bash/history
-    '';
-
-    bat = {
-      enable = true;
-      extraPackages = lib.attrValues { inherit (pkgs.bat-extras) batman; };
-    };
-
-    vim = {
-      enable = true;
-      defaultEditor = true;
-    };
-  };
-
+  hardware.enableRedistributableFirmware = true;
+  services.dbus.implementation = "broker";
+  system.tools.nixos-generate-config.enable = false;
   documentation = {
     info.enable = false;
     nixos.enable = false;
   };
-
-  system.tools.nixos-generate-config.enable = false;
 
   home-manager = {
     backupFileExtension = "backup";

@@ -2,9 +2,7 @@
 {
   imports = [ inputs.schizofox.result.homeManagerModules.default ];
 
-  home.sessionVariables = {
-    BROWSER = "schizofox";
-  };
+  home.sessionVariables.BROWSER = "schizofox";
 
   programs.schizofox = {
     enable = true;

@@ -31,7 +31,14 @@ nilla.create (
       generators = {
         inputs.pins = pins;
         project.folder = ./.;
-        nixos.args.homeModules = config.modules.home;
+        nixos = {
+          args.homeModules = config.modules.home;
+          modules = [
+            config.inputs.disko.result.nixosModules.disko
+            config.modules.nixos.common
+            config.modules.nixos.user-chtc
+          ];
+        };
       };
     };
   }
