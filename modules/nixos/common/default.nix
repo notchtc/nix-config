@@ -11,6 +11,7 @@
     inputs.nix-index-database.result.nixosModules.nix-index
     ./boot.nix
     ./hardening.nix
+    ./i18n.nix
     ./impermanence.nix
     ./memory.nix
     ./networking.nix
