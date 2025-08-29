@@ -1,19 +1,21 @@
 { inputs, ... }:
 {
-  imports = [ "${inputs.impermanence.result}/nixos.nix" ];
+  imports = [ "${inputs.preservation.result}/module.nix" ];
 
   fileSystems = {
     "/persist".neededForBoot = true;
     "/var/log".neededForBoot = true;
   };
 
-  environment.persistence."/persist" = {
+  preservation = {
     enable = true;
-    hideMounts = true;
-    directories = [
+    preserveAt."/persist".directories = [
       "/etc/NetworkManager/system-connections"
       "/var/lib/bluetooth"
-      "/var/lib/nixos"
+      {
+        directory = "/var/lib/nixos";
+        inInitrd = true;
+      }
     ];
   };
 

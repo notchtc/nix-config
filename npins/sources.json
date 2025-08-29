@@ -42,19 +42,6 @@
       "url": "https://github.com/nix-community/home-manager/archive/77f348da3176dc68b20a73dab94852a417daf361.tar.gz",
       "hash": "0ygkkwippy9yr11kzdn8zqvikfw2ggabm9fq5i4lbr2aa69b8b3s"
     },
-    "impermanence": {
-      "type": "Git",
-      "repository": {
-        "type": "GitHub",
-        "owner": "nix-community",
-        "repo": "impermanence"
-      },
-      "branch": "master",
-      "submodules": false,
-      "revision": "4b3e914cdf97a5b536a889e939fb2fd2b043a170",
-      "url": "https://github.com/nix-community/impermanence/archive/4b3e914cdf97a5b536a889e939fb2fd2b043a170.tar.gz",
-      "hash": "04l16szln2x0ajq2x799krb53ykvc6vm44x86ppy1jg9fr82161c"
-    },
     "nilla": {
       "type": "GitRelease",
       "repository": {
@@ -171,6 +158,19 @@
       "revision": "c2c7de1d8b6674ddedadcb4ed5beabfd34da800a",
       "url": "https://codeberg.org/PopeRigby/openmw-nix/archive/c2c7de1d8b6674ddedadcb4ed5beabfd34da800a.tar.gz",
       "hash": "0q8x22cj68d7iic25xq70ldzjym7g9ili3dwmy1lb3vr34r4w5b8"
+    },
+    "preservation": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "nix-community",
+        "repo": "preservation"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "286737ba485f30c1687c833e66f5901a6c8dc019",
+      "url": "https://github.com/nix-community/preservation/archive/286737ba485f30c1687c833e66f5901a6c8dc019.tar.gz",
+      "hash": "0fyybbnwba3fvr4n1z10rqrwx6apzllfyyd8rc87fyaidlxbwsn4"
     },
     "schizofox": {
       "type": "Git",

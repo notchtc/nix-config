@@ -12,13 +12,14 @@
     ./boot.nix
     ./hardening.nix
     ./i18n.nix
-    ./impermanence.nix
     ./memory.nix
     ./networking.nix
     ./nix.nix
+    ./preservation.nix
     ./shell.nix
   ];
 
+  hardware.enableRedistributableFirmware = true;
   environment = {
     defaultPackages = lib.mkForce [ ];
     systemPackages = lib.attrValues {
@@ -40,12 +41,22 @@
     };
   };
 
-  hardware.enableRedistributableFirmware = true;
-  services.dbus.implementation = "broker";
-  system.tools.nixos-generate-config.enable = false;
   documentation = {
     info.enable = false;
     nixos.enable = false;
+  };
+
+  services = {
+    dbus.implementation = "broker";
+    userborn = {
+      enable = true;
+      passwordFilesLocation = "/persist/etc";
+    };
+  };
+
+  system = {
+    etc.overlay.enable = true;
+    tools.nixos-generate-config.enable = false;
   };
 
   home-manager = {
