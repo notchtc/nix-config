@@ -20,6 +20,7 @@ Other projects used:
 - [nix-index-database](https://github.com/Mic92/nix-index-database)
 - [nix-mineral](https://github.com/cynicsketch/nix-mineral)
 - [nixos-hardware](https://github.com/nixos/nixos-hardware)
+- [preservation](https://github.com/nix-community/preservation)
 - [schizofox](https://github.com/schizofox/schizofox)
 - [stylix](https://github.com/danth/stylix)
 
