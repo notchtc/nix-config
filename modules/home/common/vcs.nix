@@ -1,8 +1,9 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 {
   programs = {
     git = {
       enable = true;
+      package = pkgs.gitMinimal;
 
       signing = {
         format = "ssh";

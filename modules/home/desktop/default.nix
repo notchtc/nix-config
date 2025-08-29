@@ -15,6 +15,7 @@
         papers
         picard
         plugdata
+        pwvucontrol
         qbittorrent
         strawberry
         telegram-desktop

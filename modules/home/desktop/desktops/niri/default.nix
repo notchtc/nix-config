@@ -298,6 +298,8 @@
             app-id = "firefox$";
             title = "^Picture-in-Picture$";
           }
+          { title = "^NMTUI$$"; }
+          { title = "^Choose file to open...$"; }
         ];
         open-floating = true;
       }

@@ -30,7 +30,7 @@
         eza
         fd
         ffmpeg
-        git
+        gitMinimal
         nixfmt
         npins
         ragenix

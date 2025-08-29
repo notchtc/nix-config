@@ -1,4 +1,9 @@
-{ lib, pkgs, ... }:
+{
+  osConfig,
+  lib,
+  pkgs,
+  ...
+}:
 {
   home.packages = lib.attrValues {
     inherit (pkgs)
@@ -74,6 +79,12 @@
           formatter.command = "${pkgs.typstyle}/bin/typstyle";
         }
       ];
+      language-server.nixd = {
+        config.nixd.options = {
+          nixos.expr = "(import ./nilla.nix).systems.nixos.${osConfig.networking.hostName}.result.options";
+          home-manager.expr = "(import ./nilla.nix).systems.nixos.${osConfig.networking.hostName}.result.options.home-manager.users.type.getSubOptions []";
+        };
+      };
     };
   };
 }

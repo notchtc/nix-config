@@ -56,6 +56,7 @@ in
         format = "vol: {volume}%";
         format-muted = "vol: muted";
         on-click = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
+        on-click-right = "pwvucontrol";
         rotate = 270;
       };
 
@@ -66,7 +67,7 @@ in
         tooltip-format = "{ifname} via {gwaddr}";
         tooltip-format-ethernet = "{ipaddr}/{cidr} ({ifname})";
         tooltip-format-wifi = "{essid} ({signalStrength}%)";
-        on-click = "${config.home.sessionVariables.TERMINAL} -e nmtui";
+        on-click = "${config.home.sessionVariables.TERMINAL} --title NMTUI -e nmtui";
         rotate = 270;
       };
 
