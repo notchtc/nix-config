@@ -10,7 +10,7 @@
     packages = lib.attrValues {
       inherit (pkgs)
         gimp3
-        nemo
+        nautilus
         nicotine-plus
         papers
         picard

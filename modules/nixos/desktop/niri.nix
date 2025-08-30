@@ -31,7 +31,6 @@
       libnotify
       libsecret
       wl-clipboard
-      xdg-desktop-portal-gtk
       xwayland-satellite-unstable
       ;
   };
