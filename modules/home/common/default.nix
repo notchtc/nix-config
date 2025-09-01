@@ -1,16 +1,19 @@
 {
   imports = [
+    ./eza.nix
     ./helix.nix
+    ./nix-index.nix
     ./vcs.nix
     ./xdg.nix
+    ./zsh.nix
   ];
 
   programs = {
-    command-not-found.enable = false;
-    zsh = {
-      enable = true;
-      enableCompletion = true;
-    };
+    bat.enable = true;
+    bottom.enable = true;
+    fd.enable = true;
+    ripgrep.enable = true;
+    zoxide.enable = true;
   };
 
   nix.gc = {

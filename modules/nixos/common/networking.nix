@@ -1,5 +1,6 @@
 {
   networking = {
+    nftables.enable = true;
     useDHCP = false;
     useNetworkd = true;
 
@@ -17,8 +18,6 @@
         powersave = true;
       };
     };
-
-    nftables.enable = true;
   };
 
   services = {

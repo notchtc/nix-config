@@ -9,25 +9,8 @@
   imports = [ inputs.niri.result.nixosModules.niri ];
   nixpkgs.overlays = [ inputs.niri.result.overlays.niri ];
 
-  programs = {
-    niri = {
-      enable = true;
-      package = pkgs.niri-unstable;
-    };
-
-    regreet = {
-      enable = true;
-      cageArgs = [
-        "-s"
-        "-m"
-        "last"
-      ];
-    };
-  };
-
   environment.systemPackages = lib.attrValues {
     inherit (pkgs)
-      cage
       libnotify
       libsecret
       wl-clipboard
@@ -35,11 +18,21 @@
       ;
   };
 
+  programs.niri = {
+    enable = true;
+    package = pkgs.niri-unstable;
+  };
+
   services = {
     devmon.enable = true;
     greetd = {
       enable = true;
+      useTextGreeter = true;
       settings = {
+        default_session = {
+          command = "${pkgs.greetd.tuigreet}/bin/tuigreet -i -t  -c ${pkgs.niri-unstable}/bin/niri-session";
+          user = "greeter";
+        };
         initial_session = lib.mkIf config.services.displayManager.autoLogin.enable {
           command = "${pkgs.niri-unstable}/bin/niri-session";
           user = "${config.services.displayManager.autoLogin.user}";

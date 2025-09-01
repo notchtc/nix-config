@@ -32,7 +32,6 @@
 
   home = {
     file = {
-      ".zshenv".enable = false;
       ".gtkrc-2.0".enable = false;
       ".icons/default/index.theme".enable = false;
       ".icons/${config.home.pointerCursor.name}".enable = false;
@@ -48,11 +47,6 @@
       WGETRC = "${config.xdg.configHome}/wgetrc";
       WINEPREFIX = "${config.xdg.dataHome}/wine";
     };
-  };
-
-  programs.zsh = {
-    dotDir = "${config.xdg.configHome}/zsh";
-    history.path = "${config.xdg.stateHome}/zsh/history";
   };
 
   gtk.gtk2.configLocation = "${config.xdg.configHome}/gtk-2.0/gtkrc";

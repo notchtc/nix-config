@@ -8,7 +8,6 @@
   imports = [
     "${inputs.agenix.result}/modules/age.nix"
     inputs.home-manager.result.nixosModules.default
-    inputs.nix-index-database.result.nixosModules.nix-index
     ./boot.nix
     ./hardening.nix
     ./i18n.nix
@@ -25,17 +24,13 @@
     systemPackages = lib.attrValues {
       inherit (pkgs)
         _7zz-rar
-        bottom
         busybox
         deadnix
-        eza
-        fd
         ffmpeg
         gitMinimal
         nixfmt
         npins
         ragenix
-        ripgrep
         statix
         ;
     };
