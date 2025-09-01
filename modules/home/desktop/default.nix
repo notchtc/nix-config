@@ -9,8 +9,9 @@
   home = {
     packages = lib.attrValues {
       inherit (pkgs)
+        file-roller
         gimp3
-        nautilus
+        pcmanfm
         nicotine-plus
         papers
         picard
