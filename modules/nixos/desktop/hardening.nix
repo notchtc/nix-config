@@ -12,4 +12,16 @@
   };
 
   boot.kernel.sysctl."kernel.unprivileged_userns_clone" = 1;
+
+  fileSystems."/home" = {
+    device = lib.mkForce "/dev/pool/root";
+    options = lib.mkForce [
+      "subvol=/home"
+      "compress=zstd"
+      "noatime"
+      "exec"
+      "nosuid"
+      "nodev"
+    ];
+  };
 }

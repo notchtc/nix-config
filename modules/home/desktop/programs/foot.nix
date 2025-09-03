@@ -1,5 +1,6 @@
+{ pkgs, ... }:
 {
-  home.sessionVariables.TERMINAL = "footclient";
+  home.sessionVariables.TERMINAL = "${pkgs.foot}/bin/footclient";
   xdg.terminal-exec.settings.default = [ "footclient.desktop" ];
   programs.foot = {
     enable = true;

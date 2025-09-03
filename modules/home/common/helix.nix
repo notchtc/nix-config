@@ -11,7 +11,6 @@
       nixd
       tinymist
       typst
-      typstyle
       ;
   };
 

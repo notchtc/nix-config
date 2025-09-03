@@ -44,7 +44,7 @@ in
       e = "$EDITOR";
       find = "${getExe fd}";
       grep = "${getExe ripgrep}";
-      man = "${getExe pkgs.bat-extras.batman}";
+      man = "${getExe bat-extras.batman}";
     };
 
     completionInit = ''

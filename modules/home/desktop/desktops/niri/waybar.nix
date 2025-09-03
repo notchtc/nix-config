@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 let
   colors = config.lib.stylix.colors.withHashtag;
 in
@@ -55,8 +55,8 @@ in
       wireplumber = {
         format = "vol: {volume}%";
         format-muted = "vol: muted";
-        on-click = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
-        on-click-right = "pwvucontrol";
+        on-click = "${pkgs.wireplumber}/bin/wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
+        on-click-right = "${pkgs.pwvucontrol}/bin/pwvucontrol";
         rotate = 270;
       };
 
@@ -73,8 +73,8 @@ in
 
       backlight = {
         format = "lit: {percent}%";
-        on-scroll-up = "brightnessctl set +1%";
-        on-scroll-down = "brightnessctl set 1%-";
+        on-scroll-up = "${pkgs.brightnessctl}/bin/brightnessctl set +1%";
+        on-scroll-down = "${pkgs.brightnessctl}/bin/brightnessctl set 1%-";
         rotate = 270;
       };
 
@@ -112,10 +112,9 @@ in
           dnd-inhibited-none = "◌";
         };
         return-type = "json";
-        exec-if = "which swaync-client";
-        exec = "swaync-client -swb";
-        on-click = "swaync-client -t -sw";
-        on-click-right = "swaync-client -d -sw";
+        exec = "${pkgs.swaynotificationcenter}/bin/swaync-client -swb";
+        on-click = "${pkgs.swaynotificationcenter}/bin/swaync-client -t -sw";
+        on-click-right = "${pkgs.swaynotificationcenter}/bin/swaync-client -d -sw";
         escape = true;
       };
     };

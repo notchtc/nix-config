@@ -1,5 +1,6 @@
+{ pkgs, ... }:
 {
-  home.sessionVariables.TERMINAL = "ghostty";
+  home.sessionVariables.TERMINAL = "${pkgs.ghostty}/bin/ghostty";
   xdg.terminal-exec.settings.default = [ "com.mitchellh.ghostty.desktop" ];
   programs.ghostty = {
     enable = true;

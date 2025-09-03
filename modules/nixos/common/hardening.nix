@@ -21,34 +21,14 @@
         disable-intelme-kmodules = true;
         lock-root = true;
       };
-      software-choice.secure-chrony = true;
+      software-choice = {
+        doas-no-sudo = true;
+        secure-chrony = true;
+      };
     };
   };
 
   boot.kernel.sysctl."kernel.unprivileged_userns_clone" = lib.mkDefault 0;
   environment.systemPackages = [ pkgs.doas-sudo-shim ];
-  security = {
-    sudo.enable = lib.mkForce false;
-    doas = {
-      enable = true;
-      extraRules = [
-        {
-          groups = [ "wheel" ];
-          keepEnv = true;
-          persist = true;
-        }
-      ];
-    };
-  };
-  fileSystems."/home" = {
-    device = lib.mkForce "/dev/pool/root";
-    options = lib.mkForce [
-      "subvol=/home"
-      "compress=zstd"
-      "noatime"
-      "exec"
-      "nosuid"
-      "nodev"
-    ];
-  };
+  security.doas.extraRules = [ { groups = [ "wheel" ]; } ];
 }

@@ -1,7 +1,8 @@
 { pkgs, ... }:
 let
   hyprlock = "${pkgs.hyprlock}/bin/hyprlock";
-  niri = "${pkgs.niri-unstable}/bin/niri";
+  loginctl = "${pkgs.systemd}/bin/loginctl";
+  niri = "${pkgs.niri}/bin/niri";
 in
 {
   services = {
@@ -10,7 +11,7 @@ in
       timeouts = [
         {
           timeout = 300;
-          command = "loginctl lock-session";
+          command = "${loginctl} lock-session";
         }
         {
           timeout = 450;
@@ -24,7 +25,7 @@ in
         }
         {
           event = "before-sleep";
-          command = "loginctl lock-session";
+          command = "${loginctl} lock-session";
         }
         {
           event = "after-resume";
