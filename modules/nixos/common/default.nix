@@ -33,6 +33,8 @@
         ragenix
         statix
         ;
+
+      uutils = lib.hiPrio pkgs.uutils-coreutils-noprefix;
     };
   };
 

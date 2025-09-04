@@ -1,9 +1,21 @@
 {
-  systemd.oomd.extraConfig.DefaultMemoryPressureDurationSec = "20s";
-
   zramSwap = {
     enable = true;
     memoryPercent = 150;
+  };
+
+  systemd.oomd.extraConfig.DefaultMemoryPressureDurationSec = "20s";
+  services.earlyoom = {
+    enable = true;
+    freeSwapThreshold = 2;
+    freeMemThreshold = 2;
+    extraArgs = [
+      "-g"
+      "--avoid"
+      "'^(niri|foot|Xwayland|greetd|cryptsetup|hx|ssh-agent|systemd|sshd)$'"
+      "--prefer"
+      "'^(Web Content|Isolated Web Co|firefox.*|electron|nix|.*.exe|pipewire)$'"
+    ];
   };
 
   boot.kernel.sysctl = {

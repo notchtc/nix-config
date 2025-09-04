@@ -1,5 +1,10 @@
+{ pkgs, ... }:
 {
-  console.keyMap = "pl";
+  console = {
+    earlySetup = true;
+    font = "${pkgs.terminus_font}/share/consolefonts/ter-v18n.psf.gz";
+    keyMap = "pl";
+  };
   i18n =
     let
       defaultLocale = "en_US.UTF-8";
