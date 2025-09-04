@@ -11,8 +11,6 @@
     security.disable-bluetooth-kmodules = lib.mkForce false;
   };
 
-  boot.kernel.sysctl."kernel.unprivileged_userns_clone" = 1;
-
   fileSystems."/home" = {
     device = lib.mkForce "/dev/pool/root";
     options = lib.mkForce [

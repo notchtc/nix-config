@@ -25,5 +25,4 @@
   };
 
   nixpkgs.hostPlatform = "x86_64-linux";
-  nix.settings.max-jobs = 4;
 }

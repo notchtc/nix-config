@@ -9,6 +9,14 @@
 
     settings = {
       use-xdg-base-directories = true;
+      accept-flake-config = false;
+      auto-optimise-store = true;
+      keep-going = true;
+      sandbox = true;
+      use-cgroups = true;
+      max-jobs = "auto";
+
+      allowed-users = [ "@wheel" ];
       trusted-users = [ "@wheel" ];
 
       experimental-features = [

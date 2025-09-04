@@ -19,6 +19,10 @@
         "usbhid"
         "xhci_pci"
       ];
+      compressorArgs = [
+        "-19"
+        "-T0"
+      ];
     };
 
     loader = {

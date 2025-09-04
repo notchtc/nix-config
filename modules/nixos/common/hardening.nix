@@ -1,6 +1,6 @@
 {
+  config,
   inputs,
-  lib,
   pkgs,
   ...
 }:
@@ -28,7 +28,11 @@
     };
   };
 
-  boot.kernel.sysctl."kernel.unprivileged_userns_clone" = lib.mkDefault 0;
+  security = {
+    protectKernelImage = true;
+    unprivilegedUsernsClone = config.virtualisation.containers.enable;
+  };
+
   environment.systemPackages = [ pkgs.doas-sudo-shim ];
   security.doas.extraRules = [ { groups = [ "wheel" ]; } ];
 }
