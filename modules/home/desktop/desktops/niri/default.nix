@@ -316,6 +316,7 @@
       {
         command = [
           "${pkgs.wbg}/bin/wbg"
+          "-s"
           "${config.stylix.image}"
         ];
       }
