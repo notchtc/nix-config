@@ -13,12 +13,11 @@
       hashedPasswordFile = config.age.secrets.chtc-password.path;
 
       extraGroups = [
-        "audio"
-        "gamemode"
         "networkmanager"
         "wheel"
-        "video"
-      ];
+      ]
+      ++ lib.optionals config.programs.gamemode.enable [ "gamemode" ]
+      ++ lib.optionals config.services.pipewire.enable [ "pipewire" ];
     };
   };
 

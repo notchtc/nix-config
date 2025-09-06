@@ -11,6 +11,7 @@
     ./boot.nix
     ./hardening.nix
     ./i18n.nix
+    ./logrotate.nix
     ./memory.nix
     ./networking.nix
     ./nix.nix

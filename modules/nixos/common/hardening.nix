@@ -28,11 +28,21 @@
     };
   };
 
+  environment.systemPackages = [ pkgs.doas-sudo-shim ];
+
+  services.dbus.apparmor = "enabled";
   security = {
+    doas.extraRules = [ { groups = [ "wheel" ]; } ];
+
     protectKernelImage = true;
     unprivilegedUsernsClone = config.virtualisation.containers.enable;
-  };
 
-  environment.systemPackages = [ pkgs.doas-sudo-shim ];
-  security.doas.extraRules = [ { groups = [ "wheel" ]; } ];
+    auditd.enable = true;
+    apparmor.enableCache = true;
+    audit = {
+      backlogLimit = 8192;
+      failureMode = "printk";
+      rules = [ "-a exit,always -F arch=b64 -S execve" ];
+    };
+  };
 }
