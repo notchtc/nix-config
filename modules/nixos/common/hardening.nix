@@ -1,9 +1,4 @@
-{
-  config,
-  inputs,
-  pkgs,
-  ...
-}:
+{ config, inputs, ... }:
 {
   imports = [ "${inputs.nix-mineral.result}/nix-mineral.nix" ];
 
@@ -15,6 +10,7 @@
         allow-ip-forward = true;
         no-lockdown = true;
       };
+      desktop.doas-sudo-wrapper = true;
       performance.allow-smt = true;
       security = {
         disable-bluetooth-kmodules = true;
@@ -28,12 +24,8 @@
     };
   };
 
-  environment.systemPackages = [ pkgs.doas-sudo-shim ];
-
   services.dbus.apparmor = "enabled";
   security = {
-    doas.extraRules = [ { groups = [ "wheel" ]; } ];
-
     protectKernelImage = true;
     unprivilegedUsernsClone = config.virtualisation.containers.enable;
 

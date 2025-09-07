@@ -117,14 +117,14 @@
       "type": "Git",
       "repository": {
         "type": "GitHub",
-        "owner": "cynicsketch",
+        "owner": "notchtc",
         "repo": "nix-mineral"
       },
-      "branch": "main",
+      "branch": "doas",
       "submodules": false,
-      "revision": "54d7a32a39062ae322d05dd76cee552f3576fdca",
-      "url": "https://github.com/cynicsketch/nix-mineral/archive/54d7a32a39062ae322d05dd76cee552f3576fdca.tar.gz",
-      "hash": "0igafnfgmy6z6wqyh8r931gp4v4w2q3lnymr40illsq5ikv89zns"
+      "revision": "2a224a8f492634356b6ddc37a114494ac1ce6360",
+      "url": "https://github.com/notchtc/nix-mineral/archive/2a224a8f492634356b6ddc37a114494ac1ce6360.tar.gz",
+      "hash": "1d12ihcrffkb5cfmi30v09sb2zyxriamk383415r2b5n9kn0m1mk"
     },
     "nixos-hardware": {
       "type": "Git",
