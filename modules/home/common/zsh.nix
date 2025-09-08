@@ -17,7 +17,7 @@ in
     enableCompletion = true;
     enableVteIntegration = true;
     autosuggestion.enable = true;
-    syntaxHighlighting.enable = true;
+    sessionVariables.ZSH_AUTOSUGGEST_MANUAL_REBIND = 1;
 
     history = {
       path = "${config.xdg.stateHome}/zsh/history";
@@ -38,13 +38,16 @@ in
     ];
 
     shellAliases = with pkgs; {
-      "7z" = "${getExe _7zz-rar}";
+      "7z" = getExe _7zz-rar;
       cat = "${getExe bat} -p";
-      du = "${getExe dust}";
+      cut = getExe hck;
+      du = getExe dust;
       e = "$EDITOR";
-      find = "${getExe fd}";
-      grep = "${getExe ripgrep}";
-      man = "${getExe bat-extras.batman}";
+      find = getExe fd;
+      grep = getExe ripgrep;
+      man = getExe bat-extras.batman;
+      ps = getExe procs;
+      sed = getExe sd;
     };
 
     completionInit = ''
@@ -107,6 +110,8 @@ in
       zle -N zle-line-init
       echo -ne '\e[5 q'
       preexec() { echo -ne '\e[5 q' ;}
+
+      source ${pkgs.zsh-fast-syntax-highlighting}/share/zsh/site-functions/fast-syntax-highlighting.plugin.zsh
     '';
 
     envExtra = ''
