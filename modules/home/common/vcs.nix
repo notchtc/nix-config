@@ -102,6 +102,8 @@
         };
 
         git = {
+          sign-on-push = true;
+
           fetch = [
             "upstream"
             "origin"
@@ -116,7 +118,7 @@
         };
 
         signing = {
-          behavior = "own";
+          behavior = "drop";
           backend = "ssh";
           inherit (config.programs.git.signing) key;
         };
