@@ -38,9 +38,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "6159629d05a0e92bb7fb7211e74106ae1d552401",
-      "url": "https://github.com/nix-community/home-manager/archive/6159629d05a0e92bb7fb7211e74106ae1d552401.tar.gz",
-      "hash": "190fqp1iga7z91nazgw6p8kflz8svd2ayx2dgb2q1vl3gmh7z65x"
+      "revision": "26993d87fd0d3b14f7667b74ad82235f120d986e",
+      "url": "https://github.com/nix-community/home-manager/archive/26993d87fd0d3b14f7667b74ad82235f120d986e.tar.gz",
+      "hash": "0ffkkg21vd9m91sza6h6adrgpww114aj3l0n36hg73jsgx16sb1c"
     },
     "nilla": {
       "type": "GitRelease",
@@ -96,9 +96,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "4c144345fffa3841072dbb083cea06e75201331d",
-      "url": "https://github.com/sodiboo/niri-flake/archive/4c144345fffa3841072dbb083cea06e75201331d.tar.gz",
-      "hash": "1vfrnsw68v28sdr092gbrlgjww6bsqixqajhjgfa5d6gij1sw331"
+      "revision": "ef694b996daeeb8684c0adfaa9b7067a6e709054",
+      "url": "https://github.com/sodiboo/niri-flake/archive/ef694b996daeeb8684c0adfaa9b7067a6e709054.tar.gz",
+      "hash": "1yprhc7awiqkkrvalizb2c3qxk4xp4mlmcnk1anvljp6b6n1pjzf"
     },
     "nix-index-database": {
       "type": "Git",
@@ -109,21 +109,21 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "3fe768e1f058961095b4a0d7a2ba15dc9736bdc6",
-      "url": "https://github.com/nix-community/nix-index-database/archive/3fe768e1f058961095b4a0d7a2ba15dc9736bdc6.tar.gz",
-      "hash": "1wc8y3diczlqjcn2ganr8v75sbfx2c8rl6qjhavmdw9aa3lma2gy"
+      "revision": "9b144dc3ef6e42b888c4190e02746aab13b0e97f",
+      "url": "https://github.com/nix-community/nix-index-database/archive/9b144dc3ef6e42b888c4190e02746aab13b0e97f.tar.gz",
+      "hash": "1fdlf3zb53ynv8wxfx3fjf7sz83in49nj9370x6q1gh7plvv00r3"
     },
     "nix-mineral": {
       "type": "Git",
       "repository": {
         "type": "GitHub",
-        "owner": "notchtc",
+        "owner": "cynicsketch",
         "repo": "nix-mineral"
       },
-      "branch": "doas",
+      "branch": "main",
       "submodules": false,
-      "revision": "2a224a8f492634356b6ddc37a114494ac1ce6360",
-      "url": "https://github.com/notchtc/nix-mineral/archive/2a224a8f492634356b6ddc37a114494ac1ce6360.tar.gz",
+      "revision": "b76cc19351f159cd360d8ceea3ba9aff8fce6c6e",
+      "url": "https://github.com/cynicsketch/nix-mineral/archive/b76cc19351f159cd360d8ceea3ba9aff8fce6c6e.tar.gz",
       "hash": "1d12ihcrffkb5cfmi30v09sb2zyxriamk383415r2b5n9kn0m1mk"
     },
     "nixos-hardware": {
@@ -135,15 +135,15 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "47eb4856cfd01eaeaa7bb5944a0f27db8fb9b94a",
-      "url": "https://github.com/nixos/nixos-hardware/archive/47eb4856cfd01eaeaa7bb5944a0f27db8fb9b94a.tar.gz",
-      "hash": "0qig92czrx06wgjjr7h0958lbbjm7qxfflmppnlx2fi3dfxl11kv"
+      "revision": "11b2a10c7be726321bb854403fdeec391e798bf0",
+      "url": "https://github.com/nixos/nixos-hardware/archive/11b2a10c7be726321bb854403fdeec391e798bf0.tar.gz",
+      "hash": "0saswrdg59v4xfwfl7q61b47davz6yf58xfj707wzcip3s5zpm1y"
     },
     "nixpkgs": {
       "type": "Channel",
       "name": "nixos-unstable",
-      "url": "https://releases.nixos.org/nixos/unstable/nixos-25.11pre855242.d0fc30899600/nixexprs.tar.xz",
-      "hash": "1h6jha8jr0cjzambg79izk92qg4a85xmxgfizh7xv356hhz88dcw"
+      "url": "https://releases.nixos.org/nixos/unstable/nixos-25.11pre858212.b599843bad24/nixexprs.tar.xz",
+      "hash": "1hljkbhlv98h32sdzgjw7c5nqjyfrxfnqh0ffwyy4xljfrkjak3i"
     },
     "openmw-nix": {
       "type": "Git",
@@ -155,9 +155,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "b28c6939aecaa0da9062cd329c831f10d180cf10",
-      "url": "https://codeberg.org/PopeRigby/openmw-nix/archive/b28c6939aecaa0da9062cd329c831f10d180cf10.tar.gz",
-      "hash": "0y6yrfhwzvji7i3bmdcdxb2qz26mfrimb60kyylxig899ij0gb7l"
+      "revision": "6474b758bcb4375da66f2138b1eafec98daf4bc4",
+      "url": "https://codeberg.org/PopeRigby/openmw-nix/archive/6474b758bcb4375da66f2138b1eafec98daf4bc4.tar.gz",
+      "hash": "10a7q40sinama3d148gclhn9mn240qm0fd8r3jgfk13n1w2540sf"
     },
     "preservation": {
       "type": "Git",
@@ -168,9 +168,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "286737ba485f30c1687c833e66f5901a6c8dc019",
-      "url": "https://github.com/nix-community/preservation/archive/286737ba485f30c1687c833e66f5901a6c8dc019.tar.gz",
-      "hash": "0fyybbnwba3fvr4n1z10rqrwx6apzllfyyd8rc87fyaidlxbwsn4"
+      "revision": "93416f4614ad2dfed5b0dcf12f27e57d27a5ab11",
+      "url": "https://github.com/nix-community/preservation/archive/93416f4614ad2dfed5b0dcf12f27e57d27a5ab11.tar.gz",
+      "hash": "0im42hnghfcp0bzlkngkdd7a93fh2dm0y82sllz7ryflm4hkvhlq"
     },
     "schizofox": {
       "type": "Git",
@@ -194,9 +194,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "989312ab49e6eb1d076f9d194d43f9f9c513087e",
-      "url": "https://github.com/nix-community/stylix/archive/989312ab49e6eb1d076f9d194d43f9f9c513087e.tar.gz",
-      "hash": "0jp2ph88g2v3iiiikivg6ljaw42lairc1bn11j9r941x2sb2823z"
+      "revision": "834a743c11d66ea18e8c54872fbcc72ce48bc57f",
+      "url": "https://github.com/nix-community/stylix/archive/834a743c11d66ea18e8c54872fbcc72ce48bc57f.tar.gz",
+      "hash": "1hrijc04sg8pkp4q6k9fac1p1vj10qj0afv7yqa879828hads32p"
     }
   },
   "version": 5
