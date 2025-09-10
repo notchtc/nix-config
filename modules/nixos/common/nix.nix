@@ -1,4 +1,9 @@
-{ inputs, pkgs, ... }:
+{
+  inputs,
+  lib,
+  pkgs,
+  ...
+}:
 {
   nix = {
     package = pkgs.lixPackageSets.stable.lix;
@@ -43,10 +48,17 @@
     };
   };
 
-  environment.systemPackages = [
-    inputs.nilla-cli.result.packages.default.result.${pkgs.system}
-    inputs.nilla-utils.result.packages.default.result.${pkgs.system}
-  ];
+  environment = {
+    systemPackages = [
+      inputs.nilla-cli.result.packages.default.result.${pkgs.system}
+      inputs.nilla-utils.result.packages.default.result.${pkgs.system}
+    ];
+    variables.NIXPKGS_CONFIG = lib.mkForce "";
+  };
 
-  system.stateVersion = "25.11";
+  system = {
+    disableInstallerTools = true;
+    tools.nixos-rebuild.enable = true;
+    stateVersion = "25.11";
+  };
 }

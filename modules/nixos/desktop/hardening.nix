@@ -3,7 +3,7 @@
   nix-mineral.overrides = {
     desktop = {
       allow-multilib = true;
-      hideproc-off = true;
+      hideproc-ptraceable = true;
       #home-exec = true;
       skip-restrict-home-permission = true;
       tmp-exec = true;

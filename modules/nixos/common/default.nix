@@ -52,10 +52,7 @@
     };
   };
 
-  system = {
-    etc.overlay.enable = true;
-    tools.nixos-generate-config.enable = false;
-  };
+  system.etc.overlay.enable = true;
 
   home-manager = {
     backupFileExtension = "backup";

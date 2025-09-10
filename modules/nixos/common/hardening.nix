@@ -5,11 +5,7 @@
   nix-mineral = {
     enable = true;
     overrides = {
-      compatibility = {
-        allow-unsigned-modules = true;
-        allow-ip-forward = true;
-        no-lockdown = true;
-      };
+      compatibility.allow-ip-forward = true;
       desktop.doas-sudo-wrapper = true;
       performance.allow-smt = true;
       security = {
