@@ -29,16 +29,12 @@ nilla.create (
         stylix.settings.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
       };
 
+      modules.nixos.default = ./modules/nixos;
       generators = {
         inputs.pins = pins;
         project.folder = ./.;
         nixos = {
-          args.homeModules = config.modules.home;
-          modules = [
-            config.inputs.disko.result.nixosModules.disko
-            config.modules.nixos.common
-            config.modules.nixos.user-chtc
-          ];
+          modules = [ config.modules.nixos.default ];
         };
       };
     };

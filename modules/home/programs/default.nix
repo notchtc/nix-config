@@ -1,0 +1,65 @@
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+let
+  inherit (lib)
+    attrValues
+    mkIf
+    mergeAttrsList
+    optionalAttrs
+    ;
+  cfg = config.mama;
+in
+{
+  imports = [
+    ./bat.nix
+    ./waybar.nix
+    ./foot.nix
+    ./ghostty.nix
+    ./mpv.nix
+    ./schizofox.nix
+    ./fuzzel.nix
+    ./hyprlock.nix
+    ./vesktop.nix
+    ./zsh.nix
+    ./nix-index.nix
+    ./eza.nix
+    ./helix.nix
+    ./xdg.nix
+    ./jj.nix
+    ./git.nix
+  ];
+
+  home.packages = attrValues (mergeAttrsList [
+    (optionalAttrs cfg.profiles.graphical.enable {
+      inherit (pkgs)
+        gimp3
+        nicotine-plus
+        papers
+        picard
+        plugdata
+        pwvucontrol
+        qbittorrent
+        strawberry
+        telegram-desktop
+        ;
+    })
+
+    (optionalAttrs cfg.desktops.niri.enable { inherit (pkgs) file-roller pcmanfm; })
+  ]);
+
+  programs = {
+    bottom.enable = true;
+    fd.enable = true;
+    ripgrep.enable = true;
+    zoxide.enable = true;
+  }
+  // optionalAttrs cfg.profiles.graphical.enable {
+    foliate.enable = true;
+    keepassxc.enable = true;
+    swayimg.enable = mkIf cfg.desktops.niri.enable true;
+  };
+}

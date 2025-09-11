@@ -1,57 +1,36 @@
+{ config, lib, ... }:
+let
+  inherit (lib) mkEnableOption;
+  cfg = config.mama.programs.gaming;
+in
 {
-  inputs,
-  pkgs,
-  lib,
-  ...
-}:
-{
-  environment.systemPackages = lib.attrValues {
-    inherit (pkgs) lutris protonup-qt;
+  options.mama.programs.gaming = {
+    enable = mkEnableOption ''
+      All the gaming software I need
+    '';
 
-    inherit (inputs.openmw-nix.result.packages.${pkgs.system})
-      delta-plugin
-      momw-configurator
-      openmw-validator
-      s3lightfixes
-      umo
-      ;
-  };
-
-  environment.sessionVariables = {
-    PROTON_ENABLE_WAYLAND = 1;
-    PROTON_USE_NTSYNC = 1;
-  };
-  programs = {
-    gamemode = {
-      enable = true;
-      settings = {
-        general = {
-          softrealtime = "auto";
-          renice = 17;
-        };
-        gpu = {
-          apply_gpu_optimizations = "accept-responsibility";
-          gpu_device = 0;
-        };
-      };
+    gamemode.enable = mkEnableOption "Gamemode" // {
+      default = cfg.enable;
     };
-
-    gamescope = {
-      enable = true;
-      capSysNice = false;
+    gamescope.enable = mkEnableOption "Gamescope" // {
+      default = cfg.enable;
     };
-
-    steam = {
-      enable = true;
-      dedicatedServer.openFirewall = true;
-      extest.enable = true;
-      gamescopeSession.enable = true;
-      localNetworkGameTransfers.openFirewall = true;
-      protontricks.enable = true;
-      remotePlay.openFirewall = true;
+    openmw.enable = mkEnableOption "OpenMW" // {
+      default = cfg.enable;
+    };
+    lutris.enable = mkEnableOption "OpenMW" // {
+      default = cfg.enable;
+    };
+    steam.enable = mkEnableOption "OpenMW" // {
+      default = cfg.enable;
     };
   };
 
-  hardware.steam-hardware.enable = true;
-  services.udev.packages = [ pkgs.game-devices-udev-rules ];
+  imports = [
+    ./gamemode.nix
+    ./gamescope.nix
+    ./openmw.nix
+    ./lutris.nix
+    ./steam.nix
+  ];
 }

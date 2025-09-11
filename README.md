@@ -34,3 +34,5 @@ Other configurations from where I learned and copied:
 - [surfaceflinger/notflake](https://github.com/surfaceflinger/notflake)
 - [FreshlyBakedCake/PacketMix](https://github.com/FreshlyBakedCake/PacketMix)
 - [jakehamilton/config](https://github.com/jakehamilton/config)
+- [NotAShelf/nyx](https://github.com/NotAShelf/nyx)
+- [isabelroses/dotfiles](https://github.com/isabelroses/dotfiles)
