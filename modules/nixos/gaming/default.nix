@@ -6,10 +6,10 @@
 }:
 {
   environment.systemPackages = lib.attrValues {
-    inherit (pkgs) lutris protonup-qt;
+    inherit (pkgs) lutris protonup-qt openmw;
 
     inherit (inputs.openmw-nix.result.packages.${pkgs.system})
-      delta-plugin
+      #      delta-plugin
       momw-configurator
       openmw-validator
       s3lightfixes
