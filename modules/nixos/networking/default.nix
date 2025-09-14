@@ -23,4 +23,9 @@
       "2620:fe::9#dns.quad9.net"
     ];
   };
+
+  systemd.services = {
+    systemd-networkd.stopIfChanged = false;
+    systemd-resolved.stopIfChanged = false;
+  };
 }
