@@ -10,6 +10,7 @@
       };
 
       aliases = {
+        e = [ "edit" ];
         d = [ "describe" ];
         df = [ "diff" ];
         l = [ "log" ];
