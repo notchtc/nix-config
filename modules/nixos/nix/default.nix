@@ -11,7 +11,7 @@
   ];
 
   nix = {
-    package = pkgs.lixPackageSets.stable.lix;
+    package = pkgs.lixPackageSets.git.lix;
 
     channel.enable = false;
     optimise.automatic = true;
