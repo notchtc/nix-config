@@ -38,9 +38,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "9eab59f3e71ea3a725e4817d8dcf0da0824ad19d",
-      "url": "https://github.com/nix-community/home-manager/archive/9eab59f3e71ea3a725e4817d8dcf0da0824ad19d.tar.gz",
-      "hash": "1iccydl3rp82kccvx3fbim13ggxfp8yrlx2vp6nz4w4wpa3avg1s"
+      "revision": "11cc5449c50e0e5b785be3dfcb88245232633eb8",
+      "url": "https://github.com/nix-community/home-manager/archive/11cc5449c50e0e5b785be3dfcb88245232633eb8.tar.gz",
+      "hash": "0dpmv7mmyd3lqgv7cj95dwv4kwa8z8rqm9rvr1hfjbhpx1lpmz9j"
     },
     "nilla": {
       "type": "GitRelease",
@@ -96,9 +96,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "f9d9c624257f4c817f1043eb10374e9a4a159eb7",
-      "url": "https://github.com/sodiboo/niri-flake/archive/f9d9c624257f4c817f1043eb10374e9a4a159eb7.tar.gz",
-      "hash": "1pdsv6m5ar9qc6wrf0j5cfwjra6159bivd9lkwd32yfmas2c0w2x"
+      "revision": "1da07fd6a9d44a7875d2843cccab1179085edb2c",
+      "url": "https://github.com/sodiboo/niri-flake/archive/1da07fd6a9d44a7875d2843cccab1179085edb2c.tar.gz",
+      "hash": "1qr4smg7zrhmxi4i3v89vp099wmmgjxy30gxadcy4d0q0lmw8fc8"
     },
     "nix-index-database": {
       "type": "Git",
@@ -109,9 +109,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "9b144dc3ef6e42b888c4190e02746aab13b0e97f",
-      "url": "https://github.com/nix-community/nix-index-database/archive/9b144dc3ef6e42b888c4190e02746aab13b0e97f.tar.gz",
-      "hash": "1fdlf3zb53ynv8wxfx3fjf7sz83in49nj9370x6q1gh7plvv00r3"
+      "revision": "050a5feb5d1bb5b6e5fc04a7d3d816923a87c9ea",
+      "url": "https://github.com/nix-community/nix-index-database/archive/050a5feb5d1bb5b6e5fc04a7d3d816923a87c9ea.tar.gz",
+      "hash": "17rm322w50s8fcspv9c9x9j2szdr4gbiy0477la511znfdxjjwnw"
     },
     "nix-mineral": {
       "type": "Git",
@@ -135,15 +135,15 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "11b2a10c7be726321bb854403fdeec391e798bf0",
-      "url": "https://github.com/nixos/nixos-hardware/archive/11b2a10c7be726321bb854403fdeec391e798bf0.tar.gz",
-      "hash": "0saswrdg59v4xfwfl7q61b47davz6yf58xfj707wzcip3s5zpm1y"
+      "revision": "67a709cfe5d0643dafd798b0b613ed579de8be05",
+      "url": "https://github.com/nixos/nixos-hardware/archive/67a709cfe5d0643dafd798b0b613ed579de8be05.tar.gz",
+      "hash": "1qz8j83b1zw96x9afmzjmmxccc53fpbf3s1jgnxvmaf12c9h79y3"
     },
     "nixpkgs": {
       "type": "Channel",
       "name": "nixos-unstable",
-      "url": "https://releases.nixos.org/nixos/unstable/nixos-25.11pre859555.ab0f3607a6c7/nixexprs.tar.xz",
-      "hash": "01psb74i9wban7ic8nixcvc946av9cxqpl7g2ax40cka8z0klj5i"
+      "url": "https://releases.nixos.org/nixos/unstable/nixos-25.11pre861038.c23193b943c6/nixexprs.tar.xz",
+      "hash": "0iqqv8c9cbf056fvpl8cbb61qkimnzz12lj0q964zd833vl9jv5f"
     },
     "openmw-nix": {
       "type": "Git",
