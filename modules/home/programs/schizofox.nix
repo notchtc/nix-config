@@ -27,8 +27,6 @@
         enableDefaultExtensions = false;
         enableExtraExtensions = true;
         extraExtensions = {
-          "{9a41dee2-b924-4161-a971-7fb35c053a4a}".install_url =
-            "https://addons.mozilla.org/firefox/downloads/latest/enhanced-h264ify/latest.xpi";
           "{a4c4eda4-fb84-4a84-b4a1-f7c1cbf2a1ad}".install_url =
             "https://addons.mozilla.org/firefox/downloads/latest/refined-github-/latest.xpi";
           "7esoorv3@alefvanoon.anonaddy.me".install_url =
@@ -39,6 +37,8 @@
             "https://addons.mozilla.org/firefox/downloads/latest/sponsorblock/latest.xpi";
           "uBlock0@raymondhill.net".install_url =
             "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
+          "V3-eov3cv@hotmail.com".install_url =
+            "https://addons.mozilla.org/firefox/downloads/latest/v3-get-old-youtube-layout/latest.xpi";
         };
         darkreader.enable = false;
         simplefox.enable = false;
