@@ -1,6 +1,7 @@
+{ config, ... }:
 {
   programs.bat = {
     enable = true;
-    config.pager = "less -FR";
+    config.pager = config.home.sessionVariables.PAGER;
   };
 }
