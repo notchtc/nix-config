@@ -21,7 +21,7 @@
       useTextGreeter = true;
       settings = {
         default_session = {
-          command = "${pkgs.tuigreet}/bin/tuigreet -i -t  -c ${pkgs.niri}/bin/niri-session";
+          command = "${pkgs.tuigreet}/bin/tuigreet -i -t -c ${pkgs.niri}/bin/niri-session";
           user = "greeter";
         };
         initial_session = lib.mkIf config.services.displayManager.autoLogin.enable {
