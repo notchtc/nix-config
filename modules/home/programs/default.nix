@@ -34,6 +34,7 @@ in
   ];
 
   home.packages = attrValues (mergeAttrsList [
+    { inherit (pkgs) ffmpeg; }
     (optionalAttrs cfg.profiles.graphical.enable {
       inherit (pkgs)
         gimp3
