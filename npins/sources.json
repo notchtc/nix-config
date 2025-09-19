@@ -38,9 +38,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "11cc5449c50e0e5b785be3dfcb88245232633eb8",
-      "url": "https://github.com/nix-community/home-manager/archive/11cc5449c50e0e5b785be3dfcb88245232633eb8.tar.gz",
-      "hash": "0dpmv7mmyd3lqgv7cj95dwv4kwa8z8rqm9rvr1hfjbhpx1lpmz9j"
+      "revision": "e38751933802481b37fee1f9251cbb86e63df381",
+      "url": "https://github.com/nix-community/home-manager/archive/e38751933802481b37fee1f9251cbb86e63df381.tar.gz",
+      "hash": "00mlslh5xj14hmfc8cafqqac3ar1m15lq3b8wi6j2ddspkn8xg5r"
     },
     "nilla": {
       "type": "GitRelease",
@@ -96,9 +96,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "1da07fd6a9d44a7875d2843cccab1179085edb2c",
-      "url": "https://github.com/sodiboo/niri-flake/archive/1da07fd6a9d44a7875d2843cccab1179085edb2c.tar.gz",
-      "hash": "1qr4smg7zrhmxi4i3v89vp099wmmgjxy30gxadcy4d0q0lmw8fc8"
+      "revision": "4c695faeb785e9b735bf35ed8039580c36e722d0",
+      "url": "https://github.com/sodiboo/niri-flake/archive/4c695faeb785e9b735bf35ed8039580c36e722d0.tar.gz",
+      "hash": "0lbz5076hqyn7k3qq6j9nbdv256y03z0iby8njb9yx87wr2rs77j"
     },
     "nix-index-database": {
       "type": "Git",
@@ -142,8 +142,8 @@
     "nixpkgs": {
       "type": "Channel",
       "name": "nixos-unstable",
-      "url": "https://releases.nixos.org/nixos/unstable/nixos-25.11pre861038.c23193b943c6/nixexprs.tar.xz",
-      "hash": "0iqqv8c9cbf056fvpl8cbb61qkimnzz12lj0q964zd833vl9jv5f"
+      "url": "https://releases.nixos.org/nixos/unstable/nixos-25.11pre863594.0147c2f1d54b/nixexprs.tar.xz",
+      "hash": "1zm8xf0g0i2byxhvc7rbg9fa5dbqv9cca5zbpvk1gqapj9jivvif"
     },
     "openmw-nix": {
       "type": "Git",
@@ -155,9 +155,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "6474b758bcb4375da66f2138b1eafec98daf4bc4",
-      "url": "https://codeberg.org/PopeRigby/openmw-nix/archive/6474b758bcb4375da66f2138b1eafec98daf4bc4.tar.gz",
-      "hash": "10a7q40sinama3d148gclhn9mn240qm0fd8r3jgfk13n1w2540sf"
+      "revision": "8f4e1c66c5671584cb4c204ff56713a92c786aea",
+      "url": "https://codeberg.org/PopeRigby/openmw-nix/archive/8f4e1c66c5671584cb4c204ff56713a92c786aea.tar.gz",
+      "hash": "1a77rrh75x9ga0s62d9fkzfllnssaq8krmixiin5m2b9my9d1zgm"
     },
     "preservation": {
       "type": "Git",
@@ -194,9 +194,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "834a743c11d66ea18e8c54872fbcc72ce48bc57f",
-      "url": "https://github.com/nix-community/stylix/archive/834a743c11d66ea18e8c54872fbcc72ce48bc57f.tar.gz",
-      "hash": "1hrijc04sg8pkp4q6k9fac1p1vj10qj0afv7yqa879828hads32p"
+      "revision": "0ce0103b498bb22f899ed8862d8d7f9503ed9cdb",
+      "url": "https://github.com/nix-community/stylix/archive/0ce0103b498bb22f899ed8862d8d7f9503ed9cdb.tar.gz",
+      "hash": "1cdaccr32la31s2h07icvinc12nizv0w6f84nfx9iah2pflvnibz"
     }
   },
   "version": 5
