@@ -1,6 +1,7 @@
 { config, lib, ... }:
 let
   pins = import ./npins;
+  pkgs = import pins.nixpkgs { };
 
   loaders = {
     agenix = "raw";
@@ -22,11 +23,11 @@ in
 {
   config.inputs =
     builtins.mapAttrs (name: pin: {
-      src = pin;
+      src = if name == "nixpkgs" then pin else pin { inherit pkgs; };
 
       loader = loaders.${name} or (lib.modules.when false { });
       settings = settings.${name} or (lib.modules.when false { });
-    }) pins
+    }) (builtins.removeAttrs pins [ "__functor" ])
     // {
       nixpkgs-flake = {
         inherit (config.inputs.nixpkgs) src;
