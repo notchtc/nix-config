@@ -1,12 +1,12 @@
 {
   config,
-  inputs,
   lib,
   pkgs,
+  project,
   ...
 }:
 {
-  imports = [ inputs.stylix.result.nixosModules.stylix ];
+  imports = [ project.inputs.stylix.result.nixosModules.stylix ];
   config = lib.mkIf config.mama.profiles.graphical.enable {
     stylix = {
       enable = true;

@@ -1,7 +1,7 @@
 {
   config,
-  inputs,
   lib,
+  project,
   ...
 }:
 let
@@ -9,7 +9,7 @@ let
   cfg = config.mama.profiles;
 in
 {
-  imports = [ "${inputs.nix-mineral.result}/nix-mineral.nix" ];
+  imports = [ "${project.inputs.nix-mineral.result}/nix-mineral.nix" ];
 
   nix-mineral = {
     enable = true;

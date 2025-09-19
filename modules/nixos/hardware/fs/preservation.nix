@@ -1,7 +1,7 @@
 {
-  inputs,
   config,
   lib,
+  project,
   ...
 }:
 let
@@ -9,7 +9,7 @@ let
   cfg = config.mama.system.ephemeral;
 in
 {
-  imports = [ "${inputs.preservation.result}/module.nix" ];
+  imports = [ "${project.inputs.preservation.result}/module.nix" ];
 
   options.mama.system.ephemeral = {
     enable = mkEnableOption ''

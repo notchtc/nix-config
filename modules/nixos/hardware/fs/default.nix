@@ -1,12 +1,12 @@
 {
   config,
   lib,
-  inputs,
+  project,
   ...
 }:
 {
   imports = [
-    inputs.disko.result.nixosModules.disko
+    project.inputs.disko.result.nixosModules.disko
     ./preservation.nix
   ];
 

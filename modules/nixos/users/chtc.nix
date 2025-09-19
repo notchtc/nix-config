@@ -1,11 +1,11 @@
 {
-  inputs,
   config,
   lib,
+  project,
   ...
 }:
 {
-  imports = [ "${inputs.agenix.result}/modules/age.nix" ];
+  imports = [ "${project.inputs.agenix.result}/modules/age.nix" ];
   age.secrets.chtc-password.file = ../../../secrets/chtc-password.age;
 
   users.users.chtc = {

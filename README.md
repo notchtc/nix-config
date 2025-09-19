@@ -10,7 +10,7 @@ This repository contains my configuration for NixOS and other software that I us
 > [!IMPORTANT]
 > As this is my personal configuration, not everything may work for you and you'll also want to change something. You're better off creating your own configuration.
 
-NixOS configuration using [nilla](https://github.com/nilla-nix/nilla), [nilla-utils](https://github.com/arnarg/nilla-utils) and [home-manager](https://github.com/nix-community/home-manager).
+NixOS configuration using [nilla](https://github.com/nilla-nix/nilla) and [home-manager](https://github.com/nix-community/home-manager).
 
 Other projects used:
 - [agenix](https://github.com/ryantm/agenix)

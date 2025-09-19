@@ -1,14 +1,14 @@
 {
   config,
-  inputs,
   lib,
   pkgs,
+  project,
   ...
 }:
 {
-  imports = [ inputs.niri.result.nixosModules.niri ];
+  imports = [ project.inputs.niri.result.nixosModules.niri ];
   config = lib.mkIf config.mama.desktops.niri.enable {
-    nixpkgs.overlays = [ inputs.niri.result.overlays.niri ];
+    nixpkgs.overlays = [ project.inputs.niri.result.overlays.niri ];
     environment.systemPackages = lib.attrValues { inherit (pkgs) libnotify libsecret wl-clipboard; };
 
     programs.niri = {

@@ -1,12 +1,5 @@
-{ inputs, ... }:
 {
-  imports = [
-    "${inputs.nixos-hardware.result}/common/cpu/intel/skylake"
-    "${inputs.nixos-hardware.result}/common/gpu/amd"
-    "${inputs.nixos-hardware.result}/common/pc/laptop"
-
-    ./disko.nix
-  ];
+  imports = [ ./disko.nix ];
 
   mama = {
     profiles = {
@@ -35,6 +28,6 @@
     displayManager.autoLogin.user = "chtc";
   };
 
-  nixpkgs.hostPlatform = "x86_64-linux";
+  networking.hostName = "dorothy";
   system.stateVersion = "25.11";
 }

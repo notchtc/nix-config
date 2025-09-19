@@ -1,12 +1,12 @@
-{ inputs, ... }:
+{ project, ... }:
 {
-  imports = [ inputs.home-manager.result.nixosModules.default ];
+  imports = [ project.inputs.home-manager.result.nixosModules.default ];
 
   home-manager = {
     backupFileExtension = "backup";
     useGlobalPkgs = true;
     useUserPackages = true;
-    extraSpecialArgs = { inherit inputs; };
+    extraSpecialArgs = { inherit (project) inputs; };
 
     sharedModules = [ ../home ];
   };
