@@ -158,6 +158,19 @@
       "url": "https://releases.nixos.org/nixos/unstable/nixos-25.11pre863594.0147c2f1d54b/nixexprs.tar.xz",
       "hash": "1zm8xf0g0i2byxhvc7rbg9fa5dbqv9cca5zbpvk1gqapj9jivvif"
     },
+    "npins": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "andir",
+        "repo": "npins"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "208112c6c3b6c9ac38ffcde2bcfb6d8309e02cf5",
+      "url": "https://github.com/andir/npins/archive/208112c6c3b6c9ac38ffcde2bcfb6d8309e02cf5.tar.gz",
+      "hash": "198i6wa98x6r4zv5idbpfjprshykrdkh5jwpph0dakj8mapf4z48"
+    },
     "openmw-nix": {
       "type": "Git",
       "repository": {
