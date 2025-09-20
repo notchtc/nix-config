@@ -1,5 +1,10 @@
 { config, ... }:
 {
+  imports = [
+    ./associations.nix
+    ./desktopEntries.nix
+  ];
+
   xdg = {
     enable = true;
     cacheHome = "${config.home.homeDirectory}/.cache";
@@ -32,7 +37,8 @@
   home = {
     file = {
       ".gtkrc-2.0".enable = false;
-      ".icons".enable = false;
+      ".icons/default/index.theme".enable = false;
+      ".icons/${config.home.pointerCursor.name}".enable = false;
     };
 
     sessionVariables = {
