@@ -20,13 +20,17 @@
     nixPath = [ "/etc/nix/inputs" ];
 
     settings = {
-      use-xdg-base-directories = true;
+      min-free = 5 * 1024 * 1024 * 1024;
+      max-free = 20 * 1024 * 1024 * 1024;
+
       accept-flake-config = false;
       auto-optimise-store = true;
       keep-going = true;
+      max-jobs = "auto";
       sandbox = true;
       use-cgroups = true;
-      max-jobs = "auto";
+      use-xdg-base-directories = true;
+      warn-dirty = false;
 
       allowed-users = [ "@wheel" ];
       trusted-users = [ "@wheel" ];
