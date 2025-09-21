@@ -15,6 +15,8 @@
       "dev.tty.legacy_tiocsti" = 0;
     };
 
+    kexec.enable = false;
+
     blacklistedKernelModules = [
       # Obscure network protocols
       "dccp" # Datagram Congestion Control Protocol
