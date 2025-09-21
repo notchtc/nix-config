@@ -22,17 +22,10 @@
     }
   '';
 
-  services = {
-    btrfs.autoScrub = {
-      enable = true;
-      interval = "weekly";
-      fileSystems = [ "/" ];
-    };
-
-    fstrim = {
-      enable = true;
-      interval = "weekly";
-    };
+  services.btrfs.autoScrub = {
+    enable = true;
+    interval = "weekly";
+    fileSystems = [ "/" ];
   };
 
   systemd.services.fstrim = {
