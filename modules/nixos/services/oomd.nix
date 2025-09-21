@@ -1,7 +1,12 @@
 { lib, config, ... }:
 {
   systemd = {
-    oomd.extraConfig.DefaultMemoryPressureDurationSec = "20s";
+    oomd = {
+      enableRootSlice = true;
+      enableSystemSlice = true;
+      enableUserSlices = true;
+      extraConfig.DefaultMemoryPressureDurationSec = "20s";
+    };
     services.nix-daemon.serviceConfig.OOMScoreAdjust = 350;
   };
 
