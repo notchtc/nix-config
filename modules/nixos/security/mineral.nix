@@ -33,7 +33,6 @@ in
       };
       software-choice = {
         doas-no-sudo = true;
-        secure-chrony = true;
       };
     };
   };

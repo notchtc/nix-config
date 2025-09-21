@@ -7,6 +7,5 @@
     ./paths.nix
     ./shell.nix
   ];
-
   system.etc.overlay.enable = true;
 }
