@@ -24,8 +24,11 @@
     ];
   };
 
-  systemd.services = {
-    systemd-networkd.stopIfChanged = false;
-    systemd-resolved.stopIfChanged = false;
+  systemd = {
+    network.wait-online.enable = false;
+    services = {
+      systemd-networkd.stopIfChanged = false;
+      systemd-resolved.stopIfChanged = false;
+    };
   };
 }
