@@ -2,6 +2,7 @@
 {
   imports = [ ./loader.nix ];
 
+  system.nixos-init.enable = true;
   boot = {
     kernelPackages =
       if config.mama.profiles.graphical.enable then
