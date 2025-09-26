@@ -10,4 +10,4 @@ jobs:
         - uses: actions/checkout@v5
         - uses: samueldr/lix-gha-installer-action@latest
         - name: "Statix"
-          run: nix run nixpkgs#statix check -i npins
+          run: nix run nixpkgs#statix -- check -i npins
