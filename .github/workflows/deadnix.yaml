@@ -1,0 +1,13 @@
+name: "Deadnix"
+on:
+  push:
+  pull_request:
+
+jobs:
+  deadnix:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v5
+        - uses: samueldr/lix-gha-installer-action@latest
+        - name: "Statix"
+          run: nix run nixpkgs#deadnix -- --exclude npins -f
