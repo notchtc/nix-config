@@ -46,6 +46,11 @@ in
         ++ cfg.extraDirectories;
 
         files = cfg.extraFiles;
+
+        commonMountOptions = [
+          "x-gvfs-hide"
+          "x-gdu.hide"
+        ];
       };
     };
 
@@ -58,6 +63,8 @@ in
       "/persist".neededForBoot = true;
       "/var/log".neededForBoot = true;
     };
+
+    environment.etc."NetworkManager/system-connections/.empty".text = "";
 
     boot.initrd.systemd.services.rollback = {
       description = "Rollback BTRFS root subvolume to a pristine state";
