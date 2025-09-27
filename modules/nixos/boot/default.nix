@@ -56,4 +56,14 @@
       tmpfsHugeMemoryPages = "within_size";
     };
   };
+
+  systemd.package = pkgs.systemd.overrideAttrs (prevAttrs: {
+    patches = (prevAttrs.patches or [ ]) ++ [
+      (pkgs.fetchpatch2 {
+        name = "dot.diff";
+        url = "https://github.com/systemd/systemd/commit/e82aae6ac01e8461ab5b2500c3a38a92ef24621e.diff?full_index=1";
+        hash = "sha256-pEuag/7iSvsqjDIYMiXU+5hvr+5Xmrp7Bknt4XUIFpc=";
+      })
+    ];
+  });
 }
