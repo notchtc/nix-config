@@ -1,7 +1,7 @@
 {
   imports = [
+    ./appimage.nix
     ./bash.nix
-    ./runners.nix
     ./zsh.nix
   ];
 
