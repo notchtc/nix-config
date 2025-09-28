@@ -1,5 +1,5 @@
 {
-  system ? builtins.throw "No platform provided",
+  system ? throw "No platform provided",
   ...
 }:
 {

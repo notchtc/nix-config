@@ -58,7 +58,7 @@
       value.source =
         if
           (lib.strings.isStringLike value.result)
-          && (lib.strings.hasPrefix builtins.storeDir (builtins.toString value.result))
+          && (lib.strings.hasPrefix builtins.storeDir (toString value.result))
         then
           builtins.storePath value.result
         else

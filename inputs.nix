@@ -27,7 +27,7 @@ in
 
       loader = loaders.${name} or (lib.modules.when false { });
       settings = settings.${name} or (lib.modules.when false { });
-    }) (builtins.removeAttrs pins [ "__functor" ])
+    }) (removeAttrs pins [ "__functor" ])
     // {
       nixpkgs-flake = {
         inherit (config.inputs.nixpkgs) src;
