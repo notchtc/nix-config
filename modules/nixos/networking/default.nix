@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, lib, ... }:
 {
   imports = [
     ./blocking.nix
@@ -12,7 +12,7 @@
     hostId = builtins.substring 0 8 (builtins.hashString "md5" config.networking.hostName);
 
     useDHCP = false;
-    useNetworkd = true;
+    useNetworkd = lib.mkIf config.mama.profiles.server.enable true;
 
     nftables.enable = true;
 
