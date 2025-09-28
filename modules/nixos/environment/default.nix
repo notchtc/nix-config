@@ -8,4 +8,6 @@
     ./paths.nix
     ./shell.nix
   ];
+
+  environment.stub-ld.enable = false;
 }
