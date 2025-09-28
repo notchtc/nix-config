@@ -14,6 +14,8 @@
         d = [ "describe" ];
         df = [ "diff" ];
         l = [ "log" ];
+        n = [ "new" ];
+        s = [ "squash" ];
         gp = [
           "git"
           "push"
