@@ -38,9 +38,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "39d26c16866260eee6d0487fe9c102ba1c1bf7b2",
-      "url": "https://github.com/nix-community/home-manager/archive/39d26c16866260eee6d0487fe9c102ba1c1bf7b2.tar.gz",
-      "hash": "sha256-bpWoE1tiFX5T1tr5EudkpW9Kk02XR+6olkoSkf3nHZU="
+      "revision": "c75fd8e300b79502b8eecdacd8a426b12fadb460",
+      "url": "https://github.com/nix-community/home-manager/archive/c75fd8e300b79502b8eecdacd8a426b12fadb460.tar.gz",
+      "hash": "sha256-Efi3THvsIS6Qd97s52/PSSHWybDlSbtUZXP8l3AR9Ps="
     },
     "nilla": {
       "type": "GitRelease",
@@ -207,9 +207,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "484819a16fdc1c76cdd62d8e94018db44e5e1a8b",
-      "url": "https://github.com/nix-community/stylix/archive/484819a16fdc1c76cdd62d8e94018db44e5e1a8b.tar.gz",
-      "hash": "sha256-2zC4aHoDsR12Jyd6WvSxmQbAKT4V93frnHHDjA8o3r8="
+      "revision": "5b9710eee988370885ef2177558ba573d2773c50",
+      "url": "https://github.com/nix-community/stylix/archive/5b9710eee988370885ef2177558ba573d2773c50.tar.gz",
+      "hash": "sha256-cnYj2r1DlNCghX0GXpwhNkXKpqVTZhssbRuaHuInU4g="
     }
   },
   "version": 6
