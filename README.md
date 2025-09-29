@@ -14,7 +14,6 @@ NixOS configuration using [nilla](https://github.com/nilla-nix/nilla) and [home-
 
 Other projects used:
 - [agenix](https://github.com/ryantm/agenix)
-- [disko](https://github.com/nix-community/disko)
 - [lix](https://git.lix.systems/lix-project/nixos-module)
 - [niri-flake](https://github.com/sodiboo/niri-flake)
 - [nix-index-database](https://github.com/Mic92/nix-index-database)

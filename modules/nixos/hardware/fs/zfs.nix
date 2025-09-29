@@ -1,0 +1,22 @@
+{ config, lib, ... }:
+{
+  boot.supportedFilesystems = [ "zfs" ];
+
+  services = {
+    zfs = {
+      autoScrub.enable = true;
+
+      autoSnapshot = {
+        enable = true;
+        flags = "-kpu";
+        monthly = 2;
+      };
+    };
+  };
+
+  fileSystems = lib.genAttrs [ "/persist" "/nix" "/var/log" "/var/lib" ] (fs: {
+    device = "${config.networking.hostName}/NixOS${lib.optionalString (fs != "/") fs}";
+    fsType = "zfs";
+    options = [ "zfsutil" ];
+  });
+}

@@ -5,7 +5,7 @@
   ...
 }:
 let
-  inherit (lib) mkIf mkForce optionalAttrs;
+  inherit (lib) mkIf optionalAttrs;
   cfg = config.mama.profiles;
 in
 {
@@ -21,7 +21,7 @@ in
       // optionalAttrs cfg.graphical.enable {
         allow-multilib = true;
         hideproc-off = true;
-        #home-exec = true;
+        home-exec = true;
         skip-restrict-home-permission = true;
         tmp-exec = true;
       };
@@ -35,17 +35,5 @@ in
         doas-no-sudo = true;
       };
     };
-  };
-
-  fileSystems."/home" = {
-    device = mkForce "/dev/pool/root";
-    options = mkForce [
-      "subvol=/home"
-      "compress=zstd"
-      "noatime"
-      "exec"
-      "nosuid"
-      "nodev"
-    ];
   };
 }

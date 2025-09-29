@@ -35,15 +35,7 @@ in
     preservation = {
       enable = true;
       preserveAt."/persist" = {
-        directories = [
-          "/etc/NetworkManager/system-connections"
-          "/var/lib/bluetooth"
-          {
-            directory = "/var/lib/nixos";
-            inInitrd = true;
-          }
-        ]
-        ++ cfg.extraDirectories;
+        directories = [ "/etc/NetworkManager/system-connections" ] ++ cfg.extraDirectories;
 
         files = cfg.extraFiles;
 
@@ -62,30 +54,6 @@ in
     fileSystems = {
       "/persist".neededForBoot = true;
       "/var/log".neededForBoot = true;
-    };
-
-    environment.etc."NetworkManager/system-connections/.empty".text = "";
-
-    boot.initrd.systemd.services.rollback = {
-      description = "Rollback BTRFS root subvolume to a pristine state";
-      wantedBy = [ "initrd.target" ];
-
-      requires = [ "dev-mapper-pool\\x2droot.device" ];
-      after = [ "dev-mapper-pool\\x2droot.device" ];
-
-      before = [ "sysroot.mount" ];
-
-      unitConfig.DefaultDependencies = "no";
-      serviceConfig.Type = "oneshot";
-      script = ''
-        MNTPOINT=$(mktemp -d)
-
-        mount -t btrfs -o subvol=/ /dev/mapper/pool-root "$MNTPOINT"
-        trap 'umount "$MNTPOINT"; rm -rf "$MNTPOINT"' EXIT
-
-        btrfs subvolume delete -R "$MNTPOINT/root"
-        btrfs subvolume snapshot "$MNTPOINT/root-blank" "$MNTPOINT/root"
-      '';
     };
   };
 }

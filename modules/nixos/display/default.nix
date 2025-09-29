@@ -2,13 +2,14 @@
 {
   imports = [
     ./environment.nix
+    ./cosmic.nix
     ./fonts.nix
     ./gnome.nix
-    ./niri.nix
     ./stylix.nix
   ];
 
   config = lib.mkIf config.mama.profiles.graphical.enable {
+    boot.plymouth.enable = true;
     services = {
       gvfs.enable = true;
       udisks2.enable = true;

@@ -1,5 +1,6 @@
-{ config, lib, ... }:
+{ lib, ... }:
 let
+  inherit (lib) genAttrs;
   browser = [
     "application/json"
     "application/x-extension-htm"
@@ -33,14 +34,14 @@ let
   video = [ "video/*" ];
 
   associations =
-    (lib.genAttrs browser (_: [ "Schizofox.desktop" ]))
-    // (lib.genAttrs audio (_: [ "org.strawberrymusicplayer.strawberry.desktop" ]))
-    // (lib.genAttrs image (_: [
-      "${if config.mama.desktops.gnome.enable then "org.gnome.Loupe" else "swayimg"}.desktop"
+    (genAttrs browser (_: [ "Schizofox.desktop" ]))
+    // (genAttrs audio (_: [ "org.strawberrymusicplayer.strawberry.desktop" ]))
+    // (genAttrs image (_: [
+      "org.gnome.Loupe.desktop"
     ]))
-    // (lib.genAttrs text (_: [ "Helix.desktop" ]))
-    // lib.genAttrs video (_: [ "mpv.desktop" ])
-    // lib.genAttrs torrent (_: [ "org.qbittorrent.qBittorrent.desktop" ])
+    // (genAttrs text (_: [ "Helix.desktop" ]))
+    // genAttrs video (_: [ "mpv.desktop" ])
+    // genAttrs torrent (_: [ "org.qbittorrent.qBittorrent.desktop" ])
     // {
       "application/pdf" = [ "org.gnome.Papers.desktop" ];
       "x-scheme-handler/discord" = [ "vesktop.desktop" ];

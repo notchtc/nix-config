@@ -27,12 +27,12 @@
         enableDefaultExtensions = false;
         enableExtraExtensions = true;
         extraExtensions = {
+          "{1be309c5-3e4f-4b99-927d-bb500eb4fa88}".install_url =
+            "https://addons.mozilla.org/firefox/downloads/latest/augmented-steam/latest.xpi";
           "{a4c4eda4-fb84-4a84-b4a1-f7c1cbf2a1ad}".install_url =
             "https://addons.mozilla.org/firefox/downloads/latest/refined-github-/latest.xpi";
           "7esoorv3@alefvanoon.anonaddy.me".install_url =
             "https://addons.mozilla.org/firefox/downloads/latest/libredirect/latest.xpi";
-          "skipredirect@sblask".install_url =
-            "https://addons.mozilla.org/firefox/downloads/latest/skip-redirect/latest.xpi";
           "sponsorBlocker@ajay.app".install_url =
             "https://addons.mozilla.org/firefox/downloads/latest/sponsorblock/latest.xpi";
           "uBlock0@raymondhill.net".install_url =

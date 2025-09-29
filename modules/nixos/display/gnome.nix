@@ -12,16 +12,7 @@
     };
 
     environment = {
-      sessionVariables.QT_WAYLAND_DECORATION = "adwaita";
-
-      systemPackages = lib.attrValues {
-        inherit (pkgs)
-          ffmpegthumbnailer
-          gnome-tweaks
-          qadwaitadecorations
-          qadwaitadecorations-qt5
-          ;
-      };
+      systemPackages = lib.attrValues { inherit (pkgs) ffmpegthumbnailer gnome-tweaks; };
 
       gnome.excludePackages = lib.attrValues {
         inherit (pkgs)

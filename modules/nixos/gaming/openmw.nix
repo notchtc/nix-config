@@ -10,7 +10,7 @@
   config = lib.mkIf config.mama.programs.gaming.openmw.enable {
     environment.systemPackages = lib.attrValues {
       inherit (project.inputs.openmw-nix.result.packages.${system})
-        #        delta-plugin
+        delta-plugin
         momw-configurator
         openmw-validator
         s3lightfixes

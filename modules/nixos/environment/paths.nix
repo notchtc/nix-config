@@ -4,6 +4,5 @@
     "/share/zsh"
 
     "/share/applications"
-    "/share/xdg-desktop-portal"
   ];
 }

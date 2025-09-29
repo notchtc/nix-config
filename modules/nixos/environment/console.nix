@@ -2,7 +2,7 @@
 {
   console = {
     earlySetup = true;
-    font = "${pkgs.terminus_font}/share/consolefonts/ter-v18n.psf.gz";
+    font = "${pkgs.terminus_font}/share/consolefonts/ter-v24n.psf.gz";
     keyMap = "pl";
   };
 }

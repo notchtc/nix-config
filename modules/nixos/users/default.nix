@@ -1,6 +1,16 @@
-{ pkgs, ... }:
 {
-  imports = [ ./chtc.nix ];
+  config,
+  lib,
+  pkgs,
+  project,
+  ...
+}:
+{
+  imports = [
+    "${project.inputs.agenix.result}/modules/age.nix"
+    ./chtc.nix
+  ];
+  age.secrets.chtc-password.file = ../../../secrets/chtc-password.age;
 
   users = {
     mutableUsers = false;
@@ -9,6 +19,6 @@
 
   services.userborn = {
     enable = true;
-    passwordFilesLocation = "/persist/etc";
+    passwordFilesLocation = lib.mkIf config.mama.system.ephemeral.enable "/persist/etc/";
   };
 }

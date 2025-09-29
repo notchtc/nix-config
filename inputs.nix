@@ -4,14 +4,12 @@ let
   pkgs = import pins.nixpkgs { };
 
   loaders = {
-    agenix = "raw";
     nixos-hardware = "raw";
     preservation = "raw";
   };
 
   settings = {
     nixpkgs.configuration.allowUnfree = true;
-    disko.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
     home-manager.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
     nix-index-database.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
     niri.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;

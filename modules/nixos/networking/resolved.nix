@@ -1,7 +1,7 @@
 {
   services.resolved = {
     enable = true;
-    dnsovertls = "true";
+    dnsovertls = "opportunistic";
     dnssec = "false";
     llmnr = "false";
     fallbackDns = [ "9.9.9.9" ];

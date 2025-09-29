@@ -5,24 +5,16 @@
   ...
 }:
 let
-  inherit (lib)
-    attrValues
-    mkIf
-    mergeAttrsList
-    optionalAttrs
-    ;
+  inherit (lib) attrValues mergeAttrsList optionalAttrs;
   cfg = config.mama;
 in
 {
   imports = [
     ./bat.nix
-    ./waybar.nix
     ./foot.nix
     ./ghostty.nix
     ./mpv.nix
     ./schizofox.nix
-    ./fuzzel.nix
-    ./hyprlock.nix
     ./vesktop.nix
     ./zsh.nix
     ./nix-index.nix
@@ -48,8 +40,6 @@ in
         telegram-desktop
         ;
     })
-
-    (optionalAttrs cfg.desktops.niri.enable { inherit (pkgs) file-roller pcmanfm; })
   ]);
 
   programs = {
@@ -61,6 +51,5 @@ in
   // optionalAttrs cfg.profiles.graphical.enable {
     foliate.enable = true;
     keepassxc.enable = true;
-    swayimg.enable = mkIf cfg.desktops.niri.enable true;
   };
 }

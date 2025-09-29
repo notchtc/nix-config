@@ -15,7 +15,7 @@
     package = pkgs.lixPackageSets.git.lix;
 
     channel.enable = false;
-    daemonCPUSchedPolicy = lib.mkIf config.mama.profiles.graphical.enable "idle";
+
     optimise.automatic = true;
     nixPath = [ "/etc/nix/inputs" ];
 
@@ -49,6 +49,11 @@
       dates = "weekly";
       options = "--delete-older-than 7d";
     };
+  }
+  // lib.optionalAttrs config.mama.profiles.graphical.enable {
+    daemonCPUSchedPolicy = "idle";
+    daemonIOSchedClass = "idle";
+    daemonIOSchedPriority = 7;
   };
 
   environment = {

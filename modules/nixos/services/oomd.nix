@@ -17,9 +17,9 @@
     extraArgs = [
       "-g"
       "--avoid"
-      "'^(niri|foot|hx|cryptsetup|dbus-.*|Xwayland|systemd|systemd-.*|ssh-agent|greetd)$'"
+      "'^(foot|ghostty|hx|dbus-.*|Xwayland|systemd|systemd-.*|ssh-agent|sshd|zsh)$'"
       "--prefer"
-      "'^(Web Content|Isolated Web Co|firefox.*|electron|nix|.*.exe|pipewire(.*))$'"
+      "'^(Web Content|Isolated Web Co|firefox.*|electron|nix|.*.exe|pipewire(.*))$|chrom(e|ium).*'"
     ];
   };
 }

@@ -8,7 +8,6 @@
     };
     desktops.niri.enable = true;
     programs.gaming.enable = true;
-    system.ephemeral.enable = true;
   };
 
   home-manager.users.chtc = {

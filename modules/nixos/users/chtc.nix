@@ -1,13 +1,5 @@
+{ config, lib, ... }:
 {
-  config,
-  lib,
-  project,
-  ...
-}:
-{
-  imports = [ "${project.inputs.agenix.result}/modules/age.nix" ];
-  age.secrets.chtc-password.file = ../../../secrets/chtc-password.age;
-
   users.users.chtc = {
     isNormalUser = true;
     hashedPasswordFile = config.age.secrets.chtc-password.path;

@@ -11,8 +11,7 @@
     systemPackages = lib.attrValues {
       inherit (pkgs)
         busybox
-        gitMinimal
-        ragenix
+        git
         uutils-coreutils-noprefix
         ;
 
