@@ -1,7 +1,6 @@
 { config, lib, ... }:
 {
   imports = [
-    ./environment.nix
     ./cosmic.nix
     ./fonts.nix
     ./gnome.nix
@@ -10,6 +9,7 @@
 
   config = lib.mkIf config.mama.profiles.graphical.enable {
     boot.plymouth.enable = true;
+    environment.sessionVariables.NIXOS_OZONE_WL = "1";
     services = {
       gvfs.enable = true;
       udisks2.enable = true;
