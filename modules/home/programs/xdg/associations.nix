@@ -17,9 +17,28 @@ let
     "x-scheme-handler/unknown"
   ];
 
-  audio = [ "audio/*" ];
+  audio = [
+    "audio/aac"
+    "audio/flac"
+    "audio/mpeg"
+    "audio/ogg"
+    "audio/opus"
+    "audio/wav"
+    "audio-x-ms-wma"
+  ];
 
-  image = [ "image/*" ];
+  image = [
+    "image/avif"
+    "image/bmp"
+    "image/gif"
+    "image/heic"
+    "image/jpeg"
+    "image/png"
+    "image/svg+xml"
+    "image/tiff"
+    "image/webp"
+    "image/x-icon"
+  ];
 
   text = [
     "text/csv"
@@ -31,14 +50,20 @@ let
     "x-scheme-handler/x-bittorrent"
   ];
 
-  video = [ "video/*" ];
+  video = [
+    "video/mp4"
+    "video/ogg"
+    "video/quicktime"
+    "video/webm"
+    "video/x-matroska"
+    "video/x-msvideo"
+    "video/x-ms-wmv"
+  ];
 
   associations =
     (genAttrs browser (_: [ "Schizofox.desktop" ]))
     // (genAttrs audio (_: [ "org.strawberrymusicplayer.strawberry.desktop" ]))
-    // (genAttrs image (_: [
-      "org.gnome.Loupe.desktop"
-    ]))
+    // (genAttrs image (_: [ "org.gnome.Loupe.desktop" ]))
     // (genAttrs text (_: [ "Helix.desktop" ]))
     // genAttrs video (_: [ "mpv.desktop" ])
     // genAttrs torrent (_: [ "org.qbittorrent.qBittorrent.desktop" ])
