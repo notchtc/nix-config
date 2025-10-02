@@ -44,6 +44,7 @@
     sessionVariables = {
       _JAVA_OPTIONS = "-Djava.util.prefs.userRoot=${config.xdg.configHome}/java";
       ANDROID_USER_HOME = "${config.xdg.dataHome}/android";
+      CUDA_CACHE_PATH = "${config.xdg.cacheHome}/nv";
       DVDCSS_CACHE = "${config.xdg.dataHome}/dvdcss";
       GNUPGHOME = "${config.xdg.dataHome}/gnupg";
       LESSHISTFILE = "${config.xdg.dataHome}/lesshst";
