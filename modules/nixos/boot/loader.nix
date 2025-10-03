@@ -4,15 +4,17 @@
     Enable secure boot in Limine
   '';
 
-  boot.loader = {
-    limine = {
-      enable = true;
-      efiSupport = true;
-      enableEditor = false;
-      maxGenerations = 10;
-      secureBoot.enable = lib.mkIf config.mama.system.secure-boot.enable true;
-    };
+  config = {
+    boot.loader = {
+      limine = {
+        enable = true;
+        efiSupport = true;
+        enableEditor = false;
+        maxGenerations = 10;
+        secureBoot.enable = lib.mkIf config.mama.system.secure-boot.enable true;
+      };
 
-    timeout = 1;
+      timeout = 1;
+    };
   };
 }
