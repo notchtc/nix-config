@@ -59,8 +59,12 @@
           application-list = [
             "Schizofox.desktop:1"
             "org.telegram.desktop.desktop:2"
-            "vesktop.desktop:2"
+            "vesktop.desktop:3"
           ];
+        };
+
+        "org/gnome/shell/extensions/appindicator" = {
+          icon-saturation = 1.0;
         };
 
         "org/gtk/gtk4/settings/file-chooser" = {
@@ -95,9 +99,9 @@
       enable = true;
       extensions = with pkgs.gnomeExtensions; [
         { package = alphabetical-app-grid; }
+        { package = appindicator; }
         { package = auto-move-windows; }
         { package = window-is-ready-remover; }
-        { package = status-icons; }
       ];
     };
   };
