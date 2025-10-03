@@ -73,7 +73,7 @@
           sort-directories-first = true;
         };
 
-        "org/gnome/desktop/wm" = {
+        "org/gnome/desktop/wm/preferences" = {
           resize-with-right-button = true;
         };
 
@@ -84,6 +84,10 @@
         "org/gnome/settings-daemon/plugins/color" = {
           night-light-enabled = true;
           night-light-schedule-automatic = true;
+        };
+
+        "org/gnome/tweaks" = {
+          show-extensions-notice = false;
         };
       };
     };
