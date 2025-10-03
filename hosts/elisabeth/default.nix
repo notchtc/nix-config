@@ -6,7 +6,10 @@
     };
     desktops.gnome.enable = true;
     programs.gaming.enable = true;
-    system.ephemeral.enable = true;
+    system = {
+      ephemeral.enable = true;
+      secure-boot.enable = true;
+    };
   };
   home-manager.users.chtc.mama.programs.ghostty.enable = true;
 
