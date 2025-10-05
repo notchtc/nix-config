@@ -4,6 +4,7 @@
 
   home-manager = {
     backupFileExtension = "backup";
+    overwriteBackup = true;
     useGlobalPkgs = true;
     useUserPackages = true;
     extraSpecialArgs = { inherit (project) inputs; };
