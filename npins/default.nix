@@ -71,10 +71,7 @@ let
         else
           {
             fetchTarball =
-              {
-                url,
-                sha256,
-              }:
+              { url, sha256 }:
               pkgs.fetchzip {
                 inherit url sha256;
                 extension = "tar";

@@ -12,11 +12,7 @@
     };
 
     environment.cosmic.excludePackages = lib.attrValues {
-      inherit (pkgs)
-        cosmic-edit
-        cosmic-player
-        cosmic-term
-        ;
+      inherit (pkgs) cosmic-edit cosmic-player cosmic-term;
     };
   };
 }
