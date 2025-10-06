@@ -11,7 +11,7 @@
     stylix = {
       enable = true;
 
-      base16Scheme = "${pkgs.base16-schemes}/share/themes/selenized-dark.yaml";
+      base16Scheme = "${pkgs.base16-schemes}/share/themes/selenized-black.yaml";
       image = ./wallpaper.jpg;
       polarity = "dark";
 
