@@ -1,6 +1,6 @@
 { config, lib, ... }:
 let
-  pins = import ./npins;
+  pins = import ./npins { };
   pkgs = import pins.nixpkgs { };
 
   loaders = {
@@ -25,7 +25,7 @@ in
 
       loader = loaders.${name} or (lib.modules.when false { });
       settings = settings.${name} or (lib.modules.when false { });
-    }) (removeAttrs pins [ "__functor" ])
+    }) pins
     // {
       nixpkgs-flake = {
         inherit (config.inputs.nixpkgs) src;
