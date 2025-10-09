@@ -1,4 +1,7 @@
-{ config, ... }:
+{ config, pkgs, ... }:
+let
+  delta = "${pkgs.delta}/bin/delta";
+in
 {
   programs.jujutsu = {
     inherit (config.programs.git) enable;
@@ -61,17 +64,27 @@
         "format_timestamp(timestamp)" = "timestamp.ago()";
       };
 
+      diff.tool = "delta";
       ui = {
-        default-command = "status";
         editor = config.home.sessionVariables.EDITOR;
         diff-editor = ":builtin";
-        diff-formatter = [
-          "difft"
-          "--color=always"
-          "$left"
-          "$right"
+        diff-formatter = ":git";
+        pager = [
+          delta
+          "--pager"
+          "less -FRX"
         ];
       };
+
+      "--scope" = [
+        {
+          "--when".commands = [
+            "diff"
+            "show"
+          ];
+          ui.pager = delta;
+        }
+      ];
     };
   };
 }

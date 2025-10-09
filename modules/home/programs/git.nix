@@ -58,9 +58,6 @@
       rl = "reflog";
     };
 
-    difftastic = {
-      enable = true;
-      background = "dark";
-    };
+    delta.enable = true;
   };
 }
