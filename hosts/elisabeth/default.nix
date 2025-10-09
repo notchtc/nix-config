@@ -13,7 +13,10 @@
   };
   home-manager.users.chtc.mama.programs.ghostty.enable = true;
 
-  boot.kernelModules = [ "kvm-amd" ];
+  boot = {
+    kernelModules = [ "kvm-amd" ];
+    kernelParams = [ "amdgpu.sg_display=0" ];
+  };
 
   services = {
     displayManager.autoLogin.user = "chtc";
