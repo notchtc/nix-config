@@ -15,9 +15,9 @@ in
     gamescope.enable = mkEnableOption "Gamescope" // {
       default = cfg.enable;
     };
-    openmw.enable = mkEnableOption "OpenMW" // {
-      default = cfg.enable;
-    };
+    #    openmw.enable = mkEnableOption "OpenMW" // {
+    #      default = cfg.enable;
+    #    };
     lutris.enable = mkEnableOption "OpenMW" // {
       default = cfg.enable;
     };
@@ -29,7 +29,7 @@ in
   imports = [
     ./gamemode.nix
     ./gamescope.nix
-    ./openmw.nix
+    #    ./openmw.nix
     ./lutris.nix
     ./steam.nix
   ];

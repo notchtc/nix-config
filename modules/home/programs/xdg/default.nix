@@ -1,9 +1,6 @@
 { config, ... }:
 {
-  imports = [
-    ./associations.nix
-    ./desktopEntries.nix
-  ];
+  imports = [ ./associations.nix ];
 
   xdg = {
     enable = true;
