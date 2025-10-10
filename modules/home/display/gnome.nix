@@ -63,10 +63,6 @@
           ];
         };
 
-        "org/gnome/shell/extensions/appindicator" = {
-          icon-saturation = 1.0;
-        };
-
         "org/gtk/gtk4/settings/file-chooser" = {
           show-hidden = true;
           sort-directories-first = true;
