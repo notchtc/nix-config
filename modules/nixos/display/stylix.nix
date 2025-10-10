@@ -49,6 +49,8 @@
           terminal = 10;
         };
       };
+
+      targets.qt.enable = false;
     };
   };
 }
