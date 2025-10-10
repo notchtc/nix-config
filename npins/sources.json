@@ -22,9 +22,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "5f06ceafc6c9b773a776b9195c3f47bbe1defa43",
-      "url": "https://github.com/nix-community/home-manager/archive/5f06ceafc6c9b773a776b9195c3f47bbe1defa43.tar.gz",
-      "hash": "sha256-ILSPD0Dm8p0w0fCVzOx98ZH8yFDrR75GmwmH3fS2VnE="
+      "revision": "c7f4214faca2f196c551b767c12a70bfa0614510",
+      "url": "https://github.com/nix-community/home-manager/archive/c7f4214faca2f196c551b767c12a70bfa0614510.tar.gz",
+      "hash": "sha256-CeuMo7fjWm3XaoK+b1PGyaVIlE1GHudoxk9jrJFvfbY="
     },
     "nilla": {
       "type": "GitRelease",
@@ -106,15 +106,15 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "3441b5242af7577230a78ffb03542add264179ab",
-      "url": "https://github.com/nixos/nixos-hardware/archive/3441b5242af7577230a78ffb03542add264179ab.tar.gz",
-      "hash": "sha256-spZegilADH0q5OngM86u6NmXxduCNv5eX9vCiUPhOYc="
+      "revision": "156fbb62a92cbc91248aa3de960289174040cc3c",
+      "url": "https://github.com/nixos/nixos-hardware/archive/156fbb62a92cbc91248aa3de960289174040cc3c.tar.gz",
+      "hash": "sha256-2t6mYaUE5uZGga+ewkXwN2lsnuLJY1lJhPtJCagT43o="
     },
     "nixpkgs": {
       "type": "Channel",
       "name": "nixos-unstable",
-      "url": "https://releases.nixos.org/nixos/unstable/nixos-25.11pre870157.7df7ff7d8e00/nixexprs.tar.xz",
-      "hash": "sha256-1yCvOeEMQX/0WqpVtxtKFI2rlfq9W/bxOTGJtRuQv7g="
+      "url": "https://releases.nixos.org/nixos/unstable/nixos-25.11pre873798.c9b6fb798541/nixexprs.tar.xz",
+      "hash": "sha256-Dzw+6wNlteBG6go9KYZyVjpl6CkzjKzmXrneAF5mqI0="
     },
     "npins": {
       "type": "Git",
@@ -125,9 +125,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "e49bcf58d66fa7f586aff687feae72c23e429672",
-      "url": "https://github.com/andir/npins/archive/e49bcf58d66fa7f586aff687feae72c23e429672.tar.gz",
-      "hash": "sha256-ZLrVWa7WU+IUXPAd6mR7B9c6FDZSiGgW8ClfW0SxbMs="
+      "revision": "1c1ebf233c30e14ff34472c609ded8eb988753d8",
+      "url": "https://github.com/andir/npins/archive/1c1ebf233c30e14ff34472c609ded8eb988753d8.tar.gz",
+      "hash": "sha256-yCaqGejBcWoibCRj2vRrlj5uPI7lyCGS6ivCiGeKNSo="
     },
     "openmw-nix": {
       "type": "Git",
@@ -178,9 +178,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "503d989626aa41174b3a51f18528547da1afe572",
-      "url": "https://github.com/nix-community/stylix/archive/503d989626aa41174b3a51f18528547da1afe572.tar.gz",
-      "hash": "sha256-cYPdsYgZFyvpMbRg9Nbtt3JtcdjE80gXfe/65T1ELco="
+      "revision": "09022804b2bcd217f3a41a644d26b23d30375d12",
+      "url": "https://github.com/nix-community/stylix/archive/09022804b2bcd217f3a41a644d26b23d30375d12.tar.gz",
+      "hash": "sha256-Vlpa0d1xOgPO9waHwxJNi6LcD2PYqB3EjwLRtSxXlHc="
     }
   },
   "version": 6
