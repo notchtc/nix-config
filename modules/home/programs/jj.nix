@@ -67,6 +67,7 @@ in
       diff.tool = "delta";
       ui = {
         editor = config.home.sessionVariables.EDITOR;
+        default-command = "log";
         diff-editor = ":builtin";
         diff-formatter = ":git";
         pager = [
