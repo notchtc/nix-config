@@ -18,7 +18,8 @@ in
         df = [ "diff" ];
         l = [ "log" ];
         n = [ "new" ];
-        s = [ "squash" ];
+        s = [ "show" ];
+        sq = [ "squash" ];
         gp = [
           "git"
           "push"
