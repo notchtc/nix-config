@@ -5,7 +5,5 @@
   ...
 }:
 {
-  config = lib.mkIf config.mama.programs.gaming.lutris.enable {
-    environment.systemPackages = [ pkgs.lutris ];
-  };
+  environment.systemPackages = lib.mkIf config.mama.programs.gaming.lutris.enable [ pkgs.lutris ];
 }

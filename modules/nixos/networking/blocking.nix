@@ -1,12 +1,10 @@
 { config, lib, ... }:
 {
-  config = lib.mkIf (!config.mama.profiles.server.enable) {
-    networking.stevenblack = {
-      enable = true;
-      block = [
-        "fakenews"
-        "gambling"
-      ];
-    };
+  networking.stevenblack = lib.mkIf (!config.mama.profiles.server.enable) {
+    enable = true;
+    block = [
+      "fakenews"
+      "gambling"
+    ];
   };
 }
