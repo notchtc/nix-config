@@ -97,6 +97,7 @@
         { package = alphabetical-app-grid; }
         { package = appindicator; }
         { package = auto-move-windows; }
+        { package = easyeffects-preset-selector; }
         { package = window-is-ready-remover; }
       ];
     };
