@@ -29,11 +29,11 @@ in
     { inherit (pkgs) ffmpeg; }
     (optionalAttrs cfg.profiles.graphical.enable {
       inherit (pkgs)
+        cardinal
         gimp3
         nicotine-plus
         papers
         picard
-        plugdata
         pwvucontrol
         qbittorrent
         strawberry
