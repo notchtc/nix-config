@@ -1,6 +1,10 @@
 { config, lib, ... }:
 {
-  programs.gamemode = lib.mkIf config.mama.programs.gaming.gamemode.enable {
+  options.mama.profiles.gaming.gamemode.enable = lib.mkEnableOption "Gamemode" // {
+    default = config.mama.profiles.gaming.enable;
+  };
+
+  config.programs.gamemode = lib.mkIf config.mama.profiles.gaming.gamemode.enable {
     enable = true;
     settings = {
       general = {

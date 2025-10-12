@@ -5,7 +5,11 @@
   ...
 }:
 {
-  config = lib.mkIf config.mama.programs.gaming.steam.enable {
+  options.mama.profiles.gaming.steam.enable = lib.mkEnableOption "Steam" // {
+    default = config.mama.profiles.gaming.enable;
+  };
+
+  config = lib.mkIf config.mama.profiles.gaming.steam.enable {
     environment.systemPackages = [ pkgs.protonup-qt ];
 
     programs.steam = {

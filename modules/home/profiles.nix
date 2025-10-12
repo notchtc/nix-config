@@ -4,7 +4,10 @@ let
 in
 {
   mama = {
-    profiles = { inherit (cfg.profiles) graphical laptop server; };
+    profiles = {
+      inherit (cfg.profiles) graphical laptop server;
+      gaming = { inherit (cfg.profiles.gaming) enable; };
+    };
     desktops = { inherit (cfg.desktops) cosmic gnome; };
   };
 }

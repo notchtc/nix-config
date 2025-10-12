@@ -1,11 +1,11 @@
 {
   mama = {
     profiles = {
+      gaming.enable = true;
       graphical.enable = true;
       laptop.enable = true;
     };
     desktops.gnome.enable = true;
-    programs.gaming.enable = true;
     system = {
       ephemeral.enable = true;
       secure-boot.enable = true;

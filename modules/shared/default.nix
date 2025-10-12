@@ -12,6 +12,8 @@ in
       graphical.enable = mkEnableOption "Graphical environment";
       laptop.enable = mkEnableOption "Laptop";
       server.enable = mkEnableOption "Server";
+
+      gaming.enable = mkEnableOption "Gaming";
     };
   };
 }

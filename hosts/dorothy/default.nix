@@ -3,11 +3,11 @@
 
   mama = {
     profiles = {
+      gaming.enable = true;
       graphical.enable = true;
       laptop.enable = true;
     };
     desktops.niri.enable = true;
-    programs.gaming.enable = true;
   };
 
   home-manager.users.chtc = {
