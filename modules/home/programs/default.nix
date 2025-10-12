@@ -36,7 +36,7 @@ in
         picard
         pwvucontrol
         qbittorrent
-        quodlibet
+        quodlibet-full
         telegram-desktop
         tutanota-desktop
         ;
