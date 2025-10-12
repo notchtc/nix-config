@@ -19,8 +19,13 @@
 
         "toolkit.tabbox.switchByScrolling" = true;
 
-        "layers.acceleration.force-enabled" = true;
         "media.ffmpeg.vaapi.enabled" = true;
+
+        "gnomeTheme.bookmarksToolbarUnderTabs" = true;
+        "gnomeTheme.hideWebrtcIndicator" = true;
+        "gnomeTheme.normalWidthTabs" = true;
+        "layers.acceleration.force-enabled" = true;
+        "svg.context-properties.content.enabled" = true;
       };
 
       extensions = {
@@ -57,24 +62,11 @@
       };
 
       theme = {
-        font = config.stylix.fonts.sansSerif;
-
         defaultUserChrome.enable = false;
         defaultUserContent.enable = false;
 
         extraUserChrome = ''
-          #webrtcIndicator {
-            display: none;
-          }
-          .tab-label-container {
-            mask-image: none !important;
-          }
-          .titlebar-spacer[type="pre-tabs"] {
-           display: none !important;
-          }
-          .tabbrowser-tab .tab-close-button {
-            visibility: collapse !important;
-          }
+          @import "${inputs.firefox-gnome-theme.result}/userChrome.css"
         '';
       };
     };

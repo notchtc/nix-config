@@ -9,47 +9,34 @@
     services = {
       displayManager.gdm.enable = true;
       desktopManager.gnome.enable = true;
+
+      gnome = {
+        core-apps.enable = false;
+        gnome-initial-setup.enable = lib.mkForce false;
+      };
     };
 
+    programs.file-roller.enable = true;
+
     environment = {
-      sessionVariables.QT_WAYLAND_DECORATION = "adwaita";
+      sessionVariables = {
+        QT_QPA_PLATFORMTHEME = "gtk3";
+        QT_WAYLAND_DECORATION = "adwaita";
+      };
 
       systemPackages = lib.attrValues {
         inherit (pkgs)
           ffmpegthumbnailer
-          gnome-tweaks
+          gnome-calculator
+          gparted
+          loupe
+          nautilus
           qadwaitadecorations
           qadwaitadecorations-qt6
           ;
       };
 
-      gnome.excludePackages = lib.attrValues {
-        inherit (pkgs)
-          baobab
-          decibels
-          epiphany
-          evince
-          geary
-          gnome-console
-          gnome-contacts
-          gnome-logs
-          gnome-maps
-          gnome-music
-          gnome-software
-          gnome-text-editor
-          gnome-tour
-          gnome-user-docs
-          orca
-          sushi
-          totem
-          yelp
-          ;
-      };
-    };
-
-    services = {
-      gnome.gnome-initial-setup.enable = lib.mkForce false;
-      udev.packages = [ pkgs.gnome-settings-daemon ];
+      gnome.excludePackages = lib.attrValues { inherit (pkgs) gnome-backgrounds gnome-tour; };
     };
   };
 }

@@ -13,7 +13,9 @@
       enable = true;
       settings = {
         cursor-style = "bar";
-        gtk-single-instance = true;
+        font-family = "Sarasa Term J";
+        font-size = 11;
+        theme = "Adwaita Dark";
         window-padding-x = 6;
         window-padding-y = 6;
         window-theme = "ghostty";

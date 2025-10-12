@@ -38,6 +38,7 @@ in
         qbittorrent
         strawberry
         telegram-desktop
+        tutanota-desktop
         ;
     })
   ]);

@@ -21,7 +21,6 @@ Other projects used:
 - [nixos-hardware](https://github.com/nixos/nixos-hardware)
 - [preservation](https://github.com/nix-community/preservation)
 - [schizofox](https://github.com/schizofox/schizofox)
-- [stylix](https://github.com/danth/stylix)
 
 ## Resources
 Other configurations from where I learned and copied:

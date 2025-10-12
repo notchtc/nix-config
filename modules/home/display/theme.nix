@@ -1,22 +1,30 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 {
   gtk = {
     enable = true;
-    gtk3.extraConfig.gtk-application-prefer-dark-theme = 1;
+    colorScheme = "dark";
 
-    cursorTheme = {
-      name = "${config.stylix.cursor.name}";
-      package = "${config.stylix.cursor.package}";
+    font = {
+      name = "Sarasa UI J";
+      package = pkgs.sarasa-gothic;
+      size = 11;
+    };
+
+    iconTheme = {
+      name = "MoreWaita";
+      package = pkgs.morewaita-icon-theme;
+    };
+
+    theme = {
+      name = "adw-gtk3-dark";
+      package = pkgs.adw-gtk3;
     };
   };
 
-  stylix = {
-    targets.gtk.flatpakSupport.enable = false;
-    icons = {
-      enable = true;
-      package = pkgs.morewaita-icon-theme;
-      light = "MoreWaita";
-      dark = "MoreWaita";
-    };
+  home.pointerCursor = {
+    name = "phinger-cursors-dark";
+    package = pkgs.phinger-cursors;
+    dotIcons.enable = false;
+    gtk.enable = true;
   };
 }

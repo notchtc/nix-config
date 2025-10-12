@@ -32,12 +32,6 @@
   };
 
   home = {
-    file = {
-      ".gtkrc-2.0".enable = false;
-      ".icons/default/index.theme".enable = false;
-      ".icons/${config.home.pointerCursor.name}".enable = false;
-    };
-
     sessionVariables = {
       _JAVA_OPTIONS = "-Djava.util.prefs.userRoot=${config.xdg.configHome}/java";
       ANDROID_USER_HOME = "${config.xdg.dataHome}/android";
