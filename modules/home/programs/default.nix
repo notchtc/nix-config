@@ -36,7 +36,7 @@ in
         picard
         pwvucontrol
         qbittorrent
-        strawberry
+        quodlibet
         telegram-desktop
         tutanota-desktop
         ;
