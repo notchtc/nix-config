@@ -13,6 +13,19 @@
       "url": "https://github.com/ryantm/agenix/archive/9edb1787864c4f59ae5074ad498b6272b3ec308d.tar.gz",
       "hash": "sha256-NA/FT2hVhKDftbHSwVnoRTFhes62+7dxZbxj5Gxvghs="
     },
+    "firefox-gnome-theme": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "rafaelmardojai",
+        "repo": "firefox-gnome-theme"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "afd438034bf91089cfeb9e6b5cb987bdf5442d0f",
+      "url": "https://github.com/rafaelmardojai/firefox-gnome-theme/archive/afd438034bf91089cfeb9e6b5cb987bdf5442d0f.tar.gz",
+      "hash": "sha256-0E3TqvXAy81qeM/jZXWWOTZ14Hs1RT7o78UyZM+Jbr4="
+    },
     "home-manager": {
       "type": "Git",
       "repository": {
@@ -168,20 +181,7 @@
       "revision": "428833d6a0fbc577b05de130a9bc3c99b027d8da",
       "url": "https://github.com/schizofox/schizofox/archive/428833d6a0fbc577b05de130a9bc3c99b027d8da.tar.gz",
       "hash": "sha256-BGHVikTQAMlGuxhJ3BHh5meuylDh1CZd8I3XGgIK5Hc="
-    },
-    "stylix": {
-      "type": "Git",
-      "repository": {
-        "type": "GitHub",
-        "owner": "nix-community",
-        "repo": "stylix"
-      },
-      "branch": "master",
-      "submodules": false,
-      "revision": "83e0cbfa4a93b1dda28518df0e5df6dbc957c2c8",
-      "url": "https://github.com/nix-community/stylix/archive/83e0cbfa4a93b1dda28518df0e5df6dbc957c2c8.tar.gz",
-      "hash": "sha256-P0u31LhxDfzVmP/rpfPCHbUj92r4pyAEd9FW8/GdZHU="
     }
   },
-  "version": 6
+  "version": 7
 }

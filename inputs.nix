@@ -15,7 +15,6 @@ let
     niri.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
     openmw-nix.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
     schizofox.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
-    stylix.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
   };
 in
 {
