@@ -18,7 +18,6 @@ Other projects used:
 - [niri-flake](https://github.com/sodiboo/niri-flake)
 - [nix-index-database](https://github.com/Mic92/nix-index-database)
 - [nix-mineral](https://github.com/cynicsketch/nix-mineral)
-- [nixos-hardware](https://github.com/nixos/nixos-hardware)
 - [preservation](https://github.com/nix-community/preservation)
 - [schizofox](https://github.com/schizofox/schizofox)
 

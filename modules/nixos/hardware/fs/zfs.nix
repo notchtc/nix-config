@@ -1,4 +1,4 @@
-{ config, lib, ... }:
+{ host, lib, ... }:
 {
   boot.supportedFilesystems = [ "zfs" ];
 
@@ -15,7 +15,7 @@
   };
 
   fileSystems = lib.genAttrs [ "/persist" "/nix" "/var/log" "/var/lib" ] (fs: {
-    device = "${config.networking.hostName}/NixOS${lib.optionalString (fs != "/") fs}";
+    device = "${host}/NixOS${lib.optionalString (fs != "/") fs}";
     fsType = "zfs";
     options = [ "zfsutil" ];
   });

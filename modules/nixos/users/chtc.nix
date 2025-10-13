@@ -25,4 +25,6 @@ in
       userName = "chtc";
     };
   };
+
+  services.displayManager.autoLogin.user = "chtc";
 }

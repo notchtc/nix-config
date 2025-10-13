@@ -1,10 +1,9 @@
-{ config, lib, ... }:
+{ config, lib }:
 let
   pins = import ./npins { };
   pkgs = import pins.nixpkgs { };
 
   loaders = {
-    nixos-hardware = "raw";
     preservation = "raw";
   };
 

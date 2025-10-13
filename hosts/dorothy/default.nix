@@ -14,19 +14,12 @@
     mama.programs.foot.enable = true;
   };
 
-  boot = {
-    initrd.kernelModules = [ "dm-snapshot" ];
-    kernelModules = [ "kvm-intel" ];
+  boot.initrd.kernelModules = [ "dm-snapshot" ];
+
+  services.undervolt = {
+    enable = true;
+    coreOffset = -119;
   };
 
-  services = {
-    undervolt = {
-      enable = true;
-      coreOffset = -119;
-    };
-    displayManager.autoLogin.user = "chtc";
-  };
-
-  networking.hostName = "dorothy";
   system.stateVersion = "25.11";
 }

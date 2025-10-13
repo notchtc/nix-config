@@ -4,14 +4,13 @@
 }:
 {
   imports = [
-    ./audio.nix
+    ./cpu
+    ./firmware.nix
     ./fs
+    ./gpu
+    ./media
     ./tuned.nix
   ];
 
   nixpkgs.hostPlatform = "${system}";
-  hardware = {
-    enableRedistributableFirmware = true;
-    amdgpu.legacySupport.enable = true;
-  };
 }
