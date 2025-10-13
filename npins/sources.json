@@ -35,9 +35,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "c4aaddeaecc09554c92518fd904e3e84b497ed09",
-      "url": "https://github.com/nix-community/home-manager/archive/c4aaddeaecc09554c92518fd904e3e84b497ed09.tar.gz",
-      "hash": "sha256-eqSP/BAbQwNTlQ/6yuK0yILzZAPNNj91gp6oIfVtu/E="
+      "revision": "e121f3773fa596ecaba5b22e518936a632d72a90",
+      "url": "https://github.com/nix-community/home-manager/archive/e121f3773fa596ecaba5b22e518936a632d72a90.tar.gz",
+      "hash": "sha256-U9SkK45314urw9P7MmjhEgiQwwD/BTj+T3HTuz1JU1Q="
     },
     "nilla": {
       "type": "GitRelease",
@@ -109,19 +109,6 @@
       "revision": "b76cc19351f159cd360d8ceea3ba9aff8fce6c6e",
       "url": "https://github.com/cynicsketch/nix-mineral/archive/b76cc19351f159cd360d8ceea3ba9aff8fce6c6e.tar.gz",
       "hash": "sha256-s4YK7Ey2LJFLIAONWVXM3X+xdAIbjFgdK2s6lxmMIrQ="
-    },
-    "nixos-hardware": {
-      "type": "Git",
-      "repository": {
-        "type": "GitHub",
-        "owner": "nixos",
-        "repo": "nixos-hardware"
-      },
-      "branch": "master",
-      "submodules": false,
-      "revision": "9ed85f8afebf2b7478f25db0a98d0e782c0ed903",
-      "url": "https://github.com/nixos/nixos-hardware/archive/9ed85f8afebf2b7478f25db0a98d0e782c0ed903.tar.gz",
-      "hash": "sha256-2GoxVaKWTHBxRoeUYSjv0AfSOx4qw5CWSFz2b+VolKU="
     },
     "nixpkgs": {
       "type": "Channel",
