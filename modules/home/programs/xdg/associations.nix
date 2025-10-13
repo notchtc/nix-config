@@ -62,7 +62,7 @@ let
 
   associations =
     (genAttrs browser (_: [ "Schizofox.desktop" ]))
-    // (genAttrs audio (_: [ "org.strawberrymusicplayer.strawberry.desktop" ]))
+    // (genAttrs audio (_: [ "io.github.quodlibet.QuodLibet.desktop" ]))
     // (genAttrs image (_: [ "org.gnome.Loupe.desktop" ]))
     // (genAttrs text (_: [ "Helix.desktop" ]))
     // genAttrs video (_: [ "mpv.desktop" ])

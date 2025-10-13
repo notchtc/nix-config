@@ -16,7 +16,7 @@
             "org.gnome.Nautilus.desktop"
             "com.mitchellh.ghostty.desktop"
             "Schizofox.desktop"
-            "org.strawberrymusicplayer.strawberry.desktop"
+            "io.github.quodlibet.QuodLibet.desktop"
             "org.telegram.desktop.desktop"
             "vesktop.desktop"
             "steam.desktop"
