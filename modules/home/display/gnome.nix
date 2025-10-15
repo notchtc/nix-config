@@ -28,8 +28,8 @@
         };
 
         "org/gnome/desktop/background" = {
-          picture-uri = "file://${./wallpaper.jpg}";
-          picture-uri-dark = "file://${./wallpaper.jpg}";
+          picture-uri = "${./wallpaper.jpg}";
+          picture-uri-dark = "${./wallpaper.jpg}";
         };
 
         "org/gnome/desktop/calendar" = {
