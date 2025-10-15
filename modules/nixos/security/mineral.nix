@@ -5,7 +5,7 @@
   ...
 }:
 let
-  inherit (lib) mkIf optionalAttrs;
+  inherit (lib) mkIf;
   cfg = config.mama.profiles;
 in
 {
@@ -15,10 +15,7 @@ in
     enable = true;
     overrides = {
       compatibility.allow-ip-forward = true;
-      desktop = {
-        doas-sudo-wrapper = true;
-      }
-      // optionalAttrs cfg.graphical.enable {
+      desktop = mkIf cfg.graphical.enable {
         allow-multilib = true;
         hideproc-off = true;
         home-exec = true;
@@ -30,9 +27,6 @@ in
         disable-bluetooth-kmodules = mkIf cfg.server.enable true;
         disable-intelme-kmodules = true;
         lock-root = true;
-      };
-      software-choice = {
-        doas-no-sudo = true;
       };
     };
   };

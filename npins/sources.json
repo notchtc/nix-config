@@ -156,6 +156,19 @@
       "url": "https://github.com/nix-community/preservation/archive/93416f4614ad2dfed5b0dcf12f27e57d27a5ab11.tar.gz",
       "hash": "sha256-mMI9IanU+Xw+pVogD2oT0I2kTmvz2Un/Apc5+CwUpEY="
     },
+    "run0-sudo-shim": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "LordGrimmauld",
+        "repo": "run0-sudo-shim"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "84b51f45909a281158538813a1e684cbb5c7d51c",
+      "url": "https://github.com/LordGrimmauld/run0-sudo-shim/archive/84b51f45909a281158538813a1e684cbb5c7d51c.tar.gz",
+      "hash": "sha256-Uobq7AbuyijTh3Frf+89KnWrcLjUZwai+c8LwV+wM1k="
+    },
     "schizofox": {
       "type": "Git",
       "repository": {
