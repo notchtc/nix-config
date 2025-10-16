@@ -20,12 +20,13 @@
         "toolkit.tabbox.switchByScrolling" = true;
 
         "media.ffmpeg.vaapi.enabled" = true;
-
+        "layers.acceleration.force-enabled" = true;
+        "svg.context-properties.content.enabled" = true;
+      }
+      // lib.optionals config.mama.desktops.gnome.enable {
         "gnomeTheme.bookmarksToolbarUnderTabs" = true;
         "gnomeTheme.hideWebrtcIndicator" = true;
         "gnomeTheme.normalWidthTabs" = true;
-        "layers.acceleration.force-enabled" = true;
-        "svg.context-properties.content.enabled" = true;
       };
 
       extensions = {
@@ -65,9 +66,18 @@
         defaultUserChrome.enable = false;
         defaultUserContent.enable = false;
 
-        extraUserChrome = ''
-          @import "${inputs.firefox-gnome-theme.result}/userChrome.css"
-        '';
+        extraUserChrome =
+          if config.mama.desktops.gnome.enable then
+            ''
+              @import "${inputs.firefox-gnome-theme.result}/userChrome.css"
+            ''
+          else
+            ''
+              #webrtcIndicator { display: none; }
+              .tab-label-container { mask-image: none !important; }
+              .titlebar-spacer[type="pre-tabs"] { display: none !important; }
+              .tabbrowser-tab .tab-close-button { visibility: collapse !important; }
+            '';
       };
     };
   };
