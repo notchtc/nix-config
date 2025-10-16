@@ -16,8 +16,6 @@
       };
     };
 
-    programs.file-roller.enable = true;
-
     environment = {
       sessionVariables = {
         QT_QPA_PLATFORMTHEME = "gtk3";
@@ -28,7 +26,6 @@
         inherit (pkgs)
           ffmpegthumbnailer
           gnome-calculator
-          gparted
           loupe
           nautilus
           qadwaitadecorations
