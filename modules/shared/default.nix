@@ -5,8 +5,8 @@ in
 {
   options.mama = {
     desktops = {
-      cosmic.enable = mkEnableOption "Cosmic";
       gnome.enable = mkEnableOption "Gnome";
+      plasma.enable = mkEnableOption "Plasma";
     };
     profiles = {
       graphical.enable = mkEnableOption "Graphical environment";

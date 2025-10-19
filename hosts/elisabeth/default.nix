@@ -1,8 +1,6 @@
 {
-  imports = [ ./home.nix ];
-
   mama = {
-    desktops.gnome.enable = true;
+    desktops.plasma.enable = true;
     hardware = {
       cpu = "amd";
       gpu = [

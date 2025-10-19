@@ -6,14 +6,12 @@
 
   config.programs.gamemode = lib.mkIf config.mama.profiles.gaming.gamemode.enable {
     enable = true;
+    enableRenice = true;
+
     settings = {
       general = {
         softrealtime = "auto";
         renice = 17;
-      };
-      gpu = {
-        apply_gpu_optimizations = "accept-responsibility";
-        gpu_device = 0;
       };
     };
   };

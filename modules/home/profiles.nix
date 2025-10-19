@@ -8,6 +8,6 @@ in
       inherit (cfg.profiles) graphical laptop server;
       gaming = { inherit (cfg.profiles.gaming) enable; };
     };
-    desktops = { inherit (cfg.desktops) cosmic gnome; };
+    desktops = { inherit (cfg.desktops) gnome plasma; };
   };
 }

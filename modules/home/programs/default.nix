@@ -11,7 +11,6 @@ in
 {
   imports = [
     ./bat.nix
-    ./foot.nix
     ./ghostty.nix
     ./mpv.nix
     ./schizofox.nix
@@ -27,20 +26,21 @@ in
 
   home.packages = attrValues (mergeAttrsList [
     { inherit (pkgs) ffmpeg; }
+
     (optionalAttrs cfg.profiles.graphical.enable {
       inherit (pkgs)
         cardinal
         gimp3
         nicotine-plus
-        papers
         picard
-        pwvucontrol
         qbittorrent
-        quodlibet-full
         telegram-desktop
         tutanota-desktop
         ;
     })
+
+    (optionalAttrs cfg.desktops.gnome.enable { inherit (pkgs) papers pwvucontrol quodlibet-full; })
+    (optionalAttrs cfg.desktops.plasma.enable { inherit (pkgs) strawberry; })
   ]);
 
   programs = {

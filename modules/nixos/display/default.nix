@@ -6,9 +6,9 @@
 }:
 {
   imports = [
-    ./cosmic.nix
     ./fonts.nix
     ./gnome.nix
+    ./plasma.nix
   ];
 
   config = lib.mkIf config.mama.profiles.graphical.enable {
@@ -36,6 +36,8 @@
         options = "caps:swapescape";
       };
     };
+
+    programs.dconf.enable = true;
 
     i18n.inputMethod.fcitx5.waylandFrontend = true;
   };

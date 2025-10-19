@@ -1,6 +1,8 @@
-{ lib, ... }:
+{ config, lib, ... }:
 let
   inherit (lib) genAttrs;
+  cfg = config.mama.desktops;
+
   browser = [
     "application/json"
     "application/x-extension-htm"
@@ -62,13 +64,22 @@ let
 
   associations =
     (genAttrs browser (_: [ "Schizofox.desktop" ]))
-    // (genAttrs audio (_: [ "io.github.quodlibet.QuodLibet.desktop" ]))
-    // (genAttrs image (_: [ "org.gnome.Loupe.desktop" ]))
+    // (genAttrs audio (
+      _:
+      if cfg.gnome.enable then
+        [ "io.github.quodlibet.QuodLibet.desktop" ]
+      else
+        [ "org.strawberrymusicplayer.strawberry.desktop" ]
+    ))
+    // (genAttrs image (
+      _: if cfg.plasma.enable then [ "org.kde.gwenview.desktop" ] else [ "org.gnome.Loupe.desktop" ]
+    ))
     // (genAttrs text (_: [ "Helix.desktop" ]))
     // genAttrs video (_: [ "mpv.desktop" ])
     // genAttrs torrent (_: [ "org.qbittorrent.qBittorrent.desktop" ])
     // {
-      "application/pdf" = [ "org.gnome.Papers.desktop" ];
+      "application/pdf" =
+        if cfg.plasma.enable then [ "org.kde.okular" ] else [ "org.gnome.Papers.desktop" ];
       "x-scheme-handler/discord" = [ "vesktop.desktop" ];
       "x-scheme-handler/steam" = [ "steam.desktop" ];
       "x-scheme-handler/tg" = [ "org.telegram.desktop.desktop" ];
@@ -76,7 +87,10 @@ let
 in
 {
   xdg = {
-    terminal-exec.enable = true;
+    terminal-exec = {
+      enable = true;
+      settings.default = [ "com.mitchellh.ghostty.desktop" ];
+    };
     mimeApps = {
       enable = true;
       associations.added = associations;

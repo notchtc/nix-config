@@ -8,7 +8,6 @@
 {
   config = lib.mkIf config.mama.desktops.gnome.enable {
     dconf = {
-      enable = true;
       settings = with lib.hm.gvariant; {
         "org/gnome/shell" = {
           disable-extension-version-validation = true;
@@ -111,6 +110,18 @@
           show-hidden = true;
           sort-directories-first = true;
         };
+      };
+    };
+
+    gtk = {
+      iconTheme = {
+        name = "MoreWaita";
+        package = pkgs.morewaita-icon-theme;
+      };
+
+      theme = {
+        name = "adw-gtk3-dark";
+        package = pkgs.adw-gtk3;
       };
     };
 

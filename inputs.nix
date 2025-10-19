@@ -4,6 +4,7 @@ let
   pkgs = import pins.nixpkgs { };
 
   loaders = {
+    plasma-manager = "raw";
     preservation = "raw";
   };
 

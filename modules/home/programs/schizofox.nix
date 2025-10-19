@@ -4,6 +4,9 @@
   lib,
   ...
 }:
+let
+  cfg = config.mama.desktops;
+in
 {
   imports = [ inputs.schizofox.result.homeManagerModules.default ];
 
@@ -17,13 +20,14 @@
         "dom.event.clipboardevents.enabled" = true;
         "privacy.resistFingerprinting.letterboxing" = false;
 
+        "middlemouse.paste" = false;
         "toolkit.tabbox.switchByScrolling" = true;
 
         "media.ffmpeg.vaapi.enabled" = true;
         "layers.acceleration.force-enabled" = true;
         "svg.context-properties.content.enabled" = true;
       }
-      // lib.optionals config.mama.desktops.gnome.enable {
+      // lib.optionalAttrs cfg.gnome.enable {
         "gnomeTheme.bookmarksToolbarUnderTabs" = true;
         "gnomeTheme.hideWebrtcIndicator" = true;
         "gnomeTheme.normalWidthTabs" = true;
@@ -67,7 +71,7 @@
         defaultUserContent.enable = false;
 
         extraUserChrome =
-          if config.mama.desktops.gnome.enable then
+          if cfg.gnome.enable then
             ''
               @import "${inputs.firefox-gnome-theme.result}/userChrome.css"
             ''
