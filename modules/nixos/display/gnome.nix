@@ -17,7 +17,7 @@
     };
 
     environment = {
-      sessionVariables = {
+      variables = {
         QT_QPA_PLATFORMTHEME = "gtk3";
         QT_WAYLAND_DECORATION = "adwaita";
       };

@@ -22,7 +22,7 @@
       remotePlay.openFirewall = true;
     };
 
-    environment.sessionVariables = {
+    environment.variables = {
       PROTON_ENABLE_WAYLAND = 1;
       PROTON_USE_NTSYNC = 1;
       PROTON_ENABLE_NVAPI = lib.mkIf config.hardware.nvidia.enabled 1;

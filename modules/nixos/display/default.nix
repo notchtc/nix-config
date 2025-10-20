@@ -17,7 +17,7 @@
       font = "${pkgs.sarasa-gothic}/share/fonts/truetype/Sarasa-Regular.ttc";
     };
 
-    environment.sessionVariables = {
+    environment.variables = {
       _JAVA_AWT_WM_NONREPARENTING = "1";
       CLUTTER_BACKEND = "wayland";
       GDK_BACKEND = "wayland";
