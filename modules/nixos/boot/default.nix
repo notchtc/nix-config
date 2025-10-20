@@ -6,7 +6,7 @@
   boot = {
     kernelPackages =
       if config.mama.profiles.graphical.enable then
-        pkgs.linuxPackages_xanmod_latest
+        pkgs.linuxPackages_zen
       else
         pkgs.linuxPackages_hardened;
 

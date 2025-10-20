@@ -1,6 +1,14 @@
-{ host, lib, ... }:
 {
-  boot.supportedFilesystems = [ "zfs" ];
+  host,
+  lib,
+  pkgs,
+  ...
+}:
+{
+  boot = {
+    supportedFilesystems = [ "zfs" ];
+    zfs.package = pkgs.zfs_unstable;
+  };
 
   services = {
     zfs = {
