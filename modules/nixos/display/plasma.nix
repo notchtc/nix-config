@@ -11,6 +11,11 @@
       desktopManager.plasma6.enable = true;
     };
 
+    programs.ssh = {
+      enableAskPassword = true;
+      askPassword = "${pkgs.kdePackages.ksshaskpass}/bin/ksshaskpass";
+    };
+
     environment.plasma6.excludePackages = lib.attrValues {
       inherit (pkgs.kdePackages)
         elisa
