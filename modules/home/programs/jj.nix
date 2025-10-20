@@ -1,17 +1,9 @@
 { config, pkgs, ... }:
-let
-  delta = "${pkgs.delta}/bin/delta";
-in
 {
   programs.jujutsu = {
-    inherit (config.programs.git) enable;
+    enable = true;
 
     settings = {
-      user = {
-        name = config.programs.git.userName;
-        email = config.programs.git.userEmail;
-      };
-
       aliases = {
         e = [ "edit" ];
         d = [ "describe" ];
@@ -58,35 +50,24 @@ in
       signing = {
         behavior = "own";
         backend = "ssh";
-        inherit (config.programs.git.signing) key;
+        key = "~/.ssh/id_ed25519.pub";
       };
 
       template-aliases = {
         "format_timestamp(timestamp)" = "timestamp.ago()";
       };
 
-      diff.tool = "delta";
       ui = {
         editor = config.home.sessionVariables.EDITOR;
         default-command = "log";
         diff-editor = ":builtin";
-        diff-formatter = ":git";
-        pager = [
-          delta
-          "--pager"
-          "less -FRX"
+        diff-formatter = [
+          "${pkgs.difftastic}/bin/difft"
+          "--color=always"
+          "$left"
+          "$right"
         ];
       };
-
-      "--scope" = [
-        {
-          "--when".commands = [
-            "diff"
-            "show"
-          ];
-          ui.pager = delta;
-        }
-      ];
     };
   };
 }

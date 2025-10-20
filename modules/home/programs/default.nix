@@ -11,6 +11,7 @@ in
 {
   imports = [
     ./bat.nix
+    ./difftastic.nix
     ./ghostty.nix
     ./mpv.nix
     ./schizofox.nix

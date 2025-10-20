@@ -19,12 +19,11 @@ in
     ];
   };
 
+  services.displayManager.autoLogin.user = "chtc";
   home-manager.users.chtc = {
-    programs.git = {
-      userEmail = "chtc@tuta.io";
-      userName = "chtc";
+    programs.jujutsu.settings.user = {
+      email = "chtc@tuta.io";
+      name = "chtc";
     };
   };
-
-  services.displayManager.autoLogin.user = "chtc";
 }

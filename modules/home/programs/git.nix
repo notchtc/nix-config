@@ -1,14 +1,15 @@
+{ config, ... }:
 {
   programs.git = {
     enable = true;
 
     signing = {
+      inherit (config.programs.jujutsu.settings.signing) key;
       format = "ssh";
-      key = "~/.ssh/id_ed25519.pub";
       signByDefault = true;
     };
 
-    extraConfig = {
+    settings = {
       branch.sort = "-committerdate";
       column.ui = "auto";
       commit.verbose = true;
@@ -17,6 +18,22 @@
       merge.conflictstyle = "zdiff3";
       pull.rebase = true;
       tag.sort = "version:refname";
+
+      user = { inherit (config.programs.jujutsu.settings.user) name email; };
+
+      alias = {
+        d = "diff";
+        a = "add";
+        p = "push";
+        r = "rebase";
+        ri = "rebase -i";
+        cm = "commit";
+        pl = "pull";
+        s = "status";
+        st = "stash";
+        ck = "checkout";
+        rl = "reflog";
+      };
 
       diff = {
         algorithm = "histogram";
@@ -43,21 +60,5 @@
         updateRefs = true;
       };
     };
-
-    aliases = {
-      d = "diff";
-      a = "add";
-      p = "push";
-      r = "rebase";
-      ri = "rebase -i";
-      cm = "commit";
-      pl = "pull";
-      s = "status";
-      st = "stash";
-      ck = "checkout";
-      rl = "reflog";
-    };
-
-    delta.enable = true;
   };
 }
