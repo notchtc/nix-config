@@ -1,15 +1,9 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}:
+{ config, lib, ... }:
 let
   cfg = config.mama.desktops;
 in
 {
   config = lib.mkIf config.mama.profiles.graphical.enable {
-    home.sessionVariables.TERMINAL = "${pkgs.ghostty}/bin/ghostty";
     programs.ghostty = {
       enable = true;
       settings = {

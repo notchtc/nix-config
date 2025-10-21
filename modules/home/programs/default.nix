@@ -20,7 +20,6 @@ in
     ./nix-index.nix
     ./eza.nix
     ./helix.nix
-    ./xdg
     ./jj.nix
     ./git.nix
   ];

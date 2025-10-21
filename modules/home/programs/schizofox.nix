@@ -11,7 +11,6 @@ in
   imports = [ inputs.schizofox.result.homeManagerModules.default ];
 
   config = lib.mkIf config.mama.profiles.graphical.enable {
-    home.sessionVariables.BROWSER = "schizofox";
     programs.schizofox = {
       enable = true;
 
