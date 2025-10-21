@@ -114,6 +114,20 @@
     };
 
     gtk = {
+      enable = true;
+      colorScheme = "dark";
+
+      cursorTheme = {
+        name = "phinger-cursors-dark";
+        package = pkgs.phinger-cursors;
+      };
+
+      font = {
+        name = "Sarasa UI J";
+        package = pkgs.sarasa-gothic;
+        size = 11;
+      };
+
       iconTheme = {
         name = "MoreWaita";
         package = pkgs.morewaita-icon-theme;

@@ -2,35 +2,22 @@
   config,
   inputs,
   lib,
-  pkgs,
   ...
 }:
 {
   imports = [ "${inputs.plasma-manager.result}/modules/default.nix" ];
 
   config = lib.mkIf config.mama.desktops.plasma.enable {
-    gtk = {
-      gtk2.force = true;
-      theme = {
-        name = "Breeze-Dark";
-        package = pkgs.kdePackages.breeze-gtk;
-      };
-
-      iconTheme = {
-        name = "Papirus-Dark";
-        package = pkgs.papirus-icon-theme;
-      };
-    };
-
     programs.plasma = {
       enable = true;
+      immutableByDefault = true;
       overrideConfig = true;
 
       workspace = {
         colorScheme = "BreezeDark";
-        cursor.theme = "phinger-cursors-dark";
+        cursor.theme = "breeze_cursors";
         enableMiddleClickPaste = false;
-        iconTheme = "Papirus-Dark";
+        iconTheme = "breeze";
         lookAndFeel = "org.kde.breezedark.desktop";
         wallpaper = ./wallpaper.jpg;
       };
@@ -63,7 +50,7 @@
         };
 
         virtualDesktops = {
-          rows = 2;
+          rows = 1;
           number = 4;
         };
       };
@@ -186,13 +173,57 @@
               value = "Schizofox";
               apply = "force";
             };
+
+            desktops = {
+              value = "Desktop_1";
+              apply = "initially";
+            };
+          };
+        }
+        {
+          description = "Discord";
+          match = {
+            window-class = {
+              value = "vesktop";
+              type = "substring";
+            };
+          };
+
+          apply = {
+            desktops = {
+              value = "Desktop_2";
+              apply = "initially";
+            };
+          };
+        }
+        {
+          description = "Telegram";
+          match = {
+            window-class = {
+              value = "telegram";
+              type = "substring";
+            };
+          };
+
+          apply = {
+            desktops = {
+              value = "Desktop_3";
+              apply = "initially";
+            };
           };
         }
       ];
 
       configFile = {
         "baloofilerc"."Basic Settings"."Indexing-Enabled" = false;
+        "kactivitymanagerdrc"."Plugins"."org.kde.ActivityManager.ResourceScoringEnabled" = false;
+        "krunnerrc"."Plugins"."baloosearchEnabled" = false;
         "plasmanotifyrc"."Notifications"."PopupPosition" = "TopRight";
+
+        "kactivitymanagerd-pluginsrc"."Plugin-org.kde.ActivityManager.Resources.Scoring" = {
+          keep-history-for = 1;
+          what-to-remember = 2;
+        };
       };
     };
   };
