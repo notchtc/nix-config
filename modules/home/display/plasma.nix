@@ -203,7 +203,6 @@
       configFile = {
         "baloofilerc"."Basic Settings"."Indexing-Enabled" = false;
         "kactivitymanagerdrc"."Plugins"."org.kde.ActivityManager.ResourceScoringEnabled" = false;
-        "kdeglobals"."KDE".AutomaticLookAndFeel = true;
         "kwinrc"."NightColor"."Active" = true;
         "krunnerrc"."Plugins"."baloosearchEnabled" = false;
         "plasmanotifyrc"."Notifications"."PopupPosition" = "TopRight";
@@ -211,6 +210,11 @@
         "kactivitymanagerd-pluginsrc"."Plugin-org.kde.ActivityManager.Resources.Scoring" = {
           keep-history-for = 1;
           what-to-remember = 2;
+        };
+
+        "kdeglobals"."KDE" = {
+          "AutomaticLookAndFeel" = true;
+          "AutomaticLookAndFeelOnIdle" = false;
         };
       };
     };
