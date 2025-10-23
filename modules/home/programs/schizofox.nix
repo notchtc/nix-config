@@ -17,6 +17,7 @@ in
       search.defaultSearchEngine = "DuckDuckGo";
       settings = {
         "dom.event.clipboardevents.enabled" = true;
+        "privacy.resistFingerprinting" = false;
         "privacy.resistFingerprinting.letterboxing" = false;
 
         "middlemouse.paste" = false;
