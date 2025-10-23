@@ -1,5 +1,4 @@
 {
-  config,
   lib,
   osConfig,
   pkgs,
@@ -12,7 +11,7 @@
 
     extraPackages = lib.attrValues { inherit (pkgs) markdown-oxide nixd nixfmt; };
     settings = {
-      theme = if config.mama.desktops.gnome.enable then "adwaita-dark" else "base16_terminal";
+      theme = "base16_transparent";
       editor = {
         cursor-shape = {
           insert = "bar";
@@ -37,7 +36,6 @@
         };
 
         bufferline = "multiple";
-        cursorline = true;
         line-number = "relative";
         soft-wrap.enable = true;
       };
