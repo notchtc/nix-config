@@ -14,11 +14,7 @@
       overrideConfig = true;
 
       workspace = {
-        colorScheme = "BreezeDark";
-        cursor.theme = "breeze_cursors";
         enableMiddleClickPaste = false;
-        iconTheme = "breeze";
-        lookAndFeel = "org.kde.breezedark.desktop";
         wallpaper = ./wallpaper.jpg;
       };
 
@@ -39,16 +35,6 @@
       };
 
       kwin = {
-        nightLight = {
-          enable = true;
-          mode = "times";
-
-          time = {
-            morning = "06:00";
-            evening = "20:00";
-          };
-        };
-
         virtualDesktops = {
           rows = 1;
           number = 4;
@@ -104,7 +90,7 @@
                 sortAlphabetically = true;
                 applicationsDisplayMode = "list";
                 favoritesDisplayMode = "list";
-                icon = "nix-snowflake-white";
+                icon = "nix-snowflake";
                 showButtonsFor = "session";
               };
             }
@@ -217,6 +203,8 @@
       configFile = {
         "baloofilerc"."Basic Settings"."Indexing-Enabled" = false;
         "kactivitymanagerdrc"."Plugins"."org.kde.ActivityManager.ResourceScoringEnabled" = false;
+        "kdeglobals"."KDE".AutomaticLookAndFeel = true;
+        "kwinrc"."NightColor"."Active" = true;
         "krunnerrc"."Plugins"."baloosearchEnabled" = false;
         "plasmanotifyrc"."Notifications"."PopupPosition" = "TopRight";
 
