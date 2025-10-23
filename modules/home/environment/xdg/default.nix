@@ -39,6 +39,7 @@
       CUDA_CACHE_PATH = "${config.xdg.cacheHome}/nv";
       DVDCSS_CACHE = "${config.xdg.dataHome}/dvdcss";
       GNUPGHOME = "${config.xdg.dataHome}/gnupg";
+      GTK2_RC_FILES = "${config.xdg.configHome}/gtk-2.0/gtkrc";
       INPUTRC = "${config.xdg.configHome}/readline/inputrc";
       LESSHISTFILE = "${config.xdg.dataHome}/lesshst";
       PULSECOOKIE = "${config.xdg.configHome}/pulse/cookie";
@@ -47,6 +48,5 @@
     };
   };
 
-  gtk.gtk2.configLocation = "${config.xdg.configHome}/gtk-2.0/gtkrc";
   xresources.path = "${config.xdg.configHome}/X11/Xresources";
 }
