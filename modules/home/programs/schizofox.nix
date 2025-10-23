@@ -41,6 +41,8 @@ in
             "https://addons.mozilla.org/firefox/downloads/latest/augmented-steam/latest.xpi";
           "{a4c4eda4-fb84-4a84-b4a1-f7c1cbf2a1ad}".install_url =
             "https://addons.mozilla.org/firefox/downloads/latest/refined-github-/latest.xpi";
+          "{aecec67f-0d10-4fa7-b7c7-609a2db280cf}".install_url =
+            "https://addons.mozilla.org/firefox/downloads/latest/violentmonkey/latest.xpi";
           "7esoorv3@alefvanoon.anonaddy.me".install_url =
             "https://addons.mozilla.org/firefox/downloads/latest/libredirect/latest.xpi";
           "sponsorBlocker@ajay.app".install_url =
