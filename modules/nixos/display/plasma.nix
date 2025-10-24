@@ -16,16 +16,19 @@
       askPassword = "${pkgs.kdePackages.ksshaskpass}/bin/ksshaskpass";
     };
 
-    environment.plasma6.excludePackages = lib.attrValues {
-      inherit (pkgs.kdePackages)
-        elisa
-        kate
-        konsole
-        ktexteditor
-        kwin-x11
-        plasma-browser-integration
-        plasma-workspace-wallpapers
-        ;
+    environment = {
+      variables.KWIN_USE_OVERLAYS = 1;
+      plasma6.excludePackages = lib.attrValues {
+        inherit (pkgs.kdePackages)
+          elisa
+          kate
+          konsole
+          ktexteditor
+          kwin-x11
+          plasma-browser-integration
+          plasma-workspace-wallpapers
+          ;
+      };
     };
   };
 }
