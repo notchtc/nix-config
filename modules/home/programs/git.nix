@@ -1,10 +1,13 @@
 { config, ... }:
+let
+  jj = config.programs.jujutsu.settings;
+in
 {
   programs.git = {
     enable = true;
 
     signing = {
-      inherit (config.programs.jujutsu.settings.signing) key;
+      inherit (jj.signing) key;
       format = "ssh";
       signByDefault = true;
     };
@@ -19,7 +22,7 @@
       pull.rebase = true;
       tag.sort = "version:refname";
 
-      user = { inherit (config.programs.jujutsu.settings.user) name email; };
+      user = { inherit (jj.user) name email; };
 
       alias = {
         d = "diff";
