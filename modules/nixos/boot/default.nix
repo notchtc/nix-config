@@ -4,6 +4,7 @@
 
   system.nixos-init.enable = true;
   boot = {
+    enableContainers = false;
     kernelPackages =
       if config.mama.profiles.graphical.enable then
         pkgs.linuxPackages_zen
