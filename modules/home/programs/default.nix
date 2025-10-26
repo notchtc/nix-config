@@ -36,6 +36,7 @@ in
         qbittorrent
         telegram-desktop
         tutanota-desktop
+        qpwgraph
         ;
     })
 
