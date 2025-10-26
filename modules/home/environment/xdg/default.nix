@@ -14,11 +14,11 @@
       desktop = "${config.home.homeDirectory}/Desktop";
       documents = "${config.home.homeDirectory}/Documents";
       download = "${config.home.homeDirectory}/Downloads";
-      music = "${config.home.homeDirectory}/Music";
-      pictures = "${config.home.homeDirectory}/Pictures";
-      publicShare = "${config.home.homeDirectory}/Public";
-      templates = "${config.home.homeDirectory}/Templates";
-      videos = "${config.home.homeDirectory}/Videos";
+      music = "${config.home.homeDirectory}/Media/Music";
+      pictures = "${config.home.homeDirectory}/Media/Pictures";
+      publicShare = "${config.home.homeDirectory}/Public/Share";
+      templates = "${config.home.homeDirectory}/Public/Templates";
+      videos = "${config.home.homeDirectory}/Media/Videos";
     };
 
     configFile = {
