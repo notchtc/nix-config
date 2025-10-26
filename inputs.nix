@@ -1,9 +1,9 @@
 { config, lib }:
 let
   pins = import ./npins { };
-  pkgs = import pins.nixpkgs { };
 
   loaders = {
+    agenix = "raw";
     plasma-manager = "raw";
     preservation = "raw";
   };
@@ -12,7 +12,6 @@ let
     nixpkgs.configuration.allowUnfree = true;
     home-manager.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
     nix-index-database.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
-    niri.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
     openmw-nix.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
     run0-sudo-shim.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
     schizofox.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
@@ -21,7 +20,7 @@ in
 {
   config.inputs =
     builtins.mapAttrs (name: pin: {
-      src = if name == "nixpkgs" then pin else pin { inherit pkgs; };
+      src = if name == "nixpkgs" then pin else pin { pkgs = import pins.nixpkgs { }; };
 
       loader = loaders.${name} or (lib.modules.when false { });
       settings = settings.${name} or (lib.modules.when false { });
