@@ -107,9 +107,15 @@ in
       zle -N zle-line-init
       echo -ne '\e[5 q'
       preexec() { echo -ne '\e[5 q' ;}
-
-      source ${pkgs.zsh-fast-syntax-highlighting}/share/zsh/site-functions/fast-syntax-highlighting.plugin.zsh
     '';
+
+    plugins = [
+      {
+        name = "fast-syntax-highlighting";
+        src = pkgs.zsh-fast-syntax-highlighting;
+        file = "share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh";
+      }
+    ];
 
     envExtra = ''
       setopt no_global_rcs
