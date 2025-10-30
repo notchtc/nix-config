@@ -75,7 +75,7 @@ let
       _: if cfg.plasma.enable then [ "org.kde.gwenview.desktop" ] else [ "org.gnome.Loupe.desktop" ]
     ))
     // (genAttrs text (_: [ "Helix.desktop" ]))
-    // genAttrs video (_: [ "mpv.desktop" ])
+    // genAttrs video (_: if cfg.plasma.enable then [ "org.kde.haruna.desktop" ] else "mpv.desktop")
     // genAttrs torrent (_: [ "org.qbittorrent.qBittorrent.desktop" ])
     // {
       "application/pdf" =

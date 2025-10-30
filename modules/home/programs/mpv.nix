@@ -5,7 +5,7 @@
   ...
 }:
 {
-  programs = lib.mkIf config.mama.profiles.graphical.enable {
+  programs = lib.mkIf (config.mama.profiles.graphical.enable && !config.mama.desktops.plasma.enable) {
     yt-dlp.enable = true;
     mpv = {
       enable = true;

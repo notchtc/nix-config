@@ -41,7 +41,7 @@ in
     })
 
     (optionalAttrs cfg.desktops.gnome.enable { inherit (pkgs) papers pwvucontrol quodlibet-full; })
-    (optionalAttrs cfg.desktops.plasma.enable { inherit (pkgs) strawberry; })
+    (optionalAttrs cfg.desktops.plasma.enable { inherit (pkgs) haruna strawberry; })
   ]);
 
   programs = {
