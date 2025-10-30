@@ -4,22 +4,19 @@
   pkgs,
   ...
 }:
-let
-  loadPreset = path: builtins.fromJSON (builtins.readFile path);
-in
 {
-  config.services.easyeffects = lib.mkIf config.mama.profiles.graphical.enable {
-    enable = true;
-    preset = "LoudnessEqualizer";
+  config = lib.mkIf config.mama.profiles.graphical.enable {
+    services.easyeffects = {
+      enable = true;
+      preset = "LoudnessEqualizer";
+    };
 
-    extraPresets = {
-      "Sony MDR-ZX310" = loadPreset ./sonymdrzx-310.json;
-      "LoudnessEqualizer" = loadPreset (
-        pkgs.fetchurl {
-          url = "https://raw.githubusercontent.com/Digitalone1/EasyEffects-Presets/refs/heads/master/LoudnessEqualizer.json";
-          hash = "sha256-ubu4uCN8NEv4AtVbdIxFjJn9wC8o2Hw3WwSidiXuEoY=";
-        }
-      );
+    xdg.configFile = {
+      "easyeffects/output/SonyMDR-ZX310.json".source = ./sonymdr-zx310.json;
+      "easyeffects/output/LoudnessEqualizer.json".source = pkgs.fetchurl {
+        url = "https://raw.githubusercontent.com/Digitalone1/EasyEffects-Presets/refs/heads/master/LoudnessEqualizer.json";
+        hash = "sha256-5+jYLBzexHWS7c9vghxtb/fZi6bwozroXdw2D6M4+LU=";
+      };
     };
   };
 }
