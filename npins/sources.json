@@ -9,9 +9,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "2f0f812f69f3eb4140157fe15e12739adf82e32a",
-      "url": "https://github.com/ryantm/agenix/archive/2f0f812f69f3eb4140157fe15e12739adf82e32a.tar.gz",
-      "hash": "sha256-wyT7Pl6tMFbFrs8Lk/TlEs81N6L+VSybPfiIgzU8lbQ="
+      "revision": "9ba0d85de3eaa7afeab493fed622008b6e4924f5",
+      "url": "https://github.com/ryantm/agenix/archive/9ba0d85de3eaa7afeab493fed622008b6e4924f5.tar.gz",
+      "hash": "sha256-lsNWuj4Z+pE7s0bd2OKicOFq9bK86JE0ZGeKJbNqb94="
     },
     "firefox-gnome-theme": {
       "type": "Git",
@@ -35,9 +35,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "1830716059bfee7cbcfbfcc38d7be98e482a5762",
-      "url": "https://github.com/nix-community/home-manager/archive/1830716059bfee7cbcfbfcc38d7be98e482a5762.tar.gz",
-      "hash": "sha256-nY4vyN1QdHhC5Gj3545fI2Y7FSr/gs8ID4gPmF8HPww="
+      "revision": "c6d4cb31d7cef3a6deb16a6734f100e3f3a55122",
+      "url": "https://github.com/nix-community/home-manager/archive/c6d4cb31d7cef3a6deb16a6734f100e3f3a55122.tar.gz",
+      "hash": "sha256-W/l4Bjrd8XQtNwDgFO6WvBmRUtRIDRadYYFQy9912dw="
     },
     "nilla": {
       "type": "GitRelease",
@@ -113,8 +113,8 @@
     "nixpkgs": {
       "type": "Channel",
       "name": "nixos-unstable",
-      "url": "https://releases.nixos.org/nixos/unstable/nixos-25.11pre883951.6a08e6bb4e46/nixexprs.tar.xz",
-      "hash": "sha256-5bRIcZ2GZ+Wo3XrFVcFWGDIjycGp53B/9TNj1r4Iwsc="
+      "url": "https://releases.nixos.org/nixos/unstable/nixos-25.11pre886100.08dacfca559e/nixexprs.tar.xz",
+      "hash": "sha256-PKG8NzUgzoac3iAe12zo2EjcXJTAPWE+2dh0+t35J4M="
     },
     "npins": {
       "type": "Git",
