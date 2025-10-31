@@ -110,6 +110,19 @@
       "url": "https://github.com/cynicsketch/nix-mineral/archive/395384ceabc7f1b04dc32fa92654f3cc3294f330.tar.gz",
       "hash": "sha256-Dh6zq3IvLjU3wkmoM/5oVTQ0tIBn6Rm1KJ0Ri4k0yQQ="
     },
+    "nix-monitored": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "ners",
+        "repo": "nix-monitored"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "60f3baa4701d58eab86c2d1d9c3d7e820074d461",
+      "url": "https://github.com/ners/nix-monitored/archive/60f3baa4701d58eab86c2d1d9c3d7e820074d461.tar.gz",
+      "hash": "sha256-Z8PknjkmIr/8ZCH+dmc2Pc+UltiOr7/oKg37PXuVvuU="
+    },
     "nixpkgs": {
       "type": "Git",
       "repository": {

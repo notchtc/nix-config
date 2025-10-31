@@ -12,12 +12,13 @@ let
 in
 {
   imports = [
+    ./monitored.nix
     ./substituters.nix
     ./tools.nix
   ];
 
   nix = {
-    package = pkgs.lixPackageSets.git.lix;
+    package = pkgs.nix-monitored;
 
     channel.enable = false;
 
