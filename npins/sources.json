@@ -111,10 +111,17 @@
       "hash": "sha256-Dh6zq3IvLjU3wkmoM/5oVTQ0tIBn6Rm1KJ0Ri4k0yQQ="
     },
     "nixpkgs": {
-      "type": "Channel",
-      "name": "nixos-unstable",
-      "url": "https://releases.nixos.org/nixos/unstable/nixos-25.11pre886100.08dacfca559e/nixexprs.tar.xz",
-      "hash": "sha256-PKG8NzUgzoac3iAe12zo2EjcXJTAPWE+2dh0+t35J4M="
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "notchtc",
+        "repo": "nixpkgs"
+      },
+      "branch": "personal",
+      "submodules": false,
+      "revision": "faca56807d9bccb7be6c865fdc1cdb436926645d",
+      "url": "https://github.com/notchtc/nixpkgs/archive/faca56807d9bccb7be6c865fdc1cdb436926645d.tar.gz",
+      "hash": "sha256-3gv0hEu9C9D0JsKkEbYjj1aiND6Mnr1FpnhhT2IiQLk="
     },
     "npins": {
       "type": "Git",
