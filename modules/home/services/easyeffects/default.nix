@@ -4,12 +4,14 @@
   pkgs,
   ...
 }:
+let
+  inherit (lib) mkIf;
+  graphical = config.mama.profiles.graphical.enable;
+in
 {
-  config = lib.mkIf config.mama.profiles.graphical.enable {
-    services.easyeffects = {
-      enable = true;
-      preset = "LoudnessEqualizer";
-    };
+  config.services.easyeffects = mkIf graphical {
+    enable = true;
+    preset = "LoudnessEqualizer";
 
     xdg.configFile = {
       "easyeffects/output/SonyMDR-ZX310.json".source = ./sonymdr-zx310.json;

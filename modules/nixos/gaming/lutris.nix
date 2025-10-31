@@ -4,12 +4,14 @@
   pkgs,
   ...
 }:
+let
+  inherit (lib) mkEnableOption mkIf;
+  inherit (config.mama.profiles) gaming;
+in
 {
-  options.mama.profiles.gaming.lutris.enable = lib.mkEnableOption "Lutris" // {
-    default = config.mama.profiles.gaming.enable;
+  options.mama.profiles.gaming.lutris.enable = mkEnableOption "Lutris" // {
+    default = gaming.enable;
   };
 
-  config.environment.systemPackages = lib.mkIf config.mama.profiles.gaming.lutris.enable [
-    pkgs.lutris
-  ];
+  config.environment.systemPackages = mkIf gaming.lutris.enable [ pkgs.lutris ];
 }

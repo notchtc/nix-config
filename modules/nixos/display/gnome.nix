@@ -4,8 +4,12 @@
   pkgs,
   ...
 }:
+let
+  inherit (lib) attrValues mkIf;
+  inherit (config.mama) desktop;
+in
 {
-  config = lib.mkIf config.mama.desktops.gnome.enable {
+  config = mkIf (desktop == "gnome") {
     services = {
       displayManager.gdm.enable = true;
       desktopManager.gnome.enable = true;
@@ -22,7 +26,7 @@
         QT_WAYLAND_DECORATION = "adwaita";
       };
 
-      systemPackages = lib.attrValues {
+      systemPackages = attrValues {
         inherit (pkgs)
           ffmpegthumbnailer
           gnome-calculator
@@ -33,7 +37,7 @@
           ;
       };
 
-      gnome.excludePackages = lib.attrValues { inherit (pkgs) gnome-backgrounds gnome-tour; };
+      gnome.excludePackages = attrValues { inherit (pkgs) gnome-backgrounds gnome-tour; };
     };
   };
 }

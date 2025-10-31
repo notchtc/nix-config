@@ -1,15 +1,14 @@
 { config, pkgs, ... }:
+let
+  graphical = config.mama.profiles.graphical.enable;
+in
 {
   imports = [ ./loader.nix ];
 
   system.nixos-init.enable = true;
   boot = {
     enableContainers = false;
-    kernelPackages =
-      if config.mama.profiles.graphical.enable then
-        pkgs.linuxPackages_zen
-      else
-        pkgs.linuxPackages_hardened;
+    kernelPackages = if graphical then pkgs.linuxPackages_zen else pkgs.linuxPackages_hardened;
 
     kernelParams = [
       "systemd.show_status=auto"

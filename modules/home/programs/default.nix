@@ -6,7 +6,8 @@
 }:
 let
   inherit (lib) attrValues mergeAttrsList optionalAttrs;
-  cfg = config.mama;
+  graphical = config.mama.profiles.graphical.enable;
+  inherit (config.mama) desktop;
 in
 {
   imports = [
@@ -27,7 +28,7 @@ in
   home.packages = attrValues (mergeAttrsList [
     { inherit (pkgs) ffmpeg; }
 
-    (optionalAttrs cfg.profiles.graphical.enable {
+    (optionalAttrs graphical {
       inherit (pkgs)
         cardinal
         gimp3
@@ -40,8 +41,8 @@ in
         ;
     })
 
-    (optionalAttrs cfg.desktops.gnome.enable { inherit (pkgs) papers pwvucontrol quodlibet-full; })
-    (optionalAttrs cfg.desktops.plasma.enable { inherit (pkgs) haruna strawberry; })
+    (optionalAttrs (desktop == "gnome") { inherit (pkgs) papers pwvucontrol quodlibet-full; })
+    (optionalAttrs (desktop == "plasma") { inherit (pkgs) haruna strawberry; })
   ]);
 
   programs = {
@@ -50,7 +51,7 @@ in
     ripgrep.enable = true;
     zoxide.enable = true;
   }
-  // optionalAttrs cfg.profiles.graphical.enable {
+  // optionalAttrs graphical {
     foliate.enable = true;
     keepassxc.enable = true;
   };

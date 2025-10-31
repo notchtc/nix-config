@@ -5,8 +5,11 @@
   pkgs,
   ...
 }:
+let
+  inherit (config.mama) desktop;
+in
 {
-  config = lib.mkIf config.mama.desktops.gnome.enable {
+  config = lib.mkIf (desktop == "gnome") {
     dconf = {
       settings = with lib.hm.gvariant; {
         "org/gnome/shell" = {

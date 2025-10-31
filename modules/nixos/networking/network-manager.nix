@@ -1,6 +1,10 @@
 { config, lib, ... }:
+let
+  inherit (lib) mkIf;
+  server = config.mama.profiles.server.enable;
+in
 {
-  config = lib.mkIf (!config.mama.profiles.server.enable) {
+  config = mkIf (!server) {
     systemd.services.NetworkManager-wait-online.enable = false;
     networking.networkmanager = {
       enable = true;

@@ -5,7 +5,7 @@
   ...
 }:
 let
-  inherit (lib) getExe;
+  inherit (lib) getExe mkOrder;
   zcompdump = "${config.xdg.configHome}/zsh/.zcompdump";
 in
 {
@@ -61,7 +61,7 @@ in
       } &!
     '';
 
-    initContent = lib.mkOrder 1000 ''
+    initContent = mkOrder 1000 ''
       autoload -Uz add-zsh-hook
       autoload -U colors && colors
       autoload -Uz vcs_info

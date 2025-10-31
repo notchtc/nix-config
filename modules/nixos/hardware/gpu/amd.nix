@@ -1,6 +1,10 @@
 { config, lib, ... }:
+let
+  inherit (lib) elem mkIf;
+  inherit (config.mama.hardware) gpu;
+in
 {
-  config = lib.mkIf (lib.elem "amd" config.mama.hardware.gpu) {
+  config = mkIf (elem "amd" gpu) {
     services.xserver.videoDrivers = [ "amdgpu" ];
     boot.kernelModules = [ "amdgpu" ];
 

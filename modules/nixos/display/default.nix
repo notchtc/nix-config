@@ -1,4 +1,8 @@
 { config, lib, ... }:
+let
+  inherit (lib) mkIf;
+  graphical = config.mama.profiles.graphical.enable;
+in
 {
   imports = [
     ./fonts.nix
@@ -8,7 +12,7 @@
     ./variables.nix
   ];
 
-  config = lib.mkIf config.mama.profiles.graphical.enable {
+  config = mkIf graphical {
     boot.plymouth.enable = true;
     programs.dconf.enable = true;
     i18n.inputMethod.fcitx5.waylandFrontend = true;

@@ -1,7 +1,7 @@
 { config, lib, ... }:
 let
   inherit (lib) genAttrs;
-  cfg = config.mama.desktops;
+  inherit (config.mama) desktop;
 
   browser = [
     "application/json"
@@ -66,20 +66,20 @@ let
     (genAttrs browser (_: [ "Schizofox.desktop" ]))
     // (genAttrs audio (
       _:
-      if cfg.gnome.enable then
+      if desktop == "gnome" then
         [ "io.github.quodlibet.QuodLibet.desktop" ]
       else
         [ "org.strawberrymusicplayer.strawberry.desktop" ]
     ))
     // (genAttrs image (
-      _: if cfg.plasma.enable then [ "org.kde.gwenview.desktop" ] else [ "org.gnome.Loupe.desktop" ]
+      _: if desktop == "plasma" then [ "org.kde.gwenview.desktop" ] else [ "org.gnome.Loupe.desktop" ]
     ))
     // (genAttrs text (_: [ "Helix.desktop" ]))
-    // genAttrs video (_: if cfg.plasma.enable then [ "org.kde.haruna.desktop" ] else "mpv.desktop")
+    // genAttrs video (_: if desktop == "plasma" then [ "org.kde.haruna.desktop" ] else "mpv.desktop")
     // genAttrs torrent (_: [ "org.qbittorrent.qBittorrent.desktop" ])
     // {
       "application/pdf" =
-        if cfg.plasma.enable then [ "org.kde.okular" ] else [ "org.gnome.Papers.desktop" ];
+        if desktop == "plasma" then [ "org.kde.okular" ] else [ "org.gnome.Papers.desktop" ];
       "x-scheme-handler/discord" = [ "vesktop.desktop" ];
       "x-scheme-handler/steam" = [ "steam.desktop" ];
       "x-scheme-handler/tg" = [ "org.telegram.desktop.desktop" ];

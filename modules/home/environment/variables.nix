@@ -4,6 +4,10 @@
   pkgs,
   ...
 }:
+let
+  inherit (lib) optionalAttrs;
+  graphical = config.mama.profiles.graphical.enable;
+in
 {
   home.sessionVariables = {
     PAGER = "less -FR";
@@ -11,7 +15,7 @@
     SSH_ASKPASS_REQUIRE = "prefer";
     VISUAL = config.home.sessionVariables.EDITOR;
   }
-  // lib.optionalAttrs config.mama.profiles.graphical.enable {
+  // optionalAttrs graphical {
     BROWSER = "schizofox";
     TERMINAL = "${pkgs.ghostty}/bin/ghostty";
   };

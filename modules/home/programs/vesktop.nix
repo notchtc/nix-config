@@ -1,6 +1,10 @@
 { config, lib, ... }:
+let
+  inherit (lib) mkIf;
+  graphical = config.mama.profiles.graphical.enable;
+in
 {
-  programs.vesktop = lib.mkIf config.mama.profiles.graphical.enable {
+  programs.vesktop = mkIf graphical {
     enable = true;
 
     settings = {

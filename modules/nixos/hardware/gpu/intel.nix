@@ -4,8 +4,12 @@
   pkgs,
   ...
 }:
+let
+  inherit (lib) elem mkIf;
+  inherit (config.mama.hardware) gpu;
+in
 {
-  config = lib.mkIf (lib.elem "intel" config.mama.hardware.gpu) {
+  config = mkIf (elem "intel" gpu) {
     boot.initrd.kernelModules = [ "i915" ];
     services.xserver.videoDrivers = [ "modesetting" ];
 

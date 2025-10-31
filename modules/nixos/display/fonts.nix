@@ -4,11 +4,15 @@
   pkgs,
   ...
 }:
+let
+  inherit (lib) attrValues mkIf;
+  graphical = config.mama.profiles.graphical.enable;
+in
 {
-  config = lib.mkIf config.mama.profiles.graphical.enable {
+  config = mkIf graphical {
     fonts = {
       enableDefaultPackages = true;
-      packages = lib.attrValues {
+      packages = attrValues {
         inherit (pkgs) corefonts sarasa-gothic;
         nerd-fonts = pkgs.nerd-fonts.symbols-only;
       };

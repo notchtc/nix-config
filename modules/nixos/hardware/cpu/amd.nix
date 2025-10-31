@@ -1,6 +1,10 @@
 { config, lib, ... }:
+let
+  inherit (lib) mkIf;
+  inherit (config.mama.hardware) cpu;
+in
 {
-  config = lib.mkIf (config.mama.hardware.cpu == "amd") {
+  config = mkIf (cpu == "amd") {
     hardware.cpu.amd.updateMicrocode = true;
 
     boot = {

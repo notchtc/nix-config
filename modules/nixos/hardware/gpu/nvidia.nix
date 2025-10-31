@@ -4,8 +4,12 @@
   pkgs,
   ...
 }:
+let
+  inherit (lib) elem mkIf;
+  inherit (config.mama.hardware) gpu;
+in
 {
-  config = lib.mkIf (lib.elem "nvidia" config.mama.hardware.gpu) {
+  config = mkIf (elem "nvidia" gpu) {
     services.xserver.videoDrivers = [ "nvidia" ];
 
     hardware = {

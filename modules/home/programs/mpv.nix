@@ -4,8 +4,13 @@
   lib,
   ...
 }:
+let
+  inherit (lib) attrValues mkIf;
+  graphical = config.mama.profiles.graphical.enable;
+  inherit (config.mama) desktop;
+in
 {
-  programs = lib.mkIf (config.mama.profiles.graphical.enable && !config.mama.desktops.plasma.enable) {
+  programs = mkIf (graphical && desktop != "plasma") {
     yt-dlp.enable = true;
     mpv = {
       enable = true;
@@ -57,7 +62,7 @@
         demuxer-max-bytes = "20M";
       };
 
-      scripts = lib.attrValues {
+      scripts = attrValues {
         inherit (pkgs.mpvScripts)
           modernx-zydezu
           mpris

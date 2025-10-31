@@ -5,12 +5,14 @@
   ...
 }:
 let
-  cfg = config.mama.desktops;
+  inherit (lib) mkIf optionalAttrs;
+  inherit (config.mama) desktop;
+  graphical = config.mama.profiles.graphical.enable;
 in
 {
   imports = [ inputs.schizofox.result.homeManagerModules.default ];
 
-  programs.schizofox = lib.mkIf config.mama.profiles.graphical.enable {
+  programs.schizofox = mkIf graphical {
     enable = true;
 
     search.defaultSearchEngine = "DuckDuckGo";
@@ -26,7 +28,7 @@ in
       "layers.acceleration.force-enabled" = true;
       "svg.context-properties.content.enabled" = true;
     }
-    // lib.optionalAttrs cfg.gnome.enable {
+    // optionalAttrs (desktop == "gnome") {
       "gnomeTheme.bookmarksToolbarUnderTabs" = true;
       "gnomeTheme.hideWebrtcIndicator" = true;
       "gnomeTheme.normalWidthTabs" = true;
@@ -72,7 +74,7 @@ in
       defaultUserContent.enable = false;
 
       extraUserChrome =
-        if cfg.gnome.enable then
+        if desktop == "gnome" then
           ''
             @import "${inputs.firefox-gnome-theme.result}/userChrome.css"
           ''

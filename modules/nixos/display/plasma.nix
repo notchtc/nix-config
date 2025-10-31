@@ -4,8 +4,13 @@
   pkgs,
   ...
 }:
+let
+  inherit (lib) attrValues mkIf;
+  inherit (pkgs) kdePackages;
+  inherit (config.mama) desktop;
+in
 {
-  config = lib.mkIf config.mama.desktops.plasma.enable {
+  config = mkIf (desktop == "plasma") {
     services = {
       displayManager.sddm.enable = true;
       desktopManager.plasma6.enable = true;
@@ -13,13 +18,13 @@
 
     programs.ssh = {
       enableAskPassword = true;
-      askPassword = "${pkgs.kdePackages.ksshaskpass}/bin/ksshaskpass";
+      askPassword = "${kdePackages.ksshaskpass}/bin/ksshaskpass";
     };
 
     environment = {
       variables.KWIN_USE_OVERLAYS = 1;
-      plasma6.excludePackages = lib.attrValues {
-        inherit (pkgs.kdePackages)
+      plasma6.excludePackages = attrValues {
+        inherit (kdePackages)
           elisa
           kate
           konsole

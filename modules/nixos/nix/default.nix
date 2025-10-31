@@ -5,6 +5,11 @@
   project,
   ...
 }:
+let
+  inherit (lib) mapAttrs' mkForce optionalAttrs;
+  inherit (lib.strings) isStringLike hasPrefix;
+  graphical = config.mama.profiles.graphical.enable;
+in
 {
   imports = [
     ./substituters.nix
@@ -50,21 +55,18 @@
       options = "--delete-older-than 7d";
     };
   }
-  // lib.optionalAttrs config.mama.profiles.graphical.enable {
+  // optionalAttrs graphical {
     daemonCPUSchedPolicy = "idle";
     daemonIOSchedClass = "idle";
     daemonIOSchedPriority = 7;
   };
 
   environment = {
-    variables.NIXPKGS_CONFIG = lib.mkForce "";
-    etc = lib.mapAttrs' (name: value: {
+    variables.NIXPKGS_CONFIG = mkForce "";
+    etc = mapAttrs' (name: value: {
       name = "nix/inputs/${name}";
       value.source =
-        if
-          (lib.strings.isStringLike value.result)
-          && (lib.strings.hasPrefix builtins.storeDir (toString value.result))
-        then
+        if (isStringLike value.result) && (hasPrefix builtins.storeDir (toString value.result)) then
           builtins.storePath value.result
         else
           builtins.storePath value.src;

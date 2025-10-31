@@ -1,6 +1,6 @@
 { config, lib, ... }:
 let
-  cfg = config.mama.desktops;
+  inherit (config.mama) desktop;
 in
 {
   programs.ghostty = lib.mkIf config.mama.profiles.graphical.enable {
@@ -10,9 +10,9 @@ in
       font-family = "Sarasa Term J";
       font-size = 11;
       theme =
-        if cfg.gnome.enable then
+        if desktop == "gnome" then
           "dark:Adwaita Dark,light:Adwaita Dark"
-        else if cfg.plasma.enable then
+        else if desktop == "plasma" then
           "dark:Breeze,light:Ayu Light"
         else
           "dark:Gruvbox Dark Hard,light:Gruvbox Light Hard";

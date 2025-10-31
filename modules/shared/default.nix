@@ -1,13 +1,17 @@
 { lib, ... }:
 let
-  inherit (lib) mkEnableOption;
+  inherit (lib) mkEnableOption mkOption;
+  inherit (lib.types) enum nullOr;
 in
 {
   options.mama = {
-    desktops = {
-      gnome.enable = mkEnableOption "Gnome";
-      plasma.enable = mkEnableOption "Plasma";
+    desktop = mkOption {
+      type = nullOr (enum [
+        "gnome"
+        "plasma"
+      ]);
     };
+
     profiles = {
       graphical.enable = mkEnableOption "Graphical environment";
       laptop.enable = mkEnableOption "Laptop";

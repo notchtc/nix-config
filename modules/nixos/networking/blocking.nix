@@ -1,6 +1,10 @@
 { config, lib, ... }:
+let
+  inherit (lib) mkIf;
+  server = config.mama.profiles.server.enable;
+in
 {
-  networking.stevenblack = lib.mkIf (!config.mama.profiles.server.enable) {
+  networking.stevenblack = mkIf (!server) {
     enable = true;
     block = [
       "fakenews"

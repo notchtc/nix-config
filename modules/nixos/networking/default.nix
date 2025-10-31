@@ -4,6 +4,10 @@
   lib,
   ...
 }:
+let
+  inherit (lib) mkIf;
+  server = config.mama.profiles.server.enable;
+in
 {
   imports = [
     ./blocking.nix
@@ -18,7 +22,7 @@
     hostId = builtins.substring 0 8 (builtins.hashString "md5" host);
 
     useDHCP = false;
-    useNetworkd = lib.mkIf config.mama.profiles.server.enable true;
+    useNetworkd = mkIf server true;
 
     nftables.enable = true;
 

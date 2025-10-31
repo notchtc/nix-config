@@ -4,10 +4,14 @@
   lib,
   ...
 }:
+let
+  inherit (lib) mkIf;
+  inherit (config.mama) desktop;
+in
 {
   imports = [ "${inputs.plasma-manager.result}/modules/default.nix" ];
 
-  programs.plasma = lib.mkIf config.mama.desktops.plasma.enable {
+  programs.plasma = mkIf (desktop == "plasma") {
     enable = true;
     immutableByDefault = true;
     overrideConfig = true;
