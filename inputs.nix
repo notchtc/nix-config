@@ -5,7 +5,6 @@ let
   loaders = {
     agenix = "raw";
     plasma-manager = "raw";
-    preservation = "raw";
   };
 
   settings = {
