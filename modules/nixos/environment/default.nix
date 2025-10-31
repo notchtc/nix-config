@@ -9,5 +9,8 @@
   ];
 
   environment.stub-ld.enable = false;
-  system.etc.overlay.enable = true;
+  system.etc.overlay = {
+    enable = true;
+    mutable = false;
+  };
 }
