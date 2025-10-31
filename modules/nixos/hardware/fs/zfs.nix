@@ -22,7 +22,7 @@
     };
   };
 
-  fileSystems = lib.genAttrs [ "/persist" "/nix" "/var/log" "/var/lib" ] (fs: {
+  fileSystems = lib.genAttrs [ "/etc/ssh" "/nix" "/var/log" "/var/lib" ] (fs: {
     device = "${host}/NixOS${lib.optionalString (fs != "/") fs}";
     fsType = "zfs";
     options = [ "zfsutil" ];

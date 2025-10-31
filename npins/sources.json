@@ -163,19 +163,6 @@
       "url": "https://github.com/nix-community/plasma-manager/archive/27dfa61b64d0cdb8e4ba6f3aaa4d4e067d64cb5c.tar.gz",
       "hash": "sha256-JNJesbe9MMN1Brq41BHEpuH+Z+Zg74y/nI5AFZX84Vw="
     },
-    "preservation": {
-      "type": "Git",
-      "repository": {
-        "type": "GitHub",
-        "owner": "nix-community",
-        "repo": "preservation"
-      },
-      "branch": "main",
-      "submodules": false,
-      "revision": "93416f4614ad2dfed5b0dcf12f27e57d27a5ab11",
-      "url": "https://github.com/nix-community/preservation/archive/93416f4614ad2dfed5b0dcf12f27e57d27a5ab11.tar.gz",
-      "hash": "sha256-mMI9IanU+Xw+pVogD2oT0I2kTmvz2Un/Apc5+CwUpEY="
-    },
     "run0-sudo-shim": {
       "type": "Git",
       "repository": {

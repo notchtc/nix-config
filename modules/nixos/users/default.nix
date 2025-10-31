@@ -1,10 +1,4 @@
-{
-  config,
-  lib,
-  pkgs,
-  project,
-  ...
-}:
+{ pkgs, project, ... }:
 {
   imports = [
     "${project.inputs.agenix.result}/modules/age.nix"
@@ -19,6 +13,6 @@
 
   services.userborn = {
     enable = true;
-    passwordFilesLocation = lib.mkIf config.mama.system.ephemeral.enable "/persist/etc/";
+    passwordFilesLocation = "/var/lib/nixos";
   };
 }

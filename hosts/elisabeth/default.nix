@@ -1,6 +1,6 @@
 {
   mama = {
-    desktops.plasma.enable = true;
+    desktop = "plasma";
     hardware = {
       cpu = "amd";
       gpu = [
@@ -13,10 +13,7 @@
       graphical.enable = true;
       laptop.enable = true;
     };
-    system = {
-      ephemeral.enable = true;
-      secure-boot.enable = true;
-    };
+    system.secure-boot.enable = true;
   };
 
   boot.kernelParams = [ "amdgpu.sg_display=0" ];

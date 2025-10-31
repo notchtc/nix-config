@@ -1,4 +1,3 @@
-{ config, lib, ... }:
 {
   services.openssh = {
     enable = true;
@@ -41,12 +40,12 @@
     hostKeys = [
       {
         bits = 4096;
-        path = "${lib.optionalString config.mama.system.ephemeral.enable "/persist"}/etc/ssh/ssh_host_rsa_key";
+        path = "/etc/ssh/ssh_host_rsa_key";
         type = "rsa";
       }
       {
         bits = 4096;
-        path = "${lib.optionalString config.mama.system.ephemeral.enable "/persist"}/etc/ssh/ssh_host_ed25519_key";
+        path = "/etc/ssh/ssh_host_ed25519_key";
         type = "ed25519";
       }
     ];
