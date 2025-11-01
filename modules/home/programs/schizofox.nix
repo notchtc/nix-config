@@ -17,6 +17,12 @@ in
 
     search.defaultSearchEngine = "DuckDuckGo";
     settings = {
+      "browser.tabs.inTitlebar" = 0;
+      "findbar.highlightAll" = true;
+      "sidebar.main.tools" = "history,bookmarks";
+      "sidebar.verticalTabs" = true;
+      "sidebar.visibility" = "expand-on-hover";
+
       "dom.event.clipboardevents.enabled" = true;
       "privacy.resistFingerprinting" = false;
       "privacy.resistFingerprinting.letterboxing" = false;
