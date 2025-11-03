@@ -17,7 +17,7 @@ in
 
   config.environment.systemPackages = mkIf gaming.openmw.enable (attrValues {
     inherit (project.inputs.openmw-nix.result.packages.${system})
-      delta-plugin
+      #      delta-plugin
       momw-configurator
       openmw-validator
       s3lightfixes
