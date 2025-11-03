@@ -8,8 +8,8 @@
     ./firmware.nix
     ./fs
     ./gpu
+    ./laptop.nix
     ./media
-    ./tuned.nix
   ];
 
   nixpkgs.hostPlatform = "${system}";
