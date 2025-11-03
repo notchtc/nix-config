@@ -64,11 +64,11 @@
             args = [ "-s" ];
           };
         }
-        {
-          name = "typst";
-          auto-format = true;
-          formatter.command = "${pkgs.typstyle}/bin/typstyle";
-        }
+        #{
+        #  name = "typst";
+        #  auto-format = true;
+        #  formatter.command = "${pkgs.typstyle}/bin/typstyle";
+        #}
       ];
       language-server.nixd = {
         config.nixd.options = {
