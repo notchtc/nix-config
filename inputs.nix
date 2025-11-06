@@ -13,7 +13,6 @@ let
     nix-index-database.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
     openmw-nix.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
     run0-sudo-shim.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
-    schizofox.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
   };
 in
 {

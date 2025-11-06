@@ -13,16 +13,16 @@ in
   imports = [
     ./bat.nix
     ./difftastic.nix
-    ./ghostty.nix
-    ./mpv.nix
-    ./schizofox.nix
-    ./vesktop.nix
-    ./zsh.nix
-    ./nix-index.nix
     ./eza.nix
+    ./ghostty.nix
+    ./git.nix
     ./helix.nix
     ./jj.nix
-    ./git.nix
+    ./librewolf.nix
+    ./mpv.nix
+    ./nix-index.nix
+    ./vesktop.nix
+    ./zsh.nix
   ];
 
   home.packages = attrValues (mergeAttrsList [

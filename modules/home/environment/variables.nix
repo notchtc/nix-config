@@ -16,7 +16,7 @@ in
     VISUAL = config.home.sessionVariables.EDITOR;
   }
   // optionalAttrs graphical {
-    BROWSER = "schizofox";
+    BROWSER = "librewolf";
     TERMINAL = "${pkgs.ghostty}/bin/ghostty";
   };
 }

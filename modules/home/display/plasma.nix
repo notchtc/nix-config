@@ -101,7 +101,7 @@ in
             iconTasks = {
               launchers = [
                 "applications:org.kde.dolphin.desktop"
-                "applications:Schizofox.desktop"
+                "applications:librewolf.desktop"
                 "applications:org.strawberrymusicplayer.strawberry.desktop"
                 "applications:org.telegram.desktop.desktop"
                 "applications:vesktop.desktop"
@@ -149,20 +149,15 @@ in
 
     window-rules = [
       {
-        description = "Schizofox";
+        description = "Librewolf";
         match = {
           window-class = {
-            value = "firefox";
+            value = "librewolf";
             type = "substring";
           };
         };
 
         apply = {
-          desktopfile = {
-            value = "Schizofox";
-            apply = "force";
-          };
-
           desktops = {
             value = "Desktop_1";
             apply = "initially";

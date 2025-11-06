@@ -188,19 +188,6 @@
       "revision": "84b51f45909a281158538813a1e684cbb5c7d51c",
       "url": "https://github.com/LordGrimmauld/run0-sudo-shim/archive/84b51f45909a281158538813a1e684cbb5c7d51c.tar.gz",
       "hash": "sha256-Uobq7AbuyijTh3Frf+89KnWrcLjUZwai+c8LwV+wM1k="
-    },
-    "schizofox": {
-      "type": "Git",
-      "repository": {
-        "type": "GitHub",
-        "owner": "schizofox",
-        "repo": "schizofox"
-      },
-      "branch": "main",
-      "submodules": false,
-      "revision": "428833d6a0fbc577b05de130a9bc3c99b027d8da",
-      "url": "https://github.com/schizofox/schizofox/archive/428833d6a0fbc577b05de130a9bc3c99b027d8da.tar.gz",
-      "hash": "sha256-BGHVikTQAMlGuxhJ3BHh5meuylDh1CZd8I3XGgIK5Hc="
     }
   },
   "version": 7
