@@ -68,13 +68,18 @@ in
           * cdnjs.cloudflare.com * noop
           * challenges.cloudflare.com * noop
           * discourse-cdn.com * noop
+          * jsdelivr.map.fastly.net * noop
+          * cdn.jsdelivr.net * noop
           bandcamp.com bcbits.com * noop
           bandcamp.com core.spreedly.com * noop
           facebook.com meta-api.arkoselabs.com * noop
           facebook.com static.xx.fbcdn.net * noop
           facebook.com www.fbsbx.com * noop
           github.com github.githubassets.com * noop
+          www.instagram.com static.cdninstagram.com * noop
           forum.jrockone.com jrockone.b-cdn.net * noop
+          www.last.fm js-agent.newrelic.com * noop
+          rateyourmusic.com e.snmc.io * noop
           www.reddit.com dualstack.reddit.map.fastly.net * noop
           www.reddit.com www.redditstatic.com * noop
           accounts.spotify.com accounts.scdn.co * noop
