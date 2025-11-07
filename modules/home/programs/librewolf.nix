@@ -16,7 +16,6 @@ in
     nativeMessagingHosts = mkIf (desktop == "plasma") [ pkgs.kdePackages.plasma-browser-integration ];
 
     policies = {
-      PasswordManagerEnabled = false;
       ExtensionSettings =
         let
           install = id: {
@@ -26,33 +25,20 @@ in
             };
           };
         in
-        {
-          "uBlock0@raymondhill.net".installation_mode = "blocked";
-        }
-        // install "adnauseam@rednoise.org"
-        // install "{1be309c5-3e4f-4b99-927d-bb500eb4fa88}" # Augmented Steam
+        install "{1be309c5-3e4f-4b99-927d-bb500eb4fa88}" # Augmented Steam
         // install "plasma-browser-integration@kde.org"
         // install "sponsorBlocker@ajay.app"
         // install "{a4c4eda4-fb84-4a84-b4a1-f7c1cbf2a1ad}" # Refined GitHub
         // install "V3-eov3cv@hotmail.com"
         // install "{aecec67f-0d10-4fa7-b7c7-609a2db280cf}"; # Violentmonkey
 
-      "3rdparty".Extensions."adnauseam@rednoise.org".adminSettings = builtins.toJSON {
+      "3rdparty".Extensions."uBlock0@raymondhill.net".adminSettings = builtins.toJSON {
         userSettings = {
-          firstInstall = false;
-          hidingAds = true;
-          clickingAds = true;
-          blockingMalware = true;
-
-          importedLists = [
-            "https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/LegitimateURLShortener.txt"
-          ];
+          advancedUserEnabled = true;
         };
 
         selectedFilterLists = [
           "user-filters"
-          "adnauseam-filters"
-          "eff-dnt-whitelist"
           "ublock-filters"
           "ublock-badware"
           "ublock-privacy"
@@ -60,22 +46,65 @@ in
           "ublock-unbreak"
           "easylist"
           "easyprivacy"
+          "LegitimateURLShortener"
           "adguard-spyware-url"
           "urlhaus-1"
+          "curben-phishing"
+          "plowe-0"
           "fanboy-cookiemonster"
           "ublock-cookies-easylist"
-          "https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/LegitimateURLShortener.txt"
+          "easylist-chat"
+          "easylist-newsletters"
+          "easylist-notifications"
+          "easylist-annoyances"
+          "POL-3"
+          "POL-0"
         ];
+
+        dynamicFilteringString = ''
+          no-csp-reports: * true
+          * * 3p-frame block
+          * * 3p-script block
+          * cdnjs.cloudflare.com * noop
+          * challenges.cloudflare.com * noop
+          * discourse-cdn.com * noop
+          bandcamp.com bcbits.com * noop
+          bandcamp.com core.spreedly.com * noop
+          facebook.com meta-api.arkoselabs.com * noop
+          facebook.com static.xx.fbcdn.net * noop
+          facebook.com www.fbsbx.com * noop
+          github.com github.githubassets.com * noop
+          forum.jrockone.com jrockone.b-cdn.net * noop
+          www.reddit.com dualstack.reddit.map.fastly.net * noop
+          www.reddit.com www.redditstatic.com * noop
+          accounts.spotify.com accounts.scdn.co * noop
+          challenge.spotify.com challenge.spotifycdn.com * noop
+          open.spotify.com spotifycdn.com * noop
+          steamcommunity.com community.fastly.steamstatic.com * noop
+          store.steampowered.com store.fastly.steamstatic.com * noop
+          x.com abs.twimg.com * noop
+          x.com twimg.twitter.map.fastly.net * noop
+        '';
+
+        userFilters = ''
+          facebook.com##+js(trusted-click-element, body > div[id^="mount"] #scrollview ~ div div[role="button"]:has(> div[data-visualcompletion="ignore"]) )
+          facebook.com##div[id^="mount"] div:not([id]):not([class]):not([style]) > div[data-nosnippet]
+          facebook.com##+js(aeld, scroll)
+          facebook.com##body > div[class*="__fb-light-mode"]  
+        '';
       };
     };
 
     profiles.default = {
       settings = {
+        "privacy.fingerprintingProtection" = true;
+        "privacy.fingerprintingProtection.overrides" =
+          "+AllTargets, -CSSPrefersColorScheme, -JSDateTimeUTC";
         "privacy.sanitize.sanitizeOnShutdown" = false;
         "privacy.resistFingerprinting" = false;
         "webgl.disabled" = false;
 
-        "browser.toolbars.bookmarks.visibility" = "newbar";
+        "browser.toolbars.bookmarks.visibility" = "never";
         "general.autoScroll" = true;
         "middlemouse.paste" = false;
         "findbar.highlightAll" = true;
@@ -100,7 +129,7 @@ in
               "downloads-button"
               "unified-extensions-button"
               "sponsorblocker_ajay_app-browser-action"
-              "adnauseam_rednoise_org-browser-action"
+              "ublock0_raymondhill_net-browser-action"
             ];
           };
           currentVersion = 23;
