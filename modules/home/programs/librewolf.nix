@@ -98,8 +98,7 @@ in
     profiles.default = {
       settings = {
         "privacy.fingerprintingProtection" = true;
-        "privacy.fingerprintingProtection.overrides" =
-          "+AllTargets, -CSSPrefersColorScheme, -JSDateTimeUTC";
+        "privacy.fingerprintingProtection.overrides" = "+AllTargets,-CSSPrefersColorScheme,-JSDateTimeUTC";
         "privacy.sanitize.sanitizeOnShutdown" = false;
         "privacy.resistFingerprinting" = false;
         "webgl.disabled" = false;
