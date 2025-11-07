@@ -80,6 +80,7 @@ in
           accounts.spotify.com accounts.scdn.co * noop
           challenge.spotify.com challenge.spotifycdn.com * noop
           open.spotify.com spotifycdn.com * noop
+          open.spotify.com spotifycdn.map.fastly.net * noop
           steamcommunity.com community.fastly.steamstatic.com * noop
           store.steampowered.com store.fastly.steamstatic.com * noop
           x.com abs.twimg.com * noop
