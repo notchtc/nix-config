@@ -211,6 +211,7 @@ in
       };
 
       "kdeglobals"."KDE" = {
+        "AnimationDurationFactor" = 0;
         "AutomaticLookAndFeel" = true;
         "AutomaticLookAndFeelOnIdle" = false;
       };
