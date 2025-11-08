@@ -35,9 +35,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "a5fee077929ae2f2800c3087dce5e1abb4edfbc6",
-      "url": "https://github.com/nix-community/home-manager/archive/a5fee077929ae2f2800c3087dce5e1abb4edfbc6.tar.gz",
-      "hash": "sha256-vr2aL1QLfERYTfYBgK8cW3T9eSdSEThH462wKaGlmEU="
+      "revision": "0562fef070a1027325dd4ea10813d64d2c967b39",
+      "url": "https://github.com/nix-community/home-manager/archive/0562fef070a1027325dd4ea10813d64d2c967b39.tar.gz",
+      "hash": "sha256-33YUsWpPyeBZEWrKQ2a1gkRZ7i0XCC/2MYpU6BVeQSU="
     },
     "nilla": {
       "type": "GitRelease",
@@ -66,10 +66,10 @@
       "version_upper_bound": null,
       "release_prefix": null,
       "submodules": false,
-      "version": "v0.0.0-alpha.10",
-      "revision": "865bfa1dd6263b36755f5297b7d7a245befe680e",
-      "url": "https://api.github.com/repos/nilla-nix/cli/tarball/v0.0.0-alpha.10",
-      "hash": "sha256-0+d6LZfofBG+4OxnZcFaNg2ycgj1zcOJQUcPL1TEaSc="
+      "version": "v0.0.0-alpha.11",
+      "revision": "aa042dbd9152c99e5a8db51bcf87306737423b9e",
+      "url": "https://api.github.com/repos/nilla-nix/cli/tarball/refs/tags/v0.0.0-alpha.11",
+      "hash": "sha256-cPdYYXhCsDllVgq+gs5Wqhb41bFtKWHlkTvjOJv7its="
     },
     "nilla-nixos": {
       "type": "Git",
@@ -132,9 +132,9 @@
       },
       "branch": "personal",
       "submodules": false,
-      "revision": "dff80daa0b23f867c65cc59a60336acba70b6ff5",
-      "url": "https://github.com/notchtc/nixpkgs/archive/dff80daa0b23f867c65cc59a60336acba70b6ff5.tar.gz",
-      "hash": "sha256-VxRIqvIcEDob1oa2tX3vcq2Mvi5ncg48a0bHEqk/F0w="
+      "revision": "6fb30c194bf3265011f53619da9115fbf0bfa29d",
+      "url": "https://github.com/notchtc/nixpkgs/archive/6fb30c194bf3265011f53619da9115fbf0bfa29d.tar.gz",
+      "hash": "sha256-rZZbk/dqHtY/Ca1Fw8waz2SPDrGmkDTU5eXPx6ZIymM="
     },
     "npins": {
       "type": "Git",
@@ -172,9 +172,9 @@
       },
       "branch": "trunk",
       "submodules": false,
-      "revision": "8e9e76efa3cc811c230512b40d8cfde06e40da5b",
-      "url": "https://github.com/nix-community/plasma-manager/archive/8e9e76efa3cc811c230512b40d8cfde06e40da5b.tar.gz",
-      "hash": "sha256-KREKZiBAkAnqJC+jvY+vSbLlrg8j6DFEU7Lv+tgOlHI="
+      "revision": "6296d7100cc84b2ff732b7c103a50c2856974cf6",
+      "url": "https://github.com/nix-community/plasma-manager/archive/6296d7100cc84b2ff732b7c103a50c2856974cf6.tar.gz",
+      "hash": "sha256-Vbhluvk15qwiyNDyPd9tjJh9gxIfUjbKVT79c05Pd3I="
     },
     "run0-sudo-shim": {
       "type": "Git",
