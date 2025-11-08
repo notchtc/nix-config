@@ -65,19 +65,25 @@ in
           no-csp-reports: * true
           * * 3p-frame block
           * * 3p-script block
+          * ajax.googleapis.com * noop
           * cdnjs.cloudflare.com * noop
           * challenges.cloudflare.com * noop
           * discourse-cdn.com * noop
           * jsdelivr.map.fastly.net * noop
           * cdn.jsdelivr.net * noop
+          * unpkg.com * noop
           bandcamp.com bcbits.com * noop
+          bandcamp.com dualstack.n.sni.global.fastly.net * noop
           bandcamp.com core.spreedly.com * noop
+          www.discogs.com catalog-assets.discogs.com.cdn.cloudflare.net * noop
+          home-manager-options.extranix.com maxcdn.bootstrapcdn.com * noop
           facebook.com meta-api.arkoselabs.com * noop
           facebook.com static.xx.fbcdn.net * noop
           facebook.com www.fbsbx.com * noop
           github.com github.githubassets.com * noop
           www.instagram.com static.cdninstagram.com * noop
           forum.jrockone.com jrockone.b-cdn.net * noop
+          www.last.fm cdn.jsdelivr.net.cdn.cloudflare.net * noop
           www.last.fm js-agent.newrelic.com * noop
           rateyourmusic.com e.snmc.io * noop
           www.reddit.com dualstack.reddit.map.fastly.net * noop
@@ -118,8 +124,10 @@ in
         "sidebar.visibility" = "expand-on-hover";
         "toolkit.tabbox.switchByScrolling" = true;
 
-        "media.ffmpeg.vaapi.enabled" = true;
+        "gfx.webrender.all" = true;
         "layers.acceleration.force-enabled" = true;
+        "media.ffmpeg.vaapi.enabled" = true;
+        "media.hardware-video-decoding.force-enabled" = true;
         "svg.context-properties.content.enabled" = true;
 
         "browser.uiCustomization.state" = builtins.toJSON {
@@ -146,6 +154,61 @@ in
         "gnomeTheme.normalWidthTabs" = true;
       }
       // optionalAttrs (desktop == "plasma") { "browser.tabs.inTitlebar" = 0; };
+
+      search = {
+        default = "ddg";
+        force = true;
+
+        engines = {
+          bing.metaData.hidden = true;
+          google.metaData.hidden = true;
+          perplexity.metaData.hidden = true;
+
+          nixpkgs = {
+            name = "Nixpkgs query";
+            definedAliases = [ "!nix" ];
+            icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+
+            urls = [
+              {
+                template = "https://search.nixos.org/packages";
+                params = [
+                  {
+                    name = "channel";
+                    value = "unstable";
+                  }
+                  {
+                    name = "query";
+                    value = "{searchTerms}";
+                  }
+                ];
+              }
+            ];
+          };
+
+          home-manager = {
+            name = "Home-Manager query";
+            definedAliases = [ "!hm" ];
+            icon = "https://home-manager-options.extranix.com/images/favicon.png";
+
+            urls = [
+              {
+                template = "https://home-manager-options.extranix.com";
+                params = [
+                  {
+                    name = "query";
+                    value = "{searchTerms}";
+                  }
+                  {
+                    name = "release";
+                    value = "master";
+                  }
+                ];
+              }
+            ];
+          };
+        };
+      };
 
       userChrome = mkIf (desktop == "gnome") ''
         @import "${inputs.firefox-gnome-theme.result}/userChrome.css"
