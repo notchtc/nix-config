@@ -53,10 +53,20 @@ in
           "plowe-0"
           "fanboy-cookiemonster"
           "ublock-cookies-easylist"
+          "adguard-cookies"
+          "ublock-cookies-adguard"
+          "fanboy-social"
+          "adguard-social"
+          "fanboy-thirdparty_social"
           "easylist-chat"
           "easylist-newsletters"
           "easylist-notifications"
           "easylist-annoyances"
+          "adguard-mobile-app-banners"
+          "adguard-other-annoyances"
+          "adguard-popup-overlays"
+          "adguard-widgets"
+          "ublock-annoyances"
           "POL-3"
           "POL-0"
         ];
@@ -69,13 +79,21 @@ in
           * cdnjs.cloudflare.com * noop
           * challenges.cloudflare.com * noop
           * discourse-cdn.com * noop
+          * googleusercontent.com * noop
+          * gstatic.com * noop
+          * hcaptcha.com * noop
+          * js.hcaptcha.com * noop
+          * code.jquery.com * noop
           * jsdelivr.map.fastly.net * noop
           * cdn.jsdelivr.net * noop
+          * recaptcha.net * noop
           * unpkg.com * noop
+          www.allmusic.com t.sni.global.fastly.net * noop
           bandcamp.com bcbits.com * noop
           bandcamp.com dualstack.n.sni.global.fastly.net * noop
           bandcamp.com core.spreedly.com * noop
           www.discogs.com catalog-assets.discogs.com.cdn.cloudflare.net * noop
+          www.discogs.com st.discogs.com.cdn.cloudflare.net * noop
           home-manager-options.extranix.com maxcdn.bootstrapcdn.com * noop
           facebook.com meta-api.arkoselabs.com * noop
           facebook.com static.xx.fbcdn.net * noop
@@ -102,7 +120,13 @@ in
           facebook.com##+js(trusted-click-element, body > div[id^="mount"] #scrollview ~ div div[role="button"]:has(> div[data-visualcompletion="ignore"]) )
           facebook.com##div[id^="mount"] div:not([id]):not([class]):not([style]) > div[data-nosnippet]
           facebook.com##+js(aeld, scroll)
-          facebook.com##body > div[class*="__fb-light-mode"]  
+          facebook.com##body > div[class*="__fb-light-mode"]
+
+          ||tumblr.com/*/async-login-wall$script,1p
+
+          quillbot.com##.css-ekeie0.MuiDialog-scrollPaper.MuiDialog-container
+          quillbot.com##.css-919eu4.MuiBackdrop-root
+          quillbot.com##.css-yslrk6.MuiDialog-root.MuiModal-root
         '';
       };
     };
