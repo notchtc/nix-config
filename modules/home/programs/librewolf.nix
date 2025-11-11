@@ -88,12 +88,21 @@ in
           * cdn.jsdelivr.net * noop
           * recaptcha.net * noop
           * unpkg.com * noop
+          aliexpress.com alicdn.com * noop
+          aliexpress.com assets.aliexpress-media.com * noop
+          pl.aliexpress.com alicdn.com * noop
+          pl.aliexpress.com assets.aliexpress-media.com * noop
+          allegro.pl assets.allegrostatic.com * noop
+          allegro.pl captcha-delivery.com * noop
+          allegrolokalnie.pl lokalnie-prod-assets.storage.googleapis.com * noop
           www.allmusic.com t.sni.global.fastly.net * noop
           bandcamp.com bcbits.com * noop
           bandcamp.com dualstack.n.sni.global.fastly.net * noop
           bandcamp.com core.spreedly.com * noop
           www.discogs.com catalog-assets.discogs.com.cdn.cloudflare.net * noop
           www.discogs.com st.discogs.com.cdn.cloudflare.net * noop
+          dropbox.com cfl.dropboxstatic.com * noop
+          dropbox.com dropboxusercontent.com * noop
           home-manager-options.extranix.com maxcdn.bootstrapcdn.com * noop
           facebook.com meta-api.arkoselabs.com * noop
           facebook.com static.xx.fbcdn.net * noop
