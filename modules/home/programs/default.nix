@@ -11,7 +11,6 @@ let
 in
 {
   imports = [
-    ./bat.nix
     ./difftastic.nix
     ./eza.nix
     ./ghostty.nix
@@ -26,12 +25,12 @@ in
   ];
 
   home.packages = attrValues (mergeAttrsList [
-    { inherit (pkgs) ffmpeg; }
+    { inherit (pkgs) ffmpeg moor; }
 
     (optionalAttrs graphical {
       inherit (pkgs)
         cardinal
-        gimp3
+        gimp
         nicotine-plus
         picard
         qbittorrent
@@ -46,6 +45,7 @@ in
   ]);
 
   programs = {
+    bat.enable = true;
     fd.enable = true;
     ripgrep.enable = true;
     zoxide.enable = true;

@@ -1,3 +1,4 @@
+{ lib, ... }:
 {
   imports = [
     ./appimage.nix
@@ -6,6 +7,7 @@
   ];
 
   programs = {
+    less.enable = lib.mkForce false;
     nano.enable = false;
     vim = {
       enable = true;

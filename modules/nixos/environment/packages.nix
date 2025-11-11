@@ -1,4 +1,5 @@
 {
+  config,
   lib,
   pkgs,
   project,
@@ -8,8 +9,44 @@
 {
   environment = {
     defaultPackages = lib.mkForce [ ];
+    corePackages = lib.mkForce (
+      lib.attrValues {
+        inherit (pkgs)
+          acl
+          attr
+          bashInteractive
+          bzip2
+          cpio
+          curl
+          gawk
+          getent
+          getconf
+          gnugrep
+          gnupatch
+          gnused
+          gnutar
+          gzip
+          xz
+          libcap
+          ncurses
+          netcat
+          mkpasswd
+          procps
+          su
+          time
+          util-linux
+          uutils-coreutils-noprefix
+          uutils-diffutils
+          uutils-findutils
+          which
+          zstd
+          ;
+
+        ssh = config.programs.ssh.package;
+      }
+    );
     systemPackages = lib.attrValues {
-      inherit (pkgs) git uutils-coreutils-noprefix;
+      inherit (pkgs) git moor;
 
       npins = project.inputs.npins.result { inherit pkgs system; };
     };
