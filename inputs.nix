@@ -1,6 +1,8 @@
 { config, lib }:
 let
   pins = import ./npins { };
+  pkgs = import pins.nixpkgs { };
+  nothing = lib.modules.when false { };
 
   loaders = {
     agenix = "raw";
@@ -16,17 +18,16 @@ let
   };
 in
 {
-  config.inputs =
-    builtins.mapAttrs (name: pin: {
-      src = if name == "nixpkgs" then pin else pin { pkgs = import pins.nixpkgs { }; };
-
-      loader = loaders.${name} or (lib.modules.when false { });
-      settings = settings.${name} or (lib.modules.when false { });
-    }) pins
-    // {
-      nixpkgs-flake = {
-        inherit (config.inputs.nixpkgs) src;
-        loader = "flake";
-      };
+  config.inputs = {
+    nixpkgs-flake = {
+      inherit (config.inputs.nixpkgs) src;
+      loader = "flake";
     };
+  }
+  // builtins.mapAttrs (name: pin: {
+    src = if name == "nixpkgs" then pin else pin { inherit pkgs; };
+
+    loader = loaders.${name} or nothing;
+    settings = settings.${name} or nothing;
+  }) pins;
 }
