@@ -26,6 +26,10 @@
           gnused
           gnutar
           gzip
+          host
+          hostname-debian
+          iproute2
+          iputils
           xz
           libcap
           ncurses
