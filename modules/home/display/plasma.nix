@@ -38,6 +38,7 @@ in
     };
 
     kwin = {
+      nightLight.enable = true;
       virtualDesktops = {
         rows = 1;
         number = 4;
@@ -201,7 +202,6 @@ in
     configFile = {
       "baloofilerc"."Basic Settings"."Indexing-Enabled" = false;
       "kactivitymanagerdrc"."Plugins"."org.kde.ActivityManager.ResourceScoringEnabled" = false;
-      "kwinrc"."NightColor"."Active" = true;
       "krunnerrc"."Plugins"."baloosearchEnabled" = false;
       "plasmanotifyrc"."Notifications"."PopupPosition" = "TopRight";
 
