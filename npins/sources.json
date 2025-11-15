@@ -35,9 +35,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "37a3d97f2873e0f68711117c34d04b7c7ead8f4e",
-      "url": "https://github.com/nix-community/home-manager/archive/37a3d97f2873e0f68711117c34d04b7c7ead8f4e.tar.gz",
-      "hash": "sha256-t2U/GLLXHa2+kJkwnFNRVc2fEJ/lUfyZXBE5iKzJdcs="
+      "revision": "c3bc79be5ee97455262c6c677bbf065eed07948c",
+      "url": "https://github.com/nix-community/home-manager/archive/c3bc79be5ee97455262c6c677bbf065eed07948c.tar.gz",
+      "hash": "sha256-oLugbe2pJv39BjWg7kAljn6vUxjVr/ArkITDX8fFd2Y="
     },
     "nilla": {
       "type": "GitRelease",
@@ -50,10 +50,10 @@
       "version_upper_bound": null,
       "release_prefix": null,
       "submodules": false,
-      "version": "v0.0.0-alpha.15",
-      "revision": "b617bdbaa5faa9345ca077cd497372ece77bf119",
-      "url": "https://api.github.com/repos/nilla-nix/nilla/tarball/refs/tags/v0.0.0-alpha.15",
-      "hash": "sha256-eCKqHY7uUiNqmP0XqWlXxpBLABuk65MRPLH2INFEE5U="
+      "version": "v0.0.0-alpha.16",
+      "revision": "6d814dafa6f397ac2087333e5515c617faccba6f",
+      "url": "https://api.github.com/repos/nilla-nix/nilla/tarball/refs/tags/v0.0.0-alpha.16",
+      "hash": "sha256-A4zg3po1tyfh1if+LIllKtUGoWLFSwJSztvH2MG22qU="
     },
     "nilla-cli": {
       "type": "GitRelease",
