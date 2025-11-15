@@ -66,7 +66,6 @@ in
       autoload -U colors && colors
       autoload -Uz vcs_info
 
-      bindkey -v
       export KEYTIMEOUT=1
       stty stop undef
 
@@ -114,6 +113,11 @@ in
         name = "fast-syntax-highlighting";
         src = pkgs.zsh-fast-syntax-highlighting;
         file = "share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh";
+      }
+      {
+        name = "vi-mode";
+        src = pkgs.zsh-vi-mode;
+        file = "share/zsh-vi-mode/zsh-vi-mode.plugin.zsh";
       }
     ];
 
