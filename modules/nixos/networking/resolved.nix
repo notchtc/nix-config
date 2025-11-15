@@ -2,7 +2,7 @@
   services.resolved = {
     enable = true;
     dnsovertls = "true";
-    dnssec = "false";
+    dnssec = "allow-downgrade";
     llmnr = "false";
     fallbackDns = [ "9.9.9.9" ];
   };
