@@ -1,4 +1,3 @@
-{ pkgs, ... }:
 {
   imports = [
     ./console.nix
@@ -7,12 +6,10 @@
     ./packages.nix
     ./paths.nix
     ./shell.nix
+    ./variables.nix
   ];
 
-  environment = {
-    stub-ld.enable = false;
-    variables.PAGER = "${pkgs.moor}/bin/moor";
-  };
+  environment.stub-ld.enable = false;
 
   system.etc.overlay = {
     enable = true;

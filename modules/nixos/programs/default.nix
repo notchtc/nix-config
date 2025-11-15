@@ -9,9 +9,5 @@
   programs = {
     less.enable = lib.mkForce false;
     nano.enable = false;
-    vim = {
-      enable = true;
-      defaultEditor = true;
-    };
   };
 }

@@ -27,7 +27,6 @@
           gnutar
           gzip
           host
-          hostname-debian
           iproute2
           iputils
           xz
@@ -36,21 +35,25 @@
           netcat
           mkpasswd
           procps
-          su
-          time
           util-linux
           uutils-coreutils-noprefix
           uutils-diffutils
           uutils-findutils
-          which
           zstd
           ;
 
+        busybox = pkgs.busybox.overrideAttrs (prev: {
+          postInstall = prev.postInstall + ''
+            rm $out/bin/less
+            rm $out/bin/su
+          '';
+        });
         ssh = config.programs.ssh.package;
       }
     );
     systemPackages = lib.attrValues {
       inherit (pkgs) git moor;
+      inherit (pkgs.ghostty) terminfo;
 
       npins = project.inputs.npins.result { inherit pkgs system; };
     };
