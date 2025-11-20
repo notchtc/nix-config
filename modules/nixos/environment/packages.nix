@@ -14,26 +14,18 @@
         inherit (pkgs)
           acl
           attr
-          bashInteractive
-          bzip2
-          cpio
           curl
           gawk
           getent
           getconf
-          gnugrep
-          gnupatch
-          gnused
-          gnutar
-          gzip
           host
           iproute2
           iputils
-          xz
           libcap
+          mkpasswd
+          moor
           ncurses
           netcat
-          mkpasswd
           procps
           util-linux
           uutils-coreutils-noprefix
@@ -52,7 +44,7 @@
       }
     );
     systemPackages = lib.attrValues {
-      inherit (pkgs) git moor;
+      inherit (pkgs) git;
       inherit (pkgs.ghostty) terminfo;
 
       npins = project.inputs.npins.result { inherit pkgs system; };
