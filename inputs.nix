@@ -11,6 +11,8 @@ let
 
   settings = {
     nixpkgs.configuration.allowUnfree = true;
+
+    autoaspm.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
     home-manager.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
     nix-index-database.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
     openmw-nix.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
