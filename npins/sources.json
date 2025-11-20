@@ -13,6 +13,19 @@
       "url": "https://github.com/ryantm/agenix/archive/fcdea223397448d35d9b31f798479227e80183f6.tar.gz",
       "hash": "sha256-wyT7Pl6tMFbFrs8Lk/TlEs81N6L+VSybPfiIgzU8lbQ="
     },
+    "autoaspm": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "notthebee",
+        "repo": "AutoASPM"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "0c73e0ed98e7bb3f6854bab9505e79a7f61654bd",
+      "url": "https://github.com/notthebee/AutoASPM/archive/0c73e0ed98e7bb3f6854bab9505e79a7f61654bd.tar.gz",
+      "hash": "sha256-WnEKYqj0xs92DZscGVMmLytHOQlUWg3ZtZRdgCoTgQw="
+    },
     "firefox-gnome-theme": {
       "type": "Git",
       "repository": {
