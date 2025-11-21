@@ -117,7 +117,10 @@ in
           }
           {
             digitalClock = {
-              date.format.custom = "ddd d MMM yyyy";
+              date = {
+                format.custom = "ddd d MMM yyyy";
+                position = "besideTime";
+              };
               time.format = "24h";
             };
           }
