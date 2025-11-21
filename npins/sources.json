@@ -145,9 +145,9 @@
       },
       "branch": "personal",
       "submodules": false,
-      "revision": "60ac5a26debb61a27a76c2f261138f1c98ae80c8",
-      "url": "https://github.com/notchtc/nixpkgs/archive/60ac5a26debb61a27a76c2f261138f1c98ae80c8.tar.gz",
-      "hash": "sha256-d5VtFdCtwcChvjWUafAkv1md7Qzh+SlOAQPQDcPLU1k="
+      "revision": "db6a0037fd6832ce3fc4d05a64ea4b898644e3a4",
+      "url": "https://github.com/notchtc/nixpkgs/archive/db6a0037fd6832ce3fc4d05a64ea4b898644e3a4.tar.gz",
+      "hash": "sha256-NExn2cf3bwLJHRhJ9677M2SUdnE8ekNZ/pubu5g+waA="
     },
     "npins": {
       "type": "Git",
