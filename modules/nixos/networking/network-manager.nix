@@ -5,7 +5,6 @@ let
 in
 {
   config = mkIf (!server) {
-    systemd.services.NetworkManager-wait-online.enable = false;
     networking.networkmanager = {
       enable = true;
       dns = "systemd-resolved";
@@ -13,6 +12,12 @@ in
         backend = "iwd";
         powersave = true;
       };
+    };
+
+    environment.etc."NetworkManager/system-connections".source = "/persist/NetworkManager/";
+    systemd = {
+      services.NetworkManager-wait-online.enable = false;
+      tmpfiles.rules = [ "d /persist/NetworkManager 0755 root root - -" ];
     };
   };
 }

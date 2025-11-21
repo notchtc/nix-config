@@ -30,17 +30,12 @@ zpool create -f \
 
 zfs create -o canmount=off elisabeth/NixOS
 zfs create -o canmount=on elisabeth/NixOS/home
-zfs create -o canmount=off elisabeth/NixOS/etc
-zfs create -o canmount=on elisabeth/NixOS/etc/NetworkManager
-zfs create -o canmount=on elisabeth/NixOS/etc/ssh
 zfs create -o canmount=on -o com.sun:auto-snapshot=false elisabeth/NixOS/nix
 zfs create -o canmount=off elisabeth/NixOS/var
 zfs create -o canmount=on elisabeth/NixOS/var/log
 zfs create -o canmount=on elisabeth/NixOS/var/lib
 
-mkdir -p /mnt/{etc/ssh,etc/NetworkManager,home,nix,var/log,var/lib}
-mount -t zfs elisabeth/NixOS/etc/ssh /mnt/etc/ssh -o zfsutil
-mount -t zfs elisabeth/NixOS/etc/NetworkManager /mnt/etc/NetworkManager -o zfsutil
+mkdir -p /mnt/{home,nix,var/log,var/lib}
 mount -t zfs elisabeth/NixOS/home /mnt/home -o zfsutil
 mount -t zfs elisabeth/NixOS/nix /mnt/nix -o zfsutil
 mount -t zfs elisabeth/NixOS/var/log /mnt/var/log -o zfsutil

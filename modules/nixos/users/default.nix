@@ -1,10 +1,6 @@
-{ pkgs, project, ... }:
+{ pkgs, ... }:
 {
-  imports = [
-    "${project.inputs.agenix.result}/modules/age.nix"
-    ./chtc.nix
-  ];
-  age.secrets.chtc-password.file = ../../../secrets/chtc-password.age;
+  imports = [ ./chtc.nix ];
 
   users = {
     mutableUsers = false;

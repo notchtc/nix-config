@@ -13,6 +13,6 @@
       fsType = "vfat";
       options = [ "defaults" ];
     };
-    "/etc/ssh".neededForBoot = true;
+    "/persist".neededForBoot = true;
   };
 }

@@ -1,6 +1,7 @@
 {
   imports = [
     ../shared
+    ./age
     ./boot
     ./display
     ./environment
