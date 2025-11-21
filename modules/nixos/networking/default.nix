@@ -19,7 +19,7 @@ in
 
   networking = {
     hostName = host;
-    hostId = builtins.substring 0 8 (builtins.hashString "md5" host);
+    hostId = builtins.hashString "md5" host |> builtins.substring 0 8;
 
     useDHCP = false;
     useNetworkd = mkIf server true;

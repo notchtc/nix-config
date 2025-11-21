@@ -1,6 +1,6 @@
 { config, lib, ... }:
 let
-  inherit (lib) genAttrs;
+  inherit (lib) genAttrs mergeAttrsList;
   inherit (config.mama) desktop;
 
   browser = [
@@ -62,28 +62,31 @@ let
     "video/x-ms-wmv"
   ];
 
-  associations =
+  associations = mergeAttrsList [
+    {
+      "application/pdf" =
+        if desktop == "plasma" then [ "org.kde.okular" ] else [ "org.gnome.Papers.desktop" ];
+      "x-scheme-handler/discord" = [ "vesktop.desktop" ];
+      "x-scheme-handler/steam" = [ "steam.desktop" ];
+      "x-scheme-handler/tg" = [ "org.telegram.desktop.desktop" ];
+    }
+
     (genAttrs browser (_: [ "Schizofox.desktop" ]))
-    // (genAttrs audio (
+    (genAttrs text (_: [ "Helix.desktop" ]))
+    (genAttrs torrent (_: [ "org.qbittorrent.qBittorrent.desktop" ]))
+
+    (genAttrs audio (
       _:
       if desktop == "gnome" then
         [ "io.github.quodlibet.QuodLibet.desktop" ]
       else
         [ "org.strawberrymusicplayer.strawberry.desktop" ]
     ))
-    // (genAttrs image (
+    (genAttrs image (
       _: if desktop == "plasma" then [ "org.kde.gwenview.desktop" ] else [ "org.gnome.Loupe.desktop" ]
     ))
-    // (genAttrs text (_: [ "Helix.desktop" ]))
-    // genAttrs video (_: if desktop == "plasma" then [ "org.kde.haruna.desktop" ] else "mpv.desktop")
-    // genAttrs torrent (_: [ "org.qbittorrent.qBittorrent.desktop" ])
-    // {
-      "application/pdf" =
-        if desktop == "plasma" then [ "org.kde.okular" ] else [ "org.gnome.Papers.desktop" ];
-      "x-scheme-handler/discord" = [ "vesktop.desktop" ];
-      "x-scheme-handler/steam" = [ "steam.desktop" ];
-      "x-scheme-handler/tg" = [ "org.telegram.desktop.desktop" ];
-    };
+    (genAttrs video (_: if desktop == "plasma" then [ "org.kde.haruna.desktop" ] else "mpv.desktop"))
+  ];
 in
 {
   xdg = {

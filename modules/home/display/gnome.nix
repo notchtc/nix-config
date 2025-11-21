@@ -6,12 +6,14 @@
   ...
 }:
 let
+  inherit (lib) mkIf splitString;
+  inherit (lib.hm.gvariant) mkTuple mkUint16;
   inherit (config.mama) desktop;
 in
 {
-  config = lib.mkIf (desktop == "gnome") {
+  config = mkIf (desktop == "gnome") {
     dconf = {
-      settings = with lib.hm.gvariant; {
+      settings = {
         "org/gnome/shell" = {
           disable-extension-version-validation = true;
           favorite-apps = [
@@ -45,7 +47,7 @@ in
               "pl"
             ])
           ];
-          xkb-options = lib.splitString "," osConfig.services.xserver.xkb.options;
+          xkb-options = splitString "," osConfig.services.xserver.xkb.options;
         };
 
         "org/gnome/desktop/interface" = {
@@ -66,7 +68,7 @@ in
         };
 
         "org/gnome/desktop/privacy" = {
-          old-files-age = lib.gvariant.mkUint16 14;
+          old-files-age = mkUint16 14;
           remember-recent-files = false;
           remove-old-temp-files = true;
           remove-old-trash-files = true;

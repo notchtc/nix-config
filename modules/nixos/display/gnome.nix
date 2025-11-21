@@ -5,7 +5,7 @@
   ...
 }:
 let
-  inherit (lib) attrValues mkIf;
+  inherit (lib) attrValues mkForce mkIf;
   inherit (config.mama) desktop;
 in
 {
@@ -16,7 +16,7 @@ in
 
       gnome = {
         core-apps.enable = false;
-        gnome-initial-setup.enable = lib.mkForce false;
+        gnome-initial-setup.enable = mkForce false;
       };
     };
 

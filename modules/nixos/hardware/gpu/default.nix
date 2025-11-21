@@ -11,11 +11,13 @@ in
   ];
 
   options.mama.hardware.gpu = mkOption {
-    type = listOf (enum [
-      "amd"
-      "intel"
-      "nvidia"
-    ]);
+    type =
+      listOf
+      <| enum [
+        "amd"
+        "intel"
+        "nvidia"
+      ];
     default = [ ];
     description = "The manufacturer(s) of your GPU(s)";
   };

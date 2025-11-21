@@ -6,10 +6,12 @@ in
 {
   options.mama = {
     desktop = mkOption {
-      type = nullOr (enum [
-        "gnome"
-        "plasma"
-      ]);
+      type =
+        nullOr
+        <| enum [
+          "gnome"
+          "plasma"
+        ];
     };
 
     profiles = {

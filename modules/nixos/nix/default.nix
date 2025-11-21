@@ -6,6 +6,7 @@
   ...
 }:
 let
+  inherit (builtins) storeDir storePath;
   inherit (lib) mapAttrs' mkForce optionalAttrs;
   inherit (lib.strings) isStringLike hasPrefix;
   graphical = config.mama.profiles.graphical.enable;
@@ -47,6 +48,7 @@ in
         "flakes"
         "lix-custom-sub-commands"
         "nix-command"
+        "pipe-operator"
       ];
     };
 
@@ -67,10 +69,10 @@ in
     etc = mapAttrs' (name: value: {
       name = "nix/inputs/${name}";
       value.source =
-        if (isStringLike value.result) && (hasPrefix builtins.storeDir (toString value.result)) then
-          builtins.storePath value.result
+        if isStringLike value.result && (hasPrefix storeDir <| toString value.result) then
+          storePath value.result
         else
-          builtins.storePath value.src;
+          storePath value.src;
     }) project.inputs;
   };
 

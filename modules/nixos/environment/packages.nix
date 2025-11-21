@@ -6,11 +6,15 @@
   system,
   ...
 }:
+let
+  inherit (lib) attrValues mkForce;
+in
 {
   environment = {
-    defaultPackages = lib.mkForce [ ];
-    corePackages = lib.mkForce (
-      lib.attrValues {
+    defaultPackages = mkForce [ ];
+    corePackages =
+      mkForce
+      <| attrValues {
         inherit (pkgs)
           acl
           attr
@@ -41,9 +45,9 @@
           '';
         });
         ssh = config.programs.ssh.package;
-      }
-    );
-    systemPackages = lib.attrValues {
+      };
+
+    systemPackages = attrValues {
       inherit (pkgs) git;
       inherit (pkgs.ghostty) terminfo;
 

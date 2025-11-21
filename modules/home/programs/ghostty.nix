@@ -1,9 +1,11 @@
 { config, lib, ... }:
 let
+  inherit (lib) mkIf;
   inherit (config.mama) desktop;
+  graphical = config.mama.profiles.graphical.enable;
 in
 {
-  programs.ghostty = lib.mkIf config.mama.profiles.graphical.enable {
+  programs.ghostty = mkIf graphical {
     enable = true;
     settings = {
       cursor-style = "bar";

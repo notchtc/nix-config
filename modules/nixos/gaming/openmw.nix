@@ -15,15 +15,17 @@ in
     default = gaming.enable;
   };
 
-  config.environment.systemPackages = mkIf gaming.openmw.enable (attrValues {
-    inherit (project.inputs.openmw-nix.result.packages.${system})
-      #      delta-plugin
-      momw-configurator
-      openmw-validator
-      s3lightfixes
-      umo
-      ;
+  config.environment.systemPackages =
+    mkIf gaming.openmw.enable
+    <| attrValues {
+      inherit (project.inputs.openmw-nix.result.packages.${system})
+        #      delta-plugin
+        momw-configurator
+        openmw-validator
+        s3lightfixes
+        umo
+        ;
 
-    inherit (pkgs) openmw;
-  });
+      inherit (pkgs) openmw;
+    };
 }
