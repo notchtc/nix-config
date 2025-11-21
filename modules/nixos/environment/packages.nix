@@ -48,7 +48,7 @@ in
       };
 
     systemPackages = attrValues {
-      inherit (pkgs) git;
+      inherit (pkgs) deadnix git statix;
       inherit (pkgs.ghostty) terminfo;
 
       npins = project.inputs.npins.result { inherit pkgs system; };
