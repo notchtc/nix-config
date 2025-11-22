@@ -45,7 +45,6 @@ in
       find = getExe fd;
       grep = getExe ripgrep;
       less = getExe moor;
-      man = getExe bat-extras.batman;
     };
 
     completionInit = ''
