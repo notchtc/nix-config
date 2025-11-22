@@ -1,13 +1,8 @@
 {
-  config,
   host ? throw "No hostname provided",
   lib,
   ...
 }:
-let
-  inherit (lib) mkIf;
-  server = config.mama.profiles.server.enable;
-in
 {
   imports = [
     ./blocking.nix
@@ -21,10 +16,11 @@ in
     hostName = host;
     hostId = builtins.hashString "md5" host |> builtins.substring 0 8;
 
-    useDHCP = false;
-    useNetworkd = mkIf server true;
-
+    modemmanager.enable = lib.mkForce false;
     nftables.enable = true;
+
+    useDHCP = false;
+    useNetworkd = true;
 
     nameservers = [
       "9.9.9.9#dns.quad9.net"
