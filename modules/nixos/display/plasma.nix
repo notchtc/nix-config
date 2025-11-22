@@ -25,12 +25,13 @@ in
       variables.KWIN_USE_OVERLAYS = 1;
       plasma6.excludePackages = attrValues {
         inherit (kdePackages)
+          aurorae
+          baloo-widgets
           elisa
           kate
           konsole
           ktexteditor
           kwin-x11
-          plasma-browser-integration
           plasma-workspace-wallpapers
           ;
       };
