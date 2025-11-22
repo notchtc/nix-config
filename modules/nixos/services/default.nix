@@ -5,6 +5,7 @@
     ./ntpd-rs.nix
     ./oomd.nix
     ./scx.nix
+    ./snowflake.nix
     ./zram.nix
   ];
 }
