@@ -1,4 +1,4 @@
-{ project, ... }:
+{ project, system, ... }:
 {
   imports = [ project.inputs.home-manager.result.nixosModules.default ];
 
@@ -7,7 +7,10 @@
     overwriteBackup = true;
     useGlobalPkgs = true;
     useUserPackages = true;
-    extraSpecialArgs = { inherit (project) inputs; };
+    extraSpecialArgs = {
+      inherit (project) inputs packages;
+      inherit system;
+    };
 
     sharedModules = [ ../home ];
   };

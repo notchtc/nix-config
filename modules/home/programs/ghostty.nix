@@ -1,29 +1,31 @@
-{ config, lib, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 let
   inherit (lib) mkIf;
   inherit (config.mama) desktop;
   graphical = config.mama.profiles.graphical.enable;
 in
 {
-  programs.ghostty = mkIf graphical {
-    enable = true;
-    settings = {
-      cursor-style = "bar";
-      font-family = "Sarasa Term J";
-      font-size = 11;
-      theme =
-        if desktop == "gnome" then
-          "dark:Adwaita Dark,light:Adwaita Dark"
-        else if desktop == "plasma" then
-          "dark:Breeze,light:Ayu Light"
-        else
-          "dark:Gruvbox Dark Hard,light:Gruvbox Light Hard";
-      window-padding-x = 3;
-      window-padding-y = 3;
-      window-theme = "ghostty";
+  config = mkIf (graphical && desktop == "gnome") {
+    home.sessionVariables.TERMINAL = "${pkgs.ghostty}/bin/ghostty";
+    programs.foot = {
+      enable = true;
+      settings = {
+        cursor-style = "bar";
+        font-family = "Iosevka Term";
+        font-size = 10;
+        theme = "Builtin Solarized Light";
+        window-padding-x = 3;
+        window-padding-y = 3;
+        window-theme = "ghostty";
 
-      scrollback-limit = 100 * 1024 * 1024;
-      mouse-hide-while-typing = true;
+        scrollback-limit = 100 * 1024 * 1024;
+        mouse-hide-while-typing = true;
+      };
     };
   };
 }

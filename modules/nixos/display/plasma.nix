@@ -2,6 +2,8 @@
   config,
   lib,
   pkgs,
+  project,
+  system,
   ...
 }:
 let
@@ -12,7 +14,10 @@ in
 {
   config = mkIf (desktop == "plasma") {
     services = {
-      displayManager.sddm.enable = true;
+      displayManager.sddm = {
+        enable = true;
+        theme = "${project.packages.reactionary-plus.result.${system}}/share/sddm/themes/reactionary";
+      };
       desktopManager.plasma6.enable = true;
     };
 
@@ -23,9 +28,9 @@ in
 
     environment = {
       variables.KWIN_USE_OVERLAYS = 1;
+
       plasma6.excludePackages = attrValues {
         inherit (kdePackages)
-          aurorae
           baloo-widgets
           elisa
           kate
@@ -35,6 +40,11 @@ in
           plasma-workspace-wallpapers
           ;
       };
+
+      systemPackages = [
+        project.packages.reactionary-plus.result.${system}
+        project.packages.split-clock.result.${system}
+      ];
     };
   };
 }

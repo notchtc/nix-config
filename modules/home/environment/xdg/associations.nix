@@ -92,7 +92,8 @@ in
   xdg = {
     terminal-exec = {
       enable = true;
-      settings.default = [ "com.mitchellh.ghostty.desktop" ];
+      settings.default =
+        if desktop == "gnome" then [ "com.mitchellh.ghostty.desktop" ] else [ "footclient.desktop" ];
     };
     mimeApps = {
       enable = true;

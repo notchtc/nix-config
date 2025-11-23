@@ -14,6 +14,7 @@ in
     ./difftastic.nix
     ./eza.nix
     ./ghostty.nix
+    ./foot.nix
     ./git.nix
     ./helix.nix
     ./jj.nix
@@ -28,7 +29,7 @@ in
     attrValues
     <|
       {
-        inherit (pkgs) ffmpeg moor;
+        inherit (pkgs) tlrc;
       }
       // optionalAttrs graphical {
         inherit (pkgs)
@@ -42,8 +43,18 @@ in
           qpwgraph
           ;
       }
-      // optionalAttrs (desktop == "gnome") { inherit (pkgs) papers pwvucontrol quodlibet-full; }
-      // optionalAttrs (desktop == "plasma") { inherit (pkgs) haruna strawberry; };
+      // optionalAttrs (desktop == "gnome") {
+        inherit (pkgs)
+          foliate
+          papers
+          pwvucontrol
+          quodlibet-full
+          ;
+      }
+      // optionalAttrs (desktop == "plasma") {
+        inherit (pkgs) haruna strawberry;
+        inherit (pkgs.kdePackages) arianna;
+      };
 
   programs = {
     bat.enable = true;
@@ -51,8 +62,5 @@ in
     ripgrep.enable = true;
     zoxide.enable = true;
   }
-  // optionalAttrs graphical {
-    foliate.enable = true;
-    keepassxc.enable = true;
-  };
+  // optionalAttrs graphical { keepassxc.enable = true; };
 }

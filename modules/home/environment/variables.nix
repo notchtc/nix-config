@@ -1,9 +1,4 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}:
+{ config, lib, ... }:
 let
   inherit (lib) optionalAttrs;
   graphical = config.mama.profiles.graphical.enable;
@@ -17,8 +12,5 @@ in
     SYSTEMD_PAGERSECURE = "true";
     SSH_ASKPASS_REQUIRE = "prefer";
   }
-  // optionalAttrs graphical {
-    BROWSER = "librewolf";
-    TERMINAL = "${pkgs.ghostty}/bin/ghostty";
-  };
+  // optionalAttrs graphical { BROWSER = "librewolf"; };
 }

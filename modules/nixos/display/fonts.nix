@@ -13,7 +13,10 @@ in
     fonts = {
       enableDefaultPackages = true;
       packages = attrValues {
-        inherit (pkgs) corefonts sarasa-gothic;
+        inherit (pkgs) corefonts iosevka-bin noto-fonts-cjk-sans;
+
+        iosevka-aile = pkgs.iosevka-bin.override { variant = "Aile"; };
+        iosevka-etoile = pkgs.iosevka-bin.override { variant = "Etoile"; };
         nerd-fonts = pkgs.nerd-fonts.symbols-only;
       };
 
@@ -21,15 +24,15 @@ in
         enable = true;
 
         defaultFonts = {
-          monospace = [ "Sarasa Term J" ];
-          sansSerif = [ "Sarasa UI J" ];
-          serif = [ "DejaVu Serif" ];
+          monospace = [ "Iosevka Term" ];
+          sansSerif = [ "Iosevka Aile" ];
+          serif = [ "Iosevka Etoile" ];
           emoji = [ "Noto Color Emoji" ];
         };
       };
     };
 
-    boot.plymouth.font = "${pkgs.sarasa-gothic}/share/fonts/truetype/Sarasa-Regular.ttc";
+    boot.plymouth.font = "${pkgs.iosevka-bin}/share/fonts/truetype/Iosevka-Regular.ttc";
     console = {
       font = "ter-v24n";
       packages = [ pkgs.terminus_font ];

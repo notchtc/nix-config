@@ -2,6 +2,9 @@
   config,
   inputs,
   lib,
+  packages,
+  pkgs,
+  system,
   ...
 }:
 let
@@ -18,6 +21,10 @@ in
 
     workspace = {
       enableMiddleClickPaste = false;
+      colorScheme = "ReactionaryCreatures";
+      cursor.theme = "breeze_cursors";
+      iconTheme = "oxygen";
+      lookAndFeel = "org.magpie.reactplus.desktop";
       wallpaper = ./wallpaper.jpg;
     };
 
@@ -29,16 +36,15 @@ in
       };
     };
 
-    kscreenlocker = {
-      appearance.wallpaper = ./wallpaper.jpg;
-    };
+    kscreenlocker.appearance.wallpaper = ./wallpaper.jpg;
 
-    krunner = {
-      position = "center";
-    };
+    krunner.position = "center";
 
     kwin = {
       nightLight.enable = true;
+
+      titlebarButtons.left = [ "more-window-actions" ];
+
       virtualDesktops = {
         rows = 1;
         number = 4;
@@ -47,44 +53,45 @@ in
 
     fonts = {
       general = {
-        family = "Sarasa UI J";
+        family = "Iosevka Aile";
         pointSize = 11;
       };
 
       fixedWidth = {
-        family = "Sarasa Term J";
+        family = "Iosevka Term";
         pointSize = 10;
       };
 
       small = {
-        family = "Sarasa UI J";
+        family = "Iosevka Aile";
         pointSize = 8;
       };
 
       toolbar = {
-        family = "Sarasa UI J";
-        pointSize = 10;
+        family = "Iosevka Aile";
+        pointSize = 11;
       };
 
       menu = {
-        family = "Sarasa UI J";
-        pointSize = 10;
+        family = "Iosevka Aile";
+        pointSize = 11;
       };
 
       windowTitle = {
-        family = "Sarasa UI J";
-        pointSize = 10;
+        family = "Iosevka Aile";
+        pointSize = 11;
       };
     };
 
     panels = [
       {
         alignment = "center";
-        floating = true;
+        floating = false;
         height = 30;
-        hiding = "dodgewindows";
+        hiding = "normalpanel";
         lengthMode = "fill";
-        location = "top";
+        location = "left";
+        opacity = "opaque";
 
         widgets = [
           {
@@ -94,7 +101,6 @@ in
               sortAlphabetically = true;
               applicationsDisplayMode = "list";
               favoritesDisplayMode = "list";
-              icon = "nix-snowflake";
               showButtonsFor = "session";
             };
           }
@@ -111,36 +117,27 @@ in
             };
           }
           {
-            panelSpacer = {
-              expanding = true;
-            };
-          }
-          {
-            digitalClock = {
-              date = {
-                format.custom = "ddd d MMM yyyy";
-                position = "besideTime";
-              };
-              time.format = "24h";
-            };
-          }
-          {
-            panelSpacer = {
-              expanding = true;
-            };
-          }
-          {
             systemTray = {
               icons.scaleToFit = true;
+            };
+          }
+          {
+            name = "split-clock";
+            config = {
+              Appearance = {
+                autoFontAndSize = false;
+                fontFamily = "Iosevka Aile";
+                fontSize = 9;
+                fontStyleName = "Regular";
+                fontWeight = 400;
+              };
             };
           }
         ];
       }
     ];
 
-    session = {
-      sessionRestore.restoreOpenApplicationsOnLogin = "startWithEmptySession";
-    };
+    session.sessionRestore.restoreOpenApplicationsOnLogin = "startWithEmptySession";
 
     shortcuts = {
       "services/org.kde.krunner.desktop"."_launch" = [
@@ -148,7 +145,7 @@ in
         "Search"
       ];
 
-      "services/com.mitchellh.ghostty.desktop"."new-window" = "Meta+Return";
+      "services/footclient.desktop"."_launch" = "Meta+Return";
     };
 
     window-rules = [
@@ -213,11 +210,28 @@ in
         what-to-remember = 2;
       };
 
-      "kdeglobals"."KDE" = {
-        "AnimationDurationFactor" = 0;
-        "AutomaticLookAndFeel" = true;
-        "AutomaticLookAndFeelOnIdle" = false;
-      };
+      "kdeglobals"."KDE"."AnimationDurationFactor" = 0;
+    };
+  };
+
+  gtk = {
+    enable = true;
+    colorScheme = "dark";
+
+    font = {
+      name = "Iosevka Aile";
+      package = pkgs.iosevka-bin.override { variant = "Aile"; };
+      size = 11;
+    };
+
+    iconTheme = {
+      name = "Oxygen";
+      package = pkgs.kdePackages.oxygen-icons;
+    };
+
+    theme = {
+      name = "Redmond97 SE Dangerous Creatures";
+      package = packages.redmond97se-creatures.result.${system};
     };
   };
 }

@@ -48,7 +48,12 @@ in
       };
 
     systemPackages = attrValues {
-      inherit (pkgs) deadnix git statix;
+      inherit (pkgs)
+        deadnix
+        ffmpeg
+        git
+        statix
+        ;
       inherit (pkgs.ghostty) terminfo;
 
       npins = project.inputs.npins.result { inherit pkgs system; };
