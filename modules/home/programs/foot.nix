@@ -27,25 +27,27 @@ in
         };
 
         colors = {
-          cursor = "002b36 93a1a1";
-          background = "002b36";
-          foreground = "839496";
-          regular0 = "073642";
-          regular1 = "dc322f";
-          regular2 = "859900";
-          regular3 = "b58900";
-          regular4 = "268bd2";
-          regular5 = "d33682";
-          regular6 = "2aa198";
-          regular7 = "eee8d5";
-          bright0 = "002b36";
-          bright1 = "cb4b16";
-          bright2 = "586e75";
-          bright3 = "657b83";
-          bright4 = "839496";
-          bright5 = "6c71c4";
-          bright6 = "93a1a1";
-          bright7 = "fdf6e3";
+          cursor = "103c48 53d6c7";
+          background = "103c48";
+          foreground = "adbcbc";
+
+          regular0 = "184956";
+          regular1 = "fa5750";
+          regular2 = "75b938";
+          regular3 = "dbb32d";
+          regular4 = "4695f7";
+          regular5 = "f275be";
+          regular6 = "41c7b9";
+          regular7 = "72898f";
+
+          bright0 = "2d5b69";
+          bright1 = "ff665c";
+          bright2 = "84c747";
+          bright3 = "ebc13d";
+          bright4 = "58a3ff";
+          bright5 = "ff84cd";
+          bright6 = "53d6c7";
+          bright7 = "cad8d9";
         };
 
         bell.system = "no";

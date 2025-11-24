@@ -11,7 +11,7 @@
 
     extraPackages = lib.attrValues { inherit (pkgs) markdown-oxide nixd nixfmt; };
     settings = {
-      theme = "solarized_light";
+      theme = "solarized_dark";
       editor = {
         cursor-shape = {
           insert = "bar";
