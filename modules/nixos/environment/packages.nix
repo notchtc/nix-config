@@ -38,12 +38,14 @@ in
           zstd
           ;
 
-        busybox = pkgs.busybox.overrideAttrs (prev: {
-          postInstall = prev.postInstall + ''
+        busybox = pkgs.symlinkJoin {
+          name = "busybox";
+          paths = [ pkgs.busybox ];
+          postBuild = ''
             rm $out/bin/less
             rm $out/bin/su
           '';
-        });
+        };
         ssh = config.programs.ssh.package;
       };
 
