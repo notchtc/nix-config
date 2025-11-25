@@ -41,7 +41,10 @@ in
     krunner.position = "center";
 
     kwin = {
-      nightLight.enable = true;
+      nightLight = {
+        enable = true;
+        temperature.night = 2500;
+      };
 
       titlebarButtons.left = [ "more-window-actions" ];
 
