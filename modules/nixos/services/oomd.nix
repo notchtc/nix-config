@@ -21,7 +21,7 @@ in
     extraArgs = [
       "-g"
       "--avoid"
-      "'^(ghostty|hx|dbus-.*|Xwayland|systemd|systemd-.*|ssh-agent|sshd|zsh)$'"
+      "'^(ghostty|foot|footclient|hx|dbus-.*|Xwayland|systemd|systemd-.*|ssh-agent|sshd|zsh)$'"
       "--prefer"
       "'^(Web Content|Isolated Web Co|firefox.*|electron|nix|.*.exe|pipewire(.*))$|chrom(e|ium).*'"
     ];
