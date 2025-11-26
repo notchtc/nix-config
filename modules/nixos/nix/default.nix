@@ -13,7 +13,7 @@ let
 in
 {
   imports = [
-    ./monitored.nix
+    ./overlay.nix
     ./substituters.nix
     ./tools.nix
   ];
@@ -24,7 +24,9 @@ in
     channel.enable = false;
 
     optimise.automatic = true;
+
     nixPath = [ "/etc/nix/inputs" ];
+    registry.nixpkgs.flake = mkForce project.inputs.nixpkgs-flake.result;
 
     settings = {
       min-free = 5 * 1024 * 1024 * 1024;
@@ -32,6 +34,7 @@ in
 
       accept-flake-config = false;
       auto-optimise-store = true;
+      flake-registry = "";
       keep-going = true;
       max-jobs = "auto";
       sandbox = true;
@@ -64,6 +67,15 @@ in
     daemonIOSchedPriority = 7;
   };
 
+  systemd = {
+    services.nix-gc.unitConfig.ConditionACPower = true;
+
+    tmpfiles.rules = [
+      "R /root/.nix-defexpr/channels - - - -"
+      "R /nix/var/nix/profiles/per-user/root/channels - - - -"
+    ];
+  };
+
   environment = {
     variables.NIXPKGS_CONFIG = mkForce "";
     etc = mapAttrs' (name: value: {
@@ -75,6 +87,4 @@ in
           storePath value.src;
     }) project.inputs;
   };
-
-  systemd.services.nix-gc.unitConfig.ConditionACPower = true;
 }
