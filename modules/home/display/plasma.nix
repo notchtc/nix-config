@@ -22,7 +22,7 @@ in
     workspace = {
       enableMiddleClickPaste = false;
       colorScheme = "ReactionaryCreatures";
-      cursor.theme = "breeze_cursors";
+      cursor.theme = "Hackneyed";
       iconTheme = "oxygen";
       lookAndFeel = "org.magpie.reactplus.desktop";
       wallpaper = ./wallpaper.jpg;
@@ -220,6 +220,11 @@ in
   gtk = {
     enable = true;
     colorScheme = "dark";
+
+    cursorTheme = {
+      name = "Hackneyed";
+      package = pkgs.hackneyed;
+    };
 
     font = {
       name = "Iosevka Aile";

@@ -37,6 +37,7 @@ in
           konsole
           ktexteditor
           kwin-x11
+          plasma-browser-integration
           plasma-workspace-wallpapers
           ;
       };
