@@ -34,13 +34,15 @@ in
             };
           })
           [
-            "{1be309c5-3e4f-4b99-927d-bb500eb4fa88}" # Augmented Steam
-            "plasma-browser-integration@kde.org"
             "sponsorBlocker@ajay.app"
             "{a4c4eda4-fb84-4a84-b4a1-f7c1cbf2a1ad}" # Refined GitHub
             "V3-eov3cv@hotmail.com"
             "{aecec67f-0d10-4fa7-b7c7-609a2db280cf}" # Violentmonkey
-          ];
+          ]
+        ++ optionals (desktop == "plasma") [ "plasma-browser-integration@kde.org" ]
+        ++ optionals gaming [
+          "{1be309c5-3e4f-4b99-927d-bb500eb4fa88}" # Augmented Steam
+        ];
 
       "3rdparty".Extensions."uBlock0@raymondhill.net".adminSettings = builtins.toJSON {
         userSettings = {
