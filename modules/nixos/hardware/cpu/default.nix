@@ -1,19 +1,17 @@
 { lib, ... }:
-let
-  inherit (lib) mkOption;
-  inherit (lib.types) enum nullOr;
-in
 {
   imports = [
     ./amd.nix
     ./intel.nix
   ];
 
-  options.mama.hardware.cpu = mkOption {
-    type = nullOr (enum [
-      "amd"
-      "intel"
-    ]);
+  options.mama.hardware.cpu = lib.mkOption {
+    type = lib.types.nullOr (
+      lib.types.enum [
+        "amd"
+        "intel"
+      ]
+    );
     default = null;
     description = "The manufacturer of your CPU";
   };

@@ -7,17 +7,16 @@
   ...
 }:
 let
-  inherit (lib) attrValues mkEnableOption mkIf;
   inherit (config.mama.profiles) gaming;
 in
 {
-  options.mama.profiles.gaming.openmw.enable = mkEnableOption "OpenMW" // {
+  options.mama.profiles.gaming.openmw.enable = lib.mkEnableOption "OpenMW" // {
     default = gaming.enable;
   };
 
   config.environment.systemPackages =
-    mkIf gaming.openmw.enable
-    <| attrValues {
+    lib.mkIf gaming.openmw.enable
+    <| lib.attrValues {
       inherit (project.inputs.openmw-nix.result.packages.${system})
         #      delta-plugin
         momw-configurator

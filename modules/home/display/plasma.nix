@@ -1,20 +1,16 @@
 {
-  config,
   inputs,
   lib,
+  osConfig,
   packages,
   pkgs,
   system,
   ...
 }:
-let
-  inherit (lib) mkIf;
-  inherit (config.mama) desktop;
-in
 {
   imports = [ "${inputs.plasma-manager.result}/modules/default.nix" ];
 
-  programs.plasma = mkIf (desktop == "plasma") {
+  programs.plasma = lib.mkIf (osConfig.mama.desktop == "plasma") {
     enable = true;
     immutableByDefault = true;
     overrideConfig = true;

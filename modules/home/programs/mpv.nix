@@ -1,16 +1,14 @@
 {
-  config,
-  pkgs,
   lib,
+  osConfig,
+  pkgs,
   ...
 }:
 let
-  inherit (lib) attrValues mkIf;
-  graphical = config.mama.profiles.graphical.enable;
-  inherit (config.mama) desktop;
+  cfg = osConfig.mama;
 in
 {
-  programs = mkIf (graphical && desktop != "plasma") {
+  programs = lib.mkIf (cfg.profiles.graphical.enable && cfg.desktop != "plasma") {
     yt-dlp.enable = true;
     mpv = {
       enable = true;
@@ -62,7 +60,7 @@ in
         demuxer-max-bytes = "20M";
       };
 
-      scripts = attrValues {
+      scripts = lib.attrValues {
         inherit (pkgs.mpvScripts)
           modernx-zydezu
           mpris

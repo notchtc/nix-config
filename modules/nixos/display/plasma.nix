@@ -6,13 +6,8 @@
   system,
   ...
 }:
-let
-  inherit (lib) attrValues mkIf;
-  inherit (pkgs) kdePackages;
-  inherit (config.mama) desktop;
-in
 {
-  config = mkIf (desktop == "plasma") {
+  config = lib.mkIf (config.mama.desktop == "plasma") {
     services = {
       displayManager.sddm = {
         enable = true;
@@ -23,14 +18,14 @@ in
 
     programs.ssh = {
       enableAskPassword = true;
-      askPassword = "${kdePackages.ksshaskpass}/bin/ksshaskpass";
+      askPassword = "${pkgs.kdePackages.ksshaskpass}/bin/ksshaskpass";
     };
 
     environment = {
       variables.KWIN_USE_OVERLAYS = 1;
 
-      plasma6.excludePackages = attrValues {
-        inherit (kdePackages)
+      plasma6.excludePackages = lib.attrValues {
+        inherit (pkgs.kdePackages)
           baloo-widgets
           elisa
           kate

@@ -1,8 +1,4 @@
 { lib, ... }:
-let
-  inherit (lib) mkOption;
-  inherit (lib.types) enum listOf;
-in
 {
   imports = [
     ./amd.nix
@@ -10,10 +6,10 @@ in
     ./nvidia.nix
   ];
 
-  options.mama.hardware.gpu = mkOption {
+  options.mama.hardware.gpu = lib.mkOption {
     type =
-      listOf
-      <| enum [
+      lib.types.listOf
+      <| lib.types.enum [
         "amd"
         "intel"
         "nvidia"

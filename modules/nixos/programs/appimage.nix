@@ -1,10 +1,6 @@
 { config, lib, ... }:
-let
-  inherit (lib) mkIf;
-  graphical = config.mama.profiles.graphical.enable;
-in
 {
-  programs.appimage = mkIf graphical {
+  programs.appimage = lib.mkIf config.mama.profiles.graphical.enable {
     enable = true;
     binfmt = true;
   };

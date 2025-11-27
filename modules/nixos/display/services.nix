@@ -1,10 +1,6 @@
 { config, lib, ... }:
-let
-  inherit (lib) mkIf;
-  graphical = config.mama.profiles.graphical.enable;
-in
 {
-  services = mkIf graphical {
+  services = lib.mkIf config.mama.profiles.graphical.enable {
     gvfs.enable = true;
     udisks2.enable = true;
     dbus.implementation = "broker";

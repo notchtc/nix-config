@@ -4,9 +4,6 @@
   pkgs,
   ...
 }:
-let
-  inherit (lib) genAttrs optionalString;
-in
 {
   boot = {
     supportedFilesystems = [ "zfs" ];
@@ -25,8 +22,8 @@ in
     };
   };
 
-  fileSystems = genAttrs [ "/nix" "/persist" "/var/log" "/var/lib" ] (fs: {
-    device = "${host}/NixOS${optionalString (fs != "/") fs}";
+  fileSystems = lib.genAttrs [ "/nix" "/persist" "/var/log" "/var/lib" ] (fs: {
+    device = "${host}/NixOS${lib.optionalString (fs != "/") fs}";
     fsType = "zfs";
     options = [ "zfsutil" ];
   });

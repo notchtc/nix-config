@@ -1,8 +1,4 @@
 { config, lib, ... }:
-let
-  inherit (lib) mkIf;
-  gaming = config.mama.profiles.gaming.enable;
-in
 {
   imports = [
     ./gamemode.nix
@@ -12,5 +8,7 @@ in
     ./steam.nix
   ];
 
-  boot.kernel.sysctl = mkIf gaming { "kernel.split_lock_mitigate" = 0; };
+  boot.kernel.sysctl = lib.mkIf config.mama.profiles.gaming.enable {
+    "kernel.split_lock_mitigate" = 0;
+  };
 }

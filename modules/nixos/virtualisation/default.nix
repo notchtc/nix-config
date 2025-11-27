@@ -6,20 +6,19 @@
 }:
 let
   inherit (lib) mkEnableOption mkIf;
-  cfg = config.mama.virtualisation;
-  graphical = config.mama.profiles.graphical.enable;
+  cfg = config.mama;
 in
 {
   options.mama.virtualisation.enable = mkEnableOption "Enable virtualisation";
 
-  config = mkIf cfg.enable {
+  config = mkIf cfg.virtualisation.enable {
     boot.kernelModules = [
       "vfio"
       "vfio_iommu_type1"
       "vfio_pci"
     ];
 
-    programs.virt-manager.enable = mkIf graphical true;
+    programs.virt-manager.enable = mkIf cfg.profiles.graphical.enable true;
 
     virtualisation = {
       libvirtd = {

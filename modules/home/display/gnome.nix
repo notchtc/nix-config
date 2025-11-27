@@ -1,5 +1,4 @@
 {
-  config,
   lib,
   osConfig,
   pkgs,
@@ -8,10 +7,9 @@
 let
   inherit (lib) mkIf splitString;
   inherit (lib.hm.gvariant) mkTuple mkUint16;
-  inherit (config.mama) desktop;
 in
 {
-  config = mkIf (desktop == "gnome") {
+  config = mkIf (osConfig.mama.desktop == "gnome") {
     dconf = {
       settings = {
         "org/gnome/shell" = {

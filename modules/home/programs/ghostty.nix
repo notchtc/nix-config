@@ -1,16 +1,14 @@
 {
-  config,
   lib,
+  osConfig,
   pkgs,
   ...
 }:
 let
-  inherit (lib) mkIf;
-  inherit (config.mama) desktop;
-  graphical = config.mama.profiles.graphical.enable;
+  cfg = osConfig.mama;
 in
 {
-  config = mkIf (graphical && desktop == "gnome") {
+  config = lib.mkIf (cfg.profiles.graphical.enable && cfg.desktop == "gnome") {
     home.sessionVariables.TERMINAL = "${pkgs.ghostty}/bin/ghostty";
     programs.foot = {
       enable = true;

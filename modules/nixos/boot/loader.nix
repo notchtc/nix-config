@@ -1,10 +1,6 @@
 { config, lib, ... }:
-let
-  inherit (lib) mkEnableOption mkIf;
-  secure-boot = config.mama.system.secure-boot.enable;
-in
 {
-  options.mama.system.secure-boot.enable = mkEnableOption ''
+  options.mama.system.secure-boot.enable = lib.mkEnableOption ''
     Enable secure boot in Limine
   '';
 
@@ -14,7 +10,7 @@ in
       efiSupport = true;
       enableEditor = false;
       maxGenerations = 10;
-      secureBoot.enable = mkIf secure-boot true;
+      secureBoot.enable = lib.mkIf config.mama.system.secure-boot.enable true;
     };
 
     timeout = 1;

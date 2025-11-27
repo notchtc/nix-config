@@ -2,7 +2,7 @@
 let
   pins = import ./npins { };
   pkgs = import pins.nixpkgs { };
-  nothing = lib.modules.when false { };
+  none = lib.modules.when false { };
 
   loaders = {
     agenix = "raw";
@@ -29,7 +29,7 @@ in
   // builtins.mapAttrs (name: pin: {
     src = if name == "nixpkgs" then pin else pin { inherit pkgs; };
 
-    loader = loaders.${name} or nothing;
-    settings = settings.${name} or nothing;
+    loader = loaders.${name} or none;
+    settings = settings.${name} or none;
   }) pins;
 }

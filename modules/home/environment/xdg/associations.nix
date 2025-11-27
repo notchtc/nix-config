@@ -1,7 +1,7 @@
-{ config, lib, ... }:
+{ lib, osConfig, ... }:
 let
   inherit (lib) genAttrs mergeAttrsList;
-  inherit (config.mama) desktop;
+  inherit (osConfig.mama) desktop;
 
   browser = [
     "application/json"

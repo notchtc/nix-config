@@ -6,10 +6,9 @@
 }:
 let
   inherit (lib) attrValues mkForce mkIf;
-  inherit (config.mama) desktop;
 in
 {
-  config = mkIf (desktop == "gnome") {
+  config = mkIf (config.mama.desktop == "gnome") {
     services = {
       displayManager.gdm.enable = true;
       desktopManager.gnome.enable = true;

@@ -1,10 +1,6 @@
 { config, lib, ... }:
-let
-  inherit (lib) mkIf mkForce;
-  graphical = config.mama.profiles.graphical.enable;
-in
 {
-  config = mkIf graphical {
+  config = lib.mkIf config.mama.profiles.graphical.enable {
     security.rtkit.enable = true;
     services = {
       pipewire = {
@@ -16,7 +12,7 @@ in
       };
 
       pulseaudio = {
-        enable = mkForce false;
+        enable = lib.mkForce false;
         extraClientConf = ''
           cookie-file = ~/.config/pulse/cookie
         '';

@@ -1,14 +1,23 @@
 {
-  config,
   inputs,
   lib,
+  osConfig,
   pkgs,
   ...
 }:
 let
-  inherit (lib) map mkIf optionalAttrs;
-  inherit (config.mama) desktop;
-  graphical = config.mama.profiles.graphical.enable;
+  cfg = osConfig.mama;
+
+  inherit (cfg) desktop;
+  inherit (lib)
+    map
+    mkIf
+    optionalAttrs
+    optionals
+    ;
+
+  gaming = cfg.profiles.gaming.enable;
+  graphical = cfg.profiles.graphical.enable;
 in
 {
   programs.librewolf = mkIf graphical {

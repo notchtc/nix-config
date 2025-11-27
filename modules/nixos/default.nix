@@ -1,6 +1,5 @@
 {
   imports = [
-    ../shared
     ./age
     ./boot
     ./display
@@ -10,6 +9,7 @@
     ./home.nix
     ./networking
     ./nix
+    ./profiles.nix
     ./programs
     ./security
     ./services

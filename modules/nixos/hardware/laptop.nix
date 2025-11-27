@@ -1,10 +1,6 @@
 { config, lib, ... }:
-let
-  inherit (lib) mkIf;
-  laptop = config.mama.profiles.laptop.enable;
-in
 {
-  config = mkIf laptop {
+  config = lib.mkIf config.mama.profiles.laptop.enable {
     boot.kernelParams = [ "rcutree.enable_rcu_lazy=1" ];
 
     services = {

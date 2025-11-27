@@ -1,14 +1,13 @@
 { config, lib, ... }:
 let
-  inherit (lib) mkEnableOption mkIf;
   inherit (config.mama.profiles) gaming;
 in
 {
-  options.mama.profiles.gaming.gamescope.enable = mkEnableOption "Gamescope" // {
+  options.mama.profiles.gaming.gamescope.enable = lib.mkEnableOption "Gamescope" // {
     default = gaming.enable;
   };
 
-  config.programs.gamescope = mkIf gaming.gamescope.enable {
+  config.programs.gamescope = lib.mkIf gaming.gamescope.enable {
     enable = true;
     capSysNice = true;
   };

@@ -1,7 +1,10 @@
-{ config, lib, ... }:
+{
+  config,
+  lib,
+  osConfig,
+  ...
+}:
 let
-  inherit (lib) optionalAttrs;
-  graphical = config.mama.profiles.graphical.enable;
   var = config.home.sessionVariables;
 in
 {
@@ -12,5 +15,5 @@ in
     SYSTEMD_PAGERSECURE = "true";
     SSH_ASKPASS_REQUIRE = "prefer";
   }
-  // optionalAttrs graphical { BROWSER = "librewolf"; };
+  // lib.optionalAttrs osConfig.mama.profiles.graphical.enable { BROWSER = "librewolf"; };
 }

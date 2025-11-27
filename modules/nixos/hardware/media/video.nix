@@ -1,10 +1,6 @@
 { config, lib, ... }:
-let
-  inherit (lib) mkIf;
-  graphical = config.mama.profiles.graphical.enable;
-in
 {
-  config.hardware.graphics = mkIf graphical {
+  config.hardware.graphics = lib.mkIf config.mama.profiles.graphical.enable {
     enable = true;
     enable32Bit = true;
   };

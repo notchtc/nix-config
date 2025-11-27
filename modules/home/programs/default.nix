@@ -1,13 +1,13 @@
 {
-  config,
   lib,
+  osConfig,
   pkgs,
   ...
 }:
 let
   inherit (lib) attrValues optionalAttrs;
-  graphical = config.mama.profiles.graphical.enable;
-  inherit (config.mama) desktop;
+  inherit (osConfig.mama) desktop;
+  graphical = osConfig.mama.profiles.graphical.enable;
 in
 {
   imports = [

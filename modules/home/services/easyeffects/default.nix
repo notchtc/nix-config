@@ -1,16 +1,14 @@
 {
-  config,
   lib,
+  osConfig,
   pkgs,
   ...
 }:
 let
-  inherit (lib) mkIf;
-  graphical = config.mama.profiles.graphical.enable;
   loadPreset = path: builtins.fromJSON <| builtins.readFile path;
 in
 {
-  services.easyeffects = mkIf graphical {
+  services.easyeffects = lib.mkIf osConfig.mama.profiles.graphical.enable {
     enable = true;
     preset = "LoudnessEqualizer";
 

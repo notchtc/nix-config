@@ -1,9 +1,6 @@
 { config, ... }:
-let
-  server = config.mama.profiles.server.enable;
-in
 {
-  time.timeZone = if server then "UTC" else "Europe/Warsaw";
+  time.timeZone = if config.mama.profiles.server.enable then "UTC" else "Europe/Warsaw";
   i18n =
     let
       defaultLocale = "en_US.UTF-8";

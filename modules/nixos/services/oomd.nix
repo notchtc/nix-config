@@ -1,8 +1,4 @@
 { lib, config, ... }:
-let
-  inherit (lib) mkIf;
-  server = config.mama.profiles.server.enable;
-in
 {
   systemd = {
     oomd = {
@@ -14,7 +10,7 @@ in
     services.nix-daemon.serviceConfig.OOMScoreAdjust = 350;
   };
 
-  services.earlyoom = mkIf (!server) {
+  services.earlyoom = lib.mkIf (!config.mama.profiles.server.enable) {
     enable = true;
     freeSwapThreshold = 2;
     freeMemThreshold = 2;

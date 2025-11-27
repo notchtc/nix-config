@@ -4,15 +4,11 @@
   pkgs,
   ...
 }:
-let
-  inherit (lib) attrValues mkIf;
-  graphical = config.mama.profiles.graphical.enable;
-in
 {
-  config = mkIf graphical {
+  config = lib.mkIf config.mama.profiles.graphical.enable {
     fonts = {
       enableDefaultPackages = true;
-      packages = attrValues {
+      packages = lib.attrValues {
         inherit (pkgs) corefonts iosevka-bin noto-fonts-cjk-sans;
 
         iosevka-aile = pkgs.iosevka-bin.override { variant = "Aile"; };

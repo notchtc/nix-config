@@ -9,7 +9,6 @@ let
   inherit (builtins) storeDir storePath;
   inherit (lib) mapAttrs' mkForce optionalAttrs;
   inherit (lib.strings) isStringLike hasPrefix;
-  graphical = config.mama.profiles.graphical.enable;
 in
 {
   imports = [
@@ -61,7 +60,7 @@ in
       options = "--delete-older-than 7d";
     };
   }
-  // optionalAttrs graphical {
+  // optionalAttrs config.mama.profiles.graphical.enable {
     daemonCPUSchedPolicy = "idle";
     daemonIOSchedClass = "idle";
     daemonIOSchedPriority = 7;

@@ -6,8 +6,7 @@
 }:
 let
   inherit (lib) mkIf;
-  graphical = config.mama.profiles.graphical.enable;
-  server = config.mama.profiles.server.enable;
+  cfg = config.mama;
 in
 {
   imports = [ "${project.inputs.nix-mineral.result}/nix-mineral.nix" ];
@@ -16,7 +15,7 @@ in
     enable = true;
     overrides = {
       compatibility.allow-ip-forward = true;
-      desktop = mkIf graphical {
+      desktop = mkIf cfg.profiles.graphical.enable {
         allow-multilib = true;
         hideproc-off = true;
         home-exec = true;
@@ -25,7 +24,7 @@ in
       };
       performance.allow-smt = true;
       security = {
-        disable-bluetooth-kmodules = mkIf server true;
+        disable-bluetooth-kmodules = mkIf cfg.profiles.server.enable true;
         disable-intelme-kmodules = true;
         lock-root = true;
       };
