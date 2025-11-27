@@ -145,6 +145,8 @@ let
             "https://github.com/${repository.owner}/${repository.repo}.git"
           else if repository.type == "GitLab" then
             "${repository.server}/${repository.repo_path}.git"
+          else if repository.type == "Forgejo" then
+            "${repository.server}/${repository.owner}/${repository.repo}.git"
           else
             throw "Unrecognized repository type ${repository.type}";
         urlToName =
@@ -238,7 +240,7 @@ mkFunctor (
         input
       else
         throw "Unsupported input type ${builtins.typeOf input}, must be a path or an attrset";
-    inherit (data) version;
+    version = data.version;
   in
   if version == 7 then
     builtins.mapAttrs (name: spec: mkFunctor (mkSource name spec)) data.pins
