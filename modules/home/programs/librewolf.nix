@@ -1,5 +1,4 @@
 {
-  inputs,
   lib,
   osConfig,
   pkgs,
@@ -8,13 +7,7 @@
 let
   cfg = osConfig.mama;
 
-  inherit (cfg) desktop;
-  inherit (lib)
-    map
-    mkIf
-    optionalAttrs
-    optionals
-    ;
+  inherit (lib) map mkIf optionals;
 
   gaming = cfg.profiles.gaming.enable;
   graphical = cfg.profiles.graphical.enable;
@@ -22,7 +15,7 @@ in
 {
   programs.librewolf = mkIf graphical {
     enable = true;
-    nativeMessagingHosts = mkIf (desktop == "plasma") [ pkgs.kdePackages.plasma-browser-integration ];
+    nativeMessagingHosts = [ pkgs.kdePackages.plasma-browser-integration ];
 
     policies = {
       ExtensionSettings =
@@ -34,12 +27,12 @@ in
             };
           })
           [
+            "plasma-browser-integration@kde.org"
             "sponsorBlocker@ajay.app"
             "{a4c4eda4-fb84-4a84-b4a1-f7c1cbf2a1ad}" # Refined GitHub
             "V3-eov3cv@hotmail.com"
             "{aecec67f-0d10-4fa7-b7c7-609a2db280cf}" # Violentmonkey
           ]
-        ++ optionals (desktop == "plasma") [ "plasma-browser-integration@kde.org" ]
         ++ optionals gaming [
           "{1be309c5-3e4f-4b99-927d-bb500eb4fa88}" # Augmented Steam
         ];
@@ -160,6 +153,7 @@ in
         "privacy.resistFingerprinting" = false;
         "webgl.disabled" = false;
 
+        "browser.tabs.inTitlebar" = 0;
         "browser.toolbars.bookmarks.visibility" = "never";
         "general.autoScroll" = true;
         "middlemouse.paste" = false;
@@ -192,13 +186,7 @@ in
           };
           currentVersion = 23;
         };
-      }
-      // optionalAttrs (desktop == "gnome") {
-        "gnomeTheme.bookmarksToolbarUnderTabs" = true;
-        "gnomeTheme.hideWebrtcIndicator" = true;
-        "gnomeTheme.normalWidthTabs" = true;
-      }
-      // optionalAttrs (desktop == "plasma") { "browser.tabs.inTitlebar" = 0; };
+      };
 
       search = {
         default = "ddg";
@@ -254,10 +242,6 @@ in
           };
         };
       };
-
-      userChrome = mkIf (desktop == "gnome") ''
-        @import "${inputs.firefox-gnome-theme.result}/userChrome.css"
-      '';
     };
   };
 }

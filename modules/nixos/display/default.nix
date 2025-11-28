@@ -2,7 +2,6 @@
 {
   imports = [
     ./fonts.nix
-    ./gnome.nix
     ./plasma.nix
     ./services.nix
     ./variables.nix

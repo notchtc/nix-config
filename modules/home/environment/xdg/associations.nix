@@ -1,7 +1,6 @@
-{ lib, osConfig, ... }:
+{ lib, ... }:
 let
   inherit (lib) genAttrs mergeAttrsList;
-  inherit (osConfig.mama) desktop;
 
   browser = [
     "application/json"
@@ -64,8 +63,7 @@ let
 
   associations = mergeAttrsList [
     {
-      "application/pdf" =
-        if desktop == "plasma" then [ "org.kde.okular" ] else [ "org.gnome.Papers.desktop" ];
+      "application/pdf" = [ "org.kde.okular" ];
       "x-scheme-handler/discord" = [ "vesktop.desktop" ];
       "x-scheme-handler/steam" = [ "steam.desktop" ];
       "x-scheme-handler/tg" = [ "org.telegram.desktop.desktop" ];
@@ -75,25 +73,16 @@ let
     (genAttrs text (_: [ "Helix.desktop" ]))
     (genAttrs torrent (_: [ "org.qbittorrent.qBittorrent.desktop" ]))
 
-    (genAttrs audio (
-      _:
-      if desktop == "gnome" then
-        [ "io.github.quodlibet.QuodLibet.desktop" ]
-      else
-        [ "org.strawberrymusicplayer.strawberry.desktop" ]
-    ))
-    (genAttrs image (
-      _: if desktop == "plasma" then [ "org.kde.gwenview.desktop" ] else [ "org.gnome.Loupe.desktop" ]
-    ))
-    (genAttrs video (_: if desktop == "plasma" then [ "org.kde.haruna.desktop" ] else "mpv.desktop"))
+    (genAttrs audio (_: [ "org.strawberrymusicplayer.strawberry.desktop" ]))
+    (genAttrs image (_: [ "org.kde.gwenview.desktop" ]))
+    (genAttrs video (_: [ "org.kde.haruna.desktop" ]))
   ];
 in
 {
   xdg = {
     terminal-exec = {
       enable = true;
-      settings.default =
-        if desktop == "gnome" then [ "com.mitchellh.ghostty.desktop" ] else [ "footclient.desktop" ];
+      settings.default = [ "footclient.desktop" ];
     };
     mimeApps = {
       enable = true;

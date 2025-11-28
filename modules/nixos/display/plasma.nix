@@ -7,7 +7,7 @@
   ...
 }:
 {
-  config = lib.mkIf (config.mama.desktop == "plasma") {
+  config = lib.mkIf config.mama.profiles.graphical.enable {
     services = {
       displayManager.sddm = {
         enable = true;

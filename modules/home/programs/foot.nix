@@ -1,15 +1,6 @@
+{ lib, osConfig, ... }:
 {
-  lib,
-  osConfig,
-  pkgs,
-  ...
-}:
-let
-  cfg = osConfig.mama;
-in
-{
-  config = lib.mkIf (cfg.profiles.graphical.enable && cfg.desktop != "gnome") {
-    home.sessionVariables.TERMINAL = "${pkgs.foot}/bin/footclient";
+  config = lib.mkIf osConfig.mama.profiles.graphical.enable {
     programs.foot = {
       enable = true;
       server.enable = true;

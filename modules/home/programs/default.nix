@@ -6,14 +6,12 @@
 }:
 let
   inherit (lib) attrValues optionalAttrs;
-  inherit (osConfig.mama) desktop;
   graphical = osConfig.mama.profiles.graphical.enable;
 in
 {
   imports = [
     ./difftastic.nix
     ./eza.nix
-    ./ghostty.nix
     ./foot.nix
     ./git.nix
     ./helix.nix
@@ -35,24 +33,16 @@ in
         inherit (pkgs)
           cardinal
           gimp
+          haruna
           nicotine-plus
           picard
           qbittorrent
+          strawberry
           telegram-desktop
           tutanota-desktop
           qpwgraph
           ;
-      }
-      // optionalAttrs (desktop == "gnome") {
-        inherit (pkgs)
-          foliate
-          papers
-          pwvucontrol
-          quodlibet-full
-          ;
-      }
-      // optionalAttrs (desktop == "plasma") {
-        inherit (pkgs) haruna strawberry;
+
         inherit (pkgs.kdePackages) arianna;
       };
 

@@ -1,6 +1,5 @@
 {
   mama = {
-    desktop = "plasma";
     hardware = {
       autoaspm = true;
       cpu = "amd";
