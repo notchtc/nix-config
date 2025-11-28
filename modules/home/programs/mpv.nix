@@ -35,9 +35,6 @@
       volume = 100;
       volume-max = 100;
 
-      osc = "no";
-      border = "no";
-
       save-position-on-quit = true;
       force-seekable = "yes";
       pause = "yes";
