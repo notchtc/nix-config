@@ -14,6 +14,7 @@ in
     ./eza.nix
     ./foot.nix
     ./git.nix
+    ./haruna.nix
     ./helix.nix
     ./jj.nix
     ./librewolf.nix
@@ -33,7 +34,6 @@ in
         inherit (pkgs)
           cardinal
           gimp
-          haruna
           nicotine-plus
           picard
           qbittorrent
