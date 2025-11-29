@@ -14,10 +14,6 @@
 
     workspace = {
       enableMiddleClickPaste = false;
-      colorScheme = "ReactionaryCreatures";
-      cursor.theme = "Hackneyed";
-      iconTheme = "oxygen";
-      lookAndFeel = "org.magpie.reactplus.desktop";
       wallpaper = ./wallpaper.jpg;
     };
 
@@ -38,8 +34,6 @@
         enable = true;
         temperature.night = 2500;
       };
-
-      titlebarButtons.left = [ "more-window-actions" ];
 
       virtualDesktops = {
         rows = 1;
@@ -82,12 +76,11 @@
     panels = [
       {
         alignment = "center";
-        floating = false;
+        floating = true;
         height = 30;
-        hiding = "normalpanel";
+        hiding = "dodgewindows";
         lengthMode = "fill";
         location = "left";
-        opacity = "opaque";
 
         widgets = [
           {
@@ -97,6 +90,7 @@
               sortAlphabetically = true;
               applicationsDisplayMode = "list";
               favoritesDisplayMode = "list";
+              icon = "nix-snowflake";
               showButtonsFor = "session";
             };
           }
@@ -115,6 +109,7 @@
           {
             systemTray = {
               icons.scaleToFit = true;
+              items.hidden = [ "org.kde.plasma.networkmanagement" ];
             };
           }
           {
@@ -141,7 +136,7 @@
         "Search"
       ];
 
-      "services/footclient.desktop"."_launch" = "Meta+Return";
+      "services/com.mitchellh.ghostty.desktop"."new-window" = "Meta+Return";
     };
 
     window-rules = [
@@ -206,7 +201,11 @@
         what-to-remember = 2;
       };
 
-      "kdeglobals"."KDE"."AnimationDurationFactor" = 0;
+      "kdeglobals"."KDE" = {
+        "AnimationDurationFactor" = 0;
+        "AutomaticLookAndFeel" = true;
+        "AutomaticLookAndFeelOnIdle" = false;
+      };
     };
   };
 }

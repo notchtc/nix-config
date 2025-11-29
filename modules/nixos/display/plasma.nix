@@ -9,10 +9,7 @@
 {
   config = lib.mkIf config.mama.profiles.graphical.enable {
     services = {
-      displayManager.sddm = {
-        enable = true;
-        theme = "${project.packages.reactionary-plus.result.${system}}/share/sddm/themes/reactionary";
-      };
+      displayManager.sddm.enable = true;
       desktopManager.plasma6.enable = true;
     };
 
@@ -37,10 +34,7 @@
           ;
       };
 
-      systemPackages = [
-        project.packages.reactionary-plus.result.${system}
-        project.packages.split-clock.result.${system}
-      ];
+      systemPackages = [ project.packages.split-clock.result.${system} ];
     };
   };
 }

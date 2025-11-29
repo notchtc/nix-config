@@ -11,6 +11,7 @@ let
     "application/x-extension-xhtml"
     "application/xhtml+xml"
     "text/html"
+    "x-www-browser"
     "x-scheme-handler/about"
     "x-scheme-handler/ftp"
     "x-scheme-handler/http"
@@ -82,7 +83,7 @@ in
   xdg = {
     terminal-exec = {
       enable = true;
-      settings.default = [ "footclient.desktop" ];
+      settings.default = [ "com.mitchellh.ghostty.desktop" ];
     };
     mimeApps = {
       enable = true;

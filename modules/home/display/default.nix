@@ -1,6 +1,1 @@
-{
-  imports = [
-    ./gtk.nix
-    ./plasma.nix
-  ];
-}
+{ imports = [ ./plasma.nix ]; }

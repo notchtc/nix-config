@@ -7,7 +7,11 @@
   ];
 
   config = lib.mkIf config.mama.profiles.graphical.enable {
-    boot.plymouth.enable = true;
+    boot.plymouth = {
+      enable = true;
+      theme = "breeze";
+    };
+
     programs.dconf.enable = true;
     i18n.inputMethod.fcitx5.waylandFrontend = true;
 

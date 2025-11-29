@@ -12,8 +12,8 @@ in
   imports = [
     ./difftastic.nix
     ./eza.nix
-    ./foot.nix
     ./git.nix
+    ./ghostty.nix
     ./haruna.nix
     ./helix.nix
     ./jj.nix
@@ -42,8 +42,6 @@ in
           tutanota-desktop
           qpwgraph
           ;
-
-        inherit (pkgs.kdePackages) arianna;
       };
 
   programs = {
@@ -52,5 +50,8 @@ in
     ripgrep.enable = true;
     zoxide.enable = true;
   }
-  // optionalAttrs graphical { keepassxc.enable = true; };
+  // optionalAttrs graphical {
+    foliate.enable = true;
+    keepassxc.enable = true;
+  };
 }
