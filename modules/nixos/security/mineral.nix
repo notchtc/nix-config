@@ -6,7 +6,7 @@
 }:
 let
   inherit (lib) mkIf;
-  profiles = config.mama.profiles;
+  inherit (config.mama) profiles;
 in
 {
   imports = [ "${project.inputs.nix-mineral.result}/nix-mineral.nix" ];
