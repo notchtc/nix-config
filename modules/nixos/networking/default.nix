@@ -6,7 +6,8 @@
 {
   imports = [
     ./blocking.nix
-    ./network-manager.nix
+    ./iwd.nix
+    ./networkd.nix
     ./resolved.nix
     ./ssh.nix
     ./sysctl.nix
@@ -16,7 +17,7 @@
     hostName = host;
     hostId = builtins.hashString "md5" host |> builtins.substring 0 8;
 
-    modemmanager.enable = lib.mkForce false;
+    networkmanager.enable = lib.mkForce false;
     nftables.enable = true;
 
     useDHCP = false;
@@ -28,13 +29,5 @@
       "149.112.112.112#dns.quad9.net"
       "2620:fe::9#dns.quad9.net"
     ];
-  };
-
-  systemd = {
-    network.wait-online.enable = false;
-    services = {
-      systemd-networkd.stopIfChanged = false;
-      systemd-resolved.stopIfChanged = false;
-    };
   };
 }

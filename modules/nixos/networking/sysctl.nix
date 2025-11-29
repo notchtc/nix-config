@@ -17,7 +17,7 @@
     "net.ipv4.tcp_notsent_lowat" = 131072;
     "net.ipv4.tcp_rmem" = "8192 262144 536870912";
     "net.ipv4.tcp_slow_start_after_idle" = 0;
-    "net.ipv4.tcp_tcp_tw_reuse" = 1;
+    "net.ipv4.tcp_tw_reuse" = 1;
     "net.ipv4.tcp_wmem" = "4096 16384 536870912";
   };
 }

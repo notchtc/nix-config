@@ -11,7 +11,6 @@ in
       "wheel"
     ]
     ++ optionals config.programs.gamemode.enable [ "gamemode" ]
-    ++ optionals config.networking.networkmanager.enable [ "networkmanager" ]
     ++ optionals config.services.pipewire.enable [ "pipewire" ];
 
     openssh.authorizedKeys.keys = [
