@@ -3,7 +3,6 @@
   imports = [
     ./fonts.nix
     ./plasma.nix
-    ./services.nix
     ./variables.nix
   ];
 
@@ -11,5 +10,13 @@
     boot.plymouth.enable = true;
     programs.dconf.enable = true;
     i18n.inputMethod.fcitx5.waylandFrontend = true;
+
+    services = {
+      dbus.implementation = "broker";
+      xserver.xkb = {
+        layout = config.console.keyMap;
+        options = "caps:swapescape";
+      };
+    };
   };
 }
