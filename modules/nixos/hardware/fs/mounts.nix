@@ -9,10 +9,12 @@
         "mode=755"
       ];
     };
+
     "/boot" = {
       fsType = "vfat";
       options = [ "defaults" ];
     };
-    "/persist".neededForBoot = true;
+
+    "/var/lib".neededForBoot = true;
   };
 }
