@@ -1,6 +1,5 @@
 {
   host ? throw "No hostname provided",
-  lib,
   ...
 }:
 {
@@ -17,7 +16,6 @@
     hostName = host;
     hostId = builtins.hashString "md5" host |> builtins.substring 0 8;
 
-    networkmanager.enable = lib.mkForce false;
     nftables.enable = true;
 
     useDHCP = false;

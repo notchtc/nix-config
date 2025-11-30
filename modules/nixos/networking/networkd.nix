@@ -23,7 +23,7 @@
           networkConfig = {
             DHCP = "yes";
             IPv4Forwarding = "yes";
-            IPv6AcceptRA = "yes";
+            IPv6AcceptRA = "no";
             IPv6Forwarding = "yes";
             IPv6PrivacyExtensions = "yes";
           };
@@ -32,7 +32,10 @@
             Anonymize = lib.mkIf (!config.mama.profiles.server.enable) "yes";
             RouteMetric = 512;
           };
-          dhcpV6Config.RouteMetric = 512;
+          dhcpV6Config = {
+            WithoutRA = "solicit";
+            RouteMetric = 512;
+          };
         };
 
         "30-wlan" = {
@@ -41,6 +44,7 @@
           networkConfig = {
             DHCP = "yes";
             IPv4Forwarding = "yes";
+            IPv6AcceptRA = "no";
             IPv6Forwarding = "yes";
             IPv6PrivacyExtensions = "yes";
             IgnoreCarrierLoss = "5s";
@@ -50,7 +54,10 @@
             Anonymize = "yes";
             RouteMetric = 1024;
           };
-          dhcpV6Config.RouteMetric = 1024;
+          dhcpV6Config = {
+            WithoutRA = "solicit";
+            RouteMetric = 1024;
+          };
         };
       };
     };
