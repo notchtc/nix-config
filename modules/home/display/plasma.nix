@@ -12,6 +12,11 @@
     immutableByDefault = true;
     overrideConfig = true;
 
+    input.keyboard.layouts = [ { layout = osConfig.console.keyMap; } ];
+    kscreenlocker.appearance.wallpaper = ./wallpaper.jpg;
+    krunner.position = "center";
+    session.sessionRestore.restoreOpenApplicationsOnLogin = "startWithEmptySession";
+
     workspace = {
       enableMiddleClickPaste = false;
       wallpaper = ./wallpaper.jpg;
@@ -24,10 +29,6 @@
         middleClick = "switchWindow";
       };
     };
-
-    kscreenlocker.appearance.wallpaper = ./wallpaper.jpg;
-
-    krunner.position = "center";
 
     kwin = {
       nightLight = {
@@ -127,8 +128,6 @@
         ];
       }
     ];
-
-    session.sessionRestore.restoreOpenApplicationsOnLogin = "startWithEmptySession";
 
     shortcuts = {
       "services/org.kde.krunner.desktop"."_launch" = [

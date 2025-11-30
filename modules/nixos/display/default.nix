@@ -14,13 +14,6 @@
 
     programs.dconf.enable = true;
     i18n.inputMethod.fcitx5.waylandFrontend = true;
-
-    services = {
-      dbus.implementation = "broker";
-      xserver.xkb = {
-        layout = config.console.keyMap;
-        options = "caps:swapescape";
-      };
-    };
+    services.dbus.implementation = "broker";
   };
 }

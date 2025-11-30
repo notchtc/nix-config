@@ -1,6 +1,7 @@
 {
   imports = [
     ./journald.nix
+    ./keyd.nix
     ./logrotate.nix
     ./ntpd-rs.nix
     ./oomd.nix
