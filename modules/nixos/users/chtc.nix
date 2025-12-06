@@ -7,11 +7,7 @@ in
     isNormalUser = true;
     hashedPasswordFile = config.age.secrets.chtc-password.path;
 
-    extraGroups = [
-      "wheel"
-    ]
-    ++ optionals config.programs.gamemode.enable [ "gamemode" ]
-    ++ optionals config.services.pipewire.enable [ "pipewire" ];
+    extraGroups = [ "wheel" ] ++ optionals config.services.pipewire.enable [ "pipewire" ];
 
     openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHtYPqw1VitvlRnvnO5skoX7vd+N6GET5XrFH4n3jNn3"

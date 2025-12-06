@@ -1,5 +1,6 @@
 {
   imports = [
+    ./ananicy.nix
     ./journald.nix
     ./keyd.nix
     ./logrotate.nix
