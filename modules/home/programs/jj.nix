@@ -67,6 +67,7 @@
           "$left"
           "$right"
         ];
+        pager = [ "${pkgs.moor}/bin/moor" ];
       };
     };
   };
