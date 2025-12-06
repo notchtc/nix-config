@@ -8,6 +8,8 @@
       tlp.enable = false;
       tuned = {
         enable = true;
+        settings.dynamic_tuning = true;
+
         ppdSettings = {
           main.default = "balanced";
           profiles = {
