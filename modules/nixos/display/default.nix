@@ -14,6 +14,15 @@
 
     programs.dconf.enable = true;
     i18n.inputMethod.fcitx5.waylandFrontend = true;
-    services.dbus.implementation = "broker";
+    services = {
+      dbus.implementation = "broker";
+      kmscon = {
+        enable = true;
+        hwRender = true;
+        extraConfig = ''
+          xkb-layout=${config.mama.system.keyMap}
+        '';
+      };
+    };
   };
 }

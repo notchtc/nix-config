@@ -17,8 +17,7 @@
       };
 
       fontconfig = {
-        enable = true;
-
+        enable = lib.mkForce true;
         defaultFonts = {
           monospace = [ "Iosevka Term" ];
           sansSerif = [ "Iosevka Aile" ];
@@ -29,10 +28,6 @@
     };
 
     boot.plymouth.font = "${pkgs.iosevka-bin}/share/fonts/truetype/Iosevka-Regular.ttc";
-    console = {
-      font = "ter-v24n";
-      packages = [ pkgs.terminus_font ];
-    };
 
     environment.variables = {
       FREETYPE_PROPERTIES = "autofitter:no-stem-darkening=0 autofitter:darkening-parameters=500,0,1000,500,2500,500,4000,0 cff:no-stem-darkening=0 type1:no-stem-darkening=0 t1cid:no-stem-darkening=0";

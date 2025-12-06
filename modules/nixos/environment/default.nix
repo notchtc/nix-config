@@ -1,6 +1,5 @@
 {
   imports = [
-    ./console.nix
     ./documentation.nix
     ./locale.nix
     ./packages.nix
@@ -10,6 +9,8 @@
   ];
 
   environment.stub-ld.enable = false;
+  console.enable = false;
+  fonts.fontconfig.enable = false;
 
   system.etc.overlay = {
     enable = true;

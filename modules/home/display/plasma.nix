@@ -12,7 +12,7 @@
     immutableByDefault = true;
     overrideConfig = true;
 
-    input.keyboard.layouts = [ { layout = osConfig.console.keyMap; } ];
+    input.keyboard.layouts = [ { layout = osConfig.mama.system.keyMap; } ];
     kscreenlocker.appearance.wallpaper = ./wallpaper.jpg;
     krunner.position = "center";
     session.sessionRestore.restoreOpenApplicationsOnLogin = "startWithEmptySession";
