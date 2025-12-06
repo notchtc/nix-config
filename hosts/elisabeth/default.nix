@@ -27,18 +27,7 @@
     nvidiaBusId = "PCI:1:0:0";
   };
 
-  systemd.tmpfiles.settings = {
-    "enable-conservation-mode" = {
-      "/sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode" = {
-        "f+" = {
-          group = "root";
-          user = "root";
-          mode = "0644";
-          argument = "1";
-        };
-      };
-    };
-  };
+  boot.kernel.sysfs.bus.platform.drivers.ideapad_acpi."VPC2004:00".conservation_mode = 1;
 
   fileSystems."/boot".device = "/dev/disk/by-uuid/E832-2DAC";
   system.stateVersion = "25.11";
