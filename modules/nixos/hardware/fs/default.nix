@@ -7,12 +7,22 @@
   boot.bcache.enable = false;
   services.lvm.enable = false;
 
-  systemd.services.fstrim = {
-    unitConfig.ConditionACPower = true;
+  systemd.services = {
+    fstrim = {
+      unitConfig.ConditionACPower = true;
 
-    serviceConfig = {
-      Nice = 19;
-      IOSchedulingClass = "idle";
+      serviceConfig = {
+        Nice = 19;
+        IOSchedulingClass = "idle";
+      };
+    };
+    zpool-trim = {
+      unitConfig.ConditionACPower = true;
+
+      serviceConfig = {
+        Nice = 19;
+        IOSchedulingClass = "idle";
+      };
     };
   };
 }

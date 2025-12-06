@@ -129,6 +129,11 @@
       }
     ];
 
+    powerdevil = {
+      battery.powerProfile = "powerSaving";
+      lowBattery.displayBrightness = 10;
+    };
+
     shortcuts = {
       "services/org.kde.krunner.desktop"."_launch" = [
         "Meta"
