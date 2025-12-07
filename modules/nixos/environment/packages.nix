@@ -1,8 +1,9 @@
 {
   config,
+  inputs,
   lib,
   pkgs,
-  project,
+  packages,
   system,
   ...
 }:
@@ -37,7 +38,8 @@ in
           zstd
           ;
 
-        busybox = project.packages.busybox-chtc.result.${system};
+        busybox = packages.busybox-chtc.result.${system};
+        dash = packages.dash-sh.result.${system};
         ssh = config.programs.ssh.package;
       };
 
@@ -50,7 +52,7 @@ in
         ;
       inherit (pkgs.ghostty) terminfo;
 
-      npins = project.inputs.npins.result { inherit pkgs system; };
+      npins = inputs.npins.result { inherit pkgs system; };
     };
   };
 

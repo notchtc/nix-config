@@ -1,15 +1,15 @@
 {
   config,
+  inputs,
   pkgs,
-  project,
   system,
   ...
 }:
 {
   environment = {
     systemPackages = [
-      project.inputs.nilla-cli.result.packages.default.result.${system}
-      project.inputs.nilla-nixos.result.packages.default.result.${system}
+      inputs.nilla-cli.result.packages.default.result.${system}
+      inputs.nilla-nixos.result.packages.default.result.${system}
       pkgs.lix-diff
     ];
   };

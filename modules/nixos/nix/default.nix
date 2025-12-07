@@ -1,8 +1,8 @@
 {
   config,
+  inputs,
   lib,
   pkgs,
-  project,
   ...
 }:
 let
@@ -25,7 +25,7 @@ in
     optimise.automatic = true;
 
     nixPath = [ "/etc/nix/inputs" ];
-    registry.nixpkgs.flake = mkForce project.inputs.nixpkgs-flake.result;
+    registry.nixpkgs.flake = mkForce inputs.nixpkgs-flake.result;
 
     settings = {
       min-free = 5 * 1024 * 1024 * 1024;
@@ -84,6 +84,6 @@ in
           storePath value.result
         else
           storePath value.src;
-    }) project.inputs;
+    }) inputs;
   };
 }

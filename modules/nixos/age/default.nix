@@ -1,6 +1,6 @@
-{ project, ... }:
+{ inputs, ... }:
 {
-  imports = [ "${project.inputs.agenix.result}/modules/age.nix" ];
+  imports = [ "${inputs.agenix.result}/modules/age.nix" ];
 
   age = {
     identityPaths = [

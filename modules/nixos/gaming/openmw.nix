@@ -1,8 +1,8 @@
 {
   config,
+  inputs,
   lib,
   pkgs,
-  project,
   system,
   ...
 }:
@@ -17,7 +17,7 @@ in
   config.environment.systemPackages =
     lib.mkIf gaming.openmw.enable
     <| lib.attrValues {
-      inherit (project.inputs.openmw-nix.result.packages.${system})
+      inherit (inputs.openmw-nix.result.packages.${system})
         #      delta-plugin
         momw-configurator
         openmw-validator

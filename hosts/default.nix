@@ -10,8 +10,8 @@
       ];
 
       args = {
+        inherit (config) inputs packages;
         host = "elisabeth";
-        project = config;
         system = "x86_64-linux";
       };
     };

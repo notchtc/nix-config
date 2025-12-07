@@ -1,8 +1,8 @@
 {
   config,
   lib,
+  packages,
   pkgs,
-  project,
   system,
   ...
 }:
@@ -34,7 +34,7 @@
           ;
       };
 
-      systemPackages = [ project.packages.split-clock.result.${system} ];
+      systemPackages = [ packages.split-clock.result.${system} ];
     };
   };
 }
