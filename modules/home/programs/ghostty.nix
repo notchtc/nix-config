@@ -4,7 +4,7 @@
     enable = true;
     settings = {
       cursor-style = "bar";
-      font-family = "Iosevka Term";
+      font-family = "monospace";
       font-size = 10;
       theme = "dark:Breeze,light:Ayu Light";
       window-padding-x = 3;

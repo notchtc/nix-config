@@ -44,32 +44,32 @@
 
     fonts = {
       general = {
-        family = "Iosevka Aile";
+        family = "sans-serif";
         pointSize = 11;
       };
 
       fixedWidth = {
-        family = "Iosevka Term";
+        family = "monospace";
         pointSize = 10;
       };
 
       small = {
-        family = "Iosevka Aile";
+        family = "sans-serif";
         pointSize = 8;
       };
 
       toolbar = {
-        family = "Iosevka Aile";
+        family = "sans-serif";
         pointSize = 11;
       };
 
       menu = {
-        family = "Iosevka Aile";
+        family = "sans-serif";
         pointSize = 11;
       };
 
       windowTitle = {
-        family = "Iosevka Aile";
+        family = "sans-serif";
         pointSize = 11;
       };
     };
@@ -118,8 +118,8 @@
             config = {
               Appearance = {
                 autoFontAndSize = false;
-                fontFamily = "Iosevka Aile";
-                fontSize = 9;
+                fontFamily = "sans-serif";
+                fontSize = 10;
                 fontStyleName = "Regular";
                 fontWeight = 400;
               };

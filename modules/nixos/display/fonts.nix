@@ -7,27 +7,31 @@
 {
   config = lib.mkIf config.mama.profiles.graphical.enable {
     fonts = {
-      enableDefaultPackages = true;
       packages = lib.attrValues {
-        inherit (pkgs) corefonts iosevka-bin noto-fonts-cjk-sans;
-
-        iosevka-aile = pkgs.iosevka-bin.override { variant = "Aile"; };
-        iosevka-etoile = pkgs.iosevka-bin.override { variant = "Etoile"; };
+        inherit (pkgs)
+          corefonts
+          atkinson-hyperlegible-next
+          atkinson-hyperlegible-mono
+          noto-fonts-cjk-sans
+          noto-fonts-cjk-serif
+          noto-fonts-color-emoji
+          source-serif
+          ;
         nerd-fonts = pkgs.nerd-fonts.symbols-only;
       };
 
       fontconfig = {
         enable = lib.mkForce true;
         defaultFonts = {
-          monospace = [ "Iosevka Term" ];
-          sansSerif = [ "Iosevka Aile" ];
-          serif = [ "Iosevka Etoile" ];
+          monospace = [ "Atkinson Hyperlegible Mono" ];
+          sansSerif = [ "Atkinson Hyperlegible Next" ];
+          serif = [ "Source Serif 4" ];
           emoji = [ "Noto Color Emoji" ];
         };
       };
     };
 
-    boot.plymouth.font = "${pkgs.iosevka-bin}/share/fonts/truetype/Iosevka-Regular.ttc";
+    boot.plymouth.font = "${pkgs.atkinson-hyperlegible-next}/share/fonts/opentype/AtkinsonHyperlegibleNext-Regular.otf";
 
     environment.variables = {
       FREETYPE_PROPERTIES = "autofitter:no-stem-darkening=0 autofitter:darkening-parameters=500,0,1000,500,2500,500,4000,0 cff:no-stem-darkening=0 type1:no-stem-darkening=0 t1cid:no-stem-darkening=0";
