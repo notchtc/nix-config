@@ -1,1 +1,7 @@
-{ includes = [ ./split-clock.nix ]; }
+{
+  includes = [
+    ./busybox-chtc.nix
+    ./dash-sh.nix
+    ./split-clock.nix
+  ];
+}

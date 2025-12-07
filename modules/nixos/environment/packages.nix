@@ -7,6 +7,7 @@
   ...
 }:
 let
+  inherit (builtins) concatStringsSep genList stringLength;
   inherit (lib) attrValues mkForce;
 in
 {
@@ -19,18 +20,16 @@ in
           acl
           attr
           curl
-          gawk
           getent
           getconf
           host
+          iw
           iproute2
           iputils
           libcap
           mkpasswd
           moor
           ncurses
-          netcat
-          procps
           util-linux
           uutils-coreutils-noprefix
           uutils-diffutils
@@ -38,14 +37,7 @@ in
           zstd
           ;
 
-        busybox = pkgs.symlinkJoin {
-          name = "busybox";
-          paths = [ pkgs.busybox ];
-          postBuild = ''
-            rm $out/bin/less
-            rm $out/bin/su
-          '';
-        };
+        busybox = project.packages.busybox-chtc.result.${system};
         ssh = config.programs.ssh.package;
       };
 
@@ -61,4 +53,50 @@ in
       npins = project.inputs.npins.result { inherit pkgs system; };
     };
   };
+
+  system.replaceDependencies.replacements =
+    let
+      coreutils-full-name =
+        "coreuutils-full-"
+        + concatStringsSep "" (genList (_: "v") ((stringLength pkgs.coreutils-full.version) - 1));
+
+      coreutils-name =
+        "coreuutils-" + concatStringsSep "" (genList (_: "v") ((stringLength pkgs.coreutils.version) - 1));
+
+      findutils-name =
+        "finduutils-" + concatStringsSep "" (genList (_: "v") ((stringLength pkgs.findutils.version) - 1));
+
+      diffutils-name =
+        "diffuutils-" + concatStringsSep "" (genList (_: "v") ((stringLength pkgs.diffutils.version) - 1));
+    in
+    [
+      {
+        oldDependency = pkgs.coreutils-full;
+        newDependency = pkgs.symlinkJoin {
+          name = coreutils-full-name;
+          paths = [ pkgs.uutils-coreutils-noprefix ];
+        };
+      }
+      {
+        oldDependency = pkgs.coreutils;
+        newDependency = pkgs.symlinkJoin {
+          name = coreutils-name;
+          paths = [ pkgs.uutils-coreutils-noprefix ];
+        };
+      }
+      {
+        oldDependency = pkgs.findutils;
+        newDependency = pkgs.symlinkJoin {
+          name = findutils-name;
+          paths = [ pkgs.uutils-findutils ];
+        };
+      }
+      {
+        oldDependency = pkgs.diffutils;
+        newDependency = pkgs.symlinkJoin {
+          name = diffutils-name;
+          paths = [ pkgs.uutils-diffutils ];
+        };
+      }
+    ];
 }
