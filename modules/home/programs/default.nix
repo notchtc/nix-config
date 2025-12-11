@@ -14,11 +14,10 @@ in
     ./eza.nix
     ./git.nix
     ./ghostty.nix
-    ./haruna.nix
     ./helix.nix
     ./jj.nix
     ./librewolf.nix
-    ./mpv.nix
+    ./mpv-haruna.nix
     ./nix-index.nix
     ./vesktop.nix
     ./zsh.nix
