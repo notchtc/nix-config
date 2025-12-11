@@ -2,8 +2,8 @@
   config,
   inputs,
   lib,
-  pkgs,
   packages,
+  pkgs,
   system,
   ...
 }:
@@ -20,25 +20,28 @@ in
         inherit (pkgs)
           acl
           attr
+          bzip2
           curl
-          getent
           getconf
+          getent
+          gzip
           host
-          iw
           iproute2
-          iputils
+          iw
           libcap
+          lsof
           mkpasswd
           moor
           ncurses
+          toybox
           util-linux
           uutils-coreutils-noprefix
           uutils-diffutils
           uutils-findutils
+          xz
           zstd
           ;
 
-        busybox = packages.busybox-chtc.result.${system};
         dash = packages.dash-sh.result.${system};
         ssh = config.programs.ssh.package;
       };

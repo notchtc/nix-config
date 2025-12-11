@@ -1,11 +1,11 @@
 { lib, pkgs, ... }:
 let
-  inherit (lib) getExe getExe';
+  inherit (lib) getExe;
 in
 {
   environment.variables = with pkgs; {
-    EDITOR = getExe' busybox "vi";
-    SYSTEMD_EDITOR = getExe' busybox "vi";
+    EDITOR = getExe nvi;
+    SYSTEMD_EDITOR = getExe nvi;
 
     PAGER = getExe moor;
     MANPAGER = getExe moor;
