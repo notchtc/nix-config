@@ -14,12 +14,11 @@ in
   };
 
   config = mkIf gaming.steam.enable {
-    environment.systemPackages = [ pkgs.protonup-qt ];
-
     programs.steam = {
       enable = true;
       dedicatedServer.openFirewall = true;
       extest.enable = true;
+      extraCompatPackages = [ pkgs.proton-ge-bin ];
       gamescopeSession.enable = true;
       localNetworkGameTransfers.openFirewall = true;
       protontricks.enable = true;
