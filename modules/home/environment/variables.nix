@@ -11,7 +11,6 @@ in
 {
   home.sessionVariables = {
     SYSTEMD_EDITOR = var.EDITOR;
-    VISUAL = var.EDITOR;
 
     SYSTEMD_PAGERSECURE = "true";
     SSH_ASKPASS_REQUIRE = "prefer";
