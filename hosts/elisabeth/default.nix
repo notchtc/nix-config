@@ -3,7 +3,7 @@
     hardware = {
       autoaspm = true;
       cpu = "amd";
-      gpu = [
+      gpu.gpus = [
         "amd"
         "nvidia"
       ];
@@ -19,10 +19,6 @@
   boot.kernelParams = [ "amdgpu.sg_display=0" ];
 
   hardware.nvidia.prime = {
-    offload = {
-      enable = true;
-      enableOffloadCmd = true;
-    };
     amdgpuBusId = "PCI:5:0:0";
     nvidiaBusId = "PCI:1:0:0";
   };

@@ -1,31 +1,22 @@
+{ config, lib, ... }:
+let
+  cfg = config.mama.hardware.gpu;
+in
 {
-  config,
-  lib,
-  pkgs,
-  ...
-}:
-{
-  config = lib.mkIf (lib.elem "nvidia" config.mama.hardware.gpu) {
+  config = lib.mkIf (lib.elem "nvidia" cfg.gpus) {
     services.xserver.videoDrivers = [ "nvidia" ];
 
-    hardware = {
-      nvidia = {
-        package = config.boot.kernelPackages.nvidiaPackages.beta;
+    hardware.nvidia = {
+      package = config.boot.kernelPackages.nvidiaPackages.beta;
 
-        open = true;
-        modesetting.enable = true;
-        nvidiaSettings = false;
-
-        powerManagement = {
-          enable = true;
-          finegrained = true;
-        };
-      };
-
-      graphics = {
-        extraPackages = [ pkgs.nvidia-vaapi-driver ];
-        extraPackages32 = [ pkgs.pkgsi686Linux.nvidia-vaapi-driver ];
-      };
+      nvidiaSettings = false;
+      open = true;
+      powerManagement.enable = true;
+    }
+    // lib.optionalAttrs cfg.igpu {
+      videoAcceleration = false;
+      powerManagement.finegrained = true;
+      prime.offload.enable = true;
     };
   };
 }
