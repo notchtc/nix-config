@@ -1,4 +1,4 @@
+{ config, lib, ... }:
 {
-  services.snowflake-proxy.enable = true;
-  systemd.services.snowflake-proxy.unitConfig.ConditionACPower = true;
+  services.snowflake-proxy.enable = lib.mkIf (!config.mama.profiles.laptop.enable) true;
 }
