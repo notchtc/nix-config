@@ -3,6 +3,7 @@
   imports = [
     ./fonts.nix
     ./plasma.nix
+    ./services.nix
     ./variables.nix
   ];
 
@@ -14,15 +15,5 @@
 
     programs.dconf.enable = true;
     i18n.inputMethod.fcitx5.waylandFrontend = true;
-    services = {
-      dbus.implementation = "broker";
-      kmscon = {
-        enable = true;
-        hwRender = true;
-        extraConfig = ''
-          xkb-layout=${config.mama.system.keyMap}
-        '';
-      };
-    };
   };
 }
