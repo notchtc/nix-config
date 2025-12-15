@@ -35,9 +35,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "d787ec69c3216ea33be1c0424fe65cb23aa8fb31",
-      "url": "https://github.com/nix-community/home-manager/archive/d787ec69c3216ea33be1c0424fe65cb23aa8fb31.tar.gz",
-      "hash": "sha256-KOP4QnkiRwiD5KEOr6ceF67rfTP1OqPmCCft6xDC3k4="
+      "revision": "58bf3ecb2d0bba7bdf363fc8a6c4d49b4d509d03",
+      "url": "https://github.com/nix-community/home-manager/archive/58bf3ecb2d0bba7bdf363fc8a6c4d49b4d509d03.tar.gz",
+      "hash": "sha256-yeCxFV/905Wr91yKt5zrVvK6O2CVXWRMSrxqlAZnLp0="
     },
     "nilla": {
       "type": "GitRelease",
@@ -132,9 +132,9 @@
       },
       "branch": "personal",
       "submodules": false,
-      "revision": "677aa8775e7dd981958c8222086cccc9637594c9",
-      "url": "https://github.com/notchtc/nixpkgs/archive/677aa8775e7dd981958c8222086cccc9637594c9.tar.gz",
-      "hash": "sha256-o2J5gbhqwPkDeLjS3jrP0HBDrpyspXgtdSHIMMFMCAA="
+      "revision": "dc9695f335042a69b2759135202115785e69e341",
+      "url": "https://github.com/notchtc/nixpkgs/archive/dc9695f335042a69b2759135202115785e69e341.tar.gz",
+      "hash": "sha256-7oAfwjiacm+rJRaJnUfLcdW2E7+B1DqIVrKdy91SY5Y="
     },
     "npins": {
       "type": "Git",
