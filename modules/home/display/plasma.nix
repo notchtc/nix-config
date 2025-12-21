@@ -141,58 +141,127 @@
       ];
 
       "services/com.mitchellh.ghostty.desktop"."new-window" = "Meta+Return";
+
+      kwin = {
+        "Overview" = "Meta+O";
+        "Switch to Next Desktop" = "Meta+U";
+        "Switch to Previous Desktop" = "Meta+I";
+        "Walk Through Windows (Reverse)" = "Alt+Shift+Tab";
+        "Walk Through Windows" = "Alt+Tab";
+        "Window Close" = "Meta+Q";
+        "Window Fullscreen" = "Meta+Shift+F";
+        "Window Maximize" = "Meta+F";
+        "Window to Next Desktop" = "Meta+Ctrl+U";
+        "Window to Previous Desktop" = "Meta+Ctrl+I";
+        "Switch to Desktop 1" = "Meta+1";
+        "Switch to Desktop 2" = "Meta+2";
+        "Switch to Desktop 3" = "Meta+3";
+        "Switch to Desktop 4" = "Meta+4";
+        "Switch to Desktop 5" = "Meta+5";
+        "Switch to Desktop 6" = "Meta+6";
+        "Switch to Desktop 7" = "Meta+7";
+        "Switch to Desktop 8" = "Meta+8";
+        "Switch to Desktop 9" = "Meta+9";
+
+        "karousel-column-move-end" = "Meta+Ctrl+End";
+        "karousel-column-move-left" = "Meta+Ctrl+H";
+        "karousel-column-move-right" = "Meta+Ctrl+L";
+        "karousel-column-move-start" = "Meta+Ctrl+Home";
+        "karousel-column-move-to-column-1" = [ ];
+        "karousel-column-move-to-column-2" = [ ];
+        "karousel-column-move-to-column-3" = [ ];
+        "karousel-column-move-to-column-4" = [ ];
+        "karousel-column-move-to-column-5" = [ ];
+        "karousel-column-move-to-column-6" = [ ];
+        "karousel-column-move-to-column-7" = [ ];
+        "karousel-column-move-to-column-8" = [ ];
+        "karousel-column-move-to-column-9" = [ ];
+        "karousel-column-move-to-column-10" = [ ];
+        "karousel-column-move-to-column-11" = [ ];
+        "karousel-column-move-to-column-12" = [ ];
+        "karousel-column-move-to-desktop-1" = "Meta+Ctrl+1";
+        "karousel-column-move-to-desktop-2" = "Meta+Ctrl+2";
+        "karousel-column-move-to-desktop-3" = "Meta+Ctrl+3";
+        "karousel-column-move-to-desktop-4" = "Meta+Ctrl+4";
+        "karousel-column-move-to-desktop-5" = "Meta+Ctrl+5";
+        "karousel-column-move-to-desktop-6" = "Meta+Ctrl+6";
+        "karousel-column-move-to-desktop-7" = "Meta+Ctrl+7";
+        "karousel-column-move-to-desktop-8" = "Meta+Ctrl+8";
+        "karousel-column-move-to-desktop-9" = "Meta+Ctrl+9";
+        "karousel-column-move-to-desktop-10" = [ ];
+        "karousel-column-move-to-desktop-11" = [ ];
+        "karousel-column-move-to-desktop-12" = [ ];
+        "karousel-column-toggle-stacked" = "Meta+X";
+        "karousel-column-width-decrease" = "Meta+_";
+        "karousel-column-width-increase" = "Meta++";
+        "karousel-columns-squeeze-left" = [ ];
+        "karousel-columns-squeeze-right" = [ ];
+        "karousel-columns-width-equalize" = [ ];
+        "karousel-cycle-preset-widths" = "Meta+R";
+        "karousel-cycle-preset-widths-reverse" = "Meta+Shift+R";
+        "karousel-focus-1" = [ ];
+        "karousel-focus-2" = [ ];
+        "karousel-focus-3" = [ ];
+        "karousel-focus-4" = [ ];
+        "karousel-focus-5" = [ ];
+        "karousel-focus-6" = [ ];
+        "karousel-focus-7" = [ ];
+        "karousel-focus-8" = [ ];
+        "karousel-focus-9" = [ ];
+        "karousel-focus-10" = [ ];
+        "karousel-focus-11" = [ ];
+        "karousel-focus-12" = [ ];
+        "karousel-focus-down" = "Meta+J";
+        "karousel-focus-end" = "Meta+End";
+        "karousel-focus-left" = "Meta+H";
+        "karousel-focus-next" = "Meta+]";
+        "karousel-focus-previous" = "Meta+[";
+        "karousel-focus-right" = "Meta+L";
+        "karousel-focus-start" = "Meta+Home";
+        "karousel-focus-up" = "Meta+K";
+        "karousel-grid-scroll-end" = [ ];
+        "karousel-grid-scroll-focused" = "Mod+C";
+        "karousel-grid-scroll-left" = [ ];
+        "karousel-grid-scroll-left-column" = [ ];
+        "karousel-grid-scroll-right" = [ ];
+        "karousel-grid-scroll-right-column" = [ ];
+        "karousel-grid-scroll-start" = [ ];
+        "karousel-screen-switch" = "Meta+Ctrl+Return";
+        "karousel-tail-move-to-desktop-1" = [ ];
+        "karousel-tail-move-to-desktop-2" = [ ];
+        "karousel-tail-move-to-desktop-3" = [ ];
+        "karousel-tail-move-to-desktop-4" = [ ];
+        "karousel-tail-move-to-desktop-5" = [ ];
+        "karousel-tail-move-to-desktop-6" = [ ];
+        "karousel-tail-move-to-desktop-7" = [ ];
+        "karousel-tail-move-to-desktop-8" = [ ];
+        "karousel-tail-move-to-desktop-9" = [ ];
+        "karousel-tail-move-to-desktop-10" = [ ];
+        "karousel-tail-move-to-desktop-11" = [ ];
+        "karousel-tail-move-to-desktop-12" = [ ];
+        "karousel-window-move-down" = "Meta+Shift+J";
+        "karousel-window-move-end" = [ ];
+        "karousel-window-move-left" = "Meta+Shift+H";
+        "karousel-window-move-next" = "Meta+}";
+        "karousel-window-move-previous" = "Meta+{";
+        "karousel-window-move-right" = "Meta+Shift+L";
+        "karousel-window-move-start" = [ ];
+        "karousel-window-move-to-column-1" = [ ];
+        "karousel-window-move-to-column-2" = [ ];
+        "karousel-window-move-to-column-3" = [ ];
+        "karousel-window-move-to-column-4" = [ ];
+        "karousel-window-move-to-column-5" = [ ];
+        "karousel-window-move-to-column-6" = [ ];
+        "karousel-window-move-to-column-7" = [ ];
+        "karousel-window-move-to-column-8" = [ ];
+        "karousel-window-move-to-column-9" = [ ];
+        "karousel-window-move-to-column-10" = [ ];
+        "karousel-window-move-to-column-11" = [ ];
+        "karousel-window-move-to-column-12" = [ ];
+        "karousel-window-move-up" = "Meta+Shift+K";
+        "karousel-window-toggle-floating" = "Meta+Shift+V";
+      };
     };
-
-    window-rules = [
-      {
-        description = "Librewolf";
-        match = {
-          window-class = {
-            value = "librewolf";
-            type = "substring";
-          };
-        };
-
-        apply = {
-          desktops = {
-            value = "Desktop_1";
-            apply = "initially";
-          };
-        };
-      }
-      {
-        description = "Discord";
-        match = {
-          window-class = {
-            value = "vesktop";
-            type = "substring";
-          };
-        };
-
-        apply = {
-          desktops = {
-            value = "Desktop_2";
-            apply = "initially";
-          };
-        };
-      }
-      {
-        description = "Telegram";
-        match = {
-          window-class = {
-            value = "telegram";
-            type = "substring";
-          };
-        };
-
-        apply = {
-          desktops = {
-            value = "Desktop_3";
-            apply = "initially";
-          };
-        };
-      }
-    ];
 
     configFile = {
       "baloofilerc"."Basic Settings"."Indexing-Enabled" = false;
@@ -209,6 +278,24 @@
         "AnimationDurationFactor" = 0;
         "AutomaticLookAndFeel" = true;
         "AutomaticLookAndFeelOnIdle" = false;
+      };
+
+      "kwinrc" = {
+        "Plugins"."karouselEnabled" = true;
+        "Script-karousel" = {
+          "floatingKeepAbove" = true;
+          "gapsInnerHorizontal" = 6;
+          "gapsInnerVertical" = 6;
+          "gapsOuterBottom" = 6;
+          "gapsOuterLeft" = 6;
+          "gapsOuterRight" = 6;
+          "gapsOuterTop" = 6;
+          "gestureScroll" = false;
+          "reMaximize" = true;
+          "scrollingCentered" = true;
+          "scrollingLazy" = false;
+          "tiledKeepBelow" = false;
+        };
       };
     };
   };

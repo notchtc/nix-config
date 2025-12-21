@@ -34,7 +34,10 @@
           ;
       };
 
-      systemPackages = [ packages.split-clock.result.${system} ];
+      systemPackages = [
+        pkgs.kdePackages.karousel
+        packages.split-clock.result.${system}
+      ];
     };
   };
 }
