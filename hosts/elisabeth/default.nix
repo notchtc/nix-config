@@ -1,7 +1,6 @@
 {
   mama = {
     hardware = {
-      autoaspm = true;
       cpu = "amd";
       gpu.gpus = [
         "amd"

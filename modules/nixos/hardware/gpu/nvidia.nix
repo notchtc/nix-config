@@ -16,7 +16,10 @@ in
     // lib.optionalAttrs cfg.igpu {
       videoAcceleration = false;
       powerManagement.finegrained = true;
-      prime.offload.enable = true;
+      prime.offload = {
+        enable = true;
+        enableOffloadCmd = true;
+      };
     };
   };
 }

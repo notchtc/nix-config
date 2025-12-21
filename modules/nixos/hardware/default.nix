@@ -4,7 +4,6 @@
 }:
 {
   imports = [
-    ./autoaspm.nix
     ./cpu
     ./firmware.nix
     ./fs

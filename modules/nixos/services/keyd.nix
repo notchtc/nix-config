@@ -9,6 +9,5 @@
       };
     };
   };
-
   systemd.services.keyd.restartIfChanged = false;
 }
