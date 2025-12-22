@@ -22,9 +22,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "61fcc9de76b88e55578eb5d79fc80f2b236df707",
-      "url": "https://github.com/nix-community/home-manager/archive/61fcc9de76b88e55578eb5d79fc80f2b236df707.tar.gz",
-      "hash": "sha256-0V/nKU93KdYGi+5LB/MVo355obBJw/2z9b2xS3bPJxY="
+      "revision": "527ad07e6625302b648ed3b28c34b62a79bd103e",
+      "url": "https://github.com/nix-community/home-manager/archive/527ad07e6625302b648ed3b28c34b62a79bd103e.tar.gz",
+      "hash": "sha256-AjK3/UKDzeXFeYNLVBaJ3+HLE9he1g5UrlNd4/BM3eA="
     },
     "nilla": {
       "type": "GitRelease",
@@ -124,17 +124,20 @@
       "hash": "sha256-NaAQH3eBsetNPAGKfxp0uisaZbHsFnMV1CQvy/Me5jM="
     },
     "npins": {
-      "type": "Git",
+      "type": "GitRelease",
       "repository": {
         "type": "GitHub",
         "owner": "andir",
         "repo": "npins"
       },
-      "branch": "master",
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
       "submodules": false,
-      "revision": "5eb1bde1898a3c32a3aacb36ae120897a58c9ed8",
-      "url": "https://github.com/andir/npins/archive/5eb1bde1898a3c32a3aacb36ae120897a58c9ed8.tar.gz",
-      "hash": "sha256-thc8sd3GB85p12O4nYnlbjpx/Jk5BN3NAtL7nLpoxhI="
+      "version": "0.4.0",
+      "revision": "52904b878c2db61e062b63beb07784d41f98c765",
+      "url": "https://api.github.com/repos/andir/npins/tarball/refs/tags/0.4.0",
+      "hash": "sha256-ksOXi7u4bpHyWNHwkUR62fdwKowPW5GqBS7MA7Apwh4="
     },
     "openmw-nix": {
       "type": "Git",
@@ -172,9 +175,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "9e8957294306e605ab96e8aa37b8eda49a53a901",
-      "url": "https://github.com/LordGrimmauld/run0-sudo-shim/archive/9e8957294306e605ab96e8aa37b8eda49a53a901.tar.gz",
-      "hash": "sha256-pZ2r6ICANUCpbaSF+oq70mTwKtoMFbspqxeX6sefyV8="
+      "revision": "b8ebb2eafd364e84a877e3f279b9cafa0fc22735",
+      "url": "https://github.com/LordGrimmauld/run0-sudo-shim/archive/b8ebb2eafd364e84a877e3f279b9cafa0fc22735.tar.gz",
+      "hash": "sha256-aGkEvS5LhWQHa1rroQ86/dK3yCnxDW7hY6KfY6VvAxY="
     }
   },
   "version": 7
