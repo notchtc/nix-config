@@ -36,9 +36,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "527ad07e6625302b648ed3b28c34b62a79bd103e",
-      "url": "https://github.com/nix-community/home-manager/archive/527ad07e6625302b648ed3b28c34b62a79bd103e.tar.gz",
-      "hash": "sha256-AjK3/UKDzeXFeYNLVBaJ3+HLE9he1g5UrlNd4/BM3eA="
+      "revision": "7a7b43c7231a439d248179ba8d561dd6cd81799b",
+      "url": "https://github.com/nix-community/home-manager/archive/7a7b43c7231a439d248179ba8d561dd6cd81799b.tar.gz",
+      "hash": "sha256-oegDNAvyQwaG3GqSi4U5jpKM7SYHGESGVIuKMRV/lbw="
     },
     "nilla": {
       "type": "GitRelease",
@@ -133,9 +133,9 @@
       },
       "branch": "personal",
       "submodules": false,
-      "revision": "2c74244ef7d833d39a8492aaff63640f95cf03d9",
-      "url": "https://github.com/notchtc/nixpkgs/archive/2c74244ef7d833d39a8492aaff63640f95cf03d9.tar.gz",
-      "hash": "sha256-NaAQH3eBsetNPAGKfxp0uisaZbHsFnMV1CQvy/Me5jM="
+      "revision": "00e655f3744f4dc497775392f841ce9b0b6152ce",
+      "url": "https://github.com/notchtc/nixpkgs/archive/00e655f3744f4dc497775392f841ce9b0b6152ce.tar.gz",
+      "hash": "sha256-9Ltt5FY0UKTVl+TlZJsVsmHzqQ+0TOuKgydS8RmbQzw="
     },
     "npins": {
       "type": "GitRelease",
@@ -189,9 +189,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "b8ebb2eafd364e84a877e3f279b9cafa0fc22735",
-      "url": "https://github.com/LordGrimmauld/run0-sudo-shim/archive/b8ebb2eafd364e84a877e3f279b9cafa0fc22735.tar.gz",
-      "hash": "sha256-aGkEvS5LhWQHa1rroQ86/dK3yCnxDW7hY6KfY6VvAxY="
+      "revision": "63684c217162b94ce15fed68d579e1109ed2753b",
+      "url": "https://github.com/LordGrimmauld/run0-sudo-shim/archive/63684c217162b94ce15fed68d579e1109ed2753b.tar.gz",
+      "hash": "sha256-4XMfEw0ugVIzYOOVZ17ctikK1zjoP6UJ/r7/A1buxn4="
     }
   },
   "version": 7
