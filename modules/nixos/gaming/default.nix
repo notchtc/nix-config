@@ -3,7 +3,6 @@
   imports = [
     ./gamescope.nix
     ./openmw.nix
-    ./lutris.nix
     ./steam.nix
   ];
 

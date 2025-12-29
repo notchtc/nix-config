@@ -37,10 +37,13 @@ in
           picard
           qbittorrent
           strawberry
-          telegram-desktop
           tutanota-desktop
           qpwgraph
           ;
+
+        inherit (pkgs.kdePackages) arianna;
+
+        telegram = pkgs.telegram-desktop.override { withWebkit = false; };
       };
 
   programs = {
@@ -49,8 +52,5 @@ in
     ripgrep.enable = true;
     zoxide.enable = true;
   }
-  // optionalAttrs graphical {
-    foliate.enable = true;
-    keepassxc.enable = true;
-  };
+  // optionalAttrs graphical { keepassxc.enable = true; };
 }
