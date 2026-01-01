@@ -1,7 +1,6 @@
 { lib, ... }:
 {
   imports = [
-    ./appimage.nix
     ./bash.nix
     ./zsh.nix
   ];
