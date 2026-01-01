@@ -5,10 +5,7 @@
 
     boot = {
       kernelParams = [ "amd_pstate=active" ];
-      kernelModules = [
-        "kvm-amd"
-        "amd-pstate"
-      ];
+      kernelModules = [ "kvm-amd" ];
     };
   };
 }

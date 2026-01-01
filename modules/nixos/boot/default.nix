@@ -45,14 +45,6 @@
 
       verbose = false;
 
-      availableKernelModules = [
-        "ahci"
-        "sd_mod"
-        "usbhid"
-        "usb_storage"
-        "xhci_pci"
-      ];
-
       compressorArgs = [
         "-19"
         "-T0"
