@@ -23,9 +23,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "0c73e0ed98e7bb3f6854bab9505e79a7f61654bd",
-      "url": "https://git.notthebe.ee/notthebee/AutoASPM/archive/0c73e0ed98e7bb3f6854bab9505e79a7f61654bd.tar.gz",
-      "hash": "sha256-WnEKYqj0xs92DZscGVMmLytHOQlUWg3ZtZRdgCoTgQw="
+      "revision": "11e921446423582836fb5b290e053fc7c6643efe",
+      "url": "https://git.notthebe.ee/notthebee/AutoASPM/archive/11e921446423582836fb5b290e053fc7c6643efe.tar.gz",
+      "hash": "sha256-ttfgUpC0C5XizuAD3lUE5fda5IeXvbedNcGtG2364IM="
     },
     "home-manager": {
       "type": "Git",
@@ -36,9 +36,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "7a7b43c7231a439d248179ba8d561dd6cd81799b",
-      "url": "https://github.com/nix-community/home-manager/archive/7a7b43c7231a439d248179ba8d561dd6cd81799b.tar.gz",
-      "hash": "sha256-oegDNAvyQwaG3GqSi4U5jpKM7SYHGESGVIuKMRV/lbw="
+      "revision": "297a08510894822ddd93ee2cfc66d6ac65a3cebb",
+      "url": "https://github.com/nix-community/home-manager/archive/297a08510894822ddd93ee2cfc66d6ac65a3cebb.tar.gz",
+      "hash": "sha256-YXtqo8h5bAbqC64XAPMMsZdYk8XkwkyNj/7XOsIyVf8="
     },
     "nilla": {
       "type": "GitRelease",
@@ -107,9 +107,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "395384ceabc7f1b04dc32fa92654f3cc3294f330",
-      "url": "https://github.com/cynicsketch/nix-mineral/archive/395384ceabc7f1b04dc32fa92654f3cc3294f330.tar.gz",
-      "hash": "sha256-Dh6zq3IvLjU3wkmoM/5oVTQ0tIBn6Rm1KJ0Ri4k0yQQ="
+      "revision": "39e3f2a8b58cde9e753be800d6c7b6050e84f81e",
+      "url": "https://github.com/cynicsketch/nix-mineral/archive/39e3f2a8b58cde9e753be800d6c7b6050e84f81e.tar.gz",
+      "hash": "sha256-DMte6hl0SQ/LhSIO578G8iK4RSnrxJAIJoE93sJOtS8="
     },
     "nix-monitored": {
       "type": "Git",
@@ -125,17 +125,10 @@
       "hash": "sha256-Z8PknjkmIr/8ZCH+dmc2Pc+UltiOr7/oKg37PXuVvuU="
     },
     "nixpkgs": {
-      "type": "Git",
-      "repository": {
-        "type": "GitHub",
-        "owner": "notchtc",
-        "repo": "nixpkgs"
-      },
-      "branch": "personal",
-      "submodules": false,
-      "revision": "00e655f3744f4dc497775392f841ce9b0b6152ce",
-      "url": "https://github.com/notchtc/nixpkgs/archive/00e655f3744f4dc497775392f841ce9b0b6152ce.tar.gz",
-      "hash": "sha256-9Ltt5FY0UKTVl+TlZJsVsmHzqQ+0TOuKgydS8RmbQzw="
+      "type": "Channel",
+      "name": "nixos-unstable",
+      "url": "https://releases.nixos.org/nixos/unstable/nixos-26.05pre923638.5912c1772a44/nixexprs.tar.xz",
+      "hash": "sha256-LmdqDciUNW4a3tFH539SorGLD/5t8PFOXhEQlIxbtww="
     },
     "npins": {
       "type": "GitRelease",
@@ -176,9 +169,9 @@
       },
       "branch": "trunk",
       "submodules": false,
-      "revision": "b24ed4b272256dfc1cc2291f89a9821d5f9e14b4",
-      "url": "https://github.com/nix-community/plasma-manager/archive/b24ed4b272256dfc1cc2291f89a9821d5f9e14b4.tar.gz",
-      "hash": "sha256-56LwV51TX/FhgX+5LCG6akQ5KrOWuKgcJa+eUsRMxsc="
+      "revision": "51816be33a1ff0d4b22427de83222d5bfa96d30e",
+      "url": "https://github.com/nix-community/plasma-manager/archive/51816be33a1ff0d4b22427de83222d5bfa96d30e.tar.gz",
+      "hash": "sha256-d5Q1GmQ+sW1Bt8cgDE0vOihzLaswsm8cSdg8124EqXE="
     },
     "run0-sudo-shim": {
       "type": "Git",
