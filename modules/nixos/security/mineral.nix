@@ -5,28 +5,45 @@
   ...
 }:
 let
-  inherit (lib) mkIf;
+  inherit (lib) mkIf optionalAttrs;
   inherit (config.mama) profiles;
 in
 {
-  imports = [ "${inputs.nix-mineral.result}/nix-mineral.nix" ];
+  imports = [ inputs.nix-mineral.result.nixosModules.nix-mineral ];
 
   nix-mineral = {
     enable = true;
-    overrides = {
-      compatibility.allow-ip-forward = true;
-      desktop = mkIf profiles.graphical.enable {
-        allow-multilib = true;
-        hideproc-off = true;
-        home-exec = true;
-        skip-restrict-home-permission = true;
-        tmp-exec = true;
+
+    settings = {
+      kernel.cpu-mitigations = "smt-on";
+
+      network = {
+        ip-forwarding = true;
+        router-advertisements = "off";
       };
-      performance.allow-smt = true;
-      security = {
-        disable-bluetooth-kmodules = mkIf profiles.server.enable true;
-        disable-intelme-kmodules = true;
-        lock-root = true;
+
+      system = {
+        proc-mem-force = "never";
+        yama = "restricted";
+      };
+    };
+
+    extras = {
+      kernel.intelme-kmodules = false;
+      network.bluetooth-kmodules = mkIf profiles.server.enable false;
+      system.lock-root = true;
+    };
+  }
+  // optionalAttrs profiles.graphical.enable {
+    settings = {
+      kernel.pti = false;
+      system.multilib = true;
+    };
+
+    filesystems = {
+      normal = {
+        "/home".options."noexec" = false;
+        "/tmp".options."noexec" = false;
       };
     };
   };

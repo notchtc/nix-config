@@ -1,9 +1,5 @@
-{ config, ... }:
 {
-  security = {
-    protectKernelImage = true;
-    unprivilegedUsernsClone = config.virtualisation.containers.enable;
-  };
+  security.protectKernelImage = true;
 
   boot = {
     kernelParams = [
