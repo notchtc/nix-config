@@ -22,7 +22,6 @@ in
           attr
           bzip2
           curl
-          getconf
           getent
           gzip
           host
