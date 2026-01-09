@@ -6,9 +6,7 @@
       kmscon = {
         enable = true;
         hwRender = true;
-        extraConfig = ''
-          xkb-layout=${config.mama.system.keyMap}
-        '';
+        extraConfig = "xkb-layout=${config.mama.system.keyMap}";
       };
     };
 
@@ -26,10 +24,6 @@
         DefaultTimeoutAbortSec=15s
         DefaultDeviceTimeoutSec=15s
       '';
-      services = {
-        "autovt@tty1".enable = false;
-        "kmsconvt@tty1".enable = false;
-      };
     };
   };
 }
