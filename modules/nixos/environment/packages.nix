@@ -26,22 +26,31 @@ in
           acl
           attr
           bzip2
+          cpio
           curl
+          file
+          gawk
+          getconf
           getent
+          gnugrep
+          gnupatch
+          gnused
+          gnutar
           gzip
           host
           iproute2
+          iputils
           iw
           libcap
           lsof
           mkpasswd
           moor
           ncurses
-          toybox
+          netcat
+          procps
+          time
           util-linux
-          uutils-coreutils-noprefix
-          uutils-diffutils
-          uutils-findutils
+          which
           xz
           zstd
           ;
@@ -55,7 +64,11 @@ in
         deadnix
         ffmpeg
         git
+        moor
         statix
+        uutils-coreutils-noprefix
+        uutils-diffutils
+        uutils-findutils
         ;
       inherit (pkgs.ghostty) terminfo;
 
