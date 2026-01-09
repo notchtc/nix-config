@@ -274,10 +274,17 @@
         what-to-remember = 2;
       };
 
-      "kdeglobals"."KDE" = {
-        "AnimationDurationFactor" = 0;
-        "AutomaticLookAndFeel" = true;
-        "AutomaticLookAndFeelOnIdle" = false;
+      "kdeglobals" = {
+        "General" = {
+          "TerminalApplication" = "ghostty";
+          "TerminalService" = "com.mitchellh.ghostty.desktop";
+        };
+
+        "KDE" = {
+          "AnimationDurationFactor" = 0;
+          "AutomaticLookAndFeel" = true;
+          "AutomaticLookAndFeelOnIdle" = false;
+        };
       };
 
       "kwinrc" = {
