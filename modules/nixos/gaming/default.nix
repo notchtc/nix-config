@@ -1,6 +1,7 @@
 { config, lib, ... }:
 {
   imports = [
+    ./bottles.nix
     ./gamescope.nix
     ./openmw.nix
     ./steam.nix
