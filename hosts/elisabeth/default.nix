@@ -12,6 +12,7 @@
       graphical.enable = true;
       laptop.enable = true;
     };
+    programs.wine.enable = true;
     system.secure-boot.enable = true;
   };
 

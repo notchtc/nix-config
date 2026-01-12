@@ -2,12 +2,14 @@
 {
   imports = [
     ./bottles.nix
+    ./gamemode.nix
     ./gamescope.nix
     ./openmw.nix
     ./steam.nix
   ];
 
-  boot.kernel.sysctl = lib.mkIf config.mama.profiles.gaming.enable {
-    "kernel.split_lock_mitigate" = 0;
+  boot = lib.mkIf config.mama.profiles.gaming.enable {
+    kernelModules = [ "ntsync" ];
+    kernel.sysctl."kernel.split_lock_mitigate" = 0;
   };
 }

@@ -12,5 +12,7 @@ in
     default = gaming.enable;
   };
 
-  config.environment.systemPackages = lib.mkIf gaming.gamescope.enable [ pkgs.bottles ];
+  config.environment.systemPackages = lib.mkIf gaming.gamescope.enable [
+    (pkgs.bottles.override { removeWarningPopup = true; })
+  ];
 }
