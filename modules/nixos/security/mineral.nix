@@ -16,15 +16,11 @@ in
 
     settings = {
       kernel.cpu-mitigations = "smt-on";
+      system.proc-mem-force = "never";
 
       network = {
         ip-forwarding = true;
         router-advertisements = "off";
-      };
-
-      system = {
-        proc-mem-force = "never";
-        yama = "restricted";
       };
     };
 
