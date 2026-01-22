@@ -36,9 +36,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "c47b2cc64a629f8e075de52e4742de688f930dc6",
-      "url": "https://github.com/nix-community/home-manager/archive/c47b2cc64a629f8e075de52e4742de688f930dc6.tar.gz",
-      "hash": "sha256-kkgA32s/f4jaa4UG+2f8C225Qvclxnqs76mf8zvTVPg="
+      "revision": "082a4cd87c6089d1d9c58ebe52655f9e07245fcb",
+      "url": "https://github.com/nix-community/home-manager/archive/082a4cd87c6089d1d9c58ebe52655f9e07245fcb.tar.gz",
+      "hash": "sha256-clG+nT6I2qxjIgk5WoSDKJyNhzKJs9jzbCujPF2S/yg="
     },
     "nilla": {
       "type": "GitRelease",
@@ -107,9 +107,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "22b0282f5c74540bfd47d469c1a45d54d2c3984f",
-      "url": "https://github.com/cynicsketch/nix-mineral/archive/22b0282f5c74540bfd47d469c1a45d54d2c3984f.tar.gz",
-      "hash": "sha256-j2Us0Shr+nZ/5+nNMeg9lPgXlErqiXZ277S0IJAZ/7w="
+      "revision": "bbab6680f6895c9534db4549d618cb06f16a1914",
+      "url": "https://github.com/cynicsketch/nix-mineral/archive/bbab6680f6895c9534db4549d618cb06f16a1914.tar.gz",
+      "hash": "sha256-8vQDgKzTlLGI7PlJShUf2c+BAL3VXeZtHvecj0vFXzM="
     },
     "nix-monitored": {
       "type": "Git",
@@ -127,8 +127,8 @@
     "nixpkgs": {
       "type": "Channel",
       "name": "nixos-unstable",
-      "url": "https://releases.nixos.org/nixos/unstable/nixos-26.05pre928726.e4bae1bd10c9/nixexprs.tar.xz",
-      "hash": "sha256-52qidqGYxRXmbJSh1IJKsqtVE0r8LD1gomW6SXBEeZM="
+      "url": "https://releases.nixos.org/nixos/unstable/nixos-26.05pre931542.88d3861acdd3/nixexprs.tar.xz",
+      "hash": "sha256-S/5RU76BdQ32bbE99a+G9gMuatpVWEvIfeSjEqyoFS4="
     },
     "npins": {
       "type": "GitRelease",
