@@ -18,7 +18,7 @@ in
         loadPreset
         <| pkgs.fetchurl {
           url = "https://raw.githubusercontent.com/Digitalone1/EasyEffects-Presets/refs/heads/master/LoudnessEqualizer.json";
-          hash = "sha256-1vVMz+X+Zxldo7ull6FL3IGdvzuDO3nNosE3nPclvKw=";
+          hash = "sha256-yqQiy7J8Vt9zdPCG783MHJOBCpgI/2swHA5Y7FO05IE=";
         };
     };
   };
