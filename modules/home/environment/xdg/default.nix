@@ -35,10 +35,8 @@ in
     };
   };
 
-  gtk.gtk2.configLocation = "${configHome}/gtk-2.0/gtkrc";
-  xresources.path = "${configHome}/X11/Xresources";
-
   home = {
+    preferXdgDirectories = true;
     sessionVariables = rec {
       __GL_SHADER_DISK_CACHE_PATH = "${cacheHome}/nv";
       _JAVA_OPTIONS = "-Djava.util.prefs.userRoot=${configHome}/java";
@@ -47,7 +45,6 @@ in
       CUDA_CACHE_PATH = __GL_SHADER_DISK_CACHE_PATH;
       DVDCSS_CACHE = "${dataHome}/dvdcss";
       GNUPGHOME = "${dataHome}/gnupg";
-      INPUTRC = "${configHome}/readline/inputrc";
       LESSHISTFILE = "${dataHome}/lesshst";
       PULSECOOKIE = "${configHome}/pulse/cookie";
       WGETRC = "${configHome}/wgetrc";
