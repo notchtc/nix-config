@@ -8,13 +8,13 @@
   ...
 }:
 let
-  inherit (builtins)
+  inherit (lib)
     attrValues
     concatStringsSep
     genList
+    mkForce
     stringLength
     ;
-  inherit (lib) mkForce;
 in
 {
   environment = {

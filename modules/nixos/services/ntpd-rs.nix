@@ -1,4 +1,3 @@
-{ lib, ... }:
 {
   services = {
     timesyncd.enable = false;
@@ -14,7 +13,7 @@
             "time.dfm.dk"
             "time.cifelli.xyz"
           ]
-          |> lib.map (address: {
+          |> map (address: {
             inherit address;
             mode = "nts";
           });
