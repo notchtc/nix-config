@@ -9,9 +9,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "fcdea223397448d35d9b31f798479227e80183f6",
-      "url": "https://github.com/ryantm/agenix/archive/fcdea223397448d35d9b31f798479227e80183f6.tar.gz",
-      "hash": "sha256-wyT7Pl6tMFbFrs8Lk/TlEs81N6L+VSybPfiIgzU8lbQ="
+      "revision": "b027ee29d959fda4b60b57566d64c98a202e0feb",
+      "url": "https://github.com/ryantm/agenix/archive/b027ee29d959fda4b60b57566d64c98a202e0feb.tar.gz",
+      "hash": "sha256-9VnK6Oqai65puVJ4WYtCTvlJeXxMzAp/69HhQuTdl/I="
     },
     "autoaspm": {
       "type": "Git",
@@ -36,9 +36,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "082a4cd87c6089d1d9c58ebe52655f9e07245fcb",
-      "url": "https://github.com/nix-community/home-manager/archive/082a4cd87c6089d1d9c58ebe52655f9e07245fcb.tar.gz",
-      "hash": "sha256-clG+nT6I2qxjIgk5WoSDKJyNhzKJs9jzbCujPF2S/yg="
+      "revision": "4fda26500b4539e0a1e3afba9f0e1616bdad4f85",
+      "url": "https://github.com/nix-community/home-manager/archive/4fda26500b4539e0a1e3afba9f0e1616bdad4f85.tar.gz",
+      "hash": "sha256-mQgOAYWlVJyuyXjZN6yxqXWyODvQI5P/UZUCU7IOuYo="
     },
     "nilla": {
       "type": "GitRelease",
@@ -94,9 +94,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "82befcf7dc77c909b0f2a09f5da910ec95c5b78f",
-      "url": "https://github.com/nix-community/nix-index-database/archive/82befcf7dc77c909b0f2a09f5da910ec95c5b78f.tar.gz",
-      "hash": "sha256-d3NBA9zEtBu2JFMnTBqWj7Tmi7R5OikoU2ycrdhQEws="
+      "revision": "f7d77408f21b6e8d03a5271ad9e633bfbac9cc7a",
+      "url": "https://github.com/nix-community/nix-index-database/archive/f7d77408f21b6e8d03a5271ad9e633bfbac9cc7a.tar.gz",
+      "hash": "sha256-VhmDekVd7JUEw6CRrN27cou1FfQuoRHhUEq3uCzfl98="
     },
     "nix-mineral": {
       "type": "Git",
@@ -107,9 +107,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "bbab6680f6895c9534db4549d618cb06f16a1914",
-      "url": "https://github.com/cynicsketch/nix-mineral/archive/bbab6680f6895c9534db4549d618cb06f16a1914.tar.gz",
-      "hash": "sha256-8vQDgKzTlLGI7PlJShUf2c+BAL3VXeZtHvecj0vFXzM="
+      "revision": "fa4709e0700f990d46ac3136180ff1641de376f8",
+      "url": "https://github.com/cynicsketch/nix-mineral/archive/fa4709e0700f990d46ac3136180ff1641de376f8.tar.gz",
+      "hash": "sha256-4uB6s3xUYcWSTOr+thVPj42hcwS7PtW62my0rn8ZYyg="
     },
     "nix-monitored": {
       "type": "Git",
@@ -127,8 +127,8 @@
     "nixpkgs": {
       "type": "Channel",
       "name": "nixos-unstable",
-      "url": "https://releases.nixos.org/nixos/unstable/nixos-26.05pre931542.88d3861acdd3/nixexprs.tar.xz",
-      "hash": "sha256-S/5RU76BdQ32bbE99a+G9gMuatpVWEvIfeSjEqyoFS4="
+      "url": "https://releases.nixos.org/nixos/unstable/nixos-26.05pre939624.e6eae2ee2110/nixexprs.tar.xz",
+      "hash": "sha256-34H0Zx1/bA5yyd20kC/QZGBj417IETp6jiF7wH4RKrs="
     },
     "npins": {
       "type": "GitRelease",
@@ -169,9 +169,9 @@
       },
       "branch": "trunk",
       "submodules": false,
-      "revision": "51816be33a1ff0d4b22427de83222d5bfa96d30e",
-      "url": "https://github.com/nix-community/plasma-manager/archive/51816be33a1ff0d4b22427de83222d5bfa96d30e.tar.gz",
-      "hash": "sha256-d5Q1GmQ+sW1Bt8cgDE0vOihzLaswsm8cSdg8124EqXE="
+      "revision": "fe54ea85c6e4413fba03b84d50f2b431d2f7c831",
+      "url": "https://github.com/nix-community/plasma-manager/archive/fe54ea85c6e4413fba03b84d50f2b431d2f7c831.tar.gz",
+      "hash": "sha256-12RCFLyAedyMOdenUi7cN3ioJPEGjA/ZG1BLjugfUVs="
     },
     "run0-sudo-shim": {
       "type": "Git",
@@ -182,9 +182,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "63684c217162b94ce15fed68d579e1109ed2753b",
-      "url": "https://github.com/LordGrimmauld/run0-sudo-shim/archive/63684c217162b94ce15fed68d579e1109ed2753b.tar.gz",
-      "hash": "sha256-4XMfEw0ugVIzYOOVZ17ctikK1zjoP6UJ/r7/A1buxn4="
+      "revision": "8b2946a8c150766648ec89d5df780822b888775e",
+      "url": "https://github.com/LordGrimmauld/run0-sudo-shim/archive/8b2946a8c150766648ec89d5df780822b888775e.tar.gz",
+      "hash": "sha256-u8hioiUsIxUsjHhgA59ADaYWKNf5PcFAlY6/T0G1JtE="
     }
   },
   "version": 7
