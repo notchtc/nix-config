@@ -46,9 +46,14 @@ in
       DVDCSS_CACHE = "${dataHome}/dvdcss";
       GNUPGHOME = "${dataHome}/gnupg";
       LESSHISTFILE = "${dataHome}/lesshst";
-      PULSECOOKIE = "${configHome}/pulse/cookie";
+      PULSE_COOKIE = "${configHome}/pulse/cookie";
       WGETRC = "${configHome}/wgetrc";
       WINEPREFIX = "${dataHome}/wine";
     };
   };
+
+  systemd.user.tmpfiles.rules = [
+    "R ${config.home.homeDirectory}/.pki - - - - -"
+    "d ${config.xdg.configHome}/pki/nssdb 0700 ${config.home.username} users -"
+  ];
 }
