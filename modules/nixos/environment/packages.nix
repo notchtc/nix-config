@@ -2,7 +2,6 @@
   config,
   inputs,
   lib,
-  packages,
   pkgs,
   system,
   ...
@@ -25,6 +24,7 @@ in
         inherit (pkgs)
           acl
           attr
+          bashInteractive
           bzip2
           cpio
           curl
@@ -54,7 +54,6 @@ in
 
         inherit (pkgs.stdenv.cc) libc;
 
-        dash = packages.dash-sh.result.${system};
         ssh = config.programs.ssh.package;
       };
 

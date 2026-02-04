@@ -1,6 +1,1 @@
-{
-  includes = [
-    ./dash-sh.nix
-    ./split-clock.nix
-  ];
-}
+{ includes = [ ./split-clock.nix ]; }
