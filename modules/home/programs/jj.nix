@@ -61,12 +61,6 @@
         editor = config.home.sessionVariables.EDITOR;
         default-command = "log";
         diff-editor = ":builtin";
-        diff-formatter = [
-          "${pkgs.difftastic}/bin/difft"
-          "--color=always"
-          "$left"
-          "$right"
-        ];
         pager = [ "${pkgs.moor}/bin/moor" ];
       };
     };
