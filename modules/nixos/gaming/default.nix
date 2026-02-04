@@ -4,7 +4,7 @@
     ./bottles.nix
     ./gamemode.nix
     ./gamescope.nix
-    ./openmw.nix
+    #    ./openmw.nix
     ./steam.nix
   ];
 
