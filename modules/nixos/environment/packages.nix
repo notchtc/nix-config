@@ -34,26 +34,25 @@ in
           getent
           gnugrep
           gnupatch
-          gnused
           gnutar
           gzip
           host
           iproute2
           iputils
-          iw
           libcap
           lsof
           mkpasswd
           moor
           ncurses
           netcat
-          procps
           time
           util-linux
           which
           xz
           zstd
           ;
+
+        inherit (pkgs.stdenv.cc) libc;
 
         dash = packages.dash-sh.result.${system};
         ssh = config.programs.ssh.package;
@@ -69,7 +68,10 @@ in
         uutils-coreutils-noprefix
         uutils-diffutils
         uutils-findutils
+        uutils-procps
+        uutils-sed
         ;
+
       inherit (pkgs.ghostty) terminfo;
 
       npins = inputs.npins.result { inherit pkgs system; };
