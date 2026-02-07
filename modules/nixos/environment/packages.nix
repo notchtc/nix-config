@@ -28,7 +28,6 @@ in
           bzip2
           cpio
           curl
-          file
           gawk
           getconf
           getent
@@ -45,6 +44,7 @@ in
           moor
           ncurses
           netcat
+          procps
           time
           util-linux
           which
@@ -61,13 +61,13 @@ in
       inherit (pkgs)
         deadnix
         ffmpeg
+        file
         git
         moor
         statix
         uutils-coreutils-noprefix
         uutils-diffutils
         uutils-findutils
-        uutils-procps
         uutils-sed
         ;
 
