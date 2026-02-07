@@ -43,9 +43,7 @@ in
           ];
 
         "3rdparty".Extensions."uBlock0@raymondhill.net".adminSettings = toJSON {
-          userSettings = {
-            advancedUserEnabled = true;
-          };
+          userSettings.advancedUserEnabled = true;
 
           selectedFilterLists = [
             "user-filters"
@@ -154,15 +152,16 @@ in
         settings = {
           "privacy.fingerprintingProtection" = true;
           "privacy.fingerprintingProtection.overrides" = "+AllTargets,-CSSPrefersColorScheme,-JSDateTimeUTC";
-          "privacy.sanitize.sanitizeOnShutdown" = false;
           "privacy.resistFingerprinting" = false;
+          "privacy.sanitize.sanitizeOnShutdown" = false;
           "webgl.disabled" = false;
 
+          "browser.tabs.groups.enabled" = false;
           "browser.tabs.inTitlebar" = 0;
           "browser.toolbars.bookmarks.visibility" = "never";
+          "findbar.highlightAll" = true;
           "general.autoScroll" = true;
           "middlemouse.paste" = false;
-          "findbar.highlightAll" = true;
           "sidebar.main.tools" = "history,bookmarks";
           "sidebar.verticalTabs" = true;
           "sidebar.visibility" = "expand-on-hover";
