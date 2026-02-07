@@ -28,7 +28,7 @@ zpool create -f \
   elisabeth \
   "$DISK"
 
-zfs create -o canmount=off elisabeth/NixOS
+zfs create -o canmount=off -o mountpoint=/ elisabeth/NixOS
 zfs create -o canmount=on elisabeth/NixOS/home
 zfs create -o canmount=on -o com.sun:auto-snapshot=false elisabeth/NixOS/nix
 zfs create -o canmount=off elisabeth/NixOS/var
