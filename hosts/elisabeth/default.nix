@@ -17,7 +17,6 @@
   };
 
   boot = {
-    kernelParams = [ "amdgpu.sg_display=0" ];
     kernel.sysfs.bus.platform.drivers.ideapad_acpi."VPC2004:00".conservation_mode = 1;
 
     initrd.availableKernelModules = [
