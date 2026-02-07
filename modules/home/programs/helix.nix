@@ -3,6 +3,7 @@
   programs.helix = {
     enable = true;
     defaultEditor = true;
+    package = pkgs.evil-helix;
 
     extraPackages = builtins.attrValues { inherit (pkgs) markdown-oxide nixd nixfmt; };
     settings = {
@@ -34,19 +35,6 @@
         line-number = "relative";
         soft-wrap.enable = true;
       };
-
-      keys = {
-        normal = {
-          "A-x" = "extend_to_line_bounds";
-          "X" = "select_line_above";
-          "A-l" = ":lsp-workspace-command";
-        };
-
-        select = {
-          "A-x" = "extend_to_line_bounds";
-          "X" = "select_line_above";
-        };
-      };
     };
 
     languages = {
@@ -59,11 +47,6 @@
             args = [ "-s" ];
           };
         }
-        #{
-        #  name = "typst";
-        #  auto-format = true;
-        #  formatter.command = "${pkgs.typstyle}/bin/typstyle";
-        #}
       ];
       language-server.nixd = {
         config.nixd.options = {
