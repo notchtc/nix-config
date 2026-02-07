@@ -8,13 +8,17 @@ in
 
   xdg = {
     enable = true;
+
     cacheHome = "${homeDirectory}/.cache";
     configHome = "${homeDirectory}/.config";
     dataHome = "${homeDirectory}/.local/share";
     stateHome = "${homeDirectory}/.local/state";
+
     userDirs = {
       enable = true;
       createDirectories = true;
+      setSessionVariables = true;
+
       desktop = "${homeDirectory}/Desktop";
       documents = "${homeDirectory}/Documents";
       download = "${homeDirectory}/Downloads";
