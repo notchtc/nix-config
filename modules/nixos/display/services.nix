@@ -3,6 +3,8 @@
   config = lib.mkIf config.mama.profiles.graphical.enable {
     services = {
       dbus.implementation = "broker";
+      gvfs.enable = true;
+      udisks2.enable = true;
       kmscon = {
         enable = true;
         hwRender = true;

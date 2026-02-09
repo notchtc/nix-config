@@ -1,19 +1,14 @@
 { config, lib, ... }:
 {
   imports = [
-    ./fonts.nix
-    ./plasma.nix
+    ./niri.nix
     ./services.nix
-    ./variables.nix
+    ./theming.nix
   ];
 
   config = lib.mkIf config.mama.profiles.graphical.enable {
-    boot.plymouth = {
-      enable = true;
-      theme = "breeze";
-    };
-
+    boot.plymouth.enable = true;
+    environment.variables.NIXOS_OZONE_WL = 1;
     programs.dconf.enable = true;
-    i18n.inputMethod.fcitx5.waylandFrontend = true;
   };
 }

@@ -6,10 +6,13 @@
 }:
 {
   config = lib.mkIf osConfig.mama.profiles.graphical.enable {
-    home.packages = [ pkgs.yt-dlp ];
+    home.packages = [
+      pkgs.haruna
+      pkgs.yt-dlp
+    ];
+
     programs.mpv = {
       enable = true;
-      package = pkgs.haruna;
 
       config = {
         profile = "high-quality";

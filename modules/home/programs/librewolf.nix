@@ -253,5 +253,7 @@ in
       ".librewolf/native-messaging-hosts".enable = mkForce false;
       ".mozilla/native-messaging-hosts".enable = mkForce false;
     };
+
+    stylix.targets.librewolf.profileNames = [ "default" ];
   };
 }

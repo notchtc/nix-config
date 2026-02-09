@@ -54,7 +54,13 @@ in
       WGETRC = "${configHome}/wgetrc";
       WINEPREFIX = "${dataHome}/wine";
     };
+    file = {
+      ".gtkrc-2.0".enable = false;
+      ".icons/default/index.theme".enable = false;
+      ".icons/${config.home.pointerCursor.name}".enable = false;
+    };
   };
+  xresources.path = "${config.xdg.configHome}/X11/Xresources";
 
   systemd.user.tmpfiles.rules = [
     "R ${config.home.homeDirectory}/.pki - - - - -"

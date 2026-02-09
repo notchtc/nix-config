@@ -1,3 +1,4 @@
+{ lib, ... }:
 {
   imports = [
     ./documentation.nix
@@ -10,7 +11,7 @@
 
   environment.stub-ld.enable = false;
   console.enable = false;
-  fonts.fontconfig.enable = false;
+  fonts.fontconfig.enable = lib.mkDefault false;
 
   system.etc.overlay = {
     enable = true;

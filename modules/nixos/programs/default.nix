@@ -2,6 +2,7 @@
 {
   imports = [
     ./bash.nix
+    ./thunar.nix
     ./wine.nix
     ./zsh.nix
   ];

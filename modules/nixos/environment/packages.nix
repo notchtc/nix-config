@@ -12,6 +12,7 @@ let
     concatStringsSep
     genList
     mkForce
+    optionalAttrs
     stringLength
     ;
 in
@@ -57,24 +58,50 @@ in
         ssh = config.programs.ssh.package;
       };
 
-    systemPackages = attrValues {
-      inherit (pkgs)
-        deadnix
-        ffmpeg
-        file
-        git
-        moor
-        statix
-        uutils-coreutils-noprefix
-        uutils-diffutils
-        uutils-findutils
-        uutils-sed
-        ;
+    systemPackages =
+      attrValues
+      <|
+        {
+          inherit (pkgs)
+            aria2
+            deadnix
+            ffmpeg
+            file
+            git
+            moor
+            statix
+            uutils-coreutils-noprefix
+            uutils-diffutils
+            uutils-findutils
+            uutils-sed
+            ;
 
-      inherit (pkgs.ghostty) terminfo;
+          inherit (pkgs.ghostty) terminfo;
 
-      npins = inputs.npins.result { inherit pkgs system; };
-    };
+          npins = inputs.npins.result { inherit pkgs system; };
+        }
+        // optionalAttrs config.mama.profiles.graphical.enable {
+          inherit (pkgs)
+            gimp
+            keepassxc
+            nicotine-plus
+            picard
+            pwvucontrol
+            qbittorrent
+            qpwgraph
+            strawberry
+            tutanota-desktop
+            ;
+
+          inherit (pkgs.kdePackages)
+            arianna
+            ark
+            gwenview
+            okular
+            ;
+
+          telegram = pkgs.telegram-desktop.override { withWebkit = false; };
+        };
   };
 
   system.replaceDependencies.replacements =

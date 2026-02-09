@@ -33,6 +33,18 @@
 
   services.autoaspm.enable = true;
 
+  home-manager.users.chtc.programs.niri.settings = {
+    outputs."eDP-1" = {
+      mode = {
+        width = 1920;
+        height = 1080;
+        refresh = 144.003;
+      };
+      variable-refresh-rate = true;
+    };
+    debug.ignore-drm-device = "/dev/dri/renderD129";
+  };
+
   fileSystems."/boot".device = "/dev/disk/by-uuid/E832-2DAC";
   system.stateVersion = "25.11";
 }
