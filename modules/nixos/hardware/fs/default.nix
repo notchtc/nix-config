@@ -1,28 +1,13 @@
+{ pkgs, ... }:
 {
   imports = [
     ./mounts.nix
-    ./zfs.nix
+    ./services.nix
   ];
 
-  boot.bcache.enable = false;
-  services.lvm.enable = false;
-
-  systemd.services = {
-    fstrim = {
-      unitConfig.ConditionACPower = true;
-
-      serviceConfig = {
-        Nice = 19;
-        IOSchedulingClass = "idle";
-      };
-    };
-    zpool-trim = {
-      unitConfig.ConditionACPower = true;
-
-      serviceConfig = {
-        Nice = 19;
-        IOSchedulingClass = "idle";
-      };
-    };
+  boot = {
+    bcache.enable = false;
+    supportedFilesystems = [ "zfs" ];
+    zfs.package = pkgs.zfs_unstable;
   };
 }

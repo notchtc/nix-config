@@ -1,4 +1,5 @@
 {
+  config,
   inputs,
   packages,
   system,
@@ -12,7 +13,10 @@
     overwriteBackup = true;
     useGlobalPkgs = true;
     useUserPackages = true;
-    extraSpecialArgs = { inherit inputs packages system; };
+    extraSpecialArgs = {
+      inherit inputs packages system;
+      inherit (config.mama) profiles;
+    };
 
     sharedModules = [ ../home ];
   };

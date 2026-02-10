@@ -1,6 +1,18 @@
-{ config, pkgs, ... }:
 {
-  imports = [ ./loader.nix ];
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+{
+  imports = [
+    ./blacklist.nix
+    ./loader.nix
+    ./kernelParams.nix
+    ./plymouth.nix
+    ./sysctl.nix
+    ./sysfs.nix
+  ];
 
   system.nixos-init.enable = true;
   boot = {
@@ -11,34 +23,9 @@
       else
         pkgs.linuxPackages_hardened;
 
-    kernelParams = [
-      "nohz_full=4-7"
+    kernelModules = lib.mkIf config.mama.profiles.gaming.enable [ "ntsync" ];
 
-      "noresume"
-
-      "systemd.show_status=auto"
-      "rd.systemd.show_status=auto"
-
-      "rd.udev.log_level=3"
-      "udev.log_priority=3"
-
-      "fbcon=nodefer"
-    ];
-
-    kernel = {
-      sysctl = {
-        "vm.dirty_bytes" = 268435456;
-        "vm.dirty_background_bytes" = 134217728;
-        "vm.max_map_count" = 2147483642;
-      };
-      sysfs = {
-        kernel.mm.transparent_hugepage = {
-          enabled = "always";
-          defrag = "defer";
-          shmem_enabled = "within_size";
-        };
-      };
-    };
+    kexec.enable = false;
 
     initrd = {
       systemd.enable = true;
@@ -56,4 +43,6 @@
       tmpfsHugeMemoryPages = "within_size";
     };
   };
+
+  security.protectKernelImage = true;
 }

@@ -2,9 +2,7 @@
   imports = [
     ./age
     ./boot
-    ./display
     ./environment
-    ./gaming
     ./hardware
     ./home.nix
     ./networking

@@ -8,11 +8,13 @@
       ];
     };
     profiles = {
-      gaming.enable = true;
       graphical.enable = true;
       laptop.enable = true;
     };
-    programs.wine.enable = true;
+    programs = {
+      openmw.enable = false;
+      wine.enable = true;
+    };
     system.secure-boot.enable = true;
   };
 

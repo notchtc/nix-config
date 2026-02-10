@@ -1,14 +1,14 @@
 {
   lib,
-  osConfig,
   pkgs,
+  profiles,
   ...
 }:
 let
   loadPreset = path: builtins.fromJSON <| builtins.readFile path;
 in
 {
-  services.easyeffects = lib.mkIf osConfig.mama.profiles.graphical.enable {
+  services.easyeffects = lib.mkIf profiles.graphical.enable {
     enable = true;
     preset = "LoudnessEqualizer";
 

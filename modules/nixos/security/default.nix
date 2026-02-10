@@ -1,9 +1,7 @@
 {
   imports = [
-    ./kernel.nix
     ./mineral.nix
+    ./polkit.nix
     ./run0.nix
   ];
-
-  security.wrappers.su.enable = false;
 }

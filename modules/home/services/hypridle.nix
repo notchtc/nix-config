@@ -1,6 +1,6 @@
-{ lib, osConfig, ... }:
+{ lib, profiles, ... }:
 {
-  services.hypridle = lib.mkIf osConfig.mama.profiles.graphical.enable {
+  services.hypridle = lib.mkIf profiles.graphical.enable {
     enable = true;
     settings = {
       general = {

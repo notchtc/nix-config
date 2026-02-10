@@ -1,8 +1,8 @@
 {
   config,
   lib,
-  osConfig,
   pkgs,
+  profiles,
   ...
 }:
 let
@@ -16,7 +16,7 @@ in
     SSH_ASKPASS_REQUIRE = "prefer";
 
   }
-  // lib.optionalAttrs osConfig.mama.profiles.graphical.enable {
+  // lib.optionalAttrs profiles.graphical.enable {
     BROWSER = "${pkgs.librewolf}/bin/librewolf";
     TERMINAL = "${pkgs.ghostty}/bin/ghostty";
   };

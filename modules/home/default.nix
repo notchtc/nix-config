@@ -2,7 +2,6 @@
 {
   imports = [
     ./environment
-    ./display
     ./nix.nix
     ./programs
     ./services

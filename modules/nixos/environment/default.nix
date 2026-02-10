@@ -1,20 +1,16 @@
-{ lib, ... }:
 {
   imports = [
+    ./console.nix
+    ./etc.nix
     ./documentation.nix
+    ./fonts.nix
+    ./ld.nix
     ./locale.nix
-    ./packages.nix
+    ./packages
     ./paths.nix
     ./shell.nix
+    ./stylix.nix
     ./variables.nix
+    ./xdg-portals.nix
   ];
-
-  environment.stub-ld.enable = false;
-  console.enable = false;
-  fonts.fontconfig.enable = lib.mkDefault false;
-
-  system.etc.overlay = {
-    enable = true;
-    mutable = false;
-  };
 }
