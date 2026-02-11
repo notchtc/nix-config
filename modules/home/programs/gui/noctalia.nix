@@ -100,6 +100,11 @@
         showSessionButtonsOnLockScreen = false;
       };
 
+      location = {
+        name = "Katowice"; # not doxxing myself lol
+        weatherEnabled = false;
+      };
+
       ui = {
         panelsAttachedToBar = false;
         settingsPanelMode = "centered";
@@ -107,7 +112,6 @@
 
       audio.visualizerType = "none";
       dock.enabled = false;
-      location.weatherEnabled = false;
       notifications.location = "top_left";
       nightLight.enabled = true;
       osd.location = "top";
