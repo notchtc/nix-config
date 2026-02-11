@@ -2,7 +2,7 @@
   mama = {
     hardware = {
       cpu = "amd";
-      gpu.gpus = [
+      gpus = [
         "amd"
         "nvidia"
       ];

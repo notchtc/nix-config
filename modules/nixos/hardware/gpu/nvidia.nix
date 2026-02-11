@@ -1,6 +1,6 @@
 { config, lib, ... }:
 let
-  cfg = config.mama.hardware.gpu;
+  cfg = config.mama.hardware;
 in
 {
   config = lib.mkIf (lib.elem "nvidia" cfg.gpus) {

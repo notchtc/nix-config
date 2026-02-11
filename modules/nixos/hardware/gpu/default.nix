@@ -6,10 +6,7 @@
     ./nvidia.nix
   ];
 
-  options.mama.hardware.gpu = {
-    igpu = lib.mkEnableOption "Whether to make iGPU specific changes" // {
-      default = true;
-    };
+  options.mama.hardware = {
     gpus = lib.mkOption {
       type =
         lib.types.listOf
@@ -20,6 +17,10 @@
         ];
       default = [ ];
       description = "The manufacturer(s) of your GPU(s)";
+    };
+
+    igpu = lib.mkEnableOption "Whether to make iGPU specific changes" // {
+      default = true;
     };
   };
 }

@@ -5,7 +5,7 @@
   ...
 }:
 {
-  config = lib.mkIf (lib.elem "intel" config.mama.hardware.gpu.gpus) {
+  config = lib.mkIf (lib.elem "intel" config.mama.hardware.gpus) {
     boot.initrd.kernelModules = [ "i915" ];
     services.xserver.videoDrivers = [ "modesetting" ];
 
