@@ -36,9 +36,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "6c4fdbe1ad198fac36c320fd45c5957324a80b8e",
-      "url": "https://github.com/nix-community/home-manager/archive/6c4fdbe1ad198fac36c320fd45c5957324a80b8e.tar.gz",
-      "hash": "sha256-mg5WZMIPGsFu9MxSrUcuJUPMbfMsF77el5yb/7rc10k="
+      "revision": "b3f43db171474132528be57610bfa5fb3b766879",
+      "url": "https://github.com/nix-community/home-manager/archive/b3f43db171474132528be57610bfa5fb3b766879.tar.gz",
+      "hash": "sha256-Evbc+u49wYQ5uyEi/HHxVFEt3g/w4MZxkMXMe7McjRM="
     },
     "nilla": {
       "type": "GitRelease",
@@ -94,9 +94,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "ff1edce403a67cfac7bf1038d348f2ef457ac691",
-      "url": "https://github.com/sodiboo/niri-flake/archive/ff1edce403a67cfac7bf1038d348f2ef457ac691.tar.gz",
-      "hash": "sha256-HPoMvo/EqIr6xDDRlk6DGZYdu1Hte7lGLZaGZ5017Uc="
+      "revision": "9e23010320cfe4012adc2d8810495bad0fe2d4a6",
+      "url": "https://github.com/sodiboo/niri-flake/archive/9e23010320cfe4012adc2d8810495bad0fe2d4a6.tar.gz",
+      "hash": "sha256-sLpvik461SjSY1b23gHhNbM9aMJF9iU4h2vPepi9JoM="
     },
     "nix-index-database": {
       "type": "Git",
@@ -154,10 +154,10 @@
       "version_upper_bound": null,
       "release_prefix": null,
       "submodules": false,
-      "version": "v4.4.0",
-      "revision": "55e9b3735d78aef8fdab49d3d3d7d31d81628b49",
-      "url": "https://api.github.com/repos/noctalia-dev/noctalia-shell/tarball/refs/tags/v4.4.0",
-      "hash": "sha256-znMQB8MzaWc6XnKe77+Pb/JgLI0LZmuSaZ3sijW6D1w="
+      "version": "v4.4.2",
+      "revision": "58850aa38e3238c6b97e50ea15db882e75016021",
+      "url": "https://api.github.com/repos/noctalia-dev/noctalia-shell/tarball/refs/tags/v4.4.2",
+      "hash": "sha256-uNLOfzlHhykGfrD5hEN+7Dw+W2XVyobTAy8mxoxKwjw="
     },
     "npins": {
       "type": "GitRelease",
@@ -224,9 +224,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "ffbb04567d5108a0fb197aedb7642a0aa6ae7aad",
-      "url": "https://github.com/vicinaehq/extensions/archive/ffbb04567d5108a0fb197aedb7642a0aa6ae7aad.tar.gz",
-      "hash": "sha256-1Q/vrarA1M5rIIOZeSmqpC2e33ncpI7dL8AkNIHgtVo="
+      "revision": "216d366f8fc08b3eb427ebffa25dce14c3c6ed7f",
+      "url": "https://github.com/vicinaehq/extensions/archive/216d366f8fc08b3eb427ebffa25dce14c3c6ed7f.tar.gz",
+      "hash": "sha256-IOaiZzKGiZ6o+12u1r+4rp/YCjwfAiHh4HqpEwF5ShA="
     }
   },
   "version": 7
