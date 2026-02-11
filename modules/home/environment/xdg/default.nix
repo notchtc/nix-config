@@ -60,7 +60,6 @@ in
       ".icons/${config.home.pointerCursor.name}".enable = false;
     };
   };
-  xresources.path = "${config.xdg.configHome}/X11/Xresources";
 
   systemd.user.tmpfiles.rules = [
     "R ${config.home.homeDirectory}/.pki - - - - -"
