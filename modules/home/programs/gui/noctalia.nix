@@ -96,6 +96,7 @@
       };
 
       general = {
+        avatarImage = ../../environment/face.jpg;
         enableShadows = false;
         showSessionButtonsOnLockScreen = false;
       };
