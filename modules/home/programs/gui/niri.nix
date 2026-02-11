@@ -77,7 +77,7 @@
     binds = with config.lib.niri.actions; {
       "Mod+Shift+Slash".action = show-hotkey-overlay;
       "Mod+Return" = {
-        action = spawn "ghostty --gtk-single-instance=true";
+        action = spawn "ghostty" "--gtk-single-instance=true";
         hotkey-overlay.title = "Open Terminal";
       };
       "Mod+Space" = {
