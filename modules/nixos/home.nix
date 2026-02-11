@@ -6,7 +6,7 @@
   ...
 }:
 {
-  imports = [ inputs.home-manager.result.nixosModules.default ];
+  imports = [ "${inputs.home-manager.result}/nixos" ];
 
   home-manager = {
     backupFileExtension = "backup";
