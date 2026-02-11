@@ -97,6 +97,7 @@
 
       general = {
         avatarImage = ../../environment/face.jpg;
+        clockStyle = "digital";
         enableShadows = false;
         showSessionButtonsOnLockScreen = false;
       };
