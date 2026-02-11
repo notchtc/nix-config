@@ -258,6 +258,7 @@
     xwayland-satellite.path = "${pkgs.xwayland-satellite-unstable}/bin/xwayland-satellite";
 
     debug = {
+      enable-overlay-planes = [ ];
       honor-xdg-activation-with-invalid-serial = [ ];
     };
   };
