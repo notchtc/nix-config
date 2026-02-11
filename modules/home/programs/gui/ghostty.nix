@@ -9,6 +9,7 @@
       window-theme = "ghostty";
 
       scrollback-limit = 100 * 1024 * 1024;
+      shell-integration = "none";
       mouse-hide-while-typing = true;
     };
   };
