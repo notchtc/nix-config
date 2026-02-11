@@ -117,7 +117,7 @@
       notifications.location = "top_left";
       nightLight.enabled = true;
       osd.location = "top";
-      systemMonitor.externalMonitor = "${config.home.sessionVariables.TERMINAL} -e btm";
+      systemMonitor.externalMonitor = "ghostty -e btm";
       wallpaper.overviewEnabled = true;
     };
   };
