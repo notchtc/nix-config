@@ -12,6 +12,7 @@
         forge.enable = false;
         gdu.enable = false;
         gtk.flatpakSupport.enable = false;
+        sxiv.enable = false;
         xresources.enable = false;
       };
     };

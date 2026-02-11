@@ -58,6 +58,7 @@ in
       ".gtkrc-2.0".enable = false;
       ".icons/default/index.theme".enable = false;
       ".icons/${config.home.pointerCursor.name}".enable = false;
+      ".Xresources".enable = false;
     };
   };
 
