@@ -33,8 +33,6 @@
     nvidiaBusId = "PCI:1:0:0";
   };
 
-  services.autoaspm.enable = true;
-
   home-manager.users.chtc.programs.niri.settings = {
     outputs."eDP-1" = {
       mode = {
