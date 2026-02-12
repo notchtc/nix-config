@@ -8,6 +8,7 @@
       ];
     };
     profiles = {
+      gaming.enable = true;
       graphical.enable = true;
       laptop.enable = true;
     };
