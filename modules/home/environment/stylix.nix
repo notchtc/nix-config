@@ -6,6 +6,7 @@
 }:
 {
   config = lib.mkIf profiles.graphical.enable {
+    home.pointerCursor.x11.enable = lib.mkForce false;
     stylix = {
       targets = {
         blender.enable = false;
