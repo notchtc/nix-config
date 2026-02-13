@@ -22,11 +22,11 @@ in
       desktop = "${homeDirectory}/Desktop";
       documents = "${homeDirectory}/Documents";
       download = "${homeDirectory}/Downloads";
-      music = "${homeDirectory}/Media/Music";
-      pictures = "${homeDirectory}/Media/Pictures";
+      music = "${homeDirectory}/Music";
+      pictures = "${homeDirectory}/Pictures";
       publicShare = "${homeDirectory}/Public/Share";
       templates = "${homeDirectory}/Public/Templates";
-      videos = "${homeDirectory}/Media/Videos";
+      videos = "${homeDirectory}/Videos";
     };
 
     configFile = {
