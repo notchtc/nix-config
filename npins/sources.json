@@ -36,9 +36,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "0acbd1180697de56724821184ad2c3e6e7202cd7",
-      "url": "https://github.com/nix-community/home-manager/archive/0acbd1180697de56724821184ad2c3e6e7202cd7.tar.gz",
-      "hash": "sha256-DYS4jIRpRoKOzJjnR/QqEd/MlT4OZZpt8CrBLv+cjsE="
+      "revision": "de4cfffc98f43ab8ba90739b56991f068f9e9018",
+      "url": "https://github.com/nix-community/home-manager/archive/de4cfffc98f43ab8ba90739b56991f068f9e9018.tar.gz",
+      "hash": "sha256-bPKv7BcIOGp4R1Q3hKhiD2CT3+7D6ibNIaJfEJdeOzo="
     },
     "nilla": {
       "type": "GitRelease",
@@ -94,9 +94,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "7634add8bf2dd225d04f535de4bd0ee60982f367",
-      "url": "https://github.com/sodiboo/niri-flake/archive/7634add8bf2dd225d04f535de4bd0ee60982f367.tar.gz",
-      "hash": "sha256-QgJZ+W6YE6nAzO/m7ezamAzr9DTflIEXRozMivL0+hc="
+      "revision": "e39489a418aebcc4841b95600952610f95ddac49",
+      "url": "https://github.com/sodiboo/niri-flake/archive/e39489a418aebcc4841b95600952610f95ddac49.tar.gz",
+      "hash": "sha256-a5ZgirQt+wfRTcwsWar8IwdsR+YZxEj6bF4LRYiB/Ow="
     },
     "nix-index-database": {
       "type": "Git",
@@ -140,8 +140,8 @@
     "nixpkgs": {
       "type": "Channel",
       "name": "nixos-unstable",
-      "url": "https://releases.nixos.org/nixos/unstable/nixos-26.05pre942779.d6c719321308/nixexprs.tar.xz",
-      "hash": "sha256-MIMad536rq4nepqzYDTwuSDNQP+YuM0cfsvtcJJJItM="
+      "url": "https://releases.nixos.org/nixos/unstable/nixos-26.05pre944744.ec7c70d12ce2/nixexprs.tar.xz",
+      "hash": "sha256-BKNoPyCG5hRTJUNhwnL9PlWFujr8/18VzggAVRXl6us="
     },
     "noctalia": {
       "type": "GitRelease",
@@ -211,9 +211,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "72e6483a88d51471a6c55e1d43e7ed2bc47a76a4",
-      "url": "https://github.com/nix-community/stylix/archive/72e6483a88d51471a6c55e1d43e7ed2bc47a76a4.tar.gz",
-      "hash": "sha256-N9ZTG3ia7l4iQO+9JlOj+sX4yu6gl7a3aozrlhSIJwQ="
+      "revision": "db03fed72e5ca02be34e1d24789345a943329738",
+      "url": "https://github.com/nix-community/stylix/archive/db03fed72e5ca02be34e1d24789345a943329738.tar.gz",
+      "hash": "sha256-QHFYyngohNhih4w+3IqQty5DV+p1txsx1kkk6XJWar8="
     },
     "vicinae-extensions": {
       "type": "Git",
