@@ -65,7 +65,7 @@ let
   associations = mergeAttrsList [
     {
       "application/pdf" = [ "org.kde.okular.desktop" ];
-      "inode/directory" = [ "Thunar.desktop" ];
+      "inode/directory" = [ "pcmanfm-qt.desktop" ];
       "x-scheme-handler/discord" = [ "vesktop.desktop" ];
       "x-scheme-handler/steam" = [ "steam.desktop" ];
       "x-scheme-handler/tg" = [ "org.telegram.desktop.desktop" ];

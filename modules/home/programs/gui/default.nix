@@ -5,6 +5,7 @@
     ./mpv-haruna.nix
     ./niri.nix
     ./noctalia.nix
+    ./pcmanfm-qt.nix
     ./vesktop.nix
     ./vicinae.nix
   ];

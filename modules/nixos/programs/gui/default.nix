@@ -6,7 +6,6 @@
     ./niri.nix
     ./openmw.nix
     ./steam.nix
-    ./thunar.nix
     ./wine.nix
   ];
 }

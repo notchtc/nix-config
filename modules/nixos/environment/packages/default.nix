@@ -39,6 +39,7 @@
             gimp
             keepassxc
             nicotine-plus
+            pcmanfm-qt
             picard
             pwvucontrol
             qbittorrent
