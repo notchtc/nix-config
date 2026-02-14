@@ -14,17 +14,20 @@
       close_on_focus_loss = true;
       font.normal.size = 11;
 
-      browser-extension.enabled = false;
-      core.entrypoints = {
-        sponsor.enabled = false;
-        store.enabled = false;
-      };
-      developer.enabled = false;
-      raycast-compat.enabled = false;
-      wm.enabled = false;
-
       providers = {
         "@dagimg-dot/vicinae-extension-wifi-commander-0".preferences.network-cli-tool = "iwctl";
+
+        browser-extension.enabled = false;
+        core.entrypoints = {
+          open-config-file.enabled = false;
+          open-default-config.enabled = false;
+          sponsor.enabled = false;
+          store.enabled = false;
+        };
+        developer.enabled = false;
+        power.entrypoints.hibernate.enabled = false;
+        raycast-compat.enabled = false;
+        wm.enabled = false;
       };
     };
 
