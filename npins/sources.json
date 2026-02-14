@@ -36,9 +36,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "05e6dc0f6ed936f918cb6f0f21f1dad1e4c53150",
-      "url": "https://github.com/nix-community/home-manager/archive/05e6dc0f6ed936f918cb6f0f21f1dad1e4c53150.tar.gz",
-      "hash": "sha256-NX5XuhGcsmk0oEII2PEtMRgvh2KaAv3/WWQsOpxAgR4="
+      "revision": "1e53254671f36cb7d0e2dcca08730f066d5e69b4",
+      "url": "https://github.com/nix-community/home-manager/archive/1e53254671f36cb7d0e2dcca08730f066d5e69b4.tar.gz",
+      "hash": "sha256-Tc+YqZ/Q1K35vJK4ji4RbLB/qKGcEq6yh7p4CKoZF60="
     },
     "nilla": {
       "type": "GitRelease",
@@ -94,9 +94,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "aa1d3665e53d660a4df499955521fc27baed20e2",
-      "url": "https://github.com/sodiboo/niri-flake/archive/aa1d3665e53d660a4df499955521fc27baed20e2.tar.gz",
-      "hash": "sha256-gf1yzxCQuEVQ4QtiEeboAgfUbiA31SsHzliGxzNjZrI="
+      "revision": "c0eccb197f4d1f1bc61877e886f3129c9a877acc",
+      "url": "https://github.com/sodiboo/niri-flake/archive/c0eccb197f4d1f1bc61877e886f3129c9a877acc.tar.gz",
+      "hash": "sha256-EodRA/pyUqc+EmKm35X62Np0IdlShuxYp+F4sL7X1tw="
     },
     "nix-index-database": {
       "type": "Git",
@@ -107,9 +107,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "2684bb8080a6f2ca5f9d494de5ef875bc1c4ecdb",
-      "url": "https://github.com/nix-community/nix-index-database/archive/2684bb8080a6f2ca5f9d494de5ef875bc1c4ecdb.tar.gz",
-      "hash": "sha256-hy0gcAgAcxrnSWKGuNO+Ob0x6jQ2xkR6hoaR0qJBHYs="
+      "revision": "efec7aaad8d43f8e5194df46a007456093c40f88",
+      "url": "https://github.com/nix-community/nix-index-database/archive/efec7aaad8d43f8e5194df46a007456093c40f88.tar.gz",
+      "hash": "sha256-UIKOwG0D9XVIJfNWg6+gENAvQP+7LO46eO0Jpe+ItJ0="
     },
     "nix-mineral": {
       "type": "Git",
@@ -120,9 +120,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "fa4709e0700f990d46ac3136180ff1641de376f8",
-      "url": "https://github.com/cynicsketch/nix-mineral/archive/fa4709e0700f990d46ac3136180ff1641de376f8.tar.gz",
-      "hash": "sha256-4uB6s3xUYcWSTOr+thVPj42hcwS7PtW62my0rn8ZYyg="
+      "revision": "47ffa0f27b7ee8847a39092bf23334deeb80536e",
+      "url": "https://github.com/cynicsketch/nix-mineral/archive/47ffa0f27b7ee8847a39092bf23334deeb80536e.tar.gz",
+      "hash": "sha256-hbFMCziZpIQRQbCvL2LwUdkvkCK7j0Xyn/EGDlsJICs="
     },
     "nix-monitored": {
       "type": "Git",
