@@ -4,9 +4,11 @@
     enable = true;
 
     settings = {
+      arRPC = true;
       discordBranch = "canary";
       hardwareAcceleration = true;
     };
+
     vencord.settings.plugins = {
       BetterGifAltText.enabled = true;
       BetterRoleContext.enabled = true;
