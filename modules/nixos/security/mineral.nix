@@ -6,7 +6,7 @@
 }:
 let
   inherit (lib) mkIf optionalAttrs;
-  inherit (config.mama) profiles;
+  inherit (config) mama;
 in
 {
   imports = [ inputs.nix-mineral.result.nixosModules.nix-mineral ];
@@ -26,11 +26,11 @@ in
 
     extras = {
       kernel.intelme-kmodules = false;
-      network.bluetooth-kmodules = mkIf profiles.server.enable false;
+      network.bluetooth-kmodules = mkIf (!mama.hardware.bluetooth.enable) false;
       system.lock-root = true;
     };
   }
-  // optionalAttrs profiles.graphical.enable {
+  // optionalAttrs mama.profiles.graphical.enable {
     settings = {
       kernel.pti = false;
       system.multilib = true;

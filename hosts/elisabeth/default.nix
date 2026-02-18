@@ -6,6 +6,7 @@
         "amd"
         "nvidia"
       ];
+      bluetooth.enable = true;
     };
     profiles = {
       gaming.enable = true;

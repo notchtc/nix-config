@@ -5,6 +5,7 @@
 {
   imports = [
     ./autoaspm.nix
+    ./bluetooth.nix
     ./cpu
     ./firmware.nix
     ./fs
