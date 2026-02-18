@@ -7,7 +7,7 @@
       autoSnapshot = {
         enable = true;
         flags = "-kpu";
-        monthly = 2;
+        monthly = 1;
       };
     };
   };
