@@ -12,6 +12,7 @@ let
 in
 {
   imports = [
+    ./diff.nix
     ./overlay.nix
     ./substituters.nix
     ./tools.nix
