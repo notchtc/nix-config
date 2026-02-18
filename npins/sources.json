@@ -36,9 +36,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "1e53254671f36cb7d0e2dcca08730f066d5e69b4",
-      "url": "https://github.com/nix-community/home-manager/archive/1e53254671f36cb7d0e2dcca08730f066d5e69b4.tar.gz",
-      "hash": "sha256-Tc+YqZ/Q1K35vJK4ji4RbLB/qKGcEq6yh7p4CKoZF60="
+      "revision": "5f1d42a97b19803041434f66681d5c44c9ae62e3",
+      "url": "https://github.com/nix-community/home-manager/archive/5f1d42a97b19803041434f66681d5c44c9ae62e3.tar.gz",
+      "hash": "sha256-BZ31eN5F99YH6vkc4AhzKGE+tJgJ52kl8f01K7wCs8w="
     },
     "nilla": {
       "type": "GitRelease",
@@ -94,9 +94,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "c0eccb197f4d1f1bc61877e886f3129c9a877acc",
-      "url": "https://github.com/sodiboo/niri-flake/archive/c0eccb197f4d1f1bc61877e886f3129c9a877acc.tar.gz",
-      "hash": "sha256-EodRA/pyUqc+EmKm35X62Np0IdlShuxYp+F4sL7X1tw="
+      "revision": "f3e98ba073bd7e2717a07d622f9b737c461a97b9",
+      "url": "https://github.com/sodiboo/niri-flake/archive/f3e98ba073bd7e2717a07d622f9b737c461a97b9.tar.gz",
+      "hash": "sha256-kb/4oSHB261GOLhVGgrzTOqo/ImeCi/WS25q2ujtHGc="
     },
     "nix-index-database": {
       "type": "Git",
@@ -154,10 +154,10 @@
       "version_upper_bound": null,
       "release_prefix": null,
       "submodules": false,
-      "version": "v4.4.3",
-      "revision": "3e0cd031ffe7b8f00e18a38864709c2b221fff6d",
-      "url": "https://api.github.com/repos/noctalia-dev/noctalia-shell/tarball/refs/tags/v4.4.3",
-      "hash": "sha256-5HqCE5qfW6ItA+ZeFGfTT7/+12QYp/1j93EPdn+nlK0="
+      "version": "v4.5.0",
+      "revision": "dbfe3634df0c57faf9772cecae1f2e92bd04de66",
+      "url": "https://api.github.com/repos/noctalia-dev/noctalia-shell/tarball/refs/tags/v4.5.0",
+      "hash": "sha256-Y5P0RYO9NKxa4UZBoGmmxtz3mEwJrBOfvdLJRGjV2Os="
     },
     "npins": {
       "type": "GitRelease",
@@ -211,9 +211,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "db03fed72e5ca02be34e1d24789345a943329738",
-      "url": "https://github.com/nix-community/stylix/archive/db03fed72e5ca02be34e1d24789345a943329738.tar.gz",
-      "hash": "sha256-QHFYyngohNhih4w+3IqQty5DV+p1txsx1kkk6XJWar8="
+      "revision": "fa45bf2d70517a8643a0edb44b02b8e6c0453d06",
+      "url": "https://github.com/nix-community/stylix/archive/fa45bf2d70517a8643a0edb44b02b8e6c0453d06.tar.gz",
+      "hash": "sha256-qBWXy3mSOEYjvZB/RZHT0joVPhNWU8GQZQljLzyMTq0="
     },
     "vicinae-extensions": {
       "type": "Git",
@@ -224,9 +224,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "216d366f8fc08b3eb427ebffa25dce14c3c6ed7f",
-      "url": "https://github.com/vicinaehq/extensions/archive/216d366f8fc08b3eb427ebffa25dce14c3c6ed7f.tar.gz",
-      "hash": "sha256-IOaiZzKGiZ6o+12u1r+4rp/YCjwfAiHh4HqpEwF5ShA="
+      "revision": "cf30b80f619282d45b1748eb76e784a4f875bb01",
+      "url": "https://github.com/vicinaehq/extensions/archive/cf30b80f619282d45b1748eb76e784a4f875bb01.tar.gz",
+      "hash": "sha256-KwNv+THKbNUey10q26NZPDMSzYTObRHaSDr81QP9CPY="
     }
   },
   "version": 7
