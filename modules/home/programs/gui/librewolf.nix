@@ -18,7 +18,6 @@ in
   config = mkIf graphical {
     programs.librewolf = {
       enable = true;
-      nativeMessagingHosts = [ pkgs.kdePackages.plasma-browser-integration ];
 
       configPath = "${config.xdg.configHome}/librewolf/librewolf";
 
@@ -32,7 +31,6 @@ in
               };
             })
             [
-              "plasma-browser-integration@kde.org"
               "sponsorBlocker@ajay.app"
               "{a4c4eda4-fb84-4a84-b4a1-f7c1cbf2a1ad}" # Refined GitHub
               "V3-eov3cv@hotmail.com"
