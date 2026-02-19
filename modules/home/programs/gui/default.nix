@@ -7,6 +7,5 @@
     ./noctalia.nix
     ./pcmanfm-qt.nix
     ./vesktop.nix
-    ./vicinae.nix
   ];
 }

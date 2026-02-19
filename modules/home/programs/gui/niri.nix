@@ -81,8 +81,8 @@
         hotkey-overlay.title = "Open Terminal";
       };
       "Mod+Space" = {
-        action = spawn "vicinae" "toggle";
-        hotkey-overlay.title = "Toggle Vicinae";
+        action = spawn "noctalia-shell" "ipc" "call" "launcher" "toggle";
+        hotkey-overlay.title = "Toggle launcher";
       };
 
       "XF86AudioRaiseVolume" = {

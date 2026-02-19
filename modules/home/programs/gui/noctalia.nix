@@ -52,6 +52,12 @@
         };
       };
 
+      appLauncher = {
+        enableClipboardHistory = true;
+        iconMode = "native";
+        terminalCommand = "ghostty -e";
+      };
+
       controlCenter = {
         shortcuts = {
           left = [

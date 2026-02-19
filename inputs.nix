@@ -20,7 +20,6 @@ let
     openmw-nix.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
     run0-sudo-shim.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
     stylix.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
-    vicinae-extensions.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
   };
 in
 {
