@@ -43,10 +43,14 @@
             }
             { id = "Volume"; }
             { id = "Brightness"; }
-            { id = "ControlCenter"; }
+            { id = "plugin:privacy-indicator"; }
             {
               id = "Clock";
               formatVertical = "HH mm";
+            }
+            {
+              id = "ControlCenter";
+              useDistroLogo = true;
             }
           ];
         };
@@ -108,7 +112,7 @@
       };
 
       location = {
-        name = "Katowice"; # not doxxing myself lol
+        name = "Katowice, Poland"; # not doxxing myself lol
         weatherEnabled = false;
       };
 
@@ -124,6 +128,33 @@
       osd.location = "top";
       systemMonitor.externalMonitor = "ghostty -e btm";
       wallpaper.overviewEnabled = true;
+
+      plugins.autoUpdate = true;
+    };
+
+    plugins = {
+      sources = [
+        {
+          enabled = true;
+          name = "Noctalia Plugins";
+          url = "https://github.com/noctalia-dev/noctalia-plugins";
+        }
+      ];
+
+      states = [
+        {
+          kaomoji-provider = {
+            enabled = true;
+            sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
+          };
+        }
+        {
+          privacy-indicator = {
+            enabled = true;
+            sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
+          };
+        }
+      ];
     };
   };
 }
