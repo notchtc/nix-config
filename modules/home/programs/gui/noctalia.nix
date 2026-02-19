@@ -12,12 +12,13 @@
     settings = {
       bar = {
         barType = "floating";
-        position = "right";
+        position = "left";
         showCapsule = false;
-        floating = true;
+        floating = false;
         marginVertical = 8;
         marginHorizontal = 8;
-        displayMode = "auto_hide";
+        outerCorners = true;
+        displayMode = "always_visible";
         widgets = {
           left = [
             {
@@ -25,7 +26,7 @@
               labelMode = "none";
               pillSize = 0.45;
             }
-            { id = "Taskbar"; }
+            { id = "plugin:privacy-indicator"; }
           ];
           center = [ ];
           right = [
@@ -35,6 +36,7 @@
               drawerEnabled = false;
             }
             { id = "NotificationHistory"; }
+            { id = "Brightness"; }
             {
               id = "Battery";
               hideIfIdle = true;
@@ -42,8 +44,6 @@
               showPowerProfiles = true;
             }
             { id = "Volume"; }
-            { id = "Brightness"; }
-            { id = "plugin:privacy-indicator"; }
             {
               id = "Clock";
               formatVertical = "HH mm";
@@ -123,7 +123,7 @@
 
       audio.visualizerType = "none";
       dock.enabled = false;
-      notifications.location = "top_left";
+      notifications.location = "top_right";
       nightLight.enabled = true;
       osd.location = "top";
       systemMonitor.externalMonitor = "ghostty -e btm";
@@ -155,6 +155,16 @@
           };
         }
       ];
+    };
+
+    pluginSettings = {
+      privacy-indicator = {
+        hideInactive = true;
+        iconSpacing = 4;
+        removeMargins = false;
+        activeColor = "primary";
+        inactiveColor = "none";
+      };
     };
   };
 }
