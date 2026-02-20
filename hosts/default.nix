@@ -5,7 +5,6 @@
       pkgs = config.inputs.nixpkgs.result.x86_64-linux;
 
       modules = [
-        config.inputs.autoaspm.result.nixosModules.default
         ../modules/nixos
         ./elisabeth
       ];
