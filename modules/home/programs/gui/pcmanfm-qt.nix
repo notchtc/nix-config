@@ -1,7 +1,7 @@
 { lib, profiles, ... }:
 {
-  config = lib.mkIf profiles.graphical.enable {
-    xdg.configFile."pcmanfm-qt/default/settings.conf".text = lib.generators.toINI { } {
+  xdg = lib.mkIf profiles.graphical.enable {
+    configFile."pcmanfm-qt/default/settings.conf".text = lib.generators.toINI { } {
       Behavior = {
         AutoSelectionDelay = 600;
         BookmarkOpenMethod = "current_tab";
@@ -96,5 +96,11 @@
         TabPaths = "@Invalid()";
       };
     };
+
+    dataFile."libfm-qt/terminals.list".text = ''
+      [ghostty]
+      custom_args=
+      open_arg=-e
+    '';
   };
 }
