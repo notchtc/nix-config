@@ -112,7 +112,7 @@
       };
 
       location = {
-        name = "Katowice, Poland"; # not doxxing myself lol
+        name = "Katowice, PL"; # not doxxing myself lol
         weatherEnabled = false;
       };
 
