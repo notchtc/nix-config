@@ -31,6 +31,9 @@ in
 
       diffutils-name =
         "diffuutils-" + concatStringsSep "" (genList (_: "v") ((stringLength pkgs.diffutils.version) - 1));
+      sed-name = "uutsed-" + concatStringsSep "" (genList (_: "v") (stringLength pkgs.gnused.version));
+      wl-clipboard-name =
+        "uu-clipboard-" + concatStringsSep "" (genList (_: "v") (stringLength pkgs.wl-clipboard.version));
     in
     [
       {
@@ -59,6 +62,20 @@ in
         newDependency = pkgs.symlinkJoin {
           name = diffutils-name;
           paths = [ pkgs.uutils-diffutils ];
+        };
+      }
+      {
+        oldDependency = pkgs.gnused;
+        newDependency = pkgs.symlinkJoin {
+          name = sed-name;
+          paths = [ pkgs.uutils-sed ];
+        };
+      }
+      {
+        oldDependency = pkgs.wl-clipboard;
+        newDependency = pkgs.symlinkJoin {
+          name = wl-clipboard-name;
+          paths = [ pkgs.wl-clipboard-rs ];
         };
       }
     ];

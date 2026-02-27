@@ -20,7 +20,6 @@
       <|
         {
           inherit (pkgs)
-            aria2
             bottom
             deadnix
             ffmpeg
@@ -43,7 +42,6 @@
             picard
             pwvucontrol
             qbittorrent
-            qpwgraph
             strawberry
             tutanota-desktop
             ;
