@@ -7,10 +7,13 @@
 }:
 {
   imports = [ inputs.niri.result.nixosModules.niri ];
-  nixpkgs.overlays = [ inputs.niri.result.overlays.niri ];
 
-  programs.niri = lib.mkIf config.mama.profiles.graphical.enable {
-    enable = true;
-    package = pkgs.niri-unstable;
+  config = lib.mkIf config.mama.profiles.graphical.enable {
+    nixpkgs.overlays = [ inputs.niri.result.overlays.niri ];
+    programs.niri = {
+      enable = true;
+      package = pkgs.niri-unstable;
+    };
+    systemd.user.services.niri-flake-polkit.enable = lib.mkForce false;
   };
 }
