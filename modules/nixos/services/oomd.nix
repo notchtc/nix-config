@@ -2,17 +2,17 @@
 let
   inherit (lib) concatStringsSep mkIf;
   avoid = concatStringsSep "|" [
-    "Xwayland"
     "dbus-.*"
     "ghostty"
+    "greetd"
     "hx"
-    "kwin_wayland"
-    "plasmashell"
-    "sddm"
+    "niri"
     "ssh-agent"
     "sshd"
     "systemd"
     "systemd-.*"
+    "Xwayland"
+    "xwayland-satellite"
     "zsh"
   ];
 
