@@ -59,6 +59,7 @@
       appLauncher = {
         enableClipboardHistory = true;
         iconMode = "native";
+        overviewLayer = true;
         terminalCommand = "ghostty -e";
       };
 
