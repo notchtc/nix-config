@@ -36,9 +36,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "58fd7ff0eec2cda43e705c4c0585729ec471d400",
-      "url": "https://github.com/nix-community/home-manager/archive/58fd7ff0eec2cda43e705c4c0585729ec471d400.tar.gz",
-      "hash": "sha256-UZjPc/d5XRxvjDbk4veAO4XFdvx6BUum2l40V688Xq8="
+      "revision": "5a75730e6f21ee624cbf86f4915c6e7489c74acc",
+      "url": "https://github.com/nix-community/home-manager/archive/5a75730e6f21ee624cbf86f4915c6e7489c74acc.tar.gz",
+      "hash": "sha256-jl+DJB2DUx7EbWLRng+6HNWW/1/VQOnf0NsQB4PlA7I="
     },
     "nilla": {
       "type": "GitRelease",
@@ -94,9 +94,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "557374f9cd3649ab27b2621ae8117bec59969645",
-      "url": "https://github.com/sodiboo/niri-flake/archive/557374f9cd3649ab27b2621ae8117bec59969645.tar.gz",
-      "hash": "sha256-d6Wm7/+6iNtgdcp6mxayEBhjWisi1aj84Ob7VyEAW9Y="
+      "revision": "5641625ef950f024e3e0e3f38bb91f876290c0be",
+      "url": "https://github.com/sodiboo/niri-flake/archive/5641625ef950f024e3e0e3f38bb91f876290c0be.tar.gz",
+      "hash": "sha256-7+K/VaZ7TXUeUGSYshg8wC3UsRZHB+M4x6r38Q1B79c="
     },
     "nix-index-database": {
       "type": "Git",
@@ -140,8 +140,8 @@
     "nixpkgs": {
       "type": "Channel",
       "name": "nixos-unstable",
-      "url": "https://releases.nixos.org/nixos/unstable/nixos-26.05pre955442.dd9b079222d4/nixexprs.tar.xz",
-      "hash": "sha256-UCaQQ8zmHUocQIgCl+53Jj6NuwqrVKtmv7obE9r6wnw="
+      "url": "https://releases.nixos.org/nixos/unstable/nixos-26.05pre958232.80bdc1e5ce51/nixexprs.tar.xz",
+      "hash": "sha256-kx4m0PT8acdAYUXesEkNtGJaZbarQn/C//NNbV4weX8="
     },
     "noctalia": {
       "type": "GitRelease",
@@ -154,10 +154,10 @@
       "version_upper_bound": null,
       "release_prefix": null,
       "submodules": false,
-      "version": "v4.6.0",
-      "revision": "012046e87e5df5933ae0c9ac6a1e96807f7b9eba",
-      "url": "https://api.github.com/repos/noctalia-dev/noctalia-shell/tarball/refs/tags/v4.6.0",
-      "hash": "sha256-AaPaa5ZCAYpoqa12Bx2xKjjD9Y0hVyCOhRf+/kT/dS4="
+      "version": "v4.6.3",
+      "revision": "965db4e65274453a1bc377ba2eef79c348d54c9d",
+      "url": "https://api.github.com/repos/noctalia-dev/noctalia-shell/tarball/refs/tags/v4.6.3",
+      "hash": "sha256-wFwvN+7e4MPsjOyx/M84QwwH1nDpHc2kgya5+XiI3u0="
     },
     "npins": {
       "type": "GitRelease",
