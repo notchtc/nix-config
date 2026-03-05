@@ -1,6 +1,6 @@
 {
   imports = [
-    ./graphical
+    ./gui
     ./journald.nix
     ./keyd.nix
     ./logrotate.nix
