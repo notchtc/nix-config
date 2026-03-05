@@ -11,25 +11,30 @@
     input.keyboard.xkb.layout = osConfig.mama.system.keyMap;
 
     layout = {
-      gaps = 8;
+      gaps = 6;
 
       border.enable = false;
 
-      focus-ring = with config.lib.stylix.colors.withHashtag; {
+      focus-ring = {
         enable = true;
-        width = 4;
+        width = 3;
 
-        active.color = base0D;
-        inactive.color = base0F;
+        active.color = "#3584e4";
+        inactive.color = "#241f31";
+        urgent.color = "#ed3b33";
       };
 
       struts = {
-        left = 8;
-        right = 8;
+        left = 6;
+        right = 6;
       };
     };
 
-    cursor.hide-after-inactive-ms = 5000;
+    cursor = {
+      theme = config.home.pointerCursor.name;
+      hide-after-inactive-ms = 5000;
+    };
+
     hotkey-overlay.skip-at-startup = true;
     prefer-no-csd = true;
 
@@ -46,7 +51,7 @@
         clip-to-geometry = true;
         geometry-corner-radius =
           let
-            r = 8.0;
+            r = 6.0;
           in
           {
             top-left = r;

@@ -30,7 +30,7 @@
         mkpasswd
         moor
         ncurses
-        netcat
+        netcat-openbsd
         procps
         time
         util-linux

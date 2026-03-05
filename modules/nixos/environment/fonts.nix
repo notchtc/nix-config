@@ -8,8 +8,42 @@
   config = lib.mkIf config.mama.profiles.graphical.enable {
     fonts = {
       packages = lib.attrValues {
-        inherit (pkgs) corefonts noto-fonts-cjk-sans noto-fonts-cjk-serif;
+        inherit (pkgs)
+          atkinson-hyperlegible-mono
+          atkinson-hyperlegible-next
+          corefonts
+          noto-fonts-cjk-sans
+          noto-fonts-cjk-serif
+          noto-fonts-color-emoji
+          source-serif
+          ;
         nerd-fonts = pkgs.nerd-fonts.symbols-only;
+      };
+
+      fontconfig = {
+        enable = true;
+
+        defaultFonts = {
+          monospace = [
+            "Atkinson Hyperlegible Mono"
+            "Symbols Nerd Font Mono"
+          ];
+
+          sansSerif = [
+            "Atkinson Hyperlegible Next"
+            "Symbols Nerd Font"
+          ];
+
+          serif = [
+            "Source Serif 4"
+            "Symbols Nerd Font"
+          ];
+
+          emoji = [
+            "Noto Color Emoji"
+            "Symbols Nerd Font"
+          ];
+        };
       };
     };
 

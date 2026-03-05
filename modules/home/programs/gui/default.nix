@@ -4,7 +4,7 @@
     ./librewolf.nix
     ./mpv-haruna.nix
     ./niri.nix
-    ./noctalia.nix
+    ./noctalia
     ./pcmanfm-qt.nix
     ./vesktop.nix
   ];

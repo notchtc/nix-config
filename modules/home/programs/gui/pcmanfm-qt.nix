@@ -58,7 +58,7 @@
 
       System = {
         Archiver = "ark";
-        FallbackIconThemeName = "oxygen";
+        FallbackIconThemeName = "Papirus-Dark";
         OnlyUserTemplates = false;
         SIUnit = false;
         TemplateRunApp = false;
@@ -87,7 +87,7 @@
         ReopenLastTabs = false;
         ShowMenuBar = true;
         ShowTabClose = true;
-        SidePaneMode = "dirtree";
+        SidePaneMode = "places";
         SidePaneVisible = true;
         SplitView = false;
         SplitViewTabsNum = 0;

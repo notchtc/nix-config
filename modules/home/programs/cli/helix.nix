@@ -3,10 +3,10 @@
   programs.helix = {
     enable = true;
     defaultEditor = true;
-    package = pkgs.evil-helix;
 
     extraPackages = builtins.attrValues { inherit (pkgs) markdown-oxide nixd nixfmt; };
     settings = {
+      theme = "adwaita-dark";
       editor = {
         cursor-shape = {
           insert = "bar";

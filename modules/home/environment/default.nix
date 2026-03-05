@@ -1,7 +1,7 @@
 {
   imports = [
     ./docs.nix
-    ./stylix.nix
+    ./theming
     ./variables.nix
     ./xdg
   ];

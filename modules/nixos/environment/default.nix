@@ -9,7 +9,7 @@
     ./packages
     ./paths.nix
     ./shell.nix
-    ./stylix.nix
+    ./theming.nix
     ./variables.nix
     ./xdg-portals.nix
   ];
