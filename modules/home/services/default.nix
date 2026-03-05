@@ -1,6 +1,1 @@
-{
-  imports = [
-    ./easyeffects
-    ./hypridle.nix
-  ];
-}
+{ imports = [ ./easyeffects ]; }

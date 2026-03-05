@@ -64,6 +64,7 @@
         audio.visualizerType = "none";
         colorSchemes.predefinedScheme = "ADW";
         dock.enabled = false;
+        idle.enabled = true;
         nightLight.enabled = true;
         osd.location = "top";
         systemMonitor.externalMonitor = "ghostty -e btm";
