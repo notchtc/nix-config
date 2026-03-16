@@ -28,7 +28,6 @@
         libcap
         lsof
         mkpasswd
-        moor
         ncurses
         netcat-openbsd
         procps

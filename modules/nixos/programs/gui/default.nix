@@ -1,6 +1,5 @@
 {
   imports = [
-    ./bottles.nix
     ./gamemode.nix
     ./gamescope.nix
     ./heroic.nix
