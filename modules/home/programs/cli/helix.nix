@@ -34,6 +34,19 @@
         line-number = "relative";
         soft-wrap.enable = true;
       };
+
+      keys = {
+        normal = {
+          "A-x" = "extend_to_line_bounds";
+          "X" = "select_line_above";
+          "A-l" = ":lsp-workspace-command";
+        };
+
+        select = {
+          "A-x" = "extend_to_line_bounds";
+          "X" = "select_line_above";
+        };
+      };
     };
 
     languages = {
