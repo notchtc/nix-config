@@ -33,10 +33,10 @@
         SidePaneIconSize = 24;
         SmallIconSize = 24;
         SortCaseSensitive = false;
-        SortColumn = "name";
+        SortColumn = "mtime";
         SortFolderFirst = true;
         SortHiddenLast = false;
-        SortOrder = "ascending";
+        SortOrder = "descending";
         ThumbnailIconSize = 128;
       };
 

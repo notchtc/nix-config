@@ -30,13 +30,14 @@
       };
     };
 
+    animations.enable = false;
+    hotkey-overlay.skip-at-startup = true;
+    prefer-no-csd = true;
+
     cursor = {
       theme = config.home.pointerCursor.name;
       hide-after-inactive-ms = 5000;
     };
-
-    hotkey-overlay.skip-at-startup = true;
-    prefer-no-csd = true;
 
     layer-rules = [
       {

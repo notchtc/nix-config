@@ -164,6 +164,7 @@ in
           "sidebar.verticalTabs" = true;
           "sidebar.visibility" = "expand-on-hover";
           "toolkit.tabbox.switchByScrolling" = true;
+          "ui.prefersReducedMotion" = 1;
 
           "gfx.webrender.all" = true;
           "layers.acceleration.force-enabled" = true;

@@ -19,21 +19,22 @@
       enable = true;
       settings = {
         general = {
+          animationDisabled = true;
           avatarImage = ../../../environment/theming/face.jpg;
           clockStyle = "digital";
+          dimmerOpacity = 0;
           enableShadows = false;
           showSessionButtonsOnLockScreen = false;
         };
 
         appLauncher = {
           enableClipboardHistory = true;
-          iconMode = "native";
           overviewLayer = true;
           terminalCommand = "ghostty -e";
         };
 
         location = {
-          name = "Katowice, Poland"; # not doxxing myself lol
+          name = "Katowice, PL"; # not doxxing myself lol
           weatherEnabled = false;
         };
 
