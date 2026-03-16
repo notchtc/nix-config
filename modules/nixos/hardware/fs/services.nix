@@ -1,6 +1,7 @@
 {
   services = {
     lvm.enable = false;
+    fstrim.enable = false;
     zfs = {
       autoScrub.enable = true;
 
@@ -12,22 +13,12 @@
     };
   };
 
-  systemd.services = {
-    fstrim = {
-      unitConfig.ConditionACPower = true;
+  systemd.services.zpool-trim = {
+    unitConfig.ConditionACPower = true;
 
-      serviceConfig = {
-        Nice = 19;
-        IOSchedulingClass = "idle";
-      };
-    };
-    zpool-trim = {
-      unitConfig.ConditionACPower = true;
-
-      serviceConfig = {
-        Nice = 19;
-        IOSchedulingClass = "idle";
-      };
+    serviceConfig = {
+      Nice = 19;
+      IOSchedulingClass = "idle";
     };
   };
 }
