@@ -5,9 +5,13 @@
 
     settings = {
       aliases = {
-        e = [ "edit" ];
+        ba = [
+          "bookmark"
+          "advance"
+        ];
         d = [ "describe" ];
         df = [ "diff" ];
+        e = [ "edit" ];
         l = [ "log" ];
         n = [ "new" ];
         s = [ "show" ];
@@ -15,21 +19,6 @@
         gp = [
           "git"
           "push"
-        ];
-        tug = [
-          "util"
-          "exec"
-          "--"
-          "sh"
-          "-c"
-          ''
-            if [ "x$1" = "x" ]; then
-              jj bookmark move --from "closest_bookmark(@)" --to "closest_pushable(@)"
-            else
-              jj bookmark move --to "closest_pushable(@)" "$@"
-            fi
-          ''
-          ""
         ];
       };
 
@@ -41,10 +30,9 @@
         push = "origin";
       };
 
-      revset-aliases = {
-        "closest_bookmark(to)" = "heads(::to & bookmarks())";
-        "closest_pushable(to)" =
-          "heads(::to & mutable() & ~description(exact:\"\") & (~empty() | merges()))";
+      remotes.origin = {
+        auto-track-bookmarks = "glob:*";
+        push-new-bookmarks = true;
       };
 
       signing = {
