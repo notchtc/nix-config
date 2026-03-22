@@ -28,8 +28,6 @@
     kexec.enable = false;
 
     initrd = {
-      systemd.enable = true;
-
       verbose = false;
 
       compressorArgs = [

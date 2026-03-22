@@ -1,5 +1,4 @@
 {
-  config,
   inputs,
   lib,
   pkgs,
@@ -7,31 +6,23 @@
 }:
 let
   inherit (builtins) storeDir storePath;
-  inherit (lib) mapAttrs' mkForce optionalAttrs;
+  inherit (lib) mapAttrs' mkForce;
   inherit (lib.strings) isStringLike hasPrefix;
 in
 {
   imports = [
-    ./diff.nix
+    "${inputs.srvos.result}/shared/mixins/trusted-nix-caches.nix"
     ./overlay.nix
-    ./substituters.nix
     ./tools.nix
   ];
 
   nix = {
     package = pkgs.nix-monitored;
 
-    channel.enable = false;
-
-    optimise.automatic = true;
-
     nixPath = [ "/etc/nix/inputs" ];
     registry.nixpkgs.flake = mkForce inputs.nixpkgs-flake.result;
 
     settings = {
-      min-free = 5 * 1024 * 1024 * 1024;
-      max-free = 20 * 1024 * 1024 * 1024;
-
       accept-flake-config = false;
       auto-optimise-store = true;
       flake-registry = "";
@@ -41,9 +32,6 @@ in
       use-cgroups = true;
       use-xdg-base-directories = true;
       warn-dirty = false;
-
-      allowed-users = [ "@wheel" ];
-      trusted-users = [ "@wheel" ];
 
       experimental-features = [
         "auto-allocate-uids"
@@ -59,11 +47,6 @@ in
       dates = "weekly";
       options = "--delete-older-than 7d";
     };
-  }
-  // optionalAttrs config.mama.profiles.graphical.enable {
-    daemonCPUSchedPolicy = "idle";
-    daemonIOSchedClass = "idle";
-    daemonIOSchedPriority = 7;
   };
 
   systemd = {

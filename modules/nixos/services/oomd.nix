@@ -31,14 +31,11 @@ let
   ];
 in
 {
-  systemd = {
-    oomd = {
-      enableRootSlice = true;
-      enableSystemSlice = true;
-      enableUserSlices = true;
-      settings.OOM.DefaultMemoryPressureDurationSec = "20s";
-    };
-    services.nix-daemon.serviceConfig.OOMScoreAdjust = 350;
+  systemd.oomd = {
+    enableRootSlice = true;
+    enableSystemSlice = true;
+    enableUserSlices = true;
+    settings.OOM.DefaultMemoryPressureDurationSec = "20s";
   };
 
   services.earlyoom = mkIf (!config.mama.profiles.server.enable) {

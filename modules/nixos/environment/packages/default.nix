@@ -20,12 +20,19 @@
       <|
         {
           inherit (pkgs)
+            _7zz-rar
+            bat
             bottom
+            cyme
             deadnix
+            dust
+            fd
             ffmpeg
             file
             git
+            jq
             moor
+            ripgrep
             statix
             ;
 

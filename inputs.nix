@@ -7,6 +7,7 @@ let
   loaders = {
     agenix = "raw";
     home-manager = "raw";
+    srvos = "raw";
   };
 
   settings = {

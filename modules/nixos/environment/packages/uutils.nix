@@ -13,6 +13,7 @@ in
       uutils-coreutils-noprefix
       uutils-diffutils
       uutils-findutils
+      uutils-procps
       uutils-sed
       ;
   };
@@ -26,14 +27,15 @@ in
       coreutils-name =
         "coreuutils-" + concatStringsSep "" (genList (_: "v") ((stringLength pkgs.coreutils.version) - 1));
 
+      diffutils-name =
+        "diffuutils-" + concatStringsSep "" (genList (_: "v") ((stringLength pkgs.diffutils.version) - 1));
+
       findutils-name =
         "finduutils-" + concatStringsSep "" (genList (_: "v") ((stringLength pkgs.findutils.version) - 1));
 
-      diffutils-name =
-        "diffuutils-" + concatStringsSep "" (genList (_: "v") ((stringLength pkgs.diffutils.version) - 1));
+      procps-name = "uuproc-" + concatStringsSep "" (genList (_: "v") (stringLength pkgs.procps.version));
+
       sed-name = "uutsed-" + concatStringsSep "" (genList (_: "v") (stringLength pkgs.gnused.version));
-      wl-clipboard-name =
-        "uu-clipboard-" + concatStringsSep "" (genList (_: "v") (stringLength pkgs.wl-clipboard.version));
     in
     [
       {
@@ -51,13 +53,6 @@ in
         };
       }
       {
-        oldDependency = pkgs.findutils;
-        newDependency = pkgs.symlinkJoin {
-          name = findutils-name;
-          paths = [ pkgs.uutils-findutils ];
-        };
-      }
-      {
         oldDependency = pkgs.diffutils;
         newDependency = pkgs.symlinkJoin {
           name = diffutils-name;
@@ -65,17 +60,24 @@ in
         };
       }
       {
+        oldDependency = pkgs.findutils;
+        newDependency = pkgs.symlinkJoin {
+          name = findutils-name;
+          paths = [ pkgs.uutils-findutils ];
+        };
+      }
+      {
+        oldDependency = pkgs.procps;
+        newDependency = pkgs.symlinkJoin {
+          name = procps-name;
+          paths = [ pkgs.uutils-procps ];
+        };
+      }
+      {
         oldDependency = pkgs.gnused;
         newDependency = pkgs.symlinkJoin {
           name = sed-name;
           paths = [ pkgs.uutils-sed ];
-        };
-      }
-      {
-        oldDependency = pkgs.wl-clipboard;
-        newDependency = pkgs.symlinkJoin {
-          name = wl-clipboard-name;
-          paths = [ pkgs.wl-clipboard-rs ];
         };
       }
     ];

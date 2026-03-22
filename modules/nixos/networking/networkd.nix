@@ -3,7 +3,6 @@
   systemd = {
     network = {
       enable = true;
-      wait-online.enable = false;
 
       links = {
         "eth" = {
@@ -61,7 +60,5 @@
         };
       };
     };
-
-    services.systemd-networkd.stopIfChanged = false;
   };
 }

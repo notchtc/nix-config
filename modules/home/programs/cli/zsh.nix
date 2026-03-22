@@ -5,7 +5,6 @@
   ...
 }:
 let
-  inherit (lib) getExe mkOrder;
   zcompdump = "${config.xdg.configHome}/zsh/.zcompdump";
 in
 {
@@ -37,14 +36,14 @@ in
       "prompt_subst"
     ];
 
-    shellAliases = with pkgs; {
-      "7z" = getExe _7zz-rar;
-      cat = "${getExe bat} -p";
-      du = getExe dust;
+    shellAliases = {
+      "7z" = "7zz";
+      cat = "bat -p";
+      du = "dust";
       e = "$EDITOR";
-      find = getExe fd;
-      grep = getExe ripgrep;
-      less = getExe moor;
+      find = "fd";
+      grep = "rg";
+      less = "moor";
     };
 
     completionInit = ''
@@ -61,7 +60,7 @@ in
       } &!
     '';
 
-    initContent = mkOrder 1000 ''
+    initContent = lib.mkOrder 1000 ''
       autoload -Uz add-zsh-hook
       autoload -U colors && colors
       autoload -Uz vcs_info

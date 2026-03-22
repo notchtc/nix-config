@@ -30,7 +30,6 @@
         mkpasswd
         ncurses
         netcat-openbsd
-        procps
         time
         util-linux
         which

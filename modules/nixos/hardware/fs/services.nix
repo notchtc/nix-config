@@ -2,15 +2,7 @@
   services = {
     lvm.enable = false;
     fstrim.enable = false;
-    zfs = {
-      autoScrub.enable = true;
-
-      autoSnapshot = {
-        enable = true;
-        flags = "-kpu";
-        monthly = 1;
-      };
-    };
+    zfs.autoSnapshot.flags = "-kpu";
   };
 
   systemd.services.zpool-trim = {
