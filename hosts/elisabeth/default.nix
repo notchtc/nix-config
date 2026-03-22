@@ -13,10 +13,7 @@
       graphical.enable = true;
       laptop.enable = true;
     };
-    programs = {
-      openmw.enable = false;
-      wine.enable = true;
-    };
+    programs.openmw.enable = false;
     system.secure-boot.enable = true;
   };
 

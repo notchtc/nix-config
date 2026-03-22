@@ -22,6 +22,8 @@ in
       localNetworkGameTransfers.openFirewall = true;
       protontricks.enable = true;
       remotePlay.openFirewall = true;
+
+      extraPackages = [ pkgs.steamtinkerlaunch ];
     };
 
     environment.variables = {
