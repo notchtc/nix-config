@@ -23,5 +23,7 @@
       name = "Atkinson Hyperlegible Next";
       package = pkgs.atkinson-hyperlegible-next;
     };
+
+    gtk4.theme = null;
   };
 }
