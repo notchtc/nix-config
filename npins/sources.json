@@ -27,6 +27,35 @@
       "url": "https://git.notthebe.ee/notthebee/AutoASPM/archive/11e921446423582836fb5b290e053fc7c6643efe.tar.gz",
       "hash": "sha256-ttfgUpC0C5XizuAD3lUE5fda5IeXvbedNcGtG2364IM="
     },
+    "dms": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "AvengeMedia",
+        "repo": "DankMaterialShell"
+      },
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": false,
+      "version": "v1.4.4",
+      "revision": "516fc5ec6252b12c6fa224ddc3629c4d0f0830b2",
+      "url": "https://api.github.com/repos/AvengeMedia/DankMaterialShell/tarball/refs/tags/v1.4.4",
+      "hash": "sha256-rfWvWbPVrpujmBp/q9My/70fWgRLaELdrnZB3CZKlWg="
+    },
+    "dms-plugin-registry": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "AvengeMedia",
+        "repo": "dms-plugin-registry"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "6f2f3fefade05059695eccf730c5df64771e8b1e",
+      "url": "https://github.com/AvengeMedia/dms-plugin-registry/archive/6f2f3fefade05059695eccf730c5df64771e8b1e.tar.gz",
+      "hash": "sha256-RzbO0XHJNONt7JpMFDM+oIXfkOh02h35e/NSUIBCY0Q="
+    },
     "home-manager": {
       "type": "Git",
       "repository": {
@@ -142,22 +171,6 @@
       "name": "nixos-unstable",
       "url": "https://releases.nixos.org/nixos/unstable/nixos-26.05pre969196.46db2e09e1d3/nixexprs.tar.xz",
       "hash": "sha256-NZE+83qbc/hauTJs/uyv8Sf+1aFLP/LsHdIN6q6GQAc="
-    },
-    "noctalia": {
-      "type": "GitRelease",
-      "repository": {
-        "type": "GitHub",
-        "owner": "noctalia-dev",
-        "repo": "noctalia-shell"
-      },
-      "pre_releases": false,
-      "version_upper_bound": null,
-      "release_prefix": null,
-      "submodules": false,
-      "version": "v4.7.1",
-      "revision": "0b8b4fec43a7a5a685aa761b576f7bc09624d717",
-      "url": "https://api.github.com/repos/noctalia-dev/noctalia-shell/tarball/refs/tags/v4.7.1",
-      "hash": "sha256-h5jMVGjgrfVPufMG3AMj/HGfU/EqU/4WEK7HCKhMN2E="
     },
     "npins": {
       "type": "GitRelease",

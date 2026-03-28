@@ -7,10 +7,7 @@
   ...
 }:
 {
-  imports = [
-    ./core.nix
-    ./uutils.nix
-  ];
+  imports = [ ./replacements.nix ];
 
   environment = {
     defaultPackages = lib.mkForce [ ];

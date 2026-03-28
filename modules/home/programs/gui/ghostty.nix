@@ -4,7 +4,7 @@
     programs.ghostty = {
       enable = true;
       settings = {
-        theme = "Adwaita Dark";
+        theme = "dankcolors";
         cursor-style = "bar";
         window-padding-x = 3;
         window-padding-y = 3;

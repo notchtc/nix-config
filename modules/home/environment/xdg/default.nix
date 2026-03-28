@@ -55,9 +55,4 @@ in
       WINEPREFIX = "${dataHome}/wine";
     };
   };
-
-  systemd.user.tmpfiles.rules = [
-    "R ${config.home.homeDirectory}/.pki - - - - -"
-    "d ${config.xdg.configHome}/pki/nssdb 0700 ${config.home.username} users -"
-  ];
 }

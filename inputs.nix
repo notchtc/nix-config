@@ -14,10 +14,11 @@ let
     nixpkgs.configuration.allowUnfree = true;
 
     autoaspm.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
+    dms.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
+    dms-plugin-registry.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
     niri.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
     nix-index-database.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
     nix-mineral.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
-    noctalia.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
     openmw-nix.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
     run0-sudo-shim.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
   };

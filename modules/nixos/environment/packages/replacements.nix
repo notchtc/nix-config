@@ -1,23 +1,8 @@
 { lib, pkgs, ... }:
 let
-  inherit (lib)
-    attrValues
-    concatStringsSep
-    genList
-    stringLength
-    ;
+  inherit (lib) concatStringsSep genList stringLength;
 in
 {
-  environment.systemPackages = attrValues {
-    inherit (pkgs)
-      uutils-coreutils-noprefix
-      uutils-diffutils
-      uutils-findutils
-      uutils-procps
-      uutils-sed
-      ;
-  };
-
   system.replaceDependencies.replacements =
     let
       coreutils-full-name =
@@ -33,9 +18,19 @@ in
       findutils-name =
         "finduutils-" + concatStringsSep "" (genList (_: "v") ((stringLength pkgs.findutils.version) - 1));
 
+      hostname-name =
+        "hostname-uutils-"
+        + concatStringsSep "" (genList (_: "v") (stringLength pkgs.hostname-debian.version));
+
       procps-name = "uuproc-" + concatStringsSep "" (genList (_: "v") (stringLength pkgs.procps.version));
 
       sed-name = "uutsed-" + concatStringsSep "" (genList (_: "v") (stringLength pkgs.gnused.version));
+
+      less-name =
+        "mooor-" + concatStringsSep "" (genList (_: "v") ((stringLength pkgs.less.version) - 1));
+
+      wl-clipboard-name =
+        "rs-clipboard-" + concatStringsSep "" (genList (_: "v") (stringLength pkgs.wl-clipboard.version));
     in
     [
       {
@@ -67,6 +62,13 @@ in
         };
       }
       {
+        oldDependency = pkgs.hostname-debian;
+        newDependency = pkgs.symlinkJoin {
+          name = hostname-name;
+          paths = [ pkgs.uutils-hostname ];
+        };
+      }
+      {
         oldDependency = pkgs.procps;
         newDependency = pkgs.symlinkJoin {
           name = procps-name;
@@ -78,6 +80,21 @@ in
         newDependency = pkgs.symlinkJoin {
           name = sed-name;
           paths = [ pkgs.uutils-sed ];
+        };
+      }
+
+      {
+        oldDependency = pkgs.less;
+        newDependency = pkgs.symlinkJoin {
+          name = less-name;
+          paths = [ pkgs.moor ];
+        };
+      }
+      {
+        oldDependency = pkgs.wl-clipboard;
+        newDependency = pkgs.symlinkJoin {
+          name = wl-clipboard-name;
+          paths = [ pkgs.wl-clipboard-rs ];
         };
       }
     ];

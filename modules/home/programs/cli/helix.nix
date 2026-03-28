@@ -6,7 +6,7 @@
 
     extraPackages = builtins.attrValues { inherit (pkgs) markdown-oxide nixd nixfmt; };
     settings = {
-      theme = "adwaita-dark";
+      theme = "base16_transparent";
       editor = {
         cursor-shape = {
           insert = "bar";
