@@ -40,6 +40,8 @@ in
         "nix-command"
         "pipe-operator"
       ];
+
+      extra-deprecated-features = [ "or-as-identifier" ];
     };
 
     gc = {
