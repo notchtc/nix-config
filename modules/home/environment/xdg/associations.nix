@@ -77,7 +77,7 @@ let
 
     (genAttrs audio (_: [ "org.strawberrymusicplayer.strawberry.desktop" ]))
     (genAttrs image (_: [ "org.kde.gwenview.desktop" ]))
-    (genAttrs video (_: [ "org.kde.haruna.desktop" ]))
+    (genAttrs video (_: [ "mpv.desktop" ]))
   ];
 in
 {

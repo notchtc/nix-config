@@ -6,13 +6,13 @@
 }:
 {
   config = lib.mkIf profiles.graphical.enable {
-    home.packages = [
-      pkgs.haruna
-      pkgs.yt-dlp
-    ];
-
     programs.mpv = {
       enable = true;
+      scripts = [
+        pkgs.mpvScripts.modernz
+        pkgs.mpvScripts.mpris
+        pkgs.mpvScripts.thumbfast
+      ];
 
       config = {
         profile = "high-quality";
@@ -57,23 +57,9 @@
         cache = "yes";
         demuxer-max-back-bytes = "20M";
         demuxer-max-bytes = "20M";
-      };
-    };
 
-    xdg.configFile."haruna/haruna.conf".text = lib.generators.toINI { } {
-      "General" = {
-        FloatingFooterTrigger = "BottomMouseMovement";
-        FooterStyle = "floating";
-        ShowHeader = false;
-        ShowMenuBar = false;
-        ShowPreviewThumbnail = true;
-      };
-
-      "Playback".RestoreFilePosition = true;
-
-      "Playlist" = {
-        PlaybackBehavior = "StopAfterLast";
-        Position = "left";
+        osc = "no";
+        title-bar = "no";
       };
     };
   };

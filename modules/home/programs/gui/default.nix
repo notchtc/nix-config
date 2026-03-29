@@ -5,7 +5,7 @@
     ./librewolf.nix
     ./mpv.nix
     ./nemo.nix
-    ./mpv.nix
+    ./mpv-haruna.nix
     ./niri.nix
     ./vesktop.nix
   ];
