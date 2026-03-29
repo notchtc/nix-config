@@ -17,7 +17,6 @@ in
       enable = true;
       dedicatedServer.openFirewall = true;
       extest.enable = true;
-      extraCompatPackages = [ pkgs.proton-ge-bin ];
       gamescopeSession.enable = true;
       localNetworkGameTransfers.openFirewall = true;
       protontricks.enable = true;

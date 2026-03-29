@@ -5,12 +5,9 @@
   profiles,
   ...
 }:
-let
-  var = config.home.sessionVariables;
-in
 {
   home.sessionVariables = {
-    SYSTEMD_EDITOR = var.EDITOR;
+    SYSTEMD_EDITOR = config.home.sessionVariables.EDITOR;
 
     SYSTEMD_PAGERSECURE = "true";
     SSH_ASKPASS_REQUIRE = "prefer";

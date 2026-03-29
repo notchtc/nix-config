@@ -29,7 +29,6 @@
             _7zz-rar
             bat
             bottom
-            cyme
             deadnix
             dust
             fd
