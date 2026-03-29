@@ -81,9 +81,16 @@ let
   ];
 in
 {
-  xdg.mimeApps = {
-    enable = true;
-    associations.added = associations;
-    defaultApplications = associations;
+  xdg = {
+    mimeApps = {
+      enable = true;
+      associations.added = associations;
+      defaultApplications = associations;
+    };
+
+    terminal-exec = {
+      enable = true;
+      settings.default = [ "com.mitchellh.ghostty.desktop" ];
+    };
   };
 }
