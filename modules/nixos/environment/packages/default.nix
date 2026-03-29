@@ -7,7 +7,7 @@
   ...
 }:
 {
-  imports = [ ./replacements.nix ];
+  imports = [ ./core.nix ];
 
   environment = {
     defaultPackages = lib.mkForce [ ];
@@ -16,6 +16,15 @@
       lib.attrValues
       <|
         {
+          inherit (pkgs)
+            uutils-coreutils-noprefix
+            uutils-diffutils
+            uutils-findutils
+            uutils-hostname
+            uutils-procps
+            uutils-sed
+            ;
+
           inherit (pkgs)
             _7zz-rar
             bat
