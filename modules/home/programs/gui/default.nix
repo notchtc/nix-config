@@ -3,9 +3,10 @@
     ./dms
     ./ghostty.nix
     ./librewolf.nix
-    ./mpv-haruna.nix
+    ./mpv.nix
+    ./nemo.nix
+    ./mpv.nix
     ./niri.nix
-    ./pcmanfm-qt.nix
     ./vesktop.nix
   ];
 }

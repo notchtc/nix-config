@@ -41,8 +41,9 @@
           inherit (pkgs)
             gimp
             keepassxc
+            file-roller
+            nemo-with-extensions
             nicotine-plus
-            pcmanfm-qt
             picard
             pwvucontrol
             qbittorrent
@@ -50,12 +51,7 @@
             tutanota-desktop
             ;
 
-          inherit (pkgs.kdePackages)
-            arianna
-            ark
-            gwenview
-            okular
-            ;
+          inherit (pkgs.kdePackages) arianna gwenview okular;
 
           nvtop = pkgs.nvtopPackages.full;
           telegram = pkgs.telegram-desktop.override { withWebkit = false; };
