@@ -6,6 +6,6 @@
 
   config.programs.gamescope = lib.mkIf config.mama.programs.gamescope.enable {
     enable = true;
-    capSysNice = true;
+    capSysNice = false;
   };
 }
