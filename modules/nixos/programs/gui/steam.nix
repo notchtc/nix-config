@@ -26,10 +26,12 @@ in
     };
 
     environment.variables = {
+      DXVK_FRAME_RATE = 144;
+      PROTON_DLSS_UPGRADE = 1;
+      PROTON_ENABLE_NVAPI = mkIf config.hardware.nvidia.enabled 1;
       PROTON_ENABLE_WAYLAND = 1;
       PROTON_USE_NTSYNC = 1;
       PROTON_USE_WOW64 = 1;
-      PROTON_ENABLE_NVAPI = mkIf config.hardware.nvidia.enabled 1;
     };
 
     hardware.steam-hardware.enable = true;
