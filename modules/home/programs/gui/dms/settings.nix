@@ -317,7 +317,7 @@
   lockScreenShowSystemIcons = true;
   lockScreenShowTime = true;
   lockScreenShowDate = true;
-  lockScreenShowProfileImage = true;
+  lockScreenShowProfileImage = false;
   lockScreenShowPasswordField = true;
   lockScreenShowMediaPlayer = true;
   lockScreenPowerOffMonitorsOnLock = false;
