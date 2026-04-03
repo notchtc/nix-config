@@ -38,10 +38,10 @@
       "version_upper_bound": null,
       "release_prefix": null,
       "submodules": false,
-      "version": "v1.4.4",
-      "revision": "516fc5ec6252b12c6fa224ddc3629c4d0f0830b2",
-      "url": "https://api.github.com/repos/AvengeMedia/DankMaterialShell/tarball/refs/tags/v1.4.4",
-      "hash": "sha256-rfWvWbPVrpujmBp/q9My/70fWgRLaELdrnZB3CZKlWg="
+      "version": "v1.4.4.1",
+      "revision": "9798d78300d402178896f6ee1c370baed490158a",
+      "url": "https://api.github.com/repos/AvengeMedia/DankMaterialShell/tarball/refs/tags/v1.4.4.1",
+      "hash": "sha256-iYBdSBvcW7bJtc84G6k5TFJEbPHQrif9KzZyE9Lbq8M="
     },
     "dms-plugin-registry": {
       "type": "Git",
@@ -52,9 +52,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "6f2f3fefade05059695eccf730c5df64771e8b1e",
-      "url": "https://github.com/AvengeMedia/dms-plugin-registry/archive/6f2f3fefade05059695eccf730c5df64771e8b1e.tar.gz",
-      "hash": "sha256-RzbO0XHJNONt7JpMFDM+oIXfkOh02h35e/NSUIBCY0Q="
+      "revision": "c873610db11b1a56e8a80bac41ba6656629e05a9",
+      "url": "https://github.com/AvengeMedia/dms-plugin-registry/archive/c873610db11b1a56e8a80bac41ba6656629e05a9.tar.gz",
+      "hash": "sha256-Dqld7W02Igkni0tyIIb/h+fQaafwU0Mx+rIi5wwRu4s="
     },
     "home-manager": {
       "type": "Git",
@@ -65,9 +65,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "43c0145a48a0179fe4c32793d3da61e1f45cf1ba",
-      "url": "https://github.com/nix-community/home-manager/archive/43c0145a48a0179fe4c32793d3da61e1f45cf1ba.tar.gz",
-      "hash": "sha256-+pk+eMkOE4HTWIvTUgmTvIEaeL8ICzbLNezyckQ8bco="
+      "revision": "3c7524c68348ef79ce48308e0978611a050089b2",
+      "url": "https://github.com/nix-community/home-manager/archive/3c7524c68348ef79ce48308e0978611a050089b2.tar.gz",
+      "hash": "sha256-No6QGBmIv5ChiwKCcbkxjdEQ/RO2ZS1gD7SFy6EZ7rc="
     },
     "nilla": {
       "type": "GitRelease",
@@ -123,9 +123,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "fb83d584532282f585cd02f3aa513e98b843e7e7",
-      "url": "https://github.com/sodiboo/niri-flake/archive/fb83d584532282f585cd02f3aa513e98b843e7e7.tar.gz",
-      "hash": "sha256-QucawBaJ6Rl5JWAXAbpouXM1MsvlzwCsPGl3zOwLtzw="
+      "revision": "2f31997736b672a833a3fdc37c04facf0d836da4",
+      "url": "https://github.com/sodiboo/niri-flake/archive/2f31997736b672a833a3fdc37c04facf0d836da4.tar.gz",
+      "hash": "sha256-M7TFT253unhJDWWVbw1u0rQkdqNn6elEYFBe4hRnq6Q="
     },
     "nix-index-database": {
       "type": "Git",
@@ -136,9 +136,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "55b588747fa3d7fc351a11831c4b874dab992862",
-      "url": "https://github.com/nix-community/nix-index-database/archive/55b588747fa3d7fc351a11831c4b874dab992862.tar.gz",
-      "hash": "sha256-gdYe9wTPl4ignDyXUl1LlICWj41+S0GB5lG1fKP17+A="
+      "revision": "bedba5989b04614fc598af9633033b95a937933f",
+      "url": "https://github.com/nix-community/nix-index-database/archive/bedba5989b04614fc598af9633033b95a937933f.tar.gz",
+      "hash": "sha256-7jt9Vpm48Yy5yAWigYpde+HxtYEpEuyzIQJF4VYehhk="
     },
     "nix-mineral": {
       "type": "Git",
@@ -169,8 +169,8 @@
     "nixpkgs": {
       "type": "Channel",
       "name": "nixos-unstable",
-      "url": "https://releases.nixos.org/nixos/unstable/nixos-26.05pre969196.46db2e09e1d3/nixexprs.tar.xz",
-      "hash": "sha256-NZE+83qbc/hauTJs/uyv8Sf+1aFLP/LsHdIN6q6GQAc="
+      "url": "https://releases.nixos.org/nixos/unstable/nixos-26.05pre977467.4c1018dae018/nixexprs.tar.xz",
+      "hash": "sha256-WGjBfvXv/mcg5yBg+AtK1Q3FHyXfjAAeJROmg7DLYfM="
     },
     "npins": {
       "type": "GitRelease",
@@ -224,9 +224,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "0ddba2fbd72bb60f8b35b7de1ad67590f454d402",
-      "url": "https://github.com/nix-community/srvos/archive/0ddba2fbd72bb60f8b35b7de1ad67590f454d402.tar.gz",
-      "hash": "sha256-oPIVzGlMmfWuJlRbr87yU3cnV8NxtwTG92GqpQczlkw="
+      "revision": "df399d4ba5d7f4ddd8dae16e5ace5a70e958153d",
+      "url": "https://github.com/nix-community/srvos/archive/df399d4ba5d7f4ddd8dae16e5ace5a70e958153d.tar.gz",
+      "hash": "sha256-XjIqkHJjn5e5UbwS2Nl63uBOF1AaC5coRiO+ukENAmM="
     }
   },
   "version": 7
