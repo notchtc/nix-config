@@ -27,6 +27,7 @@ in
       auto-optimise-store = true;
       flake-registry = "";
       keep-going = true;
+      log-format = "multiline-with-logs";
       max-jobs = "auto";
       sandbox = true;
       use-cgroups = true;
