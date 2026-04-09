@@ -33,6 +33,9 @@
           };
           dhcpV6Config = {
             WithoutRA = "solicit";
+          };
+
+          ipv6AcceptRAConfig = {
             RouteMetric = 512;
           };
         };
@@ -55,6 +58,9 @@
           };
           dhcpV6Config = {
             WithoutRA = "solicit";
+          };
+
+          ipv6AcceptRAConfig = {
             RouteMetric = 1024;
           };
         };
