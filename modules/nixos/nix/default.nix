@@ -24,6 +24,7 @@ in
 
     settings = {
       accept-flake-config = false;
+      auto-allocate-uids = true;
       auto-optimise-store = true;
       flake-registry = "";
       keep-going = true;
