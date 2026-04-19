@@ -18,9 +18,6 @@
 
     "/var/lib".neededForBoot = true;
   }
-  // lib.genAttrs [ "/etc" "/root" "/srv" "/tmp" "/var" "/var/tmp" ] (_: {
-    fsType = "none";
-  })
   // lib.genAttrs [ "/nix" "/home" "/var/log" "/var/lib" ] (fs: {
     device = "${host}/NixOS${lib.optionalString (fs != "/") fs}";
     fsType = "zfs";

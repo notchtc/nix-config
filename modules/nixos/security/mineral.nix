@@ -29,6 +29,10 @@ in
       network.bluetooth-kmodules = mkIf (!mama.hardware.bluetooth.enable) false;
       system.lock-root = true;
     };
+
+    filesystems.normal = lib.genAttrs [ "/etc" "/root" "/srv" "/tmp" "/var" "/var/tmp" ] (_: {
+      options.fsType = "none";
+    });
   }
   // optionalAttrs mama.profiles.graphical.enable {
     settings = {
