@@ -7,12 +7,12 @@
     ./autoaspm.nix
     ./bluetooth.nix
     ./cpu
-    ./firmware.nix
     ./fs
     ./gpu
     ./laptop.nix
     ./media
   ];
 
+  hardware.enableRedistributableFirmware = true;
   nixpkgs.hostPlatform = "${system}";
 }
