@@ -10,6 +10,7 @@
 
   home-manager = {
     backupFileExtension = "backup";
+    minimal = true;
     overwriteBackup = true;
     useGlobalPkgs = true;
     useUserPackages = true;

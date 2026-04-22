@@ -2,6 +2,7 @@
 {
   imports = [
     ./environment
+    ./modules.nix
     ./nix.nix
     ./programs
   ];
