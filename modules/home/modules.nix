@@ -24,7 +24,6 @@
     "programs/delta.nix" # git
     "programs/diff-highlight.nix" # git
     "programs/diff-so-fancy.nix" # git
-    "programs/emacs.nix" # jujutsu
     "programs/fish.nix" # zoxide
     "programs/home-manager.nix" # auto-expire
     "programs/man.nix" # fish

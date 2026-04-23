@@ -2,6 +2,7 @@
 {
   programs.jujutsu = {
     enable = true;
+    ediff = false;
 
     settings = {
       aliases = {
