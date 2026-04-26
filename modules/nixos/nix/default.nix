@@ -24,20 +24,20 @@ in
 
     settings = {
       accept-flake-config = false;
-      auto-allocate-uids = true;
+      #      auto-allocate-uids = true;
       auto-optimise-store = true;
       flake-registry = "";
       keep-going = true;
       log-format = "multiline-with-logs";
       max-jobs = "auto";
       sandbox = true;
-      use-cgroups = true;
+      #      use-cgroups = true;
       use-xdg-base-directories = true;
       warn-dirty = false;
 
       experimental-features = [
-        "auto-allocate-uids"
-        "cgroups"
+        #        "auto-allocate-uids"
+        #        "cgroups"
         "flakes"
         "nix-command"
         "pipe-operator"
