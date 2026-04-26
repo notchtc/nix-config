@@ -12,7 +12,7 @@
     "programs/mpv.nix"
     "programs/nix-index.nix"
     "programs/quickshell.nix"
-    "programs/vesktop.nix"
+    "programs/vesktop"
     "programs/vim.nix"
     "programs/zoxide.nix"
     "services/home-manager-auto-expire.nix"
