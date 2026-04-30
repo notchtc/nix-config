@@ -12,7 +12,7 @@
     nixpkgs.overlays = [ inputs.niri.result.overlays.niri ];
     programs.niri = {
       enable = true;
-      package = pkgs.niri-unstable;
+      package = pkgs.niri;
     };
     systemd.user.services.niri-flake-polkit.enable = lib.mkForce false;
   };
