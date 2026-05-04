@@ -2,10 +2,9 @@
   services.resolved = {
     enable = true;
     settings.Resolve = {
-      DNSOverTLS = "true";
-      DNSSEC = "true";
+      DNSOverTLS = "opportunistic";
+      DNSSEC = "allow-downgrade";
       LLMNR = "false";
-      FallbackDNS = [ "9.9.9.9" ];
     };
   };
 }
