@@ -1,6 +1,7 @@
 {
   inputs,
   lib,
+  pkgs,
   profiles,
   ...
 }:
@@ -14,6 +15,7 @@
   programs.dank-material-shell = lib.mkIf profiles.graphical.enable {
     enable = true;
     systemd.enable = true;
+    package = pkgs.dms-shell;
 
     settings = import ./settings.nix;
     session = {
