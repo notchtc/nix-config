@@ -7,6 +7,7 @@ in
     services.xserver.videoDrivers = [ "nvidia" ];
 
     hardware.nvidia = {
+      branch = "bleeding_edge";
       nvidiaSettings = false;
       open = true;
       powerManagement.enable = true;
