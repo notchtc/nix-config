@@ -26,7 +26,7 @@
     "programs/diff-so-fancy.nix" # git
     "programs/fish.nix" # zoxide
     "programs/home-manager.nix" # auto-expire
-    "programs/man.nix" # fish
+    "programs/man" # fish
     "programs/patdiff.nix" # git
     "programs/riff.nix" # git
     "services/gpg-agent.nix" # ssh-auth-sock
