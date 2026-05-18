@@ -23,6 +23,7 @@ in
       download = "${homeDirectory}/Downloads";
       music = "${homeDirectory}/Music";
       pictures = "${homeDirectory}/Pictures";
+      projects = "${homeDirectory}/Projects";
       publicShare = "${homeDirectory}/Public/Share";
       templates = "${homeDirectory}/Public/Templates";
       videos = "${homeDirectory}/Videos";
