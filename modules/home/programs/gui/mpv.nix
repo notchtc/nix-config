@@ -17,7 +17,7 @@
       config = {
         profile = "high-quality";
         hwdec = "auto-safe";
-        gpu-context = "waylandvk";
+        gpu-context = "wayland";
         vo = "gpu-next";
 
         dither-depth = 8;
