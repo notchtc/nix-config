@@ -28,20 +28,17 @@
       "hash": "sha256-ttfgUpC0C5XizuAD3lUE5fda5IeXvbedNcGtG2364IM="
     },
     "dms": {
-      "type": "GitRelease",
+      "type": "Git",
       "repository": {
         "type": "GitHub",
         "owner": "AvengeMedia",
         "repo": "DankMaterialShell"
       },
-      "pre_releases": false,
-      "version_upper_bound": null,
-      "release_prefix": null,
+      "branch": "master",
       "submodules": false,
-      "version": "v1.4.6",
-      "revision": "bb2259df48c50ad758411bf0efbd9f133b7b61dc",
-      "url": "https://api.github.com/repos/AvengeMedia/DankMaterialShell/tarball/refs/tags/v1.4.6",
-      "hash": "sha256-g6r/Gx8PTDzO3jCNzzySA+Ff1lmLF9nDlMCNyyoQjoE="
+      "revision": "8dd891f93a103d89d5fe33e1d26ab769cddf936b",
+      "url": "https://github.com/AvengeMedia/DankMaterialShell/archive/8dd891f93a103d89d5fe33e1d26ab769cddf936b.tar.gz",
+      "hash": "sha256-tvG5g7KwcbSWUEWI7V4yAMGoDTUhe4sUAlffWwUkdkc="
     },
     "dms-plugin-registry": {
       "type": "Git",

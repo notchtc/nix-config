@@ -136,7 +136,7 @@
   workspaceFocusedBorderColor = "primary";
   workspaceFocusedBorderThickness = 2;
   workspaceNameIcons = { };
-  waveProgressEnabled = true;
+  waveProgressEnabled = false;
   scrollTitleEnabled = true;
   audioVisualizerEnabled = true;
   audioScrollMode = "volume";
@@ -191,6 +191,7 @@
   dankLauncherV2BorderColor = "primary";
   dankLauncherV2ShowFooter = true;
   dankLauncherV2UnloadOnClose = false;
+  launcherStyle = "spotlight";
   useAutoLocation = true;
   weatherEnabled = true;
   networkPreference = "auto";
@@ -222,6 +223,8 @@
   monoFontFamily = "Atkinson Hyperlegible Mono";
   fontWeight = 400;
   fontScale = 1;
+  textRenderType = 1;
+  textRenderQuality = 0;
   notepadUseMonospace = true;
   notepadFontFamily = "";
   notepadFontSize = 14;
