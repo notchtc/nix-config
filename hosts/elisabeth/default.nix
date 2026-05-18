@@ -45,5 +45,5 @@
   };
 
   fileSystems."/boot".device = "/dev/disk/by-uuid/E832-2DAC";
-  system.stateVersion = "25.11";
+  system.stateVersion = "26.11";
 }

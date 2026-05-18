@@ -11,7 +11,6 @@ in
   home.file.".zshenv".enable = false;
   programs.zsh = {
     enable = true;
-    dotDir = "${config.xdg.configHome}/zsh";
 
     enableCompletion = true;
     enableVteIntegration = true;
