@@ -4,9 +4,6 @@
     services.xserver.videoDrivers = [ "amdgpu" ];
     boot.kernelModules = [ "amdgpu" ];
 
-    hardware.amdgpu = {
-      initrd.enable = true;
-      legacySupport.enable = true;
-    };
+    hardware.amdgpu.legacySupport.enable = true;
   };
 }
