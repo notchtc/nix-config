@@ -53,6 +53,11 @@
     plugins = {
       dankBatteryAlerts.enable = true;
       niriWindows.enable = true;
+      nixPackageRunner.enable = true;
+      emojiLauncher = {
+        enable = true;
+        settings.trigger = "em";
+      };
     };
 
     enableAudioWavelength = false;

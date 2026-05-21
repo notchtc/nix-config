@@ -560,7 +560,10 @@
     };
   };
   clipboardEnterToPaste = false;
-  launcherPluginVisibility = { };
+  launcherPluginVisibility = {
+    emojiLauncher.allowWithoutTrigger = false;
+    nixPackageRunner.allowWithoutTrigger = false;
+  };
   launcherPluginOrder = [ ];
   configVersion = 5;
 }
