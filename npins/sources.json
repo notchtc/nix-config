@@ -36,9 +36,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "fb9ec8e72111054edff34a380362e82a409d6600",
-      "url": "https://github.com/AvengeMedia/DankMaterialShell/archive/fb9ec8e72111054edff34a380362e82a409d6600.tar.gz",
-      "hash": "sha256-MKUt692eD61mPJFbrz4dr2fEU5SBGuUtdLQZnG989Iw="
+      "revision": "045ac59a44e527c27355f08a85bd1a73b0de8197",
+      "url": "https://github.com/AvengeMedia/DankMaterialShell/archive/045ac59a44e527c27355f08a85bd1a73b0de8197.tar.gz",
+      "hash": "sha256-RB/xGh4VhkqxVwdc+Czadib+lQwcAOZYONS0tKGsJps="
     },
     "dms-plugin-registry": {
       "type": "Git",
@@ -49,9 +49,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "7050fed6fc182198853224ff2dbfa14e61d31ede",
-      "url": "https://github.com/AvengeMedia/dms-plugin-registry/archive/7050fed6fc182198853224ff2dbfa14e61d31ede.tar.gz",
-      "hash": "sha256-1FRZeLYR/zwtuhs3iX54PUlZHNYz/ARYstMk4if5o58="
+      "revision": "31bef1b82668835ead466a8884068101da4d142f",
+      "url": "https://github.com/AvengeMedia/dms-plugin-registry/archive/31bef1b82668835ead466a8884068101da4d142f.tar.gz",
+      "hash": "sha256-srmDHBCLwP8EIvxeDDV11c5+DYImXIYMxRwlwnU2tZg="
     },
     "home-manager": {
       "type": "Git",
@@ -62,9 +62,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "928d72376949e222ea4f07b44828a55b0136422e",
-      "url": "https://github.com/nix-community/home-manager/archive/928d72376949e222ea4f07b44828a55b0136422e.tar.gz",
-      "hash": "sha256-n1+l78hJRABp4cQHKeD0BVByT0vZLPqd09Tvoq8Q+d8="
+      "revision": "1a95e2efb477959b70b4a14c51035975c0481df6",
+      "url": "https://github.com/nix-community/home-manager/archive/1a95e2efb477959b70b4a14c51035975c0481df6.tar.gz",
+      "hash": "sha256-/p37CB5n6Wpw250b0Lq0CYwNq2D8uGKzDoBulyLcQqA="
     },
     "nilla": {
       "type": "GitRelease",
@@ -120,9 +120,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "f4027707431220ffb660ae0da0e03fd5229ab4d9",
-      "url": "https://github.com/sodiboo/niri-flake/archive/f4027707431220ffb660ae0da0e03fd5229ab4d9.tar.gz",
-      "hash": "sha256-B4pOfIX6CpCD/cKckwNP3DYDxEUBG1x/K3vqwYNonx4="
+      "revision": "3754a033e05c750ef46fe4f078d79b826c4f9287",
+      "url": "https://github.com/sodiboo/niri-flake/archive/3754a033e05c750ef46fe4f078d79b826c4f9287.tar.gz",
+      "hash": "sha256-AbRQrrpcNTBUoIf7Kc1qsdhsRLtZ0DDw+udm+8NWlJk="
     },
     "nix-index-database": {
       "type": "Git",
@@ -133,9 +133,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "f680e0d3c1dbefe298c423691662e238496890f2",
-      "url": "https://github.com/nix-community/nix-index-database/archive/f680e0d3c1dbefe298c423691662e238496890f2.tar.gz",
-      "hash": "sha256-V5GquqJvAqwFTcpN6hxKSQAtwuJFRUEHmyNKbeaTQDg="
+      "revision": "8fba98c80b48fa013820e0163c5096922fea4ddd",
+      "url": "https://github.com/nix-community/nix-index-database/archive/8fba98c80b48fa013820e0163c5096922fea4ddd.tar.gz",
+      "hash": "sha256-ZQ5z+fVhxYKtIFwtqGp5O0PD84BM1riASvqDaN5Xs+s="
     },
     "nix-mineral": {
       "type": "Git",
@@ -166,8 +166,8 @@
     "nixpkgs": {
       "type": "Channel",
       "name": "nixos-unstable",
-      "url": "https://releases.nixos.org/nixos/unstable/nixos-26.05pre998534.d233902339c0/nixexprs.tar.xz",
-      "hash": "sha256-VdRy3A14M5vIE882DJcaaR+5wrss9Qsg4YNVbr7uj3k="
+      "url": "https://releases.nixos.org/nixos/unstable/nixos-26.05pre1004030.64c08a7ca051/nixexprs.tar.xz",
+      "hash": "sha256-NpH8iEQ5JHv/BtUuzTEXUMDxPLetCDzIv4OxL8H7Kps="
     },
     "npins": {
       "type": "GitRelease",
@@ -180,10 +180,10 @@
       "version_upper_bound": null,
       "release_prefix": null,
       "submodules": false,
-      "version": "0.4.0",
-      "revision": "52904b878c2db61e062b63beb07784d41f98c765",
-      "url": "https://api.github.com/repos/andir/npins/tarball/refs/tags/0.4.0",
-      "hash": "sha256-ksOXi7u4bpHyWNHwkUR62fdwKowPW5GqBS7MA7Apwh4="
+      "version": "0.5.0",
+      "revision": "41a153cdc1aa446480b2b652a967652ad62609bf",
+      "url": "https://api.github.com/repos/andir/npins/tarball/refs/tags/0.5.0",
+      "hash": "sha256-OkPEh0axWs3gUoUyplQexYpEXxyCDYWm5BQpwB2PIqA="
     },
     "openmw-nix": {
       "type": "Git",
