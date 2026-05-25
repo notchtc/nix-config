@@ -60,8 +60,6 @@ in
     '';
 
     initContent = lib.mkOrder 1000 ''
-      autoload -Uz add-zsh-hook
-      autoload -U colors && colors
       autoload -Uz vcs_info
 
       export KEYTIMEOUT=1
@@ -71,8 +69,6 @@ in
       bindkey -M menuselect 'k' vi-up-line-or-history
       bindkey -M menuselect 'l' vi-forward-char
       bindkey -M menuselect 'j' vi-down-line-or-history
-
-      add-zsh-hook precmd vcs_info
 
       zstyle ':completion:*' menu select  
       zstyle ":vcs_info:git:*" formats "%F{green}%b%f"
@@ -86,24 +82,25 @@ in
       function chpwd-osc7-pwd() {
         (( ZSH_SUBSHELL )) || osc7-pwd
       }
-      add-zsh-hook -Uz chpwd chpwd-osc7-pwd
+
+      precmd() { vcs_info }
+      chpwd() { chpwd-osc7-pwd } 
 
       PROMPT='%F{blue}%3~%f %(?.%F{green}λ.%F{red}λ)%f '
       RPROMPT=' ''${vcs_info_msg_0_}'
 
       function zle-keymap-select () {
         case $KEYMAP in
-          vicmd) echo -ne '\e[1 q';;      # block
-          viins|main) echo -ne '\e[5 q';; # beam
+          vicmd) print -n '\e[1 q';;      # block
+          viins|main) print -n '\e[5 q';; # beam
         esac
       }
       zle -N zle-keymap-select
-      zle-line-init() {
-        echo -ne "\e[5 q"
-      }
+      zle-line-init() { print -n "\e[5 q" }
       zle -N zle-line-init
-      echo -ne '\e[5 q'
-      preexec() { echo -ne '\e[5 q' ;}
+
+      print -n '\e[5 q'
+      preexec() { print -n '\e[5 q' ;}
     '';
 
     plugins = [
