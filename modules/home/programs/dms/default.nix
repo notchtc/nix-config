@@ -17,7 +17,7 @@
 
     settings = import ./settings.nix;
     session = {
-      wallpaperPath = ../../../environment/theming/wallpaper.jpg;
+      wallpaperPath = ../../environment/theming/wallpaper.jpg;
 
       isLightMode = false;
       doNotDisturb = false;

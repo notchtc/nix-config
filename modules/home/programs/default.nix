@@ -1,6 +1,19 @@
 {
   imports = [
-    ./cli
-    ./gui
+    ./difftastic.nix
+    ./dms
+    ./eza.nix
+    ./ghostty.nix
+    ./git.nix
+    ./helix.nix
+    ./jj.nix
+    ./librewolf.nix
+    ./mpv.nix
+    ./nemo.nix
+    ./niri.nix
+    ./nix-index.nix
+    ./vesktop.nix
+    ./zoxide.nix
+    ./zsh.nix
   ];
 }

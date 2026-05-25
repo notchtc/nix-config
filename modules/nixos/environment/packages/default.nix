@@ -47,9 +47,9 @@
         }
         // lib.optionalAttrs config.mama.profiles.graphical.enable {
           inherit (pkgs)
+            file-roller
             gimp
             keepassxc
-            file-roller
             nemo-with-extensions
             nicotine-plus
             picard
@@ -57,6 +57,7 @@
             qbittorrent
             strawberry
             tutanota-desktop
+            yt-dlp
             ;
 
           inherit (pkgs.kdePackages) arianna gwenview okular;

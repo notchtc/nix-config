@@ -1,9 +1,13 @@
 { lib, ... }:
 {
   imports = [
-    ./gui
     ./bash.nix
     ./fluidsynth.nix
+    ./gamescope.nix
+    ./heroic.nix
+    ./niri.nix
+    ./openmw.nix
+    ./steam.nix
     ./zsh.nix
   ];
 
