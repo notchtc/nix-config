@@ -1,6 +1,7 @@
 {
   services.openssh = {
     enable = true;
+
     openFirewall = true;
     startWhenNeeded = true;
     ports = [ 69 ];
@@ -15,13 +16,15 @@
       ClientAliveCountMax = 5;
       ClientAliveInterval = 60;
 
-      KexAlgorithms = [
-        "mlkem768x25519-sha256"
-        "sntrup761x25519-sha512"
-        "sntrup761x25519-sha512@openssh.com"
-        "curve25519-sha256"
-        "curve25519-sha256@libssh.org"
-        "diffie-hellman-group-exchange-sha256"
+      PerSourceMaxStartups = 1;
+      PerSourceNetBlockSize = "32:128";
+
+      Ciphers = [
+        "aes256-gcm@openssh.com"
+        "aes128-gcm@openssh.com"
+        "aes256-ctr"
+        "aes192-ctr"
+        "aes128-ctr"
       ];
 
       Macs = [
