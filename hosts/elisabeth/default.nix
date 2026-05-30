@@ -18,7 +18,7 @@
   };
 
   boot = {
-    #    kernel.sysfs.bus.platform.drivers.ideapad_acpi."VPC2004:00".conservation_mode = 1;
+    kernel.sysfs.bus.platform.drivers.ideapad_acpi."VPC2004:00".conservation_mode = 1;
 
     initrd.availableKernelModules = [
       "nvme"
