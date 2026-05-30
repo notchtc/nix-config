@@ -47,6 +47,7 @@
         }
         // lib.optionalAttrs config.mama.profiles.graphical.enable {
           inherit (pkgs)
+            cyanrip
             file-roller
             gimp
             keepassxc
