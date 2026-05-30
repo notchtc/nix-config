@@ -1,3 +1,4 @@
+{ osConfig, ... }:
 {
   imports = [
     ./environment
@@ -6,5 +7,5 @@
     ./programs
   ];
 
-  home.stateVersion = "26.05";
+  home.stateVersion = osConfig.system.stateVersion;
 }
