@@ -48,7 +48,10 @@
 
       ui = {
         editor = config.home.sessionVariables.EDITOR;
-        default-command = "log";
+        default-command = [
+          "log"
+          "-s"
+        ];
         diff-editor = ":builtin";
         pager = [ "${pkgs.moor}/bin/moor" ];
       };
