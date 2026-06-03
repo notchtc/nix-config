@@ -54,8 +54,11 @@
             nemo-with-extensions
             nicotine-plus
             picard
+            plugdata
             pwvucontrol
             qbittorrent
+            qpwgraph
+            renoise
             strawberry
             tutanota-desktop
             yt-dlp
