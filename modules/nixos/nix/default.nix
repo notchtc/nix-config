@@ -28,6 +28,7 @@ in
       auto-allocate-uids = true;
       auto-optimise-store = true;
       flake-registry = "";
+      http3 = true;
       keep-going = true;
       log-format = "multiline-with-logs";
       max-jobs = "auto";
