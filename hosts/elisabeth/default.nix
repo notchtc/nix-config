@@ -1,3 +1,4 @@
+{ lib, pkgs, ... }:
 {
   mama = {
     hardware = {
@@ -18,6 +19,8 @@
   };
 
   boot = {
+    kernelPackages = lib.mkForce pkgs.cachyosKernels.linuxPackages-cachyos-latest-lto-zen4;
+
     kernel.sysfs.bus.platform.drivers.ideapad_acpi."VPC2004:00".conservation_mode = 1;
 
     initrd.availableKernelModules = [

@@ -19,7 +19,7 @@
     enableContainers = false;
     kernelPackages =
       if config.mama.profiles.graphical.enable then
-        pkgs.linuxPackages_zen
+        pkgs.cachyosKernels.linuxPackages-cachyos-latest-lto-x86_64-v3
       else
         pkgs.linuxPackages_hardened;
 

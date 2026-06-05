@@ -12,7 +12,8 @@ in
 {
   imports = [
     "${inputs.srvos.result}/shared/mixins/trusted-nix-caches.nix"
-    ./overlay.nix
+    ./overlays.nix
+    ./substituters.nix
     ./tools.nix
   ];
 

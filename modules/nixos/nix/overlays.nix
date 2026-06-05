@@ -9,5 +9,7 @@
       comma = prev.comma.override { nix = final.nix-monitored; };
       nixos-rebuild = prev.nixos-rebuild.override { nix = final.nix-monitored; };
     })
+
+    inputs.nix-cachyos-kernel.result.overlays.pinned
   ];
 }
