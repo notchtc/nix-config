@@ -133,9 +133,9 @@
       },
       "branch": "release",
       "submodules": false,
-      "revision": "d6edf208efa33a387408a3435f589e76faa35168",
-      "url": "https://github.com/xddxdd/nix-cachyos-kernel/archive/d6edf208efa33a387408a3435f589e76faa35168.tar.gz",
-      "hash": "sha256-B74xntBJSA99ZlLz5763pM+2FUOq3wmLWIigjWMBoV0="
+      "revision": "3d940a534da0ba6bce60e345ff2c9c7b062087fb",
+      "url": "https://github.com/xddxdd/nix-cachyos-kernel/archive/3d940a534da0ba6bce60e345ff2c9c7b062087fb.tar.gz",
+      "hash": "sha256-cbace1ZTWYFG0luPL7OFlUxDh/t9lmPj+Isvg9hLN0k="
     },
     "nix-index-database": {
       "type": "Git",
