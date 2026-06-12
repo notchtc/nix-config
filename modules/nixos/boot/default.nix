@@ -2,6 +2,7 @@
   config,
   lib,
   pkgs,
+  inputs,
   ...
 }:
 {
@@ -14,7 +15,8 @@
     ./sysfs.nix
   ];
 
-  system.nixos-init.enable = true;
+  nixpkgs.overlays = [ inputs.nix-cachyos-kernel.result.overlays.pinned ];
+
   boot = {
     enableContainers = false;
     kernelPackages =
@@ -42,5 +44,6 @@
     };
   };
 
+  system.nixos-init.enable = true;
   security.protectKernelImage = true;
 }

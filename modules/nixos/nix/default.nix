@@ -5,14 +5,12 @@
   ...
 }:
 let
-  inherit (builtins) storeDir storePath;
-  inherit (lib) mapAttrs' mkForce;
-  inherit (lib.strings) isStringLike hasPrefix;
+  inherit (lib) mkForce;
 in
 {
   imports = [
     "${inputs.srvos.result}/shared/mixins/trusted-nix-caches.nix"
-    ./overlays.nix
+    ./lix-monitored.nix
     ./substituters.nix
     ./tools.nix
   ];
@@ -20,7 +18,7 @@ in
   nix = {
     package = pkgs.nix-monitored;
 
-    nixPath = [ "/etc/nix/inputs" ];
+    nixPath = [ "/etc/nix/nixpkgs" ];
     registry.nixpkgs.flake = mkForce inputs.nixpkgs-flake.result;
 
     settings = {
@@ -45,7 +43,10 @@ in
         "pipe-operator"
       ];
 
-      extra-deprecated-features = [ "or-as-identifier" ];
+      extra-deprecated-features = [
+        "broken-string-escape"
+        "or-as-identifier"
+      ];
     };
 
     gc = {
@@ -66,13 +67,6 @@ in
 
   environment = {
     variables.NIXPKGS_CONFIG = mkForce "";
-    etc = mapAttrs' (name: value: {
-      name = "nix/inputs/${name}";
-      value.source =
-        if isStringLike value.result && (hasPrefix storeDir <| toString value.result) then
-          storePath value.result
-        else
-          storePath value.src;
-    }) inputs;
+    etc."nix/nixpkgs".source = builtins.storePath pkgs.path;
   };
 }
