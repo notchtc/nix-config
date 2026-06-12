@@ -2,7 +2,6 @@
   config,
   inputs,
   packages,
-  system,
   ...
 }:
 {
@@ -15,7 +14,7 @@
     useGlobalPkgs = true;
     useUserPackages = true;
     extraSpecialArgs = {
-      inherit inputs packages system;
+      inherit inputs packages;
       inherit (config.mama) profiles;
     };
 

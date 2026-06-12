@@ -1,5 +1,4 @@
-{ lib, pkgs, ... }:
-{
+{ lib, pkgs, ... }: {
   mama = {
     hardware = {
       cpu = "amd";
@@ -48,5 +47,7 @@
   };
 
   fileSystems."/boot".device = "/dev/disk/by-uuid/E832-2DAC";
+  networking.hostName = "elisabeth";
+  nixpkgs.hostPlatform = "x86_64-linux";
   system.stateVersion = "26.11";
 }

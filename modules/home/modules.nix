@@ -1,5 +1,4 @@
-{ lib, modulesPath, ... }:
-{
+{ lib, modulesPath, ... }: {
   imports = lib.map (m: "${modulesPath}/" + m) [
     # modules i explicitly use myself
     "programs/difftastic.nix"
@@ -13,7 +12,6 @@
     "programs/nix-index.nix"
     "programs/quickshell.nix"
     "programs/vesktop"
-    "programs/vim.nix"
     "programs/zoxide.nix"
     "services/home-manager-auto-expire.nix"
     "services/nix-gc.nix"
@@ -29,6 +27,7 @@
     "programs/man" # fish
     "programs/patdiff.nix" # git
     "programs/riff.nix" # git
+    "programs/vim.nix" # ghostty
     "services/gpg-agent.nix" # ssh-auth-sock
     "services/proton-pass-agent.nix" # ssh-auth-sock
     "services/ssh-agent.nix" # ssh-auth-sock

@@ -1,8 +1,4 @@
-{
-  host ? throw "No hostname provided",
-  ...
-}:
-{
+{ config, ... }: {
   imports = [
     ./blocking.nix
     ./iwd.nix
@@ -13,8 +9,7 @@
   ];
 
   networking = {
-    hostName = host;
-    hostId = builtins.hashString "md5" host |> builtins.substring 0 8;
+    hostId = builtins.hashString "md5" config.networking.hostName |> builtins.substring 0 8;
 
     nftables.enable = true;
 

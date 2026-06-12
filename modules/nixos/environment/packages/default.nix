@@ -1,9 +1,7 @@
 {
   config,
-  inputs,
   lib,
   pkgs,
-  system,
   ...
 }:
 {
@@ -37,13 +35,12 @@
             git
             jq
             moor
+            npins
             ripgrep
             statix
             ;
 
           inherit (pkgs.ghostty) terminfo;
-
-          npins = inputs.npins.result { inherit pkgs system; };
         }
         // lib.optionalAttrs config.mama.profiles.graphical.enable {
           inherit (pkgs)

@@ -3,7 +3,6 @@
   inputs,
   lib,
   pkgs,
-  system,
   ...
 }:
 {
@@ -14,7 +13,7 @@
   config.environment.systemPackages =
     lib.mkIf config.mama.programs.openmw.enable
     <| lib.attrValues {
-      inherit (inputs.openmw-nix.result.packages.${system})
+      inherit (inputs.openmw-nix.result.packages.${pkgs.stdenv.hostPlatform.system})
         #      delta-plugin
         momw-configurator
         openmw-validator

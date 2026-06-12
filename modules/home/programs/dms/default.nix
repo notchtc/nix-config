@@ -8,7 +8,7 @@
   imports = [
     inputs.dms.result.homeModules.dank-material-shell
     inputs.dms.result.homeModules.niri
-    inputs.dms-plugin-registry.result.modules.default
+    inputs.dms-plugin-registry.result.homeModules.default
   ];
 
   programs.dank-material-shell = lib.mkIf profiles.graphical.enable {

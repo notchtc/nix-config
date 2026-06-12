@@ -1,8 +1,4 @@
 {
-  system ? throw "No platform provided",
-  ...
-}:
-{
   imports = [
     ./autoaspm.nix
     ./bluetooth.nix
@@ -14,5 +10,4 @@
   ];
 
   hardware.enableRedistributableFirmware = true;
-  nixpkgs.hostPlatform = "${system}";
 }

@@ -1,9 +1,8 @@
-{ inputs, system, ... }:
-{
+{ inputs, pkgs, ... }: {
   environment = {
     systemPackages = [
-      inputs.nilla-cli.result.packages.default.result.${system}
-      inputs.nilla-nixos.result.packages.default.result.${system}
+      inputs.nilla-cli.result.packages.default.result.${pkgs.stdenv.hostPlatform.system}
+      inputs.nilla-nixos.result.packages.default.result.${pkgs.stdenv.hostPlatform.system}
     ];
   };
 

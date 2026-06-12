@@ -1,5 +1,4 @@
-{ config }:
-{
+{ config }: {
   config.systems.nixos = {
     elisabeth = {
       pkgs = config.inputs.nixpkgs.result.x86_64-linux;
@@ -10,11 +9,7 @@
         ./elisabeth
       ];
 
-      args = {
-        inherit (config) inputs packages;
-        host = "elisabeth";
-        system = "x86_64-linux";
-      };
+      args = { inherit (config) inputs packages; };
     };
   };
 }

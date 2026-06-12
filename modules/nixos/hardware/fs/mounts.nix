@@ -1,5 +1,4 @@
-{ host, lib, ... }:
-{
+{ config, lib, ... }: {
   fileSystems = {
     "/" = {
       device = "none";
@@ -19,7 +18,7 @@
     "/var/lib".neededForBoot = true;
   }
   // lib.genAttrs [ "/nix" "/home" "/var/log" "/var/lib" ] (fs: {
-    device = "${host}/NixOS${lib.optionalString (fs != "/") fs}";
+    device = "${config.networking.hostName}/NixOS${lib.optionalString (fs != "/") fs}";
     fsType = "zfs";
     options = [ "zfsutil" ];
   });
