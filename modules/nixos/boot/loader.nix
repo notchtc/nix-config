@@ -12,7 +12,7 @@
       enable = true;
       efiSupport = true;
       enableEditor = false;
-      maxGenerations = 10;
+      maxGenerations = 5;
       secureBoot.enable = lib.mkIf config.mama.system.secure-boot.enable true;
 
       style = {
