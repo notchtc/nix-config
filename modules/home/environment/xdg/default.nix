@@ -42,11 +42,10 @@ in
   home = {
     preferXdgDirectories = true;
     sessionVariables = rec {
-      __GL_SHADER_DISK_CACHE_PATH = "${cacheHome}/nv";
       _JAVA_OPTIONS = "-Djava.util.prefs.userRoot=${configHome}/java";
       ANDROID_HOME = "${dataHome}/android";
       ANDROID_USER_HOME = ANDROID_HOME;
-      CUDA_CACHE_PATH = __GL_SHADER_DISK_CACHE_PATH;
+      CUDA_CACHE_PATH = "${cacheHome}/nv";
       DVDCSS_CACHE = "${dataHome}/dvdcss";
       GNUPGHOME = "${dataHome}/gnupg";
       LESSHISTFILE = "${dataHome}/lesshst";
