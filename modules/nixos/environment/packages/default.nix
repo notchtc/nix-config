@@ -46,17 +46,14 @@
         }
         // lib.optionalAttrs config.mama.profiles.graphical.enable {
           inherit (pkgs)
-            cyanrip
             file-roller
             gimp
             keepassxc
             nemo-with-extensions
             nicotine-plus
             picard
-            plugdata
             pwvucontrol
             qbittorrent
-            qpwgraph
             renoise
             strawberry
             tutanota-desktop
@@ -65,7 +62,10 @@
 
           inherit (pkgs.kdePackages) arianna gwenview okular;
 
-          nvtop = pkgs.nvtopPackages.full;
+          nvtop = pkgs.nvtopPackages.amd.override {
+            intel = true;
+            nvidia = true;
+          };
           telegram = pkgs.telegram-desktop.override { withWebkit = false; };
         };
   };
