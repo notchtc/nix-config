@@ -49,5 +49,6 @@
   fileSystems."/boot".device = "/dev/disk/by-uuid/E832-2DAC";
   networking.hostName = "elisabeth";
   nixpkgs.hostPlatform = "x86_64-linux";
+  services.ucodenix.cpuModelId = "00A70F52";
   system.stateVersion = "26.11";
 }

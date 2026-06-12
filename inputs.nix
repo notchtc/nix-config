@@ -7,6 +7,7 @@ let
     agenix = "raw";
     home-manager = "raw";
     srvos = "raw";
+    ucodenix = "raw";
   };
 
   settings = {
