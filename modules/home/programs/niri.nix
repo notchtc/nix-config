@@ -228,7 +228,7 @@
       };
 
     screenshot-path = "${config.xdg.userDirs.pictures}/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png";
-    xwayland-satellite.path = "${pkgs.xwayland-satellite-unstable}/bin/xwayland-satellite";
+    xwayland-satellite.path = "${pkgs.xwayland-satellite}/bin/xwayland-satellite";
 
     debug = {
       enable-overlay-planes = [ ];
