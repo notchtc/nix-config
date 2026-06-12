@@ -1,10 +1,9 @@
-{ osConfig, pkgs, ... }:
-{
+{ osConfig, pkgs, ... }: {
   programs.helix = {
     enable = true;
     defaultEditor = true;
 
-    extraPackages = builtins.attrValues { inherit (pkgs) markdown-oxide nixd nixfmt; };
+    extraPackages = builtins.attrValues { inherit (pkgs) markdown-oxide nixd; };
     settings = {
       theme = "base16_transparent";
       editor = {

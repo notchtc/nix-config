@@ -1,7 +1,6 @@
 { config, lib }:
 let
   pins = import ./npins { };
-  pkgs = import pins.nixpkgs { };
   none = lib.modules.when false { };
 
   loaders = {
@@ -31,8 +30,7 @@ in
     };
   }
   // builtins.mapAttrs (name: pin: {
-    src = if name == "nixpkgs" then pin else pin { inherit pkgs; };
-
+    src = pin;
     loader = loaders.${name} or none;
     settings = settings.${name} or none;
   }) pins;

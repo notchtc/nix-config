@@ -36,6 +36,8 @@
             jq
             moor
             npins
+            nixfmt
+            nixfmt-tree
             ripgrep
             statix
             ;
