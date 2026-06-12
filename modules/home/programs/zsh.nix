@@ -86,7 +86,11 @@ in
       precmd() { vcs_info }
       chpwd() { chpwd-osc7-pwd } 
 
-      PROMPT='%F{blue}%3~%f %(?.%F{green}λ.%F{red}λ)%f '
+      if [ -n "$IN_NIX_SHELL" ]; then
+        PROMPT='%F{blue}%3~%f %(?.%F{green} .%F{red} )%f '
+      else
+        PROMPT='%F{blue}%3~%f %(?.%F{green}λ.%F{red}λ)%f '
+      fi
       RPROMPT=' ''${vcs_info_msg_0_}'
 
       function zle-keymap-select () {
