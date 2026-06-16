@@ -16,8 +16,6 @@ in
   ];
 
   nix = {
-    package = pkgs.nix-monitored;
-
     nixPath = [ "/etc/nix/nixpkgs" ];
     registry.nixpkgs.flake = mkForce inputs.nixpkgs-flake.result;
 
@@ -38,12 +36,10 @@ in
       experimental-features = [
         "auto-allocate-uids"
         "cgroups"
-        "flakes"
-        "nix-command"
         "pipe-operator"
       ];
 
-      extra-deprecated-features = [
+      deprecated-features = [
         "broken-string-escape"
         "or-as-identifier"
       ];
