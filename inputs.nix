@@ -5,7 +5,6 @@ let
 
   loaders = {
     agenix = "raw";
-    home-manager = "raw";
     srvos = "raw";
     ucodenix = "raw";
   };
@@ -14,8 +13,9 @@ let
     nixpkgs.configuration.allowUnfree = true;
 
     autoaspm.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
-    dms.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
     dms-plugin-registry.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
+    hjem.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
+    hjem-rum.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
     niri.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
     nix-index-database.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
     nix-mineral.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;

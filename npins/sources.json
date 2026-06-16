@@ -27,19 +27,6 @@
       "url": "https://git.notthebe.ee/notthebee/AutoASPM/archive/11e921446423582836fb5b290e053fc7c6643efe.tar.gz",
       "hash": "sha256-ttfgUpC0C5XizuAD3lUE5fda5IeXvbedNcGtG2364IM="
     },
-    "dms": {
-      "type": "Git",
-      "repository": {
-        "type": "GitHub",
-        "owner": "AvengeMedia",
-        "repo": "DankMaterialShell"
-      },
-      "branch": "master",
-      "submodules": false,
-      "revision": "ddf943846fb437cb255d6de66e6acfe3a07dad2f",
-      "url": "https://github.com/AvengeMedia/DankMaterialShell/archive/ddf943846fb437cb255d6de66e6acfe3a07dad2f.tar.gz",
-      "hash": "sha256-X/znJZ18cNDjtecRRfIzxFyQmi/dafaFwDVITeC7CUc="
-    },
     "dms-plugin-registry": {
       "type": "Git",
       "repository": {
@@ -49,22 +36,35 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "3e0401f01c6b6562448e0b80d7518e4dca22aff1",
-      "url": "https://github.com/AvengeMedia/dms-plugin-registry/archive/3e0401f01c6b6562448e0b80d7518e4dca22aff1.tar.gz",
-      "hash": "sha256-9GYAvOxvB4QQq1Ma6WMc6wPqJTlUZqLyz1NotBPUVGc="
+      "revision": "46504c36544b88000a23c41b2cfe9e10dc7fde3c",
+      "url": "https://github.com/AvengeMedia/dms-plugin-registry/archive/46504c36544b88000a23c41b2cfe9e10dc7fde3c.tar.gz",
+      "hash": "sha256-0ZYx2LmBj9fvF3Y8gIlYhGaIvKOh5CQb9TwSXd4wINw="
     },
-    "home-manager": {
+    "hjem": {
       "type": "Git",
       "repository": {
         "type": "GitHub",
-        "owner": "nix-community",
-        "repo": "home-manager"
+        "owner": "feel-co",
+        "repo": "hjem"
       },
-      "branch": "master",
+      "branch": "main",
       "submodules": false,
-      "revision": "c03e4752899e55705dfa63979abd885c582a5c48",
-      "url": "https://github.com/nix-community/home-manager/archive/c03e4752899e55705dfa63979abd885c582a5c48.tar.gz",
-      "hash": "sha256-QOIRYSUFSq7L5mY3dZymaVhcnne3tPgoR9riB0WocjA="
+      "revision": "89d0beea9068903aeb9998f52b741c69d4e32aa1",
+      "url": "https://github.com/feel-co/hjem/archive/89d0beea9068903aeb9998f52b741c69d4e32aa1.tar.gz",
+      "hash": "sha256-5uEX8TEZ5kI+bnil/T2jtRlxiADcyeD9mX8gOwQIEVs="
+    },
+    "hjem-rum": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "snugnug",
+        "repo": "hjem-rum"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "e04efc81865f68f541471186090cc703d99bc62d",
+      "url": "https://github.com/snugnug/hjem-rum/archive/e04efc81865f68f541471186090cc703d99bc62d.tar.gz",
+      "hash": "sha256-L35xnhNcCJIHTkwmpey/sBFZMnPm2eD9Ha4NCwWuy68="
     },
     "nilla": {
       "type": "GitRelease",
@@ -120,9 +120,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "e5857dc58304b3d5bbac6340820f7d4450688538",
-      "url": "https://github.com/sodiboo/niri-flake/archive/e5857dc58304b3d5bbac6340820f7d4450688538.tar.gz",
-      "hash": "sha256-PXyfDFGyW+UYteu3uHJgp49sFHRU16iocf5K2ltqn3M="
+      "revision": "493ce1e33e72f86312584f331c8cf52b3432ec99",
+      "url": "https://github.com/sodiboo/niri-flake/archive/493ce1e33e72f86312584f331c8cf52b3432ec99.tar.gz",
+      "hash": "sha256-VKrApQ3WCkEe9D8DbaeFjGqLAh7zqYGYjbQYtY5ikxc="
     },
     "nix-cachyos-kernel": {
       "type": "Git",
@@ -133,9 +133,9 @@
       },
       "branch": "release",
       "submodules": false,
-      "revision": "4039d20f1495f2c521e7d12723a0c45348b118e8",
-      "url": "https://github.com/xddxdd/nix-cachyos-kernel/archive/4039d20f1495f2c521e7d12723a0c45348b118e8.tar.gz",
-      "hash": "sha256-gYE/0gtSedmA21UWRZ2DA+iXhySh1JGKOssuqejV7cQ="
+      "revision": "26da04e24aef2993ea256917be42d18f83ce8e8b",
+      "url": "https://github.com/xddxdd/nix-cachyos-kernel/archive/26da04e24aef2993ea256917be42d18f83ce8e8b.tar.gz",
+      "hash": "sha256-o0Y3TIykOACq7nwwoSzeQOhQhheI7P4x0PvHtUsoXPY="
     },
     "nix-index-database": {
       "type": "Git",
@@ -159,9 +159,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "fb55a6df134f43593fcc713496d24a9c8965932a",
-      "url": "https://github.com/cynicsketch/nix-mineral/archive/fb55a6df134f43593fcc713496d24a9c8965932a.tar.gz",
-      "hash": "sha256-cxV/7hfBPi1BW/ohQBVdnQa19F2T7wGW7ozdefB+xzA="
+      "revision": "13a3002cec0a92a28b07893dcbb51ea124c9039d",
+      "url": "https://github.com/cynicsketch/nix-mineral/archive/13a3002cec0a92a28b07893dcbb51ea124c9039d.tar.gz",
+      "hash": "sha256-pXkJT36QIZxQiEjiMT+Oo6ZLDWIu1g5cmkabq8v1628="
     },
     "nix-monitored": {
       "type": "Git",
@@ -181,21 +181,8 @@
       "name": "nixos-unstable",
       "artifact": "nixexprs.tar.xz",
       "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1014179.9ae611a455b9/nixexprs.tar.xz",
-      "hash": "sha256-d34lhgOet4IqYMnCxbIvwFBMOyTV6PT4TyNEOP0/ZhU="
-    },
-    "openmw-nix": {
-      "type": "Git",
-      "repository": {
-        "type": "Forgejo",
-        "server": "https://codeberg.org/",
-        "owner": "PopeRigby",
-        "repo": "openmw-nix"
-      },
-      "branch": "main",
-      "submodules": false,
-      "revision": "ea36c30c4d8ba36b5d49b91e5d7e0b5b3b48679b",
-      "url": "https://codeberg.org/PopeRigby/openmw-nix/archive/ea36c30c4d8ba36b5d49b91e5d7e0b5b3b48679b.tar.gz",
-      "hash": "sha256-QhlspPmNW72ocF8RWCShDzJE/6nm+ac5IEJgUbool2o="
+      "hash": "sha256-d34lhgOet4IqYMnCxbIvwFBMOyTV6PT4TyNEOP0/ZhU=",
+      "frozen": true
     },
     "run0-sudo-shim": {
       "type": "GitRelease",
@@ -222,9 +209,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "a6c6c08f54fd95f1bceb659585b39c9036e49be9",
-      "url": "https://github.com/nix-community/srvos/archive/a6c6c08f54fd95f1bceb659585b39c9036e49be9.tar.gz",
-      "hash": "sha256-z69k+zDeXK4suhGAeGRl3ra9m43e3q/e3+uXcL+R650="
+      "revision": "18ae1c654f60fb8dafb40c48fe25eb09f1aaddb2",
+      "url": "https://github.com/nix-community/srvos/archive/18ae1c654f60fb8dafb40c48fe25eb09f1aaddb2.tar.gz",
+      "hash": "sha256-Q5hp6+DYj23gMAvhLXBYNan9EwY9C+oxyU+M1TJDwgo="
     },
     "ucodenix": {
       "type": "Git",
@@ -235,9 +222,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "953f744811d7d97a17d41d2be618052f9984dfe5",
-      "url": "https://github.com/e-tho/ucodenix/archive/953f744811d7d97a17d41d2be618052f9984dfe5.tar.gz",
-      "hash": "sha256-Yg/JMMMnHL7tMJmc3mrnHeoC/RmxHioa1jmZZF+aOGk="
+      "revision": "5c9a1202884f7f455119f35df03c66f6a98ce5f9",
+      "url": "https://github.com/e-tho/ucodenix/archive/5c9a1202884f7f455119f35df03c66f6a98ce5f9.tar.gz",
+      "hash": "sha256-k126RCoXFrNy7nwhUq+Ogd4GX0mY4lSzOYyAyndvBys="
     }
   },
   "version": 8

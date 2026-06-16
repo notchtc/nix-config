@@ -7,6 +7,8 @@ nilla.create (
     includes = [
       ./hosts
       ./inputs.nix
+      ./modules
+
       "${pins.nilla-nixos}/modules/nixos.nix"
     ];
 
