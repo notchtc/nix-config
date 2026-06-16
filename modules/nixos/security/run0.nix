@@ -1,18 +1,11 @@
 { inputs, pkgs, ... }: {
-  imports = [ inputs.run0-sudo-shim.result.nixosModules.default ];
+  environment.systemPackages = [
+    inputs.run0-sudo-shim.result.packages.${pkgs.stdenv.hostPlatform.system}.default
+  ];
 
   security = {
+    polkit.enable = true;
+    sudo.enable = false;
     wrappers.su.enable = false;
-    run0-sudo-shim = {
-      enable = true;
-      package = pkgs.symlinkJoin {
-        name = "sudo";
-        paths = [ inputs.run0-sudo-shim.result.packages.${pkgs.stdenv.hostPlatform.system}.default ];
-        nativeBuildInputs = [ pkgs.makeWrapper ];
-        postBuild = ''
-          wrapProgram $out/bin/sudo --add-flags "--run0-extra-arg=--background="
-        '';
-      };
-    };
   };
 }
