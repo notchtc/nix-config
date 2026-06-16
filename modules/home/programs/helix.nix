@@ -1,4 +1,4 @@
-{ osConfig, pkgs, ... }: {
+{ pkgs, ... }: {
   programs.helix = {
     enable = true;
     defaultEditor = true;
@@ -59,12 +59,6 @@
           };
         }
       ];
-      language-server.nixd = {
-        config.nixd.options = {
-          nixos.expr = "(import ./nilla.nix).systems.nixos.${osConfig.networking.hostName}.result.options";
-          home-manager.expr = "(import ./nilla.nix).systems.nixos.${osConfig.networking.hostName}.result.options.home-manager.users.type.getSubOptions []";
-        };
-      };
     };
   };
 }
