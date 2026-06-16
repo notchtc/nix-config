@@ -1,14 +1,18 @@
-{ inputs, pkgs, ... }: {
+{
+  config,
+  inputs,
+  pkgs,
+  ...
+}:
+{
 
-  nixpkgs.overlays = [
-    (final: prev: {
-      nix-monitored =
-        inputs.nix-monitored.result.packages.${pkgs.stdenv.hostPlatform.system}.default.override
-          { nix = final.lixPackageSets.latest.lix; };
+  imports = [ inputs.nix-monitored.result.nixosModules.default ];
 
-      comma = prev.comma.override { nix = final.nix-monitored; };
-      nix-direnv = prev.nix-direnv.override { nix = final.nix-monitored; };
-      nixos-rebuild = prev.nixos-rebuild.override { nix = final.nix-monitored; };
-    })
-  ];
+  nix.monitored = {
+    enable = true;
+    package = pkgs.nix-monitored.override { nix = pkgs.lixPackageSets.latest.lix; };
+    notify = false;
+  };
+
+  nixpkgs.overlays = [ (_: prev: { comma = prev.comma.override { nix = config.nix.package; }; }) ];
 }
