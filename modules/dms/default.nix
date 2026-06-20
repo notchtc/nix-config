@@ -28,7 +28,21 @@
         inherit (lib.generators) toJSON;
       in
       {
-        xdg.config.files."DankMaterialShell/settings.json".source = ./settings.json;
+        xdg.config.files = {
+          "DankMaterialShell/settings.json".source = ./settings.json;
+          "DankMaterialShell/plugin_settings.json" = {
+            generator = toJSON { };
+            value = {
+              dankBatteryAlerts.enabled = true;
+              emojiLauncher = {
+                enabled = true;
+                trigger = "em";
+              };
+              nixPackageRunner.enabled = true;
+              niriWindows.enabled = true;
+            };
+          };
+        };
 
         xdg.state.files."DankMaterialShell/session.json" = {
           generator = toJSON { };
