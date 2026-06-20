@@ -16,7 +16,6 @@ let
     dms-plugin-registry.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
     hjem.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
     hjem-rum.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
-    niri.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
     nix-index-database.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
     nix-mineral.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
     openmw-nix.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;

@@ -111,19 +111,6 @@
       "url": "https://github.com/nilla-nix/nixos/archive/52c623ae89fe77de669a981c7e92b1504cd99eac.tar.gz",
       "hash": "sha256-7tadYU5GzOUAxo8XLC18+dk0Rj+QSORUO5cFdpqfSy4="
     },
-    "niri": {
-      "type": "Git",
-      "repository": {
-        "type": "GitHub",
-        "owner": "sodiboo",
-        "repo": "niri-flake"
-      },
-      "branch": "main",
-      "submodules": false,
-      "revision": "493ce1e33e72f86312584f331c8cf52b3432ec99",
-      "url": "https://github.com/sodiboo/niri-flake/archive/493ce1e33e72f86312584f331c8cf52b3432ec99.tar.gz",
-      "hash": "sha256-VKrApQ3WCkEe9D8DbaeFjGqLAh7zqYGYjbQYtY5ikxc="
-    },
     "nix-cachyos-kernel": {
       "type": "Git",
       "repository": {
