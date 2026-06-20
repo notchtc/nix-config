@@ -45,8 +45,8 @@
               zstd
               ;
 
+            inherit (config.programs.ssh) package;
             inherit (pkgs.stdenv.cc) libc;
-            ssh = config.programs.ssh.package;
           };
 
         systemPackages =

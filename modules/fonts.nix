@@ -17,7 +17,7 @@
             source-serif
             ;
 
-          nerd-fonts = pkgs.nerd-fonts.symbols-only;
+          inherit (pkgs.nerd-fonts) symbols-only;
         };
 
         fontconfig = {
