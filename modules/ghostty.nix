@@ -9,7 +9,7 @@
 
       settings = {
         cursor-style = "bar";
-        font-family = "Atkinson Hyperlegible Mono";
+        font-family = "monospace";
         theme = "Gruvbox Dark Hard";
         window-padding-x = 3;
         window-padding-y = 3;

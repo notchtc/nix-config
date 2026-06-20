@@ -65,7 +65,7 @@
           settings = {
             cursor-theme-name = "phinger-cursors-dark";
             cursor-theme-size = 32;
-            font-name = "Atkinson Hyperlegible Next 11";
+            font-name = "sans-serif 11";
             icon-theme-name = "Papirus-Dark";
             theme-name = "adw-gtk3-dark";
           };
