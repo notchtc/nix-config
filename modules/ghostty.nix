@@ -3,6 +3,7 @@
     { config, lib, ... }:
     let
       inherit (lib.meta) getExe;
+      inherit (lib.modules) mkForce;
     in
     {
       xdg.config.files."xdg-terminals.list".text = ''
@@ -30,7 +31,7 @@
 
       systemd.services."app-com.mitchellh.ghostty" = {
         description = "Ghostty";
-        path = [ "/run/current-system/sw" "/etc/profiles/per-user/${config.user}"];
+        path = mkForce [ ];
         after = [
           "dbus.socket"
           "graphical-session.target"
