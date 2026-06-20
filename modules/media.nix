@@ -101,8 +101,8 @@
     music =
       { lib, pkgs, ... }:
       let
-        inherit (lib) attrValues;
-        inherit (lib.attrsets) genAttrs;
+        inherit (lib.attrsets) attrValues genAttrs;
+        inherit (lib.meta) getExe';
         inherit (lib.trivial) const flip;
       in
       {
@@ -119,6 +119,14 @@
               "audio/wav"
               "audio-x-ms-wma"
             ];
+
+        systemd.services.nicotine-plus = {
+          description = "Nicotine";
+          after = [ "graphical-session.target" ];
+          wantedBy = [ "graphical-session.target" ];
+
+          serviceConfig.ExecStart = "${getExe' pkgs.nicotine-plus "nicotine"} --hidden";
+        };
       };
   };
 }
