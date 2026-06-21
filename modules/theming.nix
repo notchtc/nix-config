@@ -78,6 +78,15 @@
             theme-name = "adw-gtk3-dark";
           };
         };
+
+        xdg.data.files = {
+          "icons/phinger-cursors-dark".source = "${pkgs.phinger-cursors}/share/icons/phinger-cursors-dark";
+          "icons/default/index.theme".text = ''
+            [Icon Theme]
+            Name=Default
+            Inherits=phinger-cursors-dark
+          '';
+        };
       };
   };
 }
