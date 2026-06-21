@@ -5,6 +5,7 @@
       inherit (lib.attrsets) optionalAttrs;
     in
     {
+      console.enable = false;
       services.kmscon = {
         enable = true;
         config = {
