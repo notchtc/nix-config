@@ -1,6 +1,6 @@
 {
   config.modules = {
-    nixos.gaming = { pkgs, ... }: {
+    nixos.gaming = { modules, pkgs, ... }: {
       boot.kernel.sysctl."kernel.split_lock_mitigate" = 0;
 
       environment = {
@@ -38,6 +38,8 @@
 
       hardware.steam-hardware.enable = true;
       services.udev.packages = [ pkgs.game-devices-udev-rules ];
+
+      hjem.extraModules = [ modules.home.gaming ];
     };
 
     home.gaming =

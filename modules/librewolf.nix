@@ -1,7 +1,12 @@
 {
   config.modules = {
     nixos.librewolf =
-      { lib, pkgs, ... }:
+      {
+        lib,
+        modules,
+        pkgs,
+        ...
+      }:
       let
         inherit (builtins) listToAttrs toJSON;
         inherit (lib.attrsets) nameValuePair;
@@ -186,6 +191,8 @@
             };
           };
         };
+
+        hjem.extraModules = [ modules.home.librewolf ];
       };
 
     home.librewolf =

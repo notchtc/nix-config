@@ -1,26 +1,28 @@
 {
   config.modules = {
-    nixos.bash = {
-      programs.bash.shellInit = ''
-        export HISTFILE="$XDG_STATE_HOME"/bash/history
-      '';
-    };
-
-    nixos.zsh = { pkgs, ... }: {
+    nixos.zsh = { modules, pkgs, ... }: {
       users.defaultUserShell = pkgs.zsh;
       environment = {
         shellInit = "umask 0077";
         shells = [ pkgs.zsh ];
       };
 
-      programs.zsh = {
-        enable = true;
-        enableCompletion = false;
+      programs = {
+        zsh = {
+          enable = true;
+          enableCompletion = false;
 
-        #        shellInit = ''
-        #          export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
-        #        '';
+          #        shellInit = ''
+          #          export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+          #        '';
+        };
+
+        bash.shellInit = ''
+          export HISTFILE="$XDG_STATE_HOME"/bash/history
+        '';
       };
+
+      hjem.extraModules = [ modules.home.zsh ];
     };
 
     home.zsh =

@@ -95,5 +95,7 @@
               };
             };
       };
+
+      programs.nano.enable = false;
     };
 }

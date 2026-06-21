@@ -4,6 +4,7 @@
       {
         config,
         lib,
+        modules,
         pkgs,
         ...
       }:
@@ -36,6 +37,8 @@
 
         systemd.user.services.niri-flake-polkit.enable = mkForce false;
         security.pam.services.greetd.enableGnomeKeyring = true;
+
+        hjem.extraModules = [ modules.home.niri ];
       };
 
     home.niri =
@@ -58,7 +61,6 @@
           config = ''
             include "dms/alttab.kdl"
             include "dms/colors.kdl"
-            include "dms/cursor.kdl"
             include "dms/layout.kdl"
             include "dms/outputs.kdl"
             include "dms/wpblur.kdl"
@@ -93,6 +95,8 @@
               center-focused-column "never"
             }
             cursor {
+              xcursor-theme "${config.environment.sessionVariables.XCURSOR_THEME}"
+              xcursor-size ${toString config.environment.sessionVariables.XCURSOR_SIZE}
               hide-after-inactive-ms 5000
             }
             hotkey-overlay { skip-at-startup; }

@@ -12,9 +12,16 @@
       inherit (lib) genAttrs optionalString;
     in
     {
-      boot.supportedFilesystems = [ "zfs" ];
+      boot = {
+        bcache.enable = false;
+        supportedFilesystems = [ "zfs" ];
+      };
 
-      services.zfs.autoSnapshot.flags = "-kpu";
+      services = {
+        fstrim.enable = false;
+        lvm.enable = false;
+        zfs.autoSnapshot.flags = "-kpu";
+      };
 
       systemd.services.zpool-trim = {
         unitConfig.ConditionACPower = true;

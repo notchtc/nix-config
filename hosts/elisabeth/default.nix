@@ -1,6 +1,11 @@
-{ lib, pkgs, ... }: {
+{ lib, pkgs, ... }:
+let
+  inherit (lib.modules) mkAfter mkForce;
+in
+{
   boot = {
-    kernelPackages = lib.mkForce pkgs.cachyosKernels.linuxPackages-cachyos-latest-lto-zen4;
+    kernelPackages = mkForce pkgs.cachyosKernels.linuxPackages-cachyos-latest-lto-zen4;
+
     kernel.sysfs.bus.platform.drivers.ideapad_acpi."VPC2004:00".conservation_mode = 1;
 
     initrd.availableKernelModules = [
@@ -10,12 +15,15 @@
     ];
   };
 
-  hardware.nvidia.prime = {
-    amdgpuBusId = "PCI:5:0:0";
-    nvidiaBusId = "PCI:1:0:0";
+  hardware = {
+    igpuPresent = true;
+    nvidia.prime = {
+      amdgpuBusId = "PCI:5:0:0";
+      nvidiaBusId = "PCI:1:0:0";
+    };
   };
 
-  hjem.users.chtc.rum.desktops.niri.config = lib.mkAfter ''
+  hjem.users.chtc.rum.desktops.niri.config = mkAfter ''
     output "eDP-1" {
       mode "1920x1080@144.003000"
       variable-refresh-rate on-demand=false

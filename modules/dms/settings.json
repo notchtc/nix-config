@@ -249,9 +249,7 @@
     "niri": {
       "hideAfterInactiveMs": 0,
       "hideWhenTyping": false
-    },
-    "size": 24,
-    "theme": "phinger-cursors-dark"
+    }
   },
   "launcherLogoMode": "compositor",
   "launcherLogoCustomPath": "",

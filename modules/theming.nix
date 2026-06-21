@@ -4,6 +4,7 @@
       {
         inputs,
         lib,
+        modules,
         pkgs,
         ...
       }:
@@ -47,6 +48,8 @@
             };
           };
         };
+
+        hjem.extraModules = [ modules.home.theming ];
       };
 
     home.theming =
@@ -57,6 +60,11 @@
       {
         packages = attrValues { inherit (pkgs) adw-gtk3 papirus-icon-theme phinger-cursors; };
 
+        environment.sessionVariables = {
+          XCURSOR_SIZE = 24;
+          XCURSOR_THEME = "phinger-cursors-dark";
+        };
+
         rum.misc.gtk = {
           enable = true;
 
@@ -64,7 +72,7 @@
 
           settings = {
             cursor-theme-name = "phinger-cursors-dark";
-            cursor-theme-size = 32;
+            cursor-theme-size = 24;
             font-name = "sans-serif 11";
             icon-theme-name = "Papirus-Dark";
             theme-name = "adw-gtk3-dark";

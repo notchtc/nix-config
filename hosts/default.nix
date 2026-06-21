@@ -1,10 +1,9 @@
 { config }:
 let
-  inherit (config.modules) nixos;
-  inherit (config.modules) home;
+  inherit (config.modules) home nixos;
+
   base = [
     nixos.autoaspm
-    nixos.bash
     nixos.boot
     nixos.documentation
     nixos.home
@@ -22,7 +21,6 @@ let
     nixos.ntpd-rs
     nixos.oom
     nixos.packages
-    nixos.remove-unused
     nixos.run0
     nixos.scx
     nixos.secrets
@@ -38,7 +36,6 @@ let
     home.helix
     home.jujutsu
     home.use-xdg-dirs
-    home.zsh
   ];
 
   desktop = base ++ [
@@ -58,19 +55,12 @@ let
   ];
 
   desktop-home = base-home ++ [
-    home.arianna
     home.discord
-    home.dms
     home.dolphin
     home.ghostty
-    home.gwenview
-    home.librewolf
-    home.mpv
-    home.music
-    home.niri
+    home.media
     home.qbittorrent
     home.telegram
-    home.theming
   ];
 in
 {
@@ -82,15 +72,14 @@ in
         nixos.cpu-amd
         nixos.gaming
         nixos.gpu-nvidia
-        nixos.gpu-nvidia_igpu
         nixos.laptop
 
-        { hjem.extraModules = desktop-home ++ [ home.gaming ]; }
+        { hjem.extraModules = desktop-home; }
 
         ./elisabeth
       ];
 
-      args = { inherit (config) inputs; };
+      args = { inherit (config) inputs modules; };
     };
   };
 }

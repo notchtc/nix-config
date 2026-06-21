@@ -11,6 +11,7 @@
 
         nftables.enable = true;
         useDHCP = false;
+        useNetworkd = true;
 
         nameservers = [
           "149.112.112.112#dns.quad9.net"

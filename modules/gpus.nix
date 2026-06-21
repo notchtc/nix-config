@@ -17,26 +17,33 @@
       };
     };
 
-    gpu-nvidia = {
-      services.xserver.videoDrivers = [ "nvidia" ];
+    gpu-nvidia =
+      { config, lib, ... }:
+      let
+        inherit (lib.attrsets) optionalAttrs;
+        inherit (lib.options) mkEnableOption;
+      in
+      {
+        options.hardware.igpuPresent = mkEnableOption "Enable when using iGPU besides NVIDIA";
 
-      hardware.nvidia = {
-        branch = "bleeding_edge";
-        nvidiaSettings = false;
-        open = true;
-        powerManagement.enable = true;
-      };
-    };
+        config = {
+          services.xserver.videoDrivers = [ "nvidia" ];
 
-    gpu-nvidia_igpu = {
-      hardware.nvidia = {
-        videoAcceleration = false;
-        powerManagement.finegrained = true;
-        prime.offload = {
-          enable = true;
-          enableOffloadCmd = true;
+          hardware.nvidia = {
+            branch = "bleeding_edge";
+            nvidiaSettings = false;
+            open = true;
+            powerManagement.enable = true;
+          }
+          // optionalAttrs config.hardware.igpuPresent {
+            videoAcceleration = false;
+            powerManagement.finegrained = true;
+            prime.offload = {
+              enable = true;
+              enableOffloadCmd = true;
+            };
+          };
         };
       };
-    };
   };
 }

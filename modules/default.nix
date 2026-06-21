@@ -36,11 +36,9 @@
     ./packages.nix
     ./plymouth.nix
     ./qbittorrent.nix
-    ./remove-unused.nix
     ./run0.nix
     ./scx.nix
     ./secrets.nix
-    ./shell.nix
     ./ssh.nix
     ./storage.nix
     ./theming.nix
@@ -49,5 +47,6 @@
     ./video.nix
     ./virtualisation.nix
     ./xdg-portals.nix
+    ./zsh.nix
   ];
 }

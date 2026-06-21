@@ -1,6 +1,6 @@
 {
   config.modules = {
-    nixos.dms = { inputs, ... }: {
+    nixos.dms = { inputs, modules, ... }: {
       imports = [ inputs.dms-plugin-registry.result.nixosModules.default ];
 
       programs.dms-shell = {
@@ -20,6 +20,8 @@
           emojiLauncher.enable = true;
         };
       };
+
+      hjem.extraModules = [ modules.home.dms ];
     };
 
     home.dms =
