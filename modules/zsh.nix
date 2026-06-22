@@ -54,6 +54,10 @@
               zmodload zsh/complist
               compinit -d "${zcompdump}"
 
+              HISTSIZE=100000
+              SAVEHIST=100000
+              HISTFILE="${config.xdg.state.directory}/zsh/history"
+
               setopt autocd
               setopt globdots
               setopt hist_expire_dups_first
