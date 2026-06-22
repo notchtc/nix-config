@@ -7,13 +7,14 @@ My configuration for NixOS (and other software) using [nilla](https://github.com
 
 ## Resources
 Other configurations from where I learned and copied:
-- [Misterio77/nix-starter-configs](https://github.com/Misterio77/nix-starter-configs)
-- [javacafe01/nix-config](https://github.com/javacafe01/nix-config)
-- [moni-dz/nix-config](https://github.com/moni-dz/nix-config)
-- [fufexan/dotfiles](https://github.com/fufexan/dotfiles)
-- [viperML/dotfiles](https://github.com/viperML/dotfiles)
-- [surfaceflinger/notflake](https://github.com/surfaceflinger/notflake)
 - [FreshlyBakedCake/PacketMix](https://github.com/FreshlyBakedCake/PacketMix)
-- [jakehamilton/config](https://github.com/jakehamilton/config)
-- [NotAShelf/nyx](https://github.com/NotAShelf/nyx)
+- [fufexan/dotfiles](https://github.com/fufexan/dotfiles)
 - [isabelroses/dotfiles](https://github.com/isabelroses/dotfiles)
+- [jakehamilton/config](https://github.com/jakehamilton/config)
+- [javacafe01/nix-config](https://github.com/javacafe01/nix-config)
+- [Misterio77/nix-starter-configs](https://github.com/Misterio77/nix-starter-configs)
+- [moni-dz/nix-config](https://github.com/moni-dz/nix-config)
+- [NotAShelf/nyx](https://github.com/NotAShelf/nyx)
+- [RGBCube/ncc](https://github.com/RGBCube/ncc)
+- [surfaceflinger/notflake](https://github.com/surfaceflinger/notflake)
+- [viperML/dotfiles](https://github.com/viperML/dotfiles)
