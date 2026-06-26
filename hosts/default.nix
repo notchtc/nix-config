@@ -1,67 +1,76 @@
 { config }:
 let
+  inherit (builtins) attrValues;
   inherit (config.modules) home nixos;
 
-  base = [
-    nixos.autoaspm
-    nixos.boot
-    nixos.documentation
-    nixos.home
-    nixos.journald
-    nixos.kernel
-    nixos.keyd
-    nixos.ld
-    nixos.locale
-    nixos.logrotate
-    nixos.mineral
-    nixos.modern
-    nixos.moor
-    nixos.networking
-    nixos.nix
-    nixos.ntpd-rs
-    nixos.oom
-    nixos.packages
-    nixos.run0
-    nixos.scx
-    nixos.secrets
-    nixos.ssh
-    nixos.tmp
-    nixos.user-chtc
-    nixos.zfs
-    nixos.zram
-    nixos.zsh
-  ];
+  base =
+    attrValues {
+      inherit (nixos)
+        autoaspm
+        boot
+        documentation
+        home
+        journald
+        kernel
+        keyd
+        ld
+        locale
+        logrotate
+        mineral
+        modern
+        moor
+        networking
+        nix
+        ntpd-rs
+        oom
+        packages
+        run0
+        scx
+        secrets
+        ssh
+        systemd
+        tmp
+        user
+        zfs
+        zram
+        zsh
+        ;
+    }
+    ++ [ { hjem.extraModules = attrValues { inherit (home) helix jujutsu; }; } ];
 
-  base-home = [
-    home.helix
-    home.jujutsu
-    home.use-xdg-dirs
-  ];
+  desktop =
+    base
+    ++ attrValues {
+      inherit (nixos)
+        audio
+        bluetooth
+        dms
+        dolphin
+        fonts
+        kmscon
+        librewolf
+        niri
+        plymouth
+        theming
+        video
+        xdg
+        ;
 
-  desktop = base ++ [
-    "${config.inputs.srvos.result}/nixos/desktop"
-
-    nixos.audio
-    nixos.bluetooth
-    nixos.dms
-    nixos.fonts
-    nixos.kmscon
-    nixos.librewolf
-    nixos.niri
-    nixos.plymouth
-    nixos.theming
-    nixos.video
-    nixos.xdg-portals
-  ];
-
-  desktop-home = base-home ++ [
-    home.discord
-    home.dolphin
-    home.ghostty
-    home.media
-    home.qbittorrent
-    home.telegram
-  ];
+      desktop = "${config.inputs.srvos.result}/nixos/desktop";
+    }
+    ++ [
+      {
+        hjem.extraModules = attrValues {
+          inherit (home)
+            discord
+            ghostty
+            media
+            qbittorrent
+            telegram
+            ;
+        };
+      }
+    ];
 in
 {
   config.systems.nixos = {
@@ -73,8 +82,6 @@ in
         nixos.gaming
         nixos.gpu-nvidia
         nixos.laptop
-
-        { hjem.extraModules = desktop-home; }
 
         ./elisabeth
       ];

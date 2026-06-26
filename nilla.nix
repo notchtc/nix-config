@@ -1,16 +1,23 @@
 let
   pins = import ./npins;
   nilla = import pins.nilla;
+  nlib = import "${pins.nixpkgs}/lib";
 in
 nilla.create (
-  { config }: {
+  { config, lib }:
+  let
+    inherit (builtins) filter;
+    inherit (lib.strings) hasSuffix;
+    inherit (nlib.filesystem) listFilesRecursive;
+  in
+  {
     includes = [
       ./hosts
       ./inputs.nix
-      ./modules
 
       "${pins.nilla-nixos}/modules/nixos.nix"
-    ];
+    ]
+    ++ filter (hasSuffix ".nix") (listFilesRecursive ./modules);
 
     config.shells.default = {
       systems = [ "x86_64-linux" ];
@@ -27,7 +34,6 @@ nilla.create (
           nixfmt-tree,
           npins,
           openssh,
-          pkgs,
           statix,
           stdenvNoCC,
           ...
@@ -48,10 +54,6 @@ nilla.create (
             openssh
             statix
           ];
-
-          shellHook = ''
-            export NIX_PATH="nixpkgs=${builtins.storePath pkgs.path}"
-          '';
         };
     };
   }
