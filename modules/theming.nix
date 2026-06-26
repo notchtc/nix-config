@@ -55,7 +55,7 @@
     home.theming =
       { lib, pkgs, ... }:
       let
-        inherit (lib) attrValues;
+        inherit (lib.attrsets) attrValues;
       in
       {
         packages = attrValues { inherit (pkgs) adw-gtk3 papirus-icon-theme phinger-cursors; };
