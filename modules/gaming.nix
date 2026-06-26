@@ -32,6 +32,7 @@
           protontricks.enable = true;
           remotePlay.openFirewall = true;
 
+          extraCompatPackages = [ pkgs.proton-ge-bin ];
           extraPackages = [ pkgs.steamtinkerlaunch ];
         };
       };
@@ -43,15 +44,16 @@
     };
 
     home.gaming =
-      { lib, ... }:
+      { lib, pkgs, ... }:
       let
         inherit (lib.attrsets) genAttrs;
         inherit (lib.trivial) const flip;
       in
       {
-        xdg.mime-apps.default-applications = flip genAttrs (const "steam.desktop") [
-          "x-scheme-handler/steam"
-        ];
+        xdg = {
+          config.files."heroic/tools/proton/GE-Proton".source = pkgs.proton-ge-bin.steamcompattool;
+          mime-apps.default-applications = flip genAttrs (const "steam.desktop") [ "x-scheme-handler/steam" ];
+        };
       };
   };
 }
