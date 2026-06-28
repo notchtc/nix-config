@@ -101,6 +101,8 @@
                 ripgrep
                 statix
                 ;
+
+              inherit (pkgs.ghostty) terminfo;
             }
             // optionalAttrs config.xdg.portal.enable {
               inherit (pkgs)
