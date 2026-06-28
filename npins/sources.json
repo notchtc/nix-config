@@ -36,9 +36,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "9af84d794e50bf4d2b25f9d8ea038dcc16d556e0",
-      "url": "https://github.com/AvengeMedia/dms-plugin-registry/archive/9af84d794e50bf4d2b25f9d8ea038dcc16d556e0.tar.gz",
-      "hash": "sha256-dUaW/ivqSHTuYvtuEg4aPBunaHgg203Mj3GIEYbqDuw="
+      "revision": "8ddac02c0a45338a1e40b2bd0d78db870819e5dc",
+      "url": "https://github.com/AvengeMedia/dms-plugin-registry/archive/8ddac02c0a45338a1e40b2bd0d78db870819e5dc.tar.gz",
+      "hash": "sha256-SEN4hz8Ch6VxH6rIscdFZLmWPDcsNDaPAAVHCqI4A4s="
     },
     "hjem": {
       "type": "Git",
@@ -146,8 +146,8 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "6f66c28dc1bac05c6904851b652a52824589bb04",
-      "url": "https://github.com/cynicsketch/nix-mineral/archive/6f66c28dc1bac05c6904851b652a52824589bb04.tar.gz",
+      "revision": "4003c5fe2afcfcc5568d26db4a70efd82204c2fa",
+      "url": "https://github.com/cynicsketch/nix-mineral/archive/4003c5fe2afcfcc5568d26db4a70efd82204c2fa.tar.gz",
       "hash": "sha256-C3BMh2ESh9zSjoVvTRdyISmu0MD0CboUfrBBH4W+wUg="
     },
     "nix-monitored": {
@@ -192,9 +192,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "008035f9f2be9cd727b396af79feedd6a9aa1bad",
-      "url": "https://github.com/nix-community/srvos/archive/008035f9f2be9cd727b396af79feedd6a9aa1bad.tar.gz",
-      "hash": "sha256-JBLzL+O9uXG3L937TVq4HFJvgbPb3Lsqkmv0QYS1kmI="
+      "revision": "9f3040c7e16880d80c1dffcfd6eb86346f3af467",
+      "url": "https://github.com/nix-community/srvos/archive/9f3040c7e16880d80c1dffcfd6eb86346f3af467.tar.gz",
+      "hash": "sha256-t4OVI0LJQZCtYV03nKQeEvWcIxiUN1NInmqMmJ/fI48="
     },
     "ucodenix": {
       "type": "Git",
