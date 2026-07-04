@@ -25,11 +25,11 @@
           settings = {
             default_session = {
               user = "greeter";
-              command = "${getExe pkgs.tuigreet} -i -t -c ${getExe' pkgs.niri "niri-session"}";
+              command = "${getExe pkgs.tuigreet} -i -t -c '${getExe' pkgs.niri "niri-session"} -l'";
             };
 
             initial_session = mkIf (config.services.displayManager.autoLogin.user != null) {
-              command = getExe' pkgs.niri "niri-session";
+              command = "${getExe' pkgs.niri "niri-session"} -l";
               user = "${config.services.displayManager.autoLogin.user}";
             };
           };
