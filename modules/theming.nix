@@ -15,7 +15,7 @@
         imports = [ inputs.qtengine.result.nixosModules.default ];
 
         environment.systemPackages = attrValues {
-          inherit (pkgs.kdePackages) breeze;
+          inherit (pkgs.kdePackages) breeze breeze-icons;
           inherit (pkgs.kdePackages.breeze) qt5;
         };
 
@@ -25,7 +25,7 @@
           config = {
             theme = {
               colorScheme = "${pkgs.kdePackages.breeze}/share/color-schemes/BreezeDark.colors";
-              iconTheme = "Papirus-Dark";
+              iconTheme = "breeze-dark";
               style = "breeze";
 
               font = {
@@ -58,7 +58,7 @@
         inherit (lib.attrsets) attrValues;
       in
       {
-        packages = attrValues { inherit (pkgs) adw-gtk3 papirus-icon-theme phinger-cursors; };
+        packages = attrValues { inherit (pkgs) adw-gtk3 phinger-cursors; };
 
         environment.sessionVariables = {
           XCURSOR_SIZE = 24;
@@ -74,7 +74,7 @@
             cursor-theme-name = "phinger-cursors-dark";
             cursor-theme-size = 24;
             font-name = "sans-serif 11";
-            icon-theme-name = "Papirus-Dark";
+            icon-theme-name = "breeze-dark";
             theme-name = "adw-gtk3-dark";
           };
         };
