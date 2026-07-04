@@ -1,18 +1,9 @@
 {
   config.modules = {
-    nixos.xdg = { modules, pkgs, ... }: {
+    nixos.xdg = { modules, ... }: {
       xdg = {
         terminal-exec.enable = true;
-        portal = {
-          enable = true;
-          extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-          xdgOpenUsePortal = true;
-
-          config.niri.default = [
-            "gnome"
-            "gtk"
-          ];
-        };
+        portal.xdgOpenUsePortal = true;
       };
 
       hjem.extraModules = [ modules.home.xdg ];
@@ -33,7 +24,7 @@
       };
 
       xdg.config.files = {
-        "wgetrc".text = ''
+        wgetrc.text = ''
           hsts-file="${config.xdg.cache.directory}/wget-hsts"
         '';
 

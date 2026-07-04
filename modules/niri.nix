@@ -10,12 +10,12 @@
       }:
       let
         inherit (lib.meta) getExe getExe';
-        inherit (lib.modules) mkForce mkIf;
+        inherit (lib.modules) mkIf;
       in
       {
         programs.niri = {
           enable = true;
-          package = pkgs.niri;
+          useNautilus = false;
         };
 
         services.greetd = {
@@ -35,7 +35,6 @@
           };
         };
 
-        systemd.user.services.niri-flake-polkit.enable = mkForce false;
         security.pam.services.greetd.enableGnomeKeyring = true;
 
         hjem.extraModules = [ modules.home.niri ];

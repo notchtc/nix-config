@@ -9,15 +9,26 @@
       }:
       let
         inherit (lib.attrsets) attrValues;
+        inherit (lib.modules) mkForce;
       in
       {
-        services.udisks2.enable = true;
+        services = {
+          gvfs.enable = true;
+          udisks2.enable = true;
+        };
+
+        xdg.portal = {
+          extraPortals = [ pkgs.kdePackages.xdg-desktop-portal-kde ];
+          config.niri."org.freedesktop.impl.portal.FileChooser" = mkForce [ "kde" ];
+        };
+
         environment = {
           systemPackages = attrValues {
             inherit (pkgs.kdePackages)
               ark
               dolphin
               dolphin-plugins
+              ffmpegthumbs
               kio
               kio-extras
               ;
