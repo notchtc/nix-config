@@ -202,30 +202,23 @@
         inherit (lib.trivial) const flip;
       in
       {
-        xdg.mime-apps =
-          let
-            defaults = flip genAttrs (const "librewolf.desktop") [
-              "application/json"
-              "application/pdf"
-              "application/x-extension-htm"
-              "application/x-extension-html"
-              "application/x-extension-shtml"
-              "application/x-extension-xht"
-              "application/x-extension-xhtml"
-              "application/xhtml+xml"
-              "text/html"
-              "x-scheme-handler/about"
-              "x-scheme-handler/ftp"
-              "x-scheme-handler/http"
-              "x-scheme-handler/https"
-              "x-scheme-handler/unknown"
-              "x-www-browser"
-            ];
-          in
-          {
-            added-associations = defaults;
-            default-applications = defaults;
-          };
+        xdg.mime-apps.default-applications = flip genAttrs (const "librewolf.desktop") [
+          "application/json"
+          "application/pdf"
+          "application/x-extension-htm"
+          "application/x-extension-html"
+          "application/x-extension-shtml"
+          "application/x-extension-xht"
+          "application/x-extension-xhtml"
+          "application/xhtml+xml"
+          "text/html"
+          "x-scheme-handler/about"
+          "x-scheme-handler/ftp"
+          "x-scheme-handler/http"
+          "x-scheme-handler/https"
+          "x-scheme-handler/unknown"
+          "x-www-browser"
+        ];
       };
   };
 }

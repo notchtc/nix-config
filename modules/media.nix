@@ -77,43 +77,36 @@
         serviceConfig.ExecStart = "${getExe' pkgs.nicotine-plus "nicotine"} --hidden";
       };
 
-      xdg.mime-apps =
-        let
-          defaults =
-            flip genAttrs (const "org.kde.gwenview.desktop") [
-              "image/avif"
-              "image/bmp"
-              "image/gif"
-              "image/heic"
-              "image/jpeg"
-              "image/png"
-              "image/svg+xml"
-              "image/tiff"
-              "image/webp"
-              "image/x-icon"
-            ]
-            // flip genAttrs (const "mpv.desktop") [
-              "video/mp4"
-              "video/ogg"
-              "video/quicktime"
-              "video/webm"
-              "video/x-matroska"
-              "video/x-msvideo"
-              "video/x-ms-wmv"
-            ]
-            // flip genAttrs (const "org.strawberrymusicplayer.strawberry.desktop") [
-              "audio/aac"
-              "audio/flac"
-              "audio/mpeg"
-              "audio/ogg"
-              "audio/opus"
-              "audio/wav"
-              "audio-x-ms-wma"
-            ];
-        in
-        {
-          added-associations = defaults;
-          default-applications = defaults;
-        };
+      xdg.mime-apps.default-applications =
+        flip genAttrs (const "org.kde.gwenview.desktop") [
+          "image/avif"
+          "image/bmp"
+          "image/gif"
+          "image/heic"
+          "image/jpeg"
+          "image/png"
+          "image/svg+xml"
+          "image/tiff"
+          "image/webp"
+          "image/x-icon"
+        ]
+        // flip genAttrs (const "mpv.desktop") [
+          "video/mp4"
+          "video/ogg"
+          "video/quicktime"
+          "video/webm"
+          "video/x-matroska"
+          "video/x-msvideo"
+          "video/x-ms-wmv"
+        ]
+        // flip genAttrs (const "org.strawberrymusicplayer.strawberry.desktop") [
+          "audio/aac"
+          "audio/flac"
+          "audio/mpeg"
+          "audio/ogg"
+          "audio/opus"
+          "audio/wav"
+          "audio-x-ms-wma"
+        ];
     };
 }

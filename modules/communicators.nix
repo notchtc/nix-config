@@ -52,14 +52,9 @@
             };
           };
 
-          mime-apps =
-            let
-              defaults = flip genAttrs (const "vesktop.desktop") [ "x-scheme-handler/discord" ];
-            in
-            {
-              added-associations = defaults;
-              default-applications = defaults;
-            };
+          mime-apps.default-applications = flip genAttrs (const "vesktop.desktop") [
+            "x-scheme-handler/discord"
+          ];
         };
       };
 
@@ -72,14 +67,9 @@
       {
         packages = [ (pkgs.telegram-desktop.override { withWebkit = false; }) ];
 
-        xdg.mime-apps =
-          let
-            defaults = flip genAttrs (const "org.telegram.desktop.desktop") [ "x-scheme-handler/tg" ];
-          in
-          {
-            added-associations = defaults;
-            default-applications = defaults;
-          };
+        xdg.mime-apps.default-applications = flip genAttrs (const "org.telegram.desktop.desktop") [
+          "x-scheme-handler/tg"
+        ];
       };
   };
 }
