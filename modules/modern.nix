@@ -17,6 +17,7 @@
       };
 
       security = {
+        account-utils.enable = true;
         polkit.enablePkexecWrapper = false;
 
         wrappers = {
@@ -31,4 +32,6 @@
         passwordFilesLocation = "/var/lib/nixos";
       };
     };
+
+  systemd.settings.Manager.NoNewPrivileges = true;
 }
