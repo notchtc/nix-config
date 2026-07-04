@@ -36,7 +36,7 @@ let
         zsh
         ;
     }
-    ++ [ { hjem.extraModules = attrValues { inherit (home) helix jujutsu; }; } ];
+    ++ [ { hjem.extraModules = attrValues { inherit (home) direnv helix jujutsu; }; } ];
 
   desktop =
     base
