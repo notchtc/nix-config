@@ -31,7 +31,7 @@
         enable = true;
         passwordFilesLocation = "/var/lib/nixos";
       };
-    };
 
-  systemd.settings.Manager.NoNewPrivileges = true;
+      systemd.settings.Manager.NoNewPrivileges = true;
+    };
 }

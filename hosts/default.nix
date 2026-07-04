@@ -34,7 +34,6 @@ let
         tmp
         user
         zfs
-        zram
         ;
     }
     ++ [ { hjem.extraModules = attrValues { inherit (home) direnv helix jujutsu; }; } ];
