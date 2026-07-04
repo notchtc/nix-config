@@ -33,15 +33,19 @@
                   )
 
                   [
-                    "sponsorBlocker@ajay.app"
+                    "{1be309c5-3e4f-4b99-927d-bb500eb4fa88}" # Augmented Steam
+                    "nixpkgs-pr-tracker@tahayassine.me"
                     "{a4c4eda4-fb84-4a84-b4a1-f7c1cbf2a1ad}" # Refined GitHub
+                    "sponsorBlocker@ajay.app"
                     "V3-eov3cv@hotmail.com"
                     "{aecec67f-0d10-4fa7-b7c7-609a2db280cf}" # Violentmonkey
-                    "{1be309c5-3e4f-4b99-927d-bb500eb4fa88}" # Augmented Steam
                   ];
 
             "3rdparty".Extensions."uBlock0@raymondhill.net".adminSettings = toJSON {
-              userSettings.advancedUserEnabled = true;
+              userSettings = {
+                advancedUserEnabled = true;
+                userFiltersTrusted = true;
+              };
 
               selectedFilterLists = [
                 "adguard-cookies"
@@ -83,53 +87,65 @@
                 * * 3p-frame block
                 * * 3p-script block
                 * ajax.googleapis.com * noop
+                * awswaf.com * noop
                 * cdnjs.cloudflare.com * noop
                 * challenges.cloudflare.com * noop
+                * cloudfront.net * noop
                 * discourse-cdn.com * noop
+                * disqus.com * noop
+                * c.disquscdn.com * noop
+                * static-2v.gitbook.com * noop
                 * googleusercontent.com * noop
                 * gstatic.com * noop
                 * hcaptcha.com * noop
                 * js.hcaptcha.com * noop
                 * code.jquery.com * noop
-                * jsdelivr.map.fastly.net * noop
                 * cdn.jsdelivr.net * noop
+                * umap.openstreetmap.fr * noop
                 * recaptcha.net * noop
+                * cdn.shopify.com * noop
+                * checkout.pci.shopifyinc.com * noop
+                * stripe.com * noop
                 * unpkg.com * noop
-                aliexpress.com alicdn.com * noop
-                aliexpress.com assets.aliexpress-media.com * noop
-                pl.aliexpress.com alicdn.com * noop
-                pl.aliexpress.com assets.aliexpress-media.com * noop
+                * www.youtube-nocookie.com * noop
                 allegro.pl assets.allegrostatic.com * noop
                 allegro.pl captcha-delivery.com * noop
                 allegrolokalnie.pl lokalnie-prod-assets.storage.googleapis.com * noop
-                www.allmusic.com t.sni.global.fastly.net * noop
-                bandcamp.com bcbits.com * noop
+                www.amazon.com m.media-amazon.com * noop
+                bandcamp.com s4.bcbits.com * noop
                 bandcamp.com dualstack.n.sni.global.fastly.net * noop
-                bandcamp.com core.spreedly.com * noop
+                bsky.app bsky-web.b-cdn.net * noop
+                codepen.io cdpn.io * noop
                 www.discogs.com catalog-assets.discogs.com.cdn.cloudflare.net * noop
+                www.discogs.com footer.discogs.com.cdn.cloudflare.net * noop
                 www.discogs.com st.discogs.com.cdn.cloudflare.net * noop
                 dropbox.com cfl.dropboxstatic.com * noop
                 dropbox.com dropboxusercontent.com * noop
-                home-manager-options.extranix.com maxcdn.bootstrapcdn.com * noop
-                facebook.com meta-api.arkoselabs.com * noop
-                facebook.com static.xx.fbcdn.net * noop
-                facebook.com www.fbsbx.com * noop
+                www.facebook.com static.xx.fbcdn.net * noop
+                genius.com medialab.map.fastly.net * noop
                 github.com github.githubassets.com * noop
+                imgur.com ipv4.imgur.map.fastly.net * noop
                 www.instagram.com static.cdninstagram.com * noop
                 forum.jrockone.com jrockone.b-cdn.net * noop
+                www.last.fm jsdelivr.map.fastly.net * noop
                 www.last.fm cdn.jsdelivr.net.cdn.cloudflare.net * noop
-                www.last.fm js-agent.newrelic.com * noop
-                rateyourmusic.com e.snmc.io * noop
+                letterboxd.com s.ltrbxd.com * noop
+                rateyourmusic.com cdn.sonemic.net * noop
                 www.reddit.com dualstack.reddit.map.fastly.net * noop
                 www.reddit.com www.redditstatic.com * noop
+                rutracker.org static.rutracker.cc * noop
+                rutracker.org rutrk.org * noop
+                sourceforge.net a.fsdn.com.cdn.cloudflare.net * noop
+                sourceforge.net a.fsdn.com * noop
                 accounts.spotify.com accounts.scdn.co * noop
                 challenge.spotify.com challenge.spotifycdn.com * noop
-                open.spotify.com spotifycdn.com * noop
-                open.spotify.com spotifycdn.map.fastly.net * noop
-                steamcommunity.com community.fastly.steamstatic.com * noop
-                store.steampowered.com store.fastly.steamstatic.com * noop
+                open.spotify.com open.spotifycdn.com * noop
+                open.spotify.com tls130rtt.spotifycdn.map.fastly.net * noop
+                store.steampowered.com store.akamai.steamstatic.com * noop
+                x.com abs.twimg.com.cdn.cloudflare.net * noop
                 x.com abs.twimg.com * noop
                 x.com twimg.twitter.map.fastly.net * noop
+                www.youtube.com google.com * noop
               '';
 
               userFilters = ''
@@ -139,12 +155,10 @@
                 facebook.com##body > div[class*="__fb-light-mode"]
 
                 ||tumblr.com/*/async-login-wall$script,1p
-
-                quillbot.com##.css-ekeie0.MuiDialog-scrollPaper.MuiDialog-container
-                quillbot.com##.css-919eu4.MuiBackdrop-root
-                quillbot.com##.css-yslrk6.MuiDialog-root.MuiModal-root
               '';
             };
+
+            Permissions.Notifications.BlockNewRequests = true;
           };
 
           preferences = {
@@ -159,18 +173,17 @@
             "browser.toolbars.bookmarks.visibility" = "never";
             "findbar.highlightAll" = true;
             "general.autoScroll" = true;
+            "general.smoothScroll" = true;
             "middlemouse.paste" = false;
             "sidebar.main.tools" = "history,bookmarks";
             "sidebar.verticalTabs" = true;
             "sidebar.visibility" = "expand-on-hover";
             "toolkit.tabbox.switchByScrolling" = true;
-            "ui.prefersReducedMotion" = 1;
 
             "gfx.webrender.all" = true;
             "layers.acceleration.force-enabled" = true;
             "media.ffmpeg.vaapi.enabled" = true;
             "media.hardware-video-decoding.force-enabled" = true;
-            "svg.context-properties.content.enabled" = true;
 
             "browser.uiCustomization.state" = toJSON {
               placements = {
