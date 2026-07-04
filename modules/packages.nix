@@ -43,7 +43,6 @@
             inherit (pkgs)
               acl
               attr
-              bashInteractive
               bzip2
               cpio
               curl
@@ -90,6 +89,7 @@
                 _7zz-rar
                 bat
                 bottom
+                dash
                 deadnix
                 dust
                 eza

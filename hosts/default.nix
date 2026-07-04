@@ -27,13 +27,13 @@ let
         run0
         scx
         secrets
+        shell
         ssh
         systemd
         tmp
         user
         zfs
         zram
-        zsh
         ;
     }
     ++ [ { hjem.extraModules = attrValues { inherit (home) direnv helix jujutsu; }; } ];

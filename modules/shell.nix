@@ -1,34 +1,40 @@
 {
   config.modules = {
-    nixos.zsh = { modules, pkgs, ... }: {
-      users.defaultUserShell = pkgs.zsh;
-      environment = {
-        shellInit = "umask 0077";
-        shells = [ pkgs.zsh ];
-      };
+    nixos.shell =
+      {
+        lib,
+        modules,
+        pkgs,
+        ...
+      }:
+      let
+        inherit (lib.meta) getExe;
+      in
+      {
+        users.defaultUserShell = pkgs.zsh;
 
-      programs = {
-        zsh = {
+        environment = {
+          binsh = getExe pkgs.dash;
+          shellInit = "umask 0077";
+          shells = [ pkgs.zsh ];
+        };
+
+        programs.zsh = {
           enable = true;
           enableCompletion = false;
 
-          #        shellInit = ''
-          #          export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
-          #        '';
+          #shellInit = ''
+          #  export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+          #'';
         };
 
-        bash.shellInit = ''
-          export HISTFILE="$XDG_STATE_HOME"/bash/history
-        '';
+        hjem.extraModules = [ modules.home.shell ];
       };
 
-      hjem.extraModules = [ modules.home.zsh ];
-    };
-
-    home.zsh =
+    home.shell =
       { config, pkgs, ... }:
       let
-        zcompdump = config.xdg.state.directory;
+        zcompdump = "${config.xdg.state.directory}/zcompdump";
       in
       {
         rum.programs = {
