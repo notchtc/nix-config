@@ -11,6 +11,7 @@
       inherit (lib.lists) genList;
       inherit (lib.modules) mkForce;
       inherit (lib.strings) concatStringsSep stringLength;
+      inherit (pkgs) writeScriptBin symlinkJoin;
 
       coreutils-full-name =
         "coreuutils-full"
@@ -103,6 +104,11 @@
                 ;
 
               inherit (pkgs.ghostty) terminfo;
+
+              sh = writeScriptBin "sh" ''
+                #!/bin/sh
+                exec dash "$@"
+              '';
             }
             // optionalAttrs config.xdg.portal.enable {
               inherit (pkgs)
@@ -126,49 +132,49 @@
       system.replaceDependencies.replacements = [
         {
           oldDependency = pkgs.coreutils-full;
-          newDependency = pkgs.symlinkJoin {
+          newDependency = symlinkJoin {
             name = coreutils-full-name;
             paths = [ pkgs.uutils-coreutils-noprefix ];
           };
         }
         {
           oldDependency = pkgs.coreutils;
-          newDependency = pkgs.symlinkJoin {
+          newDependency = symlinkJoin {
             name = coreutils-name;
             paths = [ pkgs.uutils-coreutils-noprefix ];
           };
         }
         {
           oldDependency = pkgs.diffutils;
-          newDependency = pkgs.symlinkJoin {
+          newDependency = symlinkJoin {
             name = diffutils-name;
             paths = [ pkgs.uutils-diffutils ];
           };
         }
         {
           oldDependency = pkgs.findutils;
-          newDependency = pkgs.symlinkJoin {
+          newDependency = symlinkJoin {
             name = findutils-name;
             paths = [ pkgs.uutils-findutils ];
           };
         }
         {
           oldDependency = pkgs.hostname-debian;
-          newDependency = pkgs.symlinkJoin {
+          newDependency = symlinkJoin {
             name = hostname-name;
             paths = [ pkgs.uutils-hostname ];
           };
         }
         {
           oldDependency = pkgs.procps;
-          newDependency = pkgs.symlinkJoin {
+          newDependency = symlinkJoin {
             name = procps-name;
             paths = [ pkgs.uutils-procps ];
           };
         }
         {
           oldDependency = pkgs.gnused;
-          newDependency = pkgs.symlinkJoin {
+          newDependency = symlinkJoin {
             name = sed-name;
             paths = [ pkgs.uutils-sed ];
           };
