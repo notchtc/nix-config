@@ -106,11 +106,12 @@
             }
             // optionalAttrs config.xdg.portal.enable {
               inherit (pkgs)
+                feather
                 ffmpeg
                 gimp
                 keepassxc
                 pwvucontrol
-                renoise
+                sparrow
                 tutanota-desktop
                 yt-dlp
                 ;
