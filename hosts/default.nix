@@ -16,14 +16,15 @@ let
         ld
         locale
         logrotate
+        memory
         mineral
         modern
         moor
         networking
         nix
         ntpd-rs
-        oom
         packages
+        remove-unneeded
         run0
         scx
         secrets

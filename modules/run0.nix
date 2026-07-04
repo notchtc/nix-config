@@ -7,12 +7,6 @@
       };
 
       sudo.enable = false;
-
-      polkit.enablePkexecWrapper = false;
-      wrappers = {
-        su.enable = false;
-        sg.enable = false;
-      };
     };
   };
 }

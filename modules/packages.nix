@@ -123,8 +123,6 @@
             };
       };
 
-      programs.nano.enable = false;
-
       system.replaceDependencies.replacements = [
         {
           oldDependency = pkgs.coreutils-full;

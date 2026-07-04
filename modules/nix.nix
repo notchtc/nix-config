@@ -71,17 +71,17 @@
         };
       };
 
-      environment = {
-        variables.NIXPKGS_CONFIG = mkForce "";
-        etc."nix/nixpkgs".source = storePath pkgs.path;
-      };
+      programs.nix-index-database.comma.enable = true;
 
       system = {
         disableInstallerTools = true;
         tools.nixos-rebuild.enable = true;
       };
 
-      programs.nix-index-database.comma.enable = true;
+      environment = {
+        variables.NIXPKGS_CONFIG = mkForce "";
+        etc."nix/nixpkgs".source = storePath pkgs.path;
+      };
 
       systemd = {
         services.nix-gc.unitConfig.ConditionACPower = true;
