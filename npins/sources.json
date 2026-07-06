@@ -164,7 +164,7 @@
         "owner": "noctalia-dev",
         "repo": "noctalia"
       },
-      "branch": "cachix",
+      "branch": "main",
       "submodules": false,
       "revision": "7a30ffa420b46a02ceab71aee948648c2c87c7c6",
       "url": "https://github.com/noctalia-dev/noctalia/archive/7a30ffa420b46a02ceab71aee948648c2c87c7c6.tar.gz",

@@ -17,6 +17,7 @@ let
     hjem-rum.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
     nix-index-database.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
     nix-mineral.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
+    noctalia.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
     openmw-nix.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
     qtengine.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
     run0-sudo-shim.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;

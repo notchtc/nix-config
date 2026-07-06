@@ -44,6 +44,7 @@
           keep-going = true;
           log-format = "multiline-with-logs";
           max-jobs = "auto";
+          pure-eval = true;
           sandbox = true;
           use-cgroups = true;
           use-xdg-base-directories = true;
