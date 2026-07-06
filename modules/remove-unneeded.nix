@@ -18,6 +18,6 @@
         less.enable = mkForce false; # we use moor
       };
 
-      services.speechd.enable = false;
+      services.speechd.enable = false; # enabled by default, just takes up space
     };
 }

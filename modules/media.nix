@@ -4,7 +4,6 @@
     let
       inherit (lib.attrsets) attrValues genAttrs;
       inherit (lib.meta) getExe';
-      inherit (lib.modules) mkForce;
       inherit (lib.trivial) const flip;
     in
     {
@@ -70,7 +69,6 @@
 
       systemd.services.nicotine-plus = {
         description = "Nicotine";
-        path = mkForce [ ];
         after = [ "graphical-session.target" ];
         wantedBy = [ "graphical-session.target" ];
 
