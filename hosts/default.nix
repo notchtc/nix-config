@@ -7,6 +7,7 @@ let
     attrValues {
       inherit (nixos)
         autoaspm
+        bat
         boot
         documentation
         home
@@ -36,7 +37,19 @@ let
         zfs
         ;
     }
-    ++ [ { hjem.extraModules = attrValues { inherit (home) direnv helix jujutsu; }; } ];
+    ++ [
+      {
+        hjem.extraModules = attrValues {
+          inherit (home)
+            bottom
+            direnv
+            helix
+            jujutsu
+            zoxide
+            ;
+        };
+      }
+    ];
 
   desktop =
     base
@@ -64,6 +77,7 @@ let
           inherit (home)
             discord
             ghostty
+            keepassxc
             media
             qbittorrent
             telegram

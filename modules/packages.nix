@@ -88,8 +88,6 @@
 
               inherit (pkgs)
                 _7zz-rar
-                bat
-                bottom
                 dash
                 deadnix
                 dust
@@ -115,7 +113,6 @@
                 feather
                 ffmpeg
                 gimp
-                keepassxc
                 pwvucontrol
                 sparrow
                 tutanota-desktop
