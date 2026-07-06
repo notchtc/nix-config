@@ -34,6 +34,7 @@
 
                   [
                     "{1be309c5-3e4f-4b99-927d-bb500eb4fa88}" # Augmented Steam
+                    "keepassxc-browser@keepassxc.org"
                     "nixpkgs-pr-tracker@tahayassine.me"
                     "{a4c4eda4-fb84-4a84-b4a1-f7c1cbf2a1ad}" # Refined GitHub
                     "sponsorBlocker@ajay.app"
