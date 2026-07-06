@@ -94,9 +94,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "52c623ae89fe77de669a981c7e92b1504cd99eac",
-      "url": "https://github.com/nilla-nix/nixos/archive/52c623ae89fe77de669a981c7e92b1504cd99eac.tar.gz",
-      "hash": "sha256-7tadYU5GzOUAxo8XLC18+dk0Rj+QSORUO5cFdpqfSy4="
+      "revision": "0493aa7f024075567736fe81d2aa9b0c6fd8d73e",
+      "url": "https://github.com/nilla-nix/nixos/archive/0493aa7f024075567736fe81d2aa9b0c6fd8d73e.tar.gz",
+      "hash": "sha256-RXQm4yBDDkBfiXAZSVznpeMuBdTCGCYJBg5PSAa8x3c="
     },
     "nix-cachyos-kernel": {
       "type": "Git",
@@ -166,9 +166,9 @@
       },
       "branch": "cachix",
       "submodules": false,
-      "revision": "ce82f1b68af0cc751e0c36da6427ea53c4753130",
-      "url": "https://github.com/noctalia-dev/noctalia/archive/ce82f1b68af0cc751e0c36da6427ea53c4753130.tar.gz",
-      "hash": "sha256-Cw5qzq7mZOw2K+1Cp422SX7IP5gJSb6ubyi5CJ39/ig="
+      "revision": "7a30ffa420b46a02ceab71aee948648c2c87c7c6",
+      "url": "https://github.com/noctalia-dev/noctalia/archive/7a30ffa420b46a02ceab71aee948648c2c87c7c6.tar.gz",
+      "hash": "sha256-fdRJMFj7yAwST3ZEK6JtuqimYPHnt7I18oOfeyC8f0I="
     },
     "qtengine": {
       "type": "Git",
