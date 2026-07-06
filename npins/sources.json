@@ -27,19 +27,6 @@
       "url": "https://git.notthebe.ee/notthebee/AutoASPM/archive/11e921446423582836fb5b290e053fc7c6643efe.tar.gz",
       "hash": "sha256-ttfgUpC0C5XizuAD3lUE5fda5IeXvbedNcGtG2364IM="
     },
-    "dms-plugin-registry": {
-      "type": "Git",
-      "repository": {
-        "type": "GitHub",
-        "owner": "AvengeMedia",
-        "repo": "dms-plugin-registry"
-      },
-      "branch": "master",
-      "submodules": false,
-      "revision": "e6b906a8af3845312ae792055d718ad501f51483",
-      "url": "https://github.com/AvengeMedia/dms-plugin-registry/archive/e6b906a8af3845312ae792055d718ad501f51483.tar.gz",
-      "hash": "sha256-O+km4+080E2M3O3jsgYzxuwSGZiXEdUl3OVPYHNks10="
-    },
     "hjem": {
       "type": "Git",
       "repository": {
@@ -169,6 +156,19 @@
       "artifact": "nixexprs.tar.xz",
       "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1027867.d407951447dc/nixexprs.tar.xz",
       "hash": "sha256-FGQ8TfSm9WviNE/fQAWsKs+y4GkX8fU4EScewpw54Y8="
+    },
+    "noctalia": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "noctalia-dev",
+        "repo": "noctalia"
+      },
+      "branch": "cachix",
+      "submodules": false,
+      "revision": "ce82f1b68af0cc751e0c36da6427ea53c4753130",
+      "url": "https://github.com/noctalia-dev/noctalia/archive/ce82f1b68af0cc751e0c36da6427ea53c4753130.tar.gz",
+      "hash": "sha256-Cw5qzq7mZOw2K+1Cp422SX7IP5gJSb6ubyi5CJ39/ig="
     },
     "qtengine": {
       "type": "Git",

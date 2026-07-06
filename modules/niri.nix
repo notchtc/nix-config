@@ -50,20 +50,12 @@
       }:
       let
         inherit (lib.meta) getExe;
-        inherit (lib.modules) mkForce;
       in
       {
         rum.desktops.niri = {
           enable = true;
-          package = mkForce null;
 
           config = ''
-            include "dms/alttab.kdl"
-            include "dms/colors.kdl"
-            include "dms/layout.kdl"
-            include "dms/outputs.kdl"
-            include "dms/wpblur.kdl"
-
             input {
               keyboard {
                 xkb {
@@ -81,35 +73,78 @@
                 natural-scroll
               }
             }
-            screenshot-path "${config.directory}/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
-            prefer-no-csd
+
             layout {
+              gaps 4
+              default-column-width
+              center-focused-column "never"
+
+              border {
+                off
+              }
+
+              focus-ring {
+                width 2
+                active-color "#3daee9"
+                inactive-color "#232627"
+                urgent-color "#ed1515"
+              }
+
               struts {
                 left 4
                 right 4
                 top 0
                 bottom 0
               }
-              default-column-width
-              center-focused-column "never"
             }
+
+            recent-windows {
+              highlight {
+                active-color "#3daee9"
+                urgent-color "#ed1515"
+
+                corner-radius 8
+              }
+            }
+
             cursor {
               xcursor-theme "${config.environment.sessionVariables.XCURSOR_THEME}"
               xcursor-size ${toString config.environment.sessionVariables.XCURSOR_SIZE}
               hide-after-inactive-ms 5000
             }
+
+            screenshot-path "${config.directory}/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+            prefer-no-csd
+
             hotkey-overlay { skip-at-startup; }
+
+            window-rule {
+              draw-border-with-background false
+              clip-to-geometry true
+              geometry-corner-radius 8
+            }
+
             window-rule {
               match app-id="^org.keepassxc.KeePassXC$"
               block-out-from "screencast"
             }
+
             window-rule {
               match app-id="firefox$" title="^Picture-in-Picture$"
               match app-id="librewolf$" title="^Picture-in-Picture$"
               match app-id="^org.telegram.desktop$" title="^Media viewer$"
               open-floating true
             }
+
+            window-rule {
+              match app-id="dev.noctalia.Noctalia"
+              open-floating true
+              default-column-width { fixed 1080; }
+              default-window-height { fixed 920; }
+            }
+
             xwayland-satellite { path "${getExe pkgs.xwayland-satellite}"; }
+
             debug {
                 enable-overlay-planes
                 honor-xdg-activation-with-invalid-serial
@@ -127,85 +162,73 @@
             };
             "Mod+Space" = {
               spawn = [
-                "dms"
-                "ipc"
-                "spotlight"
-                "toggle"
+                "noctalia"
+                "msg"
+                "panel-toggle"
+                "launcher"
               ];
               parameters.hotkey-overlay-title = "Toggle launcher";
             };
 
             "XF86AudioRaiseVolume" = {
               spawn = [
-                "dms"
-                "ipc"
-                "audio"
-                "increment"
-                "5"
+                "noctalia"
+                "msg"
+                "volume-up"
               ];
               parameters.allow-when-locked = true;
             };
 
             "XF86AudioLowerVolume" = {
               spawn = [
-                "dms"
-                "ipc"
-                "audio"
-                "decrement"
-                "5"
+                "noctalia"
+                "msg"
+                "volume-down"
               ];
               parameters.allow-when-locked = true;
             };
 
             "XF86AudioMute" = {
               spawn = [
-                "dms"
-                "ipc"
-                "audio"
-                "mute"
+                "noctalia"
+                "msg"
+                "volume-mute"
               ];
               parameters.allow-when-locked = true;
             };
 
             "XF86AudioMicMute" = {
               spawn = [
-                "dms"
-                "ipc"
-                "audio"
-                "micmute"
+                "noctalia"
+                "msg"
+                "mic-mute"
               ];
               parameters.allow-when-locked = true;
             };
 
             "XF86MonBrightnessUp" = {
               spawn = [
-                "dms"
-                "ipc"
-                "brightness"
-                "increment"
-                "5"
-                ""
+                "noctalia"
+                "msg"
+                "brightness-up"
               ];
               parameters.allow-when-locked = true;
             };
 
             "XF86MonBrightnessDown" = {
               spawn = [
-                "dms"
-                "ipc"
-                "brightness"
-                "decrement"
-                "5"
-                ""
+                "noctalia"
+                "msg"
+                "brightness-down"
               ];
               parameters.allow-when-locked = true;
             };
 
             "XF86AudioPrev" = {
               spawn = [
-                "dms"
-                "ipc"
-                "mpris"
+                "noctalia"
+                "msg"
+                "media"
                 "previous"
               ];
               parameters.allow-when-locked = true;
@@ -213,9 +236,9 @@
 
             "XF86AudioNext" = {
               spawn = [
-                "dms"
-                "ipc"
-                "mpris"
+                "noctalia"
+                "msg"
+                "media"
                 "next"
               ];
               parameters.allow-when-locked = true;
@@ -223,10 +246,10 @@
 
             "XF86AudioPlay" = {
               spawn = [
-                "dms"
-                "ipc"
-                "mpris"
-                "playPause"
+                "noctalia"
+                "msg"
+                "media"
+                "toggle"
               ];
               parameters.allow-when-locked = true;
             };

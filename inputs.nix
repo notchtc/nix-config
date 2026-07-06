@@ -13,7 +13,6 @@ let
     nixpkgs.configuration.allowUnfree = true;
 
     autoaspm.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
-    dms-plugin-registry.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
     hjem.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
     hjem-rum.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
     nix-index-database.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;

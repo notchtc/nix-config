@@ -4,7 +4,10 @@
 
     hjem = {
       clobberByDefault = true;
-      extraModules = [ inputs.hjem-rum.result.hjemModules.hjem-rum ];
+      extraModules = [
+        inputs.hjem-rum.result.hjemModules.hjem-rum
+        inputs.noctalia.result.hjemModules.default
+      ];
     };
   };
 }

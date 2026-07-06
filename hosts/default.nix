@@ -57,7 +57,6 @@ let
       inherit (nixos)
         audio
         bluetooth
-        dms
         dolphin
         fonts
         kmscon
@@ -79,6 +78,7 @@ let
             ghostty
             keepassxc
             media
+            noctalia
             qbittorrent
             telegram
             ;
