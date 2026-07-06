@@ -36,9 +36,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "0cd752bbf6550c53926fee5f2f301828d4847097",
-      "url": "https://github.com/AvengeMedia/dms-plugin-registry/archive/0cd752bbf6550c53926fee5f2f301828d4847097.tar.gz",
-      "hash": "sha256-koldAEI5lE97dQA6GD2/ZqZrpAVXkNy1ojq0YSBwObg="
+      "revision": "e6b906a8af3845312ae792055d718ad501f51483",
+      "url": "https://github.com/AvengeMedia/dms-plugin-registry/archive/e6b906a8af3845312ae792055d718ad501f51483.tar.gz",
+      "hash": "sha256-O+km4+080E2M3O3jsgYzxuwSGZiXEdUl3OVPYHNks10="
     },
     "hjem": {
       "type": "Git",
@@ -120,9 +120,9 @@
       },
       "branch": "release",
       "submodules": false,
-      "revision": "3a4f4055db5f96ce696b5704c996d5bffbcda58d",
-      "url": "https://github.com/xddxdd/nix-cachyos-kernel/archive/3a4f4055db5f96ce696b5704c996d5bffbcda58d.tar.gz",
-      "hash": "sha256-fQ4+88WbgRkQYCMF37GYNuthHojlYhvfIAKJpSynVyk="
+      "revision": "cf393892e55698ed5ac49377a24476d87bd880d4",
+      "url": "https://github.com/xddxdd/nix-cachyos-kernel/archive/cf393892e55698ed5ac49377a24476d87bd880d4.tar.gz",
+      "hash": "sha256-7+9RDZQxflIV5AuRqxIh+ZK+GrFUgngAzo5wPyhxBP4="
     },
     "nix-index-database": {
       "type": "Git",
@@ -133,9 +133,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "f8ed6cdcb1fd28a6ab7b61f4467a4f67fe2d9074",
-      "url": "https://github.com/nix-community/nix-index-database/archive/f8ed6cdcb1fd28a6ab7b61f4467a4f67fe2d9074.tar.gz",
-      "hash": "sha256-gaOvvY/lL1eWoSmSRO17pWry8R49AuPMrF4nzu47K5o="
+      "revision": "fab14c7b63499d57cb6673d5690168c3ec42b99a",
+      "url": "https://github.com/nix-community/nix-index-database/archive/fab14c7b63499d57cb6673d5690168c3ec42b99a.tar.gz",
+      "hash": "sha256-jzisD+3wWZPC4QvAsKtYguiGsmlH2SN3Mjx5LWd68Ok="
     },
     "nix-mineral": {
       "type": "Git",
@@ -146,9 +146,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "e93e88feb772966e4dfd7b272ecb205f5ee95e42",
-      "url": "https://github.com/cynicsketch/nix-mineral/archive/e93e88feb772966e4dfd7b272ecb205f5ee95e42.tar.gz",
-      "hash": "sha256-wO2m90smweqtPTsLLp+JFUoSbo59Q4yMxv2gLf1ZaA8="
+      "revision": "3393a517a85993fa843d3f28eccf81faade82a96",
+      "url": "https://github.com/cynicsketch/nix-mineral/archive/3393a517a85993fa843d3f28eccf81faade82a96.tar.gz",
+      "hash": "sha256-/nIA82c6GX01Q7HKOCr6LHLzht4daKUK05x0azNeQt0="
     },
     "nix-monitored": {
       "type": "Git",
@@ -167,8 +167,8 @@
       "type": "Channel",
       "name": "nixos-unstable",
       "artifact": "nixexprs.tar.xz",
-      "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1026231.65179426c83b/nixexprs.tar.xz",
-      "hash": "sha256-l57y2CK9dTSChgb6Edg7kkXu5DA4rucVbNFoQHUBjmw="
+      "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1027867.d407951447dc/nixexprs.tar.xz",
+      "hash": "sha256-FGQ8TfSm9WviNE/fQAWsKs+y4GkX8fU4EScewpw54Y8="
     },
     "qtengine": {
       "type": "Git",
