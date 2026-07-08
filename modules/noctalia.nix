@@ -19,6 +19,7 @@
             "network"
             "bluetooth"
             "volume"
+            "brightness"
             "battery"
             "spacer"
             "control-center"
@@ -29,7 +30,7 @@
           margin_ends = 0;
           position = "left";
           radius = 0;
-          reverse_space = false;
+          reserve_space = false;
           show_on_workspace_switch = false;
           thickness = 40;
           widget_spacing = 12;
@@ -85,7 +86,7 @@
           control-center.custom_image = "${config.programs.noctalia.package}/share/noctalia/assets/images/distros/nixos.svg";
           media.hide_when_no_media = true;
           network.show_label = false;
-          notifications.hide_when_unread = true;
+          notifications.hide_when_no_unread = true;
           privacy.hide_inactive = true;
           spacer.type = "spacer";
           volume.show_label = true;
