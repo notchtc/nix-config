@@ -4,7 +4,7 @@
       enable = true;
 
       settings = {
-        pager = "moor -no-line-numbers";
+        pager = "'moor -no-linenumbers'";
         theme = "gruvbox-dark";
       };
     };
