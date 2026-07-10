@@ -24,7 +24,7 @@ in
   };
 
   hjem.users.chtc.rum.desktops.niri.config = mkAfter ''
-    output "eDP-1" {
+    output "eDP-2" {
       mode "1920x1080@144.003000"
       variable-refresh-rate on-demand=false
     }

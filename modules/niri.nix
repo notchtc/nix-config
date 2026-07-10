@@ -146,8 +146,9 @@
             xwayland-satellite { path "${getExe pkgs.xwayland-satellite}"; }
 
             debug {
-                enable-overlay-planes
-                honor-xdg-activation-with-invalid-serial
+              enable-overlay-planes
+              honor-xdg-activation-with-invalid-serial
+              ignore-drm-device "/dev/dri/renderD129"
             }
           '';
 
