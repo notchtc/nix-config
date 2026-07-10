@@ -63,7 +63,6 @@ let
         librewolf
         niri
         plymouth
-        theming
         video
         xdg
         ;
@@ -81,6 +80,7 @@ let
             noctalia
             qbittorrent
             telegram
+            theming
             ;
         };
       }
