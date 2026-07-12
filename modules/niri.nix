@@ -376,6 +376,8 @@
 
             "Mod+Shift+P".action = "power-off-monitors";
           };
+
+          spawn-at-startup = [ [ "noctalia" ] ];
         };
       };
   };

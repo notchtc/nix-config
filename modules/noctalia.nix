@@ -2,7 +2,6 @@
   config.modules.home.noctalia = { config, ... }: {
     programs.noctalia = {
       enable = true;
-      systemd.enable = true;
 
       settings = {
         bar.default = {
@@ -64,11 +63,6 @@
           };
         };
 
-        shell = {
-          launch_apps_as_systemd_services = true;
-          polkit_agent = true;
-        };
-
         theme = {
           community_palette = "Breeze";
           mode = "dark";
@@ -95,6 +89,7 @@
         desktop_widgets.enabled = false;
         location.auto_locate = true;
         nightlight.enabled = true;
+        shell.polkit_agent = true;
         wallpaper.default.path = ./wallpaper.jpg;
       };
     };
