@@ -53,6 +53,20 @@
       "url": "https://github.com/snugnug/hjem-rum/archive/64e395fe298cd25279c6086c23ae53636e7dbf1f.tar.gz",
       "hash": "sha256-oIIP2d7qELHfumkhHuofn7tryoAcuBwtYt0mDSyHF4s="
     },
+    "include-tree": {
+      "type": "Git",
+      "repository": {
+        "type": "Forgejo",
+        "server": "https://codeberg.org/",
+        "owner": "scumlick",
+        "repo": "include-tree"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "4c1f73f3131f088b84b17c114b0bf65c90e35859289f8426fa7f5f248b1d206c",
+      "url": "https://codeberg.org/scumlick/include-tree/archive/4c1f73f3131f088b84b17c114b0bf65c90e35859289f8426fa7f5f248b1d206c.tar.gz",
+      "hash": "sha256-W4/GLu6dwaaKHNqR5QisIDvqK/f6318+ZXVXx0zrn9Y="
+    },
     "nilla": {
       "type": "GitRelease",
       "repository": {

@@ -1,7 +1,7 @@
-{ config, lib }:
+{ config }:
 let
   pins = import ./npins { };
-  none = lib.modules.when false { };
+  none = config.lib.modules.when false { };
 
   loaders = {
     agenix = "raw";

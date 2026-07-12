@@ -1,23 +1,17 @@
 let
   pins = import ./npins;
   nilla = import pins.nilla;
-  nlib = import "${pins.nixpkgs}/lib";
+  include-tree = import pins.include-tree;
 in
 nilla.create (
-  { config, lib }:
-  let
-    inherit (builtins) filter;
-    inherit (lib.strings) hasSuffix;
-    inherit (nlib.filesystem) listFilesRecursive;
-  in
-  {
+  { config, lib }: {
     includes = [
       ./hosts
       ./inputs.nix
 
       "${pins.nilla-nixos}/modules/nixos.nix"
     ]
-    ++ filter (hasSuffix ".nix") (listFilesRecursive ./modules);
+    ++ include-tree { inherit lib; } ./modules;
 
     config.shells.default = {
       systems = [ "x86_64-linux" ];
