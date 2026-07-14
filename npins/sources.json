@@ -172,17 +172,20 @@
       "hash": "sha256-+GVwKnbbSmf4cWMJyRzvw8H5yFknmkLoPD5v6snqPzo="
     },
     "noctalia": {
-      "type": "Git",
+      "type": "GitRelease",
       "repository": {
         "type": "GitHub",
         "owner": "noctalia-dev",
         "repo": "noctalia"
       },
-      "branch": "main",
+      "pre_releases": true,
+      "version_upper_bound": null,
+      "release_prefix": null,
       "submodules": false,
-      "revision": "370cb99d7bfc1a40f2bc7648ed4e465c7c6a4f3e",
-      "url": "https://github.com/noctalia-dev/noctalia/archive/370cb99d7bfc1a40f2bc7648ed4e465c7c6a4f3e.tar.gz",
-      "hash": "sha256-xcjY4sbX5qlWopb+gFWPw/cjYVhKVi30R+HVS8k3UAo="
+      "version": "v5.0.0-beta2",
+      "revision": "ea7ba027da6d03a34dfae89dabfb159ec01f205e",
+      "url": "https://api.github.com/repos/noctalia-dev/noctalia/tarball/refs/tags/v5.0.0-beta2",
+      "hash": "sha256-yqkHIypClzlztMmt4HVytCdU8Kqy3EqHJotHtbyFulI="
     },
     "qtengine": {
       "type": "Git",
