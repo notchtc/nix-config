@@ -14,6 +14,7 @@
         _JAVA_OPTIONS = "-Djava.util.prefs.userRoot=${config.xdg.config.directory}/java";
         ANDROID_HOME = "${config.xdg.data.directory}/android";
         ANDROID_USER_HOME = "${config.xdg.data.directory}/android";
+        CARGO_HOME = "${config.xdg.data.directory}/cargo";
         CUDA_CACHE_PATH = "${config.xdg.cache.directory}/nv";
         DVDCSS_CACHE = "${config.xdg.data.directory}/dvdcss";
         GNUPGHOME = "${config.xdg.data.directory}/gnupg";
