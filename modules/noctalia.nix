@@ -63,15 +63,28 @@
           };
         };
 
+        osd = {
+          offset_x = 8;
+          offset_y = 4;
+          orientation = "vertical";
+          position = "top_right";
+          position_vertical = "top_right";
+        };
+
+        shell = {
+          corner_radius_scale = 0.8;
+          polkit_agent = true;
+
+          panel = {
+            control_center_placement = "floating";
+            open_near_click_control_center = true;
+          };
+        };
+
         theme = {
           community_palette = "Breeze";
           mode = "dark";
           source = "community";
-
-          templates = {
-            enable_builtin_templates = false;
-            enable_community_templates = false;
-          };
         };
 
         widget = {
@@ -86,10 +99,8 @@
           volume.show_label = true;
         };
 
-        desktop_widgets.enabled = false;
         location.auto_locate = true;
         nightlight.enabled = true;
-        shell.polkit_agent = true;
         wallpaper.default.path = ./wallpaper.jpg;
       };
     };
