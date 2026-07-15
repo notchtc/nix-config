@@ -55,11 +55,6 @@
             "pipe-operator"
           ];
 
-          deprecated-features = [
-            "broken-string-escape"
-            "or-as-identifier"
-          ];
-
           substituters = [ "https://attic.xuyh0120.win/lantian" ];
           trusted-public-keys = [ "lantian:EeAUQ+W+6r7EtwnmYjeVwx5kOGEBpjlBfPlzGlTNvHc=" ];
         };

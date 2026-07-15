@@ -16,6 +16,7 @@ in
   };
 
   hardware = {
+    enableRedistributableFirmware = true;
     igpuPresent = true;
     nvidia.prime = {
       amdgpuBusId = "PCI:5:0:0";
@@ -32,7 +33,6 @@ in
 
   fileSystems."/boot".device = "/dev/disk/by-uuid/E832-2DAC";
 
-  hardware.enableRedistributableFirmware = true;
   services.ucodenix.cpuModelId = "00A70F52";
 
   networking.hostName = "elisabeth";

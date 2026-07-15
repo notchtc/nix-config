@@ -5,13 +5,7 @@ let
 in
 nilla.create (
   { config, lib }: {
-    includes = [
-      ./hosts
-      ./inputs.nix
-
-      "${pins.nilla-nixos}/modules/nixos.nix"
-    ]
-    ++ include-tree { inherit lib; } ./modules;
+    includes = [ "${pins.nilla-nixos}/modules/nixos.nix" ] ++ include-tree { inherit lib; } ./modules;
 
     config.shells.default = {
       systems = [ "x86_64-linux" ];

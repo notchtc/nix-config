@@ -1,11 +1,17 @@
 {
-  config.modules.nixos.zfs =
+  config.modules.nixos.storage =
     { config, lib, ... }:
     let
       inherit (lib) genAttrs optionalString;
     in
     {
-      boot.supportedFilesystems = [ "zfs" ];
+      boot = {
+        supportedFilesystems = [ "zfs" ];
+        tmp = {
+          useTmpfs = true;
+          tmpfsHugeMemoryPages = "within_size";
+        };
+      };
 
       services = {
         fstrim.enable = false;

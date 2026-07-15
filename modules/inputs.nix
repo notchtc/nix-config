@@ -1,7 +1,10 @@
-{ config }:
+{ config, lib }:
 let
-  pins = import ./npins { };
-  none = config.lib.modules.when false { };
+  inherit (builtins) mapAttrs;
+  inherit (lib.modules) when;
+
+  pins = import ../npins;
+  pkgs = import pins.nixpkgs { };
 
   loaders = {
     agenix = "raw";
@@ -18,21 +21,20 @@ let
     nix-index-database.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
     nix-mineral.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
     noctalia.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
-    openmw-nix.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
     qtengine.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
-    run0-sudo-shim.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
   };
 in
 {
-  config.inputs = {
-    nixpkgs-flake = {
-      inherit (config.inputs.nixpkgs) src;
-      loader = "flake";
+  config.inputs =
+    mapAttrs (name: pin: {
+      src = if name == "nixpkgs" then pin else pin { inherit pkgs; };
+      loader = loaders.${name} or (when false { });
+      settings = settings.${name} or (when false { });
+    }) (removeAttrs pins [ "__functor" ])
+    // {
+      nixpkgs-flake = {
+        inherit (config.inputs.nixpkgs) src;
+        loader = "flake";
+      };
     };
-  }
-  // builtins.mapAttrs (name: pin: {
-    src = pin;
-    loader = loaders.${name} or none;
-    settings = settings.${name} or none;
-  }) pins;
 }

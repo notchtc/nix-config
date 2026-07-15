@@ -4,7 +4,6 @@
       {
         config,
         lib,
-        modules,
         pkgs,
         ...
       }:
@@ -36,8 +35,6 @@
         };
 
         security.pam.services.greetd.enableGnomeKeyring = true;
-
-        hjem.extraModules = [ modules.home.niri ];
       };
 
     home.niri =

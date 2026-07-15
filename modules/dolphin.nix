@@ -1,12 +1,7 @@
 {
   config.modules = {
     nixos.dolphin =
-      {
-        lib,
-        modules,
-        pkgs,
-        ...
-      }:
+      { lib, pkgs, ... }:
       let
         inherit (lib.attrsets) attrValues;
         inherit (lib.modules) mkForce;
@@ -73,8 +68,6 @@
             </Menu>
           '';
         };
-
-        hjem.extraModules = [ modules.home.dolphin ];
       };
 
     home.dolphin =

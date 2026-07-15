@@ -1,12 +1,14 @@
 {
   config.modules = {
-    nixos.xdg = { modules, ... }: {
+    nixos.xdg = {
       xdg = {
         terminal-exec.enable = true;
         portal.xdgOpenUsePortal = true;
       };
 
-      hjem.extraModules = [ modules.home.xdg ];
+      services.pulseaudio.extraClientConf = ''
+        cookie-file = ~/.config/pulse/cookie
+      '';
     };
 
     home.xdg = { config, ... }: {

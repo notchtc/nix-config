@@ -1,12 +1,7 @@
 {
   config.modules = {
     nixos.shell =
-      {
-        lib,
-        modules,
-        pkgs,
-        ...
-      }:
+      { lib, pkgs, ... }:
       let
         inherit (lib.meta) getExe;
       in
@@ -27,8 +22,6 @@
           #  export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
           #'';
         };
-
-        hjem.extraModules = [ modules.home.shell ];
       };
 
     home.shell =
