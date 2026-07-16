@@ -1,49 +1,63 @@
 {
-  config.modules.home.theming =
-    { lib, pkgs, ... }:
-    let
-      inherit (lib.attrsets) attrValues;
-    in
-    {
-      packages = attrValues {
-        inherit (pkgs) adw-gtk3 phinger-cursors;
-        inherit (pkgs.kdePackages) breeze breeze-icons;
-        inherit (pkgs.kdePackages.breeze) qt5;
+  config.modules = {
+    nixos.theming =
+      {
+        inputs,
+        lib,
+        pkgs,
+        ...
+      }:
+      let
+        inherit (lib.attrsets) attrValues;
+      in
+      {
+        imports = [ inputs.qtengine.result.nixosModules.default ];
+
+        environment.systemPackages = attrValues {
+          inherit (pkgs.kdePackages) breeze breeze-icons;
+          inherit (pkgs.kdePackages.breeze) qt5;
+        };
+
+        programs.qtengine = {
+          enable = true;
+
+          config = {
+            theme = {
+              colorScheme = "${pkgs.kdePackages.breeze}/share/color-schemes/BreezeDark.colors";
+              iconTheme = "breeze-dark";
+              style = "breeze";
+
+              font = {
+                family = "sans-serif";
+                size = 11;
+                weight = -1;
+              };
+
+              fontFixed = {
+                family = "monospace";
+                size = 11;
+                weight = -1;
+              };
+            };
+
+            misc = {
+              singleClickActivate = false;
+              menusHaveIcons = true;
+              shortcutsForContextMenus = true;
+            };
+          };
+        };
       };
+
+    home.theming = { pkgs, ... }: {
+      packages = [
+        pkgs.adw-gtk3
+        pkgs.phinger-cursors
+      ];
 
       environment.sessionVariables = {
         XCURSOR_SIZE = 24;
         XCURSOR_THEME = "phinger-cursors-dark";
-      };
-
-      programs.qtengine = {
-        enable = true;
-
-        config = {
-          theme = {
-            colorScheme = "${pkgs.kdePackages.breeze}/share/color-schemes/BreezeDark.colors";
-            iconTheme = "breeze-dark";
-            style = "breeze";
-
-            font = {
-              family = "sans-serif";
-              size = 11;
-              weight = -1;
-            };
-
-            fontFixed = {
-              family = "monospace";
-              size = 11;
-              weight = -1;
-            };
-          };
-
-          misc = {
-            singleClickActivate = false;
-            menusHaveIcons = true;
-            shortcutsForContextMenus = true;
-          };
-        };
       };
 
       rum.misc.gtk = {
@@ -69,4 +83,5 @@
         '';
       };
     };
+  };
 }

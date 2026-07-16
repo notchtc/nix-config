@@ -7,7 +7,6 @@
       extraModules = [
         inputs.hjem-rum.result.hjemModules.hjem-rum
         inputs.noctalia.result.hjemModules.default
-        inputs.qtengine.result.hjemModules.default
       ];
     };
   };
