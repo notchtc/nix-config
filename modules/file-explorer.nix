@@ -1,6 +1,6 @@
 {
   config.modules = {
-    nixos.dolphin =
+    nixos.file-explorer =
       { lib, pkgs, ... }:
       let
         inherit (lib.attrsets) attrValues;
@@ -70,7 +70,7 @@
         };
       };
 
-    home.dolphin =
+    home.file-explorer =
       { lib, ... }:
       let
         inherit (lib.attrsets) genAttrs;
