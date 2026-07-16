@@ -62,9 +62,7 @@
               mkpasswd
               ncurses
               netcat-openbsd
-              time
               util-linux
-              which
               xz
               zstd
               ;
@@ -87,7 +85,7 @@
                 ;
 
               inherit (pkgs)
-                _7zz-rar
+                _7zz
                 dash
                 deadnix
                 dust
@@ -99,6 +97,7 @@
                 npins
                 ripgrep
                 statix
+                unrar
                 ;
 
               inherit (pkgs.ghostty) terminfo;
