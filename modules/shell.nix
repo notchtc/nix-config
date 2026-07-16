@@ -30,6 +30,7 @@
         zcompdump = "${config.xdg.state.directory}/zcompdump";
       in
       {
+        environment.sessionVariables.DO_NOT_TRACK = 1;
         rum.programs.zsh = {
           enable = true;
 
