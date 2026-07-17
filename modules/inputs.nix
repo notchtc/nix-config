@@ -1,7 +1,7 @@
 { config, lib }:
 let
   inherit (builtins) mapAttrs;
-  inherit (lib.modules) when;
+  inherit (lib.modules) merge when;
 
   pins = import ../npins;
   pkgs = import pins.nixpkgs { };
@@ -12,24 +12,21 @@ let
     ucodenix = "raw";
   };
 
-  settings = {
-    nixpkgs.configuration.allowUnfree = true;
-
-    autoaspm.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
-    hjem.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
-    hjem-rum.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
-    nix-index-database.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
-    nix-mineral.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
-    noctalia.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
-    qtengine.inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
-  };
+  settings.nixpkgs.configuration.allowUnfree = true;
 in
 {
   config.inputs =
     mapAttrs (name: pin: {
       src = if name == "nixpkgs" then pin else pin { inherit pkgs; };
       loader = loaders.${name} or (when false { });
-      settings = settings.${name} or (when false { });
+
+      settings = merge [
+        (settings.${name} or (when false { }))
+
+        (when (config.inputs.${name}.loader == "flake") {
+          inputs.nixpkgs = config.inputs.nixpkgs-flake.result;
+        })
+      ];
     }) (removeAttrs pins [ "__functor" ])
     // {
       nixpkgs-flake = {
