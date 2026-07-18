@@ -24,13 +24,13 @@
             "control-center"
           ];
 
-          auto_hide = true;
           margin_edge = 0;
           margin_ends = 0;
           position = "left";
           radius = 0;
           reserve_space = false;
           show_on_workspace_switch = false;
+          smart_auto_hide = true;
           thickness = 40;
           widget_spacing = 12;
         };
@@ -101,6 +101,7 @@
 
         location.auto_locate = true;
         nightlight.enabled = true;
+        plugins.enabled = [ "noctalia/kaomoji" ];
         wallpaper.default.path = ./wallpaper.jpg;
       };
     };
