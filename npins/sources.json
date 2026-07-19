@@ -36,9 +36,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "57f1dacffe7a2d7ad803ad224a0efa1817aa4d07",
-      "url": "https://github.com/feel-co/hjem/archive/57f1dacffe7a2d7ad803ad224a0efa1817aa4d07.tar.gz",
-      "hash": "sha256-EyBAHpQYuXAdQlIx/sja+Auw9IpHJGjE4PZ9g39I7sQ="
+      "revision": "3289cc5d2e62a2c0ba4e3e4f5565c9752fb39fb9",
+      "url": "https://github.com/feel-co/hjem/archive/3289cc5d2e62a2c0ba4e3e4f5565c9752fb39fb9.tar.gz",
+      "hash": "sha256-rf8FWDqTlBF2MdKlmlrfYbgNZxQs7OPWl2xI1Y3Bua0="
     },
     "hjem-rum": {
       "type": "Git",
@@ -49,9 +49,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "64e395fe298cd25279c6086c23ae53636e7dbf1f",
-      "url": "https://github.com/snugnug/hjem-rum/archive/64e395fe298cd25279c6086c23ae53636e7dbf1f.tar.gz",
-      "hash": "sha256-oIIP2d7qELHfumkhHuofn7tryoAcuBwtYt0mDSyHF4s="
+      "revision": "73f6d1c01fe94e3de1cb3a84b9346da52f483c60",
+      "url": "https://github.com/snugnug/hjem-rum/archive/73f6d1c01fe94e3de1cb3a84b9346da52f483c60.tar.gz",
+      "hash": "sha256-QIzbnJIwy5cMYvPmLYPA4ar0lhficYLKZ6ytcHK90Uo="
     },
     "include-tree": {
       "type": "Git",
@@ -134,9 +134,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "1111b9bc836afb7e31a7014e8d1272de9b1c917d",
-      "url": "https://github.com/nix-community/nix-index-database/archive/1111b9bc836afb7e31a7014e8d1272de9b1c917d.tar.gz",
-      "hash": "sha256-BQxN5UMg9FOevAsgBRwPxfxlh51Puj+dNn/8Dsi3sPM="
+      "revision": "4f8d52a3598b0dc7db7a5e7b419e3edd9d1ecfdb",
+      "url": "https://github.com/nix-community/nix-index-database/archive/4f8d52a3598b0dc7db7a5e7b419e3edd9d1ecfdb.tar.gz",
+      "hash": "sha256-Q5kNLlWngt7TaIIZoxDKWMHjiSaNRVqr70FqWCRRfr4="
     },
     "nix-mineral": {
       "type": "Git",
@@ -168,8 +168,8 @@
       "type": "Channel",
       "name": "nixos-unstable",
       "artifact": "nixexprs.tar.xz",
-      "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1035164.753cc8a3a874/nixexprs.tar.xz",
-      "hash": "sha256-Pjytpyqs/h6Kfs46Pcj+upOCqq0/Wwq81YSSeko7ChM="
+      "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1036777.61b7c44c4073/nixexprs.tar.xz",
+      "hash": "sha256-zupdTm41be2fY8cexroEOGjopl3F2Gqs3gk7ieqaM3s="
     },
     "noctalia": {
       "type": "GitRelease",
@@ -185,7 +185,8 @@
       "version": "v5.0.0-beta.3",
       "revision": "e46d2841396288e43dd8146f5707486ee9fd56dc",
       "url": "https://api.github.com/repos/noctalia-dev/noctalia/tarball/refs/tags/v5.0.0-beta.3",
-      "hash": "sha256-8iAeWIjw2OMfsBCtaGcmR14lgBX0MOoaBaSyBwieBsA="
+      "hash": "sha256-8iAeWIjw2OMfsBCtaGcmR14lgBX0MOoaBaSyBwieBsA=",
+      "frozen": true
     },
     "qtengine": {
       "type": "Git",
