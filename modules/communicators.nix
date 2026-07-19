@@ -9,9 +9,7 @@
     {
       packages = [
         (pkgs.telegram-desktop.override { withWebkit = false; })
-        ((pkgs.vesktop.override { electron_40 = pkgs.electron_41; }).overrideAttrs (prev: {
-          preBuild = builtins.replaceStrings [ "exit 1" ] [ ":" ] (prev.preBuild or "");
-        }))
+        pkgs.vesktop
       ];
 
       xdg = {
