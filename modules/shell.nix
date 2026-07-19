@@ -25,8 +25,14 @@
       };
 
     home.shell =
-      { config, pkgs, ... }:
+      {
+        config,
+        lib,
+        pkgs,
+        ...
+      }:
       let
+        inherit (lib.meta) getExe;
         zcompdump = "${config.xdg.state.directory}/zcompdump";
       in
       {
@@ -121,12 +127,12 @@
             print -n '\e[5 q'
             preexec() { print -n '\e[5 q' ;}
 
+            eval "$(${getExe pkgs.zsh-patina} activate)"
             . ${pkgs.vte}/etc/profile.d/vte.sh
           '';
 
           plugins = {
             autosuggestions.source = "${pkgs.zsh-autosuggestions}/share/zsh-autosuggestions/zsh-autosuggestions.zsh";
-            highlighting.source = "${pkgs.zsh-fast-syntax-highlighting}/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh";
             vi-mode.source = "${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh";
           };
         };
