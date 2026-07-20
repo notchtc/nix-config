@@ -36,9 +36,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "3289cc5d2e62a2c0ba4e3e4f5565c9752fb39fb9",
-      "url": "https://github.com/feel-co/hjem/archive/3289cc5d2e62a2c0ba4e3e4f5565c9752fb39fb9.tar.gz",
-      "hash": "sha256-rf8FWDqTlBF2MdKlmlrfYbgNZxQs7OPWl2xI1Y3Bua0="
+      "revision": "da98f49312a31468137759756319324cdfb47f98",
+      "url": "https://github.com/feel-co/hjem/archive/da98f49312a31468137759756319324cdfb47f98.tar.gz",
+      "hash": "sha256-oRa9hS/Mrw0ENKar89vej8A8B2t62klF6Bh83NgaUnw="
     },
     "hjem-rum": {
       "type": "Git",
@@ -168,8 +168,8 @@
       "type": "Channel",
       "name": "nixos-unstable",
       "artifact": "nixexprs.tar.xz",
-      "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1036777.61b7c44c4073/nixexprs.tar.xz",
-      "hash": "sha256-zupdTm41be2fY8cexroEOGjopl3F2Gqs3gk7ieqaM3s="
+      "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1037713.241313f4e8e5/nixexprs.tar.xz",
+      "hash": "sha256-WhdsTtaih3DgTPP/PX023b36UNQyMzEoi6GkPyGx0y4="
     },
     "noctalia": {
       "type": "GitRelease",
@@ -210,9 +210,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "3b2a8c899e225d001b859cc66717f8668b60a4bc",
-      "url": "https://github.com/nix-community/srvos/archive/3b2a8c899e225d001b859cc66717f8668b60a4bc.tar.gz",
-      "hash": "sha256-hWmfFLu41IWMghHzuHtnOHGXVF4MyE2JSr391hGR828="
+      "revision": "c4bc7f50aaa6b2e120603790d7ffc509c4584ab7",
+      "url": "https://github.com/nix-community/srvos/archive/c4bc7f50aaa6b2e120603790d7ffc509c4584ab7.tar.gz",
+      "hash": "sha256-G4eW1fqbvS5nPSCgIlLISmBsXSkoffi8bNKlCstJaDM="
     },
     "ucodenix": {
       "type": "Git",
