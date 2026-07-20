@@ -4,7 +4,7 @@ let
   inherit (lib.modules) merge when;
 
   pins = import ../npins;
-  pkgs = import pins.nixpkgs { };
+  pkgs = import pins.nixpkgs { system = "x86_64-linux"; };
 
   loaders = {
     agenix = "raw";

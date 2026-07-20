@@ -9,9 +9,7 @@ nilla.create (
 
     config.shells.default = {
       systems = [ "x86_64-linux" ];
-
       builder = "nixpkgs";
-      settings.pkgs = config.inputs.nixpkgs.result;
 
       shell =
         {
@@ -19,7 +17,6 @@ nilla.create (
           git,
           mkShellNoCC,
           nixfmt,
-          nixfmt-tree,
           npins,
           openssh,
           statix,
@@ -37,7 +34,6 @@ nilla.create (
             deadnix
             git
             nixfmt
-            nixfmt-tree
             npins
             openssh
             statix
