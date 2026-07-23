@@ -36,22 +36,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "da98f49312a31468137759756319324cdfb47f98",
-      "url": "https://github.com/feel-co/hjem/archive/da98f49312a31468137759756319324cdfb47f98.tar.gz",
-      "hash": "sha256-oRa9hS/Mrw0ENKar89vej8A8B2t62klF6Bh83NgaUnw="
-    },
-    "hjem-rum": {
-      "type": "Git",
-      "repository": {
-        "type": "GitHub",
-        "owner": "snugnug",
-        "repo": "hjem-rum"
-      },
-      "branch": "main",
-      "submodules": false,
-      "revision": "73f6d1c01fe94e3de1cb3a84b9346da52f483c60",
-      "url": "https://github.com/snugnug/hjem-rum/archive/73f6d1c01fe94e3de1cb3a84b9346da52f483c60.tar.gz",
-      "hash": "sha256-QIzbnJIwy5cMYvPmLYPA4ar0lhficYLKZ6ytcHK90Uo="
+      "revision": "35e95ebb9557ac41a72fe00dd55218d1a7f21679",
+      "url": "https://github.com/feel-co/hjem/archive/35e95ebb9557ac41a72fe00dd55218d1a7f21679.tar.gz",
+      "hash": "sha256-rkpUOBv9pVG+GxhK90ebCrFpvjnfP4u2y/iGrzA42K4="
     },
     "include-tree": {
       "type": "Git",
@@ -121,9 +108,9 @@
       },
       "branch": "release",
       "submodules": false,
-      "revision": "6472f543b68e0b874603ad944419747815cfeb7a",
-      "url": "https://github.com/xddxdd/nix-cachyos-kernel/archive/6472f543b68e0b874603ad944419747815cfeb7a.tar.gz",
-      "hash": "sha256-SgzzS5GtMFv323ritWP8A3rwhjphB7AYTfHLNSXGX3c="
+      "revision": "39cb0153bbbd9095c132fe20a70be2fb9b4a8451",
+      "url": "https://github.com/xddxdd/nix-cachyos-kernel/archive/39cb0153bbbd9095c132fe20a70be2fb9b4a8451.tar.gz",
+      "hash": "sha256-wuIHyBzocBxDboYHnYPaEUmN2kjRsIS/8GFHGtLyhto="
     },
     "nix-index-database": {
       "type": "Git",
@@ -147,9 +134,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "4c7fd609d382e6d854a4924a92b86c90ff19513c",
-      "url": "https://github.com/cynicsketch/nix-mineral/archive/4c7fd609d382e6d854a4924a92b86c90ff19513c.tar.gz",
-      "hash": "sha256-9J92YCz9IH0EBFRfx6ty5hJQ78X3p6J1Pr8izieDgOw="
+      "revision": "663fdf52795c16c5d09ea179dc6c4cd7d965f020",
+      "url": "https://github.com/cynicsketch/nix-mineral/archive/663fdf52795c16c5d09ea179dc6c4cd7d965f020.tar.gz",
+      "hash": "sha256-tr5sSWfDvQV5WQcYUfP427YoRK1ja8bpAIsI0M1OPPc="
     },
     "nix-monitored": {
       "type": "Git",
