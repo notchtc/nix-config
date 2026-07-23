@@ -99,19 +99,6 @@
       "url": "https://github.com/nilla-nix/nixos/archive/5bf728fbe9cd7de44a489955f45fb872436f42af.tar.gz",
       "hash": "sha256-nXD1gHXrSmXnd9O1A90Q5nO8kz/LPTxng+NFIDDbSDk="
     },
-    "nix-cachyos-kernel": {
-      "type": "Git",
-      "repository": {
-        "type": "GitHub",
-        "owner": "xddxdd",
-        "repo": "nix-cachyos-kernel"
-      },
-      "branch": "release",
-      "submodules": false,
-      "revision": "39cb0153bbbd9095c132fe20a70be2fb9b4a8451",
-      "url": "https://github.com/xddxdd/nix-cachyos-kernel/archive/39cb0153bbbd9095c132fe20a70be2fb9b4a8451.tar.gz",
-      "hash": "sha256-wuIHyBzocBxDboYHnYPaEUmN2kjRsIS/8GFHGtLyhto="
-    },
     "nix-index-database": {
       "type": "Git",
       "repository": {

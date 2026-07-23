@@ -25,6 +25,7 @@
 
         zsh = {
           enable = true;
+          enableGlobalCompInit = false;
           autosuggestions.enable = true;
 
           histFile = "$HOME/.local/share/zsh/history";
@@ -59,20 +60,26 @@
             lt = "eza --tree";
           };
 
-          loginShellInit = "${config.hjem.users.chtc.environment.loadEnv}";
+          shellInit = ''
+            zsh-newuser-install () {}
 
-          shellInit = "zsh-newuser-install () {}";
+            source ${config.hjem.users.chtc.environment.loadEnv}
+          '';
 
           interactiveShellInit = ''
-            source "${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh"
+            autoload -U compinit && compinit -d "$HOME/.cache/zsh/zcompdump-$ZSH_VERSION"
+
             stty stop undef
+
+            source "${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh"
+
+            zmodload zsh/complist
+            zstyle ':completion:*' menu select
 
             bindkey -M menuselect 'h' vi-backward-char
             bindkey -M menuselect 'k' vi-up-line-or-history
             bindkey -M menuselect 'l' vi-forward-char
             bindkey -M menuselect 'j' vi-down-line-or-history
-
-            zstyle ':completion:*' menu select
 
             eval "$(${getExe pkgs.zsh-patina} activate)"
           '';
