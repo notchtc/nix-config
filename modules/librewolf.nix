@@ -14,6 +14,8 @@
           enable = true;
           package = pkgs.librewolf;
 
+          nativeMessagingHosts.packages = [ pkgs.keepassxc ];
+
           policies = {
             ExtensionSettings =
               listToAttrs
