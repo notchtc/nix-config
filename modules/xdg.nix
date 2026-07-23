@@ -13,7 +13,7 @@
 
     home.xdg = { config, ... }: {
       environment.sessionVariables = {
-        _JAVA_OPTIONS = "-Djava.util.prefs.userRoot=${config.xdg.config.directory}/java";
+        _JAVA_OPTIONS = "-Djava.util.prefs.userRoot=${config.xdg.config.directory}/java -Djavafx.cachedir=${config.xdg.cache.directory}/openjfx";
         ANDROID_HOME = "${config.xdg.data.directory}/android";
         ANDROID_USER_HOME = "${config.xdg.data.directory}/android";
         CARGO_HOME = "${config.xdg.data.directory}/cargo";
