@@ -1,9 +1,8 @@
 {
-  config.modules.home.zoxide = {
-    rum.programs.zoxide = {
+  config.modules.nixos.zoxide = {
+    programs.zoxide = {
       enable = true;
       flags = [ "--cmd cd" ];
-      integrations.zsh.enable = true;
     };
   };
 }

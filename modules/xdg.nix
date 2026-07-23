@@ -20,6 +20,7 @@
         CUDA_CACHE_PATH = "${config.xdg.cache.directory}/nv";
         DVDCSS_CACHE = "${config.xdg.data.directory}/dvdcss";
         GNUPGHOME = "${config.xdg.data.directory}/gnupg";
+        GTK2_RC_FILES = "${config.xdg.config.directory}/gtk-2.0/gtkrc";
         LESSHISTFILE = "${config.xdg.data.directory}/lesshst";
         PULSE_COOKIE = "${config.xdg.config.directory}/pulse/cookie";
         WGETRC = "${config.xdg.config.directory}/wgetrc";

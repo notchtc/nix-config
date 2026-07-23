@@ -1,89 +1,70 @@
 {
-  config.modules = {
-    nixos.shell =
-      { lib, pkgs, ... }:
-      let
-        inherit (lib.meta) getExe;
-      in
-      {
-        users.defaultUserShell = pkgs.zsh;
+  config.modules.nixos.shell =
+    {
+      config,
+      lib,
+      pkgs,
+      ...
+    }:
+    let
+      inherit (lib.meta) getExe;
+    in
+    {
+      users.defaultUserShell = pkgs.zsh;
 
-        environment = {
-          binsh = getExe pkgs.dash;
-          shellInit = "umask 0077";
-          shells = [ pkgs.zsh ];
-        };
-
-        programs.zsh = {
-          enable = true;
-          enableCompletion = false;
-
-          #shellInit = ''
-          #  export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
-          #'';
-        };
+      environment = {
+        sessionVariables.DO_NOT_TRACK = 1;
+        shellInit = "umask 0077";
+        shells = [ pkgs.zsh ];
       };
 
-    home.shell =
-      {
-        config,
-        lib,
-        pkgs,
-        ...
-      }:
-      let
-        inherit (lib.meta) getExe;
-        zcompdump = "${config.xdg.state.directory}/zcompdump";
-      in
-      {
-        environment.sessionVariables.DO_NOT_TRACK = 1;
-        rum.programs.zsh = {
+      programs = {
+        bash.shellInit = ''
+          export HISTFILE="$HOME/.local/share/bash/history"
+        '';
+
+        zsh = {
           enable = true;
+          autosuggestions.enable = true;
 
-          loginConfig = ''
-            {
-              if [[ -s "${zcompdump}" && (! -s "${zcompdump}.zwc" || "${zcompdump}" -nt "${zcompdump}.zwc") ]]; then
-                zcompile "${zcompdump}"
-              fi
-            } &!
-          '';
+          histFile = "$HOME/.local/share/zsh/history";
+          histSize = 100000;
+          vteIntegration = true;
 
-          initConfig = ''
+          setOptions = [
+            "AUTOCD"
+            "GLOBDOTS"
+            "HIST_EXPIRE_DUPS_FIRST"
+            "HIST_IGNORE_ALL_DUPS"
+            "HIST_IGNORE_SPACE"
+            "HIST_REDUCE_BLANKS"
+            "INTERACTIVE_COMMENTS"
+            "PROMPT_SUBST"
+            "SHARE_HISTORY"
+          ];
 
-            autoload -Uz compinit
-            zmodload zsh/complist
-            compinit -d "${zcompdump}"
+          shellAliases = {
+            "7z" = "7zz";
+            cat = "bat -p";
+            du = "dust";
+            e = "$EDITOR";
+            eza = "eza --icons auto --color auto --git --group-directories-first --header";
+            find = "fd";
+            grep = "rg";
+            la = "eza -a";
+            less = "moor";
+            ll = "eza -l";
+            lla = "eza -la";
+            ls = "eza";
+            lt = "eza --tree";
+          };
 
-            HISTSIZE=100000
-            SAVEHIST=100000
-            HISTFILE="${config.xdg.state.directory}/zsh/history"
+          loginShellInit = "${config.hjem.users.chtc.environment.loadEnv}";
 
-            setopt autocd
-            setopt globdots
-            setopt hist_expire_dups_first
-            setopt hist_ignore_all_dups
-            setopt hist_ignore_space
-            setopt hist_reduce_blanks
-            setopt interactive_comments
-            setopt prompt_subst
-            setopt share_history
+          shellInit = "zsh-newuser-install () {}";
 
-            alias 7z=7zz
-            alias cat='bat -p'
-            alias du=dust
-            alias e='$EDITOR'
-            alias eza='eza --icons auto --color auto --git --group-directories-first --header'
-            alias find=fd
-            alias grep=rg
-            alias la='eza -a'
-            alias less=moor
-            alias ll='eza -l'
-            alias lla='eza -la'
-            alias ls=eza
-            alias lt='eza --tree'
-
-            autoload -Uz vcs_info
-
+          interactiveShellInit = ''
+            source "${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh"
             stty stop undef
 
             bindkey -M menuselect 'h' vi-backward-char
@@ -91,7 +72,13 @@
             bindkey -M menuselect 'l' vi-forward-char
             bindkey -M menuselect 'j' vi-down-line-or-history
 
-            zstyle ':completion:*' menu select  
+            zstyle ':completion:*' menu select
+
+            eval "$(${getExe pkgs.zsh-patina} activate)"
+          '';
+
+          promptInit = ''
+            autoload -Uz vcs_info
             zstyle ":vcs_info:git:*" formats "%F{green}%b%f"
 
             function osc7-pwd() {
@@ -126,16 +113,8 @@
 
             print -n '\e[5 q'
             preexec() { print -n '\e[5 q' ;}
-
-            eval "$(${getExe pkgs.zsh-patina} activate)"
-            . ${pkgs.vte}/etc/profile.d/vte.sh
           '';
-
-          plugins = {
-            autosuggestions.source = "${pkgs.zsh-autosuggestions}/share/zsh-autosuggestions/zsh-autosuggestions.zsh";
-            vi-mode.source = "${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh";
-          };
         };
       };
-  };
+    };
 }

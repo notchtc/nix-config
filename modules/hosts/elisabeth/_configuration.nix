@@ -1,11 +1,9 @@
-{ lib, pkgs, ... }:
+{ lib, ... }:
 let
-  inherit (lib.modules) mkAfter mkForce;
+  inherit (lib.modules) mkAfter;
 in
 {
   boot = {
-    kernelPackages = mkForce pkgs.cachyosKernels.linuxPackages-cachyos-latest-lto-zen4;
-
     kernel.sysfs.bus.platform.drivers.ideapad_acpi."VPC2004:00".conservation_mode = 1;
 
     initrd.availableKernelModules = [
@@ -24,7 +22,7 @@ in
     };
   };
 
-  hjem.users.chtc.rum.desktops.niri.config = mkAfter ''
+  hjem.users.chtc.xdg.config.files."niri/config.kdl".text = mkAfter ''
     output "eDP-2" {
       mode "1920x1080@144.003000"
       variable-refresh-rate on-demand=false

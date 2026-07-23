@@ -49,39 +49,52 @@
         };
       };
 
-    home.theming = { pkgs, ... }: {
-      packages = [
-        pkgs.adw-gtk3
-        pkgs.phinger-cursors
-      ];
+    home.theming =
+      { lib, pkgs, ... }:
+      let
+        inherit (lib.generators) toINI;
 
-      environment.sessionVariables = {
-        XCURSOR_SIZE = 24;
-        XCURSOR_THEME = "phinger-cursors-dark";
-      };
+        gtkSettings = {
+          gtk-cursor-theme-name = "phinger-cursors-dark";
+          gtk-cursor-theme-size = 24;
+          gtk-font-name = "sans-serif 11";
+          gtk-icon-theme-name = "breeze-dark";
+          gtk-theme-name = "adw-gtk3-dark";
+        };
+      in
+      {
+        packages = [
+          pkgs.adw-gtk3
+          pkgs.phinger-cursors
+        ];
 
-      rum.misc.gtk = {
-        enable = true;
+        environment.sessionVariables = {
+          XCURSOR_SIZE = 24;
+          XCURSOR_THEME = "phinger-cursors-dark";
+        };
 
-        gtk2Location = ".config/gtk-2.0/gtkrc";
+        xdg = {
+          config.files = {
+            "gtk-3.0/settings.ini" = {
+              generator = toINI { };
+              value.Settings = gtkSettings;
+            };
 
-        settings = {
-          cursor-theme-name = "phinger-cursors-dark";
-          cursor-theme-size = 24;
-          font-name = "sans-serif 11";
-          icon-theme-name = "breeze-dark";
-          theme-name = "adw-gtk3-dark";
+            "gtk-4.0/settings.ini" = {
+              generator = toINI { };
+              value.Settings = gtkSettings;
+            };
+          };
+
+          data.files = {
+            "icons/phinger-cursors-dark".source = "${pkgs.phinger-cursors}/share/icons/phinger-cursors-dark";
+            "icons/default/index.theme".text = ''
+              [Icon Theme]
+              Name=Default
+              Inherits=phinger-cursors-dark
+            '';
+          };
         };
       };
-
-      xdg.data.files = {
-        "icons/phinger-cursors-dark".source = "${pkgs.phinger-cursors}/share/icons/phinger-cursors-dark";
-        "icons/default/index.theme".text = ''
-          [Icon Theme]
-          Name=Default
-          Inherits=phinger-cursors-dark
-        '';
-      };
-    };
   };
 }

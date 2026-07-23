@@ -1,9 +1,8 @@
 {
-  config.modules.home.direnv = { pkgs, ... }: {
-    packages = [ pkgs.nix-direnv ];
-    rum.programs.direnv = {
+  config.modules.nixos.direnv = {
+    programs.direnv = {
       enable = true;
-      integrations.zsh.enable = true;
+      nix-direnv.enable = true;
     };
   };
 }

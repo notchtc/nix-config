@@ -86,6 +86,7 @@
 
               inherit (pkgs)
                 _7zz
+                bottom
                 dash
                 deadnix
                 dust
