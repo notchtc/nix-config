@@ -50,6 +50,8 @@
       in
       {
         xdg.config.files."niri/config.kdl".text = ''
+          include "noctalia.kdl"
+
           input {
             keyboard {
               xkb {
@@ -77,9 +79,6 @@
             }
             focus-ring {
               width 2
-              active-color "#3daee9"
-              inactive-color "#232627"
-              urgent-color "#ed1515"
             }
             struts {
               left 4
@@ -91,8 +90,6 @@
 
           recent-windows {
             highlight {
-              active-color "#3daee9"
-              urgent-color "#ed1515"
               corner-radius 8
             }
           }
