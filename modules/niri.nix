@@ -224,7 +224,6 @@
           debug {
             enable-overlay-planes
             honor-xdg-activation-with-invalid-serial
-            ignore-drm-device "/dev/dri/renderD129"
           }
 
           hotkey-overlay { skip-at-startup; }
