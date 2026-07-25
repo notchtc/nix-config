@@ -6,7 +6,8 @@
         portal.xdgOpenUsePortal = true;
       };
 
-      services.pulseaudio.extraClientConf = ''
+      environment.etc."pulse/client.conf".text = ''
+        autospawn=no
         cookie-file = ~/.config/pulse/cookie
       '';
     };
@@ -27,23 +28,9 @@
         WINEPREFIX = "${config.xdg.data.directory}/wine";
       };
 
-      xdg.config.files = {
-        wgetrc.text = ''
-          hsts-file="${config.xdg.cache.directory}/wget-hsts"
-        '';
-
-        "user-dirs.dirs".text = ''
-          XDG_DESKTOP_DIR="${config.directory}/Desktop"
-          XDG_DOCUMENTS_DIR="${config.directory}/Documents"
-          XDG_DOWNLOAD_DIR="${config.directory}/Downloads"
-          XDG_MUSIC_DIR="${config.directory}/Music"
-          XDG_PICTURES_DIR="${config.directory}/Pictures"
-          XDG_PROJECTS_DIR="${config.directory}/Projects"
-          XDG_PUBLICSHARE_DIR="${config.directory}/Public/Share"
-          XDG_TEMPLATES_DIR="${config.directory}/Public/Templates"
-          XDG_VIDEOS_DIR="${config.directory}/Videos"
-        '';
-      };
+      xdg.config.files.wgetrc.text = ''
+        hsts-file="${config.xdg.cache.directory}/wget-hsts"
+      '';
     };
   };
 }
