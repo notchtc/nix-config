@@ -36,9 +36,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "35e95ebb9557ac41a72fe00dd55218d1a7f21679",
-      "url": "https://github.com/feel-co/hjem/archive/35e95ebb9557ac41a72fe00dd55218d1a7f21679.tar.gz",
-      "hash": "sha256-rkpUOBv9pVG+GxhK90ebCrFpvjnfP4u2y/iGrzA42K4="
+      "revision": "08d2b170a74a102c230c9651d8989fe6b39dfad8",
+      "url": "https://github.com/feel-co/hjem/archive/08d2b170a74a102c230c9651d8989fe6b39dfad8.tar.gz",
+      "hash": "sha256-EAadJywc5P9CSIB7212S5jpQX48aTfYUbsJeAIbQaVI="
     },
     "include-tree": {
       "type": "Git",
@@ -121,9 +121,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "663fdf52795c16c5d09ea179dc6c4cd7d965f020",
-      "url": "https://github.com/cynicsketch/nix-mineral/archive/663fdf52795c16c5d09ea179dc6c4cd7d965f020.tar.gz",
-      "hash": "sha256-tr5sSWfDvQV5WQcYUfP427YoRK1ja8bpAIsI0M1OPPc="
+      "revision": "13032b01b25ff26958e3a3ef3f54c95b70435354",
+      "url": "https://github.com/cynicsketch/nix-mineral/archive/13032b01b25ff26958e3a3ef3f54c95b70435354.tar.gz",
+      "hash": "sha256-Wd8zhym03kh+hHLuSD98//6VfMGNhM1LCYbGt4TSvpo="
     },
     "nix-monitored": {
       "type": "Git",
@@ -142,8 +142,8 @@
       "type": "Channel",
       "name": "nixos-unstable",
       "artifact": "nixexprs.tar.xz",
-      "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1037713.241313f4e8e5/nixexprs.tar.xz",
-      "hash": "sha256-WhdsTtaih3DgTPP/PX023b36UNQyMzEoi6GkPyGx0y4="
+      "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1040357.e2587caef70c/nixexprs.tar.xz",
+      "hash": "sha256-vwxWgF+Gj276WznzGb1LxGsK/39HaQwgQXiU3EkC844="
     },
     "noctalia": {
       "type": "GitRelease",
@@ -159,7 +159,8 @@
       "version": "v5.0.0-beta.4",
       "revision": "c40ec5e9bfa01758b9a8cdd16951bc85785d8a79",
       "url": "https://api.github.com/repos/noctalia-dev/noctalia/tarball/refs/tags/v5.0.0-beta.4",
-      "hash": "sha256-jXz2vFHgidbyU46ScROLSuBIhsqqtyqNu2M0tmGX/FA="
+      "hash": "sha256-jXz2vFHgidbyU46ScROLSuBIhsqqtyqNu2M0tmGX/FA=",
+      "frozen": true
     },
     "qtengine": {
       "type": "Git",
@@ -183,9 +184,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "c4bc7f50aaa6b2e120603790d7ffc509c4584ab7",
-      "url": "https://github.com/nix-community/srvos/archive/c4bc7f50aaa6b2e120603790d7ffc509c4584ab7.tar.gz",
-      "hash": "sha256-G4eW1fqbvS5nPSCgIlLISmBsXSkoffi8bNKlCstJaDM="
+      "revision": "327a43d83fb37178567e82a26b0389aef68bdf31",
+      "url": "https://github.com/nix-community/srvos/archive/327a43d83fb37178567e82a26b0389aef68bdf31.tar.gz",
+      "hash": "sha256-mkVTotc5LCXDj6HbHd0EXQbhWBkJ3hvTO3ufp4djbM8="
     },
     "ucodenix": {
       "type": "Git",
