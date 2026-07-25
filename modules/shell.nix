@@ -28,7 +28,7 @@
           enableGlobalCompInit = false;
           autosuggestions.enable = true;
 
-          histFile = "$HOME/.local/share/zsh/history";
+          histFile = "$HOME/.local/state/zsh/history";
           histSize = 100000;
           vteIntegration = true;
 
@@ -61,6 +61,10 @@
           };
 
           shellInit = ''
+            [[ -e "$HOME/.local/state/zsh/history" ]] || {
+              mkdir -p "$HOME/.local/state/zsh" && touch "$HOME/.local/state/zsh/history"
+            }
+
             zsh-newuser-install () {}
 
             source ${config.hjem.users.chtc.environment.loadEnv}
