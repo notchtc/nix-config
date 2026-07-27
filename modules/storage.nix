@@ -5,13 +5,7 @@
       inherit (lib) genAttrs optionalString;
     in
     {
-      boot = {
-        supportedFilesystems = [ "zfs" ];
-        tmp = {
-          useTmpfs = true;
-          tmpfsHugeMemoryPages = "within_size";
-        };
-      };
+      boot.supportedFilesystems = [ "zfs" ];
 
       services = {
         fstrim.enable = false;
