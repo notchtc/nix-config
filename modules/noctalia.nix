@@ -2,6 +2,7 @@
   config.modules.home.noctalia = { config, ... }: {
     programs.noctalia = {
       enable = true;
+      systemd.enable = true;
 
       settings = {
         bar.default = {
@@ -73,6 +74,7 @@
 
         shell = {
           corner_radius_scale = 0.8;
+          launch_apps_as_systemd_services = true;
           polkit_agent = true;
 
           panel = {

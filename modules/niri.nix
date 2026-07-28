@@ -227,8 +227,6 @@
           prefer-no-csd
           screenshot-path "${config.directory}/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
           xwayland-satellite { path "${getExe pkgs.xwayland-satellite}"; }
-
-          spawn-at-startup "noctalia"
         '';
       };
   };
