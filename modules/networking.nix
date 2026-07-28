@@ -10,8 +10,6 @@
         hostId = hashString "md5" config.networking.hostName |> substring 0 8;
 
         nftables.enable = true;
-        useDHCP = false;
-        useNetworkd = true;
 
         nameservers = [
           "149.112.112.112#dns.quad9.net"
@@ -96,10 +94,12 @@
 
       services.resolved = {
         enable = true;
+
         settings.Resolve = {
           DNSOverTLS = "opportunistic";
           DNSSEC = "allow-downgrade";
           LLMNR = "false";
+          FallbackDNS = [ ];
         };
       };
     };
