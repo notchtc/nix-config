@@ -1,5 +1,5 @@
 {
-  config.modules.home.noctalia = { config, ... }: {
+  config.modules.home.noctalia = { pkgs, ... }: {
     programs.noctalia = {
       enable = true;
       systemd.enable = true;
@@ -92,7 +92,7 @@
         widget = {
           bluetooth.hide_when_no_connected_device = true;
           brightness.show_label = false;
-          control-center.custom_image = "${config.programs.noctalia.package}/share/noctalia/assets/images/distros/nixos.svg";
+          control-center.custom_image = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
           media.hide_when_no_media = true;
           network.show_label = false;
           notifications.hide_when_no_unread = true;
