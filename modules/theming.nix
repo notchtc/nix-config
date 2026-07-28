@@ -14,6 +14,7 @@
         imports = [ inputs.qtengine.result.nixosModules.default ];
 
         environment.systemPackages = attrValues {
+          inherit (pkgs) adw-gtk3 phinger-cursors;
           inherit (pkgs.kdePackages) breeze breeze-icons;
           inherit (pkgs.kdePackages.breeze) qt5;
         };
@@ -63,11 +64,6 @@
         };
       in
       {
-        packages = [
-          pkgs.adw-gtk3
-          pkgs.phinger-cursors
-        ];
-
         environment.sessionVariables = {
           XCURSOR_SIZE = 24;
           XCURSOR_THEME = "phinger-cursors-dark";
