@@ -3,9 +3,10 @@
     environment = {
       systemPackages = [ pkgs.moor ];
       variables = {
-        SYSTEMD_PAGERSECURE = "true";
-        PAGER = "moor";
+        BAT_PAGER = "moor -no-linenumbers";
         MANPAGER = "moor";
+        PAGER = "moor";
+        SYSTEMD_PAGERSECURE = "true";
       };
     };
   };

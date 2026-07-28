@@ -20,6 +20,7 @@
             {
               inherit (pkgs)
                 _7zz
+                bat
                 bottom
                 dash
                 deadnix
