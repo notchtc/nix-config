@@ -13,12 +13,9 @@ in
     ];
   };
 
-  hardware = {
-    enableRedistributableFirmware = true;
-    nvidia.prime = {
-      amdgpuBusId = "PCI:5:0:0";
-      nvidiaBusId = "PCI:1:0:0";
-    };
+  hardware.nvidia.prime = {
+    amdgpuBusId = "PCI:5:0:0";
+    nvidiaBusId = "PCI:1:0:0";
   };
 
   hjem.users.chtc.xdg.config.files."niri/config.kdl".text = mkAfter ''
