@@ -8,7 +8,12 @@
     in
     {
       packages = attrValues {
-        inherit (pkgs) nicotine-plus picard strawberry;
+        inherit (pkgs)
+          mpv
+          nicotine-plus
+          picard
+          strawberry
+          ;
         inherit (pkgs.kdePackages) arianna gwenview;
         inherit (pkgs.mpvScripts) modernz mpris thumbfast;
       };
