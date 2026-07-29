@@ -32,7 +32,10 @@
           protontricks.enable = true;
           remotePlay.openFirewall = true;
 
-          extraCompatPackages = [ pkgs.proton-ge-bin ];
+          extraCompatPackages = [
+            pkgs.proton-ge-bin
+            pkgs.steamtinkerlaunch
+          ];
           extraPackages = [ pkgs.steamtinkerlaunch ];
         };
       };
