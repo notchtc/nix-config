@@ -36,9 +36,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "7dc2f4b1ee69c9ae3f223ab1fa4e95b93f72bc68",
-      "url": "https://github.com/feel-co/hjem/archive/7dc2f4b1ee69c9ae3f223ab1fa4e95b93f72bc68.tar.gz",
-      "hash": "sha256-QF9moiMJtq6OVOmzJhpjM78tlMAC5J+tvNWaOz4v9wY="
+      "revision": "a0bfffc389b1cf1742ed75bef361395146c3f966",
+      "url": "https://github.com/feel-co/hjem/archive/a0bfffc389b1cf1742ed75bef361395146c3f966.tar.gz",
+      "hash": "sha256-7pu4iFZMGMdOYFaV+ezdF6XKmcdGOMGzeYkw69nXfe0="
     },
     "include-tree": {
       "type": "Git",
@@ -121,9 +121,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "c5a5196fc1415806be79c1e78abdfdaa5c13a2ab",
-      "url": "https://github.com/cynicsketch/nix-mineral/archive/c5a5196fc1415806be79c1e78abdfdaa5c13a2ab.tar.gz",
-      "hash": "sha256-8yI7hhBzUVprMDUecN5SkstELX80Mv8xAmk1CAneRaI="
+      "revision": "846e87edc11edafe3dcf351181dcafec33ecb273",
+      "url": "https://github.com/cynicsketch/nix-mineral/archive/846e87edc11edafe3dcf351181dcafec33ecb273.tar.gz",
+      "hash": "sha256-NaTQtx60USjj1XMMgfASVgvlSAaw+9qx4XsV4ask4Cs="
     },
     "nix-monitored": {
       "type": "Git",
@@ -142,9 +142,8 @@
       "type": "Channel",
       "name": "nixos-unstable",
       "artifact": "nixexprs.tar.xz",
-      "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1040357.e2587caef70c/nixexprs.tar.xz",
-      "hash": "sha256-vwxWgF+Gj276WznzGb1LxGsK/39HaQwgQXiU3EkC844=",
-      "frozen": true
+      "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1043649.0954f7ee2f6b/nixexprs.tar.xz",
+      "hash": "sha256-JfsUqyQ4MGL0SvJNPFikXYlUdXg0xMzBdjwTPawZSl4="
     },
     "noctalia": {
       "type": "GitRelease",
@@ -185,9 +184,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "1ae1c0c562ef21aabdc88624bafb387fb4da7847",
-      "url": "https://github.com/nix-community/srvos/archive/1ae1c0c562ef21aabdc88624bafb387fb4da7847.tar.gz",
-      "hash": "sha256-wy/oBThUnKzKY4RGsjGXQDBnqP1Qlb8QpRksbpPA110="
+      "revision": "5a653c795aa9b34e12768e3010e97fc2988b5e46",
+      "url": "https://github.com/nix-community/srvos/archive/5a653c795aa9b34e12768e3010e97fc2988b5e46.tar.gz",
+      "hash": "sha256-lAHFgqyeARFuHgvQG7MOFgwITbfdTUjwKlJ663a8dKo="
     },
     "ucodenix": {
       "type": "Git",
