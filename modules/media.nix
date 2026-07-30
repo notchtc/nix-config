@@ -8,14 +8,12 @@
     in
     {
       packages = attrValues {
-        inherit (pkgs)
-          mpv
-          nicotine-plus
-          picard
-          strawberry
-          ;
+        inherit (pkgs) nicotine-plus picard strawberry;
         inherit (pkgs.kdePackages) arianna gwenview;
-        inherit (pkgs.mpvScripts) modernz mpris thumbfast;
+
+        mpv = pkgs.mpv.override {
+          scripts = attrValues { inherit (pkgs.mpvScripts) modernz mpris thumbfast; };
+        };
       };
 
       systemd.services.nicotine-plus = {
