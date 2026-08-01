@@ -11,7 +11,6 @@
       services.xserver.videoDrivers = [ "nvidia" ];
 
       hardware.nvidia = {
-        branch = "bleeding_edge";
         nvidiaSettings = false;
         open = true;
         powerManagement.enable = true;
@@ -20,11 +19,11 @@
 
     gpu-nvidia-igpu = {
       hardware.nvidia = {
-        videoAcceleration = false;
+        dynamicBoost.enable = true;
         powerManagement.finegrained = true;
+        videoAcceleration = false;
         prime.offload = {
           enable = true;
-          enableOffloadCmd = true;
         };
       };
     };
