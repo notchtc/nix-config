@@ -28,8 +28,9 @@
           fsType = "tmpfs";
           options = [
             "defaults"
-            "size=1G"
+            "huge=within_size"
             "mode=755"
+            "size=1G"
           ];
         };
 
