@@ -96,8 +96,7 @@
         enable = true;
 
         settings.Resolve = {
-          DNSOverTLS = "opportunistic";
-          DNSSEC = "allow-downgrade";
+          DNSOverTLS = "true";
           LLMNR = "false";
           FallbackDNS = [ ];
         };
