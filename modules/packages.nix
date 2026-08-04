@@ -39,7 +39,7 @@
             }
             // optionalAttrs config.xdg.portal.enable {
               inherit (pkgs)
-                feather
+                # feather
                 ffmpeg
                 gimp
                 pwvucontrol
