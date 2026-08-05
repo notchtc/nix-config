@@ -1,10 +1,6 @@
 {
   config.modules.nixos = {
-    cpu-amd = { inputs, ... }: {
-      imports = [ "${inputs.ucodenix.result}/modules/nixos.nix" ];
-
-      services.ucodenix.enable = true;
-
+    cpu-amd = {
       boot = {
         kernelParams = [ "amd_pstate=active" ];
         kernelModules = [ "kvm-amd" ];

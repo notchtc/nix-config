@@ -187,19 +187,6 @@
       "revision": "f8a1f138ff7ccdb736f56272093953e12bb87ad5",
       "url": "https://github.com/nix-community/srvos/archive/f8a1f138ff7ccdb736f56272093953e12bb87ad5.tar.gz",
       "hash": "sha256-wVE1lrrGlpHpgtiIa4zYBObVgPBOx5wMnD5QYMzoYE8="
-    },
-    "ucodenix": {
-      "type": "Git",
-      "repository": {
-        "type": "GitHub",
-        "owner": "e-tho",
-        "repo": "ucodenix"
-      },
-      "branch": "main",
-      "submodules": false,
-      "revision": "5c9a1202884f7f455119f35df03c66f6a98ce5f9",
-      "url": "https://github.com/e-tho/ucodenix/archive/5c9a1202884f7f455119f35df03c66f6a98ce5f9.tar.gz",
-      "hash": "sha256-k126RCoXFrNy7nwhUq+Ogd4GX0mY4lSzOYyAyndvBys="
     }
   },
   "version": 8

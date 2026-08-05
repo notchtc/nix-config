@@ -9,7 +9,6 @@ let
   loaders = {
     agenix = "raw";
     srvos = "raw";
-    ucodenix = "raw";
   };
 
   settings.nixpkgs.configuration.allowUnfree = true;

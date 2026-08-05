@@ -27,8 +27,6 @@ in
 
   fileSystems."/boot".device = "/dev/disk/by-uuid/E832-2DAC";
 
-  services.ucodenix.cpuModelId = "00A70F52";
-
   networking.hostName = "elisabeth";
   nixpkgs.hostPlatform = "x86_64-linux";
   system.stateVersion = "26.11";
