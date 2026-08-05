@@ -29,6 +29,8 @@
         "udev.log_priority=3"
 
         "fbcon=nodefer"
+
+        "systemd.machine_id=firmware"
       ];
 
       kernel = {
