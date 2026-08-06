@@ -40,6 +40,7 @@
           auto-allocate-uids = true;
           auto-optimise-store = true;
           flake-registry = "";
+          fsync-metadata = false; # we ball + use ZFS anyway
           http3 = true;
           keep-going = true;
           log-format = "multiline-with-logs";
