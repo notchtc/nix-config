@@ -219,6 +219,7 @@
           }
 
           debug {
+            ignore-drm-device "/dev/dri/dgpu1"
             enable-overlay-planes
             honor-xdg-activation-with-invalid-serial
           }
