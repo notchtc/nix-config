@@ -20,7 +20,7 @@
       programs = {
         gamescope = {
           enable = true;
-          capSysNice = false;
+          capSysNice = true;
         };
 
         steam = {
@@ -32,11 +32,7 @@
           protontricks.enable = true;
           remotePlay.openFirewall = true;
 
-          extraCompatPackages = [
-            pkgs.proton-ge-bin
-            pkgs.steamtinkerlaunch
-          ];
-          extraPackages = [ pkgs.steamtinkerlaunch ];
+          extraCompatPackages = [ pkgs.proton-ge-bin ];
         };
       };
 
