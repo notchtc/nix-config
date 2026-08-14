@@ -1,10 +1,11 @@
 {
-  config.modules.nixos.kernel = { inputs, ... }: {
-    imports = [ "${inputs.srvos.result}/nixos/mixins/latest-zfs-kernel.nix" ];
-
+  config.modules.nixos.kernel = { config, pkgs, ... }: {
     security.protectKernelImage = true;
 
     boot = {
+      kernelPackages =
+        if config.xdg.portal.enable then pkgs.linuxPackages_zen else pkgs.linuxPackages_latest;
+
       initrd = {
         verbose = false;
         compressorArgs = [
