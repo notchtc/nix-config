@@ -10,10 +10,7 @@
       system = {
         nixos-init.enable = true;
 
-        etc.overlay = {
-          enable = true;
-          mutable = false;
-        };
+        etc.overlay.enable = true;
       };
 
       security = {
