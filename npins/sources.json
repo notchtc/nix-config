@@ -108,9 +108,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "14d55b8069119e3b88da7aa2f6c97f86a2cd3cd6",
-      "url": "https://github.com/nix-community/nix-index-database/archive/14d55b8069119e3b88da7aa2f6c97f86a2cd3cd6.tar.gz",
-      "hash": "sha256-Y2mSr+HLKYoOsjiackgilxkHXe8gkJ3z4hFFekjQX3I="
+      "revision": "c7962dc97b45129df8d751bedaf37beb5a17706e",
+      "url": "https://github.com/nix-community/nix-index-database/archive/c7962dc97b45129df8d751bedaf37beb5a17706e.tar.gz",
+      "hash": "sha256-IM5CYtf86W4w8eUPpKcY/LpdHElmVBtJhaKnoTKxZEA="
     },
     "nix-mineral": {
       "type": "Git",
@@ -121,9 +121,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "b1c7e28253cee32341ce8b21ebcd1ca511bd3bd7",
-      "url": "https://github.com/cynicsketch/nix-mineral/archive/b1c7e28253cee32341ce8b21ebcd1ca511bd3bd7.tar.gz",
-      "hash": "sha256-UAjuCgxqVpO6ki1kmWTPwu3iM3VXqzTCRXDzMZKuIVw="
+      "revision": "a4309999db8be3e3ebd8d74a280501bf18241de3",
+      "url": "https://github.com/cynicsketch/nix-mineral/archive/a4309999db8be3e3ebd8d74a280501bf18241de3.tar.gz",
+      "hash": "sha256-44aBWEG084QhWNui26K2IhtoVfqW/p5vBYrrkPkvCAE="
     },
     "nix-monitored": {
       "type": "Git",
@@ -142,8 +142,8 @@
       "type": "Channel",
       "name": "nixos-unstable",
       "artifact": "nixexprs.tar.zst",
-      "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1049422.f13ff45afd1b/nixexprs.tar.zst",
-      "hash": "sha256-CgKDSHL6rqAAQkkvg1xaZDQXb77+4XW73iGcUMJ+2w0="
+      "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1055335.e5bdc4a41d4c/nixexprs.tar.zst",
+      "hash": "sha256-kSR/jfpR4cE26YRZ8exQkoRbEA30vyWimajwZANYYaE="
     },
     "noctalia": {
       "type": "GitRelease",
@@ -184,9 +184,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "2077eec5063fce46b8c9e0754c4753542bb4f5f9",
-      "url": "https://github.com/nix-community/srvos/archive/2077eec5063fce46b8c9e0754c4753542bb4f5f9.tar.gz",
-      "hash": "sha256-S0CnOYq0H8oTQB6mN+PwP9qRGgSJ4WW0DLeIrcAF1rw="
+      "revision": "3fea6d6ca2b90b9e86b36b0dc23abc8f92cf5b9f",
+      "url": "https://github.com/nix-community/srvos/archive/3fea6d6ca2b90b9e86b36b0dc23abc8f92cf5b9f.tar.gz",
+      "hash": "sha256-FhNVyQZuDvWOozJ1mNuFJ/LY62r3PtBC+kzQNzdi400="
     }
   },
   "version": 8
