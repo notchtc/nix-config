@@ -15,20 +15,26 @@
 
       nix-mineral = {
         enable = true;
+        preset = "maximum";
 
-        settings = {
-          system.proc-mem-force = "never";
-
-          network = {
-            ip-forwarding = true;
-            router-advertisements = "off";
-          };
+        settings.network = {
+          ip-forwarding = true;
+          router-advertisements = "off";
         };
 
         extras = {
-          kernel.intelme-kmodules = false;
-          network.bluetooth-kmodules = mkIf (!config.hardware.bluetooth.enable) false;
-          system.lock-root = true;
+          kernel.warn-panic = false;
+          misc.ssh-hardening = true;
+          network.tcp-window-scaling = true;
+          system = {
+            minimize-swapping = false;
+            secure-chrony = false;
+          };
+        };
+
+        kernel-modules.disable = {
+          bluetooth-related = mkIf config.hardware.bluetooth.enable false;
+          udf = false;
         };
       }
       // optionalAttrs config.xdg.portal.enable {
