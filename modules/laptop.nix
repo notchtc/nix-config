@@ -7,19 +7,17 @@
       tlp.enable = false;
       tuned = {
         enable = true;
-        settings.dynamic_tuning = true;
 
         ppdSettings = {
-          main.default = "balanced";
-          profiles = {
-            balanced = "balanced";
-            performance = "throughput-performance";
-            power-saver = "laptop-ac-powersave";
-          };
           battery = {
             balanced = "balanced-battery";
-            performance = "throughput-performance";
-            power-saver = "laptop-battery-powersave";
+            performance = "latency-performance";
+            power-saver = "powersave";
+          };
+          profiles = {
+            balanced = "desktop";
+            performance = "latency-performance";
+            power-saver = "powersave";
           };
         };
       };
